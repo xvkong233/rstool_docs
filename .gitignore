@@ -30,6 +30,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# npm lockfiles（本仓库统一使用 pnpm）
+package-lock.json
+
 # local deployment/build outputs
 .vercel
 playwright-report

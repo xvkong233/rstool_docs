@@ -2,7 +2,7 @@
 
 > 模块：AI / 渲染与建模
 
-[← 返回命令完全手册](/RsTool命令手册)
+[← 返回命令目录](/commands/)
 
 **功能**：本命令可以调用 AI 大模型快速生成脚本，用来对 Rhino 进行编辑操作；也可以选择 Agent 模式，使用大模型直接修改和编辑 Rhino。生成脚本模式下，AI 输出 Python/RhinoScript 代码，需手动在 Rhino 中执行；Agent 模式下，AI 通过工具调用直接操控 Rhino 几何体（删/替换/布尔等会弹 Approve/Deny 确认）
 

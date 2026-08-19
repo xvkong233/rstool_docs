@@ -2,7 +2,7 @@
 
 > 模块：建筑 / 楼梯与坡道
 
-[← 返回命令完全手册](/RsTool命令手册)
+[← 返回命令目录](/commands/)
 
 **功能**：沿基础线生成自动扶梯：以 Brep 列表加入 Rhino 文档，包含踏步（step join）、左右扶手（fillet）、左右手带皮带、以及名为『EscalatorGlass』的玻璃栏板
 

@@ -1,21 +1,34 @@
 /**
- * RsTool 每命令独立页生成器
- * 从 docs/commands.json（name / cat / sub + details）生成 docs/commands/<name>.md，
- * 每个命令一个独立 VitePress 页面，供侧栏按类分组导航。
+ * RsTool 命令页面生成器
+ * 从 scripts/rstool/commands.json（name / cat / sub + details）生成：
+ *  - docs/commands/<slug>.md：每个命令一个独立 VitePress 页面；
+ *  - docs/commands/index.md：分类目录页（只放链接与简介，不重复命令内容）。
  *
- * 与 generate_commands_md.js 的区别：
- *  - 这里从 commands.json 直接读（不再从 HTML 抽），按命令拆独立页；
- *  - 页面在 docs/commands/ 下，引用的图片相对路径从 assets/ 改写为 ../assets/；
- *  - 每页顶部加「返回命令完全手册」链接。
+ * 页面在 docs/commands/ 下，引用的图片相对路径从 assets/ 改写为 ../assets/，
+ * 每页顶部带「返回命令目录」链接。
  *
- * 用法：node docs/generate_commands_pages.cjs
+ * 用法：node scripts/rstool/generate_commands_pages.cjs
  */
 const fs = require('fs')
 const path = require('path')
 
 const SRC = path.join(__dirname, 'commands.json')
-const OUT_DIR = path.join(__dirname, 'commands')
+const OUT_DIR = path.join(__dirname, '../../docs/commands')
 fs.mkdirSync(OUT_DIR, { recursive: true })
+
+// 命令名 → 页面文件名：仅对包含空格/# 等特殊字符的名字做 kebab-case，
+// 其余（如 rsAiRender）保持原样，避免变动既有 URL。与
+// docs/.vitepress/config.ts 中的 slug 规则保持一致。
+const SLUG_SPECIAL = { 'Linked C#': 'linked-csharp' }
+const slug = (name) =>
+  SLUG_SPECIAL[name] ||
+  (/[^A-Za-z0-9_-]/.test(name)
+    ? name
+        .toLowerCase()
+        .trim()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '')
+    : name)
 
 const { data, details } = JSON.parse(fs.readFileSync(SRC, 'utf8'))
 
@@ -40,7 +53,7 @@ function renderCommand(it, d) {
   L.push('')
   L.push(`> 模块：${cat}${sub ? ' / ' + sub : ''}`)
   L.push('')
-  L.push(`[← 返回命令完全手册](/RsTool命令手册)`)
+  L.push(`[← 返回命令目录](/commands/)`)
   L.push('')
 
   if (d.icon) {
@@ -66,8 +79,7 @@ function renderCommand(it, d) {
   }
 
   if (d.style !== 'gh') {
-    const callType =
-      d.style === 'form' ? '打开设置窗口' : '命令行交互'
+    const callType = d.style === 'form' ? '打开设置窗口' : '命令行交互'
     L.push(`**调用**：在 Rhino 命令行输入 \`${name}\`（${callType}）`)
     L.push('')
   }
@@ -105,7 +117,12 @@ function renderCommand(it, d) {
     L.push('')
   }
 
-  const rawNotes = d.notes ? String(d.notes).replace(/\s+$/, '') : ''
+  // notes 数据可能混入字面量 \n（JSON 双重转义残留），先还原为真实换行再分段
+  const rawNotes = d.notes
+    ? String(d.notes)
+        .replace(/\\r\\n|\\n|\\r/g, '\n')
+        .replace(/\s+$/, '')
+    : ''
   if (rawNotes) {
     const segs = rawNotes.split(/\n\n+/)
     if (segs.length) {
@@ -141,9 +158,76 @@ const seen = new Set()
 for (const it of data) {
   const d = details[it.name] || {}
   const md = renderCommand(it, d)
-  const out = path.join(OUT_DIR, `${it.name}.md`)
+  const out = path.join(OUT_DIR, `${slug(it.name)}.md`)
   fs.writeFileSync(out, md, 'utf8')
   count++
   seen.add(it.name)
 }
 console.log('Generated', count, 'command pages ->', OUT_DIR)
+
+// === 目录页 docs/commands/index.md：按大类/子类列出全部命令链接 ===
+const cats = []
+const catIdx = {}
+for (const it of data) {
+  const cat = it.cat || '未分类'
+  const sub = it.sub || ''
+  if (catIdx[cat] === undefined) {
+    catIdx[cat] = cats.length
+    cats.push({ cat, subOrder: [], bySub: {}, noSub: [] })
+  }
+  const c = cats[catIdx[cat]]
+  if (sub) {
+    if (!c.bySub[sub]) {
+      c.bySub[sub] = []
+      c.subOrder.push(sub)
+    }
+    c.bySub[sub].push(it)
+  } else {
+    c.noSub.push(it)
+  }
+}
+
+const cmdText = (it) =>
+  it.zh && it.zh !== it.name ? `${it.name} · ${it.zh}` : it.name
+
+const dupNames = [...seen].filter(
+  (n) => data.filter((it) => it.name === n).length > 1
+)
+const dupNote = dupNames.length
+  ? `（${dupNames.map((n) => `\`${n}\``).join('、')} 在多个分类重复列出）`
+  : ''
+
+const I = []
+I.push('# RsTool 命令参考')
+I.push('')
+I.push(
+  `> 覆盖 RsTool 插件全部 ${data.length} 条命令${dupNote}，每条命令一个独立页面，含功能、调用方式、交互流程、参数表、输出、备注与教学视频。`
+)
+I.push('')
+for (const c of cats) {
+  const uniq = new Set(
+    [...c.subOrder.flatMap((s) => c.bySub[s]), ...c.noSub].map((it) => it.name)
+  )
+  I.push(`## ${c.cat}（${uniq.size} 条）`)
+  I.push('')
+  const writeItems = (items) => {
+    for (const it of items) {
+      const desc = it.desc ? ` — ${esc(it.desc)}` : ''
+      I.push(`- [${cmdText(it)}](/commands/${slug(it.name)})${desc}`)
+    }
+    I.push('')
+  }
+  for (const s of c.subOrder) {
+    I.push(`### ${s}`)
+    I.push('')
+    writeItems(c.bySub[s])
+  }
+  if (c.noSub.length) {
+    I.push('### （通用）')
+    I.push('')
+    writeItems(c.noSub)
+  }
+}
+const indexPath = path.join(OUT_DIR, 'index.md')
+fs.writeFileSync(indexPath, I.join('\n') + '\n', 'utf8')
+console.log('Generated index ->', indexPath)

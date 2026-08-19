@@ -2,7 +2,7 @@
 
 > 模块：视图出图 / 视图相机
 
-[← 返回命令完全手册](/RsTool命令手册)
+[← 返回命令目录](/commands/)
 
 **功能**：复制当前相机参数 JSON 到剪贴板 (mode/eye/target/up/fov/viewHeight)
 

@@ -2,7 +2,7 @@
 
 > 模块：SubD辅助 / 编辑工具
 
-[← 返回命令完全手册](/RsTool命令手册)
+[← 返回命令目录](/commands/)
 
 **功能**：从 Maya 剪贴板导入的 SubD 或 Mesh 对象(SoftCrease=SmoothX 时为软折边生成权重百分比 TextDots 标注)，整体编组
 
