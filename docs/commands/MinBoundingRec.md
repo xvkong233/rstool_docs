@@ -2,7 +2,7 @@
 
 > 模块：GH组件 / Curve
 
-[← 返回命令完全手册](/RsTool命令手册)
+[← 返回命令目录](/commands/)
 
 ![图标](../assets/gh-icons/MinBoundingRec_24.png)
 

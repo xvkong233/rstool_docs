@@ -2,7 +2,7 @@
 
 > 模块：几何 / 曲线
 
-[← 返回命令完全手册](/RsTool命令手册)
+[← 返回命令目录](/commands/)
 
 **功能**：由位图按所选追踪模式生成的矢量曲线(PolylineCurve)，写入图层 RSTool_ImageToCurve
 

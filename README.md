@@ -4,9 +4,13 @@ RsTool Docs 是基于 VitePress 的 RsTool 命令文档站点，包含命令说�
 
 ## 项目结构
 
-- `/home/runner/work/rstool_docs/rstool_docs/docs`：文档站点源码
-- `/home/runner/work/rstool_docs/rstool_docs/docs/.vitepress`：站点配置
-- `/home/runner/work/rstool_docs/rstool_docs/docs/commands`：命令页面
+文档存储形式与 [vuejs/vitepress](https://github.com/vuejs/vitepress) 官方仓库一致，`docs/` 只包含站点内容：
+
+- `docs/`：文档站点源码（Markdown 页面 + 静态资源）
+- `docs/.vitepress/`：站点配置与自定义主题（`config.ts`、`theme/`）
+- `docs/commands/`：命令页面（每条命令一个 Markdown 文件，URL 安全的 kebab-case 命名）与分类总目录页 `index.md`
+- `docs/assets/`：页面配图；`docs/public/`：站点级静态文件（logo 等）
+- `scripts/rstool/`：命令数据管线（`commands.json` 数据源、生成脚本、docx/xlsx/html 原始资料）
 
 ## 环境要求
 
@@ -16,7 +20,6 @@ RsTool Docs 是基于 VitePress 的 RsTool 命令文档站点，包含命令说�
 ## 本地开发
 
 ```bash
-cd /home/runner/work/rstool_docs/rstool_docs
 pnpm install
 pnpm docs
 ```
@@ -24,9 +27,22 @@ pnpm docs
 ## 构建与预览
 
 ```bash
-cd /home/runner/work/rstool_docs/rstool_docs
 pnpm docs:build
 pnpm docs:preview
+```
+
+## 命令数据管线
+
+命令页面由数据源自动生成，源资料与生成脚本位于 `scripts/rstool/`：
+
+```bash
+# 从 RsTool_Command_Reference.html 提取数据，
+# 生成 commands.json 与 commands.data.js
+node scripts/rstool/extract_commands_data.js
+
+# 从 commands.json 生成 docs/commands/<slug>.md 每命令独立页，
+# 以及分类总目录页 docs/commands/index.md
+node scripts/rstool/generate_commands_pages.cjs
 ```
 
 ## 常用脚本

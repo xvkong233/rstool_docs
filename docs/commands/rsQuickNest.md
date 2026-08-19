@@ -2,7 +2,7 @@
 
 > 模块：视图出图 / 标注出图
 
-[← 返回命令完全手册](/RsTool命令手册)
+[← 返回命令目录](/commands/)
 
 **功能**：排料结果：零件 Brep/曲线置于板材、板材边框曲线、编号标签曲线 (图层 rsQuickNest_Sheets / rsQuickNest_Labels)
 

@@ -1,0 +1,111 @@
+/**
+ * RsTool 主题定制
+ * 主题色：#ff6e3a 系列（珊瑚橙）
+ * 首页布局参考 vitepress.dev：渐变标题 + Logo 光晕
+ */
+
+/* ===== 品牌色：#ff6e3a 系列 =====
+   -1 用于正文链接/强调文字（浅色模式下加深保证对比度）
+   -2 用于按钮 hover
+   -3 用于按钮、激活态等实心背景
+   -soft 用于提示容器、徽章等浅色底 */
+:root {
+  --vp-c-brand-1: #cf4d0a;
+  --vp-c-brand-2: #ff5a1f;
+  --vp-c-brand-3: #ff6e3a;
+  --vp-c-brand-soft: rgba(255, 110, 58, 0.14);
+}
+
+.dark {
+  --vp-c-brand-1: #ff8f66;
+  --vp-c-brand-2: #ff6e3a;
+  --vp-c-brand-3: #ff6e3a;
+  --vp-c-brand-soft: rgba(255, 110, 58, 0.16);
+}
+
+/* ===== 首页 Hero：vitepress.dev 风格 ===== */
+:root {
+  /* 标题渐变：珊瑚橙 → 暖琥珀 */
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(
+    120deg,
+    #ff6e3a 35%,
+    #ffb35c
+  );
+
+  /* Logo 背后的模糊光晕 */
+  --vp-home-hero-image-background-image: linear-gradient(
+    -45deg,
+    #ff6e3a 50%,
+    #ffc07a 50%
+  );
+  --vp-home-hero-image-filter: blur(44px);
+}
+
+@media (min-width: 40rem) {
+  :root {
+    --vp-home-hero-image-filter: blur(56px);
+  }
+}
+
+@media (min-width: 60rem) {
+  :root {
+    --vp-home-hero-image-filter: blur(68px);
+  }
+}
+
+/* Hero Logo 投影与留白（光晕中间的图需要呼吸空间） */
+.VPHero .VPImage {
+  filter: drop-shadow(-2px 4px 6px rgba(0, 0, 0, 0.2));
+  padding: 1.125rem;
+}
+
+/* ===== 自定义：扩宽主内容布局（VitePress 2 alpha 适配）===== */
+/* VPDoc.vue 把内容宽度硬编码并 scoped，旧版 --vp-content-max-width 变量已不存在；
+   这里用 !important 顶掉 scoped 特异性，并把整体布局上限抬到 1680px */
+:root {
+  --vp-layout-max-width: 1680px;
+}
+
+@media (min-width: 1280px) {
+  .VPDoc.has-aside .content-container {
+    max-width: 1080px !important;
+  }
+}
+
+@media (min-width: 1440px) {
+  .VPDoc.has-aside .content-container {
+    max-width: 1180px !important;
+  }
+  .VPDoc:not(.has-sidebar) .content {
+    max-width: 1080px !important;
+  }
+  .VPDoc:not(.has-sidebar) .container {
+    max-width: 1440px !important;
+  }
+}
+
+@media (min-width: 1680px) {
+  .VPDoc.has-aside .content-container {
+    max-width: 1280px !important;
+  }
+}
+
+/* 表格：在窄容器内允许横向滚动，避免列被压缩成竖排 */
+.vp-doc table,
+.vp-doc .table-wrapper,
+.VPDoc table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* 命令教学视频：撑满内容区，保持 16:9 比例（B 站 player 默认 640×360）
+   width:100%!important 覆盖 md 里硬编码的 width="640"；aspect-ratio 让高度按比例自动算。*/
+.vp-doc iframe.rstool-video {
+  display: block;
+  width: 100% !important;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto !important;
+}

@@ -2,7 +2,7 @@
 
 > 模块：截面管理 / Profile Director
 
-[← 返回命令完全手册](/RsTool命令手册)
+[← 返回命令目录](/commands/)
 
 **功能**：将所选封闭平面曲线作为截面保存到 ProfileDirector 用户截面库
 

@@ -2,7 +2,7 @@
 
 > 模块：效率工具 / 生产力
 
-[← 返回命令完全手册](/RsTool命令手册)
+[← 返回命令目录](/commands/)
 
 **功能**：打开思维导图窗口，支持编辑/保存/导出思维导图，文件为 .json（rstool-mindmap v1：title/updatedAt/root 树/view{theme,style,direction,layout}）；PNG/SVG 导出由后端弹保存对话框落盘
 
