@@ -1,5 +1,0 @@
-User-agent: *
-Content-Signal: search=yes, ai-train=yes, ai-input=yes
-Disallow:
-
-Sitemap: https://vitepress.dev/sitemap.xml
