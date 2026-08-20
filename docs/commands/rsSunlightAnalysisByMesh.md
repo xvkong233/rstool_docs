@@ -6,6 +6,9 @@
 
 **功能**：带有日照时数顶点色与分析网格 + 图例
 
+![rsSunlightAnalysisByMesh · 三维网格日照分析顶点色效果](../assets/rsSunlightAnalysisByMesh/image1.png)
+*三维网格日照分析：分析网格按日照时数写入顶点色（紫→粉→黄渐变），右侧 Eto 设置对话框*
+
 **调用**：在 Rhino 命令行输入 `rsSunlightAnalysisByMesh`（命令行交互）
 
 **交互流程**：

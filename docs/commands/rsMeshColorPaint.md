@@ -1,6 +1,6 @@
 # rsMeshColorPaint · 网格笔刷
 
-> 模块：几何 / 铺装表皮
+> 模块：铺装表皮
 
 [← 返回命令目录](/commands/)
 

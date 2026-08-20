@@ -667,43 +667,43 @@
    "desc": "对网格进行松弛平滑处理，使网格更加均匀。支持多种松弛算法。"
   },
   {
-   "cat": "几何",
-   "sub": "铺装表皮",
+   "cat": "铺装表皮",
+   "sub": "",
    "name": "rsTileMeshBlend",
    "zh": "网格铺装混接",
    "desc": "在网格曲面上生成铺装图案，支持不同图案之间的混接过渡。"
   },
   {
-   "cat": "几何",
-   "sub": "铺装表皮",
+   "cat": "铺装表皮",
+   "sub": "",
    "name": "rsTileMeshBlendByColor",
    "zh": "按颜色生成渐变表皮",
    "desc": "根据网格顶点颜色生成渐变铺装表皮，颜色驱动图案密度或类型。"
   },
   {
-   "cat": "几何",
-   "sub": "铺装表皮",
+   "cat": "铺装表皮",
+   "sub": "",
    "name": "rsTileMeshBlendByBitmap",
    "zh": "按贴图生成渐变表皮",
    "desc": "根据贴图图像生成渐变铺装表皮，图像灰度或颜色驱动图案变化。"
   },
   {
-   "cat": "几何",
-   "sub": "铺装表皮",
+   "cat": "铺装表皮",
+   "sub": "",
    "name": "rsMeshColorPaint",
    "zh": "网格笔刷",
    "desc": "用笔刷在网格上绘制颜色，支持实时交互式涂抹。"
   },
   {
-   "cat": "几何",
-   "sub": "铺装表皮",
+   "cat": "铺装表皮",
+   "sub": "",
    "name": "rsTileQuadNurbsBlend",
    "zh": "NURBS渐变表皮生成",
    "desc": "在 NURBS 曲面上生成渐变表皮图案。"
   },
   {
-   "cat": "几何",
-   "sub": "铺装表皮",
+   "cat": "铺装表皮",
+   "sub": "",
    "name": "rsTesselateNurbs",
    "zh": "NURBS表皮细分",
    "desc": "对 NURBS 曲面进行细分铺装，生成面板化结构。"
@@ -5938,7 +5938,14 @@
    ],
    "output": "修改后的地形网格（已挖洞或已挖填整平）",
    "notes": "边界曲线必须为闭合曲线，否则无法正确计算裁剪区域。"
-  },
+  ,
+   "illustrations": [
+    {
+     "src": "assets/rsTerrainEdit/image1.png",
+     "alt": "rsTerrainEdit · CutAndFill 模式挖填整平效果",
+     "caption": "CutAndFill 模式：椭圆区域按指定角度挖填平整为水平面"
+    }
+   ]},
   "rsTerrain": {
    "license": true,
    "help": "https://www.rstoolarchi.com/detail/30",
@@ -6161,7 +6168,14 @@
    ],
    "output": "各时刻的阴影投影曲线，以及半透明阴影填充面",
    "notes": "必须启用 Sun；采样间隔固定为 10 分钟，不在命令行参数中暴露。"
-  },
+  ,
+   "illustrations": [
+    {
+     "src": "assets/rsShadow/image1.png",
+     "alt": "rsShadow · 逐时刻阴影投影曲线堆叠效果",
+     "caption": "阴影分析：按 10 分钟间隔生成的逐时刻阴影投影曲线堆叠"
+    }
+   ]},
   "rsSunlightAnalysisByGrid": {
    "license": true,
    "help": null,
@@ -6233,7 +6247,14 @@
    ],
    "output": "各网格点的日照时数（文字标注或顶点着色网格 + 图例）",
    "notes": "依赖文档 Sun 的纬度/经度/日期；分析范围必须是闭合矩形曲线。"
-  },
+  ,
+   "illustrations": [
+    {
+     "src": "assets/rsSunlightAnalysisByGrid/image1.png",
+     "alt": "rsSunlightAnalysisByGrid · 日照平面分析着色网格效果",
+     "caption": "日照平面分析：着色网格显示各点日照时数（紫→黄渐变 + 图例），右侧为 Eto 设置对话框"
+    }
+   ]},
   "rsSunlightAnalysisByMesh": {
    "license": true,
    "help": null,
@@ -6289,7 +6310,14 @@
    ],
    "output": "带有日照时数顶点色与分析网格 + 图例",
    "notes": "依赖文档 Sun 的日期与经纬度；遮挡物可选。"
-  },
+  ,
+   "illustrations": [
+    {
+     "src": "assets/rsSunlightAnalysisByMesh/image1.png",
+     "alt": "rsSunlightAnalysisByMesh · 三维网格日照分析顶点色效果",
+     "caption": "三维网格日照分析：分析网格按日照时数写入顶点色（紫→粉→黄渐变），右侧 Eto 设置对话框"
+    }
+   ]},
   "rsSolarFocusRiskSimulation": {
    "license": true,
    "help": null,
@@ -8734,13 +8762,20 @@
   "rsGradientChangeByCrv": {
    "license": true,
    "help": "https://www.rstoolarchi.com/detail/81",
-   "style": "cli",
+   "style": "hybrid",
    "flow": [
+    "命令行模式：",
     "命令行输入 rsGradientChangeByCrv",
-    "选择待干扰（变动）的物体（GetMultiple）",
+    "选择待变换（干扰）的物体（GetMultiple，可多选）",
     "选择干扰用曲线（Curve，GetObject，可多选）",
-    "选取期间用选项设置最小缩放/最大缩放",
-    "回车后按物体到曲线的最近距离做线性重映射缩放"
+    "选取期间用选项设置最小缩放 / 最大缩放",
+    "回车后按物体到曲线的最近距离做线性重映射缩放（cli 模式仅缩放）",
+    "Eto 对话框模式（4 维变换 + 实时预览）：",
+    "命令行输入 rsGradientChangeByCrv 打开 Eto 对话框（或 cli 流程中选择对话框选项）",
+    "在对话框中拾取 / 确认待变换物体与干扰曲线（可沿用预选集）",
+    "在「缩放 / 旋转 / 移动」tab 勾选需启用的变换维度并分别设置近 / 远参数",
+    "在 filter tab 设置启用 filter、扰动强度、随机种子",
+    "勾选「隐藏原始物体」「实时预览」，确认变换生成结果或取消关闭"
    ],
    "params": [
     {
@@ -8760,8 +8795,20 @@
      "note": "最远物体对应的缩放比例（lastMaxScaleNum 记忆，默认1.2）"
     }
    ],
-   "output": "以物体包围盒中心到干扰曲线的最近距离为梯度，对物体做由近到远的渐变缩放",
-   "notes": "缩放值通过 Remap(距离, 最小距离, 最大距离, minScale, maxScale) 计算，并按各自包围盒中心缩放。"
+   "output": "以物体包围盒中心到干扰曲线的最近距离为梯度，对物体做由近到远的渐变缩放（cli 模式）/ 缩放·旋转·移动复合变换（Eto 模式）",
+   "notes": "cli 模式：缩放值通过 Remap(距离, 最小距离, 最大距离, minScale, maxScale) 计算，并按各自包围盒中心缩放。Eto 对话框模式：支持对物体同时施加缩放 / 旋转 / 移动三维变换（可分别勾选启用），变换强度同样以物体到干扰曲线的最近距离为梯度做由近到远线性重映射；filter 开启后会对「距离排序」施加随机扰动——扰动强度 0% 保持纯距离排序、100% 完全随机、中间值按比例混合；随机种子固定时可复现同一随机扰动结果。勾选「隐藏原始物体」只保留结果物体；勾选「实时预览」可在调整参数时即时刷新结果。",
+   "illustrations": [
+    {
+     "src": "assets/rsGradientChangeByCrv/image1.png",
+     "alt": "rsGradientChangeByCrv · 沿曲线渐变缩放效果",
+     "caption": "沿曲线渐变变换：以物体到干扰曲线的最近距离为梯度，由近到远做线性重映射缩放"
+    },
+    {
+     "src": "assets/rsGradientChangeByCrv/image2.png",
+     "alt": "rsGradientChangeByCrv · Eto 对话框（4 维变换 + 实时预览）",
+     "caption": "Eto 对话框：缩放/旋转/移动三维变换可分别启用，filter 提供扰动强度与随机种子，支持隐藏原始物体与实时预览"
+    }
+   ]
   },
   "rsRandomChange": {
    "license": true,
@@ -9323,7 +9370,14 @@
     }
    ],
    "notes": "WinForms 窗口；若未预选对象会提示选择；设置持久化到 RSTool_QuickColor.json"
-  },
+  ,
+   "illustrations": [
+    {
+     "src": "assets/rsQuickColor/image1.png",
+     "alt": "rsQuickColor · 快速着色窗口与场景预览",
+     "caption": "快速着色窗口：在窗口中选择/拾取颜色（含透明度），选择作用对象（物体颜色/材质 或 图层颜色/材质）并即时预览场景效果"
+    }
+   ]},
   "rsAutoBoxMapping": {
    "license": true,
    "help": null,

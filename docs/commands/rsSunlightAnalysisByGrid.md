@@ -6,6 +6,9 @@
 
 **功能**：各网格点的日照时数（文字标注或顶点着色网格 + 图例）
 
+![rsSunlightAnalysisByGrid · 日照平面分析着色网格效果](../assets/rsSunlightAnalysisByGrid/image1.png)
+*日照平面分析：着色网格显示各点日照时数（紫→黄渐变 + 图例），右侧为 Eto 设置对话框*
+
 **调用**：在 Rhino 命令行输入 `rsSunlightAnalysisByGrid`（打开设置窗口）
 
 **交互流程**：

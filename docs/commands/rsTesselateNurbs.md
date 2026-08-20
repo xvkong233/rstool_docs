@@ -1,6 +1,6 @@
 # rsTesselateNurbs · NURBS表皮细分
 
-> 模块：几何 / 铺装表皮
+> 模块：铺装表皮
 
 [← 返回命令目录](/commands/)
 

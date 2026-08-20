@@ -6,6 +6,9 @@
 
 **功能**：修改后的地形网格（已挖洞或已挖填整平）
 
+![rsTerrainEdit · CutAndFill 模式挖填整平效果](../assets/rsTerrainEdit/image1.png)
+*CutAndFill 模式：椭圆区域按指定角度挖填平整为水平面*
+
 **调用**：在 Rhino 命令行输入 `rsTerrainEdit`（命令行交互）
 
 **交互流程**：

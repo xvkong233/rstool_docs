@@ -136,7 +136,7 @@
 - [rsRainFlowSimulation · 雨流分析](/commands/rsRainFlowSimulation) — 模拟雨水在地形表面的流动路径，用于排水分析。
 - [rsStructuralAnalysis · 结构力学分析](/commands/rsStructuralAnalysis) — 对结构进行力学分析，可视化和计算受力情况。
 
-## 几何（44 条）
+## 几何（38 条）
 
 ### 曲线
 
@@ -174,15 +174,6 @@
 - [rsSimpleSculptor · 快速雕刻工具](/commands/rsSimpleSculptor) — 网格快速雕刻工具，支持推拉、平滑等交互式网格编辑。
 - [rsMeshRelax · 网格均匀松弛](/commands/rsMeshRelax) — 对网格进行松弛平滑处理，使网格更加均匀。支持多种松弛算法。
 
-### 铺装表皮
-
-- [rsTileMeshBlend · 网格铺装混接](/commands/rsTileMeshBlend) — 在网格曲面上生成铺装图案，支持不同图案之间的混接过渡。
-- [rsTileMeshBlendByColor · 按颜色生成渐变表皮](/commands/rsTileMeshBlendByColor) — 根据网格顶点颜色生成渐变铺装表皮，颜色驱动图案密度或类型。
-- [rsTileMeshBlendByBitmap · 按贴图生成渐变表皮](/commands/rsTileMeshBlendByBitmap) — 根据贴图图像生成渐变铺装表皮，图像灰度或颜色驱动图案变化。
-- [rsMeshColorPaint · 网格笔刷](/commands/rsMeshColorPaint) — 用笔刷在网格上绘制颜色，支持实时交互式涂抹。
-- [rsTileQuadNurbsBlend · NURBS渐变表皮生成](/commands/rsTileQuadNurbsBlend) — 在 NURBS 曲面上生成渐变表皮图案。
-- [rsTesselateNurbs · NURBS表皮细分](/commands/rsTesselateNurbs) — 对 NURBS 曲面进行细分铺装，生成面板化结构。
-
 ### 对象变换
 
 - [rsArrayBetween · 两对象间阵列](/commands/rsArrayBetween) — 在两个对象之间进行均匀阵列，自动计算间距和数量。
@@ -199,6 +190,17 @@
 - [rsRandomPtsOnCrv · 曲线上随机点](/commands/rsRandomPtsOnCrv) — 在曲线上生成随机分布的点，可控制数量和随机种子。
 - [rsRandomPtsOnObj · 物体上随机生成点](/commands/rsRandomPtsOnObj) — 在物体表面生成随机分布的点，支持网格和曲面。
 - [rsDivideCrvByRoundedCount · 按圆整数量分割曲线](/commands/rsDivideCrvByRoundedCount) — 按圆整后的数量分割曲线，确保等分段数取整。
+
+## 铺装表皮（6 条）
+
+### （通用）
+
+- [rsTileMeshBlend · 网格铺装混接](/commands/rsTileMeshBlend) — 在网格曲面上生成铺装图案，支持不同图案之间的混接过渡。
+- [rsTileMeshBlendByColor · 按颜色生成渐变表皮](/commands/rsTileMeshBlendByColor) — 根据网格顶点颜色生成渐变铺装表皮，颜色驱动图案密度或类型。
+- [rsTileMeshBlendByBitmap · 按贴图生成渐变表皮](/commands/rsTileMeshBlendByBitmap) — 根据贴图图像生成渐变铺装表皮，图像灰度或颜色驱动图案变化。
+- [rsMeshColorPaint · 网格笔刷](/commands/rsMeshColorPaint) — 用笔刷在网格上绘制颜色，支持实时交互式涂抹。
+- [rsTileQuadNurbsBlend · NURBS渐变表皮生成](/commands/rsTileQuadNurbsBlend) — 在 NURBS 曲面上生成渐变表皮图案。
+- [rsTesselateNurbs · NURBS表皮细分](/commands/rsTesselateNurbs) — 对 NURBS 曲面进行细分铺装，生成面板化结构。
 
 ## 组织与选择（19 条）
 

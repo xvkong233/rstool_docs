@@ -58,6 +58,13 @@ for (const it of cmds.data) {
   }
 }
 
+// 几何组子类按固定顺序排序：点 → 曲线 → 曲面 → 网格 → 对象变换
+const geoPriority = ['点', '曲线', '曲面', '网格', '对象变换']
+const geo = byCat.find((c) => c.cat === '几何')
+if (geo) {
+  geo.subOrder.sort((a, b) => geoPriority.indexOf(a) - geoPriority.indexOf(b))
+}
+
 const cmdText = (it: CmdItem) =>
   it.zh && it.zh !== it.name ? `${it.name} · ${it.zh}` : it.name
 
@@ -74,14 +81,24 @@ const buildCatItems = (c: CatGroup) => {
     })
   }
   if (c.noSub.length) {
-    out.push({
-      text: '（通用）',
-      collapsed: true,
-      items: c.noSub.map((it) => ({
-        text: cmdText(it),
-        link: `/commands/${slug(it.name)}`
-      }))
-    })
+    if (c.subOrder.length === 0) {
+      // 无子分组的分类（如铺装表皮）直接列出命令，不套「（通用）」分组
+      for (const it of c.noSub) {
+        out.push({
+          text: cmdText(it),
+          link: `/commands/${slug(it.name)}`
+        })
+      }
+    } else {
+      out.push({
+        text: '（通用）',
+        collapsed: true,
+        items: c.noSub.map((it) => ({
+          text: cmdText(it),
+          link: `/commands/${slug(it.name)}`
+        }))
+      })
+    }
   }
   return out
 }
@@ -93,7 +110,10 @@ export default defineConfig({
   lastUpdated: true,
   cleanUrls: true,
 
-  head: [['link', { rel: 'icon', type: 'image/png', href: '/logo.png' }]],
+  head: [
+    ['link', { rel: 'icon', type: 'image/png', href: '/logo.png' }],
+    ['link', { rel: 'stylesheet', href: '/style.css' }]
+  ],
 
   themeConfig: {
     logo: '/logo.png',
