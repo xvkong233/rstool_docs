@@ -3678,7 +3678,14 @@
     }
    ],
    "output": "实时预览三体引力运动（球体+轨迹+速度向量），可 Bake 轨迹为 NURBS 曲线",
-   "notes": "采用 RK4 积分；经典预设（8字形/等边三角形）为稳定解"
+   "notes": "采用 RK4 积分；经典预设（8字形/等边三角形）为稳定解",
+   "illustrations": [
+    {
+     "src": "assets/rsThreeBody/image1.png",
+     "alt": "rsThreeBody 模拟对话框与运行视口：右侧 Eto 窗口标题『三体运动模拟 (Three-Body)』，分三区：①初始预设（下拉=随机）②物理参数（m1=1.000 / m2=1.000 / m3=1.000 / 引力常数 G=0.8000 / 时间步 dt=0.0031 / 初速度倍率=1.200 / Z 轴扰动=0.000）③显示与模拟（显示缩放=30.00 / 球体半径=1.000 / 每帧步数=4 / 轨迹长度=2000 / ✓ 记录轨迹 / ✓ 显示速度向量）；底部状态行『预设 随机 步数 2820』；按钮区：暂停 / 重置 / Bake 轨迹 / 关闭；左侧 Rhino 视口可见三个不同颜色的球体（绿/蓝/红）正沿彩色轨迹线相互绕飞，每球带白色速度向量箭头",
+     "caption": "三体运动模拟：对话框设 3 体质量 + 引力常数 G + 时间步 dt + 初速度倍率 + Z 轴扰动，实时预览三球互绕轨迹并支持 Bake 为 NURBS 曲线"
+    }
+   ]
   },
   "rsWalker": {
    "license": true,
@@ -8253,7 +8260,14 @@
     }
    ],
    "output": "沿表面生成的毛发系统（可渲染网格 或 中心曲线）",
-   "notes": "界面中 TipScale/LengthVariation/Gravity/Bend 显示为百分比（内部值除以 100）"
+   "illustrations": [
+    {
+     "src": "assets/rsHairSystem/image1.png",
+     "alt": "rsHairSystem 窗口：表面已选 1 个对象，毛根按当前预控均匀分布；左视口已生成一片黄色毛发均匀覆盖在曲面上；右侧面板包含 16 个参数",
+     "caption": "rsHairSystem 实时渲染预览：左视口黄色毛发沿曲面密集生长；右侧「生成毛发系统」面板含 16 个参数（预设 / 长度 / 密度 / 直径 / 尖端 / 随机 / 倾斜 / 重力 / 弯曲 / 分段 / 截面边数 / 数量上限 / 预览比例 / 随机种子 / 输出类型），下方「提示：预览越小、分段数越细越慢，生成量越大。重力方向为世界 -Z，实时预览 5,000 根（10%）；正式生成预计 50,000 根。」"
+    }
+   ],
+   "notes": "在选定曲面 / 裁剪面 / 网格 / SubD 上自动按毛根间距均匀撒点，沿曲面法向（带最大倾斜角约束）长出毛发；重力方向沿世界 -Z。\n\n## 一、典型交互流程\n\n1. 选中一个或多个承载曲面（Brep / Mesh / SubD）\n2. 命令行运行 `rsHairSystem`，弹出「生成毛发系统」对话框\n3. 调整参数 → 右视口实时刷新预览（绿色进度条显示比例）\n4. 点「生成」正式写入当前曲面，可选择「可渲染毛发网格」或「毛发中心曲线（轻量）」之一；点「取消」放弃\n5. 大场景估算 > 50,000 根时面板底部会直接显示预计根数\n\n## 二、参数分组详解\n\n### 1. 形态\n- **预设 Preset**：自定义 / 地毯短绒 / 物体短毛 / 柔软长毛，4 个常见组合一键套用\n- **毛发长度 Length**：模型单位，0.001 起，米制默认 0.025\n- **毛根间距 Root spacing**：相邻毛根的距离 (与密度反向关系)，米制默认 0.008\n- **根部直径 Root diameter**：毛根圆截面直径，米制默认 0.0008\n- **截面边数 Section sides**：每根毛的圆截面多边形边数 (3–12，4 常用)\n- **最大倾斜角度 Lean angle**：毛发相对曲面法向的最大偏离 (°)\n\n### 2. 随机化与扰动\n- **尖端粗细 Tip scale (%)**：1–100，毛梢与毛根直径比，25–50 视觉明显\n- **长度随机 Length variation (%)**：0–95，每根长度抖动幅度\n- **自然弯曲/扰动 Bend (%)**：0–200，毛干扭曲弯折强度\n- **重力效果 Gravity (%)**：0–300，世界 -Z 方向的拉力强度\n- **长度分段 Length segments**：1–24，越大越弯曲自然 (弯曲精度成本)\n\n### 3. 输出\n- **毛发数量上限 Max hair count**：1–200,000，超过会按间距自动稀疏\n- **预览比例 Preview percentage (%)**：仅影响面板实时刷新，正式生成按间距铺满\n- **随机种子 Random seed**：固定后得到可复现的随机分布\n- **输出类型 Output type**：可渲染毛发网格（带截面、文件量大）/ 毛发中心曲线（轻量、便于二次编辑）\n\n## 三、显示换算说明\n\n界面中 TipScale / LengthVariation / Gravity / Bend 显示为百分比 (0–100)，内部值 = 界面值 / 100；例：界面 12 = 内部 0.12；改默认值请用代码内部值或等比放大界面值。\n\n## 四、典型场景\n\n- **地毯 / 草坪 / 苔藓** → Preset=地毯短绒，Root spacing 0.005–0.012，Tip scale 30–60\n- **毛绒玩具 / 抱枕** → Preset=柔软长毛，Length 0.04–0.08，Gravity 40–80，Bend 15–30\n- **头发 / 兽毛** → Preset=物体短毛，Lean angle 8–15，最大倾斜角让方向自由\n- **性能预算紧 / 出图慢** → 选「毛发中心曲线（轻量）」+ 长度分段调到 6–8，把截面边数降到 3\n\n## 五、注意事项\n\n- 必须先选承载几何再运行命令；命令运行后改承载不会自动同步\n- 取消预览重建不会丢失已生成的毛发\n- 渲染发白 / 全黑通常是大面积同向毛根法线问题，可适当加大随机或调小毛根间距"
   },
   "rsConvertToMeshPanel": {
    "license": true,
@@ -8368,8 +8382,15 @@
      "note": "可选载入黑白笔刷贴图"
     }
    ],
+   "illustrations": [
+    {
+     "src": "assets/rsSimpleSculptor/image1.png",
+     "alt": "Rhino 8 Perspective 视图，左侧「快速雕刻工具」Eto 对话框：顶部三个模式按钮——当前高亮隆起 / 下降 / 整平；下方四个数值框 笔刷半径=1.000 / 位移量=0.100 / 强度=0.55 / 硬度=0.35；曲线形式 6 个 thumbnail（1 圆润、2 线性、3 尖峰、4 宽缓、5 拱形、6 阶梯，当前 1 圆润）；起伏类型 1: 圆顶；Black map 灰状态「未使用贴图」+ 「载入贴图」「清除贴图」两个按钮；勾选项 ✓ 常定边界、✓ 笔刷后回边缘标记；细分密度=2、最小细分边长=0.250；镜像规则三键 X / Y / Z（当前 X）+ 镜像平面位置=0.000；底部 3 个按钮 撤销 / 完成 / 取消。视口中浅色 shaded 平面网格被多次隆起雕刻出三处明显的山脊/凹坑起伏，右侧橙色笔刷轮廓圈 + 中心笔刷点。",
+     "caption": "快速雕刻工具：以 hybrid 模式（命令行 + Eto 面板）选中网格后激活，左键拖动即时位移顶点；面板调节笔刷半径/位移量/强度/硬度/曲线形式/镜像/Alpha 贴图等 11 个参数。"
+    }
+   ],
    "output": "原地雕刻后的网格（顶点位移）；取消则恢复原网格",
-   "notes": "Ctrl+Z 撤销上一笔；支持镜像对称雕刻；整平模式移除曲率不漂移顶点"
+   "notes": "hybrid 模式：命令行交互选中网格 → 自动弹出 Eto 面板，左键拖动在网格上实时雕刻；面板所有数值可拖动调节，结果立即反映到视口（不写入文档），直到点「完成」才正式 Bake 写入原始网格，「取消」则丢弃全部笔触回滚。\n\n## 笔刷 5 要素详解\n\n每次落笔的位移量由这 4 个数值 + 1 个曲线形式共同决定。\n\n- **笔刷半径 Brush radius**（1.0 / 0.001–100000）：受影响顶点集的判定距离。每个顶点按其到笔刷中心的距离 a，半径 R 内的顶点为潜在受影响集合；距离越大影响越小（按强度衰减）。\n- **位移量 Amount**（0.1 / 0–100000）：单笔每帧在该顶点上的位移大小；隆起/下降模式生效，**整平模式自动禁用**。\n- **强度 Strength**（0.55 / 0–1）：笔刷整体作用强度倍乘；越大则同等位移量下结果凸起越夸张。\n- **硬度 Hardness**（0.35 / 0–1）：在笔刷半径内的衰减曲线陡峭度；0 = 全范围内柔和过渡、1 = 中心集中、近乎阶梯式只影响中心。\n- **曲线形式 Profile**（圆润 Smooth / 线性 Linear / 尖峰 Sharp / 宽缓 Broad / 拱形 Dome / 阶梯 Terrace 6 种预定义衰减曲线）：每种曲线影响\"距离 a vs 位移系数 f(a/R)\"映射——圆润最常用，强弱过渡自然；线性即距离=比例；尖峰中心突起尖锐、边缘几乎不变；宽缓大半径仍可拉到峰值；拱形双向曲线（中心低、向外先升后降）；阶梯强调等高线感。\n\n实测常用两套：①**细致塑型**——半径 0.3 / 强度 0.4 / 硬度 0.6 / 曲线 圆润或尖峰；②**山体大面起伏**——半径 5 / 强度 0.7 / 硬度 0.3 / 曲线 宽缓或拱形。\n\n## 镜像雕刻\n\n勾选「镜像笔刷 Mirror brush」后开启 X / Y / Z 对称：每次落笔会同时在镜像平面另一侧写一笔；可叠加多面镜像（X+Y 四面对称、XYZ 全八分对称）。\n\n- **镜像轴 Mirror axis**：X（默认）/ Y / Z，分别绕 X/Y/Z 轴镜像\n- **镜像平面位置 Mirror plane offset**（0.0）：镜像平面沿轴的偏移量；默认值 0 即全局中点位置；可设到任意位置同步雕刻多个对称中心\n\n镜像对公共建筑山墙面（中轴对称）、地形地势（X+Y 双轴）、复杂几何主体（绕 Z 全对称）非常有效。\n\n## 黑白贴图 Alpha map\n\n「Black map / Alpha map」是把黑白 PNG/JPG 当作笔刷遮罩来用：黑=0%位移、白=100%；支持 png/jpg/jpeg/bmp/tif/tiff。常用场景：\n- 在墙体上做凹凸字、凹凸 logo\n- 地形起伏按贴图斑块引导（河流/植被）\n- 镂空雕花（贴图背景=黑掩模）\n\n载入后在笔刷半径内叠乘该遮罩；点击「清除贴图」恢复无遮罩笔刷。\n\n## 固定边界 / 整平模式\n\n- **常定边界 Preserve boundary**：网格轮廓顶点不参与位移（默认勾选）。取消勾选会让边线也被拖动——一般用于无明确边界的自由表面。\n- **整平 Flatten 模式**：把圆滑区域拉平到当前笔刷中心点所在切面高度，**移除曲率而非漂移顶点**（其它模式会沿法向推拉）。常用于平面化山顶、大面积找平。\n\n## 撤销 / 取消 / 实时预览\n\n- **Ctrl+Z 撤销上一笔**：单笔粒度撤销；每落一次鼠标为一个撤销单位（含来回抖动）\n- **「完成」Bake 写入原始网格**；**「取消」**丢弃全部笔触恢复原状\n- 持左键移动 = 连续落笔；松开 = 当前笔触结束\n- 启用「细分密度」/「最小细分边长」可在稀疏区域细分加密，让雕刻细节更圆滑（无原始细分则雕刻会暴露三角面片错切）\n- 跨网格可继续拖入新网格雕刻（不打断当前会话）\n\n完成雕刻后可继续用 rsMeshRelax、rsMeshOffset、rsTesselateNurbs 等后续工具做松弛、偏移、面板化等操作。"
   },
   "rsMeshRelax": {
    "license": true,
@@ -10287,7 +10308,14 @@
      "title": "RsTool · 建筑渲染窗口（Shadow Render）补充演示（B 站）"
     }
    ],
-   "notes": "自动开启文档太阳 (渲染→太阳面板可调)；设置持久化到命令 PersistentSettings；同一文档复用窗口实例"
+   "illustrations": [
+    {
+     "src": "assets/rsShadowRender/image1.jpg",
+     "alt": "rsShadowRender 渲染进度弹窗：RH7 主视口城市肌理模型已同步到后台 ArchiRenderWindow；弹窗标题『已经完成 67%』+ 进度条 + 取消/暂停按钮，右侧参数面板含 Perspective / 视口位名 / 是否归并工作层 / 场地 / 高度 / 材质细分 / 太阳 / 工作面板等多个勾选",
+     "caption": "rsShadowRender 渲染中：自动捕获当前 Rhino 视口到 ArchiRenderWindow 离线渲染，顶部进度条 + 取消 / 暂停控件；右侧面板控制摄像机、视口、太阳、材质边线、白模等开关；图中已渲染到 67%，完成度实时显示。"
+    }
+   ],
+   "notes": "自动开启文档太阳（渲染 → 太阳面板可调）；设置持久化到命令 PersistentSettings；同一文档复用窗口实例\n\n## 一、典型使用流程\n\n1. Rhino 命令行输入 `rsShadowRender`，弹出 ArchiRenderWindow（建筑渲染窗口）\n2. 自动开启文档太阳，捕获当前 Perspective 视口作为渲染源\n3. 按需设置渲染质量 / 输出尺寸 / 宽高比 / 白模开关 / 阴影强度 / 边线模式 等\n4. 点「渲染」开始离线渲染；中途可「暂停」续渲或「取消」中止\n5. 进度条显示百分比 + 完成值（如 67%），后台可持续在 Rhino 做其他建模\n6. 完成后窗口内显示成图，可保存 / 复制 / 截图\n\n## 二、参数分组详解\n\n### 1. 输出\n- **渲染质量 QualityPreset**：Preview / Medium / High / Ultra（内部分辨率倍率 0.5/1/2/3）\n- **输出尺寸 OutputPreset**：1K(1920) / 2K(2560) / 4K(3840) / 6K(6144)（长边像素）\n- **宽高比 AspectRatioPreset**：MatchViewport / Square 1×1 / 4:3 / 16:9 / 9:16\n\n### 2. 材质\n- **继承 Rhino 材质颜色 InheritRhinoMaterialColor**：代码固定为 true，从当前文档材质球取色\n- **使用高级 Rhino 材质 UseAdvancedRhinoMaterial**：代码固定为 true\n- **白模模式 UseWhiteModel**：开则忽略颜色统一渲染白膜，常用于体量研究 / 阴影分析\n\n### 3. 边线\n- **边线模式 EdgeRenderMode**：Off / ViewportOverlay / NativeFramebuffer\n- **物体边线宽度 ObjectEdgeLineWidth**：1–16，由 ClampObjectEdgeLineWidth 限制\n- **主轮廓线宽比 PrimaryOutlineWidthRatio**：0.0–2.0，主要轮廓相对次要轮廓的粗细比\n- **阴影强度 ShadowIntensity**：0.0–1.0，1.0 为全黑阴影\n\n## 三、与普通 Rhino Render 的差异\n\n- 直接接 RSTool 建筑审图工作流：默认体量白模 + 高对比阴影 + 主轮廓线，无需逐项配 Cycles\n- 自动开文档太阳，省去手动调整时间；太阳参数可到「渲染 → 太阳面板」按需改\n- 渲染过程中可继续在 Rhino 中建模、缩放、改图，不会卡死画布\n- 输出纯位图（含主轮廓 + 阴影的白模），后期可叠加材质图、平面图、尺寸标注一键出审图册\n\n## 四、典型场景\n\n- **建筑体量阴影分析**：白模 + 阴影强度 1.0 + Ultra，多视角出 4K 阴影图\n- **总平面底图**：MatchViewport + High + 主轮廓线宽比 1.5，配平面树、铺地快速出图\n- **鸟瞰 / 鸟瞰动画**：MatchViewport + Ultra，主轮廓 1.0，强调塔楼形体\n- **方案对比渲染**：批量跑 4–6 个视角 + 边线开关对比，存 PNG 系列\n\n## 五、注意事项\n\n- 太阳方向随「渲染 → 太阳面板」实时联动，调太阳时已渲染图也会跟着预览刷新\n- 高分辨（4K+Ultra）渲染时显存占用高，建议关闭其他 D3D 应用\n- 设置存在命令 PersistentSettings，重复打开同一文档会沿用上次设置\n- 取消渲染后未完成部分不会保存"
   },
   "rsDeleteOpening2D": {
    "license": true,
@@ -11616,12 +11644,22 @@
    "help": null,
    "style": "gh",
    "flow": [
-    "在 Grasshopper 画布中，从 RSTool 标签的「Developer」分组下找到该组件并拖入",
-    "按参数表连接各输入端口（标注「可选」的为可空端口）",
+    "在 Grasshopper 画布中，从 RSTool 标签的「Developer」分组下找到该组件并拖入画布",
+    "右键菜单选「Create Source Template…」一键生成只含 Input/Output/SolveInstance 骨架的本地 .cs 源码文件（也可以用「Select Source File…」挂上你已有的 .cs）",
+    "用任意编辑器或 AI 工具（WorkBuddy、ChatGPT、Gemini、Claude 等）按自己的需求改这个 .cs 文件，组件会自动按你 Register 的输入输出端刷新画布端口",
+    "勾选「Watch Source File」后，保存 .cs 即可自动热重载；或在右键菜单里 Reload Now 手动重载",
     "每次画布求解时执行一次，从输出端口读取结果"
    ],
    "params": [],
-   "notes": "该运算器在 Grasshopper 画布中运行，输入与输出通过组件端口连接；每次画布求解时执行一次。\n\n所属 GH 分组：RSTool / Developer"
+   "illustrations": [
+    {
+     "src": "assets/linked-csharp/image1.png",
+     "alt": "Linked C# 组件右键菜单：顶部 Linked C# 标题与折叠图标；选项依次为 Enabled、Bake...、Runtime warnings（子菜单）；Source: not selected；Select Source File...、Create Source Template...、Open Source File、Reload Now；勾选中的 Watch Source File；下方 Use Embedded Source、Detach Source File、Export Embedded Source...、Copy Embedded Source；底部 Help...。",
+     "caption": "Linked C# 组件右键菜单：从 Source File 一组把本地 .cs 文件挂到组件上，Watch Source File 启用后保存即自动热重载。"
+    }
+   ],
+   "output": "在画布中执行外部 .cs 脚本求解；输入/输出端由 .cs 内 RegisterInputParams/RegisterOutputParams 注册定义，画布会自动同步显示",
+   "notes": "Grasshopper 原生\"容器\"型 C# 组件，把 C# 脚本以独立的本地 .cs 文件存放执行，而不是写在组件本体里。本身没有固定端口——所有输入输出都在 .cs 内部用 AddGenericParameter/AddNumberParameter 等注册，组件会按你注册的名称、类型、数目实时同步画布端口。\n\n## 一、AI 辅助建模工作流\n\n这是这个组件最大的杀手锏。Grasshopper 原生组件解决不了的逻辑（自定义递推、复杂几何运算、特殊数据结构、特定算法）、RhinoCommon 调用密集的部分，可以让 AI 来写：\n\n1. **Create Source Template** → 拿到一份空骨架 .cs（输入输出 + SolveInstance 占位）\n2. **拷给 WorkBuddy / ChatGPT / Gemini / Claude 等任意 AI**，把 GH 场景说清楚（例如\"我有一个 NurbsSurface 列表，要算出每个曲面最陡坡向、步长 s、最大步数 n；输出每条流线的 Curve 列表与终点坐标列表\"）\n3. **AI 生成完整 C# 代码**——它知道 Grasshopper API（GH_ParamAccess.item/list/tree、DataTree、Pivot、IKernel 等）、RhinoCommon（Brep、NurbsSurface、Mesh、Line、Point3d 等）、常见算法（SDF、Delaunay、MarchingCubes、ClosestPoint 等）的写法，会直接帮你写完整的 Register + SolveInstance\n4. **.cs 保存** → 画布上的 Linked C# 自动按新代码的 Register 同步出对应端口；连线运行即可\n5. **再调整、再询问、再保存**——这就是一个本地 IDE 化的 GH 运算器开发循环\n\n相比在 GH 自带 C# 编辑器里手写代码（每改一行都要等编译、不能 diff、不能版本管理、不能复用到其他 .gh）：Linked C# 的源代码是**纯本地普通文件**，可以用任何编辑器（VS Code / Cursor / Zed），可以用 AI 工具迭代，可以塞进 git / SVN 进行版本控制，也可以同时给团队其他 .gh 文件复用同一个 .cs。\n\n## 二、菜单选项详解\n\n右键菜单里 Source 与自动重载相关的条目（按常见使用顺序）：\n\n- **Source: not selected** — 状态行；挂了文件会变成文件路径\n- **Select Source File...** — 把一个已经写好的本地 .cs 绑到该组件上\n- **Create Source Template...** — 一键生成只含 RegisterInputParams/RegisterOutputParams/RegisterNamedInputs/RegisterNamedOutputs/SolveInstance 骨架的 .cs（首次使用必选）\n- **Open Source File** — 用系统关联的程序（VS/Rider/VSCode）打开你的 .cs 进行编辑\n- **Reload Now** — 重新加载 .cs 并同步端口；Watch 关闭时唯一刷新方式\n- **Watch Source File** — 勾上后保存 .cs 自动重载（推荐开发期勾上）\n- **Use Embedded Source** — 把外挂 .cs 的源码写回到组件内（关闭外联，整个组件可移植）\n- **Detach Source File** — 解除与本地 .cs 的链接，回到无源码状态\n- **Export Embedded Source...** / **Copy Embedded Source** — 把组件内嵌的代码导出或拷贝到剪切板\n- **Bake...** / **Enabled** — 同原生组件的烘焙与禁用\n- **Runtime warnings** 子菜单 — 看求解时的告警与异常堆栈\n\n## 三、与\"C# Script\"的区别\n\nGrasshopper 还自带一个\"C# Script\"组件（图标相似）。区别是：\n\n- **C# Script**：代码存放在组件内部 DrawTree/Undo 工作里——调试不友好、无法用外部 IDE 改、无法跨文件复用、不能 git\n- **Linked C#**：代码外联到独立 .cs 文件——可用任何编辑器、可用 AI 改、可 git、可复用\n\n对 AI 辅助建模来说，Linked C# 几乎是必备：AI 写出的长文件不能塞进组件内部 GUI 编辑器，必须是独立文件。\n\n## 四、AI 提示词样板\n\n通常发给 AI 的提示词结构（堂主可直接复用）：\n\n```\n我在用 Grasshopper 1.x + Linked C# 组件。请帮我写一个 .cs 文件，目标：\n- 输入：[NurbsSurface 列表 srfList, double 步长 step, double 最大步数 maxSteps]\n- 输出：[List<Curve> 流线, List<Point3d> 终点]\n- 算法说明：[从 srfList 各面重心出发，每步沿最陡下降方向迭代 step，迭代超过 maxSteps 停止；输出每条流线与对应终点]\n- 要求：所有 Register 调用写清名称/简称/说明/访问方式；SolveInstance 内对空输入做容错；注释用中文\n```\n\nAI 会返回完整 Register + SolveInstance，把内容整段贴回 .cs → Save → Watch 自动重载 → 端口出现在画布即可。\n\n## 五、注意事项\n\n- **Watch Source File 建议始终勾选**，开发周期省事；结束发布 .gh 前再 Detach 让组件自包含\n- **.cs 文件名可以改**，组件看的是内部 GUID 的关联，不是文件名\n- **跨机器共享 .gh**：要么走 Embedded Source 模式（拷过去就行），要么同事之间同步 .cs 文件\n- **找不到 Source 重载**：如果菜单显示 Source: not selected，多半是 .cs 文件被删了或路径变了，重新 Select Source File 即可\n- **GH 版本差异**：GH 1 顶部菜单写法是 `GH_Component.SolveInstance` 子类；GH 2 / Rhino 8 上同样兼容\n\n所属 GH 分组：RSTool / Developer"
   },
   "ClosestOddEvenNumber": {
    "icon": "assets/gh-icons/ClosestOddEvenNumber_24.png",
