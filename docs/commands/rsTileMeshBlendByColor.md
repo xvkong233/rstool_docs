@@ -1,6 +1,6 @@
 # rsTileMeshBlendByColor · 按颜色生成渐变表皮
 
-> 模块：几何 / 铺装表皮
+> 模块：铺装表皮
 
 [← 返回命令目录](/commands/)
 
