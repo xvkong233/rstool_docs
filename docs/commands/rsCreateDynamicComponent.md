@@ -20,3 +20,8 @@
 > 此命令无命令行数值参数，相关设置在窗口中调整。
 
 **备注**：入门要点（详见 rsDynamicComponentGuide 入门指南）：①两种创建方式——普通几何一体化（一扇门、柜体等不单独复用的零件）与动态组件装配（门框/门扇/五金等需独立复用构件，先分别做成动态组件再一起创建外层装配体）；②五步完成：命名摆位→选中运行命令→选 CPlane 方向并指定原点→在节点树确认蓝框与“组件身份”后设参数/绑定→预览无误后“保存模板”；③$参数名 表示参数，Parent 为父节点、Root 为根节点，先定驱动者再让其他节点单向跟随，避免互相引用；④单独选中组件后用 Rhino Scale/Gumball 缩放，可自动写回尺寸参数（模板默认值不变），镜像/剪切/零比例/缩放复制不写回；⑤公式可直接用 20mm/5cm/1.2m，角度默认用度；⑥保存模板形成一条 Rhino 撤销记录，撤销会同步恢复模板与所有实例。
+
+**教学视频**：
+
+<iframe class="rstool-video" src="https://player.bilibili.com/player.html?isOutside=true&aid=117128455790433&bvid=BV1sQ8A6FECp&cid=41104969276&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" title="RsTool · 是的！Rhino也有动态组件了！（B 站）"></iframe>
+*RsTool · 是的！Rhino也有动态组件了！（B 站）*
