@@ -6,6 +6,9 @@
 
 **功能**：双跑楼梯（含休息平台与扶手）
 
+![双跑楼梯示意图](../assets/rsDoubleFlightStairs/image1.png)
+*拾取基点与方向点后实时生成双跑楼梯，含休息平台、梯井、扶手，全部参数对话框调整*
+
 **调用**：在 Rhino 命令行输入 `rsDoubleFlightStairs`（打开设置窗口）
 
 **交互流程**：

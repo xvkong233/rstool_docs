@@ -6,6 +6,9 @@
 
 **功能**：沿多重直线生成折线坡道及栏杆
 
+![rsZigZagRamp · 折线坡道生成效果](../assets/rsZigZagRamp/image1.png)
+*折线坡道：左侧输入多重直线作为路径，右侧沿路径生成 Z 字形 3D 坡道（自动带栏杆）*
+
 **调用**：在 Rhino 命令行输入 `rsZigZagRamp`（命令行交互）
 
 **交互流程**：

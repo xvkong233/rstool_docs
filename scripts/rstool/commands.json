@@ -3706,8 +3706,15 @@
     }
    ],
    "output": "进入 FPS 式漫游模式，在视口中用 WASD/QE 移动相机（不修改几何）",
-   "notes": ""
-  },
+   "notes": "",
+   "illustrations": [
+    {
+     "src": "assets/rsWalker/image1.png",
+     "alt": "rsWalker · 漫游模式控制面板",
+     "caption": "功能"
+    }
+   ]
+},
   "rsFpsGame": {
    "license": true,
    "help": null,
@@ -3961,8 +3968,15 @@
     }
    ],
    "output": "沿基础面与踏步线生成参数化楼梯（含扶手）",
-   "notes": "表单与命令行选项混合驱动"
-  },
+   "notes": "表单与命令行选项混合驱动",
+   "illustrations": [
+    {
+     "src": "assets/rsStairBySteps/image1.png",
+     "alt": "参数化楼梯生成示意图",
+     "caption": "功能"
+    }
+   ]
+},
   "rsDoubleFlightStairs": {
    "license": true,
    "help": null,
@@ -4040,8 +4054,15 @@
     }
    ],
    "output": "双跑楼梯（含休息平台与扶手）",
-   "notes": "对话框为非模态，可同时拾取基点与方向点"
-  },
+   "notes": "对话框为非模态，可同时拾取基点与方向点",
+   "illustrations": [
+    {
+     "src": "assets/rsDoubleFlightStairs/image1.png",
+     "alt": "双跑楼梯示意图",
+     "caption": "功能"
+    }
+   ]
+},
   "rsMultiFlightStairs": {
    "license": true,
    "help": null,
@@ -4110,8 +4131,15 @@
     }
    ],
    "output": "沿路径生成多跑楼梯（含休息平台、梯板与扶手，支持翻转）",
-   "notes": ""
-  },
+   "notes": "",
+   "illustrations": [
+    {
+     "src": "assets/rsMultiFlightStairs/image1.png",
+     "alt": "多跑楼梯示意图",
+     "caption": "功能"
+    }
+   ]
+},
   "rsSpiralStair": {
    "license": true,
    "help": "https://www.rstoolarchi.com/detail/59",
@@ -4196,8 +4224,15 @@
     }
    ],
    "output": "旋转楼梯（含扶手，标准或镂空踏步）",
-   "notes": ""
-  },
+   "notes": "",
+   "illustrations": [
+    {
+     "src": "assets/rsSpiralStair/image1.png",
+     "alt": "旋转楼梯示意图",
+     "caption": "功能"
+    }
+   ]
+},
   "rsEscalator": {
    "license": true,
    "help": "https://www.rstoolarchi.com/detail/60",
@@ -4299,8 +4334,15 @@
     }
    ],
    "output": "沿多重直线生成折线坡道及栏杆",
-   "notes": ""
-  },
+   "notes": "",
+   "illustrations": [
+    {
+     "src": "assets/rsZigZagRamp/image1.png",
+     "alt": "rsZigZagRamp · 折线坡道生成效果",
+     "caption": "功能"
+    }
+   ]
+},
   "rsFadingStair": {
    "license": true,
    "help": "https://www.rstoolarchi.com/detail/57",
@@ -4330,8 +4372,15 @@
     }
    ],
    "output": "由两条基础曲线渐变生成的渐消楼梯",
-   "notes": ""
-  },
+   "notes": "",
+   "illustrations": [
+    {
+     "src": "assets/rsFadingStair/image1.png",
+     "alt": "rsFadingStair · 渐变楼梯效果",
+     "caption": "功能"
+    }
+   ]
+},
   "rsFadingStairVertical": {
    "license": true,
    "help": "https://www.rstoolarchi.com/detail/56",
@@ -4352,8 +4401,15 @@
     }
    ],
    "output": "竖向渐消楼梯 Brep",
-   "notes": ""
-  },
+   "notes": "",
+   "illustrations": [
+    {
+     "src": "assets/rsFadingStairVertical/image1.png",
+     "alt": "rsFadingStairVertical · 竖向渐变楼梯效果",
+     "caption": "功能"
+    }
+   ]
+},
   "rsDoor": {
    "license": true,
    "help": "https://www.rstoolarchi.com/detail/52",

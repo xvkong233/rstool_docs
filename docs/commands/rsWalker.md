@@ -6,6 +6,9 @@
 
 **功能**：进入 FPS 式漫游模式，在视口中用 WASD/QE 移动相机（不修改几何）
 
+![rsWalker · 漫游模式控制面板](../assets/rsWalker/image1.png)
+*漫游模式：标题显示「漫游模式已启动」+ 退出按钮，左侧速度/跌发/摄像机输入开关，下方 -50 ~ +50 速度档位，底部 Ctrl+Shift=跑 / E=View / Ctrl+Alt+左键=Camera*
+
 **调用**：在 Rhino 命令行输入 `rsWalker`（命令行交互）
 
 **交互流程**：
