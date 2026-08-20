@@ -6,6 +6,9 @@
 
 **功能**：由两条基础曲线渐变生成的渐消楼梯
 
+![rsFadingStair · 渐变楼梯效果](../assets/rsFadingStair/image1.png)
+*渐变楼梯：踏步端部随曲线渐隐消失，从左下到右上呈自由曲线造型*
+
 **调用**：在 Rhino 命令行输入 `rsFadingStair`（命令行交互）
 
 **交互流程**：
