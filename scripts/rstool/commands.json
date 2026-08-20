@@ -1863,7 +1863,15 @@
    ],
    "params": [],
    "output": "在模型中生成动态组件实例（块参照），并自动打开“动态组件”面板，可在节点树中编辑参数、绑定和位置关系。",
-   "notes": "入门要点（详见 rsDynamicComponentGuide 入门指南）：①两种创建方式——普通几何一体化（一扇门、柜体等不单独复用的零件）与动态组件装配（门框/门扇/五金等需独立复用构件，先分别做成动态组件再一起创建外层装配体）；②五步完成：命名摆位→选中运行命令→选 CPlane 方向并指定原点→在节点树确认蓝框与“组件身份”后设参数/绑定→预览无误后“保存模板”；③$参数名 表示参数，Parent 为父节点、Root 为根节点，先定驱动者再让其他节点单向跟随，避免互相引用；④单独选中组件后用 Rhino Scale/Gumball 缩放，可自动写回尺寸参数（模板默认值不变），镜像/剪切/零比例/缩放复制不写回；⑤公式可直接用 20mm/5cm/1.2m，角度默认用度；⑥保存模板形成一条 Rhino 撤销记录，撤销会同步恢复模板与所有实例。"
+   "notes": "入门要点（详见 rsDynamicComponentGuide 入门指南）：①两种创建方式——普通几何一体化（一扇门、柜体等不单独复用的零件）与动态组件装配（门框/门扇/五金等需独立复用构件，先分别做成动态组件再一起创建外层装配体）；②五步完成：命名摆位→选中运行命令→选 CPlane 方向并指定原点→在节点树确认蓝框与“组件身份”后设参数/绑定→预览无误后“保存模板”；③$参数名 表示参数，Parent 为父节点、Root 为根节点，先定驱动者再让其他节点单向跟随，避免互相引用；④单独选中组件后用 Rhino Scale/Gumball 缩放，可自动写回尺寸参数（模板默认值不变），镜像/剪切/零比例/缩放复制不写回；⑤公式可直接用 20mm/5cm/1.2m，角度默认用度；⑥保存模板形成一条 Rhino 撤销记录，撤销会同步恢复模板与所有实例。",
+   "videos": [
+    {
+     "provider": "bilibili",
+     "src": "https://player.bilibili.com/player.html?isOutside=true&aid=117128455790433&bvid=BV1sQ8A6FECp&cid=41104969276&p=1",
+     "title": "RsTool · 是的！Rhino也有动态组件了！（B 站）"
+    }
+   ]
+
   },
   "rsDynamicComponent": {
    "license": true,
@@ -9753,7 +9761,14 @@
    ],
    "params": [],
    "output": "三维剖切框 (6 个隐藏剪切平面 + 橙色线框，成组于 rsSectionBox 图层)",
-   "notes": "Z 方向厚度为 0 时自动沿 Z 膨胀 1.0；删除线框时自动清理关联剪切平面；支持缩放/移动/旋转"
+   "notes": "Z 方向厚度为 0 时自动沿 Z 膨胀 1.0；删除线框时自动清理关联剪切平面；支持缩放/移动/旋转",
+   "illustrations": [
+    {
+     "src": "assets/rsSectionBox/image1.png",
+     "alt": "rsSectionBox 剖切框示例：黑色细线勾勒的矩形立方体作为剖切框，包住一座弧形屋面 + 双楼梯的体量模型；立方体顶面 / 侧面像被剪过一样去掉一部分，露出内部若干剖切面与下方的灰白网格地面",
+     "caption": "rsSectionBox 剖切中：橙色长方体作为剖切框把整个建筑包起来后，被框内侧的六个隐藏剪切平面自动布尔切掉多余部分，框内可见屋顶曲面、内部楼梯、围合曲面等"
+    }
+   ]
   },
   "rsDiagramArrow": {
    "license": true,
@@ -12582,9 +12597,16 @@
      "range": "列表（可选）",
      "note": ""
     }
-   ],
-   "notes": "该运算器在 Grasshopper 画布中运行，输入与输出通过组件端口连接；每次画布求解时执行一次。\n\n所属 GH 分组：RSTool / Util"
+   ],  "illustrations": [
+   {
+    "src": "assets/ComponentLabels/image1.png",
+    "alt": "Component Labels 实际显示效果：在 CanvasTransparent 透明化后的 Grasshopper 画布上，每个运算器上方都浮着一行描述该运算器用途的灰色英文/中文标签——从左到右、自上而下可以看到 Define 5 points / Range / Interpolate points / Display coloured points / Define 3 colours / Colour Swatch / Colour / Interpolate colours，这些标签分两行排布，刚好覆盖运算器的描述文字其位置可在 hover 菜单或 Grasshopper 内 Display → Draw Icons 调整",
+    "caption": "Component Labels 开启后：画布上每个运算器顶部出现一行灰色注释用于说明其作用"
+   }
+  ],
+   "notes": "Component Labels 是个非常实用的小工具——一句话定位：让 Grasshopper 画布上每个运算器顶部都自动浮现一行英文/中文标签，标注该运算器的用途（类似编程 IDE 的 inline document / tooltip 永久显示版）。\\n\\n## 一、典型使用流程\\n1. 在 Grasshopper 画布里，从 RSTool 标签的「Util」分组下找到该组件，拖入画布。\\n2. 默认激活状态下，不需要接任何端口——每个运算器顶部都会自动浮现对应标签。\\n3. 想关掉某一类标签（比如看到 Prefix / Suffix / Panel 一类内置运算器本身就懂的不需要标注），向 `Exceptions` 输入端口接入要排除的运算器名称（文字列表），画布上即隐藏对应标签。\\n4. 不再需要看标签时，把运算器右键 → Disable 或直接从画布上删掉即可，画布恢复默认外观。\\n\\n## 二、参数详解\\n| 输入端口 | 含义 | 默认 | 取值 |\\n| --- | --- | --- | --- |\\n| Exceptions | 要排除的运算器名称列表（不显示标签） | 空 | 文字列表（可选），例：`[\"Panel\",\"Number Slider\"]` |\\n该运算器无输出端口（属于显示型开关，结果就是画布视觉变化）。\\n\\n## 三、典型场景\\n1. **教学 / 出教程录屏**：录 GH 建模教程时要让观众一眼看清每个运算器的作用，Component Labels 配合 CanvasTransparent 一开，所有运算器的功能一目了然，观众不用猜节点是干嘛的。\\n2. **新人接手旧文件**：接手别人写的复杂 GH 文件，新人一脸懵不知道哪个运算器干嘛。Component Labels 一开，每个节点的功能都顶上注释，省去一个个右键看 Help / 进 Help 文档的麻烦。\\n3. **Code Review / 评审会**：把 GH 文件丢给别人评审时，对方一眼看不懂运算器用途，标签让评审效率提升一大截。\\n4. **临时调试 / 大文件重读**：隔一段时间回头看自己写的 GH 文件（长时间没看），标签能快速想起来每个运算器的用途，避免从头读逻辑。\\n\\n## 四、注意事项\\n1. Component Labels 只会让运算器顶部出现说明文字，不会改变运算器本身的运行逻辑；任何连线、求解、运算结果都与原始一致。\\n2. 标签字体大小、透明度、字色等外观由 Grasshopper 全局设置控制（Display → Canvas → Font Size 等），本运算器本身不提供样式端口。\\n3. `Exceptions` 端口接受的是运算器的「类名 / 内部名」（如 `Panel`），不一定是画布上显示的中文标签。拿不准时先留空让全显示，再用 Display → Draw Full Names 校对内部名。\\n\\n所属 GH 分组：RSTool / Util"
   },
+
   "DeletePlaceholder": {
    "icon": "assets/gh-icons/DeletePlaceholder_24.png",
    "license": true,
