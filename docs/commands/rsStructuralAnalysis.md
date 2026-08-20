@@ -1,6 +1,6 @@
 # rsStructuralAnalysis · 结构力学分析
 
-> 模块：地形 / 分析与模拟
+> 模块：分析 / 建筑物理分析
 
 [← 返回命令目录](/commands/)
 

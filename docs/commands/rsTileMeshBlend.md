@@ -30,3 +30,8 @@
 | 统一网格UV方向 | Unify mesh UV direction | toggle | false |  |  |
 
 **备注**：无数值步进器；A=B 时为单一单元流动，A≠B 时按曲线映射混合
+
+**教学视频**：
+
+<iframe class="rstool-video" src="https://player.bilibili.com/player.html?isOutside=true&aid=116675823277532&bvid=BV1gTVf6SEWx&cid=38781780987&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" title="rsTileMeshBlend 网格铺装混接教学视频"></iframe>
+*rsTileMeshBlend 网格铺装混接教学视频*

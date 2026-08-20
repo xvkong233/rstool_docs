@@ -26,3 +26,8 @@
 | 填充 | Fill | toggle | false |  | 是否生成墙体填充 hatch |
 
 **备注**：拾取曲线模式可选择保留原曲线（KeepSource 选项，仅该模式）；其余模式为交互绘制
+
+**教学视频**：
+
+<iframe class="rstool-video" src="https://player.bilibili.com/player.html?isOutside=true&aid=117020293078799&bvid=BV1y2GG6kEBm&cid=40504723234&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" title="rsWall2D 二维墙体教学视频"></iframe>
+*rsWall2D 二维墙体教学视频*

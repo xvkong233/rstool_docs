@@ -28,3 +28,8 @@
 | 统一网格UV方向 | Unify mesh UV direction | toggle | false |  |  |
 
 **备注**：默认白色接近 TypeA、黑色接近 TypeB；参考物体需为带颜色贴图的 Mesh 或 Brep
+
+**教学视频**：
+
+<iframe class="rstool-video" src="https://player.bilibili.com/player.html?isOutside=true&aid=116754609083797&bvid=BV1SqjN6gEDP&cid=39142819268&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" title="rsTileMeshBlendByBitmap 按贴图生成渐变表皮教学视频"></iframe>
+*rsTileMeshBlendByBitmap 按贴图生成渐变表皮教学视频*

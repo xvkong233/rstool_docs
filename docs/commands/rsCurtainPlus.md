@@ -6,6 +6,12 @@
 
 **功能**：基于基础 Brep 与竖挺线生成幕墙（支持简易 / 精细模式与折角构件）
 
+![rsCurtainPlus 简易模式对话框](../assets/rsCurtainPlus/image1.png)
+*Eto「幕墙 Plus」简易模式窗口：选择基础 Brep 与一级/二级竖挺线后即可生成幕墙；相比 rsCurtain 升级点是支持多重曲面（一次拾取多个曲面合并生成），并自动处理 G0 折边*
+
+![rsCurtainPlus 精细模式对话框](../assets/rsCurtainPlus/image2.png)
+*Eto「幕墙 Plus」精细模式窗口：在简易模式之上，外框/一级/二级竖挺的宽度、厚度、扣盖宽度与扣盖厚度各自独立可调；G0 折边处自动生成折角构件，可应对多重曲面带折边的复杂场景*
+
 **调用**：在 Rhino 命令行输入 `rsCurtainPlus`（打开设置窗口）
 
 **交互流程**：
