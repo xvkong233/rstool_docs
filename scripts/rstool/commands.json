@@ -3711,7 +3711,7 @@
     {
      "src": "assets/rsWalker/image1.png",
      "alt": "rsWalker · 漫游模式控制面板",
-     "caption": "功能"
+     "caption": "漫游模式：标题显示「漫游模式已启动」+ 退出按钮，左侧速度/跌发/摄像机输入开关，下方 -50 ~ +50 速度档位，底部 Ctrl+Shift=跑 / E=View / Ctrl+Alt+左键=Camera"
     }
    ]
 },
@@ -3973,7 +3973,7 @@
     {
      "src": "assets/rsStairBySteps/image1.png",
      "alt": "参数化楼梯生成示意图",
-     "caption": "功能"
+     "caption": "沿基础面与踏步线/参考曲线生成参数化楼梯（含扶手），楼板/踏步/侧板均支持单独指定材质"
     }
    ]
 },
@@ -4059,7 +4059,7 @@
     {
      "src": "assets/rsDoubleFlightStairs/image1.png",
      "alt": "双跑楼梯示意图",
-     "caption": "功能"
+     "caption": "拾取基点与方向点后实时生成双跑楼梯，含休息平台、梯井、扶手，全部参数对话框调整"
     }
    ]
 },
@@ -4136,7 +4136,7 @@
     {
      "src": "assets/rsMultiFlightStairs/image1.png",
      "alt": "多跑楼梯示意图",
-     "caption": "功能"
+     "caption": "沿转折路径点拾取后生成多跑楼梯，自动设置休息平台与梯板，支持整体翻转与左右翻转"
     }
    ]
 },
@@ -4229,7 +4229,7 @@
     {
      "src": "assets/rsSpiralStair/image1.png",
      "alt": "旋转楼梯示意图",
-     "caption": "功能"
+     "caption": "选取旋转楼梯基点后生成旋转楼梯，支持标准/镂空两种踏板类型，圈数/半径/踏板宽度等可调"
     }
    ]
 },
@@ -4339,7 +4339,7 @@
     {
      "src": "assets/rsZigZagRamp/image1.png",
      "alt": "rsZigZagRamp · 折线坡道生成效果",
-     "caption": "功能"
+     "caption": "折线坡道：左侧输入多重直线作为路径，右侧沿路径生成 Z 字形 3D 坡道（自动带栏杆）"
     }
    ]
 },
@@ -4377,7 +4377,7 @@
     {
      "src": "assets/rsFadingStair/image1.png",
      "alt": "rsFadingStair · 渐变楼梯效果",
-     "caption": "功能"
+     "caption": "渐变楼梯：踏步端部随曲线渐隐消失，从左下到右上呈自由曲线造型"
     }
    ]
 },
@@ -4406,7 +4406,7 @@
     {
      "src": "assets/rsFadingStairVertical/image1.png",
      "alt": "rsFadingStairVertical · 竖向渐变楼梯效果",
-     "caption": "功能"
+     "caption": "与 rsFadingStair 的区别：踏面是完全垂直的（rsFadingStair 踏面沿曲线倾斜渐隐，本命令踏面保持竖直，仅踏步高度渐消）"
     }
    ]
 },
