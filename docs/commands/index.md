@@ -121,7 +121,7 @@
 - [rsBuildingArea2D · 建筑面积](/commands/rsBuildingArea2D) — 计算并标注建筑面积，支持按楼层统计。
 - [rsConvertA2DToNormalCurves · 二维转普通线条](/commands/rsConvertA2DToNormalCurves) — 将二维建筑对象（墙、门、窗等）转换为普通曲线，取消参数化关联。
 
-## 地形（7 条）
+## 地形（6 条）
 
 ### 获取与编辑
 
@@ -134,7 +134,6 @@
 - [rsTerrain · 地形网格](/commands/rsTerrain) — 从高程点或等高线生成地形网格曲面。
 - [rsTerrainAnalysis · 地形分析](/commands/rsTerrainAnalysis) — 对地形进行多维度分析：高程、坡度、坡向、凹凸性、粗糙度等，以彩色映射可视化。
 - [rsRainFlowSimulation · 雨流分析](/commands/rsRainFlowSimulation) — 模拟雨水在地形表面的流动路径，用于排水分析。
-- [rsStructuralAnalysis · 结构力学分析](/commands/rsStructuralAnalysis) — 对结构进行力学分析，可视化和计算受力情况。
 
 ## 几何（38 条）
 
@@ -195,12 +194,12 @@
 
 ### （通用）
 
+- [rsTesselateNurbs · NURBS表皮细分](/commands/rsTesselateNurbs) — 对 NURBS 曲面进行细分铺装，生成面板化结构。
+- [rsTileQuadNurbsBlend · NURBS渐变表皮生成](/commands/rsTileQuadNurbsBlend) — 在 NURBS 曲面上生成渐变表皮图案。
 - [rsTileMeshBlend · 网格铺装混接](/commands/rsTileMeshBlend) — 在网格曲面上生成铺装图案，支持不同图案之间的混接过渡。
 - [rsTileMeshBlendByColor · 按颜色生成渐变表皮](/commands/rsTileMeshBlendByColor) — 根据网格顶点颜色生成渐变铺装表皮，颜色驱动图案密度或类型。
 - [rsTileMeshBlendByBitmap · 按贴图生成渐变表皮](/commands/rsTileMeshBlendByBitmap) — 根据贴图图像生成渐变铺装表皮，图像灰度或颜色驱动图案变化。
 - [rsMeshColorPaint · 网格笔刷](/commands/rsMeshColorPaint) — 用笔刷在网格上绘制颜色，支持实时交互式涂抹。
-- [rsTileQuadNurbsBlend · NURBS渐变表皮生成](/commands/rsTileQuadNurbsBlend) — 在 NURBS 曲面上生成渐变表皮图案。
-- [rsTesselateNurbs · NURBS表皮细分](/commands/rsTesselateNurbs) — 对 NURBS 曲面进行细分铺装，生成面板化结构。
 
 ## 组织与选择（19 条）
 
@@ -254,7 +253,7 @@
 - [rsExportCamToSU · 导出相机到SketchUp](/commands/rsExportCamToSU) — 将 Rhino 当前视图的相机导出到 SketchUp 文件。
 - [rsCameraPath · 相机路径](/commands/rsCameraPath) — 创建相机动画路径，用于生成漫游动画。
 
-## 分析（7 条）
+## 分析（8 条）
 
 ### 建筑物理分析
 
@@ -265,6 +264,7 @@
 - [rsVisibilityAnalysis · 可见性分析](/commands/rsVisibilityAnalysis) — 从指定视点分析场景中各区域的可见性，以颜色映射可视化。
 - [rsViewshedAnalysis · 视野分析](/commands/rsViewshedAnalysis) — 计算指定观察点的视域范围，分析视野开阔度。
 - [rsWindAnalysis · 风环境分析](/commands/rsWindAnalysis) — 对建筑周围的风环境进行 CFD 分析，可视化风速和风压分布。
+- [rsStructuralAnalysis · 结构力学分析](/commands/rsStructuralAnalysis) — 对结构进行力学分析，可视化和计算受力情况。
 
 ## 物理模拟（7 条）
 
