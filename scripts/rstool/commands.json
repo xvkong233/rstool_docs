@@ -2977,7 +2977,14 @@
    ],
    "params": [],
    "output": "启动或停止屏幕按键显示浮层",
-   "notes": "切换式命令：再次运行停止；Ctrl+Alt+P 暂停/恢复；外观由 rsKeyCastSettings 控制"
+   "notes": "切换式命令：再次运行停止；Ctrl+Alt+P 暂停/恢复；外观由 rsKeyCastSettings 控制",
+   "illustrations": [
+    {
+     "src": "assets/rsKeyCast/image1.png",
+     "alt": "rsKeyCast · 按键显示浮层效果",
+     "caption": "按键显示：当前按下的 Ctrl、Alt、P、D、W 等组合键实时显示在屏幕浮层"
+    }
+   ]
   },
   "rsKeyCastSettings": {
    "license": true,
@@ -3040,7 +3047,14 @@
     }
    ],
    "output": "配置并保存按键显示的外观设置",
-   "notes": "Eto 对话框；仅保存外观与停留时间，不记录按键内容"
+   "notes": "Eto 对话框；仅保存外观与停留时间，不记录按键内容",
+   "illustrations": [
+    {
+     "src": "assets/rsKeyCastSettings/image1.png",
+     "alt": "rsKeyCastSettings · 按键显示设置窗口",
+     "caption": "按键显示设置：背景颜色 / 文字颜色 / 修饰键颜色 / 背景透明度 / 屏幕停留时间 / 屏幕位置 + 4 个按钮（恢复默认 / 应用 / 确定 / 取消）"
+    }
+   ]
   },
   "rsBrowser": {
    "license": true,

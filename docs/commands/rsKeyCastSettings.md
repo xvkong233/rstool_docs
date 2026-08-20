@@ -6,6 +6,9 @@
 
 **功能**：配置并保存按键显示的外观设置
 
+![rsKeyCastSettings · 按键显示设置窗口](../assets/rsKeyCastSettings/image1.png)
+*按键显示设置：背景颜色 / 文字颜色 / 修饰键颜色 / 背景透明度 / 屏幕停留时间 / 屏幕位置 + 4 个按钮（恢复默认 / 应用 / 确定 / 取消）*
+
 **调用**：在 Rhino 命令行输入 `rsKeyCastSettings`（打开设置窗口）
 
 **交互流程**：

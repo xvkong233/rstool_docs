@@ -65,6 +65,12 @@ if (geo) {
   geo.subOrder.sort((a, b) => geoPriority.indexOf(a) - geoPriority.indexOf(b))
 }
 
+// 趣味分组移到顶层最后（其余分类保持 data 原始顺序）
+const funIdx = byCat.findIndex((c) => c.cat === '趣味')
+if (funIdx >= 0) {
+  byCat.push(byCat.splice(funIdx, 1)[0])
+}
+
 const cmdText = (it: CmdItem) =>
   it.zh && it.zh !== it.name ? `${it.name} · ${it.zh}` : it.name
 

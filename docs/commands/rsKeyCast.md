@@ -6,6 +6,9 @@
 
 **功能**：启动或停止屏幕按键显示浮层
 
+![rsKeyCast · 按键显示浮层效果](../assets/rsKeyCast/image1.png)
+*按键显示：当前按下的 Ctrl、Alt、P、D、W 等组合键实时显示在屏幕浮层*
+
 **调用**：在 Rhino 命令行输入 `rsKeyCast`（命令行交互）
 
 **交互流程**：
