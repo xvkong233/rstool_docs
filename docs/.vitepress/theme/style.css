@@ -91,13 +91,13 @@
   }
 }
 
-/* 表格：在窄容器内允许横向滚动，避免列被压缩成竖排 */
-.vp-doc table,
-.vp-doc .table-wrapper,
-.VPDoc table {
-  display: block;
+/* 表格：撑满内容列宽度。
+   横向滚动无需在此重复声明——上游 vp-doc.css 的 `.vp-doc table` 已内置
+   `display:block; overflow-x:auto`，这里只补充 width，避免覆盖上游表格排版契约。
+   （`.table-wrapper` 是 VitePress 1.x 的包裹层，v2 已移除；`.VPDoc table` 会越界
+   命中组件自绘表格，二者均已去除。） */
+.vp-doc table {
   width: 100%;
-  overflow-x: auto;
 }
 
 /* 命令教学视频：撑满内容区，保持 16:9 比例（B 站 player 默认 640×360）

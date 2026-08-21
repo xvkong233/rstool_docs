@@ -116,10 +116,7 @@ export default defineConfig({
   lastUpdated: true,
   cleanUrls: true,
 
-  head: [
-    ['link', { rel: 'icon', type: 'image/png', href: '/logo.png' }],
-    ['link', { rel: 'stylesheet', href: '/style.css' }]
-  ],
+  head: [['link', { rel: 'icon', type: 'image/png', href: '/logo.png' }]],
 
   themeConfig: {
     logo: '/logo.png',
