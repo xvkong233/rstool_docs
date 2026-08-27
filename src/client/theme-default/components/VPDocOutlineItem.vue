@@ -1,0 +1,57 @@
+<script setup lang="ts">
+import type { DefaultTheme } from 'vitepress/theme'
+
+defineProps<{
+  headers: DefaultTheme.OutlineItem[]
+  root?: boolean
+}>()
+</script>
+
+<template>
+  <ul class="VPDocOutlineItem" :class="root ? 'root' : 'nested'">
+    <li v-for="{ children, link, title } in headers">
+      <a class="outline-link" :href="link" :title>
+        {{ title }}
+      </a>
+      <template v-if="children?.length">
+        <VPDocOutlineItem :headers="children" />
+      </template>
+    </li>
+  </ul>
+</template>
+
+<style scoped>
+.root {
+  position: relative;
+  z-index: 1;
+}
+
+.nested {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.outline-link {
+  display: block;
+  line-height: 2.2857143;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--vp-c-text-2);
+  scroll-margin-top: calc(var(--vp-nav-height) + var(--vp-layout-top-height, 0px) + var(--vp-doc-top-height, 0px) + 2rem);
+  scroll-margin-bottom: 3rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.5s;
+}
+
+.outline-link:hover,
+.outline-link.active {
+  color: var(--vp-c-text-1);
+  transition: color 0.25s;
+}
+
+.outline-link.nested {
+  padding-left: 0.8125rem;
+}
+</style>

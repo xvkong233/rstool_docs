@@ -1,0 +1,118 @@
+<script lang="ts" setup>
+import { computed } from 'vue'
+import { useData } from '../composables/data'
+import { useLangs } from '../composables/langs'
+import VPFlyout from './VPFlyout.vue'
+import VPMenuLink from './VPMenuLink.vue'
+import VPSocialLinks from './VPSocialLinks.vue'
+import VPSwitchAppearance from './VPSwitchAppearance.vue'
+
+const { site, theme } = useData()
+const { localeLinks, currentLang } = useLangs({
+  linkToCorrespondingPage: true
+})
+
+const hasExtraContent = computed(
+  () =>
+    (localeLinks.value.length && currentLang.value.label) ||
+    site.value.appearance ||
+    theme.value.socialLinks
+)
+</script>
+
+<template>
+  <VPFlyout
+    v-if="hasExtraContent"
+    class="VPNavBarExtra"
+    label="extra navigation"
+  >
+    <ul
+      v-if="localeLinks.length && currentLang.label"
+      class="group translations"
+    >
+      <li class="trans-title">{{ currentLang.label }}</li>
+
+      <template v-for="locale in localeLinks" :key="locale.link">
+        <VPMenuLink
+          :item="locale"
+          :external="false"
+          :lang="locale.lang"
+          :hreflang="locale.lang"
+          rel="alternate"
+          :dir="locale.dir"
+          data-allow-mismatch="attribute"
+        />
+      </template>
+    </ul>
+
+    <div
+      v-if="
+        site.appearance &&
+        site.appearance !== 'force-dark' &&
+        site.appearance !== 'force-auto'
+      "
+      class="group"
+    >
+      <div class="item appearance">
+        <p class="label">
+          {{ theme.darkModeSwitchLabel || 'Appearance' }}
+        </p>
+        <div class="appearance-action">
+          <VPSwitchAppearance />
+        </div>
+      </div>
+    </div>
+
+    <div v-if="theme.socialLinks" class="group">
+      <div class="item social-links">
+        <VPSocialLinks class="social-links-list" :links="theme.socialLinks" />
+      </div>
+    </div>
+  </VPFlyout>
+</template>
+
+<style scoped>
+.VPNavBarExtra {
+  display: none;
+  margin-right: -0.75rem;
+}
+
+@media (min-width: 48rem) {
+  .VPNavBarExtra {
+    display: block;
+  }
+}
+
+@media (min-width: 80rem) {
+  .VPNavBarExtra {
+    display: none;
+  }
+}
+
+.trans-title {
+  padding: 0 1.5rem 0 0.75rem;
+  line-height: 2.2857143;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--vp-c-text-1);
+}
+
+.item.appearance,
+.item.social-links {
+  display: flex;
+  align-items: center;
+  padding: 0 0.75rem;
+}
+
+.item.appearance {
+  min-width: 11rem;
+}
+
+.appearance-action {
+  margin-right: -0.125rem;
+}
+
+.social-links-list {
+  margin: -0.25rem -0.5rem;
+}
+</style>
