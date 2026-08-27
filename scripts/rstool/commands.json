@@ -929,6 +929,13 @@
   {
    "cat": "视图出图",
    "sub": "标注出图",
+   "name": "rsSectionBoxToggle",
+   "zh": "开关剖切框",
+   "desc": "临时关闭或恢复 Section Box 剖切显示，主控盒保留，可再次切换恢复。"
+  },
+  {
+   "cat": "视图出图",
+   "sub": "标注出图",
    "name": "rsDiagramArrow",
    "zh": "示意箭头",
    "desc": "创建分析示意箭头，可调整箭头样式、大小和颜色。"
@@ -1957,7 +1964,13 @@
      "alt": "RSTool AI Animation 主界面：左侧结果预览区，右侧从上到下依次是 生成类型（视频/图片）、模型、参考图片（必选，可拖拽）、参考视频（可选）、参考音频（可选）、提示词、控制按钮",
      "caption": "图 1：AI 动画生成主界面。标题栏右侧「设置」用于切换国内/国际服务区域与配置 API Key；主面板顶部为「生成类型」切换（视频=Seedance / 图片=Seedream，均为字节 ByteDance 自研大模型），下方依次为模型下拉（默认 doubao-seedance-2-5-26028）、参考图片上传（视频必选、可拖拽至少 1 张）、参考视频/参考音频（视频模式可选，做多模态参考或背景音乐）、提示词 textarea，底部为「保存视频 / 保存图片」与状态栏 Ready；左侧大块为结果预览/历史区，任务完成后视频直接播放，图片以缩略图网格展示并可批量保存"
     }
-   ],
+   ,
+    {
+      "src": "assets/rsAiAnimation/image2.png",
+      "alt": "rsAiAnimation 参考图模式生成效果：图片模式下以两张参考图驱动生成的扭曲双塔建筑夜景效果图，右侧 AI 主界面任务列表显示已完成任务",
+      "caption": "图 2：参考图模式生成示例。左侧大图为以参考图驱动生成的扭曲双塔建筑夜景效果图；右侧为 AI 动画生成主界面：生成类型=图片、模型=doubao-seedream-5-0-pro-26028、参考图片区上传了 2 张缩略图（红 × 可删除）、提示词 textarea、参考视频 / 参考音频留空、参数尺寸 2K / 张数 1，生成完成后状态栏显示已完成任务，底部任务列表中已完成项可点开查看 / 保存生成图"
+    }
+  ],
    "flow": [
     "命令行输入 rsAiAnimation，打开 AI 动画窗口",
     "首次使用点「设置」选择服务区域（国内火山方舟 / 国际 BytePlus）并填写 ARK_API_KEY 保存",
@@ -2114,7 +2127,14 @@
     }
    ],
    "output": "本命令接入字节跳动（ByteDance）自研的 Seedance / Seedream 大模型，在同一窗口内提供两种生成类型：视频模式基于 Seedance，以参考图（必选）为核心，可叠加参考视频与参考音频做多模态视频生成，或图生视频（首帧/首尾帧）；图片模式基于 Seedream，支持文生图与图生图（以参考图做图生图），一次性生成多张结果。两种模式均支持多任务并发，结果保存到本地并可直接预览",
-   "notes": "底层调用字节跳动（ByteDance）的 Seedance（视频）/ Seedream（图片）大模型，经火山方舟（国内 ark.cn-beijing.volces.com）或 BytePlus（国际 ark.ap-southeast.bytepluses.com）接口调用，需自备 ARK_API_KEY。视频：有参考视频→多模态参考（仅 2.0/2.5），无视频→图生视频（首帧/首尾帧）；图片：图生图以参考图驱动，也可无参考图文生图。切换国内/国际需同时切接口地址与模型 ID：视频模型国内 doubao-seedance-*、国际 dreamina-seedance-*，图片模型国内 doubao-seedream-*、国际 seedream-*（5.0 pro 不支持组图）。生成通常 1~5 分钟，时长/分辨率越高越久；图片按张计费"
+   "notes": "底层调用字节跳动（ByteDance）的 Seedance（视频）/ Seedream（图片）大模型，经火山方舟（国内 ark.cn-beijing.volces.com）或 BytePlus（国际 ark.ap-southeast.bytepluses.com）接口调用，需自备 ARK_API_KEY。视频：有参考视频→多模态参考（仅 2.0/2.5），无视频→图生视频（首帧/首尾帧）；图片：图生图以参考图驱动，也可无参考图文生图。切换国内/国际需同时切接口地址与模型 ID：视频模型国内 doubao-seedance-*、国际 dreamina-seedance-*，图片模型国内 doubao-seedream-*、国际 seedream-*（5.0 pro 不支持组图）。生成通常 1~5 分钟，时长/分辨率越高越久；图片按张计费",
+  "videos": [
+    {
+      "provider": "bilibili",
+      "src": "https://player.bilibili.com/player.html?isOutside=true&aid=117157279044608&bvid=BV1gYhj6CEvU&cid=41265071172&p=1",
+      "title": "【RSTool】字节的图像大模型，终于支棱起来了？建筑人狂喜！"
+    }
+  ]
   },
   "rsAiRender": {
    "license": true,
@@ -4370,11 +4390,7 @@
    "output": "沿多重直线生成折线坡道及栏杆",
    "notes": "",
    "illustrations": [
-    {
-     "src": "assets/rsZigZagRamp/image1.png",
-     "alt": "rsZigZagRamp · 折线坡道生成效果",
-     "caption": "折线坡道：左侧输入多重直线作为路径，右侧沿路径生成 Z 字形 3D 坡道（自动带栏杆）"
-    }
+    {"src": "assets/rsZigZagRamp/image1.png", "alt": "rsZigZagRamp · 折线坡道生成效果：Rhino 视口生成 Z 字坡道，右侧『折线坡道』Eto 对话框 3 参数 + 生成/取消", "caption": "rsZigZagRamp 弹出『折线坡道』Eto 对话框（嵌入 1 条路径 + 参数 3 行：坡道宽度 / 栏杆高度 / 生成方向；底部预览已更新 + 生成/取消），同时 Rhino 视口沿折线路径生成 Z 字形 3D 坡道并自动带栏杆"}
    ]
 },
   "rsFadingStair": {
@@ -8077,6 +8093,14 @@
      "note": ""
     },
     {
+     "zh": "保护角点",
+     "en": "Preserve corners",
+     "type": "toggle",
+     "def": true,
+     "range": "",
+     "note": "默认开启；开启『保护裸边』时本项自动置灰禁用。按 30° 边界转角阈值识别轮廓转角顶点，边折叠时跳过这类角点以保留尖锐轮廓"
+    },
+    {
      "zh": "保护硬折边",
      "en": "Preserve sharp edges",
      "type": "toggle",
@@ -8094,7 +8118,7 @@
     }
    ],
    "output": "按曲率保留特征、减少面数的三角网格（并传递顶点色）",
-   "notes": "采用边折叠(edge collapse)+曲率权重算法；自定义预设的边长因子：保守(0.55,1.6,18,1.5,6)、均衡(0.65,2.5,25,1.25,8)、强力(0.85,4.0,35,1.0,12)（分别为 min因子,max因子,曲率角,偏置,迭代）"
+   "notes": "采用边折叠(edge collapse)+曲率权重算法；自定义预设的边长因子：保守(0.55,1.6,18,1.5,6)、均衡(0.65,2.5,25,1.25,8)、强力(0.85,4.0,35,1.0,12)（分别为 min因子,max因子,曲率角,偏置,迭代）\n\n⚠️ 边界与接缝保护：开启『保护裸边』时整个边界锁定，且『保护角点』自动置灰禁用；单独开启『保护角点』时，按 30° 边界转角阈值识别轮廓转角顶点并在边折叠时跳过，保留尖锐轮廓。UV 接缝与未焊接硬边的两侧顶点同步锁定，避免减面后撕裂。"
   },
   "rsMeshFrame": {
    "license": true,
@@ -9769,6 +9793,20 @@
      "caption": "rsSectionBox 剖切中：橙色长方体作为剖切框把整个建筑包起来后，被框内侧的六个隐藏剪切平面自动布尔切掉多余部分，框内可见屋顶曲面、内部楼梯、围合曲面等"
     }
    ]
+  },
+  "rsSectionBoxToggle": {
+    "license": true,
+    "help": null,
+    "style": "cli",
+    "flow": [
+      "命令行运行 rsSectionBoxToggle",
+      "选择要临时关闭或恢复剖切的 Section Box（点选或框选主控盒，支持运行前预选，可多选）",
+      "命令自动判断：选区内只要有仍启用的，本次统一关闭；选区全部已关闭时再运行则统一恢复",
+      "主控盒颜色随状态切换（启用=橙色，关闭=灰色），剖切显示即时更新"
+    ],
+    "params": [],
+    "output": "不改变几何：仅切换 Section Box 剖切显示的启用/关闭状态，主控盒对象保留（仍可移动、旋转、缩放、复制与撤销）",
+    "notes": "必须先用 rsSectionBox 生成剖切框，再对其主控盒运行本命令；本命令不创建也不删除主控盒，只读写主控盒上的 RSTool.SectionBox 用户数据并同步六个隐藏裁剪平面。选区含启用项→统一关闭，命令行输出『已临时关闭 N 个 Section Box 的剖切显示；主控盒仍保留。』；选区全为关闭→统一恢复，输出『已恢复 N 个 Section Box 的剖切显示。』。关闭后主控盒变灰、剖切消失，再次运行即可恢复剖切，且保留你对主控盒做过的变换（位置/旋转/缩放）。"
   },
   "rsDiagramArrow": {
    "license": true,
@@ -11674,7 +11712,15 @@
     }
    ],
    "output": "在画布中执行外部 .cs 脚本求解；输入/输出端由 .cs 内 RegisterInputParams/RegisterOutputParams 注册定义，画布会自动同步显示",
-   "notes": "Grasshopper 原生\"容器\"型 C# 组件，把 C# 脚本以独立的本地 .cs 文件存放执行，而不是写在组件本体里。本身没有固定端口——所有输入输出都在 .cs 内部用 AddGenericParameter/AddNumberParameter 等注册，组件会按你注册的名称、类型、数目实时同步画布端口。\n\n## 一、AI 辅助建模工作流\n\n这是这个组件最大的杀手锏。Grasshopper 原生组件解决不了的逻辑（自定义递推、复杂几何运算、特殊数据结构、特定算法）、RhinoCommon 调用密集的部分，可以让 AI 来写：\n\n1. **Create Source Template** → 拿到一份空骨架 .cs（输入输出 + SolveInstance 占位）\n2. **拷给 WorkBuddy / ChatGPT / Gemini / Claude 等任意 AI**，把 GH 场景说清楚（例如\"我有一个 NurbsSurface 列表，要算出每个曲面最陡坡向、步长 s、最大步数 n；输出每条流线的 Curve 列表与终点坐标列表\"）\n3. **AI 生成完整 C# 代码**——它知道 Grasshopper API（GH_ParamAccess.item/list/tree、DataTree、Pivot、IKernel 等）、RhinoCommon（Brep、NurbsSurface、Mesh、Line、Point3d 等）、常见算法（SDF、Delaunay、MarchingCubes、ClosestPoint 等）的写法，会直接帮你写完整的 Register + SolveInstance\n4. **.cs 保存** → 画布上的 Linked C# 自动按新代码的 Register 同步出对应端口；连线运行即可\n5. **再调整、再询问、再保存**——这就是一个本地 IDE 化的 GH 运算器开发循环\n\n相比在 GH 自带 C# 编辑器里手写代码（每改一行都要等编译、不能 diff、不能版本管理、不能复用到其他 .gh）：Linked C# 的源代码是**纯本地普通文件**，可以用任何编辑器（VS Code / Cursor / Zed），可以用 AI 工具迭代，可以塞进 git / SVN 进行版本控制，也可以同时给团队其他 .gh 文件复用同一个 .cs。\n\n## 二、菜单选项详解\n\n右键菜单里 Source 与自动重载相关的条目（按常见使用顺序）：\n\n- **Source: not selected** — 状态行；挂了文件会变成文件路径\n- **Select Source File...** — 把一个已经写好的本地 .cs 绑到该组件上\n- **Create Source Template...** — 一键生成只含 RegisterInputParams/RegisterOutputParams/RegisterNamedInputs/RegisterNamedOutputs/SolveInstance 骨架的 .cs（首次使用必选）\n- **Open Source File** — 用系统关联的程序（VS/Rider/VSCode）打开你的 .cs 进行编辑\n- **Reload Now** — 重新加载 .cs 并同步端口；Watch 关闭时唯一刷新方式\n- **Watch Source File** — 勾上后保存 .cs 自动重载（推荐开发期勾上）\n- **Use Embedded Source** — 把外挂 .cs 的源码写回到组件内（关闭外联，整个组件可移植）\n- **Detach Source File** — 解除与本地 .cs 的链接，回到无源码状态\n- **Export Embedded Source...** / **Copy Embedded Source** — 把组件内嵌的代码导出或拷贝到剪切板\n- **Bake...** / **Enabled** — 同原生组件的烘焙与禁用\n- **Runtime warnings** 子菜单 — 看求解时的告警与异常堆栈\n\n## 三、与\"C# Script\"的区别\n\nGrasshopper 还自带一个\"C# Script\"组件（图标相似）。区别是：\n\n- **C# Script**：代码存放在组件内部 DrawTree/Undo 工作里——调试不友好、无法用外部 IDE 改、无法跨文件复用、不能 git\n- **Linked C#**：代码外联到独立 .cs 文件——可用任何编辑器、可用 AI 改、可 git、可复用\n\n对 AI 辅助建模来说，Linked C# 几乎是必备：AI 写出的长文件不能塞进组件内部 GUI 编辑器，必须是独立文件。\n\n## 四、AI 提示词样板\n\n通常发给 AI 的提示词结构（堂主可直接复用）：\n\n```\n我在用 Grasshopper 1.x + Linked C# 组件。请帮我写一个 .cs 文件，目标：\n- 输入：[NurbsSurface 列表 srfList, double 步长 step, double 最大步数 maxSteps]\n- 输出：[List<Curve> 流线, List<Point3d> 终点]\n- 算法说明：[从 srfList 各面重心出发，每步沿最陡下降方向迭代 step，迭代超过 maxSteps 停止；输出每条流线与对应终点]\n- 要求：所有 Register 调用写清名称/简称/说明/访问方式；SolveInstance 内对空输入做容错；注释用中文\n```\n\nAI 会返回完整 Register + SolveInstance，把内容整段贴回 .cs → Save → Watch 自动重载 → 端口出现在画布即可。\n\n## 五、注意事项\n\n- **Watch Source File 建议始终勾选**，开发周期省事；结束发布 .gh 前再 Detach 让组件自包含\n- **.cs 文件名可以改**，组件看的是内部 GUID 的关联，不是文件名\n- **跨机器共享 .gh**：要么走 Embedded Source 模式（拷过去就行），要么同事之间同步 .cs 文件\n- **找不到 Source 重载**：如果菜单显示 Source: not selected，多半是 .cs 文件被删了或路径变了，重新 Select Source File 即可\n- **GH 版本差异**：GH 1 顶部菜单写法是 `GH_Component.SolveInstance` 子类；GH 2 / Rhino 8 上同样兼容\n\n所属 GH 分组：RSTool / Developer"
+   "notes": "Grasshopper 原生\"容器\"型 C# 组件，把 C# 脚本以独立的本地 .cs 文件存放执行，而不是写在组件本体里。本身没有固定端口——所有输入输出都在 .cs 内部用 AddGenericParameter/AddNumberParameter 等注册，组件会按你注册的名称、类型、数目实时同步画布端口。\n\n## 一、AI 辅助建模工作流\n\n这是这个组件最大的杀手锏。Grasshopper 原生组件解决不了的逻辑（自定义递推、复杂几何运算、特殊数据结构、特定算法）、RhinoCommon 调用密集的部分，可以让 AI 来写：\n\n1. **Create Source Template** → 拿到一份空骨架 .cs（输入输出 + SolveInstance 占位）\n2. **拷给 WorkBuddy / ChatGPT / Gemini / Claude 等任意 AI**，把 GH 场景说清楚（例如\"我有一个 NurbsSurface 列表，要算出每个曲面最陡坡向、步长 s、最大步数 n；输出每条流线的 Curve 列表与终点坐标列表\"）\n3. **AI 生成完整 C# 代码**——它知道 Grasshopper API（GH_ParamAccess.item/list/tree、DataTree、Pivot、IKernel 等）、RhinoCommon（Brep、NurbsSurface、Mesh、Line、Point3d 等）、常见算法（SDF、Delaunay、MarchingCubes、ClosestPoint 等）的写法，会直接帮你写完整的 Register + SolveInstance\n4. **.cs 保存** → 画布上的 Linked C# 自动按新代码的 Register 同步出对应端口；连线运行即可\n5. **再调整、再询问、再保存**——这就是一个本地 IDE 化的 GH 运算器开发循环\n\n相比在 GH 自带 C# 编辑器里手写代码（每改一行都要等编译、不能 diff、不能版本管理、不能复用到其他 .gh）：Linked C# 的源代码是**纯本地普通文件**，可以用任何编辑器（VS Code / Cursor / Zed），可以用 AI 工具迭代，可以塞进 git / SVN 进行版本控制，也可以同时给团队其他 .gh 文件复用同一个 .cs。\n\n## 二、菜单选项详解\n\n右键菜单里 Source 与自动重载相关的条目（按常见使用顺序）：\n\n- **Source: not selected** — 状态行；挂了文件会变成文件路径\n- **Select Source File...** — 把一个已经写好的本地 .cs 绑到该组件上\n- **Create Source Template...** — 一键生成只含 RegisterInputParams/RegisterOutputParams/RegisterNamedInputs/RegisterNamedOutputs/SolveInstance 骨架的 .cs（首次使用必选）\n- **Open Source File** — 用系统关联的程序（VS/Rider/VSCode）打开你的 .cs 进行编辑\n- **Reload Now** — 重新加载 .cs 并同步端口；Watch 关闭时唯一刷新方式\n- **Watch Source File** — 勾上后保存 .cs 自动重载（推荐开发期勾上）\n- **Use Embedded Source** — 把外挂 .cs 的源码写回到组件内（关闭外联，整个组件可移植）\n- **Detach Source File** — 解除与本地 .cs 的链接，回到无源码状态\n- **Export Embedded Source...** / **Copy Embedded Source** — 把组件内嵌的代码导出或拷贝到剪切板\n- **Bake...** / **Enabled** — 同原生组件的烘焙与禁用\n- **Runtime warnings** 子菜单 — 看求解时的告警与异常堆栈\n\n## 三、与\"C# Script\"的区别\n\nGrasshopper 还自带一个\"C# Script\"组件（图标相似）。区别是：\n\n- **C# Script**：代码存放在组件内部 DrawTree/Undo 工作里——调试不友好、无法用外部 IDE 改、无法跨文件复用、不能 git\n- **Linked C#**：代码外联到独立 .cs 文件——可用任何编辑器、可用 AI 改、可 git、可复用\n\n对 AI 辅助建模来说，Linked C# 几乎是必备：AI 写出的长文件不能塞进组件内部 GUI 编辑器，必须是独立文件。\n\n## 四、AI 提示词样板\n\n通常发给 AI 的提示词结构（堂主可直接复用）：\n\n```\n我在用 Grasshopper 1.x + Linked C# 组件。请帮我写一个 .cs 文件，目标：\n- 输入：[NurbsSurface 列表 srfList, double 步长 step, double 最大步数 maxSteps]\n- 输出：[List<Curve> 流线, List<Point3d> 终点]\n- 算法说明：[从 srfList 各面重心出发，每步沿最陡下降方向迭代 step，迭代超过 maxSteps 停止；输出每条流线与对应终点]\n- 要求：所有 Register 调用写清名称/简称/说明/访问方式；SolveInstance 内对空输入做容错；注释用中文\n```\n\nAI 会返回完整 Register + SolveInstance，把内容整段贴回 .cs → Save → Watch 自动重载 → 端口出现在画布即可。\n\n## 五、注意事项\n\n- **Watch Source File 建议始终勾选**，开发周期省事；结束发布 .gh 前再 Detach 让组件自包含\n- **.cs 文件名可以改**，组件看的是内部 GUID 的关联，不是文件名\n- **跨机器共享 .gh**：要么走 Embedded Source 模式（拷过去就行），要么同事之间同步 .cs 文件\n- **找不到 Source 重载**：如果菜单显示 Source: not selected，多半是 .cs 文件被删了或路径变了，重新 Select Source File 即可\n- **GH 版本差异**：GH 1 顶部菜单写法是 `GH_Component.SolveInstance` 子类；GH 2 / Rhino 8 上同样兼容\n\n所属 GH 分组：RSTool / Developer",
+   "videos": [
+    {
+     "provider": "bilibili",
+     "src": "https://player.bilibili.com/player.html?isOutside=true&aid=117139411310006&bvid=BV1gB826ZERJ&cid=41164472955&p=1",
+     "title": "RsTool · 我该怎么用AI帮我在Grasshopper中提效？（B 站）"
+    }
+   ]
+
   },
   "ClosestOddEvenNumber": {
    "icon": "assets/gh-icons/ClosestOddEvenNumber_24.png",

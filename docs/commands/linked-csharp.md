@@ -85,3 +85,8 @@ AI 会返回完整 Register + SolveInstance，把内容整段贴回 .cs → Save
 - **GH 版本差异**：GH 1 顶部菜单写法是 `GH_Component.SolveInstance` 子类；GH 2 / Rhino 8 上同样兼容
 
 所属 GH 分组：RSTool / Developer
+
+**教学视频**：
+
+<iframe class="rstool-video" src="https://player.bilibili.com/player.html?isOutside=true&aid=117139411310006&bvid=BV1gB826ZERJ&cid=41164472955&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" title="RsTool · 我该怎么用AI帮我在Grasshopper中提效？（B 站）"></iframe>
+*RsTool · 我该怎么用AI帮我在Grasshopper中提效？（B 站）*

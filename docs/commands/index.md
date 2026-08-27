@@ -1,6 +1,6 @@
 # RsTool 命令参考
 
-> 覆盖 RsTool 插件全部 264 条命令（`rsMeshRelax` 在多个分类重复列出），每条命令一个独立页面，含功能、调用方式、交互流程、参数表、输出、备注与教学视频。
+> 覆盖 RsTool 插件全部 265 条命令（`rsMeshRelax` 在多个分类重复列出），每条命令一个独立页面，含功能、调用方式、交互流程、参数表、输出、备注与教学视频。
 
 ## AI（4 条）
 
@@ -231,12 +231,13 @@
 - [rsAutoBoxMapping · 自动盒映射](/commands/rsAutoBoxMapping) — 自动为对象设置盒映射贴图坐标，适合建筑模型快速贴图。
 - [rsPBRToCustomMaterial · PBR转自定义材质](/commands/rsPBRToCustomMaterial) — 将 PBR 材质转换为 Rhino 自定义材质，便于在低版本 Rhino 中使用。
 
-## 视图出图（14 条）
+## 视图出图（15 条）
 
 ### 标注出图
 
 - [rsHatchPlanarSurfaces · 平面填充](/commands/rsHatchPlanarSurfaces) — 自动为平面曲面添加填充图案，适合平面图材料表示。
 - [rsSectionBox · 剖切框](/commands/rsSectionBox) — 创建三维剖切框，交互式调整剖切范围，用于查看模型内部。
+- [rsSectionBoxToggle · 开关剖切框](/commands/rsSectionBoxToggle) — 临时关闭或恢复 Section Box 剖切显示，主控盒保留，可再次切换恢复。
 - [rsDiagramArrow · 示意箭头](/commands/rsDiagramArrow) — 创建分析示意箭头，可调整箭头样式、大小和颜色。
 - [rsDiagramArrowEdit · 编辑示意箭头](/commands/rsDiagramArrowEdit) — 编辑已创建的示意箭头的参数和样式。
 - [rsHeightDot · 高程点](/commands/rsHeightDot) — 创建高程标注点，标注点的高度或 XYZ 坐标，支持基于自定义工作平面计算。

@@ -9,6 +9,9 @@
 ![RSTool AI Animation 主界面：左侧结果预览区，右侧从上到下依次是 生成类型（视频/图片）、模型、参考图片（必选，可拖拽）、参考视频（可选）、参考音频（可选）、提示词、控制按钮](../assets/rsAiAnimation/image1.png)
 *图 1：AI 动画生成主界面。标题栏右侧「设置」用于切换国内/国际服务区域与配置 API Key；主面板顶部为「生成类型」切换（视频=Seedance / 图片=Seedream，均为字节 ByteDance 自研大模型），下方依次为模型下拉（默认 doubao-seedance-2-5-26028）、参考图片上传（视频必选、可拖拽至少 1 张）、参考视频/参考音频（视频模式可选，做多模态参考或背景音乐）、提示词 textarea，底部为「保存视频 / 保存图片」与状态栏 Ready；左侧大块为结果预览/历史区，任务完成后视频直接播放，图片以缩略图网格展示并可批量保存*
 
+![rsAiAnimation 参考图模式生成效果：图片模式下以两张参考图驱动生成的扭曲双塔建筑夜景效果图，右侧 AI 主界面任务列表显示已完成任务](../assets/rsAiAnimation/image2.png)
+*图 2：参考图模式生成示例。左侧大图为以参考图驱动生成的扭曲双塔建筑夜景效果图；右侧为 AI 动画生成主界面：生成类型=图片、模型=doubao-seedream-5-0-pro-26028、参考图片区上传了 2 张缩略图（红 × 可删除）、提示词 textarea、参考视频 / 参考音频留空、参数尺寸 2K / 张数 1，生成完成后状态栏显示已完成任务，底部任务列表中已完成项可点开查看 / 保存生成图*
+
 **调用**：在 Rhino 命令行输入 `rsAiAnimation`（打开设置窗口）
 
 **交互流程**：
@@ -45,3 +48,8 @@
 | API 地址 | endpoint | text | https://ark.cn-beijing.volces.com/api/v3 | URL | 随区域自动填充，可改代理地址 |
 
 **备注**：底层调用字节跳动（ByteDance）的 Seedance（视频）/ Seedream（图片）大模型，经火山方舟（国内 ark.cn-beijing.volces.com）或 BytePlus（国际 ark.ap-southeast.bytepluses.com）接口调用，需自备 ARK_API_KEY。视频：有参考视频→多模态参考（仅 2.0/2.5），无视频→图生视频（首帧/首尾帧）；图片：图生图以参考图驱动，也可无参考图文生图。切换国内/国际需同时切接口地址与模型 ID：视频模型国内 doubao-seedance-*、国际 dreamina-seedance-*，图片模型国内 doubao-seedream-*、国际 seedream-*（5.0 pro 不支持组图）。生成通常 1~5 分钟，时长/分辨率越高越久；图片按张计费
+
+**教学视频**：
+
+<iframe class="rstool-video" src="https://player.bilibili.com/player.html?isOutside=true&aid=117157279044608&bvid=BV1gYhj6CEvU&cid=41265071172&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" title="【RSTool】字节的图像大模型，终于支棱起来了？建筑人狂喜！"></iframe>
+*【RSTool】字节的图像大模型，终于支棱起来了？建筑人狂喜！*
