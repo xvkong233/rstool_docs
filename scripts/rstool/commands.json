@@ -628,6 +628,13 @@
   {
    "cat": "几何",
    "sub": "网格",
+   "name": "rsDisplacementToMesh",
+   "zh": "置换贴图转真实网格",
+   "desc": "将 Rhino 对象的置换 / 凹凸贴图烘焙为真正的网格几何，支持质量预设、实时预览与生产风险检查。"
+  },
+  {
+   "cat": "几何",
+   "sub": "网格",
    "name": "rsMeshFrame",
    "zh": "网格框架",
    "desc": "根据网格边线生成框架结构，适合制作网架和骨架模型。"
@@ -5716,7 +5723,14 @@
     }
    ],
    "output": "沿中心线生成的 2D 幕墙（竖梃、玻璃夹板曲线），归入幕墙组",
-   "notes": "默认按 1200/40/200/30mm 适配模型单位"
+   "notes": "默认按 1200/40/200/30mm 适配模型单位",
+   "illustrations": [
+    {
+      "src": "assets/rsCurtainWall2D/image1.png",
+      "alt": "rsCurtainWall2D · 2D 幕墙延伸预览：Rhino 视口一段已生成的 L 形幕墙（黑色线段 + 朝外短斜线竖梃），右上角第二段正在用橙色橡皮线预览延伸，长度标签 7.0066 m 与十字光标同显",
+      "caption": "rsCurtainWall2D 沿中心线延伸幕墙时，Rhino 视口在前一段已生成的幕墙（黑色墙线 + 等间距朝外短斜线竖梃）基础上，下一段用橙色橡皮线实时预览并附带长度标签（图中右上角 7.0066 m），便于按设计分段控制幕墙长度与折角"
+    }
+   ]
   },
   "rsElevation2D": {
    "license": true,
@@ -8119,6 +8133,167 @@
    ],
    "output": "按曲率保留特征、减少面数的三角网格（并传递顶点色）",
    "notes": "采用边折叠(edge collapse)+曲率权重算法；自定义预设的边长因子：保守(0.55,1.6,18,1.5,6)、均衡(0.65,2.5,25,1.25,8)、强力(0.85,4.0,35,1.0,12)（分别为 min因子,max因子,曲率角,偏置,迭代）\n\n⚠️ 边界与接缝保护：开启『保护裸边』时整个边界锁定，且『保护角点』自动置灰禁用；单独开启『保护角点』时，按 30° 边界转角阈值识别轮廓转角顶点并在边折叠时跳过，保留尖锐轮廓。UV 接缝与未焊接硬边的两侧顶点同步锁定，避免减面后撕裂。"
+  },
+  "rsDisplacementToMesh": {
+    "license": true,
+    "help": null,
+    "style": "form",
+    "flow": [
+      "命令行输入 rsDisplacementToMesh，按提示选择要烘焙的 Mesh / Brep / Surface / SubD 对象（支持预选，命令前先选中即可）",
+      "自动读取该对象的置换（displacement）/ 凹凸（bump）材质设置；若读取失败则自动回退为「手动高度贴图」模式，需自行指定高度图",
+      "弹出「置换贴图转真实网格」对话框，在「基础参数 / 高级参数」两个标签页中设置来源、置换范围、生产输出与精度限制",
+      "任一参数变更后约 0.35 秒自动计算安全预览（逐顶点置换，最多 2 万面，以橙色半透明网格实时显示）",
+      "点「生成最终网格」生成受控的最终网格（严格遵守「最大面数」上限，可中途取消）；若未开启「均匀加厚」且质量报告存在警告，会弹窗确认是否仍加入文档",
+      "结果以 <原名>_Displaced 命名加入文档并自动选中；勾选「隐藏原物体」则隐藏源对象，取消则不隐藏并重新显示"
+    ],
+    "params": [
+      {
+        "zh": "贴图来源",
+        "en": "Texture source",
+        "type": "list",
+        "def": "自动（置换/凹凸）",
+        "range": "自动（置换/凹凸）/ 手动高度贴图",
+        "note": "切换为「手动高度贴图」后才能选择高度贴图文件"
+      },
+      {
+        "zh": "高度贴图",
+        "en": "Height bitmap",
+        "type": "file",
+        "def": "（手动模式选择）",
+        "range": ".png .tif .tiff .jpg .jpeg .bmp",
+        "note": "仅「手动高度贴图」模式可用，通过「选择…」按钮载入灰度高度图"
+      },
+      {
+        "zh": "映射通道",
+        "en": "Mapping channel",
+        "type": "int",
+        "def": "自动读取（手动默认 1）",
+        "range": "1–99",
+        "note": "高度图取样所用的 UV 通道编号"
+      },
+      {
+        "zh": "质量预设",
+        "en": "Quality preset",
+        "type": "list",
+        "def": "标准（推荐）",
+        "range": "快速（预览优先）/ 标准（推荐）/ 精细 / 自定义",
+        "note": "切换预设会套用对应的采样间距、细化、焊接、平滑与面数/内存上限；修改高级参数会自动切到「自定义」"
+      },
+      {
+        "zh": "黑色高度",
+        "en": "Black height",
+        "type": "double",
+        "def": "随预设/自动",
+        "range": "-对象尺寸×10 … +对象尺寸×10（模型单位）",
+        "note": "高度图中黑色像素对应的位移量；正为沿法线向外"
+      },
+      {
+        "zh": "白色高度",
+        "en": "White height",
+        "type": "double",
+        "def": "随预设/自动",
+        "range": "-对象尺寸×10 … +对象尺寸×10（模型单位）",
+        "note": "高度图中白色像素对应的位移量"
+      },
+      {
+        "zh": "反向置换",
+        "en": "Reverse direction",
+        "type": "toggle",
+        "def": false,
+        "range": "开 / 关",
+        "note": "反转置换方向（黑/白高度对调，向内/向外翻转）"
+      },
+      {
+        "zh": "采样间距",
+        "en": "Sweep pitch",
+        "type": "double",
+        "def": "随预设",
+        "range": "≥ 模型容差 … 对象尺寸×10",
+        "note": "网格边采样步长；越小细节越高但越慢"
+      },
+      {
+        "zh": "均匀加厚",
+        "en": "Solidify",
+        "type": "toggle",
+        "def": false,
+        "range": "开 / 关",
+        "note": "把薄壳置换结果封闭为实体并给出厚度；开启后自动开启并锁定「自交检查」"
+      },
+      {
+        "zh": "厚度",
+        "en": "Thickness",
+        "type": "double",
+        "def": "随预设（开启 Solidify 后可设）",
+        "range": "≥ 模型容差 … 对象尺寸×10",
+        "note": "仅开启「均匀加厚」时可编辑，实体壳的厚度"
+      },
+      {
+        "zh": "隐藏原物体",
+        "en": "Hide original",
+        "type": "toggle",
+        "def": false,
+        "range": "开 / 关",
+        "note": "生成后隐藏源对象；取消则保留并重新显示"
+      },
+      {
+        "zh": "自交检查",
+        "en": "Self-intersection check",
+        "type": "toggle",
+        "def": false,
+        "range": "开 / 关（开 Solidify 时强制 true）",
+        "note": "检测置换表皮是否自交；开 Solidify 时被锁定开启"
+      },
+      {
+        "zh": "细化次数",
+        "en": "Refine steps",
+        "type": "int",
+        "def": "随预设",
+        "range": "0–8",
+        "note": "在采样后做几轮边细分细化，提升细节"
+      },
+      {
+        "zh": "细化敏感度",
+        "en": "Refine sensitivity",
+        "type": "double",
+        "def": "随预设",
+        "range": "0–1",
+        "note": "控制细化对曲率变化的敏感程度"
+      },
+      {
+        "zh": "焊接角度 (度)",
+        "en": "Post-weld angle",
+        "type": "double",
+        "def": "随预设",
+        "range": "0–180",
+        "note": "焊接法线夹角小于该值的相邻面，平滑接缝"
+      },
+      {
+        "zh": "平滑次数",
+        "en": "Fairing passes",
+        "type": "int",
+        "def": "随预设",
+        "range": "0–100",
+        "note": "生成后对网格做几轮光顺，减少锯齿"
+      },
+      {
+        "zh": "最大面数",
+        "en": "Face limit",
+        "type": "int",
+        "def": "随预设",
+        "range": "1000–50000000",
+        "note": "最终网格面数硬上限，防止结果失控卡死"
+      },
+      {
+        "zh": "内存上限 (MB)",
+        "en": "Memory limit (MB)",
+        "type": "int",
+        "def": "随预设",
+        "range": "64–32768",
+        "note": "生成过程内存占用上限"
+      }
+    ],
+    "output": "结果网格以 <源对象名 或 \"Displaced\">_Displaced 命名加入当前文档，并自动选中；同时保留源对象（除非勾选「隐藏原物体」）\n关闭结果对象的置换显示（Displacement.On=false 并清除子项），避免与真实几何叠加\n克隆一份不含置换的渲染材质（命名为 \"Baked Displacement\" 或 原名+(Baked)），挂到结果上，保证导出/渲染一致\n写入 UserString 便于追溯：RSTool.Type=DisplacementMesh、RSTool.SourceObjectId（源对象 GUID）、RSTool.FaceCount、RSTool.IsClosed、RSTool.SelfIntersectionCount\n预览阶段用橙色半透明 DisplayConduit 实时叠加显示；最终网格按「最大面数」受控生成，可中途取消",
+    "notes": "置换贴图 vs 真实网格：Rhino 的置换只在渲染时显示起伏，本命令把它「烘焙」成真正可编辑、可布尔、可导出的网格几何，适合用于加工 / 3D 打印 / 下游软件\n来源自动检测：优先读取对象的 PBR 置换（displacement）或凹凸（bump）贴图；当检测到疑似法线图（法线图不是高度图）时状态栏标橙警告，此时应切「手动高度贴图」指定正确的灰度高度图\n预览与最终分离：预览最多 2 万面、可快速迭代参数；最终网格严格遵守「最大面数」，细节更完整但更耗时，且可取消\n生产风险：薄壳置换易出现自交/翻面，未开启「均匀加厚」时若质量报告存在警告，会弹窗提示，确认后才加入文档；开启「均匀加厚」可封闭为实体并强制自交检查\n性能与失控防护：采样间距越小、细化次数越多，细节越高但耗时越长；「最大面数」与「内存上限」是防止大模型卡死 / 爆内存的两道保险\n追溯与协作：输出对象带 RSTool.Type=DisplacementMesh 等 UserString，可用脚本按类型筛选、按 SourceObjectId 反查源对象"
   },
   "rsMeshFrame": {
    "license": true,

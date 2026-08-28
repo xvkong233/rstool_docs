@@ -1,6 +1,6 @@
 # RsTool 命令参考
 
-> 覆盖 RsTool 插件全部 265 条命令（`rsMeshRelax` 在多个分类重复列出），每条命令一个独立页面，含功能、调用方式、交互流程、参数表、输出、备注与教学视频。
+> 覆盖 RsTool 插件全部 266 条命令（`rsMeshRelax` 在多个分类重复列出），每条命令一个独立页面，含功能、调用方式、交互流程、参数表、输出、备注与教学视频。
 
 ## AI（4 条）
 
@@ -135,7 +135,7 @@
 - [rsTerrainAnalysis · 地形分析](/commands/rsTerrainAnalysis) — 对地形进行多维度分析：高程、坡度、坡向、凹凸性、粗糙度等，以彩色映射可视化。
 - [rsRainFlowSimulation · 雨流分析](/commands/rsRainFlowSimulation) — 模拟雨水在地形表面的流动路径，用于排水分析。
 
-## 几何（38 条）
+## 几何（39 条）
 
 ### 曲线
 
@@ -167,6 +167,7 @@
 - [rsFlipClosedMeshOutward · 闭合网格外翻](/commands/rsFlipClosedMeshOutward) — 将闭合网格的法线翻转为朝外，确保法线方向一致。
 - [rsJoinMeshesByMaterials · 按材质合并网格](/commands/rsJoinMeshesByMaterials) — 将具有相同材质的网格合并为一个网格，减少 Draw Call。
 - [rsReduceMeshByCurvature · 按曲率减网格面](/commands/rsReduceMeshByCurvature) — 根据曲面曲率智能减少网格面数，曲率低的区域面数减少更多。
+- [rsDisplacementToMesh · 置换贴图转真实网格](/commands/rsDisplacementToMesh) — 将 Rhino 对象的置换 / 凹凸贴图烘焙为真正的网格几何，支持质量预设、实时预览与生产风险检查。
 - [rsMeshFrame · 网格框架](/commands/rsMeshFrame) — 根据网格边线生成框架结构，适合制作网架和骨架模型。
 - [rsHairSystem · 毛发系统](/commands/rsHairSystem) — 在网格曲面上创建毛发系统，可控制密度、长度、方向等参数。
 - [rsConvertToMeshPanel · Nurbs单元转Mesh单元](/commands/rsConvertToMeshPanel) — 将 NURBS 面板转换为网格面板，便于后续铺装和渐变操作。
