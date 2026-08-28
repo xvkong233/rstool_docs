@@ -8,6 +8,9 @@
 
 **功能**：调整 Grasshopper 画布背景的透明显示效果。
 
+![CanvasTransparent · Grasshopper 画布背景透明化，透出后方 Rhino 视口](../assets/CanvasTransparent/image1.png)
+*CanvasTransparent 将 Grasshopper 画布背景设为透明，使后方 Rhino 视口中的模型直接可见，方便在 GH 编辑组件时实时对照 Rhino 几何*
+
 **使用步骤**：
 
 1. 在 Grasshopper 画布中，从 RSTool 标签的「Util」分组下找到该组件并拖入

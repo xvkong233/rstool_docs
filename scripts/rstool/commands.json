@@ -12708,7 +12708,14 @@
      "note": ""
     }
    ],
-   "notes": "该运算器在 Grasshopper 画布中运行，输入与输出通过组件端口连接；每次画布求解时执行一次。\n\n所属 GH 分组：RSTool / Util"
+   "notes": "该运算器在 Grasshopper 画布中运行，输入与输出通过组件端口连接；每次画布求解时执行一次。\n\n所属 GH 分组：RSTool / Util",
+   "illustrations": [
+    {
+      "src": "assets/CanvasTransparent/image1.png",
+      "alt": "CanvasTransparent · Grasshopper 画布背景透明化，透出后方 Rhino 视口",
+      "caption": "CanvasTransparent 将 Grasshopper 画布背景设为透明，使后方 Rhino 视口中的模型直接可见，方便在 GH 编辑组件时实时对照 Rhino 几何"
+    }
+   ]
   },
   "ChangeGui": {
    "icon": "assets/gh-icons/ChangeGui_24.png",
