@@ -6,7 +6,7 @@
 
 **功能**：切换内置浏览器面板（RhinoBrowserPanel）的显示/隐藏
 
-**调用**：在 Rhino 命令行输入 `rsBrowser`（打开设置窗口）
+**调用**：在 Rhino 命令行输入 `rsBrowser`（命令行交互）
 
 **交互流程**：
 
