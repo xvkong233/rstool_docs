@@ -6,6 +6,15 @@
 
 **功能**：结果网格以 <源对象名 或 "Displaced">_Displaced 命名加入当前文档，并自动选中；同时保留源对象（除非勾选「隐藏原物体」） 关闭结果对象的置换显示（Displacement.On=false 并清除子项），避免与真实几何叠加 克隆一份不含置换的渲染材质（命名为 "Baked Displacement" 或 原名+(Baked)），挂到结果上，保证导出/渲染一致 写入 UserString 便于追溯：RSTool.Type=DisplacementMesh、RSTool.SourceObjectId（源对象 GUID）、RSTool.FaceCount、RSTool.IsClosed、RSTool.SelfIntersectionCount 预览阶段用橙色半透明 DisplayConduit 实时叠加显示；最终网格按「最大面数」受控生成，可中途取消
 
+![Displacement 噪声贴图（黑白色水波纹理）](../assets/rsDisplacementToMesh/image1.png)
+*用于驱动置换的灰度噪声贴图：水平方向连续起伏的管状/带状纹理，中间调灰度（无纯白纯黑）作为高度源导入「手动高度贴图」或被自动从 Rhino 置换/凹凸材质中读取*
+
+![Rhino 视口：带置换贴图的网格 + 「置换贴图转真实网格」参数对话框](../assets/rsDisplacementToMesh/image2.jpg)
+*Rhino 视口截图：左侧大块橙黄色显示的是带置换贴图的网格（Rhino 选中态着色），右侧浮窗是本命令的「置换贴图转真实网格」参数对话框，分「基础参数 / 高级参数」两个标签页；底部实时显示预览顶点数与面数*
+
+![Displacement 烘焙后的真实几何网格（灰度渲染）](../assets/rsDisplacementToMesh/image3.jpg)
+*应用噪声贴图后生成的实际几何：表面呈现密集的浮雕感条纹，亮带凸起、暗带凹陷；灰度显示凸显凹凸对比，背景网格保留以示上下文*
+
 **调用**：在 Rhino 命令行输入 `rsDisplacementToMesh`（打开设置窗口）
 
 **交互流程**：

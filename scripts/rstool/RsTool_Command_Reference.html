@@ -394,7 +394,6 @@ const data = [
 { cat: "几何", sub: "曲面", name: "rsSectionSweep", zh: "剖面扫掠", desc: "沿路径曲线扫掠截面生成曲面，支持变截面。" },
 { cat: "几何", sub: "网格", name: "rsMeshWindow", zh: "网格工具", desc: "打开网格工具窗口，集成多种网格编辑和处理功能。" },
 { cat: "几何", sub: "网格", name: "rsTriRemesh", zh: "三角重构", desc: "对网格进行三角面重新划分，生成均匀的三角网格。支持按边长控制。" },
-{ cat: "几何", sub: "网格", name: "rsQuadRemesh", zh: "四边重构", desc: "对网格进行四边面重新划分，生成均匀的四边网格。" },
 { cat: "几何", sub: "网格", name: "rsDualMesh", zh: "对偶网格", desc: "生成网格的对偶网格，将面中心转为顶点。" },
 { cat: "几何", sub: "网格", name: "rsDiamondMesh", zh: "菱形网格", desc: "将网格转换为菱形网格表示。" },
 { cat: "几何", sub: "网格", name: "rsSubdivideMesh", zh: "细分网格", desc: "对网格进行细分，增加网格密度。支持 Catmull-Clark 等细分模式。" },
@@ -5777,15 +5776,6 @@ const details = {
   ],
   "output": "均匀三角网格（各向同性重拓扑）",
   "notes": "基于 Botsch & Kobbelt 各向同性重网格算法"
- },
- "rsQuadRemesh": {
-  "license": null,
-  "help": null,
-  "style": null,
-  "flow": [],
-  "params": [],
-  "output": null,
-  "notes": "源码中未找到 rsQuadRemesh 命令类：仅在 docs/RsTool_Command_Reference.html 文档中以“四边重构”描述，未在 MeshAndTileCommandModule 中注册，也没有对应的 .cs 源文件。无法从真实源码提取任何字段（license/help/style/flow/params/output 均未知）。"
  },
  "rsDualMesh": {
   "license": true,

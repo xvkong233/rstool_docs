@@ -28,3 +28,8 @@
 | 旋转90度 | Rotate90 | toggle | false |  | 确认阶段点击选项，每次 +90° 循环(0/90/180/270)，通过 RotationCount 控制 |
 
 **备注**：扫掠类型必须选择；旋转为每次点击累加 90° 的循环选项；对齐曲面模式需要额外选择参考 Brep。
+
+**教学视频**：
+
+<iframe class="rstool-video" src="https://player.bilibili.com/player.html?isOutside=true&aid=114982666638055&bvid=BV1hJtAz5EVE&cid=31530746116&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" title="RsTool截面扫略来了~单轨从未如此轻松"></iframe>
+*RsTool截面扫略来了~单轨从未如此轻松*
