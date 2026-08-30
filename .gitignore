@@ -37,3 +37,6 @@ package-lock.json
 .vercel
 playwright-report
 test-results
+
+# local agent tooling state
+.mimosa/

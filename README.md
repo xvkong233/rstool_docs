@@ -43,6 +43,9 @@ node scripts/rstool/extract_commands_data.js
 # 从 commands.json 生成 docs/commands/<slug>.md 每命令独立页，
 # 以及分类总目录页 docs/commands/index.md
 node scripts/rstool/generate_commands_pages.cjs
+
+# 校验文档完整性：图片引用、参数表格、生成器漂移、首页计数
+pnpm rstool:verify
 ```
 
 ## 常用脚本

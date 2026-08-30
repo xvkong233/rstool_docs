@@ -4,7 +4,7 @@ layout: home
 hero:
   name: RsTool
   text: Rhino 插件命令完全参考手册
-  tagline: 276 条命令 · 17 大分类，功能、参数、交互流程与配图一站速查
+  tagline: 276 条命令 · 18 大分类，功能、参数、交互流程与配图一站速查
   image:
     src: /logo.png
     alt: RsTool
@@ -14,7 +14,7 @@ hero:
       link: /commands/
     - theme: alt
       text: GitHub
-      link: https://github.com/xvkong233/rstool
+      link: https://github.com/xvkong233/rstool_docs
 
 features:
   - icon: 📖
@@ -22,7 +22,7 @@ features:
     details: 276 条命令逐条独立成页，含功能说明、参数表与操作流程，另有分类总目录页一站速查。
   - icon: 🗂️
     title: 分类导航
-    details: 建筑、几何、地形、视图出图、GH 组件等 17 大分类侧栏导航，按需速查。
+    details: 建筑、几何、地形、视图出图、GH 组件等 18 大分类侧栏导航，按需速查。
   - icon: 🔍
     title: 全文搜索
     details: 本地搜索引擎毫秒级响应，按命令名、中文名或功能描述直达目标命令。

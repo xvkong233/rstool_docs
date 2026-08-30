@@ -40,6 +40,16 @@ const esc = (v) => {
   return s.replace(/\|/g, '\\|').replace(/\n+/g, ' ').trim()
 }
 
+// HTML 属性值转义：防数据中的引号/尖括号破坏 iframe 属性结构。
+// & 保持原样——HTML5 中未构成字符引用的裸 & 合法，且避免 bilibili 等带参 URL 产生无谓 diff。
+const escAttr = (v) =>
+  v == null
+    ? ''
+    : String(v)
+        .replace(/"/g, '&quot;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+
 // 独立页位于 docs/commands/<name>.md，图片在 docs/assets → 相对 ../assets
 const fixAsset = (src) => (src ? src.replace(/^assets\//, '../assets/') : src)
 
@@ -143,7 +153,7 @@ function renderCommand(it, d) {
       if (!v || !v.src) continue
       const titleEsc = v.title ? esc(v.title) : v.provider || '视频'
       L.push(
-        `<iframe class="rstool-video" src="${esc(v.src)}" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" title="${titleEsc}"></iframe>`
+        `<iframe class="rstool-video" src="${escAttr(v.src)}" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" title="${escAttr(titleEsc)}"></iframe>`
       )
       if (v.title) L.push(`*${esc(v.title)}*`)
       L.push('')
