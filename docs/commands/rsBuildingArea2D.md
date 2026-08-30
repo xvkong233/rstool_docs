@@ -29,7 +29,7 @@
 | 扣除内部洞口 | PreserveHoles | toggle | true |  | 是否扣除内部洞口面积 |
 | 失败后尝试断线修复 | RepairGaps | toggle | true |  |  |
 | 建筑面积比剖面 | FloorAreaRatioProfile | list |  | 按配置文件/下拉项 | ComboBox，选择计容面积规则剖面 |
-| 生成 Rhino 面积表 | Add模块le | toggle | true |  | 其余输出项：轮廓/面积面/标签/锁定实体/隐藏实体默认未勾选 |
+| 生成 Rhino 面积表 | AddTable | toggle | true |  | 其余输出项：轮廓/面积面/标签/锁定实体/隐藏实体默认未勾选 |
 | 各级层高 | StoreyHeight | list |  | >0 | 按标高分级设置层高（米） |
 
 **备注**：**重要声明**：本命令只能做前期粗略概算，不保证命令输出面积的准确性；正式报建、容积率核算与权证测绘请以有资质测绘单位的结果为准。

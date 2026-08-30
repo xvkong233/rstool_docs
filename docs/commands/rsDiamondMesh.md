@@ -23,4 +23,4 @@
 
 > 此命令无命令行数值参数，相关设置在窗口中调整。
 
-**备注**：无可调参数。rsDiamondMesh 生成的网格一般不够舒展均匀，一般需要再配合 [rsMeshRelax](/commands/rsMeshRelax/) 进行二次处理。
+**备注**：无可调参数。rsDiamondMesh 生成的网格一般不够舒展均匀，一般需要再配合 [rsMeshRelax](/commands/rsMeshRelax) 进行二次处理。

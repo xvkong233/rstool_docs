@@ -462,7 +462,7 @@
 ### Text
 
 - [FilterTextAndNumbers](/commands/FilterTextAndNumbers) — 筛选并分离文字内容与数字内容。
-- [Font模块le](/commands/font-le) — 读取可用字体列表并区分中文与西文字体。
+- [FontTable](/commands/FontTable) — 读取可用字体列表并区分中文与西文字体。
 
 ### TextureMapping
 
