@@ -20,3 +20,8 @@
 > 此命令无命令行数值参数，相关设置在窗口中调整。
 
 **备注**：若源图层集合包含目标图层，则先从源列表移除目标图层
+
+**教学视频**：
+
+<iframe class="rstool-video" src="https://player.bilibili.com/player.html?isOutside=true&aid=113669094511772&bvid=BV17MkHYKESX&cid=27394442555&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" title="【RhinoTips】如何一键合并带图块图层"></iframe>
+*【RhinoTips】如何一键合并带图块图层*

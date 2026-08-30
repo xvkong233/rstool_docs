@@ -22,3 +22,8 @@
 > 此命令无命令行数值参数，相关设置在窗口中调整。
 
 **备注**：无数值参数，全部为对象选择交互；未选参照面时按曲线切线在 XY 平面投影构造工作平面，选了参照面则用法线与切线叉乘构造平面。
+
+**教学视频**：
+
+<iframe class="rstool-video" src="https://player.bilibili.com/player.html?isOutside=true&aid=114750738471373&bvid=BV1NYKZzBEi1&cid=30714561625&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" title="RsTool一键按曲线放置模型"></iframe>
+*RsTool一键按曲线放置模型*
