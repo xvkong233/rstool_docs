@@ -1,6 +1,6 @@
 # RsTool 命令参考
 
-> 覆盖 RsTool 插件全部 264 条命令，每条命令一个独立页面，含功能、调用方式、交互流程、参数表、输出、备注与教学视频。
+> 覆盖 RsTool 插件全部 276 条命令，每条命令一个独立页面，含功能、调用方式、交互流程、参数表、输出、备注与教学视频。
 
 ## AI（4 条）
 
@@ -14,19 +14,21 @@
 
 - [rsAiAnimation · AI 动画](/commands/rsAiAnimation) — 打开 AI 动画窗口，通过参考图片（可选参考视频/音频）与提示词生成 Seedance 视频。
 
-## 资源库（4 条）
+## 资源库（6 条）
 
 ### 模型库
 
 - [rsModel · 模型库](/commands/rsModel) — 打开模型库窗口，浏览和管理内置 3D 模型资产。支持分类筛选和搜索。
 - [rsModelOld · 旧版模型库](/commands/rsModelOld) — 旧版模型库窗口，保留兼容。
+- [InsertAssetOld · 旧版插入模型](/commands/InsertAssetOld) — 旧版模型插入命令，从旧版模型库中选择模型插入。
+- [InsertAsset · 插入模型](/commands/InsertAsset) — 从模型库中选择模型并插入到当前文档，插入时可旋转角度。
 
 ### 材质库
 
 - [rsMaterial · 材质库](/commands/rsMaterial) — 打开材质库窗口，浏览和管理内置材质资源。支持 PBR 材质预览。
 - [rsMaterialLibraryOld · 旧版材质库](/commands/rsMaterialLibraryOld) — 旧版材质库窗口，保留兼容。
 
-## 效率工具（8 条）
+## 效率工具（10 条）
 
 ### 生产力
 
@@ -35,6 +37,8 @@
 - [rsImageStudio · 图像工作室](/commands/rsImageStudio) — 打开图像工作室编辑器，在 Rhino 内进行图像编辑和处理。
 - [rsPdfTools · PDF 工具](/commands/rsPdfTools) — 打开 PDF 工具，支持 PDF 的导入、导出和处理。
 - [rsWhiteboard · 白板](/commands/rsWhiteboard) — 打开白板工具，可在 Rhino 中进行自由绘制和标注。
+- [rsModelingCompanion · 建模陪伴](/commands/rsModelingCompanion) — 在 Rhino 界面中唤出建模陪伴助手，可随时隐藏或恢复。
+- [rsModelingCompanionSettings · 建模陪伴设置](/commands/rsModelingCompanionSettings) — 打开建模陪伴助手的设置窗口，配置助手形象与行为。
 
 ### 屏幕工具
 
@@ -49,7 +53,7 @@
 - [rsBrowser · 摸鱼浏览器](/commands/rsBrowser) — 打开内置浏览器窗口，支持在 Rhino 内浏览网页。
 - [rsThreeBody · 三体运动模拟](/commands/rsThreeBody) — 三体运动模拟器，可视化三个天体的引力运动轨迹。
 - [rsWalker · 漫游模式](/commands/rsWalker) — 在 Rhino 模型中进行第一人称漫游，类似游戏式的场景探索。
-- [rsFpsGame · FPS反应测试](/commands/rsFpsGame) — 在 Rhino 中玩 FPS 反应测试小游戏，测试你的反应速度。
+- [rsFpsGame · FPS 反应测试](/commands/rsFpsGame) — 在 Rhino 中玩 FPS 反应测试小游戏，测试你的反应速度。
 - [rsTxtReader · 命令行 TXT 阅读器](/commands/rsTxtReader) — 在 Rhino 命令行按页阅读 .txt 文本文件，支持翻页、跳行、调整每行字数、正倒序显示，自动识别 UTF-8 / GBK 编码。
 
 ## 建筑（25 条）
@@ -91,7 +95,7 @@
 - [rsWallExtend · 墙体延伸](/commands/rsWallExtend) — 将智能墙体延伸至指定边界或另一段墙体。
 - [rsConvertWallToNormalBrep · 转换墙体为普通Brep](/commands/rsConvertWallToNormalBrep) — 将智能墙体转换为标准 Brep 曲面，取消参数化关联。
 
-## 二维建筑（19 条）
+## 二维建筑（21 条）
 
 ### 轴网与墙体
 
@@ -101,6 +105,7 @@
 - [rsWall2DReconnect · 二维墙体重连](/commands/rsWall2DReconnect) — 重新连接二维墙体，修复因移动或删除导致的断开。
 - [rsWall2DAutoJoin · 二维墙体自动交接](/commands/rsWall2DAutoJoin) — 自动处理多段二维墙体的交接关系，生成正确的平面图节点。
 - [rsFilletWall2D · 二维墙体倒角](/commands/rsFilletWall2D) — 对二维墙体转角进行倒角处理。
+- [rsBreakWall2D · 打断二维墙体](/commands/rsBreakWall2D) — 在指定位置将一面二维墙体打断成两段。
 
 ### 门窗与电梯
 
@@ -120,6 +125,7 @@
 - [rsElevation2D · 建筑标高](/commands/rsElevation2D) — 创建建筑标高标注，用于立面图和剖面图。
 - [rsBuildingArea2D · 建筑面积](/commands/rsBuildingArea2D) — 计算并标注建筑面积，支持按楼层统计。
 - [rsConvertA2DToNormalCurves · 二维转普通线条](/commands/rsConvertA2DToNormalCurves) — 将二维建筑对象（墙、门、窗等）转换为普通曲线，取消参数化关联。
+- [rsElevationPanel · 标高面板](/commands/rsElevationPanel) — 由 rsElevation2D 生成的标高对象或群组生成标高面板。
 
 ## 地形（6 条）
 
@@ -135,7 +141,7 @@
 - [rsTerrainAnalysis · 地形分析](/commands/rsTerrainAnalysis) — 对地形进行多维度分析：高程、坡度、坡向、凹凸性、粗糙度等，以彩色映射可视化。
 - [rsRainFlowSimulation · 雨流分析](/commands/rsRainFlowSimulation) — 模拟雨水在地形表面的流动路径，用于排水分析。
 
-## 几何（37 条）
+## 几何（38 条）
 
 ### 曲线
 
@@ -143,7 +149,7 @@
 - [rsFilletNonPlanar · 非共面倒角](/commands/rsFilletNonPlanar) — 对非共面曲线进行倒圆角处理，支持三维空间的曲线倒角。
 - [rsFitArcChain · 相切圆弧拟合](/commands/rsFitArcChain) — 用相切圆弧链拟合曲线，常用于将自由曲线转为圆弧段组合。
 - [rsExtractIsoCrvByNum · 按数量提取等参线](/commands/rsExtractIsoCrvByNum) — 按指定数量在曲面上均匀提取等参线（U/V 方向）。
-- [rsRandomTrimCurve · 按随机参数对曲线进行修剪，生成不规则片段。](/commands/rsRandomTrimCurve) — 随机修剪曲线
+- [rsRandomTrimCurve · 随机修剪曲线](/commands/rsRandomTrimCurve) — 按随机参数对曲线进行修剪，生成不规则片段。
 - [rsSplitCrvAtIntersection · 交点处分割曲线](/commands/rsSplitCrvAtIntersection) — 在曲线交点处自动分割曲线，生成多段独立曲线。
 - [rsRepairOpenCurves · 修复开放曲线](/commands/rsRepairOpenCurves) — 自动修复开放的曲线，将间隙处闭合或延伸连接。
 - [rsFindCurveGaps · 查找线头](/commands/rsFindCurveGaps) — 查找并标记曲线中的间隙和断点，辅助修复未闭合的曲线。
@@ -182,6 +188,7 @@
 - [rsRandomChange · 随机变换](/commands/rsRandomChange) — 对选中的对象进行随机缩放、旋转、移动等变换。
 - [rsMoveToOrigin · 移动到原点](/commands/rsMoveToOrigin) — 将选中对象移动到世界坐标系原点。
 - [rsMoveProject · 工程移动](/commands/rsMoveProject) — 按工程精度移动对象，支持输入精确坐标值。
+- [rsLayFlat · 一键放平](/commands/rsLayFlat) — 拾取对象上的一个面，将整个对象旋转放平到该面所在的平面。
 
 ### 点
 
@@ -193,14 +200,14 @@
 
 ### （通用）
 
-- [rsTesselateNurbs · NURBS表皮细分](/commands/rsTesselateNurbs) — 对 NURBS 曲面进行细分铺装，生成面板化结构。
-- [rsTileQuadNurbsBlend · NURBS渐变表皮生成](/commands/rsTileQuadNurbsBlend) — 在 NURBS 曲面上生成渐变表皮图案。
+- [rsTesselateNurbs · NURBS 细分铺装](/commands/rsTesselateNurbs) — 对 NURBS 曲面进行细分铺装，生成面板化结构。
+- [rsTileQuadNurbsBlend · 四边 NURBS 铺装混接](/commands/rsTileQuadNurbsBlend) — 在 NURBS 曲面上生成渐变表皮图案。
 - [rsTileMeshBlend · 网格铺装混接](/commands/rsTileMeshBlend) — 在网格曲面上生成铺装图案，支持不同图案之间的混接过渡。
 - [rsTileMeshBlendByColor · 按颜色生成渐变表皮](/commands/rsTileMeshBlendByColor) — 根据网格顶点颜色生成渐变铺装表皮，颜色驱动图案密度或类型。
 - [rsTileMeshBlendByBitmap · 按贴图生成渐变表皮](/commands/rsTileMeshBlendByBitmap) — 根据贴图图像生成渐变铺装表皮，图像灰度或颜色驱动图案变化。
 - [rsMeshColorPaint · 网格笔刷](/commands/rsMeshColorPaint) — 用笔刷在网格上绘制颜色，支持实时交互式涂抹。
 
-## 组织与选择（19 条）
+## 组织与选择（20 条）
 
 ### 选择
 
@@ -222,6 +229,7 @@
 - [rsAssignRandomColorToLayer · 图层随机着色](/commands/rsAssignRandomColorToLayer) — 为图层随机分配显示颜色，便于视觉区分。
 - [rsAutoSegColorToLayer · 自动分段着色到图层](/commands/rsAutoSegColorToLayer) — 自动按对象属性分段，分配到不同图层并着色。
 - [rsBlockObjectsToLayer · 块对象归层](/commands/rsBlockObjectsToLayer) — 将块定义中的对象按规则归类到指定图层。
+- [rsDeleteLayer · 删除图层](/commands/rsDeleteLayer) — 通过图层选择对话框勾选一个或多个图层并删除。
 
 ### 材质辅助
 
@@ -230,7 +238,7 @@
 - [rsAutoBoxMapping · 自动盒映射](/commands/rsAutoBoxMapping) — 自动为对象设置盒映射贴图坐标，适合建筑模型快速贴图。
 - [rsPBRToCustomMaterial · PBR转自定义材质](/commands/rsPBRToCustomMaterial) — 将 PBR 材质转换为 Rhino 自定义材质，便于在低版本 Rhino 中使用。
 
-## 视图出图（15 条）
+## 视图出图（16 条）
 
 ### 标注出图
 
@@ -242,6 +250,7 @@
 - [rsHeightDot · 高程点](/commands/rsHeightDot) — 创建高程标注点，标注点的高度或 XYZ 坐标，支持基于自定义工作平面计算。
 - [rsQuickNest · 快速排料](/commands/rsQuickNest) — 将多个平面图形进行排版嵌套，优化材料利用率。
 - [rsShadowRender · 建筑渲染窗口](/commands/rsShadowRender) — 打开建筑渲染窗口，含阴影渲染功能，快速生成建筑表现图。
+- [rsPolylineSection · 折线剖切](/commands/rsPolylineSection) — 沿折线或曲线生成剖切，可在观察者一侧指定剖切深度，并增删折点。
 
 ### 视图相机
 
@@ -249,8 +258,8 @@
 - [rsFaceCamera · 面向相机](/commands/rsFaceCamera) — 使选中对象自动面向当前视图相机，类似广告牌效果。
 - [rsBatchSnapshotCapture · 批量截图](/commands/rsBatchSnapshotCapture) — 批量对多个命名视图进行截图，输出图片文件。
 - [rsBatchViewCapture · 批量视图捕捉](/commands/rsBatchViewCapture) — 批量捕捉当前视图为图片，支持多种分辨率和格式。
-- [rsImportCamFromSU · 从SketchUp导入相机](/commands/rsImportCamFromSU) — 从 SketchUp 文件中导入相机视角，在 Rhino 中还原 SU 的视图。
-- [rsExportCamToSU · 导出相机到SketchUp](/commands/rsExportCamToSU) — 将 Rhino 当前视图的相机导出到 SketchUp 文件。
+- [rsImportCamFromSU · 从 SketchUp 导入相机](/commands/rsImportCamFromSU) — 从 SketchUp 文件中导入相机视角，在 Rhino 中还原 SU 的视图。
+- [rsExportCamToSU · 导出相机到 SketchUp](/commands/rsExportCamToSU) — 将 Rhino 当前视图的相机导出到 SketchUp 文件。
 - [rsCameraPath · 相机路径](/commands/rsCameraPath) — 创建相机动画路径，用于生成漫游动画。
 
 ## 分析（8 条）
@@ -281,12 +290,13 @@
 - [rsBoids · 类群体运动分析](/commands/rsBoids) — Boids 群体运动模拟，生成鸟群/鱼群式的集体运动轨迹。
 - [rsPhysarum · 黏菌模拟](/commands/rsPhysarum) — Physarum 黏菌生长模拟，生成有机的生长路径图案。
 
-## SubD辅助（2 条）
+## SubD辅助（3 条）
 
 ### 编辑工具
 
-- [rsMoveAlongNormal · SubD沿法线移动](/commands/rsMoveAlongNormal) — 沿法线方向移动 SubD 顶点，适合快速调整曲面形态。
+- [rsMoveAlongNormal · 沿法线移动](/commands/rsMoveAlongNormal) — 沿法线方向移动 SubD 顶点，适合快速调整曲面形态。
 - [rsCopyMayaToRhino · Maya文件复制到Rhino](/commands/rsCopyMayaToRhino) — 从 Maya 文件中复制几何体到 Rhino，支持格式转换。
+- [rsSelectSubDEdgeDirection · 选择 SubD 同向边](/commands/rsSelectSubDEdgeDirection) — 点选一条 SubD 控制网边，自动选中同一四边形区域内全部同方向（U 或 V）的边。
 
 ## 截面管理（2 条）
 
@@ -295,13 +305,13 @@
 - [rsProfileDirector · Profile Director](/commands/rsProfileDirector) — 打开截面管理器，管理截面轮廓库并沿路径挤出。
 - [rsProfileDirectorAddProfile · 添加截面](/commands/rsProfileDirectorAddProfile) — 向 Profile Director 添加新的截面轮廓。
 
-## 辅助工具（18 条）
+## 辅助工具（20 条）
 
 ### 剪贴板
 
 - [rsCopy · 带原点Copy](/commands/rsCopy) — 复制对象时记录原始坐标，跨文件粘贴时保持位置一致。
 - [rsPaste · 带原点Paste](/commands/rsPaste) — 粘贴对象时使用原始坐标，与 rsCopy 配合使用。
-- [rsPasteExcel · 粘贴Excel到Rhino](/commands/rsPasteExcel) — 将 Excel 中的表格数据粘贴到 Rhino，生成文本表格或曲线。
+- [rsPasteExcel · 粘贴 Excel](/commands/rsPasteExcel) — 将 Excel 中的表格数据粘贴到 Rhino，生成文本表格或曲线。
 
 ### 块操作
 
@@ -311,8 +321,8 @@
 ### 系统工具
 
 - [rsMenu · RSTool菜单](/commands/rsMenu) — 打开 RSTool 悬浮覆盖菜单，提供命令搜索和快速启动面板。
-- [rsHotbox · 热盒](/commands/rsHotbox) — 呼出径向命令菜单，围绕鼠标位置快速启动常用命令。
-- [rsHotboxSettings · 热盒设置](/commands/rsHotboxSettings) — 打开热盒设置窗口，配置触发方式、方案与命令布局。
+- [rsHotbox · Hotbox 热盒](/commands/rsHotbox) — 呼出径向命令菜单，围绕鼠标位置快速启动常用命令。
+- [rsHotboxSettings · Hotbox 热盒设置](/commands/rsHotboxSettings) — 打开热盒设置窗口，配置触发方式、方案与命令布局。
 - [RsAutoEnglish · 自动英文命令](/commands/RsAutoEnglish) — 在命令行输入时自动切换为英文输入法，文本输入时恢复原输入法。
 - [rsEngCommandSearch · 英文命令搜索](/commands/rsEngCommandSearch) — 搜索 Rhino 英文命令名，快速定位和执行命令。
 - [rsToolStart · 工具启动](/commands/rsToolStart) — 启动/初始化 RSTool 工具集。
@@ -326,6 +336,8 @@
 
 - [rsSuExport · 导出SketchUp](/commands/rsSuExport) — 将选中的 Rhino 对象导出为 SketchUp（.skp）格式文件。
 - [rsSendToSU · 发送模型到SketchUp](/commands/rsSendToSU) — 将选中的 Rhino 对象一键发送到正在运行的 SketchUp（实时联动推送），无需导出文件。
+- [rsMayaTransferSettings · Rhino-Maya 传输设置](/commands/rsMayaTransferSettings) — 打开 Rhino 与 Maya 之间模型传输的设置窗口。
+- [rsSendToMaya · 发送模型到 Maya](/commands/rsSendToMaya) — 将 Rhino 中选定的对象发送到 Maya。
 
 ## 动态组件（7 条）
 
@@ -348,7 +360,7 @@
 ### 维护
 
 - [rsDynamicComponentSelfTest · 动态组件自检](/commands/rsDynamicComponentSelfTest) — 运行动态组件 Rhino 块结构自检，只读校验运行时结构，不修改文档。
-- [rsPurgeDynamicComponentCache · 清理组件缓存](/commands/rsPurgeDynamicComponentCache) — 清理未被任何实例引用的动态组件派生块，回收冗余块定义。
+- [rsPurgeDynamicComponentCache · 清理动态组件缓存](/commands/rsPurgeDynamicComponentCache) — 清理未被任何实例引用的动态组件派生块，回收冗余块定义。
 
 ### 装配
 

@@ -1,4 +1,4 @@
-# rsTileQuadNurbsBlend · NURBS渐变表皮生成
+# rsTileQuadNurbsBlend · 四边 NURBS 铺装混接
 
 > 模块：铺装表皮
 

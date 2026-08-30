@@ -6,6 +6,9 @@
 
 **功能**：在所选曲线上生成指定数量、按指定分布模式的随机点（去除过近点）
 
+![Rhino Perspective 视口：一条 S 形波浪曲线沿线随机分布一串小圆圈点（rsRandomPtsOnCrv 效果示例）](../assets/rsRandomPtsOnCrv/image1.png)
+*图 1：rsRandomPtsOnCrv 效果示例。Rhino Perspective 视口（左上角 Perspective 标签，红绿坐标轴在左下/右下角）中有一条 S 形/波浪状输入曲线，曲线沿线随机分布着大量小圆圈点（每点 = 曲线上一个采样点），点的密度由命令参数（数量/最小间距等）控制。点的位置严格落在输入曲线上，但分布是随机的、不会像等距布点那样均匀间隔*
+
 **调用**：在 Rhino 命令行输入 `rsRandomPtsOnCrv`（命令行交互）
 
 **交互流程**：

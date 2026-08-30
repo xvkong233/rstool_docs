@@ -1,4 +1,4 @@
-# rsHotboxSettings · 热盒设置
+# rsHotboxSettings · Hotbox 热盒设置
 
 > 模块：辅助工具 / 系统工具
 

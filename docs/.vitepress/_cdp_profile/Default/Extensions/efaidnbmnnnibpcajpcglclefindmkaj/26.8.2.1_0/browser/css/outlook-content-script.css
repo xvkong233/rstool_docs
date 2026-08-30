@@ -1,0 +1,18 @@
+/*************************************************************************
+* ADOBE CONFIDENTIAL
+* ___________________
+*
+*  Copyright 2015 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  All information contained herein is, and remains
+* the property of Adobe Systems Incorporated and its suppliers,
+* if any.  The intellectual and technical concepts contained
+* herein are proprietary to Adobe Systems Incorporated and its
+* suppliers and are protected by all applicable intellectual property laws,
+* including trade secret and or copyright laws.
+* Dissemination of this information or reproduction of this material
+* is strictly forbidden unless prior written permission is obtained
+* from Adobe Systems Incorporated.
+**************************************************************************/
+.outlook-acrobat-touch-point{align-items:center;border-radius:2px;cursor:pointer;display:flex;gap:4px;height:32px;justify-content:center;padding-left:6px;padding-right:6px;pointer-events:all;position:relative}.outlook-acrobat-touch-point:hover{background:#f0f0f0}.outlook-acrobat-touch-point.fte-hover:hover{background:none!important}.outlook-acrobat-touch-point.selected,.outlook-acrobat-touch-point:active{background:#ebebeb}.outlook-acrobat-touch-point:focus-visible{height:27px;outline:1px solid #848484}.outlook-acrobat-touch-point.new-header-position{padding:2px 14px}.acrobat-icon{height:16px;width:16px}.acrobat-icon,.acrobat-text{display:inline;vertical-align:middle!important}.acrobat-text{color:#424242;font-family:Segoe UI,sans-serif;font-size:14px;font-weight:400;letter-spacing:0;line-height:100%}

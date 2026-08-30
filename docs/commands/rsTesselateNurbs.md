@@ -1,4 +1,4 @@
-# rsTesselateNurbs · NURBS表皮细分
+# rsTesselateNurbs · NURBS 细分铺装
 
 > 模块：铺装表皮
 

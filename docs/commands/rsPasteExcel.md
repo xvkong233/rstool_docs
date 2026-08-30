@@ -1,4 +1,4 @@
-# rsPasteExcel · 粘贴Excel到Rhino
+# rsPasteExcel · 粘贴 Excel
 
 > 模块：辅助工具 / 剪贴板
 

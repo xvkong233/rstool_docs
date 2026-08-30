@@ -1,4 +1,4 @@
-# rsMoveAlongNormal · SubD沿法线移动
+# rsMoveAlongNormal · 沿法线移动
 
 > 模块：SubD辅助 / 编辑工具
 

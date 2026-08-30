@@ -45,6 +45,20 @@
   },
   {
    "cat": "资源库",
+   "sub": "模型库",
+   "name": "InsertAssetOld",
+   "zh": "旧版插入模型",
+   "desc": "旧版模型插入命令，从旧版模型库中选择模型插入。"
+  },
+  {
+   "cat": "资源库",
+   "sub": "模型库",
+   "name": "InsertAsset",
+   "zh": "插入模型",
+   "desc": "从模型库中选择模型并插入到当前文档，插入时可旋转角度。"
+  },
+  {
+   "cat": "资源库",
    "sub": "材质库",
    "name": "rsMaterial",
    "zh": "材质库",
@@ -91,6 +105,20 @@
    "name": "rsWhiteboard",
    "zh": "白板",
    "desc": "打开白板工具，可在 Rhino 中进行自由绘制和标注。"
+  },
+  {
+   "cat": "效率工具",
+   "sub": "生产力",
+   "name": "rsModelingCompanion",
+   "zh": "建模陪伴",
+   "desc": "在 Rhino 界面中唤出建模陪伴助手，可随时隐藏或恢复。"
+  },
+  {
+   "cat": "效率工具",
+   "sub": "生产力",
+   "name": "rsModelingCompanionSettings",
+   "zh": "建模陪伴设置",
+   "desc": "打开建模陪伴助手的设置窗口，配置助手形象与行为。"
   },
   {
    "cat": "效率工具",
@@ -339,6 +367,13 @@
   },
   {
    "cat": "二维建筑",
+   "sub": "轴网与墙体",
+   "name": "rsBreakWall2D",
+   "zh": "打断二维墙体",
+   "desc": "在指定位置将一面二维墙体打断成两段。"
+  },
+  {
+   "cat": "二维建筑",
    "sub": "门窗与电梯",
    "name": "rsDoor2D",
    "zh": "二维门",
@@ -429,6 +464,13 @@
    "desc": "将二维建筑对象（墙、门、窗等）转换为普通曲线，取消参数化关联。"
   },
   {
+   "cat": "二维建筑",
+   "sub": "其他二维",
+   "name": "rsElevationPanel",
+   "zh": "标高面板",
+   "desc": "由 rsElevation2D 生成的标高对象或群组生成标高面板。"
+  },
+  {
    "cat": "地形",
    "sub": "获取与编辑",
    "name": "rsEarth",
@@ -503,8 +545,8 @@
    "cat": "几何",
    "sub": "曲线",
    "name": "rsRandomTrimCurve",
-   "zh": "按随机参数对曲线进行修剪，生成不规则片段。",
-   "desc": "随机修剪曲线"
+   "zh": "随机修剪曲线",
+   "desc": "按随机参数对曲线进行修剪，生成不规则片段。"
   },
   {
    "cat": "几何",
@@ -657,14 +699,14 @@
    "cat": "铺装表皮",
    "sub": "",
    "name": "rsTesselateNurbs",
-   "zh": "NURBS表皮细分",
+   "zh": "NURBS 细分铺装",
    "desc": "对 NURBS 曲面进行细分铺装，生成面板化结构。"
   },
   {
    "cat": "铺装表皮",
    "sub": "",
    "name": "rsTileQuadNurbsBlend",
-   "zh": "NURBS渐变表皮生成",
+   "zh": "四边 NURBS 铺装混接",
    "desc": "在 NURBS 曲面上生成渐变表皮图案。"
   },
   {
@@ -750,6 +792,13 @@
    "name": "rsMoveProject",
    "zh": "工程移动",
    "desc": "按工程精度移动对象，支持输入精确坐标值。"
+  },
+  {
+   "cat": "几何",
+   "sub": "对象变换",
+   "name": "rsLayFlat",
+   "zh": "一键放平",
+   "desc": "拾取对象上的一个面，将整个对象旋转放平到该面所在的平面。"
   },
   {
    "cat": "几何",
@@ -879,6 +928,13 @@
   },
   {
    "cat": "组织与选择",
+   "sub": "图层",
+   "name": "rsDeleteLayer",
+   "zh": "删除图层",
+   "desc": "通过图层选择对话框勾选一个或多个图层并删除。"
+  },
+  {
+   "cat": "组织与选择",
    "sub": "材质辅助",
    "name": "rsPickMaterial",
    "zh": "拾取材质",
@@ -963,6 +1019,13 @@
   },
   {
    "cat": "视图出图",
+   "sub": "标注出图",
+   "name": "rsPolylineSection",
+   "zh": "折线剖切",
+   "desc": "沿折线或曲线生成剖切，可在观察者一侧指定剖切深度，并增删折点。"
+  },
+  {
+   "cat": "视图出图",
    "sub": "视图相机",
    "name": "rsSetCamera",
    "zh": "设置相机",
@@ -993,14 +1056,14 @@
    "cat": "视图出图",
    "sub": "视图相机",
    "name": "rsImportCamFromSU",
-   "zh": "从SketchUp导入相机",
+   "zh": "从 SketchUp 导入相机",
    "desc": "从 SketchUp 文件中导入相机视角，在 Rhino 中还原 SU 的视图。"
   },
   {
    "cat": "视图出图",
    "sub": "视图相机",
    "name": "rsExportCamToSU",
-   "zh": "导出相机到SketchUp",
+   "zh": "导出相机到 SketchUp",
    "desc": "将 Rhino 当前视图的相机导出到 SketchUp 文件。"
   },
   {
@@ -1118,7 +1181,7 @@
    "cat": "SubD辅助",
    "sub": "编辑工具",
    "name": "rsMoveAlongNormal",
-   "zh": "SubD沿法线移动",
+   "zh": "沿法线移动",
    "desc": "沿法线方向移动 SubD 顶点，适合快速调整曲面形态。"
   },
   {
@@ -1127,6 +1190,13 @@
    "name": "rsCopyMayaToRhino",
    "zh": "Maya文件复制到Rhino",
    "desc": "从 Maya 文件中复制几何体到 Rhino，支持格式转换。"
+  },
+  {
+   "cat": "SubD辅助",
+   "sub": "编辑工具",
+   "name": "rsSelectSubDEdgeDirection",
+   "zh": "选择 SubD 同向边",
+   "desc": "点选一条 SubD 控制网边，自动选中同一四边形区域内全部同方向（U 或 V）的边。"
   },
   {
    "cat": "截面管理",
@@ -1160,7 +1230,7 @@
    "cat": "辅助工具",
    "sub": "剪贴板",
    "name": "rsPasteExcel",
-   "zh": "粘贴Excel到Rhino",
+   "zh": "粘贴 Excel",
    "desc": "将 Excel 中的表格数据粘贴到 Rhino，生成文本表格或曲线。"
   },
   {
@@ -1188,14 +1258,14 @@
    "cat": "辅助工具",
    "sub": "系统工具",
    "name": "rsHotbox",
-   "zh": "热盒",
+   "zh": "Hotbox 热盒",
    "desc": "呼出径向命令菜单，围绕鼠标位置快速启动常用命令。"
   },
   {
    "cat": "辅助工具",
    "sub": "系统工具",
    "name": "rsHotboxSettings",
-   "zh": "热盒设置",
+   "zh": "Hotbox 热盒设置",
    "desc": "打开热盒设置窗口，配置触发方式、方案与命令布局。"
   },
   {
@@ -1269,6 +1339,20 @@
    "desc": "将选中的 Rhino 对象一键发送到正在运行的 SketchUp（实时联动推送），无需导出文件。"
   },
   {
+   "cat": "辅助工具",
+   "sub": "导入导出",
+   "name": "rsMayaTransferSettings",
+   "zh": "Rhino-Maya 传输设置",
+   "desc": "打开 Rhino 与 Maya 之间模型传输的设置窗口。"
+  },
+  {
+   "cat": "辅助工具",
+   "sub": "导入导出",
+   "name": "rsSendToMaya",
+   "zh": "发送模型到 Maya",
+   "desc": "将 Rhino 中选定的对象发送到 Maya。"
+  },
+  {
    "cat": "趣味",
    "sub": "互动娱乐",
    "name": "rsThreeBody",
@@ -1286,7 +1370,7 @@
    "cat": "趣味",
    "sub": "互动娱乐",
    "name": "rsFpsGame",
-   "zh": "FPS反应测试",
+   "zh": "FPS 反应测试",
    "desc": "在 Rhino 中玩 FPS 反应测试小游戏，测试你的反应速度。"
   },
   {
@@ -1335,7 +1419,7 @@
    "cat": "动态组件",
    "sub": "维护",
    "name": "rsPurgeDynamicComponentCache",
-   "zh": "清理组件缓存",
+   "zh": "清理动态组件缓存",
    "desc": "清理未被任何实例引用的动态组件派生块，回收冗余块定义。"
   },
   {
@@ -2594,6 +2678,68 @@
    "output": "打开旧版模型库窗口，浏览并插入模型/构件",
    "notes": "旧版命令，WinForms 实现；作为 rsModel 的回退"
   },
+  "InsertAssetOld": {
+   "license": true,
+   "help": null,
+   "style": "hybrid",
+   "flow": [
+    "从旧版模型库面板选择要插入的模型",
+    "在视口中拖动定位模型位置",
+    "用命令行选项「旋转 90°」或直接输入「角度」调整朝向",
+    "点击确认放置"
+   ],
+   "params": [
+    {
+     "zh": "旋转 90°",
+     "en": "Rotate90",
+     "type": "toggle",
+     "def": null,
+     "range": "每次 +90°",
+     "note": "放置过程中的命令行选项"
+    },
+    {
+     "zh": "角度",
+     "en": "Angle",
+     "type": "double",
+     "def": "0.0",
+     "range": "任意角度（度）",
+     "note": "放置过程中的命令行选项"
+    }
+   ],
+   "output": "插入旧版模型库中的模型到当前文档",
+   "notes": "旧版命令，建议优先使用 InsertAsset。"
+  },
+  "InsertAsset": {
+   "license": true,
+   "help": null,
+   "style": "hybrid",
+   "flow": [
+    "从模型库面板选择要插入的模型",
+    "在视口中拖动定位模型位置",
+    "用命令行选项「旋转 90°」或直接输入「角度」调整朝向",
+    "点击确认放置"
+   ],
+   "params": [
+    {
+     "zh": "旋转 90°",
+     "en": "Rotate90",
+     "type": "toggle",
+     "def": null,
+     "range": "每次 +90°",
+     "note": "放置过程中的命令行选项，可多次切换"
+    },
+    {
+     "zh": "角度",
+     "en": "Angle",
+     "type": "double",
+     "def": "0.0",
+     "range": "任意角度（度）",
+     "note": "放置过程中的命令行选项，直接输入朝向角度"
+    }
+   ],
+   "output": "插入模型库中的模型到当前文档",
+   "notes": "旧版对应命令为 InsertAssetOld。"
+  },
   "rsMaterial": {
    "license": true,
    "help": null,
@@ -2805,7 +2951,24 @@
     "点 PNG / SVG 导出当前思维导图",
     "状态栏显示保存状态、文档名与缩放比例；最近 / 结构 / 配色 / 搜索面板按 Esc 或点空白处关闭"
    ],
-   "params": [],
+   "params": [
+    {
+     "zh": "结构",
+     "en": "Structure",
+     "type": "list",
+     "def": "思维导图（双向）",
+     "range": "思维导图 / 逻辑结构 / 向左逻辑结构 / 组织结构 / 目录结构 / 时间轴 / 鱼骨图",
+     "note": "工具栏「结构」下拉：切换整体布局走向"
+    },
+    {
+     "zh": "配色",
+     "en": "ColorTheme",
+     "type": "list",
+     "def": "清爽蓝",
+     "range": "清爽蓝 / 深夜蓝 / 黑底白节点 / 暖沙棕 / 森林绿 / 紫罗兰",
+     "note": "工具栏「配色」下拉：切换节点配色方案"
+    }
+   ],
    "output": "打开思维导图窗口，支持编辑/保存/导出思维导图，文件为 .json（rstool-mindmap v1：title/updatedAt/root 树/view{theme,style,direction,layout}）；PNG/SVG 导出由后端弹保存对话框落盘",
    "notes": "基于 simple-mind-map 引擎（状态栏右下角显示版本）。\n\n**操作**：左键选节点，右键拖动画布；滚轮反向缩放，范围 20%–400%。\n\n**工具栏**（4 组共 21 个按钮）：\n\n| 分组 | 按钮与快捷键 |\n| --- | --- |\n| 文件 | 新建 (Ctrl+N) · 打开 (Ctrl+O) · 最近 ▾ · 保存 (Ctrl+S) · 另存为 (Ctrl+Shift+S) |\n| 编辑 | 撤销 (↶ Ctrl+Z) · 重做 (↷ Ctrl+Y) · 同级节点 (Enter) · 子节点 (模块) · 重命名 (F2) · 删除 (Delete) |\n| 视图 | 展开 · 折叠 · 缩小 (−) · 放大 (＋) · 适应画布 · 结构 ▾ · 搜索 (Ctrl+F) · 配色 ▾ |\n| 导出 | PNG · SVG |\n\n**结构**（共 6 种）：\n\n| 名称 | 走向 / 形态 |\n| --- | --- |\n| 思维导图 | 双向（默认） |\n| 逻辑结构 | 向右 |\n| 向左逻辑结构 | 向左 |\n| 组织结构 | 树形 |\n| 目录结构 | 树形 |\n| 时间轴 | 垂直 |\n| 鱼骨图 | 横向 |\n\n**配色**（共 6 套）：\n\n| 配色 | 备注 |\n| --- | --- |\n| 清爽蓝 | 默认 |\n| 深夜蓝 | 暗色 |\n| 黑底白节点 | 演示用 |\n| 暖沙棕 | 暖色调 |\n| 森林绿 | 自然系 |\n| 紫罗兰 | 紫色系 |\n\n**其他细节**：\n\n- 新增同级默认文本「新主题」，子级「子主题」\n- 最近文件最多保留 10 条\n- 状态栏 dot 实时提示保存状态\n- 异常退出后再次打开会自动恢复未保存的内容"
   },
@@ -2824,7 +2987,40 @@
     "选中元素后，在右侧属性面板调整填充 / 描边 / 渐变 / 图层",
     "Ctrl+S 或关闭窗口前自动写回 Rhino 与本地文件"
    ],
-   "params": [],
+   "params": [
+    {
+     "zh": "导出格式",
+     "en": "Format",
+     "type": "list",
+     "def": "png",
+     "range": "png / jpeg / webp",
+     "note": "导出时设置：图像输出格式"
+    },
+    {
+     "zh": "缩放",
+     "en": "Scale",
+     "type": "double",
+     "def": "1.0",
+     "range": "> 0（导出尺寸 = 源尺寸 × Scale）",
+     "note": "导出时设置：整体缩放比例"
+    },
+    {
+     "zh": "宽度",
+     "en": "Width",
+     "type": "int",
+     "def": "源尺寸",
+     "range": "1 – 8192",
+     "note": "导出时设置：指定时按宽高精确输出"
+    },
+    {
+     "zh": "高度",
+     "en": "Height",
+     "type": "int",
+     "def": "源尺寸",
+     "range": "1 – 8192",
+     "note": "导出时设置：指定时按宽高精确输出"
+    }
+   ],
    "output": "打开矢量工作室 (Vector Studio) 窗口，编辑 SVG 矢量图、可与 Rhino 双向同步（曲线 / 贴图 / 视窗截图 / 画板尺寸同步）",
    "videos": [
     {
@@ -2941,7 +3137,40 @@
     "在窗口中对位图进行绘制、标注、裁剪与调色，或截图 Rhino 视窗后加标注",
     "处理完成后导出为 PNG / JPEG / WebP，或保存为 .rstool-photo 工程文件"
    ],
-   "params": [],
+   "params": [
+    {
+     "zh": "导出格式",
+     "en": "Format",
+     "type": "list",
+     "def": "png",
+     "range": "png / jpeg / webp",
+     "note": "导出时设置：图像输出格式"
+    },
+    {
+     "zh": "宽度",
+     "en": "Width",
+     "type": "int",
+     "def": "源尺寸",
+     "range": "1 – 最大画布边长",
+     "note": "导出 / 截图时设置"
+    },
+    {
+     "zh": "高度",
+     "en": "Height",
+     "type": "int",
+     "def": "源尺寸",
+     "range": "1 – 最大画布边长",
+     "note": "导出 / 截图时设置"
+    },
+    {
+     "zh": "缩放",
+     "en": "Scale",
+     "type": "double",
+     "def": "1.0",
+     "range": "> 0",
+     "note": "导出 / 截图时设置"
+    }
+   ],
    "output": "打开 RSTool 图像工作室窗口进行位图绘制/标注/导出与保存",
    "illustrations": [
     {
@@ -2961,7 +3190,16 @@
     "在白板上自由绘制 / 批注，或使用顶部工具栏的矩形、箭头、文字、图片等工具",
     "开启共享白板可与团队成员实时协作；可截取 Rhino 视窗作为参考图嵌入画板"
    ],
-   "params": [],
+   "params": [
+    {
+     "zh": "自动对齐",
+     "en": "AutoAlign",
+     "type": "toggle",
+     "def": "开",
+     "range": "开 / 关",
+     "note": "底部自定义工具栏开关，控制元素放置时自动对齐"
+    }
+   ],
    "output": "打开白板窗口进行绘制、批注、协作与素材管理",
    "illustrations": [
     {
@@ -2971,6 +3209,38 @@
     }
    ],
    "notes": "白板是 RSTool 内置的协作绘图工具，基于 Excalidraw + React，与 Rhino 同窗口、可被 Rhino 正常遮挡。窗口标题为「RSTool 白板」，可在标题栏随时改名。文档以 Excalidraw 原生 `.excalidraw` 持久化（结构 `{type:\"excalidraw\", version, source, elements, appState, files}`）。支持**本地白板**与**公司共享白板（SMB 文件夹）**两种模式，并可保存 / 加载 Excalidraw **素材库** (`*.excalidrawlib`)。\n\n## 主工具栏（顶部居中，从左到右）\n\n主工具栏由 Excalidraw 自带，RSTool 未增减。仅自动对齐、捕获 Rhino、放置评论、共享状态 4 项加在底部。\n\n| 按钮 | 功能 |\n| --- | --- |\n| 🔒 锁定 | 只读锁定，再点解锁，防止误触修改 |\n| ↶ / ↷ | 撤销 / 重做最近编辑 |\n| ▶ 选择 | 切换到选择工具，鼠标变箭头，可点击 / 框选元素 |\n| ▭ 矩形 | 拖出矩形（按住 Shift 切圆角） |\n| ◯ 椭圆 | 拖出椭圆 |\n| ➤ 直线 / → 箭头 | 拉一条直线段；箭头模式拖出带箭头的线段 |\n| ✏️ 自由画（高亮） | 用画笔按住画连续曲线 |\n| ✎ 铅笔 | 比自由画更细腻的笔触 |\n| A 文字 | 在画板上点击放置文本框，支持 Markdown |\n| 🖼 图片 | 从本地选位图嵌入画板（拖入 / 粘贴亦可） |\n| 🩹 橡皮 | 点击或框选删除元素 |\n| 🗑 删除 | 移除当前选中元素 |\n\n> 额外：RSTool 在右侧补了一个**库按钮**（book 图标），点击展开 Excalidraw **素材库面板**，列出个人 / 公司库中的可复用组件。\n\n## 顶部汉堡菜单（≡，最左上）\n\nHamburger 菜单由 RSTool 在 Excalidraw `MainMenu` 中注入，**与协作会话状态联动**：共享开启时「新建 / 打开 / 最近 / 另存为 / 打开共享白板」会被隐藏以防破坏会话一致性（Excalidraw 内置的「加载场景」「保存到当前文件」「导出」按钮也被 RSTool 用 `UIOptions.canvasActions` 隐藏，由 RSTool 自己的菜单接管）。\n\n| 分组 | 菜单项 | 说明 |\n| --- | --- | --- |\n| 文件 | 新建 | 清空画板（脏时会先弹保存确认） |\n| 文件 | 打开… (`Ctrl+O`) | 选本地 `.excalidraw` 或 `.json` 文件 |\n| 文件 | 最近 | 子菜单列出 `RecentFiles.json` 中的最近文件（含完整路径） |\n| 文件 | 保存 (`Ctrl+S`) | 写当前路径（首次会触发另存为） |\n| 文件 | 另存为… | 选新路径存为 `.excalidraw` |\n| 共享 | 共享当前白板… | 在 SMB 共享目录首次开启协作（详见下节） |\n| 共享 | 打开共享白板… | 选已存在的 `.excalidraw` 加入协作 |\n| 共享 | 停止共享编辑 | 退出协作（仅在已加入时显示） |\n| 素材库 | 素材库使用说明 | 弹出使用提示卡 |\n| 素材库 | 连接公司素材库… | 选一个 `.excalidrawlib` 文件连接为公司库 |\n| 素材库 | 刷新公司素材库 | 重新读取公司库（仅在已连接时显示） |\n| 素材库 | 断开公司素材库 | 移除公司库连接（仅在已连接时显示） |\n| 素材库 | 将个人素材库发布到公司… | 把当前个人库导出为 `.excalidrawlib` |\n| 导出 | 导出 PNG | 把当前画板导出为 PNG 位图 |\n| 导出 | 导出 SVG | 把当前画板导出为矢量 SVG |\n| 默认 | 清空画板 | Excalidraw `DefaultItems.ClearCanvas` |\n| 默认 | 切换主题 | Excalidraw `DefaultItems.ToggleTheme` |\n| 默认 | 帮助 | Excalidraw `DefaultItems.Help` |\n\n## 底部工具栏（Footer，底部中央）\n\n底部只放 4 个 RSTool 自定义按钮，缩放控件 − / 50% / + 与 ∧ ∨ 的撤销 / 重做 仍是 Excalidraw 自带。\n\n| 按钮 | 行为 |\n| --- | --- |\n| 📷 截取 Rhino 视图 | 一键把当前 Rhino 视窗截图嵌入到画板中央（按钮带 `loading` 态防止重复点击） |\n| 📐 自动对齐：开 / 关 | 拖动元素时吸附附近元素边缘；状态写入 `appState.objectsSnapModeEnabled`，**初次打开默认开** |\n| 💬 放置评论 | 仅在共享会话开启时可用：画板切换为「请在白板上点击评论位置」模式 |\n| 状态指示器 | 显示「本地白板」/「已同步 · N 人在线」/「正在同步」/「后台保存中」/「共享目录离线，修改将在恢复后同步」 |\n\n## 共享画板的设置（纯 SMB，零服务器）\n\nRSTool 白板的共享**不需要任何专属服务器**，仅靠一个 SMB 共享目录。每个客户端在白板同目录同名 `<name>.rstcollab/` 下分别写文件，靠 `FileSystemWatcher + 400ms 轮询` 拉取其他客户端的增量。\n\n**首位用户开启共享**\n\n1. 打开或新建本地白板 → 顶部 ≡ → 「共享当前白板…」\n2. 选择 SMB 网络盘下的某个路径（建议 `\\\\server\\share\\...\\whiteboard.excalidraw`），系统用 `Path.GetFullPath + DriveInfo.DriveType == Network` 自动识别是否在网络盘；非网络盘时弹确认警告「其他电脑可能无法加入，是否仍要在此位置开启」\n3. 系统原子写入 `<name>.excalidraw`（首次保存），并在同目录创建同名 `<name>.rstcollab\\` 会话目录，内含：\n   ```\n   <name>.rstcollab\\\n     session.json          # 版本 / sessionId / 白板文件名 / 创建时间\n     scenes\\<clientId>.json     # 每个客户端的增量场景 (元素 clock / files / appState)\n     comments\\<clientId>.json   # 每个客户端的评论操作流\n     presence\\<clientId>.json   # 客户端在线心跳 (2s 写一次, 7s 超时离线)\n     clients\\<clientId>.json    # 客户端元信息 (userName / machineName / 加入时间)\n   ```\n4. 状态指示器从「本地白板」变为「已同步 · 1 人在线」\n\n**其他用户加入**\n\n1. 顶部 ≡ → 「打开共享白板…」→ 选择同一 `.excalidraw` 文件\n2. 系统检测到该文件已有 `.rstcollab/session.json`，自动附加到现有会话\n3. 加入时若本地有未同步的修改，会弹出「这个白板已经存在共享会话。加入后将载入公司共享目录中的最新版本，当前尚未共享的修改不会覆盖其他人的内容。是否继续？」二次确认\n4. 当前在线的所有人会出现在右下角鼠标光标旁的彩色块（颜色由 AuthorId 哈希分到 6 色调色板 `#e0dfff / #d9f4ff / #dcfce7 / #ffedd5 / #ffe4e6 / #f3e8ff`）\n\n**冲突合并**：每个元素都带 `clock` 递增时间戳，增量为 last-writer-wins (`LWW`)。每 30 秒触发一次完整快照写入 `snapshot.json`，通过 `snapshot.lock` 文件 + token 串防并发；锁超过 20 秒视为残留，由下次写入方自动清理。\n\n**评论操作（仅共享时可用）**\n\n- 底部点「放置评论」 → 画板切到「请在白板上点击评论位置」模式\n- 点击位置后弹出「新建评论」对话框 → 输入文本 → 发布\n- 评论操作类型：`create` / `reply` / `resolve` / `reopen` / `delete`，每条带唯一 `opId` 去重\n- 评论位置、文本、作者、解决状态全部走共享目录，团队可见\n\n**共享目录离线时**：状态变为「共享目录离线，修改将在恢复后同步」；本地仍把脏数据写入 `Recovery\\` 目录，恢复网络后通过轮询自动补发所有落后增量。\n\n**停止共享**：≡ → 「停止共享编辑」强制写一次完整快照 + 原子保存 `snapshot.json`；若公司共享目录当前离线，会拒绝停止以保护尚未同步的修改。\n\n## 素材库\n\n**添加**：选中任意白板元素 → 右键 → **添加到素材库** → 自动以 `onLibraryChange` 事件触发 500ms 防抖后写入本机库文件。\n\n**个人库**：自动保存到 `%LOCALAPPDATA%\\RSTool\\Whiteboard\\Library\\`，每次添加后 500ms 自动写入（关闭窗口时会绕过防抖强制同步一次，避免丢失刚添加的素材）。\n\n**公司库**：支持 `.excalidrawlib` 文件；连接 → 刷新 → 断开 三件套在汉堡菜单中。管理员可「将个人素材库发布到公司…」 → 选目标 `.excalidrawlib` 文件覆盖，其他成员通过「连接公司素材库…」共享同一份。\n\n**容量**：RSTool **不限制**素材库大小，但 > 500KB 时弹性能提示（读写和打开面板可能更慢）。\n\n## 与 Rhino 的双向协作\n\n| 入口 | 行为 |\n| --- | --- |\n| 截取 Rhino 视图（底部） | 把 Rhino 当前视窗按屏幕分辨率截图嵌入到画板中央 |\n| 嵌入 B 站 / 一般网页 | 直接在白板粘贴 `BV/av` 视频地址或外链 URL；为避免 Rhino 卡顿，重型网页默认不加载，用户点击后才加载；**已显式屏蔽 B 站首页与列表页**（过重），仅允许具体视频页 |\n| 嵌入对象命名 | 双击嵌入对象的标题可改名为「嵌入的哔哩哔哩视频 / 嵌入的网页」 |\n| 滚轮缩放 / 右键平移 | RSTool 加装的额外画板交互（`installWheelZoom` / `installRightButtonPan`） |\n| 自定义描边宽度 | 当选中多个元素时，RSTool 在 stroke-width 面板追加「自定义描边宽度」输入；混合选区显示「混合」 |\n\n## 崩溃恢复与离线保护\n\n- 编辑停止 3 秒后自动写入一次恢复快照\n- 共享模式下同时保留共享目录的最新快照 + 本机 Recovery 双保险（共享目录离线时仍写到本地，恢复后写回共享）\n- 关闭窗口时若仍有未保存改动：非共享模式弹「是否保存」对话框；**共享模式则不会弹**——会强制写完整快照并停止会话（避免阻塞 + 防止丢失）\n- 文档体积 > 512KB 时弹 `LargeDocumentPerformanceWarning`（仅首次提醒）\n- 关闭后再启动会优先用最近文件恢复空态画板"
+  },
+  "rsModelingCompanion": {
+   "license": true,
+   "help": null,
+   "style": "cli",
+   "flow": [
+    "命令行输入 rsModelingCompanion",
+    "桌面助手出现；再次运行可暂时隐藏，再运行一次恢复"
+   ],
+   "params": [],
+   "output": "切换建模陪伴助手的显示 / 隐藏",
+   "notes": "切换式命令：重复运行可在显示/隐藏间切换。完整设置项（形象、性格、AI 端点、功能开关等）见 rsModelingCompanionSettings。\n\n> ⚠️ **首次使用前必做**：先在 `rsModelingCompanionSettings` 中填写 AI 端点（默认 DeepSeek）与 API Key，否则助手无法对话或建模。\n\n## 它是什么\n\n## 它是什么\n\n植入 Rhino 桌面的 AI 建模陪伴助手——一只可常驻屏幕的虚拟宠物。运行命令后出现在屏幕角落，既能陪你聊天，也能直接动手改你的 Rhino 模型，不占用建模视口，可随时隐藏或恢复。\n\n## 三种工作模式\n\n### 1. 对话问答（Chat）\n用自然语言问 Rhino / Grasshopper / 建筑相关问题，例如「怎么快速建一个螺旋楼梯」「某个命令的快捷键是什么」「幕墙单元怎么参数化」。它会结合当前文档上下文作答。\n\n### 2. 直接建模（Agent）\n用口语下指令，它识别动作意图后生成安全建模计划并预览，确认后直接写入 Rhino。动作白名单（单次最多 12 个，带数量与参数范围安全检查）：\n\n- 创建类：create_box（方体）、create_random_boxes（随机排布方体）、create_cylinder（圆柱）、create_sphere（球体）、create_polyline（折线）、create_extrusion（挤出体）、create_floor_stack（楼层堆叠）、create_facade_grid（幕墙网格）\n- 编辑选中类：move_selected（移动）、copy_selected（复制）、rotate_selected（旋转）、scale_selected（缩放）\n\n典型说法：「帮我画一个半径 5 的球体」「把选中的对象往上移 3 米」「在这一排盒子上挤出楼板」。\n\n### 3. 生成 Rhino Python 代码（Code）\n识别「写代码 / 脚本 / 批量 / 阵列 / 循环」等需求，生成可执行的 Rhino Python 脚本（优先 rhinoscriptsyntax，也可用 RhinoCommon），可结合你贴的参考图理解意图。适合批量处理、阵列、参数化等脚本任务。\n\n## 专注功能（Focus）\n\n内置番茄钟式专注会话：可开始 / 暂停 / 恢复 / 取消 / 查看状态一段专注时间，并给任务起名。专注期间助手进入「专注」状态推动你完成当前任务；完成后累积积分、连续天数与成就，帮助保持工作节奏。适合「这段时间只把这块幕墙推完」的场景。\n\n## 上下文与增强\n\n- Rhino 上下文感知：自动读取当前文档与选中对象（最多 64 个），让回答和建模贴合实际场景。\n- 项目记忆：跨会话记住项目偏好与约定（可在设置关闭）。\n- 联网搜索：需要时效信息时自动联网检索（可在设置关闭）。\n- Agent 视觉校验：建模动作执行后自动校验结果是否合理。\n- 参考图理解：可贴图 / 截图辅助它理解建筑参考。\n\n## 形象与性格\n\n- 6 种可选性格：温柔陪伴、专业建筑师、元气搭档、严格监工、霸道总裁、安静助手——决定语气与反馈风格。\n- 可换宠物形象，调节大小、透明度、是否置顶、点击穿透、位置锁定、空闲闲聊频率等。\n- 长时间未保存（约 1 小时）会主动提醒你按 Ctrl+S。\n"
+  },
+  "rsModelingCompanionSettings": {
+   "license": true,
+   "help": null,
+   "style": "form",
+   "flow": [
+    "命令行输入 rsModelingCompanionSettings",
+    "弹出建模陪伴设置窗口",
+    "调整助手设置后关闭窗口"
+   ],
+   "params": [],
+   "output": "打开建模陪伴设置窗口",
+   "illustrations": [
+    {
+     "src": "assets/rsModelingCompanionSettings/image1.png",
+     "alt": "建模陪伴设置窗口：外观（宠物类型/自定义素材/性格/宠物大小/透明度/置顶/切换到其他窗口时仍保持显示/显示陪伴气泡/空闲闲聊/1小时未保存提醒/锁定位置/鼠标穿透）与 AI 对话记忆（服务商/API地址/模型/API Key/在本机加密保存/测试连接/发送Rhino上下文摘要/使用项目记忆/允许生成简单建模/Agent视觉校验/允许联网搜索/历史消息条数）",
+     "caption": "图 1：建模陪伴设置面板。顶部「外观」分组：宠物类型(默认小屋)/自定义素材/性格(默认专业建筑师)/宠物大小 96-280 px(默认 168)/透明度 45%-100%(默认 98)/始终置顶/切换到其他窗口时仍保持显示/显示陪伴气泡/空闲闲聊频率(默认很少-推荐)/模型修改后 1 小时未保存时提醒/锁定宠物位置/鼠标穿透(可用命令恢复)；中部「AI 对话记忆」分组：服务商(默认 DeepSeek)/API 地址(默认 https://api.deepseek.com/chat/completions)/模型(默认 deepseek-v4-flash)/API Key(在本机加密保存)/测试连接；底部开关：发送只读 Rhino 上下文摘要/同时使用当前项目记忆(长期记忆随终端文件使用)/允许生成并确认简单建模操作/Agent 完成后自动截图并视觉校验/允许宠物申请联网搜索(每次搜索仍需确认)/历史消息条数(默认 30)"
+    }
+   ],
+   "notes": "设置窗口内的具体项以实际界面为准。"
   },
   "rsScreenPin": {
    "license": true,
@@ -2982,7 +3252,16 @@
     "点击“截屏”捕获屏幕区域并置顶悬浮",
     "可滚轮缩放、拖动、右键更多操作；“关闭全部”清除"
    ],
-   "params": [],
+   "params": [
+    {
+     "zh": "交互",
+     "en": "Interaction",
+     "type": "text",
+     "def": "—",
+     "range": "截屏 / 关闭全部悬浮图片",
+     "note": "控制面板为按钮操作，无数值参数；浮窗支持拖动、滚轮缩放、右键更多操作"
+    }
+   ],
    "output": "截取屏幕并生成可拖动/缩放的置顶悬浮图片",
    "notes": "Eto 控制面板 + 屏幕区域选择器；无数值参数（缩放为交互操作）"
   },
@@ -3213,7 +3492,16 @@
     "切换 RSTool 悬浮菜单显示",
     "再次运行可关闭"
    ],
-   "params": [],
+   "params": [
+    {
+     "zh": "主题",
+     "en": "Theme",
+     "type": "toggle",
+     "def": "浅色",
+     "range": "浅色 / 深色",
+     "note": "悬浮菜单右上角 DARK/LIGHT 按钮切换，即时重绘整面板"
+    }
+   ],
    "output": "开启/关闭 RSTool 覆盖式悬浮菜单（点击菜单项或搜索执行命令）",
    "notes": "悬浮式覆盖菜单：在 Rhino 当前视图上叠加一个浮动面板，按分类浏览 RSTool 命令。再次运行 rsMenu 即可关闭；切换视图、切换活动文档时面板也会自动收起。\n\n菜单布局：\n\n| 区域 | 内容 |\n| --- | --- |\n| 左栏（分类） | 建筑 / 二维建筑 / 楼梯 / 场地 / 地形 / 曲线 / 曲面 / 网格 / 选择 / 图层 / 表皮；选中分类高亮 |\n| 顶栏 | 当前分类标题 + 搜索框 + 主题切换按钮 |\n| 主区（命令列表） | 当前分类下的命令项，每条显示中文名 + 英文名（rsXxx）；点击后关闭面板并执行对应命令 |\n| 底部状态栏 | ACTIVE MODULE: 当前分类 // 该分类命令数 // READY |\n\n核心交互：\n\n- 搜索：搜索框 placeholder「搜索命令 / Search commands (Ctrl+F)」；按中文名称或英文命令名匹配（tooltip 提示）；输入后顶部标题切换为「搜索 // SEARCH RESULTS」，主区列出匹配项。\n- 切换界面（主题）：右上角按钮文字显示的是**目标主题**——浅色模式下显示 DARK，点击切到深色；深色模式下显示 LIGHT，点击切回浅色。主题切换即时重绘整个面板（背景、文字、选中态、卡片、轨道等 9 套配色）。\n- 执行：菜单项点击后先关闭面板（CloseAnimated），再通过 RhinoApp.Idle 异步执行 RunScript 脚本（前缀 !_ 加英文命令名），避免命令在面板关闭前就开始运行。"
   },
@@ -3571,6 +3859,31 @@
     }
    ],
    "notes": "rsSendToSU 与 rsSuExport 的区别：前者是一键将模型推送到正在运行的 SketchUp（实时联动，无需落地文件），后者是把模型导出为 .skp 文件。\n\n选择行为：执行前若已在 Rhino 中预选对象则直接发送这些对象；若没有任何预选，命令行会提示你选择要发送的对象。\n\n接收端：需要 SketchUp 一侧的 RSTool 处于可接收状态。检测到在线的 SketchUp 时会即时定向推送；若 SketchUp 未在线，则写入传输槽排队，待 SketchUp 下次打开时自动接收。\n\n传输机制：基于中转清单（manifest）与推送请求；若导出或推送失败，命令行会回显失败原因，便于排查。"
+  },
+  "rsMayaTransferSettings": {
+   "license": true,
+   "help": null,
+   "style": "form",
+   "flow": [
+    "命令行输入 rsMayaTransferSettings",
+    "弹出 Rhino-Maya 传输设置窗口",
+    "配置传输参数后关闭窗口"
+   ],
+   "params": [],
+   "output": "打开 Rhino-Maya 传输设置窗口",
+   "notes": "窗口已打开时再次运行会将其置顶，不会重复创建。"
+  },
+  "rsSendToMaya": {
+   "license": true,
+   "help": null,
+   "style": "cli",
+   "flow": [
+    "选择要发送到 Maya 的对象",
+    "传输到 Maya"
+   ],
+   "params": [],
+   "output": "将选定对象发送到 Maya",
+   "notes": "传输参数（如单位、轴向）在 rsMayaTransferSettings 中配置。"
   },
   "rsThreeBody": {
    "license": true,
@@ -5123,6 +5436,13 @@
     }
    ],
    "output": "对两面智能墙体做圆弧倒角",
+   "illustrations": [
+    {
+     "src": "assets/rsFilletWall/image1.png",
+     "alt": "rsFilletWall 圆角结果：两面智能墙体在转角处被圆弧倒角，Rhino 8 透视视口下白模渲染",
+     "caption": "rsFilletWall 的圆弧倒角结果（After）：Rhino 8 透视视口下白模渲染（无 UI 面板），两面相同厚度的智能墙体在前景右下转角处完成圆滑过渡——墙体外侧立面形成明显的圆弧拐角，墙体厚度方向也同步倒出等半径圆角；左侧墙体顶面、右侧墙体顶面与背景地坪网格均为浅灰（Rhino 默认工作平面与地面网格），左上角可见红色 X 轴标识与「Perspective」视口标签"
+    }
+   ],
    "notes": "仅支持相同墙厚 / 墙高 / 直线墙体"
   },
   "rsWallExtend": {
@@ -5357,6 +5677,19 @@
    ],
    "output": "在两面等宽、同类型、同填充设置的 2D 墙体间生成圆角连接墙体",
    "notes": "仅支持相同墙宽、相同类型与填充设置的墙体"
+  },
+  "rsBreakWall2D": {
+   "license": true,
+   "help": null,
+   "style": "cli",
+   "flow": [
+    "选择一面要打断的二维墙体",
+    "在墙体上指定打断点",
+    "墙体被打断成两段"
+   ],
+   "params": [],
+   "output": "在指定位置打断二维墙体",
+   "notes": "需要打断的是 rsWall2D 生成的智能二维墙体。"
   },
   "rsDoor2D": {
    "license": true,
@@ -5875,6 +6208,25 @@
    "output": "将所选 A2D 墙体/门窗对象转为普通 Rhino 曲线（清除 RSTool 元数据，删除墙体 hatch）",
    "notes": "无参数；转换后失去 A2D 智能关联"
   },
+  "rsElevationPanel": {
+   "license": true,
+   "help": null,
+   "style": "cli",
+   "flow": [
+    "选择 rsElevation2D 生成的标高对象或群组（可多选）",
+    "生成标高面板"
+   ],
+   "params": [],
+   "output": "由标高对象生成标高面板",
+   "illustrations": [
+    {
+     "src": "assets/rsElevationPanel/image1.png",
+     "alt": "标高面板：标题标高/提示双击标高以显示对应楼层范围/表格列名称与标高(2F +6.000m, 1F ±0.000)/按钮拾取标高/添加/删除/楼层显示范围下方范围(m)与上方范围(m)默认 1.400/按钮更新剖切/显示全部",
+     "caption": "图 1：标高面板。窗口标题「标高」，右上角齿轮为设置按钮；顶部提示「双击标高以显示对应楼层范围」；中部为标高列表表格（两列：名称/标高），当前选中 2F(+6.000 m)，下方还有 1F(±0.000)；按钮区第一排「拾取标高 / 添加 / 删除」用于从模型拾取剖面高程或新增/删除标高条目；中部「楼层显示范围」可分别设「下方范围(m)」与「上方范围(m)」（均默认 1.400），决定点选标高时该楼层在 Rhino 视口里的纵向显示带高度；底部「更新剖切」按当前标高刷新 Rhino 剖切视图，「显示全部」一键显示所有标高对应的楼层范围"
+    }
+   ],
+   "notes": "输入对象需为 rsElevation2D 生成的标高对象或群组。"
+  },
   "rsProfileDirector": {
    "license": true,
    "help": null,
@@ -6116,7 +6468,64 @@
     "在窗体中搜索区域、选择地图源并设置下载精度后下载地形",
     "若新版窗口不可用，自动回退到旧版地图窗体 rsEarthOld"
    ],
-   "params": [],
+   "params": [
+    {
+     "zh": "Mapbox Token",
+     "en": "Token",
+     "type": "password",
+     "def": "无",
+     "range": "pk.xxxxx",
+     "note": "面板设置：下载地形与卫星瓦片所需的 Mapbox 令牌，本地加密存档"
+    },
+    {
+     "zh": "精度",
+     "en": "Precision",
+     "type": "radio",
+     "def": "中",
+     "range": "高 / 中 / 低（采样步长 1 / 2 / 4）",
+     "note": "面板设置：控制网格采样密度"
+    },
+    {
+     "zh": "瓦片上限",
+     "en": "MaxTiles",
+     "type": "radio",
+     "def": "60",
+     "range": "20 / 60 / 100",
+     "note": "面板设置：单个任务允许拉取的瓦片数，超出被服务端丢弃"
+    },
+    {
+     "zh": "缩放级别",
+     "en": "Zoom",
+     "type": "int",
+     "def": "自动",
+     "range": "依据范围自动计算最优值",
+     "note": "面板设置：生成时自动计算的地图缩放级别"
+    },
+    {
+     "zh": "生成建筑",
+     "en": "GenerateBuildings",
+     "type": "bool",
+     "def": "关",
+     "range": "开 / 关",
+     "note": "面板设置：勾选后通过 Overpass 拉取 OSM 3D 建筑"
+    },
+    {
+     "zh": "主题",
+     "en": "Theme",
+     "type": "radio",
+     "def": "跟随系统",
+     "range": "跟随系统 / 浅色 / 深色",
+     "note": "面板设置：界面主题，即时生效并写入全局配置"
+    },
+    {
+     "zh": "代理",
+     "en": "Proxy",
+     "type": "bool",
+     "def": "关",
+     "range": "开 / 关（支持 http:// 或 socks5://）",
+     "note": "面板设置：仅 Debug 构建可见，可点测试验证连通"
+    }
+   ],
    "output": "将下载得到的地形网格（含贴图的 Rhino 网格）写入当前文档",
    "notes": "RSTool Terrain Download 是 Rhino 内的在线地形高程获取工具；启动后打开一个窗口，左侧为 Leaflet 地图，右侧为控制面板，所有交互在网页端完成。\n\n界面分两栏。**左侧为地图预览区**（对应窗体 `#map`），整块是 Leaflet 地图：搜索框（geosearch，支持 Esri + OSM，地址输入即定位）、Zoom 缩放、底图切换按钮；地图四个方向额外放置了 4 颗移动按钮（▲▼◀▶），专门用来在没有滚动条精确定位或鼠标不便时，按「一格 tile」的步进平移当前选中范围。地图上方会显示一个 LOADING 遮罩直到瓦片加载完成。\n\n**右侧控制面板自上而下分区**（按窗体 `#panel-inner` 顺序）：\n\n| 顺序 | 分区 | 控件 | 说明 |\n| --- | --- | --- | --- |\n| 1 | 标题栏 | `Terrain Download` + `重置` | 标题与一键重置当前范围/参数 |\n| 2 | 主题 | radio 三选一 | 跟随系统 / 浅色 / 深色；切换即时生效并写入全局配置 |\n| 3 | Mapbox Token | 密码框 + 显示/隐藏 | 用于下载地形与卫星瓦片（pk.xxxxx 开头），本地加密存档 |\n| 4 | 代理 (Debug) | 开关 + 地址 + 测试 | 仅 Debug 构建可见；支持 `http://` 或 `socks5://`，可点测试验证连通 |\n| 5 | 范围绘制 | 绘制范围按钮 + 方向键 | 在地图上拖矩形选区，4 颗方向键做 tile 粒度的选区平移 |\n| 6 | 质量与瓦片 | 精度 select + 瓦片上限 select + 建筑 checkbox | 精度：高/中/低 → 网格采样 step 1/2/4；瓦片上限：20/60/100；建筑：勾选启用 OSM 3D 建筑 |\n| 7 | 操作 | 开始生成 + 取消任务 | 主/辅按钮：绿色生成、白底取消 |\n| 8 | 状态 | 状态框 + 进度行 | 实时显示当前阶段文本与 `已耗时 Nx` 进度说明 |\n| 9 | 任务日志 | 日志列表 + 导出按钮 | 滚动日志区，可导出为 `TerrainLog.txt` |\n\n**操作流程**——打开命令后，先在搜索框定位目的区域，将地图放大到目标地块；在地图上按住鼠标拖出矩形选区，4 颗方向按钮可对选区做 tile 粒度的细微调整；按「开始生成」后流程是：Token 校验 → bounds 校验（南北纬不超过 ±85.05112878、东西经不超过 ±180）→ 计算最优 zoom → 检查瓦片预算 → 下载高程瓦片并拼接为 Rhino 网格 → 若开启 3D 建筑则调用 Overpass 拉取 OSM `building` 关系并拟合高度。\n\n**精度与瓦片上限**决定了网格密度与下载瓦片配额：精度下拉映射 sample step（高=1、中=2、低=4），瓦片上限三档 20/60/100 决定单个任务允许拉取的瓦片数，超过会被服务端丢弃并弹错；调整这两个值会影响最终几何的细节与生成时间。生成 3D 建筑通过 Overpass API 拉取 OSM 内的 `building` 几何，再用高度策略生成 Rhino 网格。\n\n**取消与日志**——生成途中点「取消任务」会立刻停止下载并丢弃已拉取的瓦片；任务日志按行滚动，错误项以红色显示，可一键导出为本地 txt 用于排障。状态区除当前阶段文本外，还会在右下显示阶段耗时汇总（`已耗时 Nx、阶段耗时汇总…`）。\n\n**配置记忆**——Token、主题、最近一次地图位置 (lat/lon/zoom)、精度、瓦片上限、建筑开关、代理地址与开关都会通过 `TerrainDownloadWebForm.Config` 持久化到本地 JSON（Windows `%LocalAppData%` 目录下加密存档），下次打开命令自动恢复。首次打开会尝试从旧版 `rsEarth_Data/token.txt`、`location.txt` 迁移数据。\n\n**网络与性能**——所有下载走自有 `TerrainNetwork` 槽（瓦片 15s 超时 / Overpass 30s 超时 / 地理搜索 15s 超时）；代理若开启则注入相应启动参数。需要联网与 Mapbox 凭据；运行旧版依赖不存在时自动回退 `rsEarthOld` 窗体。"
   },
@@ -7445,6 +7854,18 @@
     }
    ],
    "output": "替换原曲线为末端截断段，并在两曲线末端间生成 G1 连续的非共面圆角曲线(NurbsCurve)，并自动选中",
+   "illustrations": [
+    {
+     "src": "assets/rsFilletNonPlanar/image1.png",
+     "alt": "Rhino Perspective 视口：一条 3D 曲线（U 形/碗状，黑色）在底部带一个尖锐折角，尚未做非平面圆角",
+     "caption": "图 1：倒角前。Rhino Perspective 视口（左上角 Perspective 标签，红绿坐标轴在底部左右）里是一条 3D 空间曲线，整体呈 U 形/碗状下凹，曲线在底部中央有一个尖锐折角（两条线段直接相交），倒角前状态"
+    },
+    {
+     "src": "assets/rsFilletNonPlanar/image2.png",
+     "alt": "Rhino Perspective 视口：同一条 3D 曲线，但底部尖锐折角已被一段红色圆弧替换为非平面圆角",
+     "caption": "图 2：倒角后。同一条 3D 曲线，底部的尖锐折角已被一段红色 NurbsCurve 圆弧替代（命令执行结果），圆角半径由 rsFilletNonPlanar 半径参数控制；命令的 G1 连续实现是把曲线投影到拟合平面后做圆角、再把圆角段拉回原 3D 空间。倒角段与原曲线两端的连接保持 G1 连续"
+    }
+   ],
    "notes": "自动按拾取点靠近起点/终点翻转曲线；在拟合平面(向该平面做 PlanarProjection)上做圆角后再拉回三维空间并保持 G1 连续。"
   },
   "rsFitArcChain": {
@@ -7567,6 +7988,13 @@
     }
    ],
    "output": "从所选曲面按数量(等分数或等距)抽离的等参曲线(ISO curves)，按来源对象+方向分组",
+   "illustrations": [
+    {
+     "src": "assets/rsExtractIsoCrvByNum/image1.png",
+     "alt": "Rhino Perspective 视口：参数提取等参曲线对话框（按等分数模式 U=6 V=14 UV 方向交叉 U/V）实时预览一条波浪曲面上的 22 条黄色等参曲线",
+     "caption": "图 1：rsExtractIsoCrvByNum 对话框与实时预览。Rhino Perspective 视口（左上角 Perspective 标签，红绿坐标轴在底部左右）中是一条带黄色等参网格的波浪起伏曲面（U 方向 6 条、V 方向 14 条交叉结构线，共 22 条黄色曲线），右上是“参数提取等参曲线”对话框：输入区显示“已选择 1 个曲面”；参数区含模式（按等分数）、U 等分数（6）、V 等分数（14）、U 指定距离（1.000）、V 指定距离（1.000）、UV 方向（交叉 U/V）等参数；预览状态显示“22 条曲线 1 个曲面”；底部 OK / 取消按钮。指定距离为 0 时该方向不抽取结构线，黄色曲线均为该预览，OK 后才写入文档"
+    }
+   ],
    "notes": "无可调单位限制；距离模式最大分段上限 1000。"
   },
   "rsRandomTrimCurve": {
@@ -7607,6 +8035,13 @@
     }
    ],
    "output": "用随机长度裁剪后(起点和/或终点)的曲线，替换原曲线并保留图层/颜色",
+   "illustrations": [
+    {
+     "src": "assets/rsRandomTrimCurve/image1.png",
+     "alt": "Rhino Perspective 视口：上下两排短竖线（下方为等距/等长原始曲线分段，上方为 rsRandomTrimCurve 随机裁剪后效果，长短不一、间距不等）",
+     "caption": "图 1：rsRandomTrimCurve 效果对比。Rhino Perspective 视口（左上角 Perspective 标签，左下角坐标轴）里上下两排沿同一条斜线（左低右高再左高右低的对角线）排列的短竖线：下方一排是长度均匀、间距相等的短竖线（原始曲线按等长/等距切割的示意），上方一排则是长度不一、间距不等的短竖线（rsRandomTrimCurve 用 MinLength-MaxLength 之间的随机长度从起点/终点/两端裁剪后的结果，保留原图层与颜色）；视口左侧有一个黑色箭头由下方指向上方，示意原始→裁剪后"
+    }
+   ],
    "notes": "Min>Max 时自动交换；总长度不足以裁剪的曲线被跳过。"
   },
   "rsSplitCrvAtIntersection": {
@@ -7709,6 +8144,13 @@
    ],
    "params": [],
    "output": "从曲线起点沿 +X 轴正向、长度等于曲线长度的直线(Line)",
+   "illustrations": [
+    {
+     "src": "assets/rsUnrollCrv/image1.png",
+     "alt": "Rhino Perspective 视口：一条黑色 S 形 2D 曲线（波浪起伏，左下到右上）和一条红色直线（连接原曲线两端点），红色线为 rsUnrollCrv 展开结果",
+     "caption": "图 1：rsUnrollCrv 展开效果。Rhino Perspective 视口（左上角 Perspective 标签，左下角坐标轴）里有一条黑色 S 形 2D 曲线（从左下到右上、起伏两次，呈波浪形），以及一条红色直线（连接原曲线两端点、方向为起点→终点）；红色直线 = rsUnrollCrv 把原曲线按其总弧长沿 +X 方向展开为一条 Line 后的结果（图中以红色高亮），原曲线本身保留作为参照"
+    }
+   ],
    "notes": "仅选一条曲线(GetMultiple(1,1))；无任何可调参数。"
   },
   "rsLoftCurvesPairs": {
@@ -7855,6 +8297,19 @@
    "output": "从 Maya 剪贴板导入的 SubD 或 Mesh 对象(SoftCrease=SmoothX 时为软折边生成权重百分比 TextDots 标注)，整体编组",
    "notes": "数据来源为系统剪贴板(Maya ASCII 文本片段或 RSTool.MayaClipboard.v1 JSON)；无外部帮助 URL。"
   },
+  "rsSelectSubDEdgeDirection": {
+   "license": true,
+   "help": null,
+   "style": "cli",
+   "flow": [
+    "选择 SubD 物体",
+    "点选一条控制网边",
+    "自动选中全部同方向（U 或 V）的边"
+   ],
+   "params": [],
+   "output": "选中 SubD 四边形区域中同方向的全部边",
+   "notes": "仅对四边形拓扑的 SubD 区域生效。"
+  },
   "rsMeshWindow": {
    "license": true,
    "help": "https://www.rstoolarchi.com/detail/116",
@@ -7990,7 +8445,7 @@
      "caption": "Diamond / Ambo 算子生成的菱形拓扑网格（After）：与示例 1 同一视口、同一物体（方形板 + 中心漏斗 + 下方圆柱），网格线密度显著增加——方板上的网格线由粗变细、由疏变密，圆柱面上的纵向线也明显加密；无 UI 面板（无可调参数），仅展示算子作用后的拓扑变化"
     }
    ],
-   "notes": "无可调参数"
+   "notes": "无可调参数。rsDiamondMesh 生成的网格一般不够舒展均匀，一般需要再配合 [rsMeshRelax](/commands/rsMeshRelax/) 进行二次处理。"
   },
   "rsSubdivideMesh": {
    "license": true,
@@ -8069,7 +8524,7 @@
    ],
    "params": [],
    "output": "按材质合并后的网格组",
-   "notes": "无需手动选择，自动处理文档内全部网格"
+   "notes": "无需手动选择，自动处理文档内全部网格。这个命令主要用来处理导入的 3dmax 素材，因为如果不按照材质进行组合的话，模型显示会非常卡；组合之后就会非常流畅了。"
   },
   "rsReduceMeshByCurvature": {
    "license": true,
@@ -9140,7 +9595,14 @@
     }
    ],
    "output": "沿起止两参考点连线方向，均匀复制并生成指定份数的物体阵列",
-   "notes": "起点终点距离过近（< ZeroTolerance）会失败；命令行中可选数量并实时预览（ArrayPreviewConduit）。"
+   "illustrations": [
+    {
+     "src": "assets/rsArrayBetween/image1.png",
+     "alt": "Rhino Perspective 视口：黄色气球狗形状物体（左下 1 个 + 几个黄副本）与一长串沿对角线均匀复制排列的黑色气球狗（rsArrayBetween 阵列结果）",
+     "caption": "图 1：rsArrayBetween 阵列效果。Rhino Perspective 视口（左上角 Perspective 标签，左下角坐标轴）中：左下角有一个黄色气球狗形状物体及其周围几个黄色副本（输入/参照），沿从左下到右上的对角线均匀排布着约 10+ 个黑色气球狗副本——这正是命令在两参考点（起点、终点）连线方向上按指定份数均匀复制的阵列结果；间距由两参考点距离与数量参数决定，原物体保留为黄色作为参照"
+    }
+   ],
+   "notes": "起点终点距离过近（< ZeroTolerance）会失败；命令行中可选数量并实时预览（ArrayPreviewConduit）。该功能参考 SketchUp 中的复制功能。"
   },
   "rsSprinkerOne": {
    "license": true,
@@ -9301,6 +9763,18 @@
     }
    ],
    "output": "按对话框参数将多个源物体随机散布到目标面上，并保留历史记录便于编辑",
+   "illustrations": [
+    {
+     "src": "assets/rsSprinkerMutiple/image1.jpg",
+     "alt": "Rhino Perspective 视口：多物体随机散布对话框 + 城市场景（道路/水池/草地/建筑）上紫色线框 InstanceReference 预览",
+     "caption": "图 1：rsSprinkerMutiple 对话框与线框预览。Rhino Perspective 视口（左上角 Perspective 标签，红绿坐标轴在左下/右下角）中是一个城市场景：弧形道路、矩形水池、绿色草地、左上角白色弧形建筑；水池和草地边缘整齐排列着大量紫色 InstanceReference 线框（即待散布的源物体在目标曲面上的预览占位）；左侧是多物体随机散布 Eto 对话框：输入区显示已选择 1 个物体、1 个目标、未选排除；散布预览地图比例 1.00；散布参数含散布类型（圆环随机）、散布数量（100）、旋转角度范围（180.0）、最小缩放（0.30）、最大缩放（0.80）、最小间距（0.000）、贴合表面法向（勾选）、缩放尺度（0.001）、螺旋强度（1.000）、螺旋层数（4）；预览方式=轮廓盒线框；随机种子 12345；底部提示实际散布数量 100。预览对应参数实时变化，OK 后才将散布结果作为正式历史记录写入文档"
+    },
+    {
+     "src": "assets/rsSprinkerMutiple/image2.jpg",
+     "alt": "Rhino Perspective 视口：同一城市场景，去掉紫色线框后散布实例化的最终结果——道路与水池两侧整齐排列着成排的绿色树木",
+     "caption": "图 2：rsSprinkerMutiple 最终结果。同一个城市场景（道路、矩形水池、弧形建筑、绿地），紫色线框预览已被正式散布的实例对象取代：水池和绿地两侧整齐排列着成排的绿色树木实例（与预览数量 100 一致），每株带圆冠，姿态各异、大小有差异（受缩放 0.30-0.80 与旋转 0-180 度控制），保持源物体材质和图层；与图 1 对照即可看到从紫色线框预览到最终实例化的效果"
+    }
+   ],
    "notes": "纯表单交互（Eto 对话框），无命令行数值参数；所有默认值由 last* 静态字段记忆。"
   },
   "rsPlaceObjsOnCrv": {
@@ -9437,6 +9911,19 @@
    "output": "将所选物体沿竖向（Z轴）投影移动到目标面/网格表面",
    "notes": "无数值参数；利用 MeshRay 向上(+Z)与向下(-Z)求交，命中第一个交点即移动；SubD 先转 Brep 再转网格。"
   },
+  "rsLayFlat": {
+   "license": true,
+   "help": null,
+   "style": "cli",
+   "flow": [
+    "选择对象上的目标面",
+    "自动计算支撑点与面法向",
+    "将对象旋转放平到该面"
+   ],
+   "params": [],
+   "output": "将对象按指定面放平",
+   "notes": "参照对象、引用对象与图块定义内的几何不可放平。"
+  },
   "rsRandomPtsOnCrv": {
    "license": true,
    "help": "https://www.rstoolarchi.com/detail/94",
@@ -9476,6 +9963,13 @@
     }
    ],
    "output": "在所选曲线上生成指定数量、按指定分布模式的随机点（去除过近点）",
+   "illustrations": [
+    {
+     "src": "assets/rsRandomPtsOnCrv/image1.png",
+     "alt": "Rhino Perspective 视口：一条 S 形波浪曲线沿线随机分布一串小圆圈点（rsRandomPtsOnCrv 效果示例）",
+     "caption": "图 1：rsRandomPtsOnCrv 效果示例。Rhino Perspective 视口（左上角 Perspective 标签，红绿坐标轴在左下/右下角）中有一条 S 形/波浪状输入曲线，曲线沿线随机分布着大量小圆圈点（每点 = 曲线上一个采样点），点的密度由命令参数（数量/最小间距等）控制。点的位置严格落在输入曲线上，但分布是随机的、不会像等距布点那样均匀间隔"
+    }
+   ],
    "notes": "无显式下限约束；多曲线按长度加权分配采样。"
   },
   "rsRandomPtsOnObj": {
@@ -9508,6 +10002,13 @@
     }
    ],
    "output": "在所选物体（曲线按长度、面/网格按面积加权）上生成指定数量的随机点",
+   "illustrations": [
+    {
+     "src": "assets/rsRandomPtsOnObj/image1.png",
+     "alt": "Rhino Perspective 视口：一个蘑菇/飞碟状物体表面随机分布一串小圆圈点（rsRandomPtsOnObj 效果示例）",
+     "caption": "图 1：rsRandomPtsOnObj 效果示例。Rhino Perspective 视口（左上角 Perspective 标签，红绿坐标轴在左下/右下角）中是一个蘑菇/飞碟状物体：上半部分是一个带子午线/经纬线分网的大圆角方板（伞面/蒙古包顶），中央开了一个圆形凹洞，下半部分是一个圆柱形底座支撑。物体表面（曲面）上随机分布着大量小圆圈点（每点 = 物体曲面上的一个采样点），点的密度由命令参数（数量/最小间距等）控制。点的位置严格落在输入物体曲面上，但分布是随机的、不会像等距布点那样均匀间隔"
+    }
+   ],
    "notes": "该命令未重写 OnHelp，无帮助文档链接；曲线与网格混合时按长度/面积比例分配点数。"
   },
   "rsDivideCrvByRoundedCount": {
@@ -9648,7 +10149,16 @@
     "在弹出的列表框中选择一个线宽",
     "确认后选中该线宽的所有对象"
    ],
-   "params": [],
+   "params": [
+    {
+     "zh": "实际线宽",
+     "en": "PlotWeight",
+     "type": "list",
+     "def": "无",
+     "range": "<默认 Default> / 0.00mm（极细/不打印）/ 具体数值（如 0.13mm）",
+     "note": "对话框选项：程序按有效线宽（含随图层解析）分组后弹出列表选择"
+    }
+   ],
    "output": "选中具有指定有效打印线宽（含 ByLayer 解析）的所有对象",
    "notes": "使用 Rhino 原生 Dialogs.ShowListBox；线宽分组由场景中实际存在的线宽决定，无数值参数"
   },
@@ -9685,7 +10195,16 @@
     "在列表框中选择一个图案",
     "确认后选中该图案的所有填充对象"
    ],
-   "params": [],
+   "params": [
+    {
+     "zh": "填充图案",
+     "en": "HatchPattern",
+     "type": "list",
+     "def": "无",
+     "range": "文档中实际存在的图案名称",
+     "note": "对话框选项：程序收集文档中现有填充图案名后弹出列表选择"
+    }
+   ],
    "output": "选中使用指定填充图案（Hatch Pattern）的所有填充对象",
    "notes": "使用 Dialogs.ShowListBox；仅含文档中实际存在的图案，无数值参数"
   },
@@ -9847,6 +10366,19 @@
    ],
    "output": "将指定范围的图块实例（含图块定义内部及嵌套子块）移动到目标图层，并把随层材质固化到物体",
    "notes": "目标图层选择使用 ShowSelectLayerDialog；固化材质逻辑同 rsMoveLayerObjs"
+  },
+  "rsDeleteLayer": {
+   "license": true,
+   "help": null,
+   "style": "form",
+   "flow": [
+    "命令行输入 rsDeleteLayer",
+    "在弹出的图层选择对话框中勾选要删除的图层",
+    "确认删除"
+   ],
+   "params": [],
+   "output": "删除选定的图层",
+   "notes": "删除前会处理图层层级关系，请留意子图层是否一并被删除。"
   },
   "rsPickMaterial": {
    "license": true,
@@ -10051,7 +10583,7 @@
   },
   "rsSectionBoxToggle": {
     "license": true,
-    "help": null,
+    "help": "https://www.rstoolarchi.com/detail/41",
     "style": "cli",
     "flow": [
       "命令行运行 rsSectionBoxToggle",
@@ -10426,7 +10958,24 @@
     "遍历文档所有 Snapshots",
     "逐个恢复快照并截图保存为 PNG"
    ],
-   "params": [],
+   "params": [
+    {
+     "zh": "导出文件夹",
+     "en": "ExportFolder",
+     "type": "folder",
+     "def": "无",
+     "range": "任意本地路径",
+     "note": "对话框选项：文件夹选择器指定全部快照 PNG 的输出目录"
+    },
+    {
+     "zh": "渲染缓冲",
+     "en": "RenderDelay",
+     "type": "int",
+     "def": "500",
+     "range": "固定 500ms",
+     "note": "每次切换快照后截图前的等待毫秒数（源码硬编码）"
+    }
+   ],
    "output": "批量导出所有快照为 PNG 图片到指定文件夹",
    "notes": "使用 ScriptRunner 同步恢复快照；每帧等待 500ms 缓冲；文件名取快照名(非法字符替换为下划线)；无快照时提示返回。窗口仅为文件夹选择器，无可调数值参数"
   },
@@ -10440,7 +10989,16 @@
     "遍历所有已命名视图 (Named Views)",
     "逐个恢复视图并截图保存为 PNG"
    ],
-   "params": [],
+   "params": [
+    {
+     "zh": "导出文件夹",
+     "en": "ExportFolder",
+     "type": "folder",
+     "def": "无",
+     "range": "任意本地路径",
+     "note": "对话框选项：文件夹选择器指定全部命名视图 PNG 的输出目录"
+    }
+   ],
    "output": "批量导出所有命名视图为 PNG 图片到指定文件夹",
    "notes": "无命名视图时提示并返回；文件名取视图名(非法字符替换为下划线)。窗口仅为文件夹选择器，无可调数值参数"
   },
@@ -10624,6 +11182,19 @@
     }
    ],
    "notes": "自动开启文档太阳（渲染 → 太阳面板可调）；设置持久化到命令 PersistentSettings；同一文档复用窗口实例\n\n## 一、典型使用流程\n\n1. Rhino 命令行输入 `rsShadowRender`，弹出 ArchiRenderWindow（建筑渲染窗口）\n2. 自动开启文档太阳，捕获当前 Perspective 视口作为渲染源\n3. 按需设置渲染质量 / 输出尺寸 / 宽高比 / 白模开关 / 阴影强度 / 边线模式 等\n4. 点「渲染」开始离线渲染；中途可「暂停」续渲或「取消」中止\n5. 进度条显示百分比 + 完成值（如 67%），后台可持续在 Rhino 做其他建模\n6. 完成后窗口内显示成图，可保存 / 复制 / 截图\n\n## 二、参数分组详解\n\n### 1. 输出\n- **渲染质量 QualityPreset**：Preview / Medium / High / Ultra（内部分辨率倍率 0.5/1/2/3）\n- **输出尺寸 OutputPreset**：1K(1920) / 2K(2560) / 4K(3840) / 6K(6144)（长边像素）\n- **宽高比 AspectRatioPreset**：MatchViewport / Square 1×1 / 4:3 / 16:9 / 9:16\n\n### 2. 材质\n- **继承 Rhino 材质颜色 InheritRhinoMaterialColor**：代码固定为 true，从当前文档材质球取色\n- **使用高级 Rhino 材质 UseAdvancedRhinoMaterial**：代码固定为 true\n- **白模模式 UseWhiteModel**：开则忽略颜色统一渲染白膜，常用于体量研究 / 阴影分析\n\n### 3. 边线\n- **边线模式 EdgeRenderMode**：Off / ViewportOverlay / NativeFramebuffer\n- **物体边线宽度 ObjectEdgeLineWidth**：1–16，由 ClampObjectEdgeLineWidth 限制\n- **主轮廓线宽比 PrimaryOutlineWidthRatio**：0.0–2.0，主要轮廓相对次要轮廓的粗细比\n- **阴影强度 ShadowIntensity**：0.0–1.0，1.0 为全黑阴影\n\n## 三、与普通 Rhino Render 的差异\n\n- 直接接 RSTool 建筑审图工作流：默认体量白模 + 高对比阴影 + 主轮廓线，无需逐项配 Cycles\n- 自动开文档太阳，省去手动调整时间；太阳参数可到「渲染 → 太阳面板」按需改\n- 渲染过程中可继续在 Rhino 中建模、缩放、改图，不会卡死画布\n- 输出纯位图（含主轮廓 + 阴影的白模），后期可叠加材质图、平面图、尺寸标注一键出审图册\n\n## 四、典型场景\n\n- **建筑体量阴影分析**：白模 + 阴影强度 1.0 + Ultra，多视角出 4K 阴影图\n- **总平面底图**：MatchViewport + High + 主轮廓线宽比 1.5，配平面树、铺地快速出图\n- **鸟瞰 / 鸟瞰动画**：MatchViewport + Ultra，主轮廓 1.0，强调塔楼形体\n- **方案对比渲染**：批量跑 4–6 个视角 + 边线开关对比，存 PNG 系列\n\n## 五、注意事项\n\n- 太阳方向随「渲染 → 太阳面板」实时联动，调太阳时已渲染图也会跟着预览刷新\n- 高分辨（4K+Ultra）渲染时显存占用高，建议关闭其他 D3D 应用\n- 设置存在命令 PersistentSettings，重复打开同一文档会沿用上次设置\n- 取消渲染后未完成部分不会保存"
+  },
+  "rsPolylineSection": {
+   "license": true,
+   "help": null,
+   "style": "cli",
+   "flow": [
+    "选择折线或曲线剖面对象",
+    "在观察者一侧指定一点，其距离作为剖切深度",
+    "可在剖面折线附近指定新增折点，或单击删除内部折点"
+   ],
+   "params": [],
+   "output": "生成折线剖切",
+   "notes": "支持后续编辑折点以调整剖切范围。"
   },
   "rsDeleteOpening2D": {
    "license": true,

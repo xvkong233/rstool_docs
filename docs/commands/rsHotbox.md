@@ -1,4 +1,4 @@
-# rsHotbox · 热盒
+# rsHotbox · Hotbox 热盒
 
 > 模块：辅助工具 / 系统工具
 

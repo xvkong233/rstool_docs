@@ -1,4 +1,4 @@
-# rsFpsGame · FPS反应测试
+# rsFpsGame · FPS 反应测试
 
 > 模块：趣味 / 互动娱乐
 

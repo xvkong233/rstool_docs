@@ -19,7 +19,9 @@
 
 **参数**：
 
-> 此命令无命令行数值参数，相关设置在窗口中调整。
+| 中文名 | 英文名 | 类型 | 默认值 | 范围 | 说明 |
+| --- | --- | --- | --- | --- | --- |
+| 自动对齐 | AutoAlign | toggle | 开 | 开 / 关 | 底部自定义工具栏开关，控制元素放置时自动对齐 |
 
 **备注**：白板是 RSTool 内置的协作绘图工具，基于 Excalidraw + React，与 Rhino 同窗口、可被 Rhino 正常遮挡。窗口标题为「RSTool 白板」，可在标题栏随时改名。文档以 Excalidraw 原生 `.excalidraw` 持久化（结构 `{type:"excalidraw", version, source, elements, appState, files}`）。支持**本地白板**与**公司共享白板（SMB 文件夹）**两种模式，并可保存 / 加载 Excalidraw **素材库** (`*.excalidrawlib`)。
 

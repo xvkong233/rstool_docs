@@ -1,4 +1,4 @@
-# rsPurgeDynamicComponentCache · 清理组件缓存
+# rsPurgeDynamicComponentCache · 清理动态组件缓存
 
 > 模块：动态组件 / 维护
 
