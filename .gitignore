@@ -40,3 +40,6 @@ test-results
 
 # local agent tooling state
 .mimosa/
+
+# browser CDP debug profile（误提交，本地保留不追踪）
+docs/.vitepress/_cdp_profile/

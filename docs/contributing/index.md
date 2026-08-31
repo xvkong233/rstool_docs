@@ -203,7 +203,7 @@ Pull Request 建议：
 - [ ] `pnpm format:fail` —— Prettier 格式检查通过
 - [ ] `pnpm docs:build` —— 文档站可正常构建
 - [ ] `pnpm rstool:verify` —— 改动涉及命令内容或图片时必须通过
-- [ ] CI 全绿（仓库会自动运行完整检查）
+- [ ] CI 全绿（仓库会自动运行格式、文档构建与内容校验）
 
 ::: tip 审核与部署
 维护者审核通过后会合并你的 PR。站点托管在 Vercel 上，合并后自动部署，几分钟后

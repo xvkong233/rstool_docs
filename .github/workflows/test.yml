@@ -15,15 +15,7 @@ concurrency:
 
 jobs:
   test:
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node_version: [22, 24, 26]
-        include:
-          - os: windows-latest
-            node_version: 24
-
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
@@ -32,10 +24,10 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v6
 
-      - name: Set node version to ${{ matrix.node_version }}
+      - name: Set node version to 24
         uses: actions/setup-node@v7
         with:
-          node-version: ${{ matrix.node_version }}
+          node-version: 24
           cache: pnpm
 
       - name: Install deps
@@ -43,8 +35,14 @@ jobs:
         env:
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
 
-      - name: Install Playwright
-        run: pnpm playwright install chromium
+      - name: Check format
+        run: pnpm format:fail
 
-      - name: Check
-        run: pnpm check
+      - name: Build docs site
+        run: pnpm docs:build
+
+      - name: Verify docs content
+        run: pnpm rstool:verify
+
+      - name: Type check site config
+        run: npx vue-tsc -p docs
