@@ -14,7 +14,7 @@ RsTool Docs 是基于 VitePress 的 RsTool 命令文档站点，包含命令说�
 
 ## 环境要求
 
-- Node.js 18+
+- Node.js 20+
 - pnpm 11+
 
 ## 本地开发
@@ -53,6 +53,14 @@ pnpm rstool:verify
 - `pnpm docs`：启动文档开发服务
 - `pnpm docs:build`：构建文档站点
 - `pnpm docs:preview`：预览构建产物
+
+## 参与贡献
+
+欢迎修正文档错误、补充配图或改进站点！请先阅读 [贡献指南](./.github/contributing.md)。
+
+> [!IMPORTANT]
+> `docs/commands/` 下的页面由 `scripts/rstool/commands.json` 自动生成，请勿直接修改；
+> 修改内容请走数据管线（详见贡献指南）。
 
 ## 许可证
 

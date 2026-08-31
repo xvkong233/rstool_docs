@@ -113,6 +113,7 @@ const buildCatItems = (c: CatGroup) => {
 export default defineConfig({
   title: 'RsTool 命令文档',
   description: 'RsTool Rhino 插件命令完全参考手册',
+  lang: 'zh-CN',
   lastUpdated: true,
   cleanUrls: true,
 
@@ -147,6 +148,25 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/xvkong233/rstool_docs' }
-    ]
+    ],
+
+    outline: { label: '本页目录' },
+
+    docFooter: { prev: '上一页', next: '下一页' },
+
+    returnToTopLabel: '回到顶部',
+
+    lastUpdated: { text: '最后更新于' },
+
+    editLink: {
+      pattern: 'https://github.com/xvkong233/rstool_docs/edit/main/docs/:path',
+      text: '在 GitHub 上编辑此页面'
+    },
+
+    footer: {
+      message:
+        '基于 <a href="https://github.com/xvkong233/rstool_docs/blob/main/LICENSE" target="_blank" rel="noopener">MIT 许可证</a>发布 · <a href="https://github.com/xvkong233/rstool_docs/blob/main/.github/contributing.md" target="_blank" rel="noopener">参与贡献</a>',
+      copyright: 'Copyright © 2026-present RsTool'
+    }
   }
 })

@@ -7,13 +7,13 @@
     "vue",
     "vitepress"
   ],
-  "homepage": "https://vitepress.dev/",
+  "homepage": "https://github.com/xvkong233/rstool_docs",
   "bugs": {
-    "url": "https://github.com/vuejs/vitepress/issues"
+    "url": "https://github.com/xvkong233/rstool_docs/issues"
   },
-  "repository": "github:vuejs/vitepress",
+  "repository": "github:xvkong233/rstool_docs",
   "license": "MIT",
-  "author": "Evan You",
+  "author": "xvkong233",
   "type": "module",
   "exports": {
     ".": {
