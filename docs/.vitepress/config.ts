@@ -124,27 +124,57 @@ export default defineConfig({
 
     nav: [
       { text: '命令手册', link: '/commands/' },
+      { text: '贡献指南', link: '/contributing/' },
       { text: '官网', link: 'https://www.rstoolarchi.com' },
-      { text: '犀流堂', link: 'https://www.rhinostudio.cn' },
-      { text: 'GitHub', link: 'https://github.com/xvkong233/rstool_docs' }
+      { text: '犀流堂', link: 'https://www.rhinostudio.cn' }
     ],
 
     search: { provider: 'local' },
 
-    sidebar: [
-      {
-        text: '命令参考',
-        collapsed: false,
-        items: [
-          { text: '总目录', link: '/commands/' },
-          ...byCat.map((c) => ({
-            text: c.cat,
-            collapsed: true,
-            items: buildCatItems(c)
-          }))
-        ]
-      }
-    ],
+    sidebar: {
+      '/commands/': [
+        {
+          text: '命令参考',
+          collapsed: false,
+          items: [
+            { text: '总目录', link: '/commands/' },
+            ...byCat.map((c) => ({
+              text: c.cat,
+              collapsed: true,
+              items: buildCatItems(c)
+            }))
+          ]
+        }
+      ],
+      '/contributing/': [
+        {
+          text: '贡献指南',
+          collapsed: false,
+          items: [
+            { text: '贡献方式总览', link: '/contributing/#贡献方式总览' },
+            {
+              text: '方式一：提交 Issue 反馈问题',
+              link: '/contributing/#方式一-提交-issue-反馈问题'
+            },
+            {
+              text: '方式二：网页直接编辑',
+              link: '/contributing/#方式二-网页直接编辑'
+            },
+            {
+              text: '命令页面为什么不能直接改',
+              link: '/contributing/#命令页面为什么不能直接改'
+            },
+            { text: '本地开发环境', link: '/contributing/#本地开发环境' },
+            { text: '命令数据管线', link: '/contributing/#命令数据管线' },
+            {
+              text: '提交信息与 Pull Request 规范',
+              link: '/contributing/#提交信息与-pull-request-规范'
+            },
+            { text: '反馈与交流', link: '/contributing/#反馈与交流' }
+          ]
+        }
+      ]
+    },
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/xvkong233/rstool_docs' }
@@ -165,7 +195,7 @@ export default defineConfig({
 
     footer: {
       message:
-        '基于 <a href="https://github.com/xvkong233/rstool_docs/blob/main/LICENSE" target="_blank" rel="noopener">MIT 许可证</a>发布 · <a href="https://github.com/xvkong233/rstool_docs/blob/main/.github/contributing.md" target="_blank" rel="noopener">参与贡献</a>',
+        '基于 <a href="https://github.com/xvkong233/rstool_docs/blob/main/LICENSE" target="_blank" rel="noopener">MIT 许可证</a>发布 · <a href="/contributing/">参与贡献</a>',
       copyright: 'Copyright © 2026-present RsTool'
     }
   }
