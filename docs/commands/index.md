@@ -1,6 +1,6 @@
 # RsTool 命令参考
 
-> 覆盖 RsTool 插件全部 276 条命令，每条命令一个独立页面，含功能、调用方式、交互流程、参数表、输出、备注与教学视频。
+> 覆盖 RsTool 插件全部 277 条命令，每条命令一个独立页面，含功能、调用方式、交互流程、参数表、输出、备注与教学视频。
 
 ## AI（4 条）
 
@@ -366,12 +366,13 @@
 
 - [rsDetachDynamicComponent · 分离动态组件](/commands/rsDetachDynamicComponent) — 将选中的动态组件实例分离为普通几何，解除与动态模板的关联。
 
-## GH组件（72 条）
+## GH组件（73 条）
 
 ### Animation
 
 - [Counter](/commands/Counter) — 在 Grasshopper 求解或动画过程中生成计数值。
 - [EventOperation](/commands/EventOperation) — 处理 Grasshopper 时间轴中的事件与时间区间。
+- [Export Mesh Alembic](/commands/export-mesh-alembic) — 将按列表顺序排列的网格帧导出为支持拓扑变化的 Alembic 动画文件。
 - [GetCamera](/commands/GetCamera) — 读取当前 Rhino 视口的摄像机信息。
 - [GetGraphMapperDomain](/commands/GetGraphMapperDomain) — 读取 Graph Mapper 组件的定义域。
 - [LockGroupByName](/commands/LockGroupByName) — 根据名称锁定或解锁 Grasshopper 分组中的对象。
