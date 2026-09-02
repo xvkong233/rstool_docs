@@ -8,7 +8,7 @@
 
 **功能**：Success（最近一次是否成功）/ File Path（实际绝对路径）/ Progress（0~1，Path 与 Progress 复用 P 名）/ Frames Written（已写入帧数）/ Message（中英双语状态、警告或错误信息）
 
-![Export Mesh Alembic 运算器在 Grasshopper 画布上的图标与提示（含运行告警状态）](../assets/Export Mesh Alembic/image1.jpg)
+![Export Mesh Alembic 运算器在 Grasshopper 画布上的图标与提示（含运行告警状态）](../assets/ExportMeshAlembic/image1.jpg)
 *图 1：Export Mesh Alembic（Mesh ABC）运算器在 Grasshopper 画布上的状态。组件位于 RSTool / Animation 分组下，浅橘色图标，左侧输入端口依次为：F（Frames 网格帧列表）、P（File Path 目标 .abc 路径）、E（Export 触发，False→True 上升沿）、C（Cancel 取消，True 上升沿）、FPS（帧率，默认 30）、S（Start Frame 起始帧）、A（Up Axis 0=Z-Up/1=Y-Up）、X（Scale 缩放）、O（Overwrite 覆盖）、N（Object Name 内部名）；右侧输出端口为：S（Success）、P（Path/Progress 复用 P 名）、F（Frames Written）、M（Message）。悬停 tooltip（中英双语）：将按列表顺序排列的网格帧导出为支持拓扑变化的 Alembic 动画文件。本图组件正处于 Ready / 就绪 状态但显示 This component did not run because it lacked required data.Two runtime warnings.——说明输入尚未完整连接；一旦 Frames 与 File Path 接入并 Export 触发一次上升沿，后台 MeshRay 导出即开始。*
 
 **使用步骤**：
