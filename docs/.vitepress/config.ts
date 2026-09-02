@@ -137,6 +137,7 @@ export default defineConfig({
           text: '命令参考',
           collapsed: false,
           items: [
+            { text: '安装指南', link: '/commands/installation/' },
             { text: '总目录', link: '/commands/' },
             ...byCat.map((c) => ({
               text: c.cat,
