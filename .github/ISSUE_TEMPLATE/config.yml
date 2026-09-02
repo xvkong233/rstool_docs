@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: '📖 文档站'
+    url: https://docs.rstoolarchi.com
+    about: 反馈前请先在文档站确认相关内容
+  - name: '🛠️ RsTool 官网'
+    url: https://www.rstoolarchi.com
+    about: 下载最新版 RsTool 插件
+  - name: '💬 使用交流（微信用户群）'
+    url: https://www.rstoolarchi.com
+    about: RsTool 插件本身的使用问题建议前往微信用户群交流

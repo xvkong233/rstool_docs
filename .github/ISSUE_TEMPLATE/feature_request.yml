@@ -1,45 +1,47 @@
-name: "\U0001F680 New feature proposal"
-description: Suggest an idea for this project
+name: '🚀 功能建议'
+description: 为 RsTool Docs 提出新想法
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for your interest in the project and taking the time to fill out this feature report!
+        感谢你愿意花时间提出建议！无论是补充内容板块、改进命令查阅体验，
+        还是优化站点交互与样式，都欢迎在这里描述。
   - type: textarea
     id: feature-description
     attributes:
-      label: Is your feature request related to a problem? Please describe.
-      description: "A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]"
+      label: 功能描述与动机
+      description:
+        你希望解决什么问题？例如「参数表在手机上难以阅读」「希望搜索支持按分类
+        筛选」。
+      placeholder: 描述问题或需求
     validations:
       required: true
   - type: textarea
     id: suggested-solution
     attributes:
-      label: Describe the solution you'd like
-      description: A clear and concise description of what you want to happen.
+      label: 期望的解决方案
+      description: 清楚描述你希望实现的效果。
+      placeholder: 描述你期望的方案
     validations:
       required: true
   - type: textarea
     id: alternative
     attributes:
-      label: Describe alternatives you've considered
-      description: A clear and concise description of any alternative solutions or features you've considered.
+      label: 考虑过的替代方案
+      description: 清楚描述你考虑过的其他方案或功能。
   - type: textarea
     id: additional-context
     attributes:
-      label: Additional context
-      description: Add any other context or screenshots about the feature request here.
+      label: 补充信息
+      description: 其他上下文或截图。截图可直接粘贴到输入框上传。
   - type: checkboxes
     id: checkboxes
     attributes:
       label: Validations
-      description: Before submitting the issue, please make sure you do the following
+      description: 提交前请确认以下事项
       options:
-        - label: Follow our [Code of Conduct](https://vuejs.org/about/coc.html)
+        - label: 我已阅读[文档站](https://docs.rstoolarchi.com)与
+            [贡献指南](https://github.com/xvkong233/rstool_docs/blob/main/.github/contributing.md)。
           required: true
-        - label: Read the [docs](https://vitepress.dev).
-          required: true
-        - label: Read the [Contributing Guidelines](https://github.com/vuejs/vitepress/blob/main/.github/contributing.md).
-          required: true
-        - label: Check that there isn't already an issue that asks for the same feature to avoid creating a duplicate.
+        - label: 我已搜索现有 Issue，确认没有重复建议。
           required: true
