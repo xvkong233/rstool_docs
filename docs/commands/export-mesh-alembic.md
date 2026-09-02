@@ -16,7 +16,7 @@
 1. 在 Grasshopper 画布中，从 RSTool 标签的「Animation」分组下找到 Export Mesh Alembic 组件并拖入
 2. 按参数表连接各输入端口：Frames 网格帧列表、File Path 目标 .abc 路径、Export 触发、Cancel 取消、FPS 帧率、Start Frame 起始帧、Up Axis 坐标轴、Scale 缩放、Overwrite 覆盖、Object Name 内部名称
 3. Export 仅在 False→True 上升沿时启动一次后台导出；Cancel 在 True 上升沿时取消正在执行的导出并清理临时 .abc.tmp 文件
-4. 导出采用临时文件 + 原子替换：先写 .rstool.<guid>.tmp 再原子替换到目标路径，避免半成品污染
+4. 导出采用临时文件 + 原子替换：先写 `.rstool.<guid>.tmp` 再原子替换到目标路径，避免半成品污染
 5. 每次画布求解时刷新输出端口 Success / File Path / Progress / Frames Written / Message（其中 Path 与 Progress 复用 P 名）
 
 **参数**：
@@ -26,7 +26,7 @@
 | 网格帧列表 | Frames | Mesh | 空 | Mesh 列表 | 按列表顺序排列的网格帧，每个网格对应 Alembic 一帧；拓扑可变 |
 | 输出路径 | File Path | Text |  | .abc 绝对路径或相对 GH 文件目录的相对路径 | 扩展名必须为 .abc；空扩展名自动补 .abc；GH 文件未保存时相对路径不可用，须使用绝对路径 |
 | 导出触发 | Export | Bool | false | True / False | 仅在 False→True 上升沿启动一次；已有任务运行则本次触发被忽略并提示 warning |
-| 取消导出 | Cancel | Bool | false | True / False | True 上升沿取消正在执行的导出并清理临时 .rstool.<guid>.tmp 文件 |
+| 取消导出 | Cancel | Bool | false | True / False | True 上升沿取消正在执行的导出并清理临时 `.rstool.<guid>.tmp` 文件 |
 | 帧率 | FPS | Number | 30 | 有限正数 | 动画帧率；必须是有限正数，非法值直接报错 |
 | 起始帧 | Start Frame | Integer | 0 | 整数 | Alembic 首个样本对应的起始帧号 |
 | 向上轴 | Up Axis | Integer | 0 | 0 = Z-Up（Rhino 默认）/ 1 = Y-Up（绕 X 轴旋转） | 控制导出坐标系方向；常见用法是把 Rhino 模型导出到 Maya/Houdini 时取 1 |
