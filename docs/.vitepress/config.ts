@@ -124,6 +124,7 @@ export default defineConfig({
 
     nav: [
       { text: '命令手册', link: '/commands/' },
+      { text: '更新日志', link: '/changelog' },
       { text: '贡献指南', link: '/contributing/' },
       { text: '官网', link: 'https://www.rstoolarchi.com' },
       { text: '犀流堂', link: 'https://www.rhinostudio.cn' }
