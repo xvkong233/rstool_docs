@@ -69,7 +69,7 @@ Grasshopper 还自带一个"C# Script"组件（图标相似）。区别是：
 ```
 我在用 Grasshopper 1.x + Linked C# 组件。请帮我写一个 .cs 文件，目标：
 - 输入：[NurbsSurface 列表 srfList, double 步长 step, double 最大步数 maxSteps]
-- 输出：[List<Curve> 流线, List<Point3d> 终点]
+- 输出：[List&lt;Curve&gt; 流线, List&lt;Point3d&gt; 终点]
 - 算法说明：[从 srfList 各面重心出发，每步沿最陡下降方向迭代 step，迭代超过 maxSteps 停止；输出每条流线与对应终点]
 - 要求：所有 Register 调用写清名称/简称/说明/访问方式；SolveInstance 内对空输入做容错；注释用中文
 ```

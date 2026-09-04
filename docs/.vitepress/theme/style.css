@@ -109,3 +109,9 @@
   aspect-ratio: 16 / 9;
   height: auto !important;
 }
+
+/* 使用站点自定义的一键切换按钮，隐藏默认的两步语言菜单。 */
+.VPNavBarTranslations,
+.VPNavScreenTranslations {
+  display: none !important;
+}

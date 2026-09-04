@@ -3,7 +3,6 @@ import { readFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, resolve } from 'node:path'
 
-// === 从 scripts/rstool/commands.json 读出命令分组（cat → sub → name）===
 type CmdItem = {
   name: string
   zh: string
@@ -11,14 +10,38 @@ type CmdItem = {
   sub: string
   desc?: string
 }
-const here = dirname(fileURLToPath(import.meta.url))
-const cmds = JSON.parse(
-  readFileSync(resolve(here, '../../scripts/rstool/commands.json'), 'utf8')
-) as { data: CmdItem[]; details: Record<string, unknown> }
 
-// 命令名 → 页面文件名：仅对包含空格/# 等特殊字符的名字做 kebab-case，
-// 其余（如 rsAiRender）保持原样，避免变动既有 URL。与
-// scripts/rstool/generate_commands_pages.cjs 中的 slug 规则保持一致。
+type CommandTranslation = {
+  title: string
+  desc: string
+}
+
+type EnglishTranslations = {
+  categories: Record<string, string>
+  subcategories: Record<string, string>
+  commands: Record<string, CommandTranslation>
+}
+
+type CatGroup = {
+  cat: string
+  subOrder: string[]
+  bySub: Record<string, CmdItem[]>
+  noSub: CmdItem[]
+}
+
+const here = dirname(fileURLToPath(import.meta.url))
+const commands = JSON.parse(
+  readFileSync(resolve(here, '../../scripts/rstool/commands.json'), 'utf8')
+) as { data: CmdItem[] }
+const english = JSON.parse(
+  readFileSync(
+    resolve(here, '../../scripts/rstool/i18n/commands.en.json'),
+    'utf8'
+  )
+) as EnglishTranslations
+const englishReady =
+  Object.keys(english.commands).length === commands.data.length
+
 const SLUG_SPECIAL: Record<string, string> = { 'Linked C#': 'linked-csharp' }
 const slug = (name: string) =>
   SLUG_SPECIAL[name] ??
@@ -30,174 +53,338 @@ const slug = (name: string) =>
         .replace(/^-+|-+$/g, '')
     : name)
 
-// 按数据原始顺序聚合 cat 与 sub
-type CatGroup = {
-  cat: string
-  subOrder: string[]
-  bySub: Record<string, CmdItem[]>
-  noSub: CmdItem[]
-}
-const byCat: CatGroup[] = []
-const catIndex: Record<string, number> = {}
-for (const it of cmds.data) {
-  const cat = it.cat || '未分类'
-  let i = catIndex[cat]
-  if (i === undefined) {
-    i = byCat.length
-    catIndex[cat] = i
-    byCat.push({ cat, subOrder: [], bySub: {}, noSub: [] })
-  }
-  if (it.sub) {
-    if (!byCat[i].bySub[it.sub]) {
-      byCat[i].bySub[it.sub] = []
-      byCat[i].subOrder.push(it.sub)
+function groupCommands(items: CmdItem[], geometry: string, fun: string) {
+  const groups: CatGroup[] = []
+  const indexes: Record<string, number> = {}
+  for (const item of items) {
+    const category = item.cat
+    let index = indexes[category]
+    if (index === undefined) {
+      index = groups.length
+      indexes[category] = index
+      groups.push({ cat: category, subOrder: [], bySub: {}, noSub: [] })
     }
-    byCat[i].bySub[it.sub].push(it)
-  } else {
-    byCat[i].noSub.push(it)
+    if (item.sub) {
+      if (!groups[index].bySub[item.sub]) {
+        groups[index].bySub[item.sub] = []
+        groups[index].subOrder.push(item.sub)
+      }
+      groups[index].bySub[item.sub].push(item)
+    } else {
+      groups[index].noSub.push(item)
+    }
   }
+
+  const geometryGroup = groups.find((group) => group.cat === geometry)
+  if (geometryGroup) {
+    const sourcePriority = ['点', '曲线', '曲面', '网格', '对象变换']
+    const translatedPriority = sourcePriority.map(
+      (name) => english.subcategories[name] || name
+    )
+    const priority = geometry === '几何' ? sourcePriority : translatedPriority
+    geometryGroup.subOrder.sort(
+      (a, b) => priority.indexOf(a) - priority.indexOf(b)
+    )
+  }
+
+  const funIndex = groups.findIndex((group) => group.cat === fun)
+  if (funIndex >= 0) groups.push(groups.splice(funIndex, 1)[0])
+  return groups
 }
 
-// 几何组子类按固定顺序排序：点 → 曲线 → 曲面 → 网格 → 对象变换
-const geoPriority = ['点', '曲线', '曲面', '网格', '对象变换']
-const geo = byCat.find((c) => c.cat === '几何')
-if (geo) {
-  geo.subOrder.sort((a, b) => geoPriority.indexOf(a) - geoPriority.indexOf(b))
-}
+const zhItems = commands.data
+const enItems = commands.data.map((item) => ({
+  ...item,
+  cat: english.categories[item.cat] || item.cat,
+  sub: item.sub ? english.subcategories[item.sub] || item.sub : '',
+  zh: english.commands[item.name]?.title || item.zh,
+  desc: english.commands[item.name]?.desc || item.desc
+}))
+const zhGroups = groupCommands(zhItems, '几何', '趣味')
+const enGroups = groupCommands(
+  enItems,
+  english.categories['几何'] || 'Geometry',
+  english.categories['趣味'] || 'Fun'
+)
 
-// 趣味分组移到顶层最后（其余分类保持 data 原始顺序）
-const funIdx = byCat.findIndex((c) => c.cat === '趣味')
-if (funIdx >= 0) {
-  byCat.push(byCat.splice(funIdx, 1)[0])
-}
+const commandText = (item: CmdItem) =>
+  item.zh && item.zh !== item.name ? `${item.name} · ${item.zh}` : item.name
 
-const cmdText = (it: CmdItem) =>
-  it.zh && it.zh !== it.name ? `${it.name} · ${it.zh}` : it.name
-
-const buildCatItems = (c: CatGroup) => {
-  const out: any[] = []
-  for (const sub of c.subOrder) {
-    out.push({
-      text: sub,
+function buildCatItems(group: CatGroup, prefix: string, common: string) {
+  const output: any[] = []
+  for (const subcategory of group.subOrder) {
+    output.push({
+      text: subcategory,
       collapsed: true,
-      items: c.bySub[sub].map((it) => ({
-        text: cmdText(it),
-        link: `/commands/${slug(it.name)}`
+      items: group.bySub[subcategory].map((item) => ({
+        text: commandText(item),
+        link: `${prefix}${slug(item.name)}`
       }))
     })
   }
-  if (c.noSub.length) {
-    if (c.subOrder.length === 0) {
-      // 无子分组的分类（如铺装表皮）直接列出命令，不套「（通用）」分组
-      for (const it of c.noSub) {
-        out.push({
-          text: cmdText(it),
-          link: `/commands/${slug(it.name)}`
-        })
-      }
+  if (group.noSub.length) {
+    if (group.subOrder.length === 0) {
+      output.push(
+        ...group.noSub.map((item) => ({
+          text: commandText(item),
+          link: `${prefix}${slug(item.name)}`
+        }))
+      )
     } else {
-      out.push({
-        text: '（通用）',
+      output.push({
+        text: common,
         collapsed: true,
-        items: c.noSub.map((it) => ({
-          text: cmdText(it),
-          link: `/commands/${slug(it.name)}`
+        items: group.noSub.map((item) => ({
+          text: commandText(item),
+          link: `${prefix}${slug(item.name)}`
         }))
       })
     }
   }
-  return out
+  return output
 }
 
-// === VitePress 配置 ===
+const zhCommandSidebar = [
+  {
+    text: '命令参考',
+    collapsed: false,
+    items: [
+      { text: '安装指南', link: '/commands/installation/' },
+      { text: '总目录', link: '/commands/' },
+      ...zhGroups.map((group) => ({
+        text: group.cat,
+        collapsed: true,
+        items: buildCatItems(group, '/commands/', '（通用）')
+      }))
+    ]
+  }
+]
+
+const enCommandSidebar = [
+  {
+    text: 'Command Reference',
+    collapsed: false,
+    items: [
+      { text: 'Installation', link: '/en/commands/installation/' },
+      { text: 'All Commands', link: '/en/commands/' },
+      ...enGroups.map((group) => ({
+        text: group.cat,
+        collapsed: true,
+        items: buildCatItems(group, '/en/commands/', 'General')
+      }))
+    ]
+  }
+]
+
+const languageToggle = { component: 'LanguageToggle' }
+
 export default defineConfig({
-  title: 'RsTool 命令文档',
-  description: 'RsTool Rhino 插件命令完全参考手册',
-  lang: 'zh-CN',
   lastUpdated: true,
   cleanUrls: true,
-
   head: [['link', { rel: 'icon', type: 'image/png', href: '/logo.png' }]],
+
+  locales: {
+    root: {
+      label: '简体中文',
+      lang: 'zh-CN',
+      link: '/',
+      title: 'RsTool 命令文档',
+      description: 'RsTool Rhino 插件命令完全参考手册',
+      markdown: {
+        container: {
+          infoLabel: '信息',
+          tipLabel: '提示',
+          warningLabel: '警告',
+          dangerLabel: '危险',
+          detailsLabel: '详细信息'
+        },
+        codeCopyButton: { tooltipText: '复制代码', copiedText: '已复制' }
+      },
+      themeConfig: {
+        nav: [
+          { text: '命令手册', link: '/commands/' },
+          { text: '贡献指南', link: '/contributing/' },
+          { text: '官网', link: 'https://www.rstoolarchi.com' },
+          { text: '犀流堂', link: 'https://www.rhinostudio.cn' },
+          ...(englishReady ? [languageToggle] : [])
+        ],
+        sidebar: {
+          '/commands/': zhCommandSidebar,
+          '/contributing/': [
+            {
+              text: '贡献指南',
+              collapsed: false,
+              items: [
+                { text: '贡献方式总览', link: '/contributing/#贡献方式总览' },
+                {
+                  text: '方式一：提交 Issue 反馈问题',
+                  link: '/contributing/#方式一-提交-issue-反馈问题'
+                },
+                {
+                  text: '方式二：网页直接编辑',
+                  link: '/contributing/#方式二-网页直接编辑'
+                },
+                {
+                  text: '命令页面为什么不能直接改',
+                  link: '/contributing/#命令页面为什么不能直接改'
+                },
+                { text: '本地开发环境', link: '/contributing/#本地开发环境' },
+                { text: '命令数据管线', link: '/contributing/#命令数据管线' },
+                {
+                  text: '提交信息与 Pull Request 规范',
+                  link: '/contributing/#提交信息与-pull-request-规范'
+                },
+                { text: '反馈与交流', link: '/contributing/#反馈与交流' }
+              ]
+            }
+          ]
+        },
+        outline: { label: '本页目录' },
+        docFooter: { prev: '上一页', next: '下一页' },
+        sidebarMenuLabel: '菜单',
+        darkModeSwitchLabel: '外观',
+        returnToTopLabel: '回到顶部',
+        skipToContentLabel: '跳到正文',
+        lastUpdated: { text: '最后更新于' },
+        editLink: {
+          pattern:
+            'https://github.com/xvkong233/rstool_docs/edit/main/docs/:path',
+          text: '在 GitHub 上编辑此页面'
+        },
+        notFound: {
+          title: '页面未找到',
+          quote: '你访问的页面不存在或已被移动。',
+          linkLabel: '返回首页',
+          linkText: '返回首页'
+        },
+        footer: {
+          message:
+            '基于 <a href="https://github.com/xvkong233/rstool_docs/blob/main/LICENSE" target="_blank" rel="noopener">MIT 许可证</a>发布 · <a href="/contributing/">参与贡献</a>',
+          copyright: 'Copyright © 2026-present RsTool'
+        }
+      }
+    },
+    ...(englishReady
+      ? {
+          en: {
+            label: 'English',
+            lang: 'en-US',
+            link: '/en/',
+            title: 'RsTool Command Documentation',
+            description:
+              'Complete command reference for the RsTool Rhino plugin',
+            themeConfig: {
+              nav: [
+                { text: 'Commands', link: '/en/commands/' },
+                { text: 'Contributing', link: '/en/contributing/' },
+                { text: 'Website', link: 'https://www.rstoolarchi.com' },
+                { text: 'Rhino Studio', link: 'https://www.rhinostudio.cn' },
+                languageToggle
+              ],
+              sidebar: {
+                '/en/commands/': enCommandSidebar,
+                '/en/contributing/': [
+                  {
+                    text: 'Contributing',
+                    collapsed: false,
+                    items: [
+                      {
+                        text: 'Ways to contribute',
+                        link: '/en/contributing/#ways-to-contribute'
+                      },
+                      {
+                        text: 'Report an issue',
+                        link: '/en/contributing/#option-1-report-an-issue'
+                      },
+                      {
+                        text: 'Edit on GitHub',
+                        link: '/en/contributing/#option-2-edit-on-github'
+                      },
+                      {
+                        text: 'Generated command pages',
+                        link: '/en/contributing/#why-command-pages-cannot-be-edited-directly'
+                      },
+                      {
+                        text: 'Local development',
+                        link: '/en/contributing/#local-development'
+                      },
+                      {
+                        text: 'Command data pipeline',
+                        link: '/en/contributing/#command-data-pipeline'
+                      },
+                      {
+                        text: 'Commits and pull requests',
+                        link: '/en/contributing/#commit-and-pull-request-guidelines'
+                      },
+                      {
+                        text: 'Feedback and community',
+                        link: '/en/contributing/#feedback-and-community'
+                      }
+                    ]
+                  }
+                ]
+              },
+              outline: { label: 'On this page' },
+              docFooter: { prev: 'Previous page', next: 'Next page' },
+              sidebarMenuLabel: 'Menu',
+              darkModeSwitchLabel: 'Appearance',
+              returnToTopLabel: 'Return to top',
+              skipToContentLabel: 'Skip to content',
+              lastUpdated: { text: 'Last updated' },
+              editLink: {
+                pattern:
+                  'https://github.com/xvkong233/rstool_docs/edit/main/docs/:path',
+                text: 'Edit this page on GitHub'
+              },
+              notFound: {
+                title: 'PAGE NOT FOUND',
+                quote: 'The page you requested does not exist or has moved.',
+                linkLabel: 'go to the English home page',
+                linkText: 'Take me home'
+              },
+              footer: {
+                message:
+                  'Released under the <a href="https://github.com/xvkong233/rstool_docs/blob/main/LICENSE" target="_blank" rel="noopener">MIT License</a> · <a href="/en/contributing/">Contribute</a>',
+                copyright: 'Copyright © 2026-present RsTool'
+              }
+            }
+          }
+        }
+      : {})
+  },
 
   themeConfig: {
     logo: '/logo.png',
-
-    nav: [
-      { text: '命令手册', link: '/commands/' },
-      { text: '贡献指南', link: '/contributing/' },
-      { text: '官网', link: 'https://www.rstoolarchi.com' },
-      { text: '犀流堂', link: 'https://www.rhinostudio.cn' }
-    ],
-
-    search: { provider: 'local' },
-
-    sidebar: {
-      '/commands/': [
-        {
-          text: '命令参考',
-          collapsed: false,
-          items: [
-            { text: '安装指南', link: '/commands/installation/' },
-            { text: '总目录', link: '/commands/' },
-            ...byCat.map((c) => ({
-              text: c.cat,
-              collapsed: true,
-              items: buildCatItems(c)
-            }))
-          ]
+    i18nRouting: true,
+    search: {
+      provider: 'local',
+      options: {
+        translations: {
+          button: { buttonText: '搜索', buttonAriaLabel: '搜索文档' },
+          modal: {
+            displayDetails: '显示详细结果',
+            resetButtonTitle: '清除查询',
+            backButtonTitle: '关闭搜索',
+            noResultsText: '没有找到相关结果'
+          }
+        },
+        locales: {
+          en: {
+            translations: {
+              button: { buttonText: 'Search', buttonAriaLabel: 'Search docs' },
+              modal: {
+                displayDetails: 'Display detailed list',
+                resetButtonTitle: 'Reset search',
+                backButtonTitle: 'Close search',
+                noResultsText: 'No results found'
+              }
+            }
+          }
         }
-      ],
-      '/contributing/': [
-        {
-          text: '贡献指南',
-          collapsed: false,
-          items: [
-            { text: '贡献方式总览', link: '/contributing/#贡献方式总览' },
-            {
-              text: '方式一：提交 Issue 反馈问题',
-              link: '/contributing/#方式一-提交-issue-反馈问题'
-            },
-            {
-              text: '方式二：网页直接编辑',
-              link: '/contributing/#方式二-网页直接编辑'
-            },
-            {
-              text: '命令页面为什么不能直接改',
-              link: '/contributing/#命令页面为什么不能直接改'
-            },
-            { text: '本地开发环境', link: '/contributing/#本地开发环境' },
-            { text: '命令数据管线', link: '/contributing/#命令数据管线' },
-            {
-              text: '提交信息与 Pull Request 规范',
-              link: '/contributing/#提交信息与-pull-request-规范'
-            },
-            { text: '反馈与交流', link: '/contributing/#反馈与交流' }
-          ]
-        }
-      ]
+      }
     },
-
     socialLinks: [
       { icon: 'github', link: 'https://github.com/xvkong233/rstool_docs' }
-    ],
-
-    outline: { label: '本页目录' },
-
-    docFooter: { prev: '上一页', next: '下一页' },
-
-    returnToTopLabel: '回到顶部',
-
-    lastUpdated: { text: '最后更新于' },
-
-    editLink: {
-      pattern: 'https://github.com/xvkong233/rstool_docs/edit/main/docs/:path',
-      text: '在 GitHub 上编辑此页面'
-    },
-
-    footer: {
-      message:
-        '基于 <a href="https://github.com/xvkong233/rstool_docs/blob/main/LICENSE" target="_blank" rel="noopener">MIT 许可证</a>发布 · <a href="/contributing/">参与贡献</a>',
-      copyright: 'Copyright © 2026-present RsTool'
-    }
+    ]
   }
 })

@@ -84,20 +84,20 @@ Hamburger 菜单由 RSTool 在 Excalidraw `MainMenu` 中注入，**与协作会�
 
 ## 共享画板的设置（纯 SMB，零服务器）
 
-RSTool 白板的共享**不需要任何专属服务器**，仅靠一个 SMB 共享目录。每个客户端在白板同目录同名 `<name>.rstcollab/` 下分别写文件，靠 `FileSystemWatcher + 400ms 轮询` 拉取其他客户端的增量。
+RSTool 白板的共享**不需要任何专属服务器**，仅靠一个 SMB 共享目录。每个客户端在白板同目录同名 `&lt;name&gt;.rstcollab/` 下分别写文件，靠 `FileSystemWatcher + 400ms 轮询` 拉取其他客户端的增量。
 
 **首位用户开启共享**
 
 1. 打开或新建本地白板 → 顶部 ≡ → 「共享当前白板…」
 2. 选择 SMB 网络盘下的某个路径（建议 `\\server\share\...\whiteboard.excalidraw`），系统用 `Path.GetFullPath + DriveInfo.DriveType == Network` 自动识别是否在网络盘；非网络盘时弹确认警告「其他电脑可能无法加入，是否仍要在此位置开启」
-3. 系统原子写入 `<name>.excalidraw`（首次保存），并在同目录创建同名 `<name>.rstcollab\` 会话目录，内含：
+3. 系统原子写入 `&lt;name&gt;.excalidraw`（首次保存），并在同目录创建同名 `&lt;name&gt;.rstcollab\` 会话目录，内含：
 ```
-<name>.rstcollab\
+&lt;name&gt;.rstcollab\
 session.json          # 版本 / sessionId / 白板文件名 / 创建时间
-scenes\<clientId>.json     # 每个客户端的增量场景 (元素 clock / files / appState)
-comments\<clientId>.json   # 每个客户端的评论操作流
-presence\<clientId>.json   # 客户端在线心跳 (2s 写一次, 7s 超时离线)
-clients\<clientId>.json    # 客户端元信息 (userName / machineName / 加入时间)
+scenes\&lt;clientId&gt;.json     # 每个客户端的增量场景 (元素 clock / files / appState)
+comments\&lt;clientId&gt;.json   # 每个客户端的评论操作流
+presence\&lt;clientId&gt;.json   # 客户端在线心跳 (2s 写一次, 7s 超时离线)
+clients\&lt;clientId&gt;.json    # 客户端元信息 (userName / machineName / 加入时间)
 ```
 4. 状态指示器从「本地白板」变为「已同步 · 1 人在线」
 

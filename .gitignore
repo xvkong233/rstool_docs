@@ -43,3 +43,6 @@ test-results
 
 # browser CDP debug profile（误提交，本地保留不追踪）
 docs/.vitepress/_cdp_profile/
+
+# resumable machine-translation cache (generated locally, not source data)
+scripts/rstool/i18n/translation-cache.en.json

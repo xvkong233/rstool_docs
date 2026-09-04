@@ -1,137 +1,309 @@
 /**
- * 文档内容完整性校验（发布前可跑）：
- *  1. 图片引用：docs 下全部 Markdown 的本地图片路径逐一核对文件存在
- *  2. 参数表格：按未转义管道符拆列，行列数必须与表头一致
- *  3. 生成器漂移：generate_commands_pages.cjs 输出与 docs/commands/ 现状 diff
- *  4. 计数一致：docs/index.md 中「N 条命令 / N 大分类」与 commands.json 实际值比对
- *
- * 用法：node scripts/rstool/verify_docs.cjs   （全部通过退出码 0）
+ * RsTool 双语文档发布校验：媒体、参数表、生成页漂移、翻译完整性与源文新鲜度。
  */
-const fs = require('fs')
-const path = require('path')
-const os = require('os')
+const crypto = require('node:crypto')
+const fs = require('node:fs')
+const os = require('node:os')
+const path = require('node:path')
+const { spawnSync } = require('node:child_process')
+const { normalizeIllustrations, sourceHash } = require('./i18n.cjs')
 
 const repoRoot = path.resolve(__dirname, '../..')
 const docsDir = path.join(repoRoot, 'docs')
-const cmdsDir = path.join(docsDir, 'commands')
+const source = JSON.parse(
+  fs.readFileSync(path.join(__dirname, 'commands.json'), 'utf8')
+)
+const translationPath = path.join(__dirname, 'i18n/commands.en.json')
 let failures = 0
-const fail = (msg) => {
+const fail = (message) => {
   failures++
-  console.log('FAIL', msg)
+  console.log('FAIL', message)
 }
 
-// === 1. 图片引用完整性 ===
+function walkMarkdown(directory) {
+  const result = []
+  for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+    const absolute = path.join(directory, entry.name)
+    if (entry.isDirectory()) {
+      if (!['.vitepress', 'node_modules', 'dist'].includes(entry.name)) {
+        result.push(...walkMarkdown(absolute))
+      }
+    } else if (entry.name.endsWith('.md')) {
+      result.push(absolute)
+    }
+  }
+  return result
+}
+
+const markdownFiles = walkMarkdown(docsDir)
+
+// 1. 本地图片引用完整性。先尝试完整目标，以兼容未用尖括号包裹的空格路径。
 {
-  let refs = 0
-  const walk = (d) => {
-    for (const f of fs.readdirSync(d)) {
-      const p = path.join(d, f)
-      if (fs.statSync(p).isDirectory()) {
-        if (f !== '.vitepress' && f !== 'node_modules' && f !== 'dist') walk(p)
-      } else if (f.endsWith('.md')) {
-        const txt = fs.readFileSync(p, 'utf8')
-        for (const m of txt.matchAll(/!\[[^\]]*\]\(([^)\s]+)[^)]*\)/g)) {
-          const src = m[1]
-          if (/^(https?:|data:)/.test(src)) continue
-          refs++
-          const abs = src.startsWith('/')
-            ? path.join(docsDir, 'public', src)
-            : path.resolve(path.dirname(p), src)
-          if (!fs.existsSync(abs))
-            fail(
-              `缺图 ${path.relative(repoRoot, p).split(path.sep).join('/')} -> ${src}`
-            )
-        }
+  let references = 0
+  for (const file of markdownFiles) {
+    const markdown = fs.readFileSync(file, 'utf8')
+    for (const match of markdown.matchAll(/!\[[^\]]*\]\(([^)\r\n]+)\)/g)) {
+      let target = match[1].trim()
+      if (target.startsWith('<') && target.endsWith('>'))
+        target = target.slice(1, -1)
+      if (/^(https?:|data:)/.test(target)) continue
+      references++
+      const resolveTarget = (value) =>
+        value.startsWith('/')
+          ? path.join(docsDir, 'public', value)
+          : path.resolve(path.dirname(file), value)
+      let absolute = resolveTarget(target)
+      if (!fs.existsSync(absolute)) {
+        const withoutTitle = target.replace(/\s+["'][^"']*["']$/, '')
+        absolute = resolveTarget(withoutTitle)
+      }
+      if (!fs.existsSync(absolute)) {
+        fail(
+          `缺图 ${path.relative(repoRoot, file).split(path.sep).join('/')} -> ${target}`
+        )
       }
     }
   }
-  walk(docsDir)
-  console.log(`ok 图片引用 ${refs} 处全部存在`)
+  console.log(`ok 图片引用 ${references} 处全部存在`)
 }
 
-// === 2. 参数表格列数一致 ===
+// 2. 中英文参数表列数一致。
 {
-  // 仅按未被反斜杠转义的 | 拆分
   const colCount = (line) => {
-    let n = 1
-    for (let i = 0; i < line.length; i++) {
-      if (line[i] === '\\' && line[i + 1] === '|') i++
-      else if (line[i] === '|') n++
+    let count = 1
+    for (let index = 0; index < line.length; index++) {
+      if (line[index] === '\\' && line[index + 1] === '|') index++
+      else if (line[index] === '|') count++
     }
-    return n
+    return count
   }
   let tables = 0
-  for (const f of fs.readdirSync(cmdsDir).filter((x) => x.endsWith('.md'))) {
-    const lines = fs.readFileSync(path.join(cmdsDir, f), 'utf8').split('\n')
-    for (let i = 0; i < lines.length; i++) {
-      if (!/^\| 中文名 \| 英文名/.test(lines[i])) continue
-      tables++
-      const cols = colCount(lines[i])
-      for (let j = i + 2; j < lines.length && lines[j].startsWith('|'); j++) {
-        if (colCount(lines[j]) !== cols) fail(`表格错位 ${f}:${j + 1}`)
+  for (const directory of [
+    path.join(docsDir, 'commands'),
+    path.join(docsDir, 'en/commands')
+  ]) {
+    if (!fs.existsSync(directory)) continue
+    for (const file of fs
+      .readdirSync(directory)
+      .filter((name) => name.endsWith('.md'))) {
+      const lines = fs
+        .readFileSync(path.join(directory, file), 'utf8')
+        .split('\n')
+      for (let index = 0; index < lines.length; index++) {
+        if (!/^\| (中文名|Display name) \|/.test(lines[index])) continue
+        tables++
+        const columns = colCount(lines[index])
+        for (
+          let row = index + 2;
+          row < lines.length && lines[row].startsWith('|');
+          row++
+        ) {
+          if (colCount(lines[row]) !== columns)
+            fail(`表格错位 ${file}:${row + 1}`)
+        }
       }
     }
   }
   console.log(`ok 参数表 ${tables} 张全部对齐`)
 }
 
-// === 3. 生成器漂移 ===
-{
-  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'rstool-verify-'))
-  const genSrc = fs.readFileSync(
-    path.join(__dirname, 'generate_commands_pages.cjs'),
-    'utf8'
-  )
-  const patched = genSrc
-    .replace(
-      /const SRC = path\.join\(__dirname, 'commands\.json'\)/,
-      `const SRC = ${JSON.stringify(path.join(__dirname, 'commands.json'))}`
-    )
-    .replace(
-      /const OUT_DIR = path\.join\(__dirname, '\.\.\/\.\.\/docs\/commands'\)/,
-      `const OUT_DIR = ${JSON.stringify(path.join(tmp, 'commands'))}`
-    )
-  const genFile = path.join(tmp, 'gen.cjs')
-  fs.writeFileSync(genFile, patched)
-  require(genFile)
-
-  const genFiles = fs
-    .readdirSync(path.join(tmp, 'commands'))
-    .filter((f) => f.endsWith('.md'))
-  const curFiles = fs.readdirSync(cmdsDir).filter((f) => f.endsWith('.md'))
-  const onlyGen = genFiles.filter((f) => !curFiles.includes(f))
-  const onlyCur = curFiles.filter((f) => !genFiles.includes(f))
-  onlyGen.forEach((f) => fail(`数据有而页面无: ${f}`))
-  onlyCur.forEach((f) => fail(`页面孤儿(数据无): ${f}`))
-  let drifted = 0
-  for (const f of genFiles) {
-    if (onlyGen.includes(f)) continue
-    const a = fs.readFileSync(path.join(tmp, 'commands', f), 'utf8')
-    const b = fs.readFileSync(path.join(cmdsDir, f), 'utf8')
-    if (a !== b) {
-      drifted++
-      fail(
-        `页面与生成器输出不一致: ${f}（重跑 node scripts/rstool/generate_commands_pages.cjs）`
-      )
-    }
-  }
-  fs.rmSync(tmp, { recursive: true, force: true })
-  console.log(`ok 生成器漂移 ${drifted} 页；文件集合 ${genFiles.length} 页匹配`)
+let translations = null
+if (!fs.existsSync(translationPath)) {
+  fail('缺少英文翻译数据 scripts/rstool/i18n/commands.en.json')
+} else {
+  translations = JSON.parse(fs.readFileSync(translationPath, 'utf8'))
 }
 
-// === 4. 首页计数与数据一致 ===
-{
-  const { data } = JSON.parse(
-    fs.readFileSync(path.join(__dirname, 'commands.json'), 'utf8')
+// 3. 英文翻译集合、数组结构、必填内容及 sourceHash。
+if (translations) {
+  const categoryNames = new Set(
+    source.data.map((item) => item.cat).filter(Boolean)
   )
-  const cats = new Set(data.map((it) => it.cat || '未分类')).size
-  const idx = fs.readFileSync(path.join(docsDir, 'index.md'), 'utf8')
-  for (const m of idx.matchAll(/(\d+)\s*条命令/g))
-    if (+m[1] !== data.length)
-      fail(`首页「${m[1]} 条命令」≠ 数据 ${data.length}`)
-  for (const m of idx.matchAll(/(\d+)\s*大分类/g))
-    if (+m[1] !== cats) fail(`首页「${m[1]} 大分类」≠ 数据 ${cats}`)
-  console.log(`ok 首页计数与数据一致（${data.length} 条命令 / ${cats} 大分类）`)
+  const subcategoryNames = new Set(
+    source.data.map((item) => item.sub).filter(Boolean)
+  )
+  for (const name of categoryNames) {
+    if (!translations.categories?.[name]) fail(`缺少英文分类翻译: ${name}`)
+  }
+  for (const name of subcategoryNames) {
+    if (!translations.subcategories?.[name]) fail(`缺少英文子分类翻译: ${name}`)
+  }
+
+  const sourceNames = new Set(source.data.map((item) => item.name))
+  const translatedNames = new Set(Object.keys(translations.commands || {}))
+  for (const name of sourceNames) {
+    const item = source.data.find((entry) => entry.name === name)
+    const detail = source.details[name] || {}
+    const translated = translations.commands?.[name]
+    if (!translated) {
+      fail(`缺少英文命令翻译: ${name}`)
+      continue
+    }
+    if (translated.sourceHash !== sourceHash(item, detail)) {
+      fail(`英文翻译已过期: ${name}`)
+    }
+    if (!translated.title) fail(`英文命令标题为空: ${name}`)
+    if (item.desc && !translated.desc) fail(`英文命令简介为空: ${name}`)
+    const translatedDetail = translated.detail || {}
+    const pairs = [
+      ['流程', detail.flow || [], translatedDetail.flow || []],
+      ['参数', detail.params || [], translatedDetail.params || []],
+      [
+        '插图',
+        normalizeIllustrations(detail),
+        translatedDetail.illustrations || []
+      ],
+      ['视频', detail.videos || [], translatedDetail.videos || []]
+    ]
+    for (const [label, original, localized] of pairs) {
+      if (original.length !== localized.length) {
+        fail(
+          `${name} 的${label}数量不一致: ${original.length} / ${localized.length}`
+        )
+      }
+    }
+    for (const [index, step] of (detail.flow || []).entries()) {
+      if (step && !translatedDetail.flow?.[index])
+        fail(`${name} 的流程 ${index + 1} 未翻译`)
+    }
+    for (const [index, param] of (detail.params || []).entries()) {
+      const localized = translatedDetail.params?.[index] || {}
+      for (const [sourceKey, targetKey] of [
+        ['zh', 'label'],
+        ['type', 'type'],
+        ['def', 'def'],
+        ['range', 'range'],
+        ['note', 'note']
+      ]) {
+        if (param[sourceKey] && !localized[targetKey]) {
+          fail(`${name} 的参数 ${index + 1}.${targetKey} 未翻译`)
+        }
+      }
+    }
+    for (const field of ['output', 'notes']) {
+      if (detail[field] && !translatedDetail[field])
+        fail(`${name} 的 ${field} 未翻译`)
+    }
+    for (const [index, illustration] of normalizeIllustrations(
+      detail
+    ).entries()) {
+      const localized = translatedDetail.illustrations?.[index] || {}
+      if (illustration.alt && !localized.alt)
+        fail(`${name} 的插图 ${index + 1} alt 未翻译`)
+      if (illustration.caption && !localized.caption) {
+        fail(`${name} 的插图 ${index + 1} caption 未翻译`)
+      }
+    }
+    for (const [index, video] of (detail.videos || []).entries()) {
+      if (video.title && !translatedDetail.videos?.[index]?.title) {
+        fail(`${name} 的视频 ${index + 1} title 未翻译`)
+      }
+    }
+  }
+  for (const name of translatedNames) {
+    if (!sourceNames.has(name)) fail(`英文翻译存在孤儿命令: ${name}`)
+  }
+
+  const scanChinese = (value, location) => {
+    if (typeof value === 'string' && /[\u3400-\u9fff]/.test(value)) {
+      fail(`英文翻译仍含中文: ${location}`)
+    } else if (Array.isArray(value)) {
+      value.forEach((entry, index) =>
+        scanChinese(entry, `${location}[${index}]`)
+      )
+    } else if (value && typeof value === 'object') {
+      for (const [key, entry] of Object.entries(value)) {
+        if (key !== 'sourceHash') scanChinese(entry, `${location}.${key}`)
+      }
+    }
+  }
+  scanChinese(translations, 'commands.en.json')
+  console.log(`ok 英文翻译覆盖 ${translatedNames.size} 条命令，结构与源文一致`)
+}
+
+// 4. 手写英文页面必须与对应中文源页面同步更新。
+{
+  const pageMapPath = path.join(__dirname, 'i18n/pages.en.json')
+  const pageMap = JSON.parse(fs.readFileSync(pageMapPath, 'utf8'))
+  for (const [relative, expected] of Object.entries(pageMap)) {
+    const absolute = path.join(repoRoot, relative)
+    const actual = crypto
+      .createHash('sha256')
+      .update(fs.readFileSync(absolute))
+      .digest('hex')
+    if (actual !== expected) fail(`手写英文页面需要同步更新: ${relative}`)
+  }
+  console.log(`ok 手写英文页源摘要 ${Object.keys(pageMap).length} 项`)
+}
+
+// 5. 重新生成到临时目录并比较中英文文件集合与内容。
+if (translations) {
+  const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'rstool-verify-'))
+  const zhOutput = path.join(temporary, 'zh')
+  const enOutput = path.join(temporary, 'en')
+  const generated = spawnSync(
+    process.execPath,
+    [path.join(__dirname, 'generate_commands_pages.cjs'), 'all'],
+    {
+      cwd: repoRoot,
+      env: {
+        ...process.env,
+        RSTOOL_ZH_OUT_DIR: zhOutput,
+        RSTOOL_EN_OUT_DIR: enOutput
+      },
+      encoding: 'utf8'
+    }
+  )
+  if (generated.status !== 0) {
+    fail(`命令页生成失败: ${generated.stderr || generated.stdout}`)
+  } else {
+    for (const [locale, expectedDir, actualDir] of [
+      ['中文', zhOutput, path.join(docsDir, 'commands')],
+      ['英文', enOutput, path.join(docsDir, 'en/commands')]
+    ]) {
+      const expectedFiles = fs
+        .readdirSync(expectedDir)
+        .filter((name) => name.endsWith('.md'))
+      const actualFiles = fs.existsSync(actualDir)
+        ? fs.readdirSync(actualDir).filter((name) => name.endsWith('.md'))
+        : []
+      for (const file of expectedFiles) {
+        if (!actualFiles.includes(file)) {
+          fail(`${locale}数据有而页面无: ${file}`)
+        } else if (
+          fs.readFileSync(path.join(expectedDir, file), 'utf8') !==
+          fs.readFileSync(path.join(actualDir, file), 'utf8')
+        ) {
+          fail(`${locale}页面与生成器输出不一致: ${file}`)
+        }
+      }
+      for (const file of actualFiles) {
+        if (!expectedFiles.includes(file)) fail(`${locale}页面孤儿: ${file}`)
+      }
+      console.log(`ok ${locale}生成页文件集合 ${expectedFiles.length} 页匹配`)
+    }
+  }
+  fs.rmSync(temporary, { recursive: true, force: true })
+}
+
+// 6. 首页计数与源数据一致。
+{
+  const categoryCount = new Set(source.data.map((item) => item.cat || '未分类'))
+    .size
+  const home = fs.readFileSync(path.join(docsDir, 'index.md'), 'utf8')
+  for (const match of home.matchAll(/(\d+)\s*条命令/g)) {
+    if (+match[1] !== source.data.length) {
+      fail(`首页「${match[1]} 条命令」≠ 数据 ${source.data.length}`)
+    }
+  }
+  for (const match of home.matchAll(/(\d+)\s*大分类/g)) {
+    if (+match[1] !== categoryCount) {
+      fail(`首页「${match[1]} 大分类」≠ 数据 ${categoryCount}`)
+    }
+  }
+  console.log(
+    `ok 首页计数与数据一致（${source.data.length} 条命令 / ${categoryCount} 大分类）`
+  )
 }
 
 console.log(failures ? `\n${failures} 处问题` : '\nALL PASS')

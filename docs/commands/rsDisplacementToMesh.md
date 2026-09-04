@@ -4,7 +4,7 @@
 
 [← 返回命令目录](/commands/)
 
-**功能**：结果网格以 <源对象名 或 "Displaced">_Displaced 命名加入当前文档，并自动选中；同时保留源对象（除非勾选「隐藏原物体」） 关闭结果对象的置换显示（Displacement.On=false 并清除子项），避免与真实几何叠加 克隆一份不含置换的渲染材质（命名为 "Baked Displacement" 或 原名+(Baked)），挂到结果上，保证导出/渲染一致 写入 UserString 便于追溯：RSTool.Type=DisplacementMesh、RSTool.SourceObjectId（源对象 GUID）、RSTool.FaceCount、RSTool.IsClosed、RSTool.SelfIntersectionCount 预览阶段用橙色半透明 DisplayConduit 实时叠加显示；最终网格按「最大面数」受控生成，可中途取消
+**功能**：结果网格以 &lt;源对象名 或 "Displaced"&gt;_Displaced 命名加入当前文档，并自动选中；同时保留源对象（除非勾选「隐藏原物体」） 关闭结果对象的置换显示（Displacement.On=false 并清除子项），避免与真实几何叠加 克隆一份不含置换的渲染材质（命名为 "Baked Displacement" 或 原名+(Baked)），挂到结果上，保证导出/渲染一致 写入 UserString 便于追溯：RSTool.Type=DisplacementMesh、RSTool.SourceObjectId（源对象 GUID）、RSTool.FaceCount、RSTool.IsClosed、RSTool.SelfIntersectionCount 预览阶段用橙色半透明 DisplayConduit 实时叠加显示；最终网格按「最大面数」受控生成，可中途取消
 
 ![Displacement 噪声贴图（黑白色水波纹理）](../assets/rsDisplacementToMesh/image1.png)
 *用于驱动置换的灰度噪声贴图：水平方向连续起伏的管状/带状纹理，中间调灰度（无纯白纯黑）作为高度源导入「手动高度贴图」或被自动从 Rhino 置换/凹凸材质中读取*
@@ -24,7 +24,7 @@
 3. 弹出「置换贴图转真实网格」对话框，在「基础参数 / 高级参数」两个标签页中设置来源、置换范围、生产输出与精度限制
 4. 任一参数变更后约 0.35 秒自动计算安全预览（逐顶点置换，最多 2 万面，以橙色半透明网格实时显示）
 5. 点「生成最终网格」生成受控的最终网格（严格遵守「最大面数」上限，可中途取消）；若未开启「均匀加厚」且质量报告存在警告，会弹窗确认是否仍加入文档
-6. 结果以 <原名>_Displaced 命名加入文档并自动选中；勾选「隐藏原物体」则隐藏源对象，取消则不隐藏并重新显示
+6. 结果以 &lt;原名&gt;_Displaced 命名加入文档并自动选中；勾选「隐藏原物体」则隐藏源对象，取消则不隐藏并重新显示
 
 **参数**：
 
