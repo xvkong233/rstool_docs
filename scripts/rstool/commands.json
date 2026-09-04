@@ -6471,7 +6471,8 @@
     "alt": "RSTool 地形下载窗口（卫星底图 + 右侧控制面板）"
    },
    "flow": [
-    "命令行输入 rsEarth，打开地形下载窗口",
+    "首次使用前，前往 [Mapbox 官网](https://www.mapbox.com/) 注册并登录账号，在账户的 Access tokens 页面创建或复制一个以 `pk.` 开头的公开访问令牌",
+    "命令行输入 rsEarth，打开地形下载窗口，将令牌粘贴到右侧控制面板的 Mapbox Token 输入框",
     "在窗体中搜索区域、选择地图源并设置下载精度后下载地形",
     "若新版窗口不可用，自动回退到旧版地图窗体 rsEarthOld"
    ],
@@ -6482,7 +6483,7 @@
      "type": "password",
      "def": "无",
      "range": "pk.xxxxx",
-     "note": "面板设置：下载地形与卫星瓦片所需的 Mapbox 令牌，本地加密存档"
+     "note": "首次使用必填：前往 mapbox.com 注册账号并获取以 pk. 开头的公开访问令牌，粘贴后在本机加密保存；请勿公开分享或填写以 sk. 开头的 Secret Token"
     },
     {
      "zh": "精度",

@@ -3461,12 +3461,13 @@
       }
     },
     "rsEarth": {
-      "sourceHash": "5f2395752c9267c21f2c0cb1ec9f42881f7ec06c290ffb3bbc7e5fef27247d9c",
+      "sourceHash": "2c815f5610a7374f77f851d991579f1eadffe5bad096ede1613ece8f0e376b22",
       "title": "Terrain Downloader",
       "desc": "Download terrain elevation data for a specified area from an online map service and generate a grid.",
       "detail": {
         "flow": [
-          "Enter rsEarth on the command line to open the terrain download window.",
+          "Before first use, register or sign in at the [Mapbox website](https://www.mapbox.com/), then create or copy a public access token beginning with `pk.` from your account's Access Tokens page.",
+          "Run rsEarth to open the terrain download window, then paste the token into the Mapbox Token field in the right-hand control panel.",
           "Download the terrain after searching for the area in the form, selecting the map source, and setting the download precision.",
           "If the new version of the window is unavailable, it will automatically fall back to the old version of the map form rsEarthOld"
         ],
@@ -3476,7 +3477,7 @@
             "type": "password",
             "def": "None",
             "range": "pk.xxxxx",
-            "note": "Panel settings: Mapbox token required to download terrain and satellite tiles, local encrypted archive"
+            "note": "Required for first use: register at mapbox.com and obtain a public access token beginning with pk. The pasted token is encrypted and stored locally. Do not share it publicly or enter a Secret Token beginning with sk."
           },
           {
             "label": "Accuracy",

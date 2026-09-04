@@ -14,15 +14,16 @@
 
 **Workflow**:
 
-1. Enter rsEarth on the command line to open the terrain download window.
-2. Download the terrain after searching for the area in the form, selecting the map source, and setting the download precision.
-3. If the new version of the window is unavailable, it will automatically fall back to the old version of the map form rsEarthOld
+1. Before first use, register or sign in at the [Mapbox website](https://www.mapbox.com/), then create or copy a public access token beginning with `pk.` from your account's Access Tokens page.
+2. Run rsEarth to open the terrain download window, then paste the token into the Mapbox Token field in the right-hand control panel.
+3. Download the terrain after searching for the area in the form, selecting the map source, and setting the download precision.
+4. If the new version of the window is unavailable, it will automatically fall back to the old version of the map form rsEarthOld
 
 **Parameters**:
 
 | Display name | Parameter | Type | Default | Range | Description |
 | --- | --- | --- | --- | --- | --- |
-| Mapbox Token | Token | password | None | pk.xxxxx | Panel settings: Mapbox token required to download terrain and satellite tiles, local encrypted archive |
+| Mapbox Token | Token | password | None | pk.xxxxx | Required for first use: register at mapbox.com and obtain a public access token beginning with pk. The pasted token is encrypted and stored locally. Do not share it publicly or enter a Secret Token beginning with sk. |
 | Accuracy | Precision | radio | in | High / Medium / Low (sampling step 1 / 2 / 4) | Panel settings: Control grid sampling density |
 | Tile limit | MaxTiles | radio | 60 | 20 / 60 / 100 | Panel settings: The number of tiles allowed to be pulled by a single task. Excessive tiles will be discarded by the server. |
 | zoom level | Zoom | int | automatic | Automatically calculate optimal value based on range | Panel Settings: Map zoom level automatically calculated on generation |
