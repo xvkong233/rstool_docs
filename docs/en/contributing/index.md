@@ -40,12 +40,17 @@ Use any of these routes:
 
 ### Step 3: Choose a template and describe the problem
 
-The repository provides templates for bug reports and feature requests. Include:
+The repository provides two templates and does not accept blank issues. Choose the one that fits your report:
+
+- **🐛 Bug report:** Incorrect documentation (command descriptions, parameter tables, workflows, or images) or a site problem (navigation, search, or styling).
+- **🚀 Feature request:** New or improved documentation, commands, or site functionality.
+
+To help maintainers resolve the issue faster, include:
 
 - The exact command name, including capitalization, such as `rsAiRender`.
 - What is wrong, what you expected, and what you observed.
-- A screenshot, if useful.
-- Your Rhino and RsTool versions, when relevant.
+- A screenshot pasted directly into the issue editor, if useful.
+- Your Rhino and RsTool versions for content problems, or your browser for site problems.
 
 ::: tip What happens next?
 After you select **Submit new issue**, maintainers can discuss and track the report publicly. Clear, specific details help resolve it faster.
@@ -164,6 +169,7 @@ Keep each pull request focused. Before submitting it, run:
 ## Feedback and community
 
 - [GitHub Issues](https://github.com/xvkong233/rstool_docs/issues)
+- For help using the RsTool plugin, we recommend asking in the WeChat user group.
 - [RsTool website](https://www.rstoolarchi.com)
 - [Rhino Studio](https://www.rhinostudio.cn)
 

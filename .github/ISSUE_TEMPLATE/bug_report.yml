@@ -1,62 +1,74 @@
-name: "\U0001F41E Bug report"
-description: Create a report to help us improve
+name: '🐛 Bug 报告'
+description: 反馈文档内容错误或站点功能异常
 labels: ['bug: pending triage']
 body:
   - type: markdown
     attributes:
       value: |
-        "Thanks for taking the time to fill out this bug report!
-        VitePress is still WIP, and it is not compatible with VuePress.
-        Please do not open issue about default theme missing features or something doesn't work like VuePress."
+        感谢反馈！请确认你要反馈的问题类型：
+
+        - **文档内容问题**：命令描述、参数表、交互流程或配图有误；
+        - **站点功能问题**：导航、搜索、样式等异常。
+
+        > [!NOTE]
+        > `docs/commands/` 下的命令页面由数据管线自动生成，请勿针对这些页面直接
+        > 提交 PR；内容纠错请通过本模板反馈，由维护者落入数据源。
   - type: textarea
     id: bug-description
     attributes:
-      label: Describe the bug
-      description: A clear and concise description of what the bug is. If you intend to submit a PR for this issue, tell us in the description. Thanks!
-      placeholder: Bug description
+      label: 问题描述
+      description: 清楚描述遇到的问题。若你打算直接提交 PR 修复，也请在这里说明。
+      placeholder: 发生了什么？哪里不对？
+    validations:
+      required: true
+  - type: textarea
+    id: page-or-command
+    attributes:
+      label: 相关页面 / 命令
+      description: 出现问题的页面链接或命令名（注意大小写）。
+      placeholder: 页面链接或命令名，如 rsAiRender
     validations:
       required: true
   - type: textarea
     id: reproduction
     attributes:
-      label: Reproduction
-      description: Steps to reproduce the behavior. [vitepress.new](https://vitepress.new/) can be used as a starter template.
-      placeholder: Reproduction
+      label: 复现步骤
+      description: 如何看到这个问题？例如：打开某页面 → 搜索某词 → 看到了什么。
+      placeholder: 复现步骤
     validations:
       required: true
   - type: textarea
     id: expected
     attributes:
-      label: Expected behavior
-      description: A clear and concise description of what you expected to happen.
-      placeholder: Expected behavior
+      label: 期望表现
+      description: 清楚描述你认为正确的内容或行为。
+      placeholder: 期望表现
     validations:
       required: true
   - type: textarea
-    id: system-info
+    id: environment
     attributes:
-      label: System Info
-      description: Output of `npx envinfo --system --npmPackages vitepress --binaries --browsers`
+      label: 环境信息
+      description:
+        文档内容问题请填写 Rhino 版本与 RsTool 版本；站点问题请填写操作系统与
+        浏览器。不适用可留空。
       render: Text
-      placeholder: System, Binaries, Browsers
-    validations:
-      required: true
+      placeholder: Rhino 8 SRxx / RsTool v1.x / Windows 11 / Chrome 1xx
   - type: textarea
     id: additional-context
     attributes:
-      label: Additional context
-      description: Add any other context or screenshots about the bug report here.
+      label: 补充信息
+      description: 其他上下文或截图。截图可直接粘贴到输入框上传。
   - type: checkboxes
     id: checkboxes
     attributes:
       label: Validations
-      description: Before submitting the issue, please make sure you do the following
+      description: 提交前请确认以下事项
       options:
-        - label: Check if you're on the [latest VitePress version](https://github.com/vuejs/vitepress/releases/latest).
+        - label: 我使用的是[最新版 RsTool 插件](https://www.rstoolarchi.com)（内容类反馈适用）。
           required: true
-        - label: Follow our [Code of Conduct](https://vuejs.org/about/coc.html)
+        - label: 我已阅读[文档站](https://docs.rstoolarchi.com)与
+            [贡献指南](https://github.com/xvkong233/rstool_docs/blob/main/.github/contributing.md)。
           required: true
-        - label: Read the [docs](https://vitepress.dev).
-          required: true
-        - label: Check that there isn't already an issue that reports the same bug to avoid creating a duplicate.
+        - label: 我已搜索现有 Issue，确认没有重复反馈。
           required: true

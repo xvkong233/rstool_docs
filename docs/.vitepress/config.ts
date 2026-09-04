@@ -203,6 +203,7 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: '命令手册', link: '/commands/' },
+          { text: '更新日志', link: '/changelog' },
           { text: '贡献指南', link: '/contributing/' },
           { text: '官网', link: 'https://www.rstoolarchi.com' },
           { text: '犀流堂', link: 'https://www.rhinostudio.cn' },
@@ -276,6 +277,7 @@ export default defineConfig({
             themeConfig: {
               nav: [
                 { text: 'Commands', link: '/en/commands/' },
+                { text: 'Changelog', link: '/en/changelog' },
                 { text: 'Contributing', link: '/en/contributing/' },
                 { text: 'Website', link: 'https://www.rstoolarchi.com' },
                 { text: 'Rhino Studio', link: 'https://www.rhinostudio.cn' },

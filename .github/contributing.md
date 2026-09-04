@@ -12,7 +12,19 @@
 - **修正文档内容**：命令描述、参数表、交互流程中的错误或过时信息；
 - **补充配图**：为缺少配图的命令添加界面截图或案例图；
 - **改进站点**：导航、搜索、主题样式、构建脚本等工程改进；
-- **反馈问题**：通过 [Issue](https://github.com/xvkong233/rstool_docs/issues) 报告文档错误或提出建议（请使用仓库自带的 Issue 模板）。
+- **反馈问题**：通过 [Issue](https://github.com/xvkong233/rstool_docs/issues) 报告文档错误或提出建议（见下文[反馈问题](#反馈问题issue)一节）。
+
+## 反馈问题（Issue）
+
+仓库内置了两个 Issue 模板，新建 Issue 时请选择对应模板填写：
+
+- 🐛 **[Bug 报告](https://github.com/xvkong233/rstool_docs/issues/new?template=bug_report.yml)**：文档内容错误（命令描述、参数表、交互流程、配图）或站点功能异常（导航、搜索、样式等）；
+- 🚀 **[功能建议](https://github.com/xvkong233/rstool_docs/issues/new?template=feature_request.yml)**：希望新增或改进的内容与站点功能。
+
+提交时建议写清楚：具体命令名（如 `rsAiRender`，注意大小写）、所在页面链接、
+问题描述与期望表现，并附上截图（Issue 编辑框支持直接粘贴图片）。
+`docs/commands/` 下的命令页面由数据管线自动生成，内容纠错请通过 Issue 反馈，
+或按下文「命令页面是自动生成的」一节的流程修改数据源，不要直接改这些页面。
 
 ## 环境要求
 

@@ -9391,7 +9391,7 @@
       }
     },
     "Export Mesh Alembic": {
-      "sourceHash": "6c20c4c4734ef4d0e22467f2ea3332e987c77297c1be7ba2848e328d2b6de65b",
+      "sourceHash": "edb9db91a99ae37cdf94a5ba83b4c7a6411ecdc7c6ea314e2b253fd8f47198a3",
       "title": "Export Mesh Alembic",
       "desc": "Export list-ordered mesh frames as Alembic animation files that support topology changes.",
       "detail": {
@@ -9399,7 +9399,7 @@
           "In the Grasshopper canvas, find the Export Mesh Alembic component from the \"Animation\" group of the RsTool tab and drag it in",
           "Connect each input port according to the parameter table: Frames mesh frame list, File Path target .abc path, Export trigger, Cancel cancellation, FPS frame rate, Start Frame starting frame, Up Axis coordinate axis, Scale scaling, Overwrite coverage, Object Name internal name",
           "Export only starts a background export on the rising edge of False→True; Cancel cancels the export in progress and cleans up the temporary .abc.tmp file on the rising edge of True",
-          "Export uses temporary files + atomic replacement: first write .RsTool.<guid>.tmp and then atomically replace it to the target path to avoid contamination of semi-finished products",
+          "Export uses temporary files + atomic replacement: first write `.RsTool.<guid>.tmp` and then atomically replace it to the target path to avoid contamination of semi-finished products",
           "Refresh the output port Success / File Path / Progress / Frames Written / Message each time the canvas is solved (where Path and Progress share the P name)"
         ],
         "params": [
@@ -9429,7 +9429,7 @@
             "type": "Bool",
             "def": "false",
             "range": "True / False",
-            "note": "True A rising edge cancels the export in progress and cleans up the temporary .RsTool.<guid>.tmp file"
+            "note": "True rising edge cancels the export in progress and cleans up the temporary `.RsTool.<guid>.tmp` file"
           },
           {
             "label": "Frame rate",
