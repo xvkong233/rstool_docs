@@ -12,11 +12,13 @@
 
 **Workflow**:
 
-1. Command line input rsSendToSU
-2. If there is already a pre-selected object, use it directly. Otherwise, follow the command line prompts to select the object to be sent.
-3. Command to organize selected objects into SketchUp compatible data and send
-4. If running SketchUp is detected, it will be pushed immediately; otherwise, it will be queued and waited for SketchUp to receive.
-5. The command line echoes the number and status of objects sent.
+1. Before first use, run `rsToolLocation` in the Rhino command line to open the RSTool plugin directory, then locate `RSTool-RhinoSUSync.rbz`.
+2. Open Extension Manager in SketchUp, click Install Extension, select `RSTool-RhinoSUSync.rbz`, and restart SketchUp after installation. This setup is normally required only once.
+3. Command line input rsSendToSU
+4. If there is already a pre-selected object, use it directly. Otherwise, follow the command line prompts to select the object to be sent.
+5. Command to organize selected objects into SketchUp compatible data and send
+6. If running SketchUp is detected, it will be pushed immediately; otherwise, it will be queued and waited for SketchUp to receive.
+7. The command line echoes the number and status of objects sent.
 
 **Parameters**:
 

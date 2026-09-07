@@ -8953,11 +8953,13 @@
       }
     },
     "rsSendToSU": {
-      "sourceHash": "09ab034fec4fca49a88d837e60559a6e8cc0a2692f25db7dff023c7083e459b8",
+      "sourceHash": "68e62d137d30a9d43de916e856605bb32e85c7e2c7a19ecac1061276df542818",
       "title": "Send model to SketchUp",
       "desc": "Send selected Rhino objects to running SketchUp with one click (real-time linked push) without exporting files.",
       "detail": {
         "flow": [
+          "Before first use, run `rsToolLocation` in the Rhino command line to open the RSTool plugin directory, then locate `RSTool-RhinoSUSync.rbz`.",
+          "Open Extension Manager in SketchUp, click Install Extension, select `RSTool-RhinoSUSync.rbz`, and restart SketchUp after installation. This setup is normally required only once.",
           "Command line input rsSendToSU",
           "If there is already a pre-selected object, use it directly. Otherwise, follow the command line prompts to select the object to be sent.",
           "Command to organize selected objects into SketchUp compatible data and send",

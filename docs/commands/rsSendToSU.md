@@ -10,11 +10,13 @@
 
 **交互流程**：
 
-1. 命令行输入 rsSendToSU
-2. 若已有预选对象则直接使用，否则按命令行提示选择要发送的对象
-3. 命令将选中对象整理为 SketchUp 兼容数据并发送
-4. 若检测到正在运行的 SketchUp 则即时推送；否则排队等待 SketchUp 接收
-5. 命令行回显发送的对象数量与状态
+1. 首次使用前，在 Rhino 命令行输入 rsToolLocation 打开 RSTool 插件目录，并找到 RSTool-RhinoSUSync.rbz
+2. 打开 SketchUp 的扩展程序管理器（Extension Manager），点击安装扩展程序（Install Extension），选择 RSTool-RhinoSUSync.rbz 完成安装，然后重启 SketchUp；此步骤通常只需执行一次
+3. 命令行输入 rsSendToSU
+4. 若已有预选对象则直接使用，否则按命令行提示选择要发送的对象
+5. 命令将选中对象整理为 SketchUp 兼容数据并发送
+6. 若检测到正在运行的 SketchUp 则即时推送；否则排队等待 SketchUp 接收
+7. 命令行回显发送的对象数量与状态
 
 **参数**：
 

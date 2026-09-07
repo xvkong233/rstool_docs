@@ -3850,6 +3850,8 @@
    "help": null,
    "style": "cli",
    "flow": [
+    "首次使用前，在 Rhino 命令行输入 rsToolLocation 打开 RSTool 插件目录，并找到 RSTool-RhinoSUSync.rbz",
+    "打开 SketchUp 的扩展程序管理器（Extension Manager），点击安装扩展程序（Install Extension），选择 RSTool-RhinoSUSync.rbz 完成安装，然后重启 SketchUp；此步骤通常只需执行一次",
     "命令行输入 rsSendToSU",
     "若已有预选对象则直接使用，否则按命令行提示选择要发送的对象",
     "命令将选中对象整理为 SketchUp 兼容数据并发送",
