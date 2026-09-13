@@ -53,6 +53,7 @@ Built-in Pomodoro style focus session: you can start/pause/resume/cancel/check t
 - Project Memory: Remember project preferences and conventions across sessions (can be turned off in settings).
 - Internet search: Automatic Internet search when time-sensitive information is needed (can be turned off in settings).
 - Agent visual verification: Automatically verify whether the results are reasonable after the modeling action is executed.
+- Grasshopper canvas control: Open Grasshopper first, then ask it in plain language to build a definition - search components, author and wire the graph, tweak parameters, solve, read results back, and capture a canvas screenshot for self-check; every change is snapshotted first and can be rolled back entirely (can be disabled in settings).
 - Reference picture understanding: You can paste pictures/screenshots to help it understand architectural references.
 
 ## Image and personality

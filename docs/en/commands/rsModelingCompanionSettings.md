@@ -24,3 +24,5 @@
 > This command has no numeric command-line parameters. Adjust its options in the settings window.
 
 **Notes**: The specific items in the setting window are subject to the actual interface.
+
+The bottom switch "Allow the Agent to control the Grasshopper canvas": when on, the companion/Agent can use the Grasshopper canvas tool family (search components, author graphs, tweak parameters, solve, capture for visual verification); when off, those tools are hidden from the Agent.
