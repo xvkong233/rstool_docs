@@ -40,4 +40,10 @@
 | 打开目录 | openFolder | button | — | — | 用 Windows 资源管理器打开模型所在文件夹 |
 | 加载更多 | loadMore | button | — | — | 主区底部按钮：分页加载，默认每页 60 张；超过则出现该按钮 |
 
-**备注**：新版窗口不可用时自动回退到 rsModelOld 旧版命令。索引以根目录为粒度，缩略图缓存到 %LOCALAPPDATA%\RSTool\ModelLibrary 缩略图缓存；导入时调用 InsertAsset 走统一放置流程（命令行 Angle/Rotate90 控制旋转）。模型库为本地素材库：内置素材有限，需用户自行整理、补充自己的 .3dm 模型到库目录；也可将 RSTool 相关视频转发到朋友圈后联系客服，领取更多模型素材资源
+**备注**：新版窗口不可用时自动回退到 rsModelOld 旧版命令。索引以根目录为粒度，缩略图缓存到 %LOCALAPPDATA%\RSTool\ModelLibrary 缩略图缓存；导入时调用 InsertAsset 走统一放置流程（命令行 Angle/Rotate90 控制旋转）。
+
+## 模型库准备
+
+rsModel 使用本地模型库，用户需要自行整理模型文件，并将自己的 .3dm 模型归类存放到选定的库目录中。
+
+如需领取 RSTool 官方整理的模型库，可将 RSTool 相关视频转发到朋友圈，保留转发截图并联系 RSTool 客服领取。

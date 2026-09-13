@@ -539,7 +539,7 @@
       }
     },
     "rsModel": {
-      "sourceHash": "3864e1a3d9a8900a0b022c2b7ed5c7b2708084b79763a4f1c12cd57a71fbaa78",
+      "sourceHash": "c8e5474d70a600c42581eb3ccc3373272391aa82d0d6a602ba5f5cc38528e747",
       "title": "Model library",
       "desc": "Open the Model Library window to browse and manage built-in 3D model assets. Supports category filtering and search.",
       "detail": {
@@ -647,7 +647,7 @@
           }
         ],
         "output": "Import the selected .3dm file into Rhino as a block definition and trigger the InsertAsset command to place it at the clicked position in the viewport; or open the folder where the model is located in the explorer.",
-        "notes": "Automatically fall back to the rsModelOld old version of the command when the new version window is unavailable. The index is based on the root directory as the granularity, and the thumbnails are cached in %LOCALAPPDATA%\\RsTool\\ModelLibrary thumbnail cache; when importing, call InsertAsset to go through a unified placement process (command line Angle/Rotate90 controls rotation). The model library is a local material library: the built-in materials are limited, and users need to organize and supplement their own .3dm models to the library directory; they can also forward RsTool related videos to Moments and contact customer service to receive more model material resources.",
+        "notes": "If the new window is unavailable, the command automatically falls back to the legacy rsModelOld command. The index is maintained per root directory, and thumbnails are cached under %LOCALAPPDATA%\\RSTool\\ModelLibrary. Importing uses InsertAsset for the standard placement workflow, with the Angle/Rotate90 command-line options controlling rotation.\n\n## Preparing the model library\n\nrsModel uses a local model library. You need to organize the model files yourself and sort your .3dm models into the selected library directory.\n\nTo receive the model library curated by the RSTool team, share an RSTool-related video on WeChat Moments, keep a screenshot of the post, and contact RSTool customer service.",
         "illustrations": [
           {
             "alt": "RsTool model library window: Path/Search/Theme/Collection/Recent/Folder Tree/Status Bar on the left, model thumbnail grid on the right (each card contains 3 action buttons)",
@@ -741,7 +741,7 @@
       }
     },
     "rsMaterial": {
-      "sourceHash": "0e86659c7afe453f4902731ceadb060ba6c6afb7f0fa4a6ce90649f89bdbe158",
+      "sourceHash": "5012a07ddff377ae34aa67e4a233c6795787805b8f0a45423736a1b4a25f36fd",
       "title": "Material library",
       "desc": "Open the material library window to browse and manage built-in material resources. Supports PBR material preview.",
       "detail": {
@@ -885,7 +885,7 @@
           }
         ],
         "output": "Add the selected material to the Rhino material library according to the current map axis settings and assign it to the selected object/layer, or just import the material without assigning it; when the automatic map axis is turned on, the map axis object is added simultaneously",
-        "notes": "When the new version window is unavailable, it will automatically fall back to the old version rsMaterialLibraryOld. The index is based on the root directory as the granularity, and the thumbnails and textures are cached locally; it is given the Rhino material API, and when the automatic mapping axis is turned on, Surface/BoxMapping will be automatically added according to the current type + size. The material library is a local material library: the built-in materials are limited, and users need to organize and add their own material assets to the library directory by themselves; you can also forward RsTool related videos to Moments and contact customer service to receive more material resources.",
+        "notes": "When the new version window is unavailable, it will automatically fall back to the old version rsMaterialLibraryOld. The index is based on the root directory as the granularity, and the thumbnails and textures are cached locally; it is given the Rhino material API, and when the automatic mapping axis is turned on, Surface/BoxMapping will be automatically added according to the current type + size.\n\n## Preparing the material library\n\nrsMaterial uses a local material library. You need to organize the material files and their associated textures yourself and sort the material assets into the selected library directory.\n\nTo receive the material library curated by the RSTool team, share an RSTool-related video on WeChat Moments, keep a screenshot of the post, and contact RSTool customer service.",
         "illustrations": [
           {
             "alt": "RsTool material library window: on the left is path/search/theme/favorites/recent/folder tree/status bar, on the right is a grid of material thumbnails (including terrazzo color set terrazzo_51~61)",

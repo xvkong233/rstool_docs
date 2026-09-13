@@ -42,4 +42,10 @@
 | Open directory | openFolder | button | — | — | Use Windows Explorer to open the folder where the model is located |
 | load more | loadMore | button | — | — | Button at the bottom of the main area: page loading, the default is 60 pictures per page; this button will appear if the number exceeds |
 
-**Notes**: Automatically fall back to the rsModelOld old version of the command when the new version window is unavailable. The index is based on the root directory as the granularity, and the thumbnails are cached in %LOCALAPPDATA%\RsTool\ModelLibrary thumbnail cache; when importing, call InsertAsset to go through a unified placement process (command line Angle/Rotate90 controls rotation). The model library is a local material library: the built-in materials are limited, and users need to organize and supplement their own .3dm models to the library directory; they can also forward RsTool related videos to Moments and contact customer service to receive more model material resources.
+**Notes**: If the new window is unavailable, the command automatically falls back to the legacy rsModelOld command. The index is maintained per root directory, and thumbnails are cached under %LOCALAPPDATA%\RSTool\ModelLibrary. Importing uses InsertAsset for the standard placement workflow, with the Angle/Rotate90 command-line options controlling rotation.
+
+## Preparing the model library
+
+rsModel uses a local model library. You need to organize the model files yourself and sort your .3dm models into the selected library directory.
+
+To receive the model library curated by the RSTool team, share an RSTool-related video on WeChat Moments, keep a screenshot of the post, and contact RSTool customer service.

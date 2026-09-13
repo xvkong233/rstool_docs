@@ -48,4 +48,10 @@
 | Open directory | openFolder | button | — | — | Use Windows Explorer to open the folder where the material is located |
 | load more | loadMore | button | — | — | Button at the bottom of the main area: page loading, default 60 pictures per page |
 
-**Notes**: When the new version window is unavailable, it will automatically fall back to the old version rsMaterialLibraryOld. The index is based on the root directory as the granularity, and the thumbnails and textures are cached locally; it is given the Rhino material API, and when the automatic mapping axis is turned on, Surface/BoxMapping will be automatically added according to the current type + size. The material library is a local material library: the built-in materials are limited, and users need to organize and add their own material assets to the library directory by themselves; you can also forward RsTool related videos to Moments and contact customer service to receive more material resources.
+**Notes**: When the new version window is unavailable, it will automatically fall back to the old version rsMaterialLibraryOld. The index is based on the root directory as the granularity, and the thumbnails and textures are cached locally; it is given the Rhino material API, and when the automatic mapping axis is turned on, Surface/BoxMapping will be automatically added according to the current type + size.
+
+## Preparing the material library
+
+rsMaterial uses a local material library. You need to organize the material files and their associated textures yourself and sort the material assets into the selected library directory.
+
+To receive the material library curated by the RSTool team, share an RSTool-related video on WeChat Moments, keep a screenshot of the post, and contact RSTool customer service.
