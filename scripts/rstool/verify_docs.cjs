@@ -149,6 +149,11 @@ if (translations) {
       ['流程', detail.flow || [], translatedDetail.flow || []],
       ['参数', detail.params || [], translatedDetail.params || []],
       [
+        '参数分组',
+        detail.paramSections || [],
+        translatedDetail.paramSections || []
+      ],
+      [
         '插图',
         normalizeIllustrations(detail),
         translatedDetail.illustrations || []
@@ -178,6 +183,21 @@ if (translations) {
         if (param[sourceKey] && !localized[targetKey]) {
           fail(`${name} 的参数 ${index + 1}.${targetKey} 未翻译`)
         }
+      }
+    }
+    for (const [index, section] of (detail.paramSections || []).entries()) {
+      const localized = translatedDetail.paramSections?.[index] || {}
+      for (const field of ['title', 'intro']) {
+        if (section[field] && !localized[field])
+          fail(`${name} 的参数分组 ${index + 1}.${field} 未翻译`)
+      }
+      const sourceParams = section.params || []
+      const knownParams = new Set(
+        (detail.params || []).map((param) => param.en)
+      )
+      for (const paramName of sourceParams) {
+        if (!knownParams.has(paramName))
+          fail(`${name} 的参数分组引用未知参数: ${paramName}`)
       }
     }
     for (const field of ['output', 'notes']) {

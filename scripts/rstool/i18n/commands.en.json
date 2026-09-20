@@ -2522,6 +2522,40 @@
         "videos": []
       }
     },
+    "rsSlab": {
+      "sourceHash": "17741ea7c3bf909c47a2cc6e761149afd38564f30e4906953e1ddb53bba5852d",
+      "title": "Parametric Slab",
+      "desc": "Create downward-thickened parametric slabs from one or more closed planar curves, with nested boundaries and editable thickness through object user text.",
+      "detail": {
+        "flow": [
+          "Enter rsSlab on the Rhino command line",
+          "While selecting curves, use the Thickness command-line option when needed and enter the slab thickness",
+          "Select one or more closed coplanar planar curves; outer and inner loops can form a slab with openings, while disjoint regions create separate slabs",
+          "Press Enter to confirm; the command thickens the regions along world -Z and creates closed Brep solids",
+          "The new slabs are selected automatically; later, edit RSToolSlabThickness under the object's User Text properties to rebuild a slab at a new thickness"
+        ],
+        "params": [
+          {
+            "label": "Thickness",
+            "type": "double",
+            "def": "0.2 m; subsequent runs reuse the last value",
+            "range": "≥ max(document absolute tolerance, 0.001 m)",
+            "note": "Editable through a command-line option while selecting curves; displayed in the current Rhino document units, with extrusion fixed to world -Z"
+          },
+          {
+            "label": "Parametric slab thickness",
+            "type": "user text",
+            "def": "Thickness used at creation",
+            "range": "≥ max(document absolute tolerance, 0.001 m)",
+            "note": "Edit RSToolSlabThickness under the object's User Text properties using current document units; invalid values or failed rebuilds restore the previous value"
+          }
+        ],
+        "output": "Creates one or more closed Brep parametric slabs thickened along world -Z and stores RSTool slab-type and thickness metadata.",
+        "notes": "rsSlab creates closed Brep slabs with stored thickness metadata. Creation and thickness changes both support Rhino Undo.\n\n## Curve requirements\n\nOnly closed planar curves are accepted. Outer loops and opening loops for the same slab must be coplanar and have valid nesting. Curve sets that cannot form valid planar regions are rejected. Multiple disjoint closed regions produce separate slabs.\n\n## Parametric thickness\n\nThe slab's top face remains on the input-curve plane, while the solid is created along world `-Z`; a tilted curve plane does not change the thickening direction. After creation, select the slab and edit `RSToolSlabThickness` under User Text in Rhino Object Properties. The plug-in keeps the top face in place and rebuilds the solid along its original thickening direction. The value uses current document units and must be positive and no smaller than the greater of the document absolute tolerance and the converted value of 1 mm.\n\nParametric behavior depends on the slab marker, face indices and geometry signature stored by the command. If another modeling command changes the slab topology, the plug-in removes the parametric marker after detecting a mismatch, and editing `RSToolSlabThickness` will no longer rebuild it. Copied or reopened slabs whose metadata remains valid can still be resized.",
+        "illustrations": [],
+        "videos": []
+      }
+    },
     "rsWall": {
       "sourceHash": "2949a02f3b615e83bb47c5cbfc72490af90e681d319c7d0cafb48f0725a4f663",
       "title": "Smart wall",
@@ -7419,105 +7453,285 @@
       }
     },
     "rsWindAnalysis": {
-      "sourceHash": "9389e2707567843e8a154fae9905af824ac9b66c5648a394056e1b5c3043ffdc",
+      "sourceHash": "aeb4c1a034b1621cc1ddfc1d0351322fc589aa68c2bb20a053fa1a41662b20ea",
       "title": "Wind environment analysis",
-      "desc": "Perform CFD analysis of the wind environment around the building to visualize wind speed and pressure distribution.",
+      "desc": "Use a modeless panel for 2D concept or 3D wind analysis, with speed-color previews, animated trails, point queries and Bake.",
       "detail": {
         "flow": [
-          "Select simulation mode (Conceptual 2D/Engineering CFD)",
-          "Conceptual 2D: Select obstacle grid → Enter wind direction (degrees) → Enter inlet wind speed (m/s) → Select rectangular boundary (closed curve) → Enter analysis grid size → Select smooth → Select wake response → Run LBM (fixed 600 steps)",
-          "Engineering CFD: Select obstacle mesh → Select CFD boundary → Set wind direction/reference wind speed/surface roughness/mass/grid size/voxel size/number of iterations → background calculation",
-          "Generate wind speed shaded grid and legend (or background CFD job results)"
+          "Run rsWindAnalysis to open the modeless panel. Defaults are Simple, Concept2D and Quick; select Expert for all parameters.",
+          "Use Select / Update Buildings for meshes, Breps, extrusions, SubDs or blocks. Exclude the boundary and previous result planes. Geometry is snapshotted; reselect after editing.",
+          "Use Select / Update Boundary to select a closed rectangle; its elevation initializes the analysis height. Use a horizontal rectangle for 2D and check the extent and grid preview.",
+          "Set the direction wind travels toward using the compass or angle, then set inlet speed, analysis height and a quick preset. Use Expert to adjust grids and iteration budgets.",
+          "Click Calculate / Recalculate. Parameters remain editable during a run, but changes apply to the next calculation. Cancel requests termination.",
+          "Inspect the speed colors, legend and status. Use Query Speed to read the nearest sample; enable animated trails, display smoothing or grid diagnostics as needed.",
+          "Click Bake / Write to Document to add the colored mesh, legend and static direction lines with Undo support. Diagnostic views cannot be baked, and each result can be baked only once."
+        ],
+        "paramSections": [
+          {
+            "title": "Common settings",
+            "intro": "These controls remain at the top of the panel. They select the interface level and solver mode and set the direction, inlet speed and analysis height shared by both modes. Simple is intended for quick presets; Expert expands grids, budgets and diagnostics for the active mode."
+          },
+          {
+            "title": "Concept2D panel",
+            "intro": "Concept2D uses a horizontal slice with constant inflow. Solving and display share one 2D grid, making it useful for quick site-plan comparisons. Expert exposes spacing, step cap and residual tolerance. It cannot simulate flow over rooftops."
+          },
+          {
+            "title": "EngineeringCFD panel",
+            "intro": "EngineeringCFD builds a 3D voxel wind tunnel containing building heights and ground. Internal solver voxels control geometry capture and computation; the output grid controls only result-slice sampling and display. Statistical runs may take hours and still require convergence, conservation, grid and domain-sensitivity checks."
+          },
+          {
+            "title": "Display, diagnostics and output",
+            "intro": "These controls present and inspect results from either mode. Colors, display smoothing and animated trails do not change computed speeds; use point queries to read values. The diagnostic view checks geometry and grids and cannot be baked."
+          }
         ],
         "params": [
           {
-            "label": "Simulation mode",
+            "label": "interfaceLevel",
+            "type": "list",
+            "def": "Simple",
+            "range": "Simple / Expert",
+            "note": "Expert exposes grids, iteration budgets, statistics and diagnostics; switching does not reset parameters."
+          },
+          {
+            "label": "simulationMode",
             "type": "list",
             "def": "Concept2D",
             "range": "Concept2D / EngineeringCFD",
-            "note": "Conceptual 2D for fast LBM approximation; Engineering CFD for high-quality solutions in the background"
+            "note": "2D constant inflow supports horizontal slices for quick comparisons; 3D includes building height and ground."
           },
           {
-            "label": "wind direction angle",
-            "type": "double",
-            "def": "_lastWindDirectionDegrees",
-            "range": "Angle (degrees)",
-            "note": "Incoming flow direction, use the last value"
-          },
-          {
-            "label": "Inlet wind speed",
-            "type": "double",
-            "def": "_lastWindSpeedMetersPerSecond",
-            "range": ">0 (m/s)",
-            "note": "Conceptual two-dimensional inlet wind speed"
-          },
-          {
-            "label": "Analysis grid size",
-            "type": "double",
-            "def": "min(border width,border height)/50",
-            "range": ">0 (model units)",
-            "note": "Conceptual 2D grid cell size"
-          },
-          {
-            "label": "smooth result",
+            "label": "simplePreset",
             "type": "list",
-            "def": "Light",
-            "range": "NoSmooth=0 / Light=1 / Medium=3",
-            "note": "Wind speed field smooth intensity"
+            "def": "Quick",
+            "range": "Quick / Standard / Fine",
+            "note": "2D: 600/1200/2400 steps and passage references of 15/10/6 m; 3D: 120/600/1500 steps. Selecting resets budgets and automatic grids."
           },
           {
-            "label": "wake response",
-            "type": "list",
-            "def": "Balanced",
-            "range": "Stable / Balanced / TurbulentVisual",
-            "note": "Wake visualization style"
-          },
-          {
-            "label": "Reference wind speed",
+            "label": "windDirectionDegrees",
             "type": "double",
-            "def": "",
-            "range": ">0 (m/s)",
-            "note": "Reference wind speeds used in engineering CFD models"
+            "def": "0 (may reuse saved value)",
+            "range": "−360–360°",
+            "note": "Counterclockwise from world +X: 0° east, 90° north. This is the direction wind travels toward, not the meteorological source direction. Drag the compass to adjust."
           },
           {
-            "label": "surface roughness",
-            "type": "list",
-            "def": "",
-            "range": "Open / Suburban / Urban / DenseUrban",
-            "note": "Engineering CFD Surface Roughness Presets"
-          },
-          {
-            "label": "quality mode",
-            "type": "list",
-            "def": "",
-            "range": "Preview / Balanced / Fine",
-            "note": "Engineering CFD mesh quality, which determines the default mesh size and number of iterations"
-          },
-          {
-            "label": "CFD grid size",
+            "label": "referenceSpeed",
             "type": "double",
-            "def": "Default by quality mode",
-            "range": ">0",
-            "note": "Engineering CFD plane mesh size"
+            "def": "3",
+            "range": "0.01–100 m/s",
+            "note": "Constant inflow in 2D; inlet speed at the analysis height in 3D, with a terrain profile at other heights. Not the maximum result speed."
           },
           {
-            "label": "voxel size",
+            "label": "analysisHeight",
             "type": "double",
-            "def": "",
-            "range": ">0",
-            "note": "Engineering CFD voxel (3D) dimensions"
+            "def": "1.5; updated from boundary height",
+            "range": "0.01–10000 m",
+            "note": "World Z of the horizontal slice, not height above a roof. For a tilted 3D slice, the center height is used and this field is disabled."
           },
           {
-            "label": "Number of iterations",
+            "label": "passageWidth",
+            "type": "double",
+            "def": "By quick preset: 15 / 10 / 6",
+            "range": "0–10000 m",
+            "note": "Expert: user-specified passage width to preserve. Automatic spacing is limited to width / 3; 0 disables the constraint. Manual grids are preserved."
+          },
+          {
+            "label": "conceptGrid",
+            "type": "double",
+            "def": "Automatic",
+            "range": "0.000001–1000000 m",
+            "note": "Short boundary edge / 50, constrained by passage width. Shared by solving and display, capped at 800,000 nodes. Halving spacing roughly quadruples nodes."
+          },
+          {
+            "label": "conceptSteps",
             "type": "integer",
-            "def": "Default by quality mode",
-            "range": "≥1",
-            "note": "Engineering CFD solution iteration steps"
+            "def": "By quick preset: 600 / 1200 / 2400",
+            "range": "20–1000000",
+            "note": "May stop early on residual convergence; reaching the cap does not imply convergence."
+          },
+          {
+            "label": "conceptTolerance",
+            "type": "double",
+            "def": "0.05%",
+            "range": "0.001–10%",
+            "note": "Smaller is stricter; not an error bound for real wind-speed measurements."
+          },
+          {
+            "label": "calculationPreset",
+            "type": "list",
+            "def": "Quick preview",
+            "range": "Quick / Standard / Fine / Statistical / Custom",
+            "note": "Step budgets: 120/600/1500/20000; cell budgets: 200k/800k/3M/3M. Updates grids and quality; the first three are previews."
+          },
+          {
+            "label": "roughnessPreset",
+            "type": "list",
+            "def": "Urban",
+            "range": "Open / Suburban / Urban / Dense urban",
+            "note": "Controls the 3D vertical inlet profile; not a calibrated rough-wall function."
+          },
+          {
+            "label": "qualityMode",
+            "type": "list",
+            "def": "By 3D preset",
+            "range": "Preview / Balanced / Fine",
+            "note": "Controls domain margins and safe cell budgets, also limited by the calculation preset."
+          },
+          {
+            "label": "targetVoxelSize",
+            "type": "double",
+            "def": "By extent, preset and budget",
+            "range": "0.000001–1000000 m",
+            "note": "Actual 3D voxel size. Over-budget manual grids stop instead of silently coarsening. Halving spacing roughly multiplies nodes by eight."
+          },
+          {
+            "label": "analysisGridSize",
+            "type": "double",
+            "def": "Short edge / 30, 50 or 100",
+            "range": "0.000001–1000000 m",
+            "note": "3D output sampling and display only. Refining does not improve solver resolution and usually has little effect on solve time."
+          },
+          {
+            "label": "iterations",
+            "type": "integer",
+            "def": "By preset: 120 / 600 / 1500 / 20000",
+            "range": "20–1000000",
+            "note": "Iteration cap; longer runs do not automatically guarantee convergence."
+          },
+          {
+            "label": "autoIterationBudget",
+            "type": "toggle",
+            "def": "By 3D preset",
+            "range": "On / Off",
+            "note": "Estimates steps from warmup and averaging flow passes, bounded by the step cap."
+          },
+          {
+            "label": "warmupFlowPasses",
+            "type": "double",
+            "def": "2",
+            "range": "0.1–20",
+            "note": "Warmup duration before statistics, in domain flow-through passes."
+          },
+          {
+            "label": "averagingFlowPasses",
+            "type": "double",
+            "def": "2",
+            "range": "1.5–20",
+            "note": "Target averaging duration after warmup; short previews may never reach this stage."
+          },
+          {
+            "label": "meanTolerance",
+            "type": "double",
+            "def": "2%",
+            "range": "0.01–10%",
+            "note": "Threshold for differences between consecutive mean windows."
+          },
+          {
+            "label": "massTolerance",
+            "type": "double",
+            "def": "2%",
+            "range": "0.01–10%",
+            "note": "Inflow/outflow and conservation threshold; insufficient alone to establish engineering accuracy."
+          },
+          {
+            "label": "paddingScale",
+            "type": "double",
+            "def": "1",
+            "range": "1–5",
+            "note": "Larger margins increase cell count and flow-through time; small margins increase boundary influence."
+          },
+          {
+            "label": "collisionModel",
+            "type": "list",
+            "def": "TRT + Smagorinsky",
+            "range": "BGK / TRT / TRT + Smagorinsky",
+            "note": "Basic, two-relaxation-time, or subgrid-dissipation model; selecting one does not validate turbulence accuracy."
+          },
+          {
+            "label": "conservativeVoxelization",
+            "type": "toggle",
+            "def": "Off",
+            "range": "On / Off",
+            "note": "Conservative 3D occupancy can reduce leakage but may block narrow passages."
+          },
+          {
+            "label": "wakeVisualizationEnhancement",
+            "type": "toggle",
+            "def": "Off",
+            "range": "On / Off",
+            "note": "3D wake presentation enhancement; not for quantitative evaluation."
+          },
+          {
+            "label": "colorPresentation",
+            "type": "list",
+            "def": "Emphasize low speeds · Nonlinear",
+            "range": "Linear / Emphasize low speeds",
+            "note": "Changes color mapping only; legend labels remain actual m/s. Recompute after changing."
+          },
+          {
+            "label": "smoothDisplay",
+            "type": "toggle",
+            "def": "On",
+            "range": "On / Off",
+            "note": "Three display-smoothing passes without crossing obstacles. Does not change speed readings or directions; immediate and preserved by Bake."
+          },
+          {
+            "label": "showDiagnostics",
+            "type": "toggle",
+            "def": "Off",
+            "range": "On / Off",
+            "note": "Immediately shows geometry/voxel diagnostics instead of speed colors and animated trails; cannot be baked."
+          },
+          {
+            "label": "animate",
+            "type": "toggle",
+            "def": "On",
+            "range": "On / Off",
+            "note": "Shows horizontal flow direction; animation speed is not a wind-speed reading. 3D animation starts after completion; tilted slices are unsupported."
+          },
+          {
+            "label": "particleCount",
+            "type": "integer",
+            "def": "240",
+            "range": "0–2000",
+            "note": "0 hides trails; immediate, affects animated preview only, not the number of baked static direction lines."
+          },
+          {
+            "label": "trailLength",
+            "type": "double",
+            "def": "25",
+            "range": "1–500 m",
+            "note": "Maximum particle trail length, independent of speed values."
+          },
+          {
+            "label": "legendMaximum",
+            "type": "double",
+            "def": "0",
+            "range": "0–100 m/s",
+            "note": "Expert: 0 covers the peak automatically; a low manual cap saturates colors without changing speeds."
+          },
+          {
+            "label": "emptyTunnel",
+            "type": "toggle",
+            "def": "Off",
+            "range": "On / Off",
+            "note": "Excludes buildings from the computation; 3D retains ground and domain. Does not delete Rhino objects."
+          },
+          {
+            "label": "showGrid",
+            "type": "toggle",
+            "def": "On",
+            "range": "On / Off",
+            "note": "Temporary grid lines: solver grid in 2D, output grid in 3D; dense grids use a reduced line preview."
           }
         ],
-        "output": "Wind speed magnitude vertex shaded mesh + legend (Conceptual 2D); or background CFD calculation results (Engineering mode)",
-        "notes": "Conceptual 2D model LBM with fixed iteration of 600 steps; engineering CFD running in the background.",
-        "illustrations": [],
+        "output": "Use a modeless panel to calculate 2D concept or 3D wind fields, preview speed colors, a legend and animated trails, and query sample values. Bake the colored mesh, legend and static direction lines to Rhino when ready.",
+        "notes": "The panel switches its parameter area with the active solver mode. The screenshot shows part of the simple Concept2D interface. Its 48.90-degree direction, 3 m analysis height and 800 trails are example settings rather than defaults.\n\n## Interface layout\n\n- Top: select or update buildings and the analysis boundary; the status line reports the current selection.\n- Scrollable center: common settings first, mode-specific Concept2D or EngineeringCFD settings next, then shared display and diagnostic controls.\n- Fixed bottom: Calculate, Cancel, Bake, progress, elapsed time and the result summary. Results remain temporary previews until baked; closing the panel clears temporary previews.\n- Inspect 3D Solid Occupancy (No Solve): builds solver voxels and compares them with geometry sections without solving the flow or writing objects.\n- Restore Automatic Grid Recommendations: exits manual grid sizing for the active mode without changing its iteration budget.\n- Query Speed: reports the nearest sample's speed and horizontal components, not an on-site measurement. During calculation it reads a sampled snapshot.\n\n## Reading colors, trails and results\n\n- Nonlinear colors allocate more color range to low speeds; display smoothing does not modify raw speed readings. Dark blue does not mean zero speed: query a point for its value.\n- Gray denotes buildings or invalid/unresolved regions, not zero speed. Diagnostic colors mean geometry section (gray), voxel occupancy/unconfirmed thin walls (orange), missed geometry (red), and invalid sampling (purple); none represents wind speed.\n- Animated trails indicate horizontal flow direction only. Do not infer speed from their playback rate. 2D uses the latest field; 3D plays only after completion, and tilted slices are unsupported.\n- The screenshot reports that the step cap was reached without convergence, so it is a design preview. Open-section, thin-wall or missed-geometry warnings require checking model closure, grids and diagnostics before recalculating.\n- Concept2D cannot simulate flow over rooftops. EngineeringCFD also requires empty-tunnel, grid and domain-sensitivity validation. Previews, visual enhancement and unconverged results are not engineering verification or reliable quantitative assessments.",
+        "illustrations": [
+          {
+            "alt": "Updated wind-analysis panel with a horizontal speed slice and white animated trails around buildings",
+            "caption": "Updated panel and building wind-field preview. Nonlinear low-speed colors and display smoothing are enabled; trails indicate direction only. This example reached its 1200-step cap without convergence and has not been baked; it is a design preview."
+          }
+        ],
         "videos": [
           {
             "title": "RsTool · Wind Analysis Demonstration Teaching (Bilibili)"

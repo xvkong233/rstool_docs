@@ -24,6 +24,13 @@ function translatableSource(item, detail) {
             note: param.note || ''
           }))
         : [],
+      paramSections: Array.isArray(detail.paramSections)
+        ? detail.paramSections.map((section) => ({
+            title: section.title || '',
+            intro: section.intro || '',
+            params: Array.isArray(section.params) ? section.params : []
+          }))
+        : undefined,
       output: detail.output || '',
       notes: detail.notes || '',
       illustrations: normalizeIllustrations(detail).map((illustration) => ({
@@ -70,6 +77,13 @@ function localizeCommand(item, detail, translations) {
     ...(translatedDetail.params?.[index] || {}),
     zh: translatedDetail.params?.[index]?.label || param.zh
   }))
+  const localizedParamSections = (detail.paramSections || []).map(
+    (section, index) => ({
+      ...section,
+      ...(translatedDetail.paramSections?.[index] || {}),
+      params: section.params || []
+    })
+  )
 
   return {
     item: {
@@ -83,6 +97,7 @@ function localizeCommand(item, detail, translations) {
       ...detail,
       flow: translatedDetail.flow || [],
       params: localizedParams,
+      paramSections: localizedParamSections,
       output: translatedDetail.output || '',
       notes: translatedDetail.notes || '',
       illustrations: localizedIllustrations,

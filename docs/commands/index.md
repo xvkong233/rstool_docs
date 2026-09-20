@@ -1,6 +1,6 @@
 # RsTool 命令参考
 
-> 覆盖 RsTool 插件全部 277 条命令，每条命令一个独立页面，含功能、调用方式、交互流程、参数表、输出、备注与教学视频。
+> 覆盖 RsTool 插件全部 278 条命令，每条命令一个独立页面，含功能、调用方式、交互流程、参数表、输出、备注与教学视频。
 
 ## AI（4 条）
 
@@ -56,7 +56,7 @@
 - [rsFpsGame · FPS 反应测试](/commands/rsFpsGame) — 在 Rhino 中玩 FPS 反应测试小游戏，测试你的反应速度。
 - [rsTxtReader · 命令行 TXT 阅读器](/commands/rsTxtReader) — 在 Rhino 命令行按页阅读 .txt 文本文件，支持翻页、跳行、调整每行字数、正倒序显示，自动识别 UTF-8 / GBK 编码。
 
-## 建筑（25 条）
+## 建筑（26 条）
 
 ### 道路
 
@@ -85,6 +85,7 @@
 - [rsCurtainPlus · 增强版幕墙](/commands/rsCurtainPlus) — 增强版幕墙创建工具，提供更多参数和定制选项。
 - [rsOldTownRoof · 老镇屋顶](/commands/rsOldTownRoof) — 生成老镇风格的传统坡屋顶，含屋脊、檐口等构件。
 - [rsRoofTile · 屋顶瓦生成](/commands/rsRoofTile) — 在屋顶曲面上生成瓦片铺装，支持不同瓦片类型和排列方式。
+- [rsSlab · 参数楼板](/commands/rsSlab) — 由一条或多条封闭平面曲线生成向下加厚的参数楼板，支持嵌套边界与通过自定义属性文本修改板厚。
 
 ### 三维墙体
 
@@ -272,7 +273,7 @@
 - [rsSolarFocusRiskSimulation · 泛光聚光分析](/commands/rsSolarFocusRiskSimulation) — 模拟反射面造成的聚光风险，分析光斑分布和强度。
 - [rsVisibilityAnalysis · 可见性分析](/commands/rsVisibilityAnalysis) — 从指定视点分析场景中各区域的可见性，以颜色映射可视化。
 - [rsViewshedAnalysis · 视野分析](/commands/rsViewshedAnalysis) — 计算指定观察点的视域范围，分析视野开阔度。
-- [rsWindAnalysis · 风环境分析](/commands/rsWindAnalysis) — 对建筑周围的风环境进行 CFD 分析，可视化风速和风压分布。
+- [rsWindAnalysis · 风环境分析](/commands/rsWindAnalysis) — 通过独立面板进行二维概念或三维风环境分析，预览风速色彩图与动态流线，支持点选读数和 Bake。
 - [rsStructuralAnalysis · 结构力学分析](/commands/rsStructuralAnalysis) — 对结构进行力学分析，可视化和计算受力情况。
 
 ## 物理模拟（7 条）

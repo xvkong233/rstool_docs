@@ -283,6 +283,13 @@
   },
   {
    "cat": "建筑",
+   "sub": "建筑构件",
+   "name": "rsSlab",
+   "zh": "参数楼板",
+   "desc": "由一条或多条封闭平面曲线生成向下加厚的参数楼板，支持嵌套边界与通过自定义属性文本修改板厚。"
+  },
+  {
+   "cat": "建筑",
    "sub": "三维墙体",
    "name": "rsWall",
    "zh": "智能墙体",
@@ -1120,7 +1127,7 @@
    "sub": "建筑物理分析",
    "name": "rsWindAnalysis",
    "zh": "风环境分析",
-   "desc": "对建筑周围的风环境进行 CFD 分析，可视化风速和风压分布。"
+   "desc": "通过独立面板进行二维概念或三维风环境分析，预览风速色彩图与动态流线，支持点选读数和 Bake。"
   },{
    "cat": "分析",
    "sub": "建筑物理分析",
@@ -5342,6 +5349,38 @@
     }
    ]
   },
+  "rsSlab": {
+   "license": true,
+   "help": null,
+   "style": "cli",
+   "flow": [
+    "在 Rhino 命令行输入 rsSlab",
+    "在选择阶段按需点击命令行选项「板厚」，输入楼板厚度",
+    "选择一条或多条封闭、共面的平面曲线；外轮廓与内轮廓可组成带洞楼板，互不相交的区域会分别生成楼板",
+    "按 Enter 确认，命令沿世界 -Z 方向加厚并生成封闭 Brep 实体",
+    "命令自动选中新楼板；后续可在对象属性的「自定义属性文本」中修改 RSToolSlabThickness，插件会按新厚度重建楼板"
+   ],
+   "params": [
+    {
+     "zh": "板厚",
+     "en": "Thickness",
+     "type": "double",
+     "def": "0.2 m；之后沿用上次输入值",
+     "range": "≥ max（文档绝对公差，0.001 m）",
+     "note": "选择曲线时可通过命令行选项修改；界面按当前 Rhino 文档单位显示，生成方向固定为世界 -Z"
+    },
+    {
+     "zh": "参数楼板板厚",
+     "en": "RSToolSlabThickness",
+     "type": "user text",
+     "def": "创建时的板厚",
+     "range": "≥ max（文档绝对公差，0.001 m）",
+     "note": "生成后在对象属性的「自定义属性文本」中编辑，数值使用当前文档单位；输入无效值或重建失败时自动恢复原值"
+    }
+   ],
+   "output": "由封闭平面曲线生成一个或多个向世界 -Z 方向加厚的封闭 Brep 参数楼板，并写入 RSTool 楼板类型及板厚元数据",
+   "notes": "rsSlab 生成带板厚元数据的封闭 Brep 楼板，创建和板厚修改均支持 Rhino Undo。\n\n## 曲线要求\n\n仅接受封闭且平面的曲线。用于同一楼板的外轮廓和洞口轮廓必须共面，并具有有效的嵌套关系；无法生成有效平面的曲线组合会被拒绝。选择多个互不相交的封闭区域时，命令会分别生成多个楼板。\n\n## 参数化板厚\n\n楼板顶面保留在输入曲线所在平面，实体沿世界 `-Z` 方向生成，因此倾斜曲线平面不会改变加厚方向。生成后选择楼板，在 Rhino 对象属性的「自定义属性文本」中修改 `RSToolSlabThickness`，插件会保留顶面位置并沿原加厚方向重建实体。该数值使用当前文档单位；必须为有效正数，且不能小于文档绝对公差与 1 mm 换算值中的较大者。\n\n参数化依赖命令写入的楼板标记、面索引和几何签名。若使用其他建模命令改变楼板拓扑，插件检测到几何已不再匹配时会移除参数化标记，此后修改 `RSToolSlabThickness` 不再自动重建。复制或重新打开仍保持有效元数据的楼板，可继续修改板厚。"
+  },
   "rsWall": {
    "license": true,
    "help": "https://www.rstoolarchi.com/detail/48",
@@ -7141,112 +7180,351 @@
   "rsWindAnalysis": {
    "license": true,
    "help": null,
-   "style": "cli",
+   "style": "form",
    "flow": [
-    "选择模拟模式（概念二维 / 工程 CFD）",
-    "概念二维：选择障碍网格 → 输入风向（度） → 输入入口风速(m/s) → 选择矩形边界（闭合曲线） → 输入分析网格尺寸 → 选择平滑 → 选择尾流响应 → 运行 LBM（固定 600 步）",
-    "工程 CFD：选择障碍网格 → 选择 CFD 边界 → 设置风向/参考风速/地表粗糙度/质量/网格尺寸/体素尺寸/迭代次数 → 后台计算",
-    "生成风速着色网格与图例（或后台 CFD 任务结果）"
+    "运行 rsWindAnalysis 打开非模态面板；默认简易版、Concept2D 和快速出图，可切换专家版查看全部参数。",
+    "点击「选择 / 更新建筑」选择 Mesh、Brep、Extrusion、SubD 或块；不要选分析边框或旧结果平面。建筑按快照读取，修改模型后需重新选择。",
+    "点击「选择 / 更新边框」选择闭合矩形，边框高度作为初始分析高度；二维使用水平矩形。检查网格预览和范围。",
+    "通过罗盘或角度输入设置风吹向，再设置来流风速、分析高度和快捷预设；需要控制网格与步数时切换专家版。",
+    "点击「计算 / 重新计算」。计算中可编辑参数，但修改只在下次计算生效；可点击「取消计算」请求停止。",
+    "检查风速色彩图、图例和底部状态，使用「点选查询风速」读取最近采样点；按需开启动态流线、显示平滑或网格诊断。",
+    "确认结果后点击「Bake / 写入文档」，写入彩色网格、图例和静态风向线，可 Undo；诊断图不能 Bake，同一结果不能重复写入。"
+   ],
+   "paramSections": [
+    {
+     "title": "通用设置",
+     "intro": "这组控件始终位于面板上方，用于选择界面层级与计算模式，并设置两种模式共用的风向、风速和分析高度。简易版适合直接选择快捷预设；专家版会展开当前模式的网格、预算与诊断参数。",
+     "params": [
+      "interfaceLevel",
+      "simulationMode",
+      "simplePreset",
+      "windDirectionDegrees",
+      "referenceSpeed",
+      "analysisHeight",
+      "passageWidth"
+     ]
+    },
+    {
+     "title": "Concept2D（二维概念）面板",
+     "intro": "Concept2D 使用水平切片和恒定来流，计算与显示共用一张二维网格，适合快速比较总图方案。切换专家版后可设置网格间距、最大步数和残差容许值；它不能模拟气流越过屋顶。",
+     "params": [
+      "conceptGrid",
+      "conceptSteps",
+      "conceptTolerance"
+     ]
+    },
+    {
+     "title": "EngineeringCFD（三维工程）面板",
+     "intro": "EngineeringCFD 构建包含建筑高度和地面的三维体素风洞。内部求解体素决定几何捕捉与计算量，输出网格只决定结果切片的采样与显示；统计预设可能运行数小时，仍需检查收敛、守恒以及网格和计算域敏感性。",
+     "params": [
+      "calculationPreset",
+      "roughnessPreset",
+      "qualityMode",
+      "targetVoxelSize",
+      "analysisGridSize",
+      "iterations",
+      "autoIterationBudget",
+      "warmupFlowPasses",
+      "averagingFlowPasses",
+      "meanTolerance",
+      "massTolerance",
+      "paddingScale",
+      "collisionModel",
+      "conservativeVoxelization",
+      "wakeVisualizationEnhancement"
+     ]
+    },
+    {
+     "title": "显示、诊断与输出",
+     "intro": "这些控件用于两种模式的结果表达和检查。色阶、显示平滑与动态流线不会改写计算风速；点选查询才是读取数值的入口。诊断图只检查几何和网格，不能 Bake。",
+     "params": [
+      "colorPresentation",
+      "smoothDisplay",
+      "showDiagnostics",
+      "animate",
+      "particleCount",
+      "trailLength",
+      "legendMaximum",
+      "emptyTunnel",
+      "showGrid"
+     ]
+    }
    ],
    "params": [
     {
-     "zh": "模拟模式",
+     "zh": "参数界面",
+     "en": "interfaceLevel",
+     "type": "list",
+     "def": "简易版",
+     "range": "简易版 / 专家版",
+     "note": "专家版展开网格、步数、统计及诊断；切换界面不重置参数。"
+    },
+    {
+     "zh": "计算模式",
      "en": "simulationMode",
      "type": "list",
      "def": "Concept2D",
      "range": "Concept2D / EngineeringCFD",
-     "note": "概念二维为快速 LBM 近似；工程 CFD 为后台高质量求解"
+     "note": "二维恒定来流适合快速比较，仅支持水平切片；三维考虑建筑高度和地面。"
     },
     {
-     "zh": "风向角度",
+     "zh": "快捷预设",
+     "en": "simplePreset",
+     "type": "list",
+     "def": "快速出图",
+     "range": "快速出图 / 标准比较 / 精细比较",
+     "note": "二维分别 600/1200/2400 步，通道参考 15/10/6 m；三维分别 120/600/1500 步。选择后恢复自动网格并重置预算。"
+    },
+    {
+     "zh": "吹向角度",
      "en": "windDirectionDegrees",
      "type": "double",
-     "def": "_lastWindDirectionDegrees",
-     "range": "角度（度）",
-     "note": "来流方向，沿用上次值"
+     "def": "0（可沿用已保存值）",
+     "range": "−360–360°",
+     "note": "从世界 +X 逆时针计角：0°向东、90°向北；表示吹去方向，不是气象来风方向。可拖动罗盘。"
     },
     {
-     "zh": "入口风速",
-     "en": "inletWindSpeed",
-     "type": "double",
-     "def": "_lastWindSpeedMetersPerSecond",
-     "range": ">0 (m/s)",
-     "note": "概念二维入口风速"
-    },
-    {
-     "zh": "分析网格尺寸",
-     "en": "targetGridSize",
-     "type": "double",
-     "def": "min(边界宽,边界高)/50",
-     "range": ">0（模型单位）",
-     "note": "概念二维网格单元尺寸"
-    },
-    {
-     "zh": "结果平滑",
-     "en": "smoothingIterations",
-     "type": "list",
-     "def": "Light",
-     "range": "NoSmooth=0 / Light=1 / Medium=3",
-     "note": "风速场平滑强度"
-    },
-    {
-     "zh": "尾流响应",
-     "en": "wakeResponseMode",
-     "type": "list",
-     "def": "Balanced",
-     "range": "Stable / Balanced / TurbulentVisual",
-     "note": "尾流可视化风格"
-    },
-    {
-     "zh": "参考风速",
+     "zh": "来流风速",
      "en": "referenceSpeed",
      "type": "double",
-     "def": "",
-     "range": ">0 (m/s)",
-     "note": "工程 CFD 模式使用的参考风速"
+     "def": "3",
+     "range": "0.01–100 m/s",
+     "note": "二维为恒定来流；三维为当前分析高度的入口风速，其他高度按地形剖面变化；不是结果最大值。"
     },
     {
-     "zh": "地表粗糙度",
+     "zh": "分析高度",
+     "en": "analysisHeight",
+     "type": "double",
+     "def": "1.5；选框后取边框高度",
+     "range": "0.01–10000 m",
+     "note": "水平切片的世界 Z 高度，不是距屋面高度。三维斜切片以中心高度为基准，此栏不可编辑。"
+    },
+    {
+     "zh": "关注的最窄通道",
+     "en": "passageWidth",
+     "type": "double",
+     "def": "随快捷预设：15 / 10 / 6",
+     "range": "0–10000 m",
+     "note": "专家参数；用户指定需要保留的宽度。自动网格不大于宽度 / 3；0 关闭约束，不覆盖手动网格。"
+    },
+    {
+     "zh": "二维网格间距",
+     "en": "conceptGrid",
+     "type": "double",
+     "def": "自动推荐",
+     "range": "0.000001–1000000 m",
+     "note": "范围短边 / 50，并受通道约束；计算与显示共用，最多 80 万节点。间距减半，节点数约增至 4 倍。"
+    },
+    {
+     "zh": "二维最大步数",
+     "en": "conceptSteps",
+     "type": "integer",
+     "def": "随快捷预设：600 / 1200 / 2400",
+     "range": "20–1000000",
+     "note": "达到残差条件可提前结束；达到上限不代表收敛。"
+    },
+    {
+     "zh": "二维速度残差容许值",
+     "en": "conceptTolerance",
+     "type": "double",
+     "def": "0.05%",
+     "range": "0.001–10%",
+     "note": "越小越严格；不是实际风速测量误差。"
+    },
+    {
+     "zh": "三维精度 / 耗时预设",
+     "en": "calculationPreset",
+     "type": "list",
+     "def": "快速预览",
+     "range": "快速 / 标准 / 精细 / 统计 / 自定义",
+     "note": "步数预算 120/600/1500/20000；节点预算 20万/80万/300万/300万。联动网格与质量，前三档均为预览。"
+    },
+    {
+     "zh": "入口地形粗糙度",
      "en": "roughnessPreset",
      "type": "list",
-     "def": "",
-     "range": "Open / Suburban / Urban / DenseUrban",
-     "note": "工程 CFD 地表粗糙度预设"
+     "def": "城市",
+     "range": "开阔地 / 郊区 / 城市 / 密集城市",
+     "note": "控制三维入口随高度变化的风速剖面，不是经过校准的地面壁面函数。"
     },
     {
-     "zh": "质量模式",
+     "zh": "质量 / 内存预算",
      "en": "qualityMode",
      "type": "list",
-     "def": "",
-     "range": "Preview / Balanced / Fine",
-     "note": "工程 CFD 网格质量，决定默认网格尺寸与迭代次数"
+     "def": "随三维预设",
+     "range": "预览 / 均衡 / 精细",
+     "note": "影响计算域留白及安全节点预算，同时受耗时预设上限约束。"
     },
     {
-     "zh": "CFD 网格尺寸",
-     "en": "analysisGridSize",
-     "type": "double",
-     "def": "按质量模式默认",
-     "range": ">0",
-     "note": "工程 CFD 平面网格尺寸"
-    },
-    {
-     "zh": "体素尺寸",
+     "zh": "求解网格边长",
      "en": "targetVoxelSize",
      "type": "double",
-     "def": "",
-     "range": ">0",
-     "note": "工程 CFD 体素（三维）尺寸"
+     "def": "按范围、预设及预算推荐",
+     "range": "0.000001–1000000 m",
+     "note": "实际三维体素边长；手动设置超预算时停止，不自动改粗。间距减半，节点数约增至 8 倍。"
     },
     {
-     "zh": "迭代次数",
+     "zh": "输出网格",
+     "en": "analysisGridSize",
+     "type": "double",
+     "def": "范围短边 / 30、50 或 100",
+     "range": "0.000001–1000000 m",
+     "note": "仅三维结果采样和显示；加密不提高内部求解精度，通常也不明显改变求解耗时。"
+    },
+    {
+     "zh": "三维最大计算步数",
      "en": "iterations",
      "type": "integer",
-     "def": "按质量模式默认",
-     "range": "≥1",
-     "note": "工程 CFD 求解迭代步数"
+     "def": "随预设：120 / 600 / 1500 / 20000",
+     "range": "20–1000000",
+     "note": "迭代上限；长时间计算也不自动保证收敛。"
+    },
+    {
+     "zh": "按流经时间自动估算",
+     "en": "autoIterationBudget",
+     "type": "toggle",
+     "def": "随三维预设",
+     "range": "开 / 关",
+     "note": "按预热与统计流经次数估算步数，仍受最大步数限制。"
+    },
+    {
+     "zh": "预热：流经次数",
+     "en": "warmupFlowPasses",
+     "type": "double",
+     "def": "2",
+     "range": "0.1–20",
+     "note": "正式统计前的预热时长，以流经计算域次数计。"
+    },
+    {
+     "zh": "统计：流经次数",
+     "en": "averagingFlowPasses",
+     "type": "double",
+     "def": "2",
+     "range": "1.5–20",
+     "note": "预热后时间统计的目标长度；短预览可能尚未进入统计。"
+    },
+    {
+     "zh": "均值窗口差容许值",
+     "en": "meanTolerance",
+     "type": "double",
+     "def": "2%",
+     "range": "0.01–10%",
+     "note": "相邻时间平均窗口差的阈值。"
+    },
+    {
+     "zh": "质量平衡容许值",
+     "en": "massTolerance",
+     "type": "double",
+     "def": "2%",
+     "range": "0.01–10%",
+     "note": "流入流出与守恒误差阈值，不能单独证明工程精度。"
+    },
+    {
+     "zh": "计算域留白倍率",
+     "en": "paddingScale",
+     "type": "double",
+     "def": "1",
+     "range": "1–5",
+     "note": "增大会增加节点量与流经时间；过小会加重边界影响。"
+    },
+    {
+     "zh": "三维碰撞模型",
+     "en": "collisionModel",
+     "type": "list",
+     "def": "TRT + Smagorinsky",
+     "range": "BGK / TRT / TRT + Smagorinsky",
+     "note": "基础、双松弛、带亚格子耗散三种模型；切换不等于完成湍流精度验证。"
+    },
+    {
+     "zh": "开放薄壁膨胀一格",
+     "en": "conservativeVoxelization",
+     "type": "toggle",
+     "def": "关",
+     "range": "开 / 关",
+     "note": "三维保守占据，可减少漏风，也可能封堵窄通道。"
+    },
+    {
+     "zh": "视觉增强",
+     "en": "wakeVisualizationEnhancement",
+     "type": "toggle",
+     "def": "关",
+     "range": "开 / 关",
+     "note": "三维尾流显示增强，不用于定量评价。"
+    },
+    {
+     "zh": "色阶显示",
+     "en": "colorPresentation",
+     "type": "list",
+     "def": "突出低风速 · 非线性色阶",
+     "range": "原始线性 / 突出低风速",
+     "note": "仅调整颜色分配，不改变计算风速；图例仍为真实 m/s，修改后重新计算。"
+    },
+    {
+     "zh": "平滑二维色彩图",
+     "en": "smoothDisplay",
+     "type": "toggle",
+     "def": "开",
+     "range": "开 / 关",
+     "note": "三次邻域显示平滑，不跨障碍；不改风速读数或流向，即时生效，Bake 保留显示效果。"
+    },
+    {
+     "zh": "网格诊断图",
+     "en": "showDiagnostics",
+     "type": "toggle",
+     "def": "关",
+     "range": "开 / 关",
+     "note": "即时切换几何/体素诊断，隐藏风速色阶与动态流线；诊断图不可 Bake。"
+    },
+    {
+     "zh": "显示动态流线",
+     "en": "animate",
+     "type": "toggle",
+     "def": "开",
+     "range": "开 / 关",
+     "note": "只表示水平流向，动画速度不是风速读数；三维完成后播放，斜切片不支持。"
+    },
+    {
+     "zh": "流线数量",
+     "en": "particleCount",
+     "type": "integer",
+     "def": "240",
+     "range": "0–2000",
+     "note": "0 隐藏；即时生效，仅影响动态预览，不改变 Bake 静态风向线数量。"
+    },
+    {
+     "zh": "轨迹长度",
+     "en": "trailLength",
+     "type": "double",
+     "def": "25",
+     "range": "1–500 m",
+     "note": "粒子历史轨迹的最大长度，与风速数值独立。"
+    },
+    {
+     "zh": "图例上限",
+     "en": "legendMaximum",
+     "type": "double",
+     "def": "0",
+     "range": "0–100 m/s",
+     "note": "专家参数；0 自动覆盖峰值，手动低上限导致颜色饱和，不改变风速。"
+    },
+    {
+     "zh": "空风场 / 空风洞检查",
+     "en": "emptyTunnel",
+     "type": "toggle",
+     "def": "关",
+     "range": "开 / 关",
+     "note": "从计算中移除建筑；三维保留地面与计算域，不删除 Rhino 对象。"
+    },
+    {
+     "zh": "预览分析网格",
+     "en": "showGrid",
+     "type": "toggle",
+     "def": "开",
+     "range": "开 / 关",
+     "note": "临时网格线；二维为计算网格，三维为输出网格，过密时抽稀显示。"
     }
    ],
-   "output": "风速大小顶点着色网格 + 图例（概念二维）；或后台 CFD 计算结果（工程模式）",
+   "output": "通过非模态面板计算二维概念或三维风场，临时预览风速色彩图、图例和动态流线，支持点选读数；确认后 Bake 彩色网格、图例及静态风向线到 Rhino 文档。",
    "videos": [
     {
      "provider": "bilibili",
@@ -7254,7 +7532,14 @@
      "title": "RsTool · 风环境分析（Wind Analysis）演示教学（B 站）"
     }
    ],
-   "notes": "概念二维模式 LBM 固定迭代 600 步；工程 CFD 在后台运行。"
+   "notes": "面板会根据当前计算模式切换参数区。截图显示的是 Concept2D 简易界面中的一部分；48.90°、3 m 分析高度和 800 条流线均为示例设置，不是默认值。\n\n## 界面布局\n\n- 顶部：选择或更新建筑、分析边框，下方显示当前选择状态。\n- 中部滚动区：先显示通用设置，再根据模式显示 Concept2D 或 EngineeringCFD 参数；最后是两种模式共用的显示与诊断控件。\n- 底部固定区：计算、取消、Bake、进度条、耗时和结果摘要。计算结束先保留临时预览，不自动写入 Rhino 文档；关闭面板会清除临时预览。\n- 「检查三维固体占据（不求解）」：只建立求解体素并对照几何截面，不迭代风场、不写文档。\n- 「恢复当前模式的自动网格推荐」：退出当前模式的手动网格设置，不改变计算步数。\n- 「点选查询风速」：读取最近采样点的速度及水平分量，不是现场实测；计算过程中读到的是抽样快照。\n\n## 颜色、流线与结果判读\n\n- 非线性色阶只是把更多颜色分配给低风速区；显示平滑不修改原始风速读数。深蓝不等于零风速，具体值请点选查询。\n- 灰色为建筑或无效/未解析区域，不应解读为零风速。诊断图中的灰色代表几何截面、橙色代表体素占据/未确认薄壁、红色代表几何漏捕获、紫色代表无效采样，均非风速颜色。\n- 动态流线仅辅助判断水平流向，不能通过动画移动速度估算风速；二维沿最新速度场播放，三维仅在计算完成后播放，斜切片不支持。\n- 截图底部显示「达到步数上限但未收敛」，所以该图是方案预览。出现开放截线、薄壁或漏捕获提示时，应检查模型闭合性、网格与诊断结果，再重新计算。\n- Concept2D 无法模拟越过屋顶的气流。EngineeringCFD 也需进行空风洞、网格和计算域敏感性验证；预览、视觉增强或未收敛结果不能直接作为工程验证或可靠定量评价。",
+   "illustrations": [
+    {
+     "src": "assets/rsWindAnalysis/wind-analysis-panel-20260920.png",
+     "alt": "新版风环境分析面板与建筑群水平切片风速色彩图、白色动态流线",
+     "caption": "新版风环境分析示例：左侧为可滚动参数面板，右侧为建筑群水平切片风速预览。采用突出低风速的非线性色阶与显示平滑；流线只表示流向。示例计算达到 1200 步上限但未收敛，尚未 Bake，仅用于方案预览。"
+    }
+   ]
   },
   "rsBubble": {
    "license": true,

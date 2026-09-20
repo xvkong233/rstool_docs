@@ -1,6 +1,6 @@
 # RsTool Command Reference
 
-> Complete reference for all 277 RsTool commands. Each command has a dedicated page covering its purpose, invocation, workflow, parameters, output, notes, and tutorials.
+> Complete reference for all 278 RsTool commands. Each command has a dedicated page covering its purpose, invocation, workflow, parameters, output, notes, and tutorials.
 
 ## AI (4)
 
@@ -56,7 +56,7 @@
 - [rsFpsGame · FPS reaction test](/en/commands/rsFpsGame) — Play the FPS Reaction Test mini-game in Rhino to test your reaction speed.
 - [rsTxtReader · Command-Line Text Reader](/en/commands/rsTxtReader) — Read .txt text files page by page on the Rhino command line. It supports turning pages, skipping lines, adjusting the number of words per line, displaying in forward and reverse order, and automatically recognizing UTF-8 / GBK encoding.
 
-## Architecture (25)
+## Architecture (26)
 
 ### Roads
 
@@ -85,6 +85,7 @@
 - [rsCurtainPlus · Enhanced Curtain Wall](/en/commands/rsCurtainPlus) — Enhanced curtain wall creation tool with more parameters and customization options.
 - [rsOldTownRoof · Traditional Roof](/en/commands/rsOldTownRoof) — Generate a traditional pitched roof in the old town style, including ridges, cornices and other components.
 - [rsRoofTile · Roof tile generation](/en/commands/rsRoofTile) — Generate tile paving on the roof surface, supporting different tile types and arrangements.
+- [rsSlab · Parametric Slab](/en/commands/rsSlab) — Create downward-thickened parametric slabs from one or more closed planar curves, with nested boundaries and editable thickness through object user text.
 
 ### 3D Walls
 
@@ -272,7 +273,7 @@
 - [rsSolarFocusRiskSimulation · Solar Glare Risk Analysis](/en/commands/rsSolarFocusRiskSimulation) — Simulate the risk of light concentration caused by reflective surfaces and analyze the distribution and intensity of light spots.
 - [rsVisibilityAnalysis · Visibility Analysis](/en/commands/rsVisibilityAnalysis) — Analyzes the visibility of various areas in the scene from a specified viewpoint, visualizing it as a color map.
 - [rsViewshedAnalysis · Viewshed Analysis](/en/commands/rsViewshedAnalysis) — Calculate the field of view of the designated observation point and analyze the openness of the field of view.
-- [rsWindAnalysis · Wind environment analysis](/en/commands/rsWindAnalysis) — Perform CFD analysis of the wind environment around the building to visualize wind speed and pressure distribution.
+- [rsWindAnalysis · Wind environment analysis](/en/commands/rsWindAnalysis) — Use a modeless panel for 2D concept or 3D wind analysis, with speed-color previews, animated trails, point queries and Bake.
 - [rsStructuralAnalysis · Structural mechanics analysis](/en/commands/rsStructuralAnalysis) — Perform mechanical analysis on structures to visualize and calculate stress conditions.
 
 ## Physics Simulation (7)

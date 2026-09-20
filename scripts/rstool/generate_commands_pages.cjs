@@ -206,19 +206,45 @@ function renderCommand(item, detail, locale) {
   lines.push('')
   const params = Array.isArray(detail.params) ? detail.params : []
   if (params.length) {
-    lines.push(`| ${text.parameterHeaders.join(' | ')} |`)
-    lines.push('| --- | --- | --- | --- | --- | --- |')
-    params.forEach((param) =>
-      lines.push(
-        `| ${esc(param.zh)} | ${esc(param.en)} | ${esc(param.type)} | ${esc(param.def)} | ${esc(param.range)} | ${esc(param.note)} |`
+    const renderParameterTable = (entries) => {
+      lines.push(`| ${text.parameterHeaders.join(' | ')} |`)
+      lines.push('| --- | --- | --- | --- | --- | --- |')
+      entries.forEach((param) =>
+        lines.push(
+          `| ${esc(param.zh)} | ${esc(param.en)} | ${esc(param.type)} | ${esc(param.def)} | ${esc(param.range)} | ${esc(param.note)} |`
+        )
       )
-    )
+      lines.push('')
+    }
+    const sections = Array.isArray(detail.paramSections)
+      ? detail.paramSections
+      : []
+    if (sections.length) {
+      const rendered = new Set()
+      for (const section of sections) {
+        const names = new Set(section.params || [])
+        const entries = params.filter((param) => names.has(param.en))
+        if (!entries.length) continue
+        lines.push(`### ${esc(section.title)}`)
+        lines.push('')
+        if (section.intro) {
+          lines.push(esc(section.intro))
+          lines.push('')
+        }
+        entries.forEach((param) => rendered.add(param.en))
+        renderParameterTable(entries)
+      }
+      const remaining = params.filter((param) => !rendered.has(param.en))
+      if (remaining.length) renderParameterTable(remaining)
+    } else {
+      renderParameterTable(params)
+    }
   } else {
     lines.push(
       `> ${detail.style === 'gh' ? text.noGhParams : text.noCliParams}`
     )
+    lines.push('')
   }
-  lines.push('')
 
   if (detail.output && detail.output !== func) {
     lines.push(`**${text.output}**${text.separator}${esc(detail.output)}`)
