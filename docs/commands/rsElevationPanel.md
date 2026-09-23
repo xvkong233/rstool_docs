@@ -21,3 +21,8 @@
 > 此命令无命令行数值参数，相关设置在窗口中调整。
 
 **备注**：输入对象需为 rsElevation2D 生成的标高对象或群组。
+
+**教学视频**：
+
+<iframe class="rstool-video" src="https://player.bilibili.com/player.html?isOutside=true&bvid=BV1pjha66EsJ&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" title="RsTool · rsElevationPanel 标高面板功能介绍（B 站）"></iframe>
+*RsTool · rsElevationPanel 标高面板功能介绍（B 站）*

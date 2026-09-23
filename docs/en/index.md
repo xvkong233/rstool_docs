@@ -4,7 +4,7 @@ layout: home
 hero:
   name: RsTool
   text: Complete Rhino Plugin Command Reference
-  tagline: 278 commands · 18 categories, with functions, parameters, workflows, and illustrations
+  tagline: 280 commands · 18 categories, with functions, parameters, workflows, and illustrations
   image:
     src: /logo.png
     alt: RsTool
@@ -19,7 +19,7 @@ hero:
 features:
   - icon: 📖
     title: Complete Command Reference
-    details: A dedicated page for each of 278 commands, including its purpose, parameters, and workflow, plus a categorized index for quick access.
+    details: A dedicated page for each of 280 commands, including its purpose, parameters, and workflow, plus a categorized index for quick access.
   - icon: 🗂️
     title: Category Navigation
     details: Browse 18 categories such as Architecture, Geometry, Terrain, Documentation, and Grasshopper Components.

@@ -1,6 +1,6 @@
 # RsTool 命令参考
 
-> 覆盖 RsTool 插件全部 278 条命令，每条命令一个独立页面，含功能、调用方式、交互流程、参数表、输出、备注与教学视频。
+> 覆盖 RsTool 插件全部 280 条命令，每条命令一个独立页面，含功能、调用方式、交互流程、参数表、输出、备注与教学视频。
 
 ## AI（4 条）
 
@@ -239,7 +239,7 @@
 - [rsAutoBoxMapping · 自动盒映射](/commands/rsAutoBoxMapping) — 自动为对象设置盒映射贴图坐标，适合建筑模型快速贴图。
 - [rsPBRToCustomMaterial · PBR转自定义材质](/commands/rsPBRToCustomMaterial) — 将 PBR 材质转换为 Rhino 自定义材质，便于在低版本 Rhino 中使用。
 
-## 视图出图（16 条）
+## 视图出图（17 条）
 
 ### 标注出图
 
@@ -252,6 +252,7 @@
 - [rsQuickNest · 快速排料](/commands/rsQuickNest) — 将多个平面图形进行排版嵌套，优化材料利用率。
 - [rsShadowRender · 建筑渲染窗口](/commands/rsShadowRender) — 打开建筑渲染窗口，含阴影渲染功能，快速生成建筑表现图。
 - [rsPolylineSection · 折线剖切](/commands/rsPolylineSection) — 沿折线或曲线生成剖切，可在观察者一侧指定剖切深度，并增删折点。
+- [rsSectionPositionPanel · 建筑剖切面板](/commands/rsSectionPositionPanel) — 打开可停靠的建筑剖切管理面板，集中新增、激活、重命名、翻转和删除折线剖切，并按视口管理活动剖切。
 
 ### 视图相机
 
@@ -306,7 +307,7 @@
 - [rsProfileDirector · Profile Director](/commands/rsProfileDirector) — 打开截面管理器，管理截面轮廓库并沿路径挤出。
 - [rsProfileDirectorAddProfile · 添加截面](/commands/rsProfileDirectorAddProfile) — 向 Profile Director 添加新的截面轮廓。
 
-## 辅助工具（20 条）
+## 辅助工具（21 条）
 
 ### 剪贴板
 
@@ -318,6 +319,7 @@
 
 - [rsGroupToBlock · 组转块](/commands/rsGroupToBlock) — 将选中的组转换为块定义，减少文件体积。
 - [rsExplodeNestedBlocks · 炸开嵌套块](/commands/rsExplodeNestedBlocks) — 递归炸开所有嵌套的块实例，直至最底层图元。
+- [rsFlattenBlockElevation · 图块统一标高](/commands/rsFlattenBlockElevation) — 将所选图块及其嵌套内容拍平到指定的世界 Z 标高，同时为每个所选实例创建独立块定义。
 
 ### 系统工具
 

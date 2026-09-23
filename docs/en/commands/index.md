@@ -1,6 +1,6 @@
 # RsTool Command Reference
 
-> Complete reference for all 278 RsTool commands. Each command has a dedicated page covering its purpose, invocation, workflow, parameters, output, notes, and tutorials.
+> Complete reference for all 280 RsTool commands. Each command has a dedicated page covering its purpose, invocation, workflow, parameters, output, notes, and tutorials.
 
 ## AI (4)
 
@@ -239,7 +239,7 @@
 - [rsAutoBoxMapping · Automatic box mapping](/en/commands/rsAutoBoxMapping) — Automatically set box mapping mapping coordinates for objects, suitable for quick mapping of architectural models.
 - [rsPBRToCustomMaterial · PBR to custom material](/en/commands/rsPBRToCustomMaterial) — Convert PBR materials to Rhino custom materials for easy use in lower versions of Rhino.
 
-## Views & Documentation (16)
+## Views & Documentation (17)
 
 ### Annotation & Documentation
 
@@ -252,6 +252,7 @@
 - [rsQuickNest · Quick nesting](/en/commands/rsQuickNest) — Layout and nest multiple plane graphics to optimize material utilization.
 - [rsShadowRender · Architectural rendering window](/en/commands/rsShadowRender) — Open the architectural rendering window, including shadow rendering function, to quickly generate architectural renderings.
 - [rsPolylineSection · Polyline section](/en/commands/rsPolylineSection) — Create a section along a polyline or curve, specify the section depth on the viewer's side, and add or delete vertices.
+- [rsSectionPositionPanel · Architectural Section Panel](/en/commands/rsSectionPositionPanel) — Open the dockable architectural section panel to create, activate, rename, flip, and delete polyline sections, with active sections managed independently for each viewport.
 
 ### Views & Cameras
 
@@ -306,7 +307,7 @@
 - [rsProfileDirector · Profile Director](/en/commands/rsProfileDirector) — Open the Section Manager to manage a library of section profiles and extrude along paths.
 - [rsProfileDirectorAddProfile · Add Profile](/en/commands/rsProfileDirectorAddProfile) — Add a new profile to Profile Director.
 
-## Utilities (20)
+## Utilities (21)
 
 ### Clipboard
 
@@ -318,6 +319,7 @@
 
 - [rsGroupToBlock · Convert Group to Block](/en/commands/rsGroupToBlock) — Convert selected groups to block definitions to reduce file size.
 - [rsExplodeNestedBlocks · Explode nested blocks](/en/commands/rsExplodeNestedBlocks) — Recursively explode all nested block instances down to the lowest primitive.
+- [rsFlattenBlockElevation · Flatten Block Elevation](/en/commands/rsFlattenBlockElevation) — Flatten selected blocks and their nested contents to a specified world Z elevation while creating an independent block definition for each selected instance.
 
 ### System Tools
 
