@@ -4232,6 +4232,114 @@
         ]
       }
     },
+    "rsRandomOffsetSrf": {
+      "sourceHash": "735dc2fadbdeda6688b06a3b251a75084679685e09d9dc91a74be88fbdcf39e4",
+      "title": "Random Offset Surfaces",
+      "desc": "Give each surface or polysurface a random thickness and offset it along its normal, as a solid or offset surfaces.",
+      "detail": {
+        "flow": [
+          "Enter rsRandomOffsetSrf in the Rhino command line to open the Random Offset Surfaces window.",
+          "Click Pick Objects, select one or more surfaces or polysurfaces, and press Enter.",
+          "Set the minimum and maximum thickness, choose a direction and whether to make solids, then adjust Extend if needed.",
+          "Check the translucent viewport preview and click Generate when ready."
+        ],
+        "params": [
+          {
+            "label": "Minimum",
+            "type": "number",
+            "def": "0.1 m (converted to document units)",
+            "range": "> 0 and ≤ maximum",
+            "note": "Lower end of the random thickness range for each source object. A polysurface receives one thickness as a whole."
+          },
+          {
+            "label": "Maximum",
+            "type": "number",
+            "def": "1 m (converted to document units)",
+            "range": "≥ minimum",
+            "note": "Upper end of the range. The preview updates as you change it while the random sequence stays stable."
+          },
+          {
+            "label": "Direction",
+            "type": "option",
+            "def": "Positive",
+            "range": "Positive / Negative / Both sides (centered)",
+            "note": "Offset to one side of the surface normal, or distribute the thickness equally on both sides."
+          },
+          {
+            "label": "Solid",
+            "type": "toggle",
+            "def": "Yes",
+            "range": "Yes / No",
+            "note": "Create a solid with thickness. When off, create offset surfaces only; centered mode creates a surface on each side."
+          },
+          {
+            "label": "Extend",
+            "type": "toggle",
+            "def": "Yes",
+            "range": "Yes / No",
+            "note": "Extend adjacent faces while offsetting to help resolve polysurface joins."
+          }
+        ],
+        "output": "New offset surfaces or solids (Brep). The source objects remain; results are grouped and selected.",
+        "notes": "Random thickness is assigned per source object, not per face of a polysurface. If an offset fails, try a smaller thickness or inspect the input surfaces; the window reports the failure count.",
+        "illustrations": [],
+        "videos": []
+      }
+    },
+    "rsRandomOffsetMesh": {
+      "sourceHash": "b0e67dcc1714dcf4684c4691dac08c5e8b2d912f6763804d7d885d3af81bd307",
+      "title": "Random Offset Mesh",
+      "desc": "Give each mesh face its own random thickness and offset it along its face normal, optionally as a solid panel.",
+      "detail": {
+        "flow": [
+          "Enter rsRandomOffsetMesh in the Rhino command line to open the Random Offset Mesh window.",
+          "Click Pick Objects, select one or more meshes, and press Enter.",
+          "Set the thickness range, direction, Solid option, and UnweldMesh option.",
+          "Check the translucent viewport preview and click Generate when ready."
+        ],
+        "params": [
+          {
+            "label": "Minimum",
+            "type": "number",
+            "def": "0.1 m (converted to document units)",
+            "range": "≥ 0 and ≤ maximum",
+            "note": "Lower end of the random thickness range, sampled separately for each mesh face."
+          },
+          {
+            "label": "Maximum",
+            "type": "number",
+            "def": "1 m (converted to document units)",
+            "range": "≥ minimum; above model tolerance when Solid is on",
+            "note": "Upper end of the range. Changing settings keeps the random face-by-face pattern stable."
+          },
+          {
+            "label": "Direction",
+            "type": "option",
+            "def": "Positive",
+            "range": "Positive / Negative / Both sides (centered)",
+            "note": "Offset along each face normal; centered mode places half the thickness on either side of the original face."
+          },
+          {
+            "label": "Solid",
+            "type": "toggle",
+            "def": "Yes",
+            "range": "Yes / No",
+            "note": "Build top and bottom caps plus sidewalls for each face to make closed panels. When off, output offset faces; centered mode outputs faces on both sides."
+          },
+          {
+            "label": "UnweldMesh",
+            "type": "toggle",
+            "def": "Yes",
+            "range": "Yes / No",
+            "note": "Unweld faces by default to keep hard edges around individual panels."
+          }
+        ],
+        "output": "New face-by-face random offset meshes (Mesh). Source meshes remain; results are grouped and selected.",
+        "notes": "Unlike rsRandomOffsetSrf, this command chooses a thickness for each mesh face. It does not produce one continuous, uniformly thick offset of the entire mesh; use it for varied panel relief.",
+        "illustrations": [],
+        "videos": []
+      }
+    },
     "rsMeshWindow": {
       "sourceHash": "1cddf8da84074c1580561aecafcb5aa13a25a95545ca408e87b6493016b8231f",
       "title": "Mesh Toolkit",
@@ -6694,6 +6802,62 @@
             "caption": ""
           }
         ],
+        "videos": []
+      }
+    },
+    "rsPointDim": {
+      "sourceHash": "0a5333704cadc70ecbcbe5bff092a319dcda24d69d571dca8eab6bae0a87b8ff",
+      "title": "Point Dimension",
+      "desc": "Open the point-dimension panel to create continuous dimensions in Auto, Horizontal, Vertical, or Aligned mode, and to merge or split linear dimensions.",
+      "detail": {
+        "flow": [
+          "Run rsPointDim to open the modeless Point Dimensions panel; running it again brings the existing panel to the front",
+          "Choose Auto, Horizontal, Vertical, or Aligned direction; the panel also displays the current Rhino dimension style",
+          "Click Point Dimension, then pick the first point, second point, and dimension-line position",
+          "Continue picking dimension points; an orange dynamic preview sorts them along the dimension direction and displays adjacent segments",
+          "Press Enter or right-click to finish, choose Undo to remove the previous point, or press Esc to cancel the entire operation",
+          "Alternatively, click Merge to combine contiguous dimensions or Split to divide an existing dimension at one or more internal points"
+        ],
+        "params": [
+          {
+            "label": "Direction",
+            "type": "select",
+            "def": "Aligned",
+            "range": "Auto / Horizontal / Vertical / Aligned",
+            "note": "Horizontal and Vertical use the active viewport CPlane X/Y axes. Auto chooses between them from the dimension-line placement. Aligned locks to the direction from the first point to the second."
+          },
+          {
+            "label": "Dimension Style",
+            "type": "status",
+            "def": "Current Rhino dimension style",
+            "range": "Read-only",
+            "note": "The panel automatically displays the document's current dimension style, which is used for new dimensions. Switch the current style in Rhino to change it."
+          },
+          {
+            "label": "Point Dimension",
+            "type": "button",
+            "def": "—",
+            "range": "Continuous point picking",
+            "note": "Creates consecutive dimension segments sorted along the chosen direction and places them on the current layer."
+          },
+          {
+            "label": "Merge",
+            "type": "button",
+            "def": "—",
+            "range": "At least two linear or aligned dimensions",
+            "note": "Selected dimensions must share the same type, plane, direction, and dimension line, with end-to-end contiguous intervals and no gaps or overlaps."
+          },
+          {
+            "label": "Split",
+            "type": "button",
+            "def": "—",
+            "range": "One linear or aligned dimension",
+            "note": "Pick one or more distinct internal split points to replace the original dimension with multiple contiguous segments."
+          }
+        ],
+        "output": "Creates continuous linear or aligned dimensions using the current layer and dimension style, or merges and splits existing dimensions into new dimension objects.",
+        "notes": "## Four direction modes\n\n- **Auto**: Automatically chooses Horizontal or Vertical on the active CPlane according to where the dimension line is placed relative to the first two points.\n- **Horizontal**: Measures along the active viewport CPlane X axis. Picked points are projected onto the CPlane.\n- **Vertical**: Measures along the active viewport CPlane Y axis. Picked points are projected onto the CPlane.\n- **Aligned**: Uses the spatial direction from the first point to the second as the locked axis. Later points become stations along that axis, making this mode suitable for diagonal or spatial continuous dimensions.\n\n## Merge and split\n\n- Merge accepts only editable, unlocked, non-reference linear or aligned dimensions. Linear and aligned types cannot be mixed. The result inherits the first dimension's object attributes and resets its text to the measured value.\n- During Split, the source dimension is temporarily hidden and is shown again if the operation is canceled. Output segments inherit its attributes and also reset their text to measured values.\n- Create, Merge, and Split are recorded in Rhino Undo. If writing fails, created or deleted objects are rolled back.\n\nThe panel is bound to the Rhino document from which it was opened. If another document is active or another Rhino command is running, finish that command and return to the original document first. The panel closes automatically with its document.",
+        "illustrations": [],
         "videos": []
       }
     },
@@ -9271,20 +9435,27 @@
       }
     },
     "rsSuExport": {
-      "sourceHash": "3fe8496b791ac8adf2a6860e161039778c936f0f1c0aea541a94740ca851294b",
+      "sourceHash": "10162a8d0fccb9e1dff78fc8229222662e5128b78d1bd430488b53bc1a03957d",
       "title": "Export to SketchUp",
-      "desc": "Export selected Rhino objects to SketchUp (.skp) format files.",
+      "desc": "Turn Rhino objects and layers into blocks, export using render meshes, and make the SKP easier to manage and potentially smoother to navigate in SketchUp.",
       "detail": {
         "flow": [
-          "Command line input rsSuExport",
-          "Select objects to export",
-          "Internally packed by layer into temporary blocks (preserving block instances)",
-          "The save dialog box pops up and select the .skp path.",
-          "Export to SketchUp file and clean temporary blocks"
+          "Run rsSuExport and choose the model and .skp destination",
+          "The command wraps ordinary objects in separate blocks; existing Rhino blocks keep their instance and nested relationships where possible",
+          "It then wraps objects from each Rhino layer in an outer block, making layer-based selection and organization easier in SketchUp",
+          "For export, it prefers Rhino render meshes, then creates the SKP file and reports what it processed"
         ],
-        "params": [],
-        "output": "Pack selected objects into temporary blocks by layer and export as SketchUp (.skp) file (preserving block component structure)",
-        "notes": "Export quality is determined by Rhino's current mesh parameters; curves that are too short will be filtered; no user-adjustable numerical parameters",
+        "params": [
+          {
+            "label": "Output Path",
+            "type": "file",
+            "def": "Selected by the user",
+            "range": "*.skp",
+            "note": "Chosen in the save dialog. The target format is fixed to SketchUp 2016, and the command exposes no other export options."
+          }
+        ],
+        "output": "Creates an SKP file with top-level components organized by Rhino layer, separate components for ordinary objects, preserved block instances where possible, and render meshes for surface geometry.",
+        "notes": "## What the command does\n\nThink of this command as “organize the model, then export the SKP.” It wraps ordinary objects in separate blocks. Objects that are already Rhino blocks keep their shared definitions and nested instances where possible. The command then adds another block for each Rhino layer, placing that layer's content inside it. Once the file is open in SketchUp, layer-based selection, hiding, and navigation are easier to manage.\n\n## Why the SketchUp model is often easier to work with\n\nFor surfaces, polysurfaces, extrusions, and similar geometry, the command first uses Rhino's existing **render meshes**. If no usable mesh is cached, it generates one from the object or document meshing settings. SubDs are meshed at medium display density. Repeated Rhino block instances continue to share a converted definition instead of each becoming a complete independent copy.\n\nThis can keep the component structure and geometry more manageable, often reducing the work SketchUp has to do when selecting, hiding, or navigating the model. A source model with an extremely high polygon count can still be slow; the command cannot guarantee a lag-free result.\n\n## Check Rhino's display quality before exporting\n\nThe curved surfaces you see in the SKP depend largely on the render meshes Rhino uses for export. Inspect arcs, cylinders, and other curved edges in Rhino's Shaded or Rendered view first. If they visibly look faceted, increase mesh quality a little. If the model looks smooth but is already very heavy, use a more reasonable mesh density. **Higher quality usually means more faces and a larger file**, which can make SketchUp slower. Getting Rhino's display and mesh settings right before exporting is usually easier than fixing the SKP afterward.\n\n## How it differs from a normal SKP export\n\n| | `rsSuExport` | Standard Rhino SKP export |\n| --- | --- | --- |\n| Organization | Wraps ordinary objects in blocks, then adds a layer block; tries to preserve shared and nested Rhino blocks | Passes the selection directly to Rhino's SKP exporter; component structure depends on that exporter |\n| Surfaces | Extracts or generates Rhino render meshes before export, letting you tune quality in Rhino first | The SKP exporter handles tessellation while writing the file |\n| Output settings | Fixed to SketchUp 2016, with planar regions exported as polygons | Supported versions and related settings can be chosen in Rhino's export options |\n\nThe final file is still written by Rhino's SKP exporter. This command adds block organization and mesh preparation before that step, and its temporary blocks are cleaned from the current Rhino model afterward. Objects that cannot be meshed are tried as original geometry; very short curves may be skipped. To send a model directly to a running SketchUp instance, use `rsSendToSU`.",
         "illustrations": [],
         "videos": []
       }
@@ -9312,6 +9483,26 @@
             "title": "RsTool · Send model to SketchUp (Send to SketchUp) demonstration tutorial (Bilibili)"
           }
         ]
+      }
+    },
+    "rsSendToCAD": {
+      "sourceHash": "feef690b3613e82ef482df3dd0583be1ea0e63c2798b492bc60131dffffd54c6",
+      "title": "Send Model to AutoCAD",
+      "desc": "Send selected Rhino objects to AutoCAD using real units; if the receiver is offline, the batch is queued for the target drawing to claim later.",
+      "detail": {
+        "flow": [
+          "Set the correct real-world units in Rhino and in the target AutoCAD drawing, then open the AutoCAD document that should receive the model",
+          "Preselect objects in Rhino and run rsSendToCAD; if nothing is preselected, follow the command-line prompt to select objects",
+          "On first use, the command automatically installs or updates the AutoCAD receiver plugin for the current Windows user",
+          "The selected objects are written to the transfer queue as DWG 2018 data, preserving world coordinates, full layer paths, and RGB colors",
+          "If the AutoCAD receiver is online, it automatically imports the objects into the target drawing and selects them; otherwise, the batch remains queued",
+          "If the batch is not received automatically, run rsCadReceivePending in the target AutoCAD drawing; the send result and transfer ID are reported on the command line"
+        ],
+        "params": [],
+        "output": "Converts the selected Rhino objects to DWG 2018 data and sends them to AutoCAD, importing immediately when online or queuing them for the target drawing when offline.",
+        "notes": "## First-time installation and receiving\n\n- AutoCAD 2020–2027 is supported. The first run of `rsSendToCAD` automatically installs or updates `RSTool.CadTransfer.bundle` for the current user from the RSTool distribution, without administrator rights.\n- If AutoCAD is already open, restart it so the newly installed plugin can load; the current batch remains queued. If Rhino reports that the old plugin is in use and the update was deferred, close AutoCAD, run `rsSendToCAD` once more in Rhino, and then reopen AutoCAD.\n- A message saying that the receiver is not connected does not mean the send failed. Start or restart AutoCAD and run `rsCadReceivePending` in the target drawing. If that command is unknown, the receiver plugin has not loaded.\n\n## Units and conversion\n\n- The Rhino document must have valid model units, and the AutoCAD drawing should have the correct `INSUNITS`. Transfer scales data according to real units on both sides and stops when units are undefined or unsupported.\n- Rhino exports DWG 2018 without flattening: surfaces and solids use Solid mode, meshes remain meshes, and full layer paths, RGB colors, and world coordinates are preserved.\n- DWG conversion may alter the type or appearance of text, dimensions, hatches, and special objects. Dynamic-block parameters, external references, and custom object data are not guaranteed to survive. Check position, solid closure, fonts, and annotations after sending important models.\n\n## Selection and troubleshooting\n\n- Preselected objects are sent directly; selection is requested only when nothing is preselected. The original Rhino selection state is restored when the command ends.\n- Objects unsupported by Rhino's DWG exporter can cause the send to fail, with details shown on the command line. Transfer data is stored under `%LOCALAPPDATA%\\RSTool\\RhinoCadTransfer` for approximately 24 hours for troubleshooting.",
+        "illustrations": [],
+        "videos": []
       }
     },
     "rsMayaTransferSettings": {

@@ -258,7 +258,14 @@ function renderCommand(item, detail, locale) {
     : ''
   if (rawNotes) {
     const segments = rawNotes.split(/\n\n+/)
-    lines.push(`**${text.notes}**${text.separator}${esc(segments.shift())}`)
+    const firstSegment = segments.shift()
+    if (/^#{1,6}\s/.test(firstSegment)) {
+      lines.push(`**${text.notes}**${text.separator.trimEnd()}`)
+      lines.push('')
+      lines.push(esc(firstSegment))
+    } else {
+      lines.push(`**${text.notes}**${text.separator}${esc(firstSegment)}`)
+    }
     lines.push('')
     while (segments.length) {
       for (const line of segments.shift().split('\n')) lines.push(esc(line))

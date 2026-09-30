@@ -1,6 +1,6 @@
 # RsTool Command Reference
 
-> Complete reference for all 280 RsTool commands. Each command has a dedicated page covering its purpose, invocation, workflow, parameters, output, notes, and tutorials.
+> Complete reference for all 284 RsTool commands. Each command has a dedicated page covering its purpose, invocation, workflow, parameters, output, notes, and tutorials.
 
 ## AI (4)
 
@@ -142,7 +142,7 @@
 - [rsTerrainAnalysis · Terrain analysis](/en/commands/rsTerrainAnalysis) — Multi-dimensional analysis of terrain: elevation, slope, aspect, concavity, roughness, etc., visualized with color mapping.
 - [rsRainFlowSimulation · Rainwater Flow Analysis](/en/commands/rsRainFlowSimulation) — Simulate the flow path of rainwater on terrain surfaces for drainage analysis.
 
-## Geometry (38)
+## Geometry (40)
 
 ### Curves
 
@@ -161,10 +161,12 @@
 
 - [rsLoftCurvesPairs · Loft Curve Pairs](/en/commands/rsLoftCurvesPairs) — Loft out multiple sets of curves in pairs to generate surfaces, and process multiple sets of sections in batches.
 - [rsSectionSweep · Section sweep](/en/commands/rsSectionSweep) — Sweep the section along the path curve to generate a surface, supporting variable sections.
+- [rsRandomOffsetSrf · Random Offset Surfaces](/en/commands/rsRandomOffsetSrf) — Give each surface or polysurface a random thickness and offset it along its normal, as a solid or offset surfaces.
 
 ### Meshes
 
 - [rsMeshWindow · Mesh Toolkit](/en/commands/rsMeshWindow) — Open the mesh tool window and integrate a variety of mesh editing and processing functions.
+- [rsRandomOffsetMesh · Random Offset Mesh](/en/commands/rsRandomOffsetMesh) — Give each mesh face its own random thickness and offset it along its face normal, optionally as a solid panel.
 - [rsTriRemesh · Triangle Remesh](/en/commands/rsTriRemesh) — Re-triangulate the mesh to generate a uniform triangular mesh. Supports control by side length.
 - [rsDualMesh · Dual Mesh](/en/commands/rsDualMesh) — Generate the dual mesh of the mesh, converting the face centers to vertices.
 - [rsDiamondMesh · Diamond Mesh](/en/commands/rsDiamondMesh) — Convert the mesh to a diamond mesh representation.
@@ -239,7 +241,7 @@
 - [rsAutoBoxMapping · Automatic box mapping](/en/commands/rsAutoBoxMapping) — Automatically set box mapping mapping coordinates for objects, suitable for quick mapping of architectural models.
 - [rsPBRToCustomMaterial · PBR to custom material](/en/commands/rsPBRToCustomMaterial) — Convert PBR materials to Rhino custom materials for easy use in lower versions of Rhino.
 
-## Views & Documentation (17)
+## Views & Documentation (18)
 
 ### Annotation & Documentation
 
@@ -249,6 +251,7 @@
 - [rsDiagramArrow · Diagram Arrow](/en/commands/rsDiagramArrow) — Create analysis schematic arrows with adjustable arrow style, size, and color.
 - [rsDiagramArrowEdit · Edit Diagram Arrow](/en/commands/rsDiagramArrowEdit) — Edit the parameters and style of the created schematic arrow.
 - [rsHeightDot · Elevation Marker](/en/commands/rsHeightDot) — Create elevation label points, label point heights or XYZ coordinates, and support calculations based on custom working planes.
+- [rsPointDim · Point Dimension](/en/commands/rsPointDim) — Open the point-dimension panel to create continuous dimensions in Auto, Horizontal, Vertical, or Aligned mode, and to merge or split linear dimensions.
 - [rsQuickNest · Quick nesting](/en/commands/rsQuickNest) — Layout and nest multiple plane graphics to optimize material utilization.
 - [rsShadowRender · Architectural rendering window](/en/commands/rsShadowRender) — Open the architectural rendering window, including shadow rendering function, to quickly generate architectural renderings.
 - [rsPolylineSection · Polyline section](/en/commands/rsPolylineSection) — Create a section along a polyline or curve, specify the section depth on the viewer's side, and add or delete vertices.
@@ -307,7 +310,7 @@
 - [rsProfileDirector · Profile Director](/en/commands/rsProfileDirector) — Open the Section Manager to manage a library of section profiles and extrude along paths.
 - [rsProfileDirectorAddProfile · Add Profile](/en/commands/rsProfileDirectorAddProfile) — Add a new profile to Profile Director.
 
-## Utilities (21)
+## Utilities (22)
 
 ### Clipboard
 
@@ -337,8 +340,9 @@
 
 ### Import & Export
 
-- [rsSuExport · Export to SketchUp](/en/commands/rsSuExport) — Export selected Rhino objects to SketchUp (.skp) format files.
+- [rsSuExport · Export to SketchUp](/en/commands/rsSuExport) — Turn Rhino objects and layers into blocks, export using render meshes, and make the SKP easier to manage and potentially smoother to navigate in SketchUp.
 - [rsSendToSU · Send model to SketchUp](/en/commands/rsSendToSU) — Send selected Rhino objects to running SketchUp with one click (real-time linked push) without exporting files.
+- [rsSendToCAD · Send Model to AutoCAD](/en/commands/rsSendToCAD) — Send selected Rhino objects to AutoCAD using real units; if the receiver is offline, the batch is queued for the target drawing to claim later.
 - [rsMayaTransferSettings · Rhino-Maya transfer settings](/en/commands/rsMayaTransferSettings) — Opens the settings window for model transfer between Rhino and Maya.
 - [rsSendToMaya · Send model to Maya](/en/commands/rsSendToMaya) — Send selected objects in Rhino to Maya.
 

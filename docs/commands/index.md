@@ -1,6 +1,6 @@
 # RsTool 命令参考
 
-> 覆盖 RsTool 插件全部 280 条命令，每条命令一个独立页面，含功能、调用方式、交互流程、参数表、输出、备注与教学视频。
+> 覆盖 RsTool 插件全部 284 条命令，每条命令一个独立页面，含功能、调用方式、交互流程、参数表、输出、备注与教学视频。
 
 ## AI（4 条）
 
@@ -142,7 +142,7 @@
 - [rsTerrainAnalysis · 地形分析](/commands/rsTerrainAnalysis) — 对地形进行多维度分析：高程、坡度、坡向、凹凸性、粗糙度等，以彩色映射可视化。
 - [rsRainFlowSimulation · 雨流分析](/commands/rsRainFlowSimulation) — 模拟雨水在地形表面的流动路径，用于排水分析。
 
-## 几何（38 条）
+## 几何（40 条）
 
 ### 曲线
 
@@ -161,10 +161,12 @@
 
 - [rsLoftCurvesPairs · 成对放样](/commands/rsLoftCurvesPairs) — 将多组曲线成对放样生成曲面，批量处理多组截面。
 - [rsSectionSweep · 剖面扫掠](/commands/rsSectionSweep) — 沿路径曲线扫掠截面生成曲面，支持变截面。
+- [rsRandomOffsetSrf · 随机偏移曲面](/commands/rsRandomOffsetSrf) — 为每个曲面或多重曲面随机设置厚度，沿法线偏移，可生成实体或偏移曲面。
 
 ### 网格
 
 - [rsMeshWindow · 网格工具](/commands/rsMeshWindow) — 打开网格工具窗口，集成多种网格编辑和处理功能。
+- [rsRandomOffsetMesh · 随机偏移网格](/commands/rsRandomOffsetMesh) — 让网格的每个面分别随机取厚度并沿面法线偏移，可生成逐面实体。
 - [rsTriRemesh · 三角重构](/commands/rsTriRemesh) — 对网格进行三角面重新划分，生成均匀的三角网格。支持按边长控制。
 - [rsDualMesh · 对偶网格](/commands/rsDualMesh) — 生成网格的对偶网格，将面中心转为顶点。
 - [rsDiamondMesh · 菱形网格](/commands/rsDiamondMesh) — 将网格转换为菱形网格表示。
@@ -239,7 +241,7 @@
 - [rsAutoBoxMapping · 自动盒映射](/commands/rsAutoBoxMapping) — 自动为对象设置盒映射贴图坐标，适合建筑模型快速贴图。
 - [rsPBRToCustomMaterial · PBR转自定义材质](/commands/rsPBRToCustomMaterial) — 将 PBR 材质转换为 Rhino 自定义材质，便于在低版本 Rhino 中使用。
 
-## 视图出图（17 条）
+## 视图出图（18 条）
 
 ### 标注出图
 
@@ -249,6 +251,7 @@
 - [rsDiagramArrow · 示意箭头](/commands/rsDiagramArrow) — 创建分析示意箭头，可调整箭头样式、大小和颜色。
 - [rsDiagramArrowEdit · 编辑示意箭头](/commands/rsDiagramArrowEdit) — 编辑已创建的示意箭头的参数和样式。
 - [rsHeightDot · 高程点](/commands/rsHeightDot) — 创建高程标注点，标注点的高度或 XYZ 坐标，支持基于自定义工作平面计算。
+- [rsPointDim · 逐点标注](/commands/rsPointDim) — 打开逐点标注面板，按自动、水平、垂直或对齐方向连续生成尺寸，并可合并或拆分线性标注。
 - [rsQuickNest · 快速排料](/commands/rsQuickNest) — 将多个平面图形进行排版嵌套，优化材料利用率。
 - [rsShadowRender · 建筑渲染窗口](/commands/rsShadowRender) — 打开建筑渲染窗口，含阴影渲染功能，快速生成建筑表现图。
 - [rsPolylineSection · 折线剖切](/commands/rsPolylineSection) — 沿折线或曲线生成剖切，可在观察者一侧指定剖切深度，并增删折点。
@@ -307,7 +310,7 @@
 - [rsProfileDirector · Profile Director](/commands/rsProfileDirector) — 打开截面管理器，管理截面轮廓库并沿路径挤出。
 - [rsProfileDirectorAddProfile · 添加截面](/commands/rsProfileDirectorAddProfile) — 向 Profile Director 添加新的截面轮廓。
 
-## 辅助工具（21 条）
+## 辅助工具（22 条）
 
 ### 剪贴板
 
@@ -337,8 +340,9 @@
 
 ### 导入导出
 
-- [rsSuExport · 导出SketchUp](/commands/rsSuExport) — 将选中的 Rhino 对象导出为 SketchUp（.skp）格式文件。
+- [rsSuExport · 导出SketchUp](/commands/rsSuExport) — 把 Rhino 物体和图层整理成 Block，并使用渲染网格导出 SKP，让模型在 SketchUp 中更方便管理、尽量减轻卡顿。
 - [rsSendToSU · 发送模型到SketchUp](/commands/rsSendToSU) — 将选中的 Rhino 对象一键发送到正在运行的 SketchUp（实时联动推送），无需导出文件。
+- [rsSendToCAD · 发送模型到AutoCAD](/commands/rsSendToCAD) — 将选中的 Rhino 对象按真实单位发送到 AutoCAD；接收端未连接时自动排队，稍后可在目标图纸领取。
 - [rsMayaTransferSettings · Rhino-Maya 传输设置](/commands/rsMayaTransferSettings) — 打开 Rhino 与 Maya 之间模型传输的设置窗口。
 - [rsSendToMaya · 发送模型到 Maya](/commands/rsSendToMaya) — 将 Rhino 中选定的对象发送到 Maya。
 

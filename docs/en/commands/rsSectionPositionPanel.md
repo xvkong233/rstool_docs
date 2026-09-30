@@ -32,7 +32,9 @@
 | Flip Direction | FlipDirection | button | — | Single selection | Reverses the viewer side of the selected section and immediately updates its clipping direction. |
 | Deactivate Current Viewport | DeactivateCurrentViewport | button | — | Active viewport | Disables architectural sectioning only in the active viewport without deleting the section line or affecting other viewports. |
 
-**Notes**: ## Usage notes
+**Notes**:
+
+## Usage notes
 
 - An architectural section line is an editable Rhino curve, so you can use Move, Rotate, Gumball, or control points to change its position and jogs. It is not an ordinary native ClippingPlane.
 - Activation is mutually exclusive within a viewport: enabling one section disables the previously active section in that viewport. Different viewports can keep different sections active.

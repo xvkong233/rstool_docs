@@ -23,7 +23,9 @@
 | --- | --- | --- | --- | --- | --- |
 | Target Elevation | TargetElevation | double | Previous value (0 on first use) | Any valid finite number, in the current Rhino document units | The world Z coordinate of all block contents is set to this value, while the world X and Y coordinates remain unchanged. |
 
-**Notes**: ## Processing rules
+**Notes**:
+
+## Processing rules
 
 - Projection is performed in **world coordinates**: world X and Y positions are preserved while every point receives the target Z elevation. Existing translation, rotation, scale, and nested transforms are baked into the final geometry first.
 - Nested blocks are recursively expanded into leaf objects, so the new definition no longer contains nested references. Object attributes such as layer, color, and material are preserved on the copied leaf objects.
