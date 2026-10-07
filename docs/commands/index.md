@@ -1,6 +1,6 @@
 # RsTool 命令参考
 
-> 覆盖 RsTool 插件全部 284 条命令，每条命令一个独立页面，含功能、调用方式、交互流程、参数表、输出、备注与教学视频。
+> 覆盖 RsTool 插件全部 287 条命令，每条命令一个独立页面，含功能、调用方式、交互流程、参数表、输出、备注与教学视频。
 
 ## AI（4 条）
 
@@ -28,7 +28,7 @@
 - [rsMaterial · 材质库](/commands/rsMaterial) — 打开材质库窗口，浏览和管理内置材质资源。支持 PBR 材质预览。
 - [rsMaterialLibraryOld · 旧版材质库](/commands/rsMaterialLibraryOld) — 旧版材质库窗口，保留兼容。
 
-## 效率工具（10 条）
+## 效率工具（11 条）
 
 ### 生产力
 
@@ -39,6 +39,7 @@
 - [rsWhiteboard · 白板](/commands/rsWhiteboard) — 打开白板工具，可在 Rhino 中进行自由绘制和标注。
 - [rsModelingCompanion · 建模陪伴](/commands/rsModelingCompanion) — 在 Rhino 界面中唤出建模陪伴助手，可随时隐藏或恢复。
 - [rsModelingCompanionSettings · 建模陪伴设置](/commands/rsModelingCompanionSettings) — 打开建模陪伴助手的设置窗口，配置助手形象与行为。
+- [rsSettingsTransfer · Rhino / RSTool 设置迁移](/commands/rsSettingsTransfer) — 将 Rhino 和 RSTool 的常用设置打包导出，在另一台电脑导入；支持工具列、显示模式、模板和可选 API 凭据迁移。
 
 ### 屏幕工具
 
@@ -46,7 +47,7 @@
 - [rsKeyCast · 按键显示](/commands/rsKeyCast) — 在屏幕上实时显示当前按下的快捷键，适合教学演示和录屏。
 - [rsKeyCastSettings · 按键显示设置](/commands/rsKeyCastSettings) — 打开按键显示的设置面板，可调整位置、大小、样式等。
 
-## 趣味（5 条）
+## 趣味（7 条）
 
 ### 互动娱乐
 
@@ -55,6 +56,11 @@
 - [rsWalker · 漫游模式](/commands/rsWalker) — 在 Rhino 模型中进行第一人称漫游，类似游戏式的场景探索。
 - [rsFpsGame · FPS 反应测试](/commands/rsFpsGame) — 在 Rhino 中玩 FPS 反应测试小游戏，测试你的反应速度。
 - [rsTxtReader · 命令行 TXT 阅读器](/commands/rsTxtReader) — 在 Rhino 命令行按页阅读 .txt 文本文件，支持翻页、跳行、调整每行字数、正倒序显示，自动识别 UTF-8 / GBK 编码。
+
+### 植物生成
+
+- [rsLSystemTree · L-system 树枝](/commands/rsLSystemTree) — 从指定根部生成自然分叉的树枝，支持多种树形预设、实时预览及中心线、SubD、网格输出。
+- [rsIvy · 藤蔓生成](/commands/rsIvy) — 让藤蔓沿选定物体表面攀爬，自动分枝并生成叶片，可调整生长方式、藤条粗细和叶片密度。
 
 ## 建筑（26 条）
 

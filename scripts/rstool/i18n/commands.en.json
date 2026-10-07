@@ -43,6 +43,7 @@
     "生产力": "Productivity",
     "屏幕工具": "Screen Tools",
     "互动娱乐": "Interactive Entertainment",
+    "植物生成": "Plant Generation",
     "道路": "Roads",
     "楼梯与坡道": "Stairs & Ramps",
     "建筑构件": "Building Elements",
@@ -1228,6 +1229,54 @@
         "videos": []
       }
     },
+    "rsSettingsTransfer": {
+      "sourceHash": "b21bd72b8ba8e563e9719a140e6297bda3fa9a57c58711c66f0bb70547a00431",
+      "title": "Rhino / RSTool Settings Transfer",
+      "desc": "Export commonly used Rhino and RSTool settings for import on another computer, including toolbars, display modes, templates, and optional API credentials.",
+      "detail": {
+        "flow": [
+          "On the source computer, enter rsSettingsTransfer and choose Export.",
+          "Choose whether to include API keys, tokens, and proxy credentials saved by RSTool. The default excludes them. Choose a destination for the .rssettings package.",
+          "Copy the package to the target computer, which must have the same Rhino major version and the required plugins installed. Run rsSettingsTransfer and choose Import.",
+          "Select the package, review its source versions, file count, credential status, and external resource count, then confirm. The command first backs up the target computer's settings.",
+          "Save your models and close every Rhino window, including other running Rhino 8 or 9 instances. The settings are written after they exit and take effect the next time Rhino starts."
+        ],
+        "params": [
+          {
+            "label": "Action",
+            "type": "command-line option",
+            "def": "Selection required",
+            "range": "Export / Import",
+            "note": "Export on the source computer and import on the target, or use export as a local settings backup."
+          },
+          {
+            "label": "Include API credentials",
+            "type": "export confirmation",
+            "def": "No",
+            "range": "Yes / No / Cancel",
+            "note": "No removes API keys, tokens, and proxy credentials from RSTool settings and preserves existing target credentials on import. Yes includes portable plaintext credentials in the package."
+          },
+          {
+            "label": "Package file",
+            "type": "file selection",
+            "def": "A dated filename is suggested for export",
+            "range": ".rssettings",
+            "note": "Choose a destination when exporting or an existing package when importing. The confirmation shows the source and a content summary."
+          },
+          {
+            "label": "Exit current Rhino now",
+            "type": "confirmation after staging import",
+            "def": "User choice",
+            "range": "Yes / No",
+            "note": "Yes requests exit from the current Rhino instance; No lets you exit later. All Rhino windows must close before the import is applied."
+          }
+        ],
+        "output": "Export a Rhino / RSTool settings package (.rssettings), or migrate its settings to a target computer. Import first backs up existing settings, applies after all Rhino instances close, and takes effect on the next start.",
+        "notes": "## What can be transferred\n\n- Rhino options, display modes, interface layouts, toolbars, and readable plugin settings.\n- Rhino default templates, environment maps, custom templates, and external display textures or toolbar files that can be identified and found in the settings. Paths to packaged resources are adjusted during import.\n- Common RSTool configuration and settings data for Profile Director, Modeling Companion actions and workflows, to-dos, and mind maps.\n\n## Moving to another computer\n\nExport on the old computer, copy the package to the new one, and import it there. Rhino major versions must match: a Rhino 8 package can only be imported into Rhino 8, not Rhino 9. Settings transfer does not install plugins or copy entire local model and material libraries. Copy those separately, then check their configured directories. RSTool license files are excluded; authorize the target computer separately.\n\nImport replaces the corresponding target settings included in the package. An automatic backup is created first, with its location shown in the completion message. Save your models before closing every Rhino instance. Confirming import only queues it; the current window does not switch settings immediately.\n\n## API credentials and export messages\n\nKeep the default No for API credentials when transferring interface preferences and other settings. Choose Yes to migrate your API keys, tokens, and proxy credentials too. The package will contain plaintext credentials, so keep it private and do not share it publicly.\n\nReview any export warnings for resources that could not be read or found before using the package.",
+        "illustrations": [],
+        "videos": []
+      }
+    },
     "rsScreenPin": {
       "sourceHash": "7b92d223a02258348b2f2f2e07a79b44678710db953f5d0cdf92cfa10e6403eb",
       "title": "Screenshot floating window",
@@ -1361,6 +1410,336 @@
             "title": "RsTool · Moyu Browser (Browser) Demonstration Tutorial (Bilibili)"
           }
         ]
+      }
+    },
+    "rsLSystemTree": {
+      "sourceHash": "a323edc23033d0498d8e6bbdc1218f12ac6f74da64eeeac094a740b830ed4d17",
+      "title": "L-system Tree",
+      "desc": "Generate naturally branching trees from a chosen root, with shape presets, live previews, and centerline, SubD, or mesh output.",
+      "detail": {
+        "flow": [
+          "Enter rsLSystemTree and pick the tree root in the viewport to open the settings panel.",
+          "Choose a preset close to the desired shape, then adjust height, branching, and branch thickness.",
+          "The viewport preview updates as settings change. Rotate the view to inspect the crown, or click New seed to try another branching pattern.",
+          "Choose Centerlines, SubD, or Mesh. Enable Keep centerlines if you want to edit the skeleton later.",
+          "Click Create to add grouped results to the current layer, or Cancel to discard the preview."
+        ],
+        "params": [
+          {
+            "label": "Tree preset",
+            "type": "option",
+            "def": "Fan branches (reference)",
+            "range": "Fan branches (reference) / Natural 3D tree / Broad 3D crown / Slender 3D tree / Planar branches / Custom",
+            "note": "Apply a shape and fine-tune it. Preserves height, rotation, seed, and output settings."
+          },
+          {
+            "label": "Growth",
+            "type": "option",
+            "def": "Fan branching",
+            "range": "Fan branching / 3D branching",
+            "note": "Fan branching suits flatter shapes; 3D branching grows around the parent branch. Use Spatial spread to give the crown depth."
+          },
+          {
+            "label": "Height",
+            "type": "number",
+            "def": "3 m (converted to document units)",
+            "range": "> 100 × document tolerance",
+            "note": "Vertical height from the root to the highest branch tip."
+          },
+          {
+            "label": "Branch levels",
+            "type": "integer",
+            "def": "5",
+            "range": "1–8",
+            "note": "More levels add smaller terminal branches and substantially increase the amount of geometry."
+          },
+          {
+            "label": "Branch angle",
+            "type": "angle",
+            "def": "30°",
+            "range": "5–65°",
+            "note": "Larger angles give a wider crown; smaller angles create a slender, upright shape."
+          },
+          {
+            "label": "Length decay",
+            "type": "ratio",
+            "def": "0.72",
+            "range": "0.45–0.90",
+            "note": "Controls how branch lengths decrease. Higher values keep outer branches longer; lower values shorten them faster."
+          },
+          {
+            "label": "Curvature",
+            "type": "percentage",
+            "def": "45%",
+            "range": "0–100%",
+            "note": "Adds natural bending to otherwise straighter branches."
+          },
+          {
+            "label": "Randomness",
+            "type": "percentage",
+            "def": "25%",
+            "range": "0–100%",
+            "note": "Varies branch lengths, angles, and directions to reduce regular symmetry."
+          },
+          {
+            "label": "Spatial spread",
+            "type": "percentage",
+            "def": "15%",
+            "range": "0–100%",
+            "note": "Controls crown depth. At 0% the shape is nearly planar; higher values add depth."
+          },
+          {
+            "label": "Rotation",
+            "type": "angle",
+            "def": "0°",
+            "range": "-180–180°",
+            "note": "Rotates the whole tree around the world vertical axis for placement or elevation views."
+          },
+          {
+            "label": "Root diameter",
+            "type": "number",
+            "def": "0.12 m (converted to document units)",
+            "range": "> 4 × document tolerance and ≤ 30% of height",
+            "note": "Sets trunk thickness at the root. Applying a preset resets this value in proportion to the current height."
+          },
+          {
+            "label": "Tip diameter",
+            "type": "percentage",
+            "def": "8%",
+            "range": "2–50%",
+            "note": "Controls tip thickness relative to the root. Tips must remain large enough for the document tolerance."
+          },
+          {
+            "label": "Random seed",
+            "type": "integer",
+            "def": "42",
+            "range": "0–2147483646",
+            "note": "The same settings and seed reproduce the same shape. New seed changes the seed."
+          },
+          {
+            "label": "Mesh density",
+            "type": "integer",
+            "def": "2",
+            "range": "1–3",
+            "note": "Controls final mesh subdivision. Higher density adds detail and faces; centerline output does not need this setting."
+          },
+          {
+            "label": "Output",
+            "type": "option",
+            "def": "Mesh",
+            "range": "Centerlines / SubD / Mesh",
+            "note": "Use centerlines for further modeling, SubD for editing smooth branches, or mesh for scene placement."
+          },
+          {
+            "label": "Keep centerlines",
+            "type": "toggle",
+            "def": "Off",
+            "range": "On / Off",
+            "note": "Also outputs skeleton curves when creating SubD or mesh geometry."
+          }
+        ],
+        "paramSections": [
+          {
+            "title": "Tree shape and branching",
+            "intro": "Start with the overall silhouette. Broad 3D crown is a useful starting point for a wide tree, while fan or planar presets suit elevation silhouettes and decorative branches. Defaults below refer to the initial fan preset."
+          },
+          {
+            "title": "Natural variation and orientation",
+            "intro": "Curvature and randomness shape the branches, while spatial spread controls crown depth. Keep the seed fixed when comparing individual adjustments."
+          },
+          {
+            "title": "Branch thickness and output",
+            "intro": "Branches with thickness have smooth junctions. Choose an output for your next step; the default mesh is suitable for typical scenes."
+          }
+        ],
+        "illustrations": [
+          {
+            "alt": "rsLSystemTree settings panel and smooth branch preview using the Broad 3D crown preset",
+            "caption": "Broad 3D crown example: 3 m height, 6 branch levels, 48° angle, and 100% spatial spread create an open three-dimensional crown. Adjust the shape and output in the panel on the left."
+          }
+        ],
+        "output": "Generate a naturally branching skeleton or smooth branches from a chosen root, as centerlines, SubD, or mesh. Results are grouped on the current layer.",
+        "notes": "New seed changes only the random seed; Reset restores the initial settings. This command creates trunks and branches without leaves. The screenshot uses Broad 3D crown, so its values differ from the initial defaults.\n\nMore branch levels and higher mesh density increase geometry. Start with fewer levels to establish the silhouette, then add detail. If dimensions or tips are too small, check height, diameter, and document tolerance as prompted. If smooth geometry fails, use Centerlines to retain the skeleton.",
+        "videos": []
+      }
+    },
+    "rsIvy": {
+      "sourceHash": "124699f86b6cb77899782368ddb8ec9a71b887575c38978f20a56b9a92016339",
+      "title": "Ivy Growth",
+      "desc": "Grow branching ivy along selected objects, with leaves and adjustable growth, stem thickness, and leaf density.",
+      "detail": {
+        "flow": [
+          "Enter rsIvy, select one or more climbing targets, and press Enter. Surfaces, polysurfaces, meshes, SubD, and extrusions are supported.",
+          "Pick a start point on or near a target, within the search distance and outside any closed target.",
+          "Choose a growth preset. Adjust length, direction, and branching on Growth, then thickness, surface gap, and output on Stems.",
+          "Set leaf generation, size, and spacing on Leaves. Inspect the live preview, or click New seed for another variation.",
+          "Once the preview is ready, click Create. Stems, leaves, and optional centerlines are grouped on the current layer; climbing targets remain."
+        ],
+        "params": [
+          {
+            "label": "Growth preset",
+            "type": "option",
+            "def": "Natural Climber",
+            "range": "Natural Climber / Dense Green Wall / Sparse Climber / Broadleaf Vine / Spreading Vine / Custom",
+            "note": "Switch growth styles while preserving maximum length, search distance, maximum gap, seed, and output options. Fine-tune the other settings afterward."
+          },
+          {
+            "label": "Maximum path length",
+            "type": "number",
+            "def": "3 m",
+            "range": "0.01–1000 m; subject to document tolerance",
+            "note": "Limits the path from the start to a growing tip, rather than vertical height or the sum of all branch lengths."
+          },
+          {
+            "label": "Step length",
+            "type": "number",
+            "def": "0.06 m",
+            "range": "0.001–10 m; ≤ maximum length",
+            "note": "Distance advanced per growth step. Smaller steps add detail and nodes. Steps must accommodate the stem diameter, and search distance must be at least the step length."
+          },
+          {
+            "label": "Start search distance",
+            "type": "number",
+            "def": "0.5 m",
+            "range": "0.001–100 m; ≥ step length",
+            "note": "Range for finding a target near the start. Move the start closer or increase this value if no target is found."
+          },
+          {
+            "label": "Maximum gap",
+            "type": "number",
+            "def": "0.15 m",
+            "range": "0–10 m",
+            "note": "Allowed unsupported span across a small gap. Zero disallows unsupported spans. Bridging also requires a reachable target nearby."
+          },
+          {
+            "label": "Upward bias",
+            "type": "percentage",
+            "def": "70%",
+            "range": "0–100%",
+            "note": "Adds a tendency toward world +Z along the surface. Higher values favor upward climbing; lower values allow more lateral spread."
+          },
+          {
+            "label": "Randomness",
+            "type": "percentage",
+            "def": "25%",
+            "range": "0–100%",
+            "note": "Controls natural wandering. Higher values produce more winding paths."
+          },
+          {
+            "label": "Branch spacing",
+            "type": "number",
+            "def": "0.3 m",
+            "range": "0.01–100 m; ≥ twice the step length",
+            "note": "Distance traveled before attempting a branch. Branch probability decides whether each attempt succeeds."
+          },
+          {
+            "label": "Branch probability",
+            "type": "percentage",
+            "def": "35%",
+            "range": "0–100%",
+            "note": "Chance of branching at each attempt. Combine higher values with shorter spacing for dense coverage; 0% produces no new branches."
+          },
+          {
+            "label": "Branch angle",
+            "type": "angle",
+            "def": "35°",
+            "range": "15–75°",
+            "note": "Angle of a new branch relative to the current stem. Larger angles spread growth farther sideways."
+          },
+          {
+            "label": "Seed",
+            "type": "integer",
+            "def": "42",
+            "range": "0–2147483646",
+            "note": "The same targets, start, settings, and seed reproduce the same growth. New seed changes the seed."
+          },
+          {
+            "label": "Root diameter",
+            "type": "number",
+            "def": "0.015 m",
+            "range": "> 8 × document tolerance and ≤ step length",
+            "note": "Main stem diameter at the root, tapering toward tips and smaller branches. Thick stems may not fit narrow areas."
+          },
+          {
+            "label": "Tip diameter",
+            "type": "percentage",
+            "def": "20%",
+            "range": "5–80%",
+            "note": "Controls tip thickness relative to the root. Tip diameter must also exceed the minimum allowed by tolerance."
+          },
+          {
+            "label": "Minimum surface gap",
+            "type": "number",
+            "def": "0.003 m",
+            "range": "≥ 2 × document tolerance; panel maximum 1 m",
+            "note": "Gap between the outside of the stem and the target. If smooth stems intersect a target, the command attempts to increase the gap and rebuild."
+          },
+          {
+            "label": "Mesh density",
+            "type": "integer",
+            "def": "2",
+            "range": "1–3",
+            "note": "Controls stem mesh subdivision; higher values add faces."
+          },
+          {
+            "label": "Stem output",
+            "type": "option",
+            "def": "Mesh",
+            "range": "Centerlines / SubD / Mesh",
+            "note": "Choose a lightweight skeleton, editable smooth SubD, or mesh. Centerline mode omits leaves."
+          },
+          {
+            "label": "Keep centerlines",
+            "type": "toggle",
+            "def": "Off",
+            "range": "On / Off",
+            "note": "Also keeps the ivy skeleton when outputting SubD or mesh geometry."
+          },
+          {
+            "label": "Generate leaves",
+            "type": "toggle",
+            "def": "On",
+            "range": "On / Off",
+            "note": "Adds leaves along the stems. Leaves are separate meshes even when stems use SubD output."
+          },
+          {
+            "label": "Leaf length",
+            "type": "number",
+            "def": "0.08 m",
+            "range": "0.001–2 m; above the minimum size allowed by tolerance",
+            "note": "Base leaf size, with slight random variation in individual leaves."
+          },
+          {
+            "label": "Leaf spacing",
+            "type": "number",
+            "def": "0.12 m",
+            "range": "0.001–10 m; above the minimum size allowed by tolerance",
+            "note": "Spacing along the stems. Smaller values give denser foliage; larger values make it sparser."
+          }
+        ],
+        "paramSections": [
+          {
+            "title": "Growth tab: direction and density",
+            "intro": "Start with a preset, use length and upward bias to guide growth, then control coverage with branch spacing and probability. Panel lengths use the current document units. Values below are given in meters and automatically converted for other units."
+          },
+          {
+            "title": "Stems tab: thickness, surface gap, and output",
+            "intro": "Stems grow outside targets and check available space. Large diameters or gaps can prevent growth through narrow areas. Wait for the preview after adjusting settings and inspect contact areas."
+          },
+          {
+            "title": "Leaves tab: size and spacing",
+            "intro": "Enable leaves for a complete plant, or turn them off for stems only. Leaves and stems are separate outputs for further editing."
+          }
+        ],
+        "illustrations": [
+          {
+            "alt": "rsIvy Growth tab and preview of leafy ivy climbing a cylindrical surface",
+            "caption": "Natural Climber example: ivy grows upward from the base of a cylinder, branching along its surface with green leaves along the stems. The status area reports branches, nodes, stopping reasons, and leaf count."
+          }
+        ],
+        "output": "Generate naturally climbing, branching ivy along selected objects as centerlines, SubD, or mesh stems, with optional separate leaf meshes. Results are grouped on the current layer.",
+        "notes": "New seed changes the random seed; Reset restores the initial Natural Climber settings. Default dimensions are converted to document units. For small models or coarse document tolerance, increase step length, stem diameter, and leaf dimensions as needed.\n\nGrowth may stop early at edges, obstacles, or areas with insufficient space. Use the status statistics to adjust the start, maximum gap, or settings. If smooth stems intersect targets, the command attempts to increase clearance and reports the adjusted gap. If generation still fails, try Centerlines output.\n\nGeneration is capped at 64 branches, 4096 nodes, and 2000 leaves, with a panel message when a limit is reached. Reduce branching density, increase step length, or increase leaf spacing to keep geometry lighter.",
+        "videos": []
       }
     },
     "rsRoadLine": {

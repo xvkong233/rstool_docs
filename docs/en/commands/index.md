@@ -1,6 +1,6 @@
 # RsTool Command Reference
 
-> Complete reference for all 284 RsTool commands. Each command has a dedicated page covering its purpose, invocation, workflow, parameters, output, notes, and tutorials.
+> Complete reference for all 287 RsTool commands. Each command has a dedicated page covering its purpose, invocation, workflow, parameters, output, notes, and tutorials.
 
 ## AI (4)
 
@@ -28,7 +28,7 @@
 - [rsMaterial · Material library](/en/commands/rsMaterial) — Open the material library window to browse and manage built-in material resources. Supports PBR material preview.
 - [rsMaterialLibraryOld · Legacy material library](/en/commands/rsMaterialLibraryOld) — The old version of the material library window remains compatible.
 
-## Productivity (10)
+## Productivity (11)
 
 ### Productivity
 
@@ -39,6 +39,7 @@
 - [rsWhiteboard · Whiteboard](/en/commands/rsWhiteboard) — Open the whiteboard tool to freely draw and annotate in Rhino.
 - [rsModelingCompanion · Modeling Companion](/en/commands/rsModelingCompanion) — Call up the modeling companion assistant in the Rhino interface and hide or restore it at any time.
 - [rsModelingCompanionSettings · Modeling companion settings](/en/commands/rsModelingCompanionSettings) — Open the settings window of the modeling companion assistant and configure the image and behavior of the assistant.
+- [rsSettingsTransfer · Rhino / RSTool Settings Transfer](/en/commands/rsSettingsTransfer) — Export commonly used Rhino and RSTool settings for import on another computer, including toolbars, display modes, templates, and optional API credentials.
 
 ### Screen Tools
 
@@ -46,7 +47,7 @@
 - [rsKeyCast · Keystroke Display](/en/commands/rsKeyCast) — Displays the currently pressed shortcut keys in real time on the screen, suitable for teaching demonstrations and screen recordings.
 - [rsKeyCastSettings · Keystroke Display Settings](/en/commands/rsKeyCastSettings) — Open the settings panel displayed by the button to adjust the position, size, style, etc.
 
-## Fun (5)
+## Fun (7)
 
 ### Interactive Entertainment
 
@@ -55,6 +56,11 @@
 - [rsWalker · Walkthrough Mode](/en/commands/rsWalker) — Embark on first-person roaming, game-like exploration of the Rhino model.
 - [rsFpsGame · FPS reaction test](/en/commands/rsFpsGame) — Play the FPS Reaction Test mini-game in Rhino to test your reaction speed.
 - [rsTxtReader · Command-Line Text Reader](/en/commands/rsTxtReader) — Read .txt text files page by page on the Rhino command line. It supports turning pages, skipping lines, adjusting the number of words per line, displaying in forward and reverse order, and automatically recognizing UTF-8 / GBK encoding.
+
+### Plant Generation
+
+- [rsLSystemTree · L-system Tree](/en/commands/rsLSystemTree) — Generate naturally branching trees from a chosen root, with shape presets, live previews, and centerline, SubD, or mesh output.
+- [rsIvy · Ivy Growth](/en/commands/rsIvy) — Grow branching ivy along selected objects, with leaves and adjustable growth, stem thickness, and leaf density.
 
 ## Architecture (26)
 
