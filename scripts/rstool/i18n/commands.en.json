@@ -9461,181 +9461,455 @@
       }
     },
     "rsProfileDirector": {
-      "sourceHash": "0f8e859b860157a34dce9ea417e9b53dc4f3fcb35ff0d15d5de778b2570cabc6",
+      "sourceHash": "c3deb1fae58e56a047338ffa9b260f53b29d1d7a21e5f574d47df68d73697f6b",
       "title": "Profile Director",
       "desc": "Open the Section Manager to manage a library of section profiles and extrude along paths.",
       "detail": {
         "flow": [
-          "Command line input rsProfileDirector",
-          "Pop up the section path generator window (ProfileDirectorSession/Dialog)",
-          "Select/draw path curves, pick or define sections (including reference points), add components and spans (set size, spacing, rotation, etc.)",
-          "Click Preview/Generate to array and bake sections and components along the path"
+          "Enter rsProfileDirector in Rhino to open the main panel.",
+          "Use Pick curve path or Draw path to define where geometry is generated.",
+          "Open Style Library for a ready-made combination, or add items under Profile, Component, and Span.",
+          "Select an item in the left list before editing on the right. Placement mode and span type determine which controls appear.",
+          "Click Preview to check placement, spacing, and corners, then Generate to add the result to the model."
         ],
         "params": [
           {
-            "label": "Section scaling",
-            "type": "double",
-            "def": "1.0",
-            "range": "",
-            "note": "Overall zoom of section"
+            "label": "Pick curve path / Draw path",
+            "type": "Action",
+            "def": "Not selected",
+            "range": "Curves",
+            "note": "Use existing curves or draw a path in Rhino; one style can apply to multiple paths."
           },
           {
-            "label": "Section rotation",
-            "type": "double",
-            "def": "0",
-            "range": "",
-            "note": "Unit: degree"
+            "label": "Clear style",
+            "type": "Action",
+            "def": "—",
+            "range": "Requires confirmation",
+            "note": "Clear profile, component, and span settings while keeping current paths."
           },
           {
-            "label": "Section Z offset (height)",
-            "type": "double",
-            "def": "0",
-            "range": "",
-            "note": "Default 0"
+            "label": "Preview / Generate / Cancel",
+            "type": "Action",
+            "def": "Configure before previewing",
+            "range": "Buttons",
+            "note": "Preview does not add objects; changes refresh it once enabled. Generate adds results to the model; Cancel closes the window."
           },
           {
-            "label": "Section width",
-            "type": "double",
-            "def": "",
-            "range": "",
-            "note": "Leave blank to use the original section"
+            "label": "Name",
+            "type": "Text",
+            "def": "Automatic or source name",
+            "range": "Text",
+            "note": "Name the item to distinguish multiple profiles."
           },
           {
-            "label": "Section depth (height)",
-            "type": "double",
-            "def": "",
-            "range": "",
-            "note": "Leave blank to use the original section"
+            "label": "Anchor",
+            "type": "Option",
+            "def": "Center",
+            "range": "Center / edge midpoints / corners / custom point / curve corner",
+            "note": "Align a part of the section to the path; use Pick ref point for a custom anchor."
           },
           {
-            "label": "Starting point extension",
-            "type": "double",
-            "def": "0",
-            "range": "",
-            "note": ""
-          },
-          {
-            "label": "end extension",
-            "type": "double",
-            "def": "0",
-            "range": "",
-            "note": ""
-          },
-          {
-            "label": "Component spacing",
-            "type": "double",
-            "def": "",
-            "range": "",
-            "note": "Leave blank to use quantity instead; spacing takes precedence"
-          },
-          {
-            "label": "Number of components",
-            "type": "integer",
-            "def": "5",
-            "range": "≥0",
-            "note": ""
-          },
-          {
-            "label": "Component object width",
-            "type": "double",
-            "def": "",
-            "range": "",
-            "note": ""
-          },
-          {
-            "label": "Component object length",
-            "type": "double",
-            "def": "",
-            "range": "",
-            "note": ""
-          },
-          {
-            "label": "Component object height",
-            "type": "double",
-            "def": "",
-            "range": "",
-            "note": ""
-          },
-          {
-            "label": "Component Z offset",
-            "type": "double",
-            "def": "0",
-            "range": "",
-            "note": ""
-          },
-          {
-            "label": "Component XY Rotation",
-            "type": "double",
-            "def": "0",
-            "range": "",
-            "note": "Unit: degree"
-          },
-          {
-            "label": "span spacing",
-            "type": "double",
-            "def": "",
-            "range": "",
-            "note": "Leave blank to press quantity"
-          },
-          {
-            "label": "Cross-piece quantity",
-            "type": "integer",
+            "label": "Scale",
+            "type": "Number",
             "def": "1",
-            "range": "≥1",
-            "note": ""
+            "range": "> 0",
+            "note": "Scale uniformly; enter target width and height for precise dimensions."
           },
           {
-            "label": "Cross piece end cutting",
-            "type": "double",
+            "label": "Rotation",
+            "type": "Number",
+            "def": "0°",
+            "range": "Signed angle",
+            "note": "Rotate the section, not the entire path."
+          },
+          {
+            "label": "Profile width / Profile height",
+            "type": "Length",
+            "def": "Blank",
+            "range": "Blank preserves size; otherwise positive",
+            "note": "Set the two section dimensions; ProfileDepth is the UI's Profile height."
+          },
+          {
+            "label": "Start extension / End extension",
+            "type": "Length",
+            "def": "0 / 0",
+            "range": "Signed",
+            "note": "Adjust each end separately: positive extends and negative retracts."
+          },
+          {
+            "label": "Z offset",
+            "type": "Length",
             "def": "0",
-            "range": "",
-            "note": ""
+            "range": "Signed",
+            "note": "Move along world Z without changing section height."
           },
           {
-            "label": "span height",
-            "type": "double",
-            "def": "",
-            "range": "",
-            "note": ""
+            "label": "Material",
+            "type": "Action",
+            "def": "Not assigned",
+            "range": "Document materials",
+            "note": "Use Set material to assign a material to this profile item."
           },
           {
-            "label": "Spanning object width",
-            "type": "double",
-            "def": "",
-            "range": "",
-            "note": ""
+            "label": "Name",
+            "type": "Text",
+            "def": "Automatic or source name",
+            "range": "Text",
+            "note": "Identify this component item; several items can form one style."
           },
           {
-            "label": "Spanning object length",
-            "type": "double",
-            "def": "",
-            "range": "",
-            "note": ""
+            "label": "Placement",
+            "type": "Option",
+            "def": "Along curve",
+            "range": "Along curve / Both ends / Start / End / Corners / Corners and ends / Segment fit / Segment spacing",
+            "note": "Use Along curve for arrays, endpoint/corner modes for joints, and segment modes for per-segment layouts."
           },
           {
-            "label": "Cross-piece plane offset",
-            "type": "double",
+            "label": "Spacing",
+            "type": "Length",
+            "def": "Blank",
+            "range": "Positive; blank is mode-dependent",
+            "note": "Along curve prioritizes spacing, using count when blank. Segment fit adjusts spacing; Segment spacing preserves it."
+          },
+          {
+            "label": "Count",
+            "type": "Integer",
+            "def": "5",
+            "range": "≥ 1",
+            "note": "Shown only for Along curve and used when spacing is blank; corner handling may reduce the result."
+          },
+          {
+            "label": "Direction",
+            "type": "Option",
+            "def": "Start to end",
+            "range": "Start to end / End to start / Center out",
+            "note": "Shown only for Segment spacing; choose where the array starts."
+          },
+          {
+            "label": "Anchor",
+            "type": "Option",
+            "def": "Bottom center",
+            "range": "Bounding-box corners / edge midpoints / face centers / custom point",
+            "note": "Align an anchor to the path; use Pick reference point for a custom point."
+          },
+          {
+            "label": "Object width / length / height",
+            "type": "Length",
+            "def": "Blank",
+            "range": "Each blank or positive",
+            "note": "Resize using source local bounding-box dimensions; blank axes retain their size."
+          },
+          {
+            "label": "Z offset",
+            "type": "Length",
             "def": "0",
-            "range": "",
-            "note": ""
+            "range": "Signed",
+            "note": "Move along world Z without changing object height."
           },
           {
-            "label": "Across piece rotation value",
-            "type": "double",
+            "label": "Plane offset",
+            "type": "Length",
             "def": "0",
-            "range": "",
-            "note": ""
+            "range": "Signed",
+            "note": "Shift sideways in the placement frame to place objects beside the path."
           },
           {
-            "label": "Random offset across pieces",
-            "type": "double",
+            "label": "XY rotation",
+            "type": "Number",
+            "def": "0°",
+            "range": "Signed angle",
+            "note": "Rotate the component in its placement plane."
+          },
+          {
+            "label": "Material",
+            "type": "Action",
+            "def": "Not assigned",
+            "range": "Document materials",
+            "note": "Assign a material to this component item."
+          },
+          {
+            "label": "Corner clearance",
+            "type": "Toggle",
+            "def": "On",
+            "range": "On / Off",
+            "note": "Trim and cap overlaps at joints; blocks use separate corner variants without modifying the source."
+          },
+          {
+            "label": "Source turn angle",
+            "type": "Number",
+            "def": "Blank: automatic",
+            "range": "0–170° or blank",
+            "note": "Use 0 for straight assemblies or 90 for pre-lengthened right-angle ones to adapt to the actual turn."
+          },
+          {
+            "label": "Stretch corner assembly",
+            "type": "Toggle",
+            "def": "Off",
+            "range": "On / Off",
+            "note": "Scale a continuous assembly transversely, keeping connections; transverse dimensions also change."
+          },
+          {
+            "label": "Join corner sides",
+            "type": "Toggle",
+            "def": "Off",
+            "range": "On / Off",
+            "note": "Place a half on each side and miter at the bisector; for panels and jambs, overriding assembly stretch."
+          },
+          {
+            "label": "Skip plan turns",
+            "type": "Toggle",
+            "def": "Off",
+            "range": "On / Off",
+            "note": "Skip plan turns while keeping endpoints and pitch-only joints."
+          },
+          {
+            "label": "Follow ramp surface",
+            "type": "Toggle",
+            "def": "Off",
+            "range": "On / Off",
+            "note": "Adjust separate upright rods vertically to the ramp surface; not for rigid connected assemblies."
+          },
+          {
+            "label": "Fill corner beams",
+            "type": "Toggle",
+            "def": "Off",
+            "range": "On / Off",
+            "note": "Extend slender beams into outer corners using the existing grid, then trim; does not add posts."
+          },
+          {
+            "label": "Corner min spacing",
+            "type": "Length",
+            "def": "Blank: automatic",
+            "range": "Blank / 0 / positive",
+            "note": "Shared by the style's components; blank uses 20% of array spacing, 0 disables. Filters regular arrays only with a matching corner component."
+          },
+          {
+            "label": "Name",
+            "type": "Text",
+            "def": "Automatic",
+            "range": "Text",
+            "note": "Identify layered or alternating span items."
+          },
+          {
+            "label": "Type",
+            "type": "Option",
+            "def": "Profile",
+            "range": "Profile / Component",
+            "note": "Profile sweeps each bay; Component repeats or fits objects within it. Their editors differ."
+          },
+          {
+            "label": "Placement",
+            "type": "Option",
+            "def": "Along curve",
+            "range": "Along curve / Segments",
+            "note": "Divide the whole path, or divide each continuous segment separately."
+          },
+          {
+            "label": "Distribution",
+            "type": "Option",
+            "def": "Segment spacing",
+            "range": "Segment spacing / Segment fit / Equal count",
+            "note": "Choose bay division; Segment fit estimates a count from spacing then divides evenly; Equal count uses the specified count."
+          },
+          {
+            "label": "Direction (bay division)",
+            "type": "Option",
+            "def": "Start to end",
+            "range": "Start to end / End to start / Center out",
+            "note": "Shown for Segment spacing; controls the division origin and leftover intervals."
+          },
+          {
+            "label": "Spacing",
+            "type": "Length",
+            "def": "Blank",
+            "range": "Positive; blank does not subdivide by this spacing",
+            "note": "Shown for Segment spacing or Segment fit; this is bay length, not internal member spacing."
+          },
+          {
+            "label": "Span count",
+            "type": "Integer",
+            "def": "1",
+            "range": "≥ 1",
+            "note": "Shown for Equal count; applied to each continuous segment in Segments mode."
+          },
+          {
+            "label": "Every N spans / First span",
+            "type": "Integer",
+            "def": "1 / 1",
+            "range": "Each ≥ 1",
+            "note": "Defaults to every bay; 2 / 1 uses bays 1, 3, 5, and so on. Combine items for alternating styles."
+          },
+          {
+            "label": "End trim",
+            "type": "Length",
             "def": "0",
-            "range": "",
-            "note": ""
+            "range": "≥ 0",
+            "note": "Retract both ends by this distance; bays too short afterward are skipped."
+          },
+          {
+            "label": "Profile library",
+            "type": "Action",
+            "def": "Not selected",
+            "range": "Existing profile assets",
+            "note": "Choose a section for this span item; it need not match the Profile tab."
+          },
+          {
+            "label": "Anchor",
+            "type": "Option",
+            "def": "Center",
+            "range": "Center / edge midpoints / corners / custom point / curve corner",
+            "note": "Align the section to the bay path using its reference or outline anchor."
+          },
+          {
+            "label": "Component library",
+            "type": "Action",
+            "def": "Not selected",
+            "range": "Existing component assets",
+            "note": "Choose the component asset for this span item."
+          },
+          {
+            "label": "Component anchor",
+            "type": "Option",
+            "def": "Bottom center",
+            "range": "Bounding-box anchors / custom point",
+            "note": "Align the component to bay stations; loaded assets may supply their own anchors."
+          },
+          {
+            "label": "Member distribution",
+            "type": "Option",
+            "def": "Segment spacing",
+            "range": "Segment spacing / Segment fit / Equal count",
+            "note": "Distribute objects inside each bay; Segment fit adjusts count and spacing to bay length."
+          },
+          {
+            "label": "Direction (within a bay)",
+            "type": "Option",
+            "def": "Center out",
+            "range": "Center out / Start to end / End to start",
+            "note": "Choose where members start within a bay, independently of the bay-division direction."
+          },
+          {
+            "label": "Member spacing / Member count",
+            "type": "Length / Integer",
+            "def": "Blank / 1",
+            "range": "Spacing > 0; count ≥ 1",
+            "note": "The mode determines which field appears; blank spacing places one object at the center."
+          },
+          {
+            "label": "Corner clearance",
+            "type": "Toggle",
+            "def": "On",
+            "range": "On / Off",
+            "note": "Shown for Component type; handles overlaps at corner joints."
+          },
+          {
+            "label": "Keep whole members / Clearance group",
+            "type": "Toggle / Text",
+            "def": "Off / blank",
+            "range": "On / Off; group-name text",
+            "note": "Move whole members to clear corners or omit groups that cannot fit, without trimming. Matching group names and layouts share an envelope. Requires clearance and no sloped fitting."
+          },
+          {
+            "label": "Follow ramp surface",
+            "type": "Toggle",
+            "def": "Off",
+            "range": "On / Off",
+            "note": "Adjust separate upright rods to the ramp surface; hidden during sloped fitting."
+          },
+          {
+            "label": "Fit sloped span",
+            "type": "Toggle",
+            "def": "Off",
+            "range": "On / Off",
+            "note": "Fit one assembly to each trimmed endpoint chord, keeping sections upright; curved bays use their chords."
+          },
+          {
+            "label": "Fit reference length",
+            "type": "Length",
+            "def": "Blank",
+            "range": "Blank / positive",
+            "note": "For sloped fitting only; blank uses component X bounds, otherwise centered on the anchor. Shared lengths align layered assemblies."
+          },
+          {
+            "label": "Cut profiles only",
+            "type": "Toggle",
+            "def": "Off",
+            "range": "On / Off",
+            "note": "Use closed component solids to subtract from generated profiles; cutters are neither displayed nor baked."
+          },
+          {
+            "label": "Object width / length / height",
+            "type": "Length",
+            "def": "Blank",
+            "range": "Each blank or positive",
+            "note": "Profile uses width/length; Component also shows height. Sloped fitting controls along-bay width and disables its input."
+          },
+          {
+            "label": "Sag",
+            "type": "Length",
+            "def": "0",
+            "range": "≥ 0",
+            "note": "Lower the middle of each bay along world -Z; 0 means no sag. Hidden for sloped component fitting."
+          },
+          {
+            "label": "Z offset / Plane offset",
+            "type": "Length",
+            "def": "0 / 0",
+            "range": "Signed",
+            "note": "Move vertically or sideways without changing dimensions."
+          },
+          {
+            "label": "Rotation mode / Rotation value",
+            "type": "Option / Angle",
+            "def": "Fixed rotation / 0°",
+            "range": "Signed fixed angle; random amplitude ≥ 0",
+            "note": "Fixed uses the angle; Random varies within the signed input amplitude."
+          },
+          {
+            "label": "Random offset",
+            "type": "Length",
+            "def": "0",
+            "range": "≥ 0",
+            "note": "Add signed random lateral variation to Plane offset; 0 disables it."
+          },
+          {
+            "label": "Material",
+            "type": "Action",
+            "def": "Not assigned",
+            "range": "Document materials",
+            "note": "Assign a material to this span item."
+          },
+          {
+            "label": "Search / Name / Category",
+            "type": "Text",
+            "def": "From the asset",
+            "range": "Text / category",
+            "note": "Find assets and organize by name/category; select an actual item before using it."
+          },
+          {
+            "label": "Folder / Change folder",
+            "type": "Action",
+            "def": "Current library folder",
+            "range": "Local folder",
+            "note": "View or change the library path; it must match the actual asset folder."
+          },
+          {
+            "label": "Save all changes / Save as new",
+            "type": "Action",
+            "def": "—",
+            "range": "Style Library buttons",
+            "note": "Save all changes updates the selected style's name, category, and current settings; Save as new creates a new style."
+          },
+          {
+            "label": "Custom preview / Use",
+            "type": "Action",
+            "def": "From the asset",
+            "range": "Image / selected asset",
+            "note": "Preview images are for library display; Use loads the chosen style or individual asset."
           }
         ],
         "output": "Generated section sweeps and component/span instances along path array (can be baked as blocks or independent geometries)",
-        "notes": "The window includes path picking/drawing, section library/component library browsing, reference point picking and other interactions; values are input in text boxes, and the default values are mostly 0 or empty; the distribution mode can be based on spacing or quantity",
+        "notes": "See the asset download instructions below. The end of this page explains controls by panel. Each item has independent settings; loaded styles use values stored in the asset. Labels and control positions may vary by version.\n\n## Download and use the asset library\n\nTo get started without building your own collection, download the ready-made [rsProfileDirector asset library from Baidu Netdisk](https://pan.baidu.com/s/5zLhuX4hCtyEUVvoC1rHkmA). Place the library in the `rsProfileDirector` folder to use it. If the download is an archive, extract it first and keep the library's existing folder structure.\n\n1. Click **Open style library** in the `rsProfileDirector` main panel.\n2. Check the **Folder** path near the bottom of the Style Library window, and place the downloaded library in the `rsProfileDirector` folder shown there.\n3. If you store the library elsewhere, click **Change folder** and select the `rsProfileDirector` folder containing it. Select a style and click **Use** to return to the main panel for previewing and generation.\n\n![Profile Director Style Library folder settings: the red box highlights the Folder path and Change folder button](../../assets/rsProfileDirector/style-library-folder.png)\n*The red box highlights the library folder settings: Folder shows the current path; click Change folder to select the rsProfileDirector folder containing your library.*\n\nYou can store the library wherever it is convenient. The important part is that the Folder path matches its actual location; you do not need to copy the example's desktop path.",
         "illustrations": [
           {
             "alt": "Profile Director main interface: railing preview generated along the path array in the Rhino view on the left, section/component parameter panel on the right",
@@ -9645,6 +9919,44 @@
         "videos": [
           {
             "title": "RsTool · Profile Director Section Path Array Operation Demonstration (Bilibili)"
+          }
+        ],
+        "paramSections": [
+          {
+            "title": "Main panel: paths, item lists, and preview",
+            "intro": "Choose a path first, then decide what to generate along it. The top of the window handles paths and complete styles; Profile, Component, and Span handle continuous sweeps, repeated objects, and members within bays. Each tab has an item list with Add, Copy, and Delete; the editor applies only to the selected item. Defaults below refer to new items; loaded styles bring their own settings. Lengths use current Rhino document units and angles use degrees."
+          },
+          {
+            "title": "Profile tab: continuous sweeps along the path",
+            "intro": "Use Profile for handrails, moldings, or strips that run continuously along a path. Choose a library profile or Pick custom profile, then set its anchor on the path. Profile height changes section size; Z offset moves it vertically. Edit profile and Update selected modify the source outline; Add to library saves a reusable individual profile."
+          },
+          {
+            "title": "Component tab: repeat objects along the path",
+            "intro": "Use Component to repeat existing posts, seats, brackets, or other objects. Choose from the component library or Pick component object, then set an anchor. Placement controls which spacing, count, and direction fields appear. Object height resizes the object; Z offset moves it vertically, while Plane offset shifts it sideways relative to the path."
+          },
+          {
+            "title": "Component corner settings: clearance and joints",
+            "intro": "These settings belong to Component but are mode-dependent. Source turn angle, Stretch corner assembly, Join corner sides, and Skip plan turns appear only in Corners or Corners and ends. Fill corner beams appears in Segment fit or Segment spacing. Preview defaults first, then choose options for a rigid assembly, separate parts, or panels; they need not all be enabled."
+          },
+          {
+            "title": "Span tab: divide the path into bays",
+            "intro": "Span divides a path into bays, then creates a profile or places components in each bay. Use it for rails between posts, bay infill, or seats in alternating bays. Set Distribution and Spacing or Span count first, then configure contents. Segments placement divides each continuous segment separately."
+          },
+          {
+            "title": "Span Profile type: rails and swept infill",
+            "intro": "Profile type shows the profile library and anchor rather than component-library or member-count controls. It sweeps the section along each trimmed bay; use Sag below for a hanging cable or light-strip effect."
+          },
+          {
+            "title": "Span Component type: members within each bay",
+            "intro": "For Component type, choose a library object and anchor, then set Member distribution. This is a second layer: Span count creates bays; Member count controls objects inside each bay. Fit sloped span uses one fitted assembly per bay and hides internal distribution, direction, and spacing/count controls."
+          },
+          {
+            "title": "Span size and pose: dimensions versus offsets",
+            "intro": "These controls remain in Span and are mostly shared, but dimensions differ by type. For Profile, Object width/length set section width/height; for Component, they resize source bounding-box dimensions. Sag lowers the middle of a bay; Z offset moves it vertically. Confirm the type before editing."
+          },
+          {
+            "title": "Library windows: complete styles versus individual assets",
+            "intro": "Style Library stores a complete combination of profiles, components, and spans. Profile Library stores outlines; Component Library stores objects. Open Style Library applies a complete setup; a tab's own library replaces one asset. Names, categories, folders, and preview images manage assets rather than geometry dimensions."
           }
         ]
       }
@@ -10487,7 +10799,7 @@
       }
     },
     "rsCreateDynamicComponent": {
-      "sourceHash": "749f1e2a965c0458117ee2ac59b789c43c1e8181c968c56ae1ebc751da361f2e",
+      "sourceHash": "a53a1613cde1e187fe272c1b0af20ca1cb62b234d323d13c5f09755a09f1e517",
       "title": "Create Dynamic Component",
       "desc": "Create the selected ordinary geometry or existing dynamic component as a parametric dynamic component, supporting the use of parameters and one-way relationships to drive nodes.",
       "detail": {
@@ -10499,7 +10811,7 @@
         ],
         "params": [],
         "output": "Generate dynamic component instances (block references) in the model and automatically open the \"Dynamic Components\" panel, where parameters, bindings and positional relationships can be edited in the node tree.",
-        "notes": "Key points for getting started (see the rsDynamicComponentGuide Getting Started Guide for details): ① Two creation methods - ordinary geometric integration (parts such as a door, cabinet, etc. that are not reused separately) and dynamic component assembly (door frames/door leaves/hardware, etc. need to be reused independently, first make dynamic components separately and then create the outer assembly together); ②Five steps to complete: Name the placement → Select the run command → Select CPlane Direction and specify the origin → Confirm the blue box and \"Component Identity\" in the node tree and set parameters/binding → \"Save template\" after the preview is correct; ③$Parameter name represents the parameter, Parent is the parent node, Root is the root node, determine the driver first and then let other nodes follow one-way to avoid mutual reference; ④ Select the component individually and use Rhino Scale/Gumball For scaling, size parameters can be automatically written back (template default values remain unchanged), mirroring/cutting/zero scale/scaling copying will not be written back; ⑤ The formula can be used directly as 20mm/5cm/1.2m, and the angle is the default cost; ⑥ Save the template to form a Rhino undo record, and the undo will restore the template and all instances simultaneously.",
+        "notes": "## Dynamic component asset library\n\nDownload the ready-made [dynamic component asset library from Baidu Netdisk](https://pan.baidu.com/s/5_tgykYbh9xkF08OD11ZPkw). Use the assets and adjust component parameters to suit your project, or study their structure and settings when creating your own dynamic components.\n\nIf you are new to dynamic components, start with the [getting started guide](/en/commands/rsDynamicComponentGuide).\n\n## Getting started\n\nKey points for getting started (see the rsDynamicComponentGuide Getting Started Guide for details): ① Two creation methods - ordinary geometric integration (parts such as a door, cabinet, etc. that are not reused separately) and dynamic component assembly (door frames/door leaves/hardware, etc. need to be reused independently, first make dynamic components separately and then create the outer assembly together); ②Five steps to complete: Name the placement → Select the run command → Select CPlane Direction and specify the origin → Confirm the blue box and \"Component Identity\" in the node tree and set parameters/binding → \"Save template\" after the preview is correct; ③$Parameter name represents the parameter, Parent is the parent node, Root is the root node, determine the driver first and then let other nodes follow one-way to avoid mutual reference; ④ Select the component individually and use Rhino Scale/Gumball For scaling, size parameters can be automatically written back (template default values remain unchanged), mirroring/cutting/zero scale/scaling copying will not be written back; ⑤ The formula can be used directly as 20mm/5cm/1.2m, and the angle is the default cost; ⑥ Save the template to form a Rhino undo record, and the undo will restore the template and all instances simultaneously.",
         "illustrations": [],
         "videos": [
           {

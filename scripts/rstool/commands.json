@@ -2045,7 +2045,7 @@
    ],
    "params": [],
    "output": "在模型中生成动态组件实例（块参照），并自动打开“动态组件”面板，可在节点树中编辑参数、绑定和位置关系。",
-   "notes": "入门要点（详见 rsDynamicComponentGuide 入门指南）：①两种创建方式——普通几何一体化（一扇门、柜体等不单独复用的零件）与动态组件装配（门框/门扇/五金等需独立复用构件，先分别做成动态组件再一起创建外层装配体）；②五步完成：命名摆位→选中运行命令→选 CPlane 方向并指定原点→在节点树确认蓝框与“组件身份”后设参数/绑定→预览无误后“保存模板”；③$参数名 表示参数，Parent 为父节点、Root 为根节点，先定驱动者再让其他节点单向跟随，避免互相引用；④单独选中组件后用 Rhino Scale/Gumball 缩放，可自动写回尺寸参数（模板默认值不变），镜像/剪切/零比例/缩放复制不写回；⑤公式可直接用 20mm/5cm/1.2m，角度默认用度；⑥保存模板形成一条 Rhino 撤销记录，撤销会同步恢复模板与所有实例。",
+   "notes": "## 动态图块素材库\n\n可以直接下载现成的 [动态图块素材库（百度网盘）](https://pan.baidu.com/s/5_tgykYbh9xkF08OD11ZPkw)，按自己的项目需要使用素材、调整组件参数，也可以参考素材中的结构和参数设置来制作自己的动态图块。\n\n如果是第一次使用动态组件，建议先阅读 [动态组件入门指南](/commands/rsDynamicComponentGuide)。\n\n## 入门要点\n\n入门要点（详见 rsDynamicComponentGuide 入门指南）：①两种创建方式——普通几何一体化（一扇门、柜体等不单独复用的零件）与动态组件装配（门框/门扇/五金等需独立复用构件，先分别做成动态组件再一起创建外层装配体）；②五步完成：命名摆位→选中运行命令→选 CPlane 方向并指定原点→在节点树确认蓝框与“组件身份”后设参数/绑定→预览无误后“保存模板”；③$参数名 表示参数，Parent 为父节点、Root 为根节点，先定驱动者再让其他节点单向跟随，避免互相引用；④单独选中组件后用 Rhino Scale/Gumball 缩放，可自动写回尺寸参数（模板默认值不变），镜像/剪切/零比例/缩放复制不写回；⑤公式可直接用 20mm/5cm/1.2m，角度默认用度；⑥保存模板形成一条 Rhino 撤销记录，撤销会同步恢复模板与所有实例。",
    "videos": [
     {
      "provider": "bilibili",
@@ -6525,11 +6525,13 @@
    "license": true,
    "help": null,
    "style": "form",
+   "parametersLast": true,
    "flow": [
-    "命令行输入 rsProfileDirector",
-    "弹出截面路径生成器窗口（ProfileDirectorSession/Dialog）",
-    "选择/绘制路径曲线，拾取或定义截面（含参考点），添加组件与跨件（设置尺寸、间距、旋转等）",
-    "点击预览/生成，沿路径阵列并烘焙截面与组件"
+    "在 Rhino 命令行输入 rsProfileDirector，打开主面板。",
+    "点击“拾取路径曲线”或“绘制路径”，确定要沿着生成的路径。",
+    "想直接使用现成组合，可打开样式库选取样式；也可以在截面、组件、跨件选项卡中分别添加自己的条目。",
+    "先在左侧列表选中要调整的条目，再在右侧修改参数；切换放置方式或跨件类型后，界面会显示对应设置。",
+    "点击“预览”检查位置、间距和转角处理，满意后点击“生成”写入模型。"
    ],
    "illustrations": [
     {
@@ -6540,188 +6542,500 @@
    ],
    "params": [
     {
-     "zh": "截面缩放",
+     "zh": "拾取路径曲线 / 绘制路径",
+     "en": "Path",
+     "type": "操作",
+     "def": "未选择",
+     "range": "曲线",
+     "note": "使用现有曲线，或在 Rhino 中绘制路径；同一套样式可用于多条路径。"
+    },
+    {
+     "zh": "清除样式",
+     "en": "ClearStyle",
+     "type": "操作",
+     "def": "—",
+     "range": "确认后执行",
+     "note": "清空截面、组件、跨件的面板设置，但保留当前路径。"
+    },
+    {
+     "zh": "预览 / 生成 / 取消",
+     "en": "PreviewGenerate",
+     "type": "操作",
+     "def": "先设置再预览",
+     "range": "按钮",
+     "note": "预览不写入模型；开启预览后改参数会更新结果。生成写入模型；取消关闭窗口。"
+    },
+    {
+     "zh": "名称",
+     "en": "Profile.Name",
+     "type": "文本",
+     "def": "自动命名或沿用素材名",
+     "range": "文本",
+     "note": "给当前截面条目起名，方便多截面叠加时区分。"
+    },
+    {
+     "zh": "定位点",
+     "en": "Profile.AnchorPoint",
+     "type": "选项",
+     "def": "中心",
+     "range": "中心 / 边中点 / 角点 / 自定义点 / 轮廓拐点",
+     "note": "决定截面哪一处对准路径；自定义点配合“拾取参考点”设置。"
+    },
+    {
+     "zh": "缩放",
      "en": "Profile.Scale",
-     "type": "double",
-     "def": "1.0",
-     "range": "",
-     "note": "截面整体缩放"
-    },
-    {
-     "zh": "截面旋转",
-     "en": "Profile.RotationDegrees",
-     "type": "double",
-     "def": "0",
-     "range": "",
-     "note": "单位：度"
-    },
-    {
-     "zh": "截面 Z 偏移（高度）",
-     "en": "Profile.ProfileHeight",
-     "type": "double",
-     "def": "0",
-     "range": "",
-     "note": "默认 0"
-    },
-    {
-     "zh": "截面宽度",
-     "en": "Profile.ProfileWidth",
-     "type": "double",
-     "def": "",
-     "range": "",
-     "note": "留空则按原截面"
-    },
-    {
-     "zh": "截面深度(高度)",
-     "en": "Profile.ProfileDepth",
-     "type": "double",
-     "def": "",
-     "range": "",
-     "note": "留空则按原截面"
-    },
-    {
-     "zh": "起点延伸",
-     "en": "Profile.StartExtension",
-     "type": "double",
-     "def": "0",
-     "range": "",
-     "note": ""
-    },
-    {
-     "zh": "终点延伸",
-     "en": "Profile.EndExtension",
-     "type": "double",
-     "def": "0",
-     "range": "",
-     "note": ""
-    },
-    {
-     "zh": "组件间距",
-     "en": "Component.Spacing",
-     "type": "double",
-     "def": "",
-     "range": "",
-     "note": "留空则改用数量；优先使用间距"
-    },
-    {
-     "zh": "组件数量",
-     "en": "Component.Count",
-     "type": "integer",
-     "def": "5",
-     "range": "≥0",
-     "note": ""
-    },
-    {
-     "zh": "组件物体宽",
-     "en": "Component.ObjectWidth",
-     "type": "double",
-     "def": "",
-     "range": "",
-     "note": ""
-    },
-    {
-     "zh": "组件物体长",
-     "en": "Component.ObjectDepth",
-     "type": "double",
-     "def": "",
-     "range": "",
-     "note": ""
-    },
-    {
-     "zh": "组件物体高",
-     "en": "Component.ObjectHeight",
-     "type": "double",
-     "def": "",
-     "range": "",
-     "note": ""
-    },
-    {
-     "zh": "组件 Z 偏移",
-     "en": "Component.PlaneOffset",
-     "type": "double",
-     "def": "0",
-     "range": "",
-     "note": ""
-    },
-    {
-     "zh": "组件 XY 旋转",
-     "en": "Component.RotationDegrees",
-     "type": "double",
-     "def": "0",
-     "range": "",
-     "note": "单位：度"
-    },
-    {
-     "zh": "跨件间距",
-     "en": "Span.Spacing",
-     "type": "double",
-     "def": "",
-     "range": "",
-     "note": "留空则按数量"
-    },
-    {
-     "zh": "跨件数量",
-     "en": "Span.Count",
-     "type": "integer",
+     "type": "数值",
      "def": "1",
-     "range": "≥1",
-     "note": ""
+     "range": "> 0",
+     "note": "整体缩放截面；需要准确尺寸时，再填写宽度和高度。"
     },
     {
-     "zh": "跨件端部裁切",
+     "zh": "旋转",
+     "en": "Profile.RotationDegrees",
+     "type": "数值",
+     "def": "0°",
+     "range": "正负角度",
+     "note": "旋转截面朝向，不是旋转整条路径。"
+    },
+    {
+     "zh": "截面宽度 / 截面高度",
+     "en": "Profile.ProfileWidth / Profile.ProfileDepth",
+     "type": "长度",
+     "def": "留空",
+     "range": "留空保留；填写正数",
+     "note": "分别调整截面两个方向的尺寸；ProfileDepth 对应界面的“截面高度”。"
+    },
+    {
+     "zh": "起点延伸 / 终点延伸",
+     "en": "Profile.StartExtension / Profile.EndExtension",
+     "type": "长度",
+     "def": "0 / 0",
+     "range": "可正可负",
+     "note": "分别调整路径两端；正值延长、负值回缩。"
+    },
+    {
+     "zh": "Z 偏移",
+     "en": "Profile.ProfileHeight",
+     "type": "长度",
+     "def": "0",
+     "range": "可正可负",
+     "note": "沿世界 Z 方向抬高或降低整条截面，不改变截面本身的高度。"
+    },
+    {
+     "zh": "材质",
+     "en": "Profile.MaterialId",
+     "type": "操作",
+     "def": "未指定",
+     "range": "当前文档材质",
+     "note": "点击“设置材质”，为当前截面条目指定材质。"
+    },
+    {
+     "zh": "名称",
+     "en": "Component.Name",
+     "type": "文本",
+     "def": "自动命名或沿用素材名",
+     "range": "文本",
+     "note": "标识当前组件条目；多组组件可共同组成一个样式。"
+    },
+    {
+     "zh": "放置方式",
+     "en": "Component.PlacementMode",
+     "type": "选项",
+     "def": "沿曲线",
+     "range": "沿曲线 / 两端 / 起点 / 终点 / 拐角 / 拐角和两端 / 分段适配 / 固定间距",
+     "note": "规则阵列用沿曲线；节点构件用端点或拐角；按每段布置用分段适配或固定间距。"
+    },
+    {
+     "zh": "间距",
+     "en": "Component.Spacing",
+     "type": "长度",
+     "def": "留空",
+     "range": "正数；留空按模式处理",
+     "note": "沿曲线模式优先按间距排布，留空用数量；分段适配会调整实际点距，固定间距保持输入点距。"
+    },
+    {
+     "zh": "数量",
+     "en": "Component.Count",
+     "type": "整数",
+     "def": "5",
+     "range": "≥ 1",
+     "note": "只在沿曲线模式显示；间距为空时生效，转角处理可能减少实际数量。"
+    },
+    {
+     "zh": "方向",
+     "en": "Component.DirectionMode",
+     "type": "选项",
+     "def": "从起点到终点",
+     "range": "起点到终点 / 终点到起点 / 中点向两侧",
+     "note": "只在固定间距模式显示，用于控制从哪里开始排布。"
+    },
+    {
+     "zh": "定位点",
+     "en": "Component.AnchorPoint",
+     "type": "选项",
+     "def": "底部中心",
+     "range": "包围盒角点 / 边中点 / 面中心 / 自定义点",
+     "note": "决定物体如何对准路径；自定义定位配合“拾取参考点”。"
+    },
+    {
+     "zh": "物体宽度 / 长度 / 高度",
+     "en": "Component.ObjectWidth / ObjectDepth / ObjectHeight",
+     "type": "长度",
+     "def": "留空",
+     "range": "各项留空或填写正数",
+     "note": "按源物体的局部包围盒尺寸调整；不填的方向保留原尺寸。"
+    },
+    {
+     "zh": "Z 偏移",
+     "en": "Component.Height",
+     "type": "长度",
+     "def": "0",
+     "range": "可正可负",
+     "note": "沿世界 Z 方向移动组件，不是修改物体高度。"
+    },
+    {
+     "zh": "平面偏移",
+     "en": "Component.PlaneOffset",
+     "type": "长度",
+     "def": "0",
+     "range": "可正可负",
+     "note": "沿放置框架的侧向移动组件，方便让组件位于路径一侧。"
+    },
+    {
+     "zh": "XY 旋转",
+     "en": "Component.RotationDegrees",
+     "type": "数值",
+     "def": "0°",
+     "range": "正负角度",
+     "note": "调整组件在放置框架中的平面朝向。"
+    },
+    {
+     "zh": "材质",
+     "en": "Component.MaterialId",
+     "type": "操作",
+     "def": "未指定",
+     "range": "当前文档材质",
+     "note": "给这一组组件指定材质。"
+    },
+    {
+     "zh": "转角避让",
+     "en": "Component.AvoidCornerOverlap",
+     "type": "开关",
+     "def": "开启",
+     "range": "开启 / 关闭",
+     "note": "在转角拼接面裁去越界部分并封口；图块使用独立转角版本，不改源图块。"
+    },
+    {
+     "zh": "转角基准角",
+     "en": "Component.CornerReferenceAngleDegrees",
+     "type": "数值",
+     "def": "留空自动",
+     "range": "0–170°；可留空",
+     "note": "普通直线构件可填 0；已为直角加长的构件可填 90，用来适配实际转向角。"
+    },
+    {
+     "zh": "转角整体横向适配",
+     "en": "Component.StretchCornerAssembly",
+     "type": "开关",
+     "def": "关闭",
+     "range": "开启 / 关闭",
+     "note": "整体横向缩放连续支架，保留零件连接，但横向截面尺寸也会变化。"
+    },
+    {
+     "zh": "转角两侧拼接",
+     "en": "Component.JoinCornerSides",
+     "type": "开关",
+     "def": "关闭",
+     "range": "开启 / 关闭",
+     "note": "两侧各放半个组件，在角平分面裁切拼接；适合墙板或门侧收口，优先于整体横向适配。"
+    },
+    {
+     "zh": "忽略平面转角",
+     "en": "Component.SkipPlanCorners",
+     "type": "开关",
+     "def": "关闭",
+     "range": "开启 / 关闭",
+     "note": "跳过平面转向节点，保留端点及仅坡度变化的节点。"
+    },
+    {
+     "zh": "贴合拼角坡面",
+     "en": "Component.FollowUprightSurface",
+     "type": "开关",
+     "def": "关闭",
+     "range": "开启 / 关闭",
+     "note": "用于分体竖杆，各零件按坡面高度竖直调整；不适合需保持刚性连接的整体构件。"
+    },
+    {
+     "zh": "转角补齐横梁",
+     "en": "Component.FillCornerGaps",
+     "type": "开关",
+     "def": "关闭",
+     "range": "开启 / 关闭",
+     "note": "按原分格补齐转角外侧的细长横梁并裁切，不会补排立柱。"
+    },
+    {
+     "zh": "转角最小间距",
+     "en": "CornerMinSpacing",
+     "type": "长度",
+     "def": "留空自动",
+     "range": "留空 / 0 / 正数",
+     "note": "当前样式的组件共用；留空取阵列间距的 20%，0 关闭。只过滤已有对应转角组件的普通阵列。"
+    },
+    {
+     "zh": "名称",
+     "en": "Span.Name",
+     "type": "文本",
+     "def": "自动命名",
+     "range": "文本",
+     "note": "给当前跨件条目起名，便于区分多层或交替布置的构件。"
+    },
+    {
+     "zh": "类型",
+     "en": "Span.Kind",
+     "type": "选项",
+     "def": "截面",
+     "range": "截面 / 组件",
+     "note": "截面沿每跨扫掠；组件在每跨内部排布或倾斜适配，两种类型的参数不同。"
+    },
+    {
+     "zh": "放置方式",
+     "en": "Span.PlacementMode",
+     "type": "选项",
+     "def": "沿曲线",
+     "range": "沿曲线 / 分段",
+     "note": "沿曲线对整条路径划跨；分段先按连续段拆分，再各自划跨。"
+    },
+    {
+     "zh": "分布方式",
+     "en": "Span.DistributionMode",
+     "type": "选项",
+     "def": "固定间距",
+     "range": "固定间距 / 分段适配 / 等分数量",
+     "note": "决定路径怎样划跨；分段适配按输入间距估算跨数再均分；等分数量直接指定跨数。"
+    },
+    {
+     "zh": "方向（划跨）",
+     "en": "Span.DistributionDirectionMode",
+     "type": "选项",
+     "def": "从起点到终点",
+     "range": "起点到终点 / 终点到起点 / 中点向两侧",
+     "note": "只在固定间距显示，决定从哪端开始划跨及余量留在哪里。"
+    },
+    {
+     "zh": "间距",
+     "en": "Span.Spacing",
+     "type": "长度",
+     "def": "留空",
+     "range": "正数；留空不按该间距细分",
+     "note": "固定间距或分段适配时显示；这是跨长设置，不是跨内组件间距。"
+    },
+    {
+     "zh": "跨数",
+     "en": "Span.Count",
+     "type": "整数",
+     "def": "1",
+     "range": "≥ 1",
+     "note": "只在等分数量显示；分段模式下对每个连续段分别使用。"
+    },
+    {
+     "zh": "每几跨放置 / 起始跨",
+     "en": "Span.RepeatEvery / Span.StartSpan",
+     "type": "整数",
+     "def": "1 / 1",
+     "range": "各 ≥ 1",
+     "note": "默认每跨都有；设为 2 / 1 就是第 1、3、5…跨放置。配合多个条目可做交替样式。"
+    },
+    {
+     "zh": "端部裁切",
      "en": "Span.EndTrim",
-     "type": "double",
+     "type": "长度",
      "def": "0",
-     "range": "",
-     "note": ""
+     "range": "≥ 0",
+     "note": "每跨两端各回缩这个距离；回缩后太短的跨会跳过。"
     },
     {
-     "zh": "跨件高度",
-     "en": "Span.Height",
-     "type": "double",
-     "def": "",
-     "range": "",
-     "note": ""
+     "zh": "截面库",
+     "en": "Span.SelectedProfileLibraryItemId",
+     "type": "操作",
+     "def": "未选择",
+     "range": "已有截面素材",
+     "note": "选择用在这一组跨件里的截面，不必与主截面面板相同。"
     },
     {
-     "zh": "跨件物体宽",
-     "en": "Span.ObjectWidth",
-     "type": "double",
-     "def": "",
-     "range": "",
-     "note": ""
+     "zh": "定位点",
+     "en": "Span.AnchorPoint",
+     "type": "选项",
+     "def": "中心",
+     "range": "中心 / 边中点 / 角点 / 自定义点 / 轮廓拐点",
+     "note": "决定截面与跨路径对齐的位置；使用库内的参考点或轮廓定位点。"
     },
     {
-     "zh": "跨件物体长",
-     "en": "Span.ObjectDepth",
-     "type": "double",
-     "def": "",
-     "range": "",
-     "note": ""
+     "zh": "组件库",
+     "en": "Span.SelectedComponentLibraryItemId",
+     "type": "操作",
+     "def": "未选择",
+     "range": "已有组件素材",
+     "note": "选择这一组跨件使用的组件素材。"
     },
     {
-     "zh": "跨件平面偏移",
-     "en": "Span.PlaneOffset",
-     "type": "double",
+     "zh": "组件定位点",
+     "en": "Span.ComponentAnchorPoint",
+     "type": "选项",
+     "def": "底部中心",
+     "range": "包围盒定位点 / 自定义点",
+     "note": "决定组件如何对准跨内的放置位置；载入素材可带入自己的定位点。"
+    },
+    {
+     "zh": "跨件分布",
+     "en": "Span.MemberDistributionMode",
+     "type": "选项",
+     "def": "固定间距",
+     "range": "固定间距 / 分段适配 / 等分数量",
+     "note": "在每跨内部排组件；分段适配根据跨长调整数量和实际间距。"
+    },
+    {
+     "zh": "方向（跨内排布）",
+     "en": "Span.DirectionMode",
+     "type": "选项",
+     "def": "从中点向两侧",
+     "range": "中点向两侧 / 起点到终点 / 终点到起点",
+     "note": "控制每跨里的组件从哪里开始排，区别于前面的划跨方向。"
+    },
+    {
+     "zh": "跨件间距 / 跨件数量",
+     "en": "Span.ComponentSpacing / Span.MemberCount",
+     "type": "长度 / 整数",
+     "def": "留空 / 1",
+     "range": "间距 > 0；数量 ≥ 1",
+     "note": "按跨件分布模式显示其中一项；间距留空时每跨中心放一个。"
+    },
+    {
+     "zh": "转角避让",
+     "en": "Span.AvoidCornerOverlap",
+     "type": "开关",
+     "def": "开启",
+     "range": "开启 / 关闭",
+     "note": "组件类型显示，用于处理转角附近的越界部分。"
+    },
+    {
+     "zh": "保留完整构件 / 避让组",
+     "en": "Span.KeepWholeAtCorners / Span.CornerClearanceGroup",
+     "type": "开关 / 文本",
+     "def": "关闭 / 留空",
+     "range": "开启 / 关闭；组名文本",
+     "note": "移动完整组件避让，放不下整组跳过，不裁切。相同组名及布置参数共用包络；需开启转角避让，且不使用倾斜适配。"
+    },
+    {
+     "zh": "贴合拼角坡面",
+     "en": "Span.FollowUprightSurface",
+     "type": "开关",
+     "def": "关闭",
+     "range": "开启 / 关闭",
+     "note": "适合分体竖杆按坡面竖直调整；沿跨倾斜适配开启时隐藏。"
+    },
+    {
+     "zh": "沿跨倾斜适配",
+     "en": "Span.FitToSlopedSpan",
+     "type": "开关",
+     "def": "关闭",
+     "range": "开启 / 关闭",
+     "note": "每跨一组，沿裁切后的两端连线倾斜并拉伸，截面保持竖直；弯曲路径按跨的弦线连接。"
+    },
+    {
+     "zh": "适配基准长度",
+     "en": "Span.SpanFitReferenceLength",
+     "type": "长度",
+     "def": "留空",
+     "range": "留空 / 正数",
+     "note": "仅倾斜适配显示；留空用组件 X 范围，填写后以定位点为中心。多层组件共用基准可保持对齐。"
+    },
+    {
+     "zh": "仅用于截面开孔",
+     "en": "Span.CutProfiles",
+     "type": "开关",
+     "def": "关闭",
+     "range": "开启 / 关闭",
+     "note": "把封闭组件实体作为切割体，对生成的截面做布尔差；切割体不预览、不烘焙。"
+    },
+    {
+     "zh": "物体宽度 / 长度 / 高度",
+     "en": "Span.ObjectWidth / ObjectDepth / ObjectHeight",
+     "type": "长度",
+     "def": "留空",
+     "range": "各项留空或填写正数",
+     "note": "截面类型只用宽度和长度；组件类型也显示高度。倾斜适配接管沿跨宽度，宽度输入框禁用。"
+    },
+    {
+     "zh": "垂度",
+     "en": "Span.Sag",
+     "type": "长度",
      "def": "0",
-     "range": "",
-     "note": ""
+     "range": "≥ 0",
+     "note": "每跨中部向世界 -Z 下垂，0 不下垂；组件倾斜适配时隐藏。"
     },
     {
-     "zh": "跨件旋转值",
-     "en": "Span.RotationValue",
-     "type": "double",
-     "def": "0",
-     "range": "",
-     "note": ""
+     "zh": "Z 偏移 / 平面偏移",
+     "en": "Span.Height / Span.PlaneOffset",
+     "type": "长度",
+     "def": "0 / 0",
+     "range": "可正可负",
+     "note": "分别用于竖向移动和路径侧向移动，不改变物体尺寸。"
     },
     {
-     "zh": "跨件随机偏移",
+     "zh": "旋转模式 / 旋转数值",
+     "en": "Span.RotationMode / Span.RotationValue",
+     "type": "选项 / 角度",
+     "def": "固定旋转 / 0°",
+     "range": "固定用正负角；随机幅度 ≥ 0",
+     "note": "固定按指定角度旋转；随机在输入幅度的正负范围内变化。"
+    },
+    {
+     "zh": "随机偏移",
      "en": "Span.RandomPlaneOffset",
-     "type": "double",
+     "type": "长度",
      "def": "0",
-     "range": "",
-     "note": ""
+     "range": "≥ 0",
+     "note": "在平面偏移基础上增加正负随机侧向变化，0 关闭。"
+    },
+    {
+     "zh": "材质",
+     "en": "Span.MaterialId",
+     "type": "操作",
+     "def": "未指定",
+     "range": "当前文档材质",
+     "note": "给当前跨件条目指定材质。"
+    },
+    {
+     "zh": "搜索 / 名称 / 分类",
+     "en": "Library.SearchCategory",
+     "type": "文本",
+     "def": "随素材",
+     "range": "文本 / 分类",
+     "note": "搜索定位素材，用名称与分类整理库；使用前先选具体条目。"
+    },
+    {
+     "zh": "目录 / 修改目录",
+     "en": "Library.Folder",
+     "type": "操作",
+     "def": "当前素材库目录",
+     "range": "本地文件夹",
+     "note": "查看或切换库路径；下载素材的实际存放目录要与这里一致。"
+    },
+    {
+     "zh": "保存全部修改 / 另存为新样式",
+     "en": "Library.SaveStyle",
+     "type": "操作",
+     "def": "—",
+     "range": "样式库按钮",
+     "note": "保存全部修改覆盖选中样式的名称、分类与当前全部设置；另存为新样式创建一份新样式。"
+    },
+    {
+     "zh": "自定义预览图 / 使用",
+     "en": "Library.PreviewUse",
+     "type": "操作",
+     "def": "随素材",
+     "range": "图片 / 已选素材",
+     "note": "预览图只用于库中展示；使用将所选样式或单个素材载入主面板。"
     }
    ],
    "output": "沿路径阵列生成的截面扫掠体与组件/跨件实例（可烘焙为块或独立几何体）",
@@ -6732,7 +7046,125 @@
      "title": "RsTool · Profile Director 截面路径阵列操作演示（B 站）"
     }
    ],
-   "notes": "窗口含路径拾取/绘制、截面库/组件库浏览、参考点拾取等交互；数值均以文本框输入，默认值多为 0 或空；分布模式可按间距或数量"
+   "notes": "素材库下载方式见下方；页面末尾按实际面板分组介绍参数。每个面板条目独立设置，载入样式后默认值会随素材变化，截图中的界面文字和控件位置也可能随版本不同。\n\n## 素材库下载与使用\n\n不想从头整理素材的话，可以直接下载现成的 [rsProfileDirector 素材库（百度网盘）](https://pan.baidu.com/s/5zLhuX4hCtyEUVvoC1rHkmA)。把素材库放到 `rsProfileDirector` 目录即可使用；如果下载的是压缩包，请先解压并保留素材库原有的文件夹结构。\n\n1. 在 `rsProfileDirector` 主面板点击「打开样式库」（Open style library）。\n2. 查看样式库窗口下方的「文件夹」（Folder）路径，把下载的素材库放到这里指向的 `rsProfileDirector` 目录。\n3. 如果素材库放在其他位置，点击「更改文件夹」（Change folder），选择实际存放素材库的 `rsProfileDirector` 目录；在库中选择需要的样式，点击「使用」（Use），即可回到主面板继续预览和生成。\n\n![Profile Director 样式库目录设置：红框标出 Folder 路径和 Change folder 按钮](../assets/rsProfileDirector/style-library-folder.png)\n*红框处是素材库目录设置：Folder 显示当前路径，点击 Change folder 可切换到存放素材库的 rsProfileDirector 文件夹。*\n\n素材库可以放在自己方便管理的位置，关键是样式库中的 Folder 路径要与实际存放目录一致，不需要照搬示例中的桌面路径。",
+   "paramSections": [
+    {
+     "title": "主面板：路径、面板列表与预览",
+     "intro": "先选路径，再决定沿它生成什么。主窗口上方负责拾取或绘制路径、打开整套样式；下方的 Profile、Component、Span 分别处理连续截面、重复组件和跨间构件。每个选项卡左侧都能添加、复制、删除多个条目，右侧只编辑当前选中的那一项。以下是新建条目的初始设置，下载样式会带入自己的参数；长度按当前 Rhino 文档单位输入，角度用度。",
+     "params": [
+      "Path",
+      "ClearStyle",
+      "PreviewGenerate"
+     ]
+    },
+    {
+     "title": "Profile 截面面板：沿路径连续扫掠",
+     "intro": "扶手、线脚、连续板条这类沿路径一直延伸的形体，放在截面面板里做。先从截面库选轮廓，或用“拾取自定义截面”选择自己的曲线；再用定位点决定哪一处贴着路径。注意“截面高度”改的是轮廓大小，“Z 偏移”改的是整体位置，不是一回事。“编辑截面 / 从选中更新”用于修改轮廓，“加入库”用于保存为可重复使用的单个截面。",
+     "params": [
+      "Profile.Name",
+      "Profile.AnchorPoint",
+      "Profile.Scale",
+      "Profile.RotationDegrees",
+      "Profile.ProfileWidth / Profile.ProfileDepth",
+      "Profile.StartExtension / Profile.EndExtension",
+      "Profile.ProfileHeight",
+      "Profile.MaterialId"
+     ]
+    },
+    {
+     "title": "Component 组件面板：沿路径重复放置物体",
+     "intro": "立柱、座椅、支架等已经建好的物体，用组件面板来排布。可从组件库选择，也可“拾取组件物体”；定位点决定物体怎样贴着路径。先选放置方式，界面才会显示对应的间距、数量或方向。“物体高度”是物体尺寸，Z 偏移是竖向移动，平面偏移则是向路径侧边移动。",
+     "params": [
+      "Component.Name",
+      "Component.PlacementMode",
+      "Component.Spacing",
+      "Component.Count",
+      "Component.DirectionMode",
+      "Component.AnchorPoint",
+      "Component.ObjectWidth / ObjectDepth / ObjectHeight",
+      "Component.Height",
+      "Component.PlaneOffset",
+      "Component.RotationDegrees",
+      "Component.MaterialId"
+     ]
+    },
+    {
+     "title": "Component 转角设置：避免碰撞与拼接",
+     "intro": "这组设置仍在组件面板里，但不是所有模式都显示。“转角基准角、整体横向适配、两侧拼接、忽略平面转角”只在“拐角 / 拐角和两端”显示；“补齐横梁”只在“分段适配 / 固定间距”显示。建议先用默认设置预览，再按素材是刚性整体、分体零件还是墙板来选择处理方式，不必把所有开关都打开。",
+     "params": [
+      "Component.AvoidCornerOverlap",
+      "Component.CornerReferenceAngleDegrees",
+      "Component.StretchCornerAssembly",
+      "Component.JoinCornerSides",
+      "Component.SkipPlanCorners",
+      "Component.FollowUprightSurface",
+      "Component.FillCornerGaps",
+      "CornerMinSpacing"
+     ]
+    },
+    {
+     "title": "Span 跨件面板：先划分路径，再生成跨件",
+     "intro": "跨件不是另一种普通阵列：它先把路径划成一跨一跨，再在每跨里生成截面或布置组件。比如栏杆每跨的横杆、两根立柱之间的填充、隔跨出现的座椅，都可以在这里做。先设置下面的“分布方式、间距或跨数”，再选跨内的内容；“放置方式”为分段时，每个连续段分别划跨。",
+     "params": [
+      "Span.Name",
+      "Span.Kind",
+      "Span.PlacementMode",
+      "Span.DistributionMode",
+      "Span.DistributionDirectionMode",
+      "Span.Spacing",
+      "Span.Count",
+      "Span.RepeatEvery / Span.StartSpan",
+      "Span.EndTrim"
+     ]
+    },
+    {
+     "title": "Span 截面类型：跨间横杆与连续填充",
+     "intro": "类型选“截面”时，面板显示截面库和截面定位点，而不是组件库及跨内数量。它会在裁切后的每跨上扫掠所选截面；需要绳索或下垂灯带的效果，可在后面的“垂度”中设置。",
+     "params": [
+      "Span.SelectedProfileLibraryItemId",
+      "Span.AnchorPoint"
+     ]
+    },
+    {
+     "title": "Span 组件类型：跨内排布与坡跨适配",
+     "intro": "类型选“组件”后，先选择组件库与定位点，再设置“跨件分布”。这里是第二层分布：上面的跨数决定有几跨，下面的跨件数量决定每跨内部有几个组件。开启“沿跨倾斜适配”会改为每跨放一组并拉伸到两端，跨内分布、方向和间距/数量随之隐藏。",
+     "params": [
+      "Span.SelectedComponentLibraryItemId",
+      "Span.ComponentAnchorPoint",
+      "Span.MemberDistributionMode",
+      "Span.DirectionMode",
+      "Span.ComponentSpacing / Span.MemberCount",
+      "Span.AvoidCornerOverlap",
+      "Span.KeepWholeAtCorners / Span.CornerClearanceGroup",
+      "Span.FollowUprightSurface",
+      "Span.FitToSlopedSpan",
+      "Span.SpanFitReferenceLength",
+      "Span.CutProfiles"
+     ]
+    },
+    {
+     "title": "Span 尺寸与姿态：不要把尺寸当位移",
+     "intro": "这部分仍是跨件面板的参数，两种类型大多共用，但尺寸含义不同：截面类型里的“物体宽度 / 长度”对应轮廓宽度和高度；组件类型则按源物体的局部包围盒尺寸调整。垂度让跨间下垂，Z 偏移把整体抬高；先确认类型，再改尺寸和位置。",
+     "params": [
+      "Span.ObjectWidth / ObjectDepth / ObjectHeight",
+      "Span.Sag",
+      "Span.Height / Span.PlaneOffset",
+      "Span.RotationMode / Span.RotationValue",
+      "Span.RandomPlaneOffset",
+      "Span.MaterialId"
+     ]
+    },
+    {
+     "title": "库窗口：整套样式与单个素材分开管理",
+     "intro": "样式库保存的是一整套截面、组件和跨件组合；截面库只选轮廓，组件库只选物体。想直接套用下载的方案，用“打开样式库”；想替换其中一个截面或组件，就从对应选项卡打开它自己的库。库窗口的名称、分类、目录、预览图都是素材管理信息，不是几何尺寸参数。",
+     "params": [
+      "Library.SearchCategory",
+      "Library.Folder",
+      "Library.SaveStyle",
+      "Library.PreviewUse"
+     ]
+    }
+   ]
   },
   "rsProfileDirectorAddProfile": {
    "license": true,

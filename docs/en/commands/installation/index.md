@@ -1,8 +1,14 @@
 # RSTool Installation Guide
 
-RSTool can be installed directly through Rhino's built-in package manager.
+There are two ways to install RSTool: download a `.yak` file from Baidu Netdisk and drag it into Rhino, or search for RSTool in Rhino's built-in package manager. Choose either method.
 
-## Install with PackageManager
+## Method 1: Install from a YAK file
+
+1. Open the [RSTool download link on Baidu Netdisk](https://pan.baidu.com/s/5c6yJvAa5wCCh81eEZRsGRg) and download the RSTool `.yak` installation file.
+2. Open Rhino, drag the downloaded `.yak` file into the Rhino window, and follow the prompts to install it.
+3. Save your work and restart Rhino if prompted after installation.
+
+## Method 2: Search and install with PackageManager
 
 1. Open Rhino, enter `PackageManager` on the command line, and press Enter.
 2. Search for `rstool` on the **Online** tab of the Package Manager.

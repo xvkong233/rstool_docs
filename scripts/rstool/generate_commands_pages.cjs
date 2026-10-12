@@ -202,6 +202,7 @@ function renderCommand(item, detail, locale) {
     lines.push('')
   }
 
+  const parametersStart = lines.length
   lines.push(`**${text.parameters}**${text.separator.trimEnd()}`)
   lines.push('')
   const params = Array.isArray(detail.params) ? detail.params : []
@@ -246,6 +247,11 @@ function renderCommand(item, detail, locale) {
     lines.push('')
   }
 
+  // Layout-only metadata is shared by both locales; other commands keep their order.
+  const deferredParameters = detail.parametersLast
+    ? lines.splice(parametersStart)
+    : []
+
   if (detail.output && detail.output !== func) {
     lines.push(`**${text.output}**${text.separator}${esc(detail.output)}`)
     lines.push('')
@@ -289,6 +295,7 @@ function renderCommand(item, detail, locale) {
     }
   }
 
+  lines.push(...deferredParameters)
   return lines.join('\n')
 }
 

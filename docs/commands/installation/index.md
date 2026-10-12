@@ -1,8 +1,14 @@
 # RSTool 安装指南
 
-RSTool 可以直接通过 Rhino 自带的软件包管理器安装。
+RSTool 有两种安装方式：从百度网盘下载 `.yak` 文件后拖入 Rhino 安装，或者通过 Rhino 自带的软件包管理器搜索安装，任选一种即可。
 
-## 通过 PackageManager 安装
+## 方式一：下载 YAK 文件安装
+
+1. 打开 [RSTool 百度网盘下载链接](https://pan.baidu.com/s/5c6yJvAa5wCCh81eEZRsGRg)，下载 RSTool 的 `.yak` 安装文件。
+2. 打开 Rhino，将下载好的 `.yak` 文件直接拖入 Rhino 窗口，按提示完成安装。
+3. 安装完成后，如 Rhino 提示需要重启，请保存当前文件并重新启动 Rhino。
+
+## 方式二：通过 PackageManager 搜索安装
 
 1. 打开 Rhino，在命令行输入 `PackageManager` 并按 Enter。
 2. 在“软件包管理”的“线上”选项卡中搜索 `rstool`。

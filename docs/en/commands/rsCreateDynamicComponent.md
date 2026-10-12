@@ -21,7 +21,17 @@
 
 > This command has no numeric command-line parameters. Adjust its options in the settings window.
 
-**Notes**: Key points for getting started (see the rsDynamicComponentGuide Getting Started Guide for details): ① Two creation methods - ordinary geometric integration (parts such as a door, cabinet, etc. that are not reused separately) and dynamic component assembly (door frames/door leaves/hardware, etc. need to be reused independently, first make dynamic components separately and then create the outer assembly together); ②Five steps to complete: Name the placement → Select the run command → Select CPlane Direction and specify the origin → Confirm the blue box and "Component Identity" in the node tree and set parameters/binding → "Save template" after the preview is correct; ③$Parameter name represents the parameter, Parent is the parent node, Root is the root node, determine the driver first and then let other nodes follow one-way to avoid mutual reference; ④ Select the component individually and use Rhino Scale/Gumball For scaling, size parameters can be automatically written back (template default values remain unchanged), mirroring/cutting/zero scale/scaling copying will not be written back; ⑤ The formula can be used directly as 20mm/5cm/1.2m, and the angle is the default cost; ⑥ Save the template to form a Rhino undo record, and the undo will restore the template and all instances simultaneously.
+**Notes**:
+
+## Dynamic component asset library
+
+Download the ready-made [dynamic component asset library from Baidu Netdisk](https://pan.baidu.com/s/5_tgykYbh9xkF08OD11ZPkw). Use the assets and adjust component parameters to suit your project, or study their structure and settings when creating your own dynamic components.
+
+If you are new to dynamic components, start with the [getting started guide](/en/commands/rsDynamicComponentGuide).
+
+## Getting started
+
+Key points for getting started (see the rsDynamicComponentGuide Getting Started Guide for details): ① Two creation methods - ordinary geometric integration (parts such as a door, cabinet, etc. that are not reused separately) and dynamic component assembly (door frames/door leaves/hardware, etc. need to be reused independently, first make dynamic components separately and then create the outer assembly together); ②Five steps to complete: Name the placement → Select the run command → Select CPlane Direction and specify the origin → Confirm the blue box and "Component Identity" in the node tree and set parameters/binding → "Save template" after the preview is correct; ③$Parameter name represents the parameter, Parent is the parent node, Root is the root node, determine the driver first and then let other nodes follow one-way to avoid mutual reference; ④ Select the component individually and use Rhino Scale/Gumball For scaling, size parameters can be automatically written back (template default values remain unchanged), mirroring/cutting/zero scale/scaling copying will not be written back; ⑤ The formula can be used directly as 20mm/5cm/1.2m, and the angle is the default cost; ⑥ Save the template to form a Rhino undo record, and the undo will restore the template and all instances simultaneously.
 
 **Tutorial videos**:
 
