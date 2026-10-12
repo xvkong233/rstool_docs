@@ -25,6 +25,16 @@
 
 **Notes**: rsSlab creates closed Brep slabs with stored thickness metadata. Creation and thickness changes both support Rhino Undo.
 
+## Changing thickness after creation
+
+To adjust an existing slab's thickness, use the Properties panel; there is no need to create it again:
+
+1. Select the slab and open Rhino's Properties panel.
+2. Switch to User Text and find `RSToolSlabThickness`.
+3. Edit the number in that row's Value column and confirm. The plug-in updates the slab to the new thickness.
+
+This is the slab's thickness (`Thickness`); its full User Text key is `RSToolSlabThickness`. Change only the value, not the key name or the `RSToolObjectType` slab-type marker. Enter the number in current Rhino document units: for example, `200` means 200 mm when the document uses millimeters.
+
 ## Curve requirements
 
 Only closed planar curves are accepted. Outer loops and opening loops for the same slab must be coplanar and have valid nesting. Curve sets that cannot form valid planar regions are rejected. Multiple disjoint closed regions produce separate slabs.

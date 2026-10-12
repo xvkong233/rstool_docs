@@ -1,6 +1,6 @@
 # RsTool Command Reference
 
-> Complete reference for all 287 RsTool commands. Each command has a dedicated page covering its purpose, invocation, workflow, parameters, output, notes, and tutorials.
+> Complete reference for all 290 RsTool commands. Each command has a dedicated page covering its purpose, invocation, workflow, parameters, output, notes, and tutorials.
 
 ## AI (4)
 
@@ -205,10 +205,11 @@
 - [rsRandomPtsOnObj · Randomly generated points on an object](/en/commands/rsRandomPtsOnObj) — Generate randomly distributed points on the surface of the object, supporting meshes and surfaces.
 - [rsDivideCrvByRoundedCount · Divide Curve by Rounded Count](/en/commands/rsDivideCrvByRoundedCount) — Divide the curve by the rounded amount, ensuring that the number of equal segments is rounded.
 
-## Paneling & Facades (6)
+## Paneling & Facades (7)
 
 ### General
 
+- [rsPerforation · Perforation](/en/commands/rsPerforation) — Generate circular or regular polygon perforation patterns inside a closed planar boundary, with sizes driven by curve distance, image grayscale, or a directional gradient.
 - [rsTesselateNurbs · Panelize NURBS](/en/commands/rsTesselateNurbs) — Subdivide the NURBS surface to generate a panelized structure.
 - [rsTileQuadNurbsBlend · Blend Panels on Quad NURBS](/en/commands/rsTileQuadNurbsBlend) — Generate gradient skin patterns on NURBS surfaces.
 - [rsTileMeshBlend · Blend Panels on Mesh](/en/commands/rsTileMeshBlend) — Generate pavement patterns on the mesh surface, supporting mixed transitions between different patterns.
@@ -216,7 +217,7 @@
 - [rsTileMeshBlendByBitmap · Blend Mesh Panels by Bitmap](/en/commands/rsTileMeshBlendByBitmap) — Generate a gradient pavement surface based on the map image, and the image grayscale or color drives the pattern changes.
 - [rsMeshColorPaint · Mesh Color Brush](/en/commands/rsMeshColorPaint) — Use a brush to draw color on the mesh, supporting real-time interactive painting.
 
-## Organization & Selection (20)
+## Organization & Selection (21)
 
 ### Selection
 
@@ -243,6 +244,7 @@
 ### Material Tools
 
 - [rsPickMaterial · Pick Material](/en/commands/rsPickMaterial) — Pick a material from an object in the scene and make it the current material.
+- [rsPaintBucket · Paint Bucket](/en/commands/rsPaintBucket) — Sample a material from an object, then click other objects to paint them. Supports painting inside nested blocks by updating objects in shared block definitions.
 - [rsQuickColor · Quick coloring](/en/commands/rsQuickColor) — Quickly assign a specific color to selected objects without opening the material editor.
 - [rsAutoBoxMapping · Automatic box mapping](/en/commands/rsAutoBoxMapping) — Automatically set box mapping mapping coordinates for objects, suitable for quick mapping of architectural models.
 - [rsPBRToCustomMaterial · PBR to custom material](/en/commands/rsPBRToCustomMaterial) — Convert PBR materials to Rhino custom materials for easy use in lower versions of Rhino.
@@ -286,7 +288,7 @@
 - [rsWindAnalysis · Wind environment analysis](/en/commands/rsWindAnalysis) — Use a modeless panel for 2D concept or 3D wind analysis, with speed-color previews, animated trails, point queries and Bake.
 - [rsStructuralAnalysis · Structural mechanics analysis](/en/commands/rsStructuralAnalysis) — Perform mechanical analysis on structures to visualize and calculate stress conditions.
 
-## Physics Simulation (7)
+## Physics Simulation (8)
 
 ### Form Finding & Relaxation
 
@@ -294,6 +296,7 @@
 - [rsMembrane · Membrane structure form finding](/en/commands/rsMembrane) — Perform form-finding analysis on the membrane structure to generate a tension membrane surface.
 - [rsMeshRelax · Uniform Mesh Relaxation](/en/commands/rsMeshRelax) — Relax and smooth the mesh to make the mesh vertices more evenly distributed.
 - [rsCirclePacking · Circle Packing](/en/commands/rsCirclePacking) — Perform circular filling simulation on the surface to generate a tangent circle array.
+- [rsDifferentialGrowth · Differential Growth](/en/commands/rsDifferentialGrowth) — Grow and fold lines inside a closed planar boundary to create maze and fold patterns, with live simulation, custom seed curves, and smooth output.
 
 ### Dynamics
 

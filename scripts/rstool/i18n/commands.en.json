@@ -2902,7 +2902,7 @@
       }
     },
     "rsSlab": {
-      "sourceHash": "17741ea7c3bf909c47a2cc6e761149afd38564f30e4906953e1ddb53bba5852d",
+      "sourceHash": "8b03f8e0a518189f78dd53cbac4f8eb1fcbaf71fabaea969dad0572f8677a8f5",
       "title": "Parametric Slab",
       "desc": "Create downward-thickened parametric slabs from one or more closed planar curves, with nested boundaries and editable thickness through object user text.",
       "detail": {
@@ -2930,7 +2930,7 @@
           }
         ],
         "output": "Creates one or more closed Brep parametric slabs thickened along world -Z and stores RSTool slab-type and thickness metadata.",
-        "notes": "rsSlab creates closed Brep slabs with stored thickness metadata. Creation and thickness changes both support Rhino Undo.\n\n## Curve requirements\n\nOnly closed planar curves are accepted. Outer loops and opening loops for the same slab must be coplanar and have valid nesting. Curve sets that cannot form valid planar regions are rejected. Multiple disjoint closed regions produce separate slabs.\n\n## Parametric thickness\n\nThe slab's top face remains on the input-curve plane, while the solid is created along world `-Z`; a tilted curve plane does not change the thickening direction. After creation, select the slab and edit `RSToolSlabThickness` under User Text in Rhino Object Properties. The plug-in keeps the top face in place and rebuilds the solid along its original thickening direction. The value uses current document units and must be positive and no smaller than the greater of the document absolute tolerance and the converted value of 1 mm.\n\nParametric behavior depends on the slab marker, face indices and geometry signature stored by the command. If another modeling command changes the slab topology, the plug-in removes the parametric marker after detecting a mismatch, and editing `RSToolSlabThickness` will no longer rebuild it. Copied or reopened slabs whose metadata remains valid can still be resized.",
+        "notes": "rsSlab creates closed Brep slabs with stored thickness metadata. Creation and thickness changes both support Rhino Undo.\n\n## Changing thickness after creation\n\nTo adjust an existing slab's thickness, use the Properties panel; there is no need to create it again:\n\n1. Select the slab and open Rhino's Properties panel.\n2. Switch to User Text and find `RSToolSlabThickness`.\n3. Edit the number in that row's Value column and confirm. The plug-in updates the slab to the new thickness.\n\nThis is the slab's thickness (`Thickness`); its full User Text key is `RSToolSlabThickness`. Change only the value, not the key name or the `RSToolObjectType` slab-type marker. Enter the number in current Rhino document units: for example, `200` means 200 mm when the document uses millimeters.\n\n## Curve requirements\n\nOnly closed planar curves are accepted. Outer loops and opening loops for the same slab must be coplanar and have valid nesting. Curve sets that cannot form valid planar regions are rejected. Multiple disjoint closed regions produce separate slabs.\n\n## Parametric thickness\n\nThe slab's top face remains on the input-curve plane, while the solid is created along world `-Z`; a tilted curve plane does not change the thickening direction. After creation, select the slab and edit `RSToolSlabThickness` under User Text in Rhino Object Properties. The plug-in keeps the top face in place and rebuilds the solid along its original thickening direction. The value uses current document units and must be positive and no smaller than the greater of the document absolute tolerance and the converted value of 1 mm.\n\nParametric behavior depends on the slab marker, face indices and geometry signature stored by the command. If another modeling command changes the slab topology, the plug-in removes the parametric marker after detecting a mismatch, and editing `RSToolSlabThickness` will no longer rebuild it. Copied or reopened slabs whose metadata remains valid can still be resized.",
         "illustrations": [],
         "videos": []
       }
@@ -5496,6 +5496,252 @@
         "videos": []
       }
     },
+    "rsPerforation": {
+      "sourceHash": "1d409c96d8a97507103f429aa788d387a38be3f26f7625603e23efbd73fb47af",
+      "title": "Perforation",
+      "desc": "Generate circular or regular polygon perforation patterns inside a closed planar boundary, with sizes driven by curve distance, image grayscale, or a directional gradient.",
+      "detail": {
+        "flow": [
+          "Enter rsPerforation and select a valid closed planar curve without self-intersections as the boundary.",
+          "Under Boundary and grid, choose counts or spacing, rectangular or staggered layout, and the grid angle.",
+          "Under Pattern and dimensions, choose the shape, radius range, edge margin, and hole gap. Check the allowed maximum radius.",
+          "Under Size field, choose Uniform, Curve distance, Image grayscale, or Directional gradient. Curve distance needs coplanar influence curves; image mode needs an image and its rectangle; gradients need a drawn line or an angle.",
+          "Inspect the preview, hole count, actual radii, open-area ratio, and rejection reasons. Enable center points or solid hole hatches if needed.",
+          "When the preview is complete, click Create and close. Results are grouped on the current layer. Cancelling creation removes incomplete output; successful creation can be undone together."
+        ],
+        "params": [
+          {
+            "label": "Distribution",
+            "type": "option",
+            "def": "X/Y counts",
+            "range": "X/Y counts / X/Y spacing",
+            "note": "Use counts for row and column numbers, or spacing for actual center distances."
+          },
+          {
+            "label": "X / Y count",
+            "type": "integer",
+            "def": "20 / 20",
+            "range": "Each 1–50000; total candidates ≤ 50000",
+            "note": "Count mode only. Counts refer to the grid before boundary filtering; final hole counts may be lower."
+          },
+          {
+            "label": "X / Y spacing",
+            "type": "length",
+            "def": "Corresponding boundary bounding-box dimension ÷ 20",
+            "range": "Each > 2 × document tolerance",
+            "note": "Spacing mode only, in document units. Smaller spacing makes a denser grid."
+          },
+          {
+            "label": "Layout",
+            "type": "option",
+            "def": "Rectangular",
+            "range": "Rectangular / Staggered",
+            "note": "Staggered layout offsets alternate rows by half the X spacing."
+          },
+          {
+            "label": "Grid angle",
+            "type": "angle",
+            "def": "0°",
+            "range": "-360–360°",
+            "note": "Rotates the full grid from axes determined by the boundary and current construction plane."
+          },
+          {
+            "label": "Shape",
+            "type": "option",
+            "def": "Circle",
+            "range": "Circle / Triangle / Square / Hexagon",
+            "note": "Selects each hole outline."
+          },
+          {
+            "label": "Shape angle",
+            "type": "angle",
+            "def": "0°",
+            "range": "-360–360°",
+            "note": "Rotates individual polygons independently of the grid angle."
+          },
+          {
+            "label": "Min / max radius",
+            "type": "length",
+            "def": "0.10 / 0.35 × the smaller initial spacing",
+            "range": "Minimum ≥ 0; maximum > tolerance and ≥ minimum",
+            "note": "Circles use radius; polygons use circumradius. Uniform uses the maximum; other modes vary within the range. The initial maximum is at least twice tolerance."
+          },
+          {
+            "label": "Scale radii with grid spacing",
+            "type": "toggle",
+            "def": "On",
+            "range": "On / Off",
+            "note": "Adjusts radii proportionally when grid counts, spacing, or layout change."
+          },
+          {
+            "label": "Edge margin",
+            "type": "length",
+            "def": "0",
+            "range": "≥ 0",
+            "note": "Required clearance from the full hole outline to the boundary. Holes that cannot fit are removed."
+          },
+          {
+            "label": "Prevent overlap",
+            "type": "toggle",
+            "def": "On",
+            "range": "On / Off",
+            "note": "Limits radii by neighboring centers, using polygon circumradii conservatively. Off permits overlaps."
+          },
+          {
+            "label": "Hole gap",
+            "type": "length",
+            "def": "0",
+            "range": "≥ 0",
+            "note": "Clearance between holes when overlap prevention is on. Excessive gaps may leave no valid holes."
+          },
+          {
+            "label": "Size control",
+            "type": "option",
+            "def": "Uniform",
+            "range": "Uniform / Curve distance / Image grayscale / Directional gradient",
+            "note": "Selects the source of size variation without changing the basic grid of centers."
+          },
+          {
+            "label": "Influence distance",
+            "type": "length",
+            "def": "5 × the smaller initial spacing",
+            "range": "> document tolerance",
+            "note": "Curve distance makes holes larger near curves and smaller farther away, reaching the minimum beyond this distance. Invert reverses it. The initial value is at least twice tolerance."
+          },
+          {
+            "label": "Gradient control",
+            "type": "option",
+            "def": "Draw line",
+            "range": "Draw line / Angle",
+            "note": "Draw a line to define direction and extent, or set an angle for directional variation."
+          },
+          {
+            "label": "Gradient angle",
+            "type": "angle",
+            "def": "0°",
+            "range": "-360–360°",
+            "note": "Angle mode only; relative to the grid X axis."
+          },
+          {
+            "label": "Invert size field",
+            "type": "toggle",
+            "def": "Off",
+            "range": "On / Off",
+            "note": "Reverses curve distance, grayscale, or gradient size relationships. Not used in Uniform mode."
+          },
+          {
+            "label": "Keep image aspect ratio",
+            "type": "toggle",
+            "def": "On",
+            "range": "On / Off",
+            "note": "Preserves proportions during image placement or fitting; Off allows a stretched rectangle."
+          },
+          {
+            "label": "Flip horizontally / vertically",
+            "type": "toggle",
+            "def": "Both off",
+            "range": "On / Off",
+            "note": "Mirrors image sampling and background preview together."
+          },
+          {
+            "label": "Auto levels",
+            "type": "toggle",
+            "def": "On",
+            "range": "On / Off",
+            "note": "Expands tonal range without amplifying noise in nearly constant images."
+          },
+          {
+            "label": "Map tone to area",
+            "type": "toggle",
+            "def": "On",
+            "range": "On / Off",
+            "note": "Maps grayscale to hole area for image reproduction; Off varies radius linearly with grayscale."
+          },
+          {
+            "label": "Contrast / gamma",
+            "type": "number",
+            "def": "1 / 1",
+            "range": "Each 0.1–4",
+            "note": "Contrast strengthens tonal differences; gamma adjusts midtones in the size mapping."
+          },
+          {
+            "label": "Show image background",
+            "type": "toggle",
+            "def": "On",
+            "range": "On / Off",
+            "note": "Shows an image reference to check position, proportions, and direction. It is not geometry output."
+          },
+          {
+            "label": "Background transparency",
+            "type": "percentage",
+            "def": "50%",
+            "range": "0–100%",
+            "note": "Affects display only, not grayscale sampling or hole size."
+          },
+          {
+            "label": "Show preview",
+            "type": "toggle",
+            "def": "On",
+            "range": "On / Off",
+            "note": "Shows or hides temporary viewport previews."
+          },
+          {
+            "label": "Show centers",
+            "type": "toggle",
+            "def": "Off",
+            "range": "On / Off",
+            "note": "Displays temporary center points for checking the grid."
+          },
+          {
+            "label": "Filled polygon preview",
+            "type": "toggle",
+            "def": "On",
+            "range": "On / Off",
+            "note": "Switches filled or outline previews. Circles preview as 12-gons but output as exact circles."
+          },
+          {
+            "label": "Output center points",
+            "type": "toggle",
+            "def": "Off",
+            "range": "On / Off",
+            "note": "Adds Rhino points alongside hole outlines."
+          },
+          {
+            "label": "Also fill holes with solid hatches",
+            "type": "toggle",
+            "def": "Off",
+            "range": "On / Off",
+            "note": "Adds independent solid hatches inside holes for graphic presentation, retaining outline curves."
+          }
+        ],
+        "paramSections": [
+          {
+            "title": "Boundary and grid: arranging holes",
+            "intro": "Use counts to set rows and columns, or spacing for physical center distances. Boundary filtering removes holes that do not fit, so counts differ from final hole numbers. Lengths use document units. Defaults below refer to first use; later sessions may restore saved settings."
+          },
+          {
+            "title": "Pattern and dimensions: shape and clearance",
+            "intro": "Choose shapes and sizes, then check overlap limits. Polygon size means circumradius. Edge margin is measured from the complete outline, not its center."
+          },
+          {
+            "title": "Size field: varying hole sizes",
+            "intro": "Uniform suits regular patterns, curve distance varies around lines, grayscale reproduces images, and gradients transition between small and large. A drawn gradient uses minimum at its start and maximum at its end, holding endpoint values outside the line range."
+          },
+          {
+            "title": "Image grayscale: placement and tones",
+            "intro": "Choose an image, then Fit to boundary or Set image rectangle. Black produces small holes and white large holes by default. Centers outside the image rectangle are omitted. Invert size field reverses the relationship."
+          },
+          {
+            "title": "Preview and output",
+            "intro": "Showing centers and outputting points are separate options. Filled previews do not create hatches unless solid hatch output is enabled."
+          }
+        ],
+        "output": "Generate circular or regular polygon hole outlines inside a planar boundary, with optional center points and solid hole hatches. Results are grouped on the current layer and can be undone together.",
+        "notes": "## Image perforation workflow\n\nSelect Image grayscale and load a PNG, JPG, JPEG, or BMP. Use Fit to boundary for quick placement. For custom position, direction, and size, use Set image rectangle and pick the lower-left corner, lower-right corner, then a point on the upper side. With aspect ratio enabled, the third point sets the upper side while image proportions determine height. Background visibility and transparency do not change the pattern.\n\n## Radius limits and filtering\n\nWith overlap prevention on, allowed radii are (nearest center distance − hole gap) ÷ 2, using grid neighbors before clipping. If the requested maximum exceeds the limit, size variation is mapped into the safe range, so actual radii may be smaller. Use allowed maximum radius provides a quick setting.\n\nCandidates outside the boundary or image frame, outlines crossing the boundary, insufficient edge margins, and radii that are too small are removed instead of creating partial holes. The panel reports reasons, counts, and radius ranges. With overlap prevention off, the area ratio sums hole areas without deducting overlaps.\n\n## Creation and further use\n\nThe command outputs hole outlines rather than cutting panels. Use those curves for subsequent surface trimming or solid cutting. Solid hole hatches support 2D graphic presentation.\n\nThere is a limit of 50,000 candidates. Reduce counts or increase spacing if exceeded. Wait for preview completion before Create and close. Cancelling creation removes partial output; successful creation closes the window.\n\nSettings are remembered, with lengths stored separately by document units. Influence curves, images, and placement frames must be selected or set again. Close and rerun after changing document units or tolerance.",
+        "illustrations": [],
+        "videos": []
+      }
+    },
     "rsTesselateNurbs": {
       "sourceHash": "7d8f8a9fce04366b6f4ec0da0adf9e0ee8f381ee18e23a0e9d5ddf6d40c59817",
       "title": "Panelize NURBS",
@@ -6762,6 +7008,33 @@
         "params": [],
         "output": "Pick up the real material at the clicked location (including inside the block) and open/select it in the material panel",
         "notes": "Prompt to use left click instead of box selection; if using default material or no material, prompt will be given",
+        "illustrations": [],
+        "videos": []
+      }
+    },
+    "rsPaintBucket": {
+      "sourceHash": "828c2165e9b794250f1a41bcf9cdfdf0478a19c17aa2b1768be4b0418bdefdaa",
+      "title": "Paint Bucket",
+      "desc": "Sample a material from an object, then click other objects to paint them. Supports painting inside nested blocks by updating objects in shared block definitions.",
+      "detail": {
+        "flow": [
+          "Enter rsPaintBucket in the Rhino command line to start sampling. No preselection is needed.",
+          "Click an object with an assigned material. The command line shows the sampled material name and switches to painting.",
+          "Click target objects one after another to assign the same material. You can click components inside blocks without exploding them.",
+          "Choose Repick in the command line to sample a different material, then continue painting.",
+          "Press Enter or Esc to finish. Completed paint operations remain; use Rhino Undo to restore them."
+        ],
+        "params": [
+          {
+            "label": "Repick",
+            "type": "command-line option",
+            "def": "Available after sampling",
+            "range": "Select the option",
+            "note": "Return from painting to sampling, choose a new source object, and continue painting."
+          }
+        ],
+        "output": "Continuously assign a sampled existing material to clicked objects, including components inside nested blocks. Changes inside blocks affect all instances sharing the modified definition.",
+        "notes": "## Continuous material painting\n\nClick a material source, then click objects to change their material without repeatedly opening the material panel. The viewport cursor and command-line prompt indicate sampling or painting, with the current material name. Surfaces, polysurfaces, extrusions, meshes, SubD, and blocks are supported. Click directly; window selection is not supported.\n\nSampling resolves the material at the clicked location, including materials assigned by layer, by object, inherited from a parent block, or assigned to a recognizable face. Default or unassigned materials cannot be sampled; the command prompts you to try another source.\n\n## Painting scope for objects and blocks\n\nOrdinary objects receive the material as a whole, rather than only on the clicked face. Targets switch to material by object. Existing face material overrides on Breps are cleared so the whole object uses the sampled material.\n\nWhen clicking a block, the command traverses nested instances to find the component at that location and modifies its owning block definition. All instances sharing that definition change together, including instances nested inside other blocks. To change only one instance, first give it an independent block definition.\n\n## Texture mapping, finishing, and undo\n\nThe command copies material assignment, not the source object's texture mapping or mapping dimensions. Textures use the target's existing mapping; adjust that mapping separately if scale or orientation is unsuitable.\n\nEnter and Esc both end the painting session without reverting completed changes. Rhino Undo can restore the paint operations from the command together.\n\nLocked or read-only objects, objects on locked layers, and linked or reference blocks cannot be painted. If painting fails, check the command-line message, object state, or sample the material again.",
         "illustrations": [],
         "videos": []
       }
@@ -8618,6 +8891,96 @@
         ],
         "output": "A collection of non-overlapping circular curves that fit the grid surface",
         "notes": "The circle is automatically projected and fitted to the mesh normal; fixed iteration of 1500 steps.",
+        "illustrations": [],
+        "videos": []
+      }
+    },
+    "rsDifferentialGrowth": {
+      "sourceHash": "d0e22ff73cf0084b7f8f115f85f884ea4f5bfbda1a893b6fd689ce82d5736ad2",
+      "title": "Differential Growth",
+      "desc": "Grow and fold lines inside a closed planar boundary to create maze and fold patterns, with live simulation, custom seed curves, and smooth output.",
+      "detail": {
+        "flow": [
+          "Enter rsDifferentialGrowth and select a closed planar curve without self-intersections as the growth boundary. The boundary may lie on any plane.",
+          "Choose a pattern preset. An automatic seed is created inside the region by default, or click Pick seed curves to select one or more coplanar curves inside it.",
+          "Set spacing, growth rate, bending stiffness, and fill density. Click Start to watch the lines grow and fold.",
+          "Click Pause to inspect the shape, then choose Smooth curves or Simulation polylines. Resume to continue, or Reset to grow again from the beginning.",
+          "Click Bake curves to add the current result to the current layer. The panel stays open so you can continue simulating and bake other stages. Each bake can be undone in one action."
+        ],
+        "params": [
+          {
+            "label": "Pattern preset",
+            "type": "option",
+            "def": "Standard folds",
+            "range": "Standard folds / Broad folds / Dense maze / Fine folds / Custom",
+            "note": "Applies spacing, growth rate, bending stiffness, and density together. Resets the simulation while retaining the seed and custom seed curves."
+          },
+          {
+            "label": "Random seed",
+            "type": "integer",
+            "def": "1",
+            "range": "0–2147483647",
+            "note": "Controls small variations in the automatic seed curve. The same conditions and seed reproduce the growth process. Changing it resets the simulation."
+          },
+          {
+            "label": "Spacing",
+            "type": "length",
+            "def": "Shorter side of the boundary's planar bounding box ÷ 40",
+            "range": "≥ 20 × document tolerance",
+            "note": "Entered in document units; controls minimum spacing between nonlocal segments. Smaller values create finer patterns with more nodes and computation. Changing it resets the simulation."
+          },
+          {
+            "label": "Growth",
+            "type": "percent per simulated second",
+            "def": "20",
+            "range": "0–200",
+            "note": "Controls target length growth. Zero relaxes without adding length. Adjustable while running; seconds refer to simulated time."
+          },
+          {
+            "label": "Bending stiffness",
+            "type": "ratio",
+            "def": "0.50",
+            "range": "0–1",
+            "note": "Higher values create smoother, broader folds; lower values allow finer folds. Adjustable while running."
+          },
+          {
+            "label": "Fill density",
+            "type": "ratio",
+            "def": "0.55",
+            "range": "0.05–0.90",
+            "note": "Controls target line length, approximately region area × density ÷ spacing. Higher values allow longer lines. Lowering density does not shorten existing growth; reset to compare from the beginning."
+          },
+          {
+            "label": "Simulation speed",
+            "type": "option",
+            "def": "Fast preview",
+            "range": "Step by step / Fast preview / Maximum speed",
+            "note": "Controls the number of steps computed before refreshing the preview. Step by step shows the process; Maximum speed reaches results faster. The rules for each step remain the same."
+          },
+          {
+            "label": "Output",
+            "type": "option",
+            "def": "Smooth curves",
+            "range": "Smooth curves / Simulation polylines",
+            "note": "Live simulation displays polylines. Smooth output is checked when paused or baked. If smoothing fails boundary, spacing, or intersection checks, valid polylines are retained with a message. Switching output pauses the simulation."
+          }
+        ],
+        "paramSections": [
+          {
+            "title": "Pattern preset and initial shape",
+            "intro": "Choose a preset close to the desired result, then fine-tune. Standard folds is a useful starting point; Broad folds is more open, Dense maze more compact, and Fine folds produces smaller bends. Random seed mainly affects the automatic seed curve."
+          },
+          {
+            "title": "Growth shape: spacing, folds, and density",
+            "intro": "As lines grow, mutual avoidance, boundary constraints, and bending stiffness make them fold within the region. Spacing sets the pattern scale, while density controls how much line length to grow."
+          },
+          {
+            "title": "Viewing the process and choosing output",
+            "intro": "Simulation speed controls how quickly you see progress; growth rate controls line growth within the simulation. Pause when satisfied, inspect smooth output, and bake the curves."
+          }
+        ],
+        "output": "Simulate line growth and natural folding inside a planar boundary to create maze and fold patterns. Output smooth curves or simulation polylines on the current layer, with one undo action per bake.",
+        "notes": "## Panel buttons\n\n- **Pick boundary**: Choose a new growth region and reinitialize the simulation. Existing custom seed curves are cleared.\n- **Pick seed curves**: Start from one or more open or closed curves you have drawn. They must lie inside and on the same plane as the boundary, without self-intersections and with sufficient clearance from each other and the boundary.\n- **Use automatic seed**: Clear custom seed curves and create an automatic initial shape.\n- **Start / Pause**: Grow the pattern or pause to inspect it. You can resume after pausing.\n- **Reset**: Restart with the current settings and seed curves; does not restore every default setting.\n- **Bake curves**: Pause and write the current valid preview to the document. Each click adds a separate result, useful for retaining different stages.\n- **Close**: End the simulation and clear temporary previews. Baked curves remain.\n\n## Practical tips\n\nStart with Standard folds, then adjust spacing and density. For broad patterns, increase bending stiffness and spacing. For a dense maze, reduce spacing and increase density. Large spacing can prevent a seed from fitting narrow regions; small spacing increases nodes and computation.\n\nThe status area shows steps, nodes, total line length, and the stopping reason. Stable growth, insufficient local space, or the 10,000-node limit automatically pauses the simulation while preserving valid results. For crowding, reduce spacing and reset. Lowering density does not automatically shorten existing curves.\n\nLive previews use polylines. Smooth output is checked when paused or baked, with a panel message if polylines are used instead. Switching documents pauses the simulation; after changing document units, pick the boundary again.",
         "illustrations": [],
         "videos": []
       }

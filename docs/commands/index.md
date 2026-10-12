@@ -1,6 +1,6 @@
 # RsTool 命令参考
 
-> 覆盖 RsTool 插件全部 287 条命令，每条命令一个独立页面，含功能、调用方式、交互流程、参数表、输出、备注与教学视频。
+> 覆盖 RsTool 插件全部 290 条命令，每条命令一个独立页面，含功能、调用方式、交互流程、参数表、输出、备注与教学视频。
 
 ## AI（4 条）
 
@@ -205,10 +205,11 @@
 - [rsRandomPtsOnObj · 物体上随机生成点](/commands/rsRandomPtsOnObj) — 在物体表面生成随机分布的点，支持网格和曲面。
 - [rsDivideCrvByRoundedCount · 按圆整数量分割曲线](/commands/rsDivideCrvByRoundedCount) — 按圆整后的数量分割曲线，确保等分段数取整。
 
-## 铺装表皮（6 条）
+## 铺装表皮（7 条）
 
 ### （通用）
 
+- [rsPerforation · 一键排孔](/commands/rsPerforation) — 在平面闭合边界内生成排孔图案，支持圆和正多边形，可按曲线距离、图片灰度或方向渐变改变孔径。
 - [rsTesselateNurbs · NURBS 细分铺装](/commands/rsTesselateNurbs) — 对 NURBS 曲面进行细分铺装，生成面板化结构。
 - [rsTileQuadNurbsBlend · 四边 NURBS 铺装混接](/commands/rsTileQuadNurbsBlend) — 在 NURBS 曲面上生成渐变表皮图案。
 - [rsTileMeshBlend · 网格铺装混接](/commands/rsTileMeshBlend) — 在网格曲面上生成铺装图案，支持不同图案之间的混接过渡。
@@ -216,7 +217,7 @@
 - [rsTileMeshBlendByBitmap · 按贴图生成渐变表皮](/commands/rsTileMeshBlendByBitmap) — 根据贴图图像生成渐变铺装表皮，图像灰度或颜色驱动图案变化。
 - [rsMeshColorPaint · 网格笔刷](/commands/rsMeshColorPaint) — 用笔刷在网格上绘制颜色，支持实时交互式涂抹。
 
-## 组织与选择（20 条）
+## 组织与选择（21 条）
 
 ### 选择
 
@@ -243,6 +244,7 @@
 ### 材质辅助
 
 - [rsPickMaterial · 拾取材质](/commands/rsPickMaterial) — 从场景中的对象上拾取材质，变为当前材质。
+- [rsPaintBucket · 油漆桶](/commands/rsPaintBucket) — 先点击物体吸取材质，再连续点击其他物体涂刷；支持穿透嵌套图块，对共享块定义中的对象直接赋材质。
 - [rsQuickColor · 快速着色](/commands/rsQuickColor) — 快速为选中对象分配指定颜色，无需打开材质编辑器。
 - [rsAutoBoxMapping · 自动盒映射](/commands/rsAutoBoxMapping) — 自动为对象设置盒映射贴图坐标，适合建筑模型快速贴图。
 - [rsPBRToCustomMaterial · PBR转自定义材质](/commands/rsPBRToCustomMaterial) — 将 PBR 材质转换为 Rhino 自定义材质，便于在低版本 Rhino 中使用。
@@ -286,7 +288,7 @@
 - [rsWindAnalysis · 风环境分析](/commands/rsWindAnalysis) — 通过独立面板进行二维概念或三维风环境分析，预览风速色彩图与动态流线，支持点选读数和 Bake。
 - [rsStructuralAnalysis · 结构力学分析](/commands/rsStructuralAnalysis) — 对结构进行力学分析，可视化和计算受力情况。
 
-## 物理模拟（7 条）
+## 物理模拟（8 条）
 
 ### 找形与松弛
 
@@ -294,6 +296,7 @@
 - [rsMembrane · 膜结构找形](/commands/rsMembrane) — 对膜结构进行找形分析，生成张力膜曲面。
 - [rsMeshRelax · 网格均匀松弛](/commands/rsMeshRelax) — 对网格进行松弛平滑处理，使网格顶点分布更加均匀。
 - [rsCirclePacking · 圆形填充](/commands/rsCirclePacking) — 在曲面上进行圆形填充模拟，生成相切圆阵列。
+- [rsDifferentialGrowth · 差异生长线条](/commands/rsDifferentialGrowth) — 让线条在平面闭合边界内逐步增长、回折，生成迷宫和褶皱式图案，支持实时模拟、自定义初始曲线及平滑输出。
 
 ### 动力学
 
