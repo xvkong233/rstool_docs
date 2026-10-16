@@ -1,14 +1,15 @@
 # RsTool 命令参考
 
-> 覆盖 RsTool 插件全部 290 条命令，每条命令一个独立页面，含功能、调用方式、交互流程、参数表、输出、备注与教学视频。
+> 覆盖 RsTool 插件全部 313 条命令，每条命令一个独立页面，含功能、调用方式、交互流程、参数表、输出、备注与教学视频。
 
-## AI（4 条）
+## AI（5 条）
 
 ### 渲染与建模
 
 - [rsAiRender · AI 渲染](/commands/rsAiRender) — 打开 AI 渲染窗口，提供 AI 辅助渲染功能。选择视角后可生成多种风格的渲染效果图。
 - [rsAIModeler · AI 建模](/commands/rsAIModeler) — 打开 AI 建模窗口，通过文本描述或参考图生成 3D 模型。
 - [rsAiRenderOld · 旧版 AI 渲染](/commands/rsAiRenderOld) — 旧版 AI 渲染窗口，保留兼容。建议使用新版 rsAiRender。
+- [rsAIModelerLog · AI 建模执行日志](/commands/rsAIModelerLog) — 打开 AI 建模执行日志，方便排查生成脚本失败、取消或回滚的原因。
 
 ### 视频生成
 
@@ -28,7 +29,7 @@
 - [rsMaterial · 材质库](/commands/rsMaterial) — 打开材质库窗口，浏览和管理内置材质资源。支持 PBR 材质预览。
 - [rsMaterialLibraryOld · 旧版材质库](/commands/rsMaterialLibraryOld) — 旧版材质库窗口，保留兼容。
 
-## 效率工具（11 条）
+## 效率工具（15 条）
 
 ### 生产力
 
@@ -40,12 +41,16 @@
 - [rsModelingCompanion · 建模陪伴](/commands/rsModelingCompanion) — 在 Rhino 界面中唤出建模陪伴助手，可随时隐藏或恢复。
 - [rsModelingCompanionSettings · 建模陪伴设置](/commands/rsModelingCompanionSettings) — 打开建模陪伴助手的设置窗口，配置助手形象与行为。
 - [rsSettingsTransfer · Rhino / RSTool 设置迁移](/commands/rsSettingsTransfer) — 将 Rhino 和 RSTool 的常用设置打包导出，在另一台电脑导入；支持工具列、显示模式、模板和可选 API 凭据迁移。
+- [rsAxisLock · 方向键轴锁定开关](/commands/rsAxisLock) — 开启或关闭方向键轴锁定，在带基点的取点过程中沿世界 X、Y、Z 轴约束方向。
+- [rsAxisLockBasis · 确认轴锁世界坐标基准](/commands/rsAxisLockBasis) — 将方向键轴锁定的基准确认为世界 XYZ 坐标，并输出当前使用的基准。
+- [rsAxisLockStatus · 查看轴锁定状态](/commands/rsAxisLockStatus) — 在命令行打印方向键轴锁定的运行状态，帮助判断为什么按方向键没有锁轴。
 
 ### 屏幕工具
 
 - [rsScreenPin · 截图浮窗](/commands/rsScreenPin) — 截取屏幕区域并将其作为浮窗固定在屏幕上，方便参考对照。
 - [rsKeyCast · 按键显示](/commands/rsKeyCast) — 在屏幕上实时显示当前按下的快捷键，适合教学演示和录屏。
 - [rsKeyCastSettings · 按键显示设置](/commands/rsKeyCastSettings) — 打开按键显示的设置面板，可调整位置、大小、样式等。
+- [rsScreenGif · 区域录屏 GIF](/commands/rsScreenGif) — 框选屏幕上的一块区域，把操作过程录成 GIF，适合演示命令或反馈问题。
 
 ## 趣味（7 条）
 
@@ -62,7 +67,7 @@
 - [rsLSystemTree · L-system 树枝](/commands/rsLSystemTree) — 从指定根部生成自然分叉的树枝，支持多种树形预设、实时预览及中心线、SubD、网格输出。
 - [rsIvy · 藤蔓生成](/commands/rsIvy) — 让藤蔓沿选定物体表面攀爬，自动分枝并生成叶片，可调整生长方式、藤条粗细和叶片密度。
 
-## 建筑（26 条）
+## 建筑（29 条）
 
 ### 道路
 
@@ -92,6 +97,9 @@
 - [rsOldTownRoof · 老镇屋顶](/commands/rsOldTownRoof) — 生成老镇风格的传统坡屋顶，含屋脊、檐口等构件。
 - [rsRoofTile · 屋顶瓦生成](/commands/rsRoofTile) — 在屋顶曲面上生成瓦片铺装，支持不同瓦片类型和排列方式。
 - [rsSlab · 参数楼板](/commands/rsSlab) — 由一条或多条封闭平面曲线生成向下加厚的参数楼板，支持嵌套边界与通过自定义属性文本修改板厚。
+- [rsSmartPipe · 智能管道与管综](/commands/rsSmartPipe) — 按不同规格的中心线生成空心管段与连接管件，先看预览，再统一写入模型。
+- [rsPipeSchedule · 智能管道清单](/commands/rsPipeSchedule) — 读取智能管道对象的规格与长度记录，按类型、规格和生成时单位汇总成 CSV 清单。
+- [rsDiscreteCity · 离散建筑组团](/commands/rsDiscreteCity) — 把建筑模块放进规则网格中，按接口、支承与通行约束生成组团，比较方案后再写入 Rhino 图块。
 
 ### 三维墙体
 
@@ -148,7 +156,7 @@
 - [rsTerrainAnalysis · 地形分析](/commands/rsTerrainAnalysis) — 对地形进行多维度分析：高程、坡度、坡向、凹凸性、粗糙度等，以彩色映射可视化。
 - [rsRainFlowSimulation · 雨流分析](/commands/rsRainFlowSimulation) — 模拟雨水在地形表面的流动路径，用于排水分析。
 
-## 几何（40 条）
+## 几何（41 条）
 
 ### 曲线
 
@@ -198,6 +206,7 @@
 - [rsMoveToOrigin · 移动到原点](/commands/rsMoveToOrigin) — 将选中对象移动到世界坐标系原点。
 - [rsMoveProject · 工程移动](/commands/rsMoveProject) — 按工程精度移动对象，支持输入精确坐标值。
 - [rsLayFlat · 一键放平](/commands/rsLayFlat) — 拾取对象上的一个面，将整个对象旋转放平到该面所在的平面。
+- [rsSprinkerBrush · 曲面散布笔刷](/commands/rsSprinkerBrush) — 像刷画一样把多个源物体随机散布到曲面、网格或 SubD 上，适合植被、石块等局部布置。
 
 ### 点
 
@@ -217,7 +226,7 @@
 - [rsTileMeshBlendByBitmap · 按贴图生成渐变表皮](/commands/rsTileMeshBlendByBitmap) — 根据贴图图像生成渐变铺装表皮，图像灰度或颜色驱动图案变化。
 - [rsMeshColorPaint · 网格笔刷](/commands/rsMeshColorPaint) — 用笔刷在网格上绘制颜色，支持实时交互式涂抹。
 
-## 组织与选择（21 条）
+## 组织与选择（23 条）
 
 ### 选择
 
@@ -240,6 +249,8 @@
 - [rsAutoSegColorToLayer · 自动分段着色到图层](/commands/rsAutoSegColorToLayer) — 自动按对象属性分段，分配到不同图层并着色。
 - [rsBlockObjectsToLayer · 块对象归层](/commands/rsBlockObjectsToLayer) — 将块定义中的对象按规则归类到指定图层。
 - [rsDeleteLayer · 删除图层](/commands/rsDeleteLayer) — 通过图层选择对话框勾选一个或多个图层并删除。
+- [rsUnlockAllLayers · 解锁全部图层](/commands/rsUnlockAllLayers) — 一键解锁当前文件的全部图层，同时清除图层的持久锁定状态。
+- [rsLockObjLayer · 锁定所选对象图层](/commands/rsLockObjLayer) — 选几个物体，就能把它们所在的图层一起锁住，方便继续处理其他内容。
 
 ### 材质辅助
 
@@ -249,7 +260,7 @@
 - [rsAutoBoxMapping · 自动盒映射](/commands/rsAutoBoxMapping) — 自动为对象设置盒映射贴图坐标，适合建筑模型快速贴图。
 - [rsPBRToCustomMaterial · PBR转自定义材质](/commands/rsPBRToCustomMaterial) — 将 PBR 材质转换为 Rhino 自定义材质，便于在低版本 Rhino 中使用。
 
-## 视图出图（18 条）
+## 视图出图（22 条）
 
 ### 标注出图
 
@@ -264,6 +275,10 @@
 - [rsShadowRender · 建筑渲染窗口](/commands/rsShadowRender) — 打开建筑渲染窗口，含阴影渲染功能，快速生成建筑表现图。
 - [rsPolylineSection · 折线剖切](/commands/rsPolylineSection) — 沿折线或曲线生成剖切，可在观察者一侧指定剖切深度，并增删折点。
 - [rsSectionPositionPanel · 建筑剖切面板](/commands/rsSectionPositionPanel) — 打开可停靠的建筑剖切管理面板，集中新增、激活、重命名、翻转和删除折线剖切，并按视口管理活动剖切。
+- [rsXLine · 两点辅助长线](/commands/rsXLine) — 用两点确定方向，自动向场景两侧延长并放到锁定的辅助线图层。
+- [rsDiagramArrowMatch · 分析箭头样式匹配](/commands/rsDiagramArrowMatch) — 把一个 RSTool 分析箭头的样式批量刷给其他分析箭头，快速统一分析图表达。
+- [rsVectorStudioSyncCanvas · 同步矢量画板范围](/commands/rsVectorStudioSyncCanvas) — 把矢量工作室当前画板的范围和比例定位到 Rhino，方便两边按同一个画幅继续作图。
+- [rsQuickMeasure · 快捷测量](/commands/rsQuickMeasure) — 在一个浮动面板里切换点位和对象测量，把常用尺寸、面积、体积等结果直接标在模型中。
 
 ### 视图相机
 
@@ -275,7 +290,7 @@
 - [rsExportCamToSU · 导出相机到 SketchUp](/commands/rsExportCamToSU) — 将 Rhino 当前视图的相机导出到 SketchUp 文件。
 - [rsCameraPath · 相机路径](/commands/rsCameraPath) — 创建相机动画路径，用于生成漫游动画。
 
-## 分析（8 条）
+## 分析（10 条）
 
 ### 建筑物理分析
 
@@ -287,8 +302,10 @@
 - [rsViewshedAnalysis · 视野分析](/commands/rsViewshedAnalysis) — 计算指定观察点的视域范围，分析视野开阔度。
 - [rsWindAnalysis · 风环境分析](/commands/rsWindAnalysis) — 通过独立面板进行二维概念或三维风环境分析，预览风速色彩图与动态流线，支持点选读数和 Bake。
 - [rsStructuralAnalysis · 结构力学分析](/commands/rsStructuralAnalysis) — 对结构进行力学分析，可视化和计算受力情况。
+- [rsIndoorIlluminance · 室内照度与采光分析](/commands/rsIndoorIlluminance) — 对室内分析区域计算时点照度、采光系数或日累计照度，用彩色网格和统计结果比较采光方案。
+- [rsAcousticAnalysis · 室内声学分析](/commands/rsAcousticAnalysis) — 从封闭的室内空气体积出发，结合吸声材料、声源和接收点，估算混响并比较室内声学方案。
 
-## 物理模拟（8 条）
+## 物理模拟（10 条）
 
 ### 找形与松弛
 
@@ -303,14 +320,17 @@
 - [rsClothFluttering · 布料风动分析](/commands/rsClothFluttering) — 模拟布料在风中的飘动效果，生成动态布料形态。
 - [rsBoids · 类群体运动分析](/commands/rsBoids) — Boids 群体运动模拟，生成鸟群/鱼群式的集体运动轨迹。
 - [rsPhysarum · 黏菌模拟](/commands/rsPhysarum) — Physarum 黏菌生长模拟，生成有机的生长路径图案。
+- [rsFluidSimulation · 流体模拟](/commands/rsFluidSimulation) — 在 Rhino 中布置喷口、降雨和碰撞物，预览水流运动，并把暂停时的水体生成网格。
+- [rsWaveSimulation · 水面波浪与涟漪](/commands/rsWaveSimulation) — 绘制湖面或海洋波浪，加入碰撞物、多点涟漪和飞溅效果，暂停后生成精细水面网格。
 
-## SubD辅助（3 条）
+## SubD辅助（4 条）
 
 ### 编辑工具
 
 - [rsMoveAlongNormal · 沿法线移动](/commands/rsMoveAlongNormal) — 沿法线方向移动 SubD 顶点，适合快速调整曲面形态。
 - [rsCopyMayaToRhino · Maya文件复制到Rhino](/commands/rsCopyMayaToRhino) — 从 Maya 文件中复制几何体到 Rhino，支持格式转换。
 - [rsSelectSubDEdgeDirection · 选择 SubD 同向边](/commands/rsSelectSubDEdgeDirection) — 点选一条 SubD 控制网边，自动选中同一四边形区域内全部同方向（U 或 V）的边。
+- [rsCircularizeSubD · SubD 选区圆形化](/commands/rsCircularizeSubD) — 把选中的 SubD 顶点、边或面所对应的区域整理成圆形，适合圆孔、圆形端部等局部塑形。
 
 ## 截面管理（2 条）
 
@@ -319,7 +339,7 @@
 - [rsProfileDirector · Profile Director](/commands/rsProfileDirector) — 打开截面管理器，管理截面轮廓库并沿路径挤出。
 - [rsProfileDirectorAddProfile · 添加截面](/commands/rsProfileDirectorAddProfile) — 向 Profile Director 添加新的截面轮廓。
 
-## 辅助工具（22 条）
+## 辅助工具（25 条）
 
 ### 剪贴板
 
@@ -332,6 +352,7 @@
 - [rsGroupToBlock · 组转块](/commands/rsGroupToBlock) — 将选中的组转换为块定义，减少文件体积。
 - [rsExplodeNestedBlocks · 炸开嵌套块](/commands/rsExplodeNestedBlocks) — 递归炸开所有嵌套的块实例，直至最底层图元。
 - [rsFlattenBlockElevation · 图块统一标高](/commands/rsFlattenBlockElevation) — 将所选图块及其嵌套内容拍平到指定的世界 Z 标高，同时为每个所选实例创建独立块定义。
+- [rsEmbedLinkedBlocks · 外链图块转嵌入](/commands/rsEmbedLinkedBlocks) — 把当前文件里的外部链接图块转成嵌入图块，减少交付模型时对外部文件的依赖。
 
 ### 系统工具
 
@@ -346,6 +367,7 @@
 - [rsFilterHeavyObjects · 筛选重量级对象](/commands/rsFilterHeavyObjects) — 分析文档中对象复杂度，按权重排序找出最重对象。
 - [rsWeChatSend · 自动发送微信消息](/commands/rsWeChatSend) — 定时自动发送微信消息，适合自动化通知场景。
 - [RSToolActivateLicense · 激活许可证](/commands/RSToolActivateLicense) — 检查许可证状态，若未激活则打开激活对话框。
+- [rsHelp · 打开帮助文档](/commands/rsHelp) — 在默认浏览器中打开 RSTool 在线说明文档。
 
 ### 导入导出
 
@@ -354,6 +376,7 @@
 - [rsSendToCAD · 发送模型到AutoCAD](/commands/rsSendToCAD) — 将选中的 Rhino 对象按真实单位发送到 AutoCAD；接收端未连接时自动排队，稍后可在目标图纸领取。
 - [rsMayaTransferSettings · Rhino-Maya 传输设置](/commands/rsMayaTransferSettings) — 打开 Rhino 与 Maya 之间模型传输的设置窗口。
 - [rsSendToMaya · 发送模型到 Maya](/commands/rsSendToMaya) — 将 Rhino 中选定的对象发送到 Maya。
+- [rsCadReceivePending · 手动接收 CAD 待传批次](/commands/rsCadReceivePending) — 在 Rhino 中手动检查 CAD 已发送的待接收批次，将其导入当前文档。
 
 ## 动态组件（7 条）
 

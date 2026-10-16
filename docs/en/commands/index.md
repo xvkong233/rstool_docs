@@ -1,14 +1,15 @@
 # RsTool Command Reference
 
-> Complete reference for all 290 RsTool commands. Each command has a dedicated page covering its purpose, invocation, workflow, parameters, output, notes, and tutorials.
+> Complete reference for all 313 RsTool commands. Each command has a dedicated page covering its purpose, invocation, workflow, parameters, output, notes, and tutorials.
 
-## AI (4)
+## AI (5)
 
 ### Rendering & Modeling
 
 - [rsAiRender · AI rendering](/en/commands/rsAiRender) — Open the AI ​​rendering window to provide AI-assisted rendering functionality. After selecting the perspective, various styles of rendering renderings can be generated.
 - [rsAIModeler · AI modeling](/en/commands/rsAIModeler) — Open the AI ​​modeling window and generate a 3D model from a text description or reference drawing.
 - [rsAiRenderOld · Legacy AI rendering](/en/commands/rsAiRenderOld) — The old AI rendering window remains compatible. It is recommended to use the new version rsAiRender.
+- [rsAIModelerLog · AI Modeler Execution Log](/en/commands/rsAIModelerLog) — Open the AI Modeler execution log to investigate script failures, cancellations, and rollbacks.
 
 ### Video Generation
 
@@ -28,7 +29,7 @@
 - [rsMaterial · Material library](/en/commands/rsMaterial) — Open the material library window to browse and manage built-in material resources. Supports PBR material preview.
 - [rsMaterialLibraryOld · Legacy material library](/en/commands/rsMaterialLibraryOld) — The old version of the material library window remains compatible.
 
-## Productivity (11)
+## Productivity (15)
 
 ### Productivity
 
@@ -40,12 +41,16 @@
 - [rsModelingCompanion · Modeling Companion](/en/commands/rsModelingCompanion) — Call up the modeling companion assistant in the Rhino interface and hide or restore it at any time.
 - [rsModelingCompanionSettings · Modeling companion settings](/en/commands/rsModelingCompanionSettings) — Open the settings window of the modeling companion assistant and configure the image and behavior of the assistant.
 - [rsSettingsTransfer · Rhino / RSTool Settings Transfer](/en/commands/rsSettingsTransfer) — Export commonly used Rhino and RSTool settings for import on another computer, including toolbars, display modes, templates, and optional API credentials.
+- [rsAxisLock · Arrow-Key Axis Lock](/en/commands/rsAxisLock) — Toggle arrow-key constraints along world X, Y, and Z during supported point picking with a base point.
+- [rsAxisLockBasis · Confirm World Axis-Lock Basis](/en/commands/rsAxisLockBasis) — Confirm world XYZ as the arrow-key axis-lock basis and report it.
+- [rsAxisLockStatus · Axis-Lock Status](/en/commands/rsAxisLockStatus) — Print axis-lock diagnostics to help explain why an arrow key is not constraining a point.
 
 ### Screen Tools
 
 - [rsScreenPin · Screenshot floating window](/en/commands/rsScreenPin) — Capture a screen area and fix it on the screen as a floating window for easy reference.
 - [rsKeyCast · Keystroke Display](/en/commands/rsKeyCast) — Displays the currently pressed shortcut keys in real time on the screen, suitable for teaching demonstrations and screen recordings.
 - [rsKeyCastSettings · Keystroke Display Settings](/en/commands/rsKeyCastSettings) — Open the settings panel displayed by the button to adjust the position, size, style, etc.
+- [rsScreenGif · Record Screen Region to GIF](/en/commands/rsScreenGif) — Record a rectangular screen region as a GIF for command demonstrations and issue reports.
 
 ## Fun (7)
 
@@ -62,7 +67,7 @@
 - [rsLSystemTree · L-system Tree](/en/commands/rsLSystemTree) — Generate naturally branching trees from a chosen root, with shape presets, live previews, and centerline, SubD, or mesh output.
 - [rsIvy · Ivy Growth](/en/commands/rsIvy) — Grow branching ivy along selected objects, with leaves and adjustable growth, stem thickness, and leaf density.
 
-## Architecture (26)
+## Architecture (29)
 
 ### Roads
 
@@ -92,6 +97,9 @@
 - [rsOldTownRoof · Traditional Roof](/en/commands/rsOldTownRoof) — Generate a traditional pitched roof in the old town style, including ridges, cornices and other components.
 - [rsRoofTile · Roof tile generation](/en/commands/rsRoofTile) — Generate tile paving on the roof surface, supporting different tile types and arrangements.
 - [rsSlab · Parametric Slab](/en/commands/rsSlab) — Create downward-thickened parametric slabs from one or more closed planar curves, with nested boundaries and editable thickness through object user text.
+- [rsSmartPipe · Smart Pipes](/en/commands/rsSmartPipe) — Generate hollow pipe runs and fittings from centerlines with multiple specifications, previewing before committing.
+- [rsPipeSchedule · Pipe Schedule](/en/commands/rsPipeSchedule) — Read smart-pipe metadata and export a CSV grouped by type, specification, and generation-time units.
+- [rsDiscreteCity · Discrete City](/en/commands/rsDiscreteCity) — Arrange building modules on a grid under interface, support, and access constraints, compare schemes, then bake Rhino blocks.
 
 ### 3D Walls
 
@@ -148,7 +156,7 @@
 - [rsTerrainAnalysis · Terrain analysis](/en/commands/rsTerrainAnalysis) — Multi-dimensional analysis of terrain: elevation, slope, aspect, concavity, roughness, etc., visualized with color mapping.
 - [rsRainFlowSimulation · Rainwater Flow Analysis](/en/commands/rsRainFlowSimulation) — Simulate the flow path of rainwater on terrain surfaces for drainage analysis.
 
-## Geometry (40)
+## Geometry (41)
 
 ### Curves
 
@@ -198,6 +206,7 @@
 - [rsMoveToOrigin · Move to origin](/en/commands/rsMoveToOrigin) — Move the selected object to the origin of the world coordinate system.
 - [rsMoveProject · Move Project](/en/commands/rsMoveProject) — Move objects with engineering precision and support input of precise coordinate values.
 - [rsLayFlat · Flatten with one click](/en/commands/rsLayFlat) — Pick a face on the object and rotate the entire object flat to the plane of the face.
+- [rsSprinkerBrush · Surface Scatter Brush](/en/commands/rsSprinkerBrush) — Brush multiple source objects onto surfaces, meshes, or SubDs for vegetation, stones, and other local scatter.
 
 ### Points
 
@@ -217,7 +226,7 @@
 - [rsTileMeshBlendByBitmap · Blend Mesh Panels by Bitmap](/en/commands/rsTileMeshBlendByBitmap) — Generate a gradient pavement surface based on the map image, and the image grayscale or color drives the pattern changes.
 - [rsMeshColorPaint · Mesh Color Brush](/en/commands/rsMeshColorPaint) — Use a brush to draw color on the mesh, supporting real-time interactive painting.
 
-## Organization & Selection (21)
+## Organization & Selection (23)
 
 ### Selection
 
@@ -240,6 +249,8 @@
 - [rsAutoSegColorToLayer · Assign Segmented Colors to Layers](/en/commands/rsAutoSegColorToLayer) — Automatically segment objects by their properties, assign them to different layers and color them.
 - [rsBlockObjectsToLayer · Move Block Hierarchy to Layers](/en/commands/rsBlockObjectsToLayer) — Classify the objects in the block definition into specified layers according to rules.
 - [rsDeleteLayer · Delete layer](/en/commands/rsDeleteLayer) — Select one or more layers through the layer selection dialog box and delete them.
+- [rsUnlockAllLayers · Unlock All Layers](/en/commands/rsUnlockAllLayers) — Unlock every layer in the current file and clear persistent layer-lock flags.
+- [rsLockObjLayer · Lock Selected Objects’ Layers](/en/commands/rsLockObjLayer) — Select objects to lock their containing layers and keep other work easier to select.
 
 ### Material Tools
 
@@ -249,7 +260,7 @@
 - [rsAutoBoxMapping · Automatic box mapping](/en/commands/rsAutoBoxMapping) — Automatically set box mapping mapping coordinates for objects, suitable for quick mapping of architectural models.
 - [rsPBRToCustomMaterial · PBR to custom material](/en/commands/rsPBRToCustomMaterial) — Convert PBR materials to Rhino custom materials for easy use in lower versions of Rhino.
 
-## Views & Documentation (18)
+## Views & Documentation (22)
 
 ### Annotation & Documentation
 
@@ -264,6 +275,10 @@
 - [rsShadowRender · Architectural rendering window](/en/commands/rsShadowRender) — Open the architectural rendering window, including shadow rendering function, to quickly generate architectural renderings.
 - [rsPolylineSection · Polyline section](/en/commands/rsPolylineSection) — Create a section along a polyline or curve, specify the section depth on the viewer's side, and add or delete vertices.
 - [rsSectionPositionPanel · Architectural Section Panel](/en/commands/rsSectionPositionPanel) — Open the dockable architectural section panel to create, activate, rename, flip, and delete polyline sections, with active sections managed independently for each viewport.
+- [rsXLine · Two-Point Construction Line](/en/commands/rsXLine) — Define a direction with two points and create an extended line on a locked construction layer.
+- [rsDiagramArrowMatch · Match Diagram Arrow Style](/en/commands/rsDiagramArrowMatch) — Copy one RSTool diagram arrow’s style to other diagram arrows for a consistent drawing.
+- [rsVectorStudioSyncCanvas · Sync Vector Studio Canvas Bounds](/en/commands/rsVectorStudioSyncCanvas) — Place Vector Studio’s current canvas bounds and scale in Rhino to establish a shared drawing frame.
+- [rsQuickMeasure · Quick Measure](/en/commands/rsQuickMeasure) — Use a floating panel for point and object measurements and place results directly in the model.
 
 ### Views & Cameras
 
@@ -275,7 +290,7 @@
 - [rsExportCamToSU · Export camera to SketchUp](/en/commands/rsExportCamToSU) — Export Rhino's current view's camera to a SketchUp file.
 - [rsCameraPath · Camera Path](/en/commands/rsCameraPath) — Create a camera animation path for generating walkthrough animations.
 
-## Analysis (8)
+## Analysis (10)
 
 ### Building Performance Analysis
 
@@ -287,8 +302,10 @@
 - [rsViewshedAnalysis · Viewshed Analysis](/en/commands/rsViewshedAnalysis) — Calculate the field of view of the designated observation point and analyze the openness of the field of view.
 - [rsWindAnalysis · Wind environment analysis](/en/commands/rsWindAnalysis) — Use a modeless panel for 2D concept or 3D wind analysis, with speed-color previews, animated trails, point queries and Bake.
 - [rsStructuralAnalysis · Structural mechanics analysis](/en/commands/rsStructuralAnalysis) — Perform mechanical analysis on structures to visualize and calculate stress conditions.
+- [rsIndoorIlluminance · Indoor Illuminance and Daylight](/en/commands/rsIndoorIlluminance) — Compare indoor daylight schemes using point-in-time illuminance, daylight factor, or daily cumulative illuminance, with colored grids and statistics.
+- [rsAcousticAnalysis · Indoor Acoustic Analysis](/en/commands/rsAcousticAnalysis) — Estimate reverberation and compare indoor acoustic schemes using a closed air volume, materials, sources, and receivers.
 
-## Physics Simulation (8)
+## Physics Simulation (10)
 
 ### Form Finding & Relaxation
 
@@ -303,14 +320,17 @@
 - [rsClothFluttering · Cloth Wind Simulation](/en/commands/rsClothFluttering) — Simulate the fluttering effect of cloth in the wind and generate dynamic cloth shapes.
 - [rsBoids · Boids Simulation](/en/commands/rsBoids) — Boids group movement simulation, generating bird/fish school-like collective movement trajectories.
 - [rsPhysarum · Slime mold simulation](/en/commands/rsPhysarum) — Physarum slime mold growth simulation, generating organic growth path patterns.
+- [rsFluidSimulation · Fluid Simulation](/en/commands/rsFluidSimulation) — Arrange emitters, rain, and colliders in Rhino, preview fluid motion, and bake a paused water surface as a mesh.
+- [rsWaveSimulation · Water Surface Waves](/en/commands/rsWaveSimulation) — Create lake or ocean waves with obstacles, multiple ripple sources, and spray effects, then bake a fine paused surface.
 
-## SubD Tools (3)
+## SubD Tools (4)
 
 ### Editing Tools
 
 - [rsMoveAlongNormal · Move Along Normal](/en/commands/rsMoveAlongNormal) — Move SubD vertices along the normal direction, suitable for quickly adjusting the surface shape.
 - [rsCopyMayaToRhino · Copy Maya files to Rhino](/en/commands/rsCopyMayaToRhino) — Copy geometry from Maya files to Rhino, supporting format conversion.
 - [rsSelectSubDEdgeDirection · Select Co-Directional SubD Edges](/en/commands/rsSelectSubDEdgeDirection) — Click a SubD control mesh edge to automatically select all edges with the same direction (U or V) in the same quadrilateral area.
+- [rsCircularizeSubD · Circularize SubD](/en/commands/rsCircularizeSubD) — Circularize selected SubD vertex, edge, or face regions for openings and rounded local details.
 
 ## Section Management (2)
 
@@ -319,7 +339,7 @@
 - [rsProfileDirector · Profile Director](/en/commands/rsProfileDirector) — Open the Section Manager to manage a library of section profiles and extrude along paths.
 - [rsProfileDirectorAddProfile · Add Profile](/en/commands/rsProfileDirectorAddProfile) — Add a new profile to Profile Director.
 
-## Utilities (22)
+## Utilities (25)
 
 ### Clipboard
 
@@ -332,6 +352,7 @@
 - [rsGroupToBlock · Convert Group to Block](/en/commands/rsGroupToBlock) — Convert selected groups to block definitions to reduce file size.
 - [rsExplodeNestedBlocks · Explode nested blocks](/en/commands/rsExplodeNestedBlocks) — Recursively explode all nested block instances down to the lowest primitive.
 - [rsFlattenBlockElevation · Flatten Block Elevation](/en/commands/rsFlattenBlockElevation) — Flatten selected blocks and their nested contents to a specified world Z elevation while creating an independent block definition for each selected instance.
+- [rsEmbedLinkedBlocks · Embed Linked Blocks](/en/commands/rsEmbedLinkedBlocks) — Convert external linked blocks in the active file into embedded blocks for more self-contained delivery.
 
 ### System Tools
 
@@ -346,6 +367,7 @@
 - [rsFilterHeavyObjects · Filter Heavy Objects](/en/commands/rsFilterHeavyObjects) — Analyze the complexity of objects in the document and sort by weight to find the heaviest object.
 - [rsWeChatSend · Automatically send WeChat messages](/en/commands/rsWeChatSend) — Automatically send WeChat messages at regular intervals, suitable for automated notification scenarios.
 - [RSToolActivateLicense · Activate license](/en/commands/RSToolActivateLicense) — Check the license status and open the activation dialog if it is not activated.
+- [rsHelp · Open Help](/en/commands/rsHelp) — Open the RSTool online documentation in your default browser.
 
 ### Import & Export
 
@@ -354,6 +376,7 @@
 - [rsSendToCAD · Send Model to AutoCAD](/en/commands/rsSendToCAD) — Send selected Rhino objects to AutoCAD using real units; if the receiver is offline, the batch is queued for the target drawing to claim later.
 - [rsMayaTransferSettings · Rhino-Maya transfer settings](/en/commands/rsMayaTransferSettings) — Opens the settings window for model transfer between Rhino and Maya.
 - [rsSendToMaya · Send model to Maya](/en/commands/rsSendToMaya) — Send selected objects in Rhino to Maya.
+- [rsCadReceivePending · Receive Pending CAD Transfer](/en/commands/rsCadReceivePending) — Manually check CAD-to-Rhino transfer batches and import a pending batch into the active Rhino document.
 
 ## Dynamic Components (7)
 

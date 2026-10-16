@@ -29,6 +29,16 @@
 - 如果 AutoCAD 已经打开，新安装的插件通常需要重启 AutoCAD 才能加载；本次批次仍会保留。若 Rhino 提示旧版插件正在使用、更新已延后，请关闭 AutoCAD，再在 Rhino 运行一次 `rsSendToCAD`，随后重新打开 AutoCAD。
 - Rhino 提示“接收端尚未连接”并不表示发送失败。启动或重启 AutoCAD，在目标图纸运行 `rsCadReceivePending` 即可领取排队批次。若该命令显示未知命令，说明接收插件尚未加载。
 
+## 发送后 CAD 没有反应：检查 SECURELOAD
+
+如果在 Rhino 中运行 `rsSendToCAD` 后，CAD 端一直没有反应，可以先检查 CAD 的安全加载设置是否已改为 `0`：
+
+1. 切换到 AutoCAD，在命令行输入 `SECURELOAD`，按 Enter 查看当前值。
+2. 如果不是 `0`，输入 `0` 并按 Enter 确认。
+3. 重启 AutoCAD，让接收插件重新加载，再尝试发送；已经排队的批次可在目标图纸中运行 `rsCadReceivePending` 接收。
+
+注意：`SECURELOAD = 0` 会关闭安全加载检查，降低对不受信任代码的加载限制。请仅在确认 RSTool 接收插件来源可信时修改，不要加载来历不明的插件或脚本；修改前记下原值，便于需要时恢复。这是一项排查步骤，不代表所有“没有反应”的情况都由此引起。
+
 ## 单位与转换规则
 
 - Rhino 文档必须设置有效的模型单位；AutoCAD 图纸应设置正确的 `INSUNITS`。传输按两端真实单位换算，单位未定义或不受支持时命令会停止。

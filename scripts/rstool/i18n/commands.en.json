@@ -79,6 +79,1161 @@
     "装配": "Assembly"
   },
   "commands": {
+    "rsUnlockAllLayers": {
+      "sourceHash": "c4cd5d9749f38260d102dd6131dd78881e92476e22b7ef4f9ae649425e3758fb",
+      "title": "Unlock All Layers",
+      "desc": "Unlock every layer in the current file and clear persistent layer-lock flags.",
+      "detail": {
+        "flow": [
+          "Run the command to unlock layers throughout the active document.",
+          "Read the command-line report, then select or edit objects previously locked by their layers."
+        ],
+        "params": [],
+        "output": "Unlock every layer in the current file and clear persistent layer-lock flags.",
+        "notes": "This acts on layers across the whole file, not just visible layers. It clears layer locks, not individual object locks. Parent-layer inheritance is restored. There is no settings window.",
+        "illustrations": [],
+        "videos": []
+      }
+    },
+    "rsLockObjLayer": {
+      "sourceHash": "94570e5ef6f6fdbb524971bf4545d6356e0466136bb49d9bef84f9027192fd90",
+      "title": "Lock Selected Objects’ Layers",
+      "desc": "Select objects to lock their containing layers and keep other work easier to select.",
+      "detail": {
+        "flow": [
+          "Run the command, select objects whose layers should be locked, and press Enter.",
+          "The command locks each distinct layer and reports the result."
+        ],
+        "params": [],
+        "output": "Select objects to lock their containing layers and keep other work easier to select.",
+        "notes": "This locks entire layers, including other objects on those layers. The current layer is skipped; switch to another current layer first if necessary. Use [rsUnlockAllLayers](./rsUnlockAllLayers) to unlock all layers. There are no numeric settings or dialog.",
+        "illustrations": [],
+        "videos": []
+      }
+    },
+    "rsEmbedLinkedBlocks": {
+      "sourceHash": "87368c27c56aec6a1cbadaa9387319ba959ee5a3604dc6736bb0d5a16bd8d031",
+      "title": "Embed Linked Blocks",
+      "desc": "Convert external linked blocks in the active file into embedded blocks for more self-contained delivery.",
+      "detail": {
+        "flow": [
+          "Ensure linked source files are available and their contents are loaded; save a copy first.",
+          "Run without selecting objects. The command processes linked definitions and follows used nested links.",
+          "Review converted and remaining counts, resolve reported failures, and save the 3dm."
+        ],
+        "params": [],
+        "output": "Convert external linked blocks in the active file into embedded blocks for more self-contained delivery.",
+        "notes": "Definitions are embedded without exploding their instances. Embedded blocks no longer update from their external sources. Missing files or unloaded contents can leave definitions unconverted; check the remaining count rather than assuming every link was removed. No settings dialog is required.",
+        "illustrations": [],
+        "videos": []
+      }
+    },
+    "rsAIModelerLog": {
+      "sourceHash": "5ffd7ba0409ffad861dcff1a040f367e3c98da74a764544a5ca160d22919bc81",
+      "title": "AI Modeler Execution Log",
+      "desc": "Open the AI Modeler execution log to investigate script failures, cancellations, and rollbacks.",
+      "detail": {
+        "flow": [
+          "Run to open AIModeler_Execution.log in the default text viewer.",
+          "Read the printed log and AIModeler_LastFailed.py paths and include the relevant errors when reporting an issue."
+        ],
+        "params": [],
+        "output": "Open the AI Modeler execution log to investigate script failures, cancellations, and rollbacks.",
+        "notes": "This only opens diagnostics: it does not rerun failed scripts or change geometry. Logs rotate to .old at about 2 MB, so older entries may be there. Check logs and failed scripts for sensitive project information before sharing. No settings dialog is used.",
+        "illustrations": [],
+        "videos": []
+      }
+    },
+    "rsHelp": {
+      "sourceHash": "60a476943e950d3995c8637b33f0c2e1bb84e90757554e0330a5d1f681c6670e",
+      "title": "Open Help",
+      "desc": "Open the RSTool online documentation in your default browser.",
+      "detail": {
+        "flow": [
+          "Run rsHelp to open https://docs.rstoolarchi.com/ in your default browser.",
+          "Use the index or search to find a command."
+        ],
+        "params": [],
+        "output": "Open the RSTool online documentation in your default browser.",
+        "notes": "No selection, numeric input, or settings dialog is required. An internet connection to the documentation site is needed.",
+        "illustrations": [],
+        "videos": []
+      }
+    },
+    "rsAxisLock": {
+      "sourceHash": "80371f290a8d19f40b1cddafb76646a408c22afd516a960d7fef1b7bbe34359c",
+      "title": "Arrow-Key Axis Lock",
+      "desc": "Toggle arrow-key constraints along world X, Y, and Z during supported point picking with a base point.",
+      "detail": {
+        "flow": [
+          "Run and check the reported state. Run again to turn it off.",
+          "During point picking with a base point, press Right for X, Left for Y, or Up for Z.",
+          "Press Down to release the active axis constraint and continue picking."
+        ],
+        "params": [],
+        "output": "Toggle arrow-key constraints along world X, Y, and Z during supported point picking with a base point.",
+        "notes": "Axes are always world-aligned, regardless of the construction plane. With no saved settings the feature starts disabled; subsequent toggle state is saved. It only handles supported point picking with a base point, not every mouse operation. Use [rsAxisLockStatus](./rsAxisLockStatus) for diagnostics. There is no settings dialog.",
+        "illustrations": [],
+        "videos": []
+      }
+    },
+    "rsAxisLockBasis": {
+      "sourceHash": "f0c45d88dc7749b9127abb93489cd9b8d465ba457bb802fa76e315c5b1781754",
+      "title": "Confirm World Axis-Lock Basis",
+      "desc": "Confirm world XYZ as the arrow-key axis-lock basis and report it.",
+      "detail": {
+        "flow": [
+          "Run and read the world-coordinate confirmation.",
+          "Use rsAxisLock to enable or disable arrow-key constraints."
+        ],
+        "params": [],
+        "output": "Confirm world XYZ as the arrow-key axis-lock basis and report it.",
+        "notes": "The current implementation supports World only, not CPlane or custom axes, and does not modify Rhino’s construction plane. This command does not replace the axis-lock toggle and has no settings dialog.",
+        "illustrations": [],
+        "videos": []
+      }
+    },
+    "rsAxisLockStatus": {
+      "sourceHash": "1a730655f2fc7123f166af5c2e099ebbaf524165c2ddd191737ca6e423c6840d",
+      "title": "Axis-Lock Status",
+      "desc": "Print axis-lock diagnostics to help explain why an arrow key is not constraining a point.",
+      "detail": {
+        "flow": [
+          "Run and inspect the enabled state, world basis, and recent point-picking diagnostics in the Rhino command line.",
+          "If disabled, run rsAxisLock. If no point picker with a base point is active, enter a suitable picking step and retry."
+        ],
+        "params": [],
+        "output": "Print axis-lock diagnostics to help explain why an arrow key is not constraining a point.",
+        "notes": "This is a read-only diagnostic: it does not change geometry or toggle axis locking, and has no settings dialog.",
+        "illustrations": [],
+        "videos": []
+      }
+    },
+    "rsXLine": {
+      "sourceHash": "0f9c9d764218806d9a70d1a83c0c183eaefce79e1af8fc90f94072d93a293a3f",
+      "title": "Two-Point Construction Line",
+      "desc": "Define a direction with two points and create an extended line on a locked construction layer.",
+      "detail": {
+        "flow": [
+          "Run and pick two points to define the line direction.",
+          "The line is extended to suit the scene, added to RS_XLine, and that layer is locked."
+        ],
+        "params": [],
+        "output": "Define a direction with two points and create an extended line on a locked construction layer.",
+        "notes": "The result looks like an infinite construction line but is a finite segment, extended beyond the projected scene by about 20% at each end. A viewport-based fallback is used when necessary. It uses RS_XLine_Dashed. Unlock RS_XLine before editing or deleting these lines. No settings dialog is used.",
+        "illustrations": [],
+        "videos": []
+      }
+    },
+    "rsCircularizeSubD": {
+      "sourceHash": "d3203a51f936a57944d42498d3e3a012cd8ddf7c664c9bd6587517091c87fa7c",
+      "title": "Circularize SubD",
+      "desc": "Circularize selected SubD vertex, edge, or face regions for openings and rounded local details.",
+      "detail": {
+        "flow": [
+          "Preselect SubD vertices, edges, or faces using sub-object selection, or select them after running.",
+          "Press Enter. Each object and connected region is analyzed, a plane is fitted, and control points are adjusted.",
+          "Inspect the SubD and command-line report; use Undo if needed."
+        ],
+        "params": [],
+        "output": "Circularize selected SubD vertex, edge, or face regions for openings and rounded local details.",
+        "notes": "Select sub-objects, not the whole SubD. Each region needs at least three control points, a resolvable boundary, and a stable fitted plane. Degenerate selections fail validation. Boundary points are distributed evenly around a circle and interior points are relaxed by connectivity. This edits the SubD control net; it does not draw an exact NURBS circle. Objects are replaced together only after all preparation succeeds. No settings dialog is used.",
+        "illustrations": [],
+        "videos": []
+      }
+    },
+    "rsDiagramArrowMatch": {
+      "sourceHash": "9ee4a9bc723313f8157b75825b59789edd5ffd5409c22276265befda724784ff",
+      "title": "Match Diagram Arrow Style",
+      "desc": "Copy one RSTool diagram arrow’s style to other diagram arrows for a consistent drawing.",
+      "detail": {
+        "flow": [
+          "Run and select a RSTool diagram arrow as the style source.",
+          "Select one or more target arrows and press Enter.",
+          "Review the success/failure report and inspect the updated arrows."
+        ],
+        "params": [],
+        "output": "Copy one RSTool diagram arrow’s style to other diagram arrows for a consistent drawing.",
+        "notes": "Copies width, head size/style, line style/scale, arrow placement, and taper settings. Targets are rebuilt along their own paths; the source is unchanged. Only objects carrying RSTool diagram-arrow data are recognized, not ordinary curves or geometry that has lost its metadata. Arrow groups are deduplicated and individual failures are reported. No numeric settings dialog is used.",
+        "illustrations": [],
+        "videos": []
+      }
+    },
+    "rsVectorStudioSyncCanvas": {
+      "sourceHash": "80549864a1a548752a17e8209bc6aaf4394df677c4685e64d6ce3d7d32cc504d",
+      "title": "Sync Vector Studio Canvas Bounds",
+      "desc": "Place Vector Studio’s current canvas bounds and scale in Rhino to establish a shared drawing frame.",
+      "detail": {
+        "flow": [
+          "Open rsVectorStudio, wait for it to load, and activate the canvas to synchronize.",
+          "Run this command and enter the desired canvas width in Rhino model units.",
+          "Pick the canvas top-left corner. A rectangular boundary is created at the canvas aspect ratio and the mapping is recorded."
+        ],
+        "params": [
+          {
+            "label": "Model width",
+            "type": "double",
+            "def": "Existing mapping, otherwise canvas width",
+            "range": "At least 10 times model tolerance",
+            "note": "Height follows the canvas aspect ratio automatically."
+          }
+        ],
+        "output": "Place Vector Studio’s current canvas bounds and scale in Rhino to establish a shared drawing frame.",
+        "notes": "This synchronizes bounds and coordinate mapping, not all artwork and not automatic two-way updates. It keeps an existing mapping’s orientation or otherwise uses the current construction plane. Each confirmed operation adds a boundary named Vector Studio Canvas. Open the studio first if its page is not ready. Input is requested in Rhino through the studio page, without a separate settings dialog.",
+        "illustrations": [],
+        "videos": []
+      }
+    },
+    "rsCadReceivePending": {
+      "sourceHash": "24948992a8dccb97037f993f930bb9cce52becfead56247e59bc5cc43afe3425",
+      "title": "Receive Pending CAD Transfer",
+      "desc": "Manually check CAD-to-Rhino transfer batches and import a pending batch into the active Rhino document.",
+      "detail": {
+        "flow": [
+          "Send objects using the RSTool transfer tools in CAD and wait for the send to finish.",
+          "Activate the destination Rhino document, run rsCadReceivePending, and allow idle-time reception after the command ends.",
+          "Check the received-object count and transfer ID. An empty queue is reported explicitly."
+        ],
+        "params": [],
+        "output": "Manually check CAD-to-Rhino transfer batches and import a pending batch into the active Rhino document.",
+        "notes": "Run this in Rhino for CAD → Rhino reception; the identically named CAD-side command receives in the opposite application. Automatic checks normally handle reception, while this command requests a manual check. It cannot fetch objects CAD has not sent. Valid source and destination units are required and unit conversion is applied. A batch already received by the same document is not imported twice. Format conversion can change object counts, so inspect layers, annotations, and geometry. For the other direction, see [rsSendToCAD](./rsSendToCAD). No settings dialog is required.",
+        "illustrations": [],
+        "videos": []
+      }
+    },
+    "rsScreenGif": {
+      "sourceHash": "6c1dd299d4412d1de9296b2005117155e0f54a28df1edfdb97818dabd5291b5c",
+      "title": "Record Screen Region to GIF",
+      "desc": "Record a rectangular screen region as a GIF for command demonstrations and issue reports.",
+      "detail": {
+        "flow": [
+          "Run and choose frame rate, output width, and cursor capture.",
+          "Select a screen rectangle and wait for the three-second countdown.",
+          "Pause/resume or stop while recording. Ctrl+Alt+F9 pauses/resumes; Ctrl+Alt+F10 stops.",
+          "Preview the clip after stopping, discard and rerecord if needed, then save the GIF and open it or its folder."
+        ],
+        "params": [
+          {
+            "label": "Frame rate",
+            "type": "list",
+            "def": "15 FPS",
+            "range": "5 / 10 / 15 / 20 FPS",
+            "note": "Higher rates look smoother but add frames, file size, and encoding work."
+          },
+          {
+            "label": "Maximum output width",
+            "type": "list",
+            "def": "1280 px",
+            "range": "Original / 1920 / 1280 / 960 / 640 px",
+            "note": "Downscales proportionally; small captured regions are not enlarged."
+          },
+          {
+            "label": "Include cursor",
+            "type": "bool",
+            "def": "On",
+            "range": "On / Off",
+            "note": "Useful when viewers need to follow clicks and pointer movement."
+          }
+        ],
+        "output": "Record a rectangular screen region as a GIF for command demonstrations and issue reports.",
+        "notes": "This captures a screen region, not a Rhino render animation. Other windows, notifications, and sensitive content inside that region may also be recorded. Prepare the screen and keep clips short. GIF encoding can be cancelled.",
+        "illustrations": [],
+        "videos": []
+      }
+    },
+    "rsQuickMeasure": {
+      "sourceHash": "4accc0dda951adda7316e6f6cf5777d70e0db225372af9e71102f4d0b759bacc",
+      "title": "Quick Measure",
+      "desc": "Use a floating panel for point and object measurements and place results directly in the model.",
+      "detail": {
+        "flow": [
+          "Run and choose the measurement, output units, decimal places, and reference basis.",
+          "Pick points for point-based modes or select geometry for object-based modes; curve length also accepts sub-object edges.",
+          "Inspect the generated text dots and guides, switch modes to continue, or use Clear Measurements to remove this tool’s output."
+        ],
+        "params": [
+          {
+            "label": "Measurement",
+            "type": "list",
+            "def": "Distance",
+            "range": "Coordinates, distance, horizontal distance, height difference, angle, slope; curve length, planar area, surface area, volume, bounding-box dimensions, edge lengths, circle parameters",
+            "note": "Choose the mode before picking points or geometry. Unsupported geometry is reported."
+          },
+          {
+            "label": "Output units",
+            "type": "list",
+            "def": "Document units",
+            "range": "Document / mm / cm / m / in / ft",
+            "note": "Changes reported units without scaling the model."
+          },
+          {
+            "label": "Decimal places",
+            "type": "int",
+            "def": "3",
+            "range": "0–8",
+            "note": "Controls displayed precision, not geometry precision."
+          },
+          {
+            "label": "Reference basis",
+            "type": "list",
+            "def": "World XYZ",
+            "range": "World XYZ / Current CPlane",
+            "note": "Affects coordinates, horizontal distance, height difference, and direction-dependent measurements."
+          }
+        ],
+        "output": "Use a floating panel for point and object measurements and place results directly in the model.",
+        "notes": "Clear Measurements removes only this tool’s tagged text dots and guides, not every annotation in the file. More than 200 output objects triggers confirmation. Remeasure after editing source geometry; old labels should not be treated as live values.",
+        "illustrations": [],
+        "videos": [],
+        "paramSections": [
+          {
+            "title": "Measurement modes",
+            "intro": "Point modes measure picked locations; object modes inspect existing geometry. Volume requires closed solids, planar area needs suitable planar geometry, and circle parameters require recognizable circles."
+          },
+          {
+            "title": "Display and orientation",
+            "intro": "Results use text dots and guides for quick checks, not automatically associative construction dimensions."
+          }
+        ]
+      }
+    },
+    "rsSmartPipe": {
+      "sourceHash": "1a00caae554b087a54a7fd0a4678f27e06091700623060bef9b020bb1d8072e0",
+      "title": "Smart Pipes",
+      "desc": "Generate hollow pipe runs and fittings from centerlines with multiple specifications, previewing before committing.",
+      "detail": {
+        "flow": [
+          "Open the Smart Pipes window, set an outer diameter and wall thickness, and pick centerlines with that specification.",
+          "Change the specification to pick more lines. To change an existing group, use Apply to Selected Group.",
+          "Set the bend-radius ratio, update the preview, and inspect connections, bends, and segment lengths.",
+          "Rotate the view during preview, press Enter to return to settings, or Esc to cancel. Update the preview again after edits.",
+          "Generate when satisfied. Brep runs and fittings are grouped on the current layer; original centerlines remain."
+        ],
+        "params": [
+          {
+            "label": "Outer diameter",
+            "type": "double",
+            "def": "100 mm, converted to document units",
+            "range": "Positive; constrained by wall thickness and model tolerance",
+            "note": "Actual outside diameter, not nominal DN. Assign different specifications by group."
+          },
+          {
+            "label": "Wall thickness",
+            "type": "double",
+            "def": "4 mm, converted to document units",
+            "range": "Thickness and inner radius must each exceed twice model tolerance",
+            "note": "An actual bore must remain; a small diameter or excessive thickness prevents generation."
+          },
+          {
+            "label": "Bend radius / maximum outer diameter",
+            "type": "double",
+            "def": "1.5",
+            "range": "1–20",
+            "note": "Larger ratios make gentler bends but require longer centerline segments."
+          }
+        ],
+        "output": "Generate hollow pipe runs and fittings from centerlines with multiple specifications, previewing before committing.",
+        "notes": "If lines are too short, angles too tight, or dimensions too close to model tolerance, adjust the centerlines or reduce pipe size/bend radius and preview again. Generated objects carry RSTool.Pipe data for [rsPipeSchedule](./rsPipeSchedule). Later scaling or direct geometry edits do not automatically update those recorded values.",
+        "illustrations": [],
+        "videos": [],
+        "paramSections": [
+          {
+            "title": "Assigning pipe specifications",
+            "intro": "Each centerline group has its own diameter and thickness. Picking a line again replaces its previous specification rather than duplicating it."
+          },
+          {
+            "title": "Bends and preview",
+            "intro": "Connections use actual 3D intersections, not projected crossings. Elbows, reducers, tees, and crosses depend on valid intersections, angles, and sufficient straight-run length."
+          }
+        ]
+      }
+    },
+    "rsPipeSchedule": {
+      "sourceHash": "1b4a3344576dfb2a70e6fdf544448600e3a37c2a9dd95815e0607401848bc47f",
+      "title": "Pipe Schedule",
+      "desc": "Read smart-pipe metadata and export a CSV grouped by type, specification, and generation-time units.",
+      "detail": {
+        "flow": [
+          "Run, select runs and fittings generated by rsSmartPipe, and press Enter.",
+          "Choose the CSV destination to export the recorded quantities.",
+          "Open it in a spreadsheet and review type, diameter × thickness, quantity, net pipe length, fitting centerline length, and generation-time units."
+        ],
+        "params": [],
+        "output": "Read smart-pipe metadata and export a CSV grouped by type, specification, and generation-time units.",
+        "notes": "Only objects with supported smart-pipe data (RSTool.Pipe.Version=1) are counted; ordinary Pipe objects and manually modeled fittings are not inferred. CSV uses UTF-8 BOM for spreadsheet compatibility. Values come from generation-time records, not remeasurement of edited geometry. Regenerate pipes after scaling or reshaping before scheduling. No settings dialog is used.",
+        "illustrations": [],
+        "videos": []
+      }
+    },
+    "rsSprinkerBrush": {
+      "sourceHash": "66408e11272b364da3a67621b1d5c15be1363aa720be8f474e4be3b7a3bbe33e",
+      "title": "Surface Scatter Brush",
+      "desc": "Brush multiple source objects onto surfaces, meshes, or SubDs for vegetation, stones, and other local scatter.",
+      "detail": {
+        "flow": [
+          "Run, pick source objects, then choose the target surfaces.",
+          "Adjust source weights, brush radius, stamp density, random rotation, and scale.",
+          "Drag with the left mouse button to paint; Ctrl+left erases scatter from the current preview.",
+          "Press Enter to create the objects, or Esc to discard the preview."
+        ],
+        "params": [
+          {
+            "label": "Source weights",
+            "type": "double",
+            "def": "Current per-source values",
+            "range": "≥0; total must be positive",
+            "note": "Relative selection probability, not an exact count."
+          },
+          {
+            "label": "Brush radius",
+            "type": "double",
+            "def": "Initially estimated, then reused",
+            "range": "Greater than model tolerance",
+            "note": "Document units; controls each stamp’s coverage."
+          },
+          {
+            "label": "Density per stamp",
+            "type": "int",
+            "def": "10; may reuse last value",
+            "range": "1–1000",
+            "note": "Placement attempts per stamp; spacing and other constraints may reduce the result."
+          },
+          {
+            "label": "Rotation range",
+            "type": "double",
+            "def": "Previous settings",
+            "range": "0–360°",
+            "note": "Adds rotation variation."
+          },
+          {
+            "label": "Minimum / maximum scale",
+            "type": "double",
+            "def": "Previous settings",
+            "range": "0.01–1000000; minimum ≤ maximum",
+            "note": "Uniform scale factors, not lengths."
+          },
+          {
+            "label": "Minimum distance",
+            "type": "double",
+            "def": "Previous settings",
+            "range": "≥0",
+            "note": "Limits proximity between placement points, not exact geometry collisions."
+          },
+          {
+            "label": "Align to surface",
+            "type": "bool",
+            "def": "Previous settings",
+            "range": "On / Off",
+            "note": "Controls whether source orientation follows the target surface."
+          },
+          {
+            "label": "Random seed",
+            "type": "int",
+            "def": "Previous settings",
+            "range": "Integer",
+            "note": "Controls randomness; brush paths and stamp counts also affect the result."
+          },
+          {
+            "label": "Preview mode",
+            "type": "list",
+            "def": "Previous settings",
+            "range": "Box wireframe / Object wireframe / Shaded preview",
+            "note": "Box previews are lighter for large models."
+          }
+        ],
+        "output": "Brush multiple source objects onto surfaces, meshes, or SubDs for vegetation, stones, and other local scatter.",
+        "notes": "The command name is intentionally documented as rsSprinkerBrush, matching the plugin spelling. Targets are read when selected; reselect after editing them. Settings are saved after a successful commit and the created result can be undone in one operation.",
+        "illustrations": [],
+        "videos": [],
+        "paramSections": [
+          {
+            "title": "Sources and brush",
+            "intro": "Choose what to scatter, coverage, and density before painting. Weights change relative occurrence."
+          },
+          {
+            "title": "Variation and alignment",
+            "intro": "Rotation, scale, and spacing shape the distribution. Surface alignment helps on slopes; check source orientation first."
+          },
+          {
+            "title": "Preview and commit",
+            "intro": "Painting shows a preview; objects are created only on confirmation. Detailed previews cost more with complex source geometry."
+          }
+        ]
+      }
+    },
+    "rsIndoorIlluminance": {
+      "sourceHash": "e26a8cc4bae570584cf812af31a699303f4271af8c2e6713c5c9bf71606bab2d",
+      "title": "Indoor Illuminance and Daylight",
+      "desc": "Compare indoor daylight schemes using point-in-time illuminance, daylight factor, or daily cumulative illuminance, with colored grids and statistics.",
+      "detail": {
+        "flow": [
+          "Select analysis regions, glazing groups, and opaque enclosure/obstructions. Create separate glass types for different optical properties.",
+          "Choose a mode. For point-in-time or daily analysis, check Rhino Sun’s date, location, time zone, and north direction.",
+          "Set grid size, sensor height, wall offset, indoor reflectances, and each glazing group’s transmission/reflection properties.",
+          "Click Analyze, inspect the color map, legend, and statistics, or cancel if necessary. Start large regions at low quality with a coarse grid.",
+          "Use Bake to write results to the document. Reselect/recalculate after changing geometry or inputs rather than relying on old results."
+        ],
+        "params": [
+          {
+            "label": "Mode",
+            "type": "list",
+            "def": "Daylight factor DF%",
+            "range": "Point-in-time lux / Daylight factor DF% / Daily klux·h",
+            "note": "DF uses CIE overcast sky without a specific time; the other modes use Rhino Sun timing."
+          },
+          {
+            "label": "CIE sky",
+            "type": "list",
+            "def": "Overcast",
+            "range": "Sunny/intermediate with or without sun, overcast, uniform",
+            "note": "Locked in DF mode; choose an appropriate sky in other modes."
+          },
+          {
+            "label": "Quality",
+            "type": "list",
+            "def": "Medium: 2048 paths / 2 bounces",
+            "range": "Low 512/1; medium 2048/2; high 8192/3",
+            "note": "Higher quality increases sampling and bounces, and computation time."
+          },
+          {
+            "label": "Target",
+            "type": "double",
+            "def": "DF 2%; point-in-time 300 lux; daily 2.4 klux·h",
+            "range": "≥0",
+            "note": "Resets with mode changes. Used for target statistics, not automatic code compliance."
+          },
+          {
+            "label": "Daily hours and step",
+            "type": "time",
+            "def": "08:00–18:00; 60 minutes",
+            "range": "Start 0–23.5 h; end 0.5–24 h; step 10–180 min",
+            "note": "Daily mode only: integrates over the chosen hours on the Rhino Sun date. End must follow start."
+          },
+          {
+            "label": "Grid size",
+            "type": "double",
+            "def": "0.5 m",
+            "range": "0.05–20 m",
+            "note": "Panel values are in meters and converted to model units; smaller grids add samples."
+          },
+          {
+            "label": "Sensor height",
+            "type": "double",
+            "def": "0.8 m",
+            "range": "0–10 m",
+            "note": "Sets the sensor workplane height."
+          },
+          {
+            "label": "Wall offset",
+            "type": "double",
+            "def": "0.1 m",
+            "range": "0–10 m",
+            "note": "Excludes near-wall sampling areas."
+          },
+          {
+            "label": "Ceiling / wall / floor reflectance",
+            "type": "double",
+            "def": "0.8 / 0.5 / 0.2",
+            "range": "Each 0–0.95",
+            "note": "Estimate actual material reflectance; this is not Rhino render-material brightness."
+          },
+          {
+            "label": "Glass type groups",
+            "type": "group",
+            "def": "Glass Type 1",
+            "range": "Multiple types supported",
+            "note": "Assign geometry and optical properties separately for each glazing type."
+          },
+          {
+            "label": "Visible transmittance VT",
+            "type": "double",
+            "def": "0.6",
+            "range": "0–1",
+            "note": "Each side must satisfy VT + reflectance ≤ 1."
+          },
+          {
+            "label": "Front / back reflectance",
+            "type": "double",
+            "def": "0.08 / 0.08",
+            "range": "Each 0–1",
+            "note": "Front follows the surface normal; validated together with VT."
+          },
+          {
+            "label": "Show cell values",
+            "type": "bool",
+            "def": "Off",
+            "range": "On / Off",
+            "note": "Labels can overlap on dense grids; inspect the color map first."
+          }
+        ],
+        "output": "Compare indoor daylight schemes using point-in-time illuminance, daylight factor, or daily cumulative illuminance, with colored grids and statistics.",
+        "notes": "Intended for daylight scheme comparisons, not luminaire design or compliance certification. Point-in-time illuminance, DF, and daily accumulation have different units and are not directly interchangeable. Recalculate after changing grid, glazing, or sky inputs. Dense grids are expensive and sampling may be adjusted to the grid budget; read status messages. Getting Rhino Sun settings enables Rhino Sun.",
+        "illustrations": [],
+        "videos": [],
+        "paramSections": [
+          {
+            "title": "Input and glazing",
+            "intro": "Input selects geometry; Glazing assigns groups and optical properties. Include the full enclosure and obstructions, since gaps change results."
+          },
+          {
+            "title": "Analysis and sky",
+            "intro": "Choose a specific moment, overcast daylight factor, or a day’s accumulation. DF is independent of date/time; configure Rhino Sun for the other modes."
+          },
+          {
+            "title": "Grid and indoor optics",
+            "intro": "Enter lengths in meters. Grid size controls sampling and reflectance controls indoor bounces; do not compensate for missing geometry by increasing reflectance."
+          },
+          {
+            "title": "Result display",
+            "intro": "Inspect overall distribution before enabling labels. Bake commits the preview to the document."
+          }
+        ]
+      }
+    },
+    "rsAcousticAnalysis": {
+      "sourceHash": "fbfb7a4895d293014a11109b909910bfdfcb545369f9d0d2ac40f4482beef7ac",
+      "title": "Indoor Acoustic Analysis",
+      "desc": "Estimate reverberation and compare indoor acoustic schemes using a closed air volume, materials, sources, and receivers.",
+      "detail": {
+        "flow": [
+          "In Scene, select a closed Brep/extrusion representing indoor air, then select reflectors, screens, or furniture.",
+          "Place sources and enter six-band sound power. Generate a horizontal receiver grid or manually place receivers for stepped seating.",
+          "In Materials, assign frequency-dependent absorption and scattering to enclosure/obstacle faces, marking open exits where appropriate.",
+          "In Calculation, run the statistical estimate first, use it to choose a trace duration, then run the geometric simulation.",
+          "In Results, choose a source, band, metric, and receiver. Inspect decay curves, paths, and sampling diagnostics, then bake or export a report.",
+          "Save the scheme into the current 3dm, then save the Rhino file itself."
+        ],
+        "params": [
+          {
+            "label": "Band sound power Lw",
+            "type": "text",
+            "def": "80,80,80,80,80,80 dB",
+            "range": "Six comma-separated values",
+            "note": "Order: 125/250/500/1000/2000/4000 Hz. Omnidirectional point sources are calculated and viewed separately."
+          },
+          {
+            "label": "Receiver grid spacing",
+            "type": "double",
+            "def": "0.5 m",
+            "range": "0.1–10 m",
+            "note": "Smaller spacing adds receivers; regenerate the grid after changing it."
+          },
+          {
+            "label": "Receiver height",
+            "type": "double",
+            "def": "1.2 m",
+            "range": "0.1–100 m",
+            "note": "Measured from the room bounding-box bottom. Horizontal grids do not follow steps or slopes."
+          },
+          {
+            "label": "Receiver sphere radius",
+            "type": "double",
+            "def": "0.15 m",
+            "range": "0.02–1 m",
+            "note": "Keep receiver spheres inside the air volume and clear of walls and obstacles; radius affects sampling."
+          },
+          {
+            "label": "Six-band absorption",
+            "type": "double",
+            "def": "Initially 0.1 per field; assign per material",
+            "range": "0–1",
+            "note": "Set each band separately; render colors do not define acoustic absorption."
+          },
+          {
+            "label": "Scattering",
+            "type": "double",
+            "def": "0.1",
+            "range": "0–1",
+            "note": "Controls directional scattering, not absorption."
+          },
+          {
+            "label": "Open exit",
+            "type": "bool",
+            "def": "Off",
+            "range": "On / Off",
+            "note": "Lets energy escape through a face; do not treat it as an ordinary hard wall."
+          },
+          {
+            "label": "Rays per source",
+            "type": "int",
+            "def": "100000",
+            "range": "1000–2000000",
+            "note": "More rays improve sampling but do not replace geometry, material, or decay checks."
+          },
+          {
+            "label": "Trace duration",
+            "type": "double",
+            "def": "4 s",
+            "range": "0.1–30 s",
+            "note": "Short durations can truncate decay tails and make reverberation metrics unavailable."
+          },
+          {
+            "label": "Maximum reflections",
+            "type": "int",
+            "def": "500",
+            "range": "1–2000",
+            "note": "Paths stop at this limit; assess it together with trace duration."
+          },
+          {
+            "label": "Early image-source order",
+            "type": "int",
+            "def": "1",
+            "range": "0–2",
+            "note": "Controls early analytic reflections, not an unlimited exact solution."
+          },
+          {
+            "label": "Air absorption",
+            "type": "bool",
+            "def": "On",
+            "range": "On / Off",
+            "note": "Estimates air absorption from temperature and humidity."
+          },
+          {
+            "label": "Temperature / relative humidity",
+            "type": "double",
+            "def": "20°C / 50%",
+            "range": "−20–50°C / 1–100%",
+            "note": "Used when air absorption is enabled."
+          },
+          {
+            "label": "Random seed",
+            "type": "int",
+            "def": "73471",
+            "range": "0–100000000",
+            "note": "Controls ray sampling; keep it fixed for scheme comparisons."
+          }
+        ],
+        "output": "Estimate reverberation and compare indoor acoustic schemes using a closed air volume, materials, sources, and receivers.",
+        "notes": "### Reading the Results tab\n\nResults include Sabine/Eyring, EDT, T20/T30, C50/C80, D50, approximate LI, decay curves, reflection paths, and discrete maps. LI is not a calibrated absolute SPL. N/A means metric requirements were not met, not zero; check decay tails, duration, ray count, and receiver placement. Reports include HTML and a matching CSV.\n\n### Scope\n\nUse for indoor mid/high-frequency scheme comparisons, not as a replacement for independent professional solvers, measurements, or acceptance testing. Treat low frequencies, especially 125 Hz in small rooms, cautiously. Standing waves, diffraction, sound transmission/isolation, STI, source directivity, WAV auralization, and combined multi-source fields are not included. After storing a scheme in the document, save the 3dm file.",
+        "illustrations": [],
+        "videos": [],
+        "paramSections": [
+          {
+            "title": "Scene: room, sources, and receivers",
+            "intro": "Select air volume, not wall solids. Keep sources and receiver spheres inside. Use manual receivers for stepped seating. Multiple sources are computed separately, not combined into one field."
+          },
+          {
+            "title": "Materials: absorption, scattering, and openings",
+            "intro": "Assign enclosure and obstacle materials separately. Band absorption controls energy loss and scattering controls directional spread. Check these before increasing the computation budget."
+          },
+          {
+            "title": "Calculation: sampling and environment",
+            "intro": "Statistical Sabine/Eyring estimates are source-position independent. Geometric simulation then considers paths. Estimate duration first and check decay truncation and sampling afterward."
+          }
+        ]
+      }
+    },
+    "rsFluidSimulation": {
+      "sourceHash": "5fb9381cdce2d1650d9f9433465d04e066350725bcaf251ba975ac2f55c31ac9",
+      "title": "Fluid Simulation",
+      "desc": "Arrange emitters, rain, and colliders in Rhino, preview fluid motion, and bake a paused water surface as a mesh.",
+      "detail": {
+        "flow": [
+          "Set standard Rhino length units, run the command, and add point nozzles, surface nozzles, or rain regions.",
+          "Edit emitter direction, speed, and emission behavior, select colliders, and draw a simulation box or use automatic bounds.",
+          "Start with Standard droplet detail and automatic resolution. Try the preview FLIP backend for continuous liquid.",
+          "Start playback or inspect with Step. Playback shows particles and pausing generates the fine surface.",
+          "Stop Emission prevents new water while existing water continues moving; Reset restarts the simulation.",
+          "Pause at the desired moment and use Bake Water Mesh. Meshing can be cancelled if too expensive."
+        ],
+        "params": [
+          {
+            "label": "Emitters and flow presets",
+            "type": "group",
+            "def": "Per-emitter settings",
+            "range": "Point nozzle / Surface nozzle / Rain region",
+            "note": "Presets affect the selected emitter only and require Apply; emitters can be moved, reselected, disabled, or removed."
+          },
+          {
+            "label": "Solver",
+            "type": "list",
+            "def": "PBF particle fluid",
+            "range": "PBF / FLIP liquid (preview)",
+            "note": "Switching resets the simulation. FLIP targets continuous liquid and remains a preview."
+          },
+          {
+            "label": "Droplet detail",
+            "type": "list",
+            "def": "Standard",
+            "range": "Draft / Standard / Fine / Custom",
+            "note": "Not a fixed droplet diameter. Preset particle budgets are 8000/20000/60000."
+          },
+          {
+            "label": "Automatic resolution",
+            "type": "bool",
+            "def": "On",
+            "range": "On / Off",
+            "note": "Recommends spacing from emitters. Editing spacing manually disables it."
+          },
+          {
+            "label": "Particle spacing",
+            "type": "double",
+            "def": "Initially 0.012 m; automatic resolution adjusts it",
+            "range": "Positive, in document units",
+            "note": "Smaller spacing increases detail and particle cost; changes reset the simulation."
+          },
+          {
+            "label": "Particle budget",
+            "type": "int",
+            "def": "20000",
+            "range": "100–100000",
+            "note": "The budget limits new particles; read the bottom statistics."
+          },
+          {
+            "label": "Gravity",
+            "type": "double",
+            "def": "9.81 m/s²",
+            "range": "0–100 m/s²",
+            "note": "Velocity uses m/s and gravity m/s² regardless of displayed length units."
+          },
+          {
+            "label": "Viscosity",
+            "type": "double",
+            "def": "0.02",
+            "range": "0–1",
+            "note": "Controls viscous behavior; not a calibrated physical-viscosity unit."
+          },
+          {
+            "label": "Density iterations",
+            "type": "int",
+            "def": "4",
+            "range": "1–12",
+            "note": "Controls PBF density solving; available controls depend on backend."
+          },
+          {
+            "label": "Surface tension",
+            "type": "double",
+            "def": "0.15",
+            "range": "0–1",
+            "note": "Local cohesion; changes reset the simulation, zero disables it."
+          },
+          {
+            "label": "Random seed",
+            "type": "int",
+            "def": "1",
+            "range": "0–2147483647",
+            "note": "Controls particle-generation randomness."
+          },
+          {
+            "label": "Mesh cell size",
+            "type": "double",
+            "def": "Initially 0.006 m; presets adjust it",
+            "range": "Positive, in document units",
+            "note": "Changes surface reconstruction resolution, not simulation particle count."
+          },
+          {
+            "label": "Surface anisotropy",
+            "type": "double",
+            "def": "0.65",
+            "range": "0–1",
+            "note": "Adapts reconstruction to local shape; zero uses spherical kernels."
+          },
+          {
+            "label": "Surface continuity",
+            "type": "double",
+            "def": "1",
+            "range": "0–1",
+            "note": "Smooths supported water layers; requires nonzero anisotropy and only rebuilds the surface."
+          },
+          {
+            "label": "Surface smoothing",
+            "type": "int",
+            "def": "2",
+            "range": "0–5",
+            "note": "Smooths the output mesh only; zero disables it without changing particles."
+          },
+          {
+            "label": "Sheet closing radius",
+            "type": "int",
+            "def": "1 cell",
+            "range": "0–2 cells",
+            "note": "Closes small supported holes; does not guarantee exact reconstructed volume conservation."
+          }
+        ],
+        "output": "Arrange emitters, rain, and colliders in Rhino, preview fluid motion, and bake a paused water surface as a mesh.",
+        "notes": "Domain boundaries are open, not physical tank walls; use valid colliders to contain water. FLIP treats open colliders as a shell about two particle spacings thick, so inspect spacing if contact appears offset. This is a form/effect preview, not an engineering hydraulic solver. Inspect baked meshes before downstream modeling. Reopen and reconfigure after changing document units.",
+        "illustrations": [],
+        "videos": [],
+        "paramSections": [
+          {
+            "title": "Scene and emitters",
+            "intro": "The upper panel manages water sources, colliders, and bounds. Emitter presets and sizes apply to the selected item and reset on application. Reselect colliders after editing their source geometry."
+          },
+          {
+            "title": "Solver and resolution",
+            "intro": "Choose resolved detail and budget before surface polish. Thin streams need sufficient particles; a finer output mesh cannot recover missing simulation detail."
+          },
+          {
+            "title": "Advanced: motion",
+            "intro": "These controls affect solving and some are disabled by backend. Gravity, spacing, and motion changes generally restart simulation."
+          },
+          {
+            "title": "Advanced: surface and output",
+            "intro": "These mostly affect paused previews and output meshes, not existing particle paths. Finer reconstruction costs more time and memory."
+          }
+        ]
+      }
+    },
+    "rsWaveSimulation": {
+      "sourceHash": "d48c76eddee1ea19dce0ac29923b8c9038662b920032c3b943cd21dc481d304a",
+      "title": "Water Surface Waves",
+      "desc": "Create lake or ocean waves with obstacles, multiple ripple sources, and spray effects, then bake a fine paused surface.",
+      "detail": {
+        "flow": [
+          "Run, draw a water rectangle or select a closed boundary, set world-Z water level, and select obstacles if needed.",
+          "Start with Calm Water, Breezy Lake, or Spectral Ocean and adjust wave height, wavelength, direction, and resolution.",
+          "Play or step to inspect motion. Play, step, and reset show points; pausing shows the fine surface.",
+          "Use Multiple Ripples, press Enter to apply the batch or Esc to cancel. Manage sources individually or repeat them at simulation-time intervals.",
+          "Enable the local FLIP preview only when 3D water is needed, draw a box including water depth, and test a small region first.",
+          "Pause, inspect the surface, choose output subdivision, and bake the mesh."
+        ],
+        "params": [
+          {
+            "label": "Wave model / preset",
+            "type": "list",
+            "def": "Breezy Lake; lake waves",
+            "range": "Lake waves / Spectral ocean FFT",
+            "note": "Presets adjust several parameters together as a starting point."
+          },
+          {
+            "label": "Water level",
+            "type": "double",
+            "def": "0",
+            "range": "Document units, world Z",
+            "note": "Mean surface elevation, not water depth."
+          },
+          {
+            "label": "Wave height / wavelength",
+            "type": "double",
+            "def": "0.25 m / 6 m",
+            "range": "Height ≥0; wavelength >0, converted to document units",
+            "note": "Lake height bounds background variation; ocean height is Hs, about four standard deviations, not a cap on individual crests."
+          },
+          {
+            "label": "Direction",
+            "type": "double",
+            "def": "0°",
+            "range": "−360–360°",
+            "note": "World XY: 0° toward +X, 90° toward +Y."
+          },
+          {
+            "label": "Ocean wind speed",
+            "type": "double",
+            "def": "12 m/s",
+            "range": "1–60 m/s",
+            "note": "Affects ocean wavelength distribution; amplitude remains controlled by wave height."
+          },
+          {
+            "label": "Speed multiplier",
+            "type": "double",
+            "def": "1",
+            "range": "0–10",
+            "note": "Playback multiplier; local 3D mode sets it to 1."
+          },
+          {
+            "label": "Ripples / sharpness / irregularity / spread",
+            "type": "double",
+            "def": "0.35 / 0.35 / 0.8 / 0.7",
+            "range": "Each 0–1",
+            "note": "Adjusts surface character; fine waves require adequate simulation resolution."
+          },
+          {
+            "label": "Simulation cell size",
+            "type": "double",
+            "def": "Initially 0.075 m",
+            "range": "Positive; at most 200000 vertices",
+            "note": "Smaller cells add detail. Use suggested resolution by wavelength; budget failures retain the preview."
+          },
+          {
+            "label": "Paused / output detail",
+            "type": "list",
+            "def": "Base",
+            "range": "Base / 2x / 4x; optional local refinement",
+            "note": "Changes paused/output sampling without resetting time or recovering missing physics."
+          },
+          {
+            "label": "Ripple radius / strength",
+            "type": "double",
+            "def": "0.5 m / 0.15 m",
+            "range": "Document length units",
+            "note": "Editable per source; changes affect the next trigger. 3D mode converts length strength to a velocity impulse."
+          },
+          {
+            "label": "Repeat / interval",
+            "type": "bool / double",
+            "def": "Off; 1 simulation second",
+            "range": "0.1–60 simulation seconds",
+            "note": "Uses simulation time, not wall-clock time. Adding a source fires once unless repeat is enabled."
+          },
+          {
+            "label": "Swell mix / relative direction / seed",
+            "type": "double / int",
+            "def": "0 / 45° / 1",
+            "range": "Mix 0–1; direction −180–180°; nonnegative integer seed",
+            "note": "Advanced settings. Ocean swell adds long waves from another direction while total Hs remains controlled by wave height."
+          },
+          {
+            "label": "Crest and impact spray",
+            "type": "group",
+            "def": "Panel settings",
+            "range": "Enable, amount, drop size, particle budget",
+            "note": "Secondary artistic effects; falling drops can trigger ripples but do not represent full volume exchange."
+          },
+          {
+            "label": "Local 3D FLIP",
+            "type": "bool",
+            "def": "Off",
+            "range": "On / Off, preview",
+            "note": "3D particles inside a box with an exterior heightfield. Enabling resets, selects spectral waves, speed 1, sharpness 0, and disables artistic spray."
+          },
+          {
+            "label": "3D spacing / budget",
+            "type": "double / int",
+            "def": "Initially 0.0375 m / 20000",
+            "range": "Spacing >0; budget 1–100000",
+            "note": "Simulation cells must be at least twice the 3D spacing. Over-budget initialization is rejected rather than silently truncated."
+          }
+        ],
+        "output": "Create lake or ocean waves with obstacles, multiple ripple sources, and spray effects, then bake a fine paused surface.",
+        "notes": "### Distinguish the two tools\n\nThis command mainly uses a surface heightfield. For emitters, rain, and freely moving liquid, see [rsFluidSimulation](./rsFluidSimulation). Artistic spray is not strictly conservative. Local FLIP remains a preview, not complete two-way ocean coupling, validated breaking waves, or engineering fluid analysis.\n\n### Practical checks\n\nLocal 3D ripples change velocity: play or step to see the surface evolve. Use a radius of at least four 3D particle spacings and stay at least seven spacings from box edges. Physics, box, and collider edits reset the simulation; output subdivision does not. Output is not a closed printable solid; inspect meshes and seams before fabrication. Reopen after changing model units.",
+        "illustrations": [],
+        "videos": [],
+        "paramSections": [
+          {
+            "title": "Base surface: presets and shape",
+            "intro": "Lake mode suits gentle water; spectral mode adds multidirectional ocean waves. Lengths use document units and wind uses m/s. Tune shape before increasing resolution."
+          },
+          {
+            "title": "Resolution and mesh output",
+            "intro": "Simulation cells determine resolved detail; output subdivision controls presentation only. Playback points are not the finished surface: pause before judging it."
+          },
+          {
+            "title": "Ripples and advanced effects",
+            "intro": "Sources can fire once or repeat and can be moved, deleted, or triggered separately. Time reset keeps sources, while changing the boundary clears them."
+          },
+          {
+            "title": "Local 3D FLIP panel (preview)",
+            "intro": "Adds local 3D water inside a box, not a fully 3D ocean. Include water depth, use static collider snapshots, and keep an obstacle-free transition near box edges."
+          }
+        ]
+      }
+    },
+    "rsDiscreteCity": {
+      "sourceHash": "a425432dcefbfd891d93263c406cf66c51adcbac20eafd8942db9819b093fbe7",
+      "title": "Discrete City",
+      "desc": "Arrange building modules on a grid under interface, support, and access constraints, compare schemes, then bake Rhino blocks.",
+      "detail": {
+        "flow": [
+          "Start with Garden Community, Courtyard, Terraced Settlement, or Waterfront and click Preview Preset to explore examples.",
+          "For a custom project, use Site to set a horizontal closed boundary, grid dimensions, levels, exclusions, entries, paths, and form.",
+          "In Modules, use built-ins or capture geometry, set occupied cells and weights, configure exposed-face interfaces, and apply the edits.",
+          "In Rules, review matching, support, and circulation constraints, preview/check the grid and paths, then generate.",
+          "In Solutions, change seed, generate batches, or compare side by side. Lock modules, inspect/replace instances, or recalculate a region.",
+          "Read diagnostics and audit the scheme, then Bake to Rhino. Save a project or module library to continue later."
+        ],
+        "params": [
+          {
+            "label": "Grid cell X / Y / Z",
+            "type": "double",
+            "def": "6 / 6 / 3 m",
+            "range": "Each 0.001–10000 m",
+            "note": "All panel lengths are meters, regardless of document units. Modules are not scaled to fit cells."
+          },
+          {
+            "label": "Maximum levels",
+            "type": "int",
+            "def": "6",
+            "range": "1–100",
+            "note": "Also limited by zoning heights, setbacks, and other form constraints."
+          },
+          {
+            "label": "Grid orientation",
+            "type": "double",
+            "def": "0°",
+            "range": "−360–360°",
+            "note": "Rotates the grid about world Z, not arbitrary individual module rotations."
+          },
+          {
+            "label": "Path width / automatic nodes",
+            "type": "double / int",
+            "def": "3 m / 6",
+            "range": "Width 0.001–10000 m; nodes 0–100",
+            "note": "Rasterized to paths at least one cell wide; inspect connectivity with guide curves and entries."
+          },
+          {
+            "label": "Building form",
+            "type": "group",
+            "def": "Current preset/project",
+            "range": "Courtyard, clusters, setbacks, tower, and podium",
+            "note": "Form dimensions use cell counts and positions use percentages; preview the form grid before solving."
+          },
+          {
+            "label": "Module occupied cells",
+            "type": "text",
+            "def": "Per module",
+            "range": "Must include 0,0,0; at most 64 face-connected cells",
+            "note": "For example 0,0,0;1,0,0. Geometry must fit the declared occupancy."
+          },
+          {
+            "label": "Module / category weights",
+            "type": "double",
+            "def": "Per module/project",
+            "range": "≥0; 0 disables",
+            "note": "Random-selection preferences, not exact counts or area quotas."
+          },
+          {
+            "label": "Interfaces and internal access",
+            "type": "group",
+            "def": "Per module",
+            "range": "Type, required connection, boundary allowance, support, access groups",
+            "note": "Click Apply Interface after edits. Separate internal access groups are not implicitly connected."
+          },
+          {
+            "label": "Density / height falloff",
+            "type": "double",
+            "def": "0.55 / 0.3",
+            "range": "0.01–0.99 / 0–10",
+            "note": "Both are random preferences, not exact site coverage or floor-area ratios."
+          },
+          {
+            "label": "Seed / batch count",
+            "type": "int",
+            "def": "1 / 4",
+            "range": "Nonnegative integer seed; batch 1–20",
+            "note": "Fixed inputs and budgets help reproduce results; new seeds explore variants."
+          },
+          {
+            "label": "Attempts / backtracks per attempt",
+            "type": "int",
+            "def": "8 / 2000",
+            "range": "1–100 / 0–100000",
+            "note": "Exhausting the budget means no scheme was found in that search, not proof of impossibility."
+          }
+        ],
+        "output": "Arrange building modules on a grid under interface, support, and access constraints, compare schemes, then bake Rhino blocks.",
+        "notes": "### Preview, bake, and save\n\nPreviews do not create document objects. Bake to Rhino creates block instances in one undoable operation. Old schemes remain after input edits but cannot be baked under changed settings: restore their inputs or regenerate. Preset switching keeps session caches; save projects before closing.\n\nProjects and module libraries use .rstdiscrete packages containing settings, geometry, materials, and accessible textures. Imported libraries require matching cell sizes. Geometry is stored as a snapshot and does not follow source edits.\n\n### Scope\n\nThis is constrained grid-based generation, not free growth on arbitrary terrain. Non-square grids allow 0°/180° and square grids can allow 90° rotations. Built-in modules are conceptual, without automatic exact planning targets, structural checks, code checks, or construction documents. Switching documents cancels solving. Save the project before changing units, then reopen.",
+        "illustrations": [],
+        "videos": [],
+        "paramSections": [
+          {
+            "title": "Site: bounds, grid, and form",
+            "intro": "Use a horizontal closed site boundary with optional holes and exclusions. Only fully contained cells participate. Zoning and form height limits both apply. Automatic paths are circulation scaffolds, not road-engineering models."
+          },
+          {
+            "title": "Modules: geometry, occupancy, and interfaces",
+            "intro": "Capture supports Breps, meshes, extrusions, and nested blocks as snapshots without deleting sources. Check occupancy before interfaces and apply module and interface edits explicitly."
+          },
+          {
+            "title": "Rules: matching, support, and access",
+            "intro": "Same-name interfaces match by default and prohibitions take precedence. Empty interfaces match empty interfaces. Support chains must reach ground/foundation, and required access groups must reach entries. These are discrete constraints, not structural safety calculations."
+          },
+          {
+            "title": "Solutions: generation, diagnostics, and edits",
+            "intro": "Weights and density explore form without guaranteeing targets. Start small; limits are 50000 active cells, 128 module types, and 512 expanded states. Regional recalculation spans all levels, respects locks, and keeps the previous scheme on failure."
+          }
+        ]
+      }
+    },
     "rsAiRender": {
       "sourceHash": "7e9b706a165ef0dcb2b1a64a40e9b6430aac91c53b75a12aaa4a28943ab0cab7",
       "title": "AI rendering",
@@ -10540,7 +11695,7 @@
       }
     },
     "rsSendToCAD": {
-      "sourceHash": "feef690b3613e82ef482df3dd0583be1ea0e63c2798b492bc60131dffffd54c6",
+      "sourceHash": "9d66e5a1594a5668e5d3246738a505693c7cdb26fa8f5c2577be737734ddc597",
       "title": "Send Model to AutoCAD",
       "desc": "Send selected Rhino objects to AutoCAD using real units; if the receiver is offline, the batch is queued for the target drawing to claim later.",
       "detail": {
@@ -10554,7 +11709,7 @@
         ],
         "params": [],
         "output": "Converts the selected Rhino objects to DWG 2018 data and sends them to AutoCAD, importing immediately when online or queuing them for the target drawing when offline.",
-        "notes": "## First-time installation and receiving\n\n- AutoCAD 2020–2027 is supported. The first run of `rsSendToCAD` automatically installs or updates `RSTool.CadTransfer.bundle` for the current user from the RSTool distribution, without administrator rights.\n- If AutoCAD is already open, restart it so the newly installed plugin can load; the current batch remains queued. If Rhino reports that the old plugin is in use and the update was deferred, close AutoCAD, run `rsSendToCAD` once more in Rhino, and then reopen AutoCAD.\n- A message saying that the receiver is not connected does not mean the send failed. Start or restart AutoCAD and run `rsCadReceivePending` in the target drawing. If that command is unknown, the receiver plugin has not loaded.\n\n## Units and conversion\n\n- The Rhino document must have valid model units, and the AutoCAD drawing should have the correct `INSUNITS`. Transfer scales data according to real units on both sides and stops when units are undefined or unsupported.\n- Rhino exports DWG 2018 without flattening: surfaces and solids use Solid mode, meshes remain meshes, and full layer paths, RGB colors, and world coordinates are preserved.\n- DWG conversion may alter the type or appearance of text, dimensions, hatches, and special objects. Dynamic-block parameters, external references, and custom object data are not guaranteed to survive. Check position, solid closure, fonts, and annotations after sending important models.\n\n## Selection and troubleshooting\n\n- Preselected objects are sent directly; selection is requested only when nothing is preselected. The original Rhino selection state is restored when the command ends.\n- Objects unsupported by Rhino's DWG exporter can cause the send to fail, with details shown on the command line. Transfer data is stored under `%LOCALAPPDATA%\\RSTool\\RhinoCadTransfer` for approximately 24 hours for troubleshooting.",
+        "notes": "## First-time installation and receiving\n\n- AutoCAD 2020–2027 is supported. The first run of `rsSendToCAD` automatically installs or updates `RSTool.CadTransfer.bundle` for the current user from the RSTool distribution, without administrator rights.\n- If AutoCAD is already open, restart it so the newly installed plugin can load; the current batch remains queued. If Rhino reports that the old plugin is in use and the update was deferred, close AutoCAD, run `rsSendToCAD` once more in Rhino, and then reopen AutoCAD.\n- A message saying that the receiver is not connected does not mean the send failed. Start or restart AutoCAD and run `rsCadReceivePending` in the target drawing. If that command is unknown, the receiver plugin has not loaded.\n\n## No response in CAD: check SECURELOAD\n\nIf CAD does not respond after running `rsSendToCAD` in Rhino, check whether CAD's secure-loading setting has been changed to `0`:\n\n1. Switch to AutoCAD, enter `SECURELOAD` on the command line, and press Enter to check the current value.\n2. If it is not `0`, enter `0` and press Enter to confirm.\n3. Restart AutoCAD so the receiver plugin can load, then try sending again. Run `rsCadReceivePending` in the target drawing to receive batches already in the queue.\n\nNote: `SECURELOAD = 0` disables secure-loading checks and reduces restrictions on loading untrusted code. Change it only after verifying that the RSTool receiver plugin comes from a trusted source. Do not load unknown plugins or scripts, and record the original value so it can be restored. This is a troubleshooting step, not the cause of every unresponsive transfer.\n\n## Units and conversion\n\n- The Rhino document must have valid model units, and the AutoCAD drawing should have the correct `INSUNITS`. Transfer scales data according to real units on both sides and stops when units are undefined or unsupported.\n- Rhino exports DWG 2018 without flattening: surfaces and solids use Solid mode, meshes remain meshes, and full layer paths, RGB colors, and world coordinates are preserved.\n- DWG conversion may alter the type or appearance of text, dimensions, hatches, and special objects. Dynamic-block parameters, external references, and custom object data are not guaranteed to survive. Check position, solid closure, fonts, and annotations after sending important models.\n\n## Selection and troubleshooting\n\n- Preselected objects are sent directly; selection is requested only when nothing is preselected. The original Rhino selection state is restored when the command ends.\n- Objects unsupported by Rhino's DWG exporter can cause the send to fail, with details shown on the command line. Transfer data is stored under `%LOCALAPPDATA%\\RSTool\\RhinoCadTransfer` for approximately 24 hours for troubleshooting.",
         "illustrations": [],
         "videos": []
       }

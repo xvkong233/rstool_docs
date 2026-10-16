@@ -55,6 +55,8 @@ const labels = {
     parameterHeaders: ['中文名', '英文名', '类型', '默认值', '范围', '说明'],
     noGhParams: '该运算器无参数输入；每次画布求解时自动执行。',
     noCliParams: '此命令无命令行数值参数，相关设置在窗口中调整。',
+    noWindowParams:
+      '此命令无需设置数值参数，按上方流程操作即可；没有独立设置窗口。',
     output: '输出',
     notes: '备注',
     videos: '教学视频',
@@ -97,6 +99,8 @@ const labels = {
       'This component has no input parameters and runs automatically whenever the Grasshopper solution is evaluated.',
     noCliParams:
       'This command has no numeric command-line parameters. Adjust its options in the settings window.',
+    noWindowParams:
+      'No numeric settings or separate settings window are required. Follow the workflow above.',
     output: 'Output',
     notes: 'Notes',
     videos: 'Tutorial videos',
@@ -225,7 +229,7 @@ function renderCommand(item, detail, locale) {
       for (const section of sections) {
         const names = new Set(section.params || [])
         const entries = params.filter((param) => names.has(param.en))
-        if (!entries.length) continue
+        if (!entries.length && !section.intro) continue
         lines.push(`### ${esc(section.title)}`)
         lines.push('')
         if (section.intro) {
@@ -233,7 +237,7 @@ function renderCommand(item, detail, locale) {
           lines.push('')
         }
         entries.forEach((param) => rendered.add(param.en))
-        renderParameterTable(entries)
+        if (entries.length) renderParameterTable(entries)
       }
       const remaining = params.filter((param) => !rendered.has(param.en))
       if (remaining.length) renderParameterTable(remaining)
@@ -242,7 +246,7 @@ function renderCommand(item, detail, locale) {
     }
   } else {
     lines.push(
-      `> ${detail.style === 'gh' ? text.noGhParams : text.noCliParams}`
+      `> ${detail.style === 'gh' ? text.noGhParams : detail.noSettingsWindow ? text.noWindowParams : text.noCliParams}`
     )
     lines.push('')
   }

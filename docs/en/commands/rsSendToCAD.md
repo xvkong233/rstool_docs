@@ -29,6 +29,16 @@
 - If AutoCAD is already open, restart it so the newly installed plugin can load; the current batch remains queued. If Rhino reports that the old plugin is in use and the update was deferred, close AutoCAD, run `rsSendToCAD` once more in Rhino, and then reopen AutoCAD.
 - A message saying that the receiver is not connected does not mean the send failed. Start or restart AutoCAD and run `rsCadReceivePending` in the target drawing. If that command is unknown, the receiver plugin has not loaded.
 
+## No response in CAD: check SECURELOAD
+
+If CAD does not respond after running `rsSendToCAD` in Rhino, check whether CAD's secure-loading setting has been changed to `0`:
+
+1. Switch to AutoCAD, enter `SECURELOAD` on the command line, and press Enter to check the current value.
+2. If it is not `0`, enter `0` and press Enter to confirm.
+3. Restart AutoCAD so the receiver plugin can load, then try sending again. Run `rsCadReceivePending` in the target drawing to receive batches already in the queue.
+
+Note: `SECURELOAD = 0` disables secure-loading checks and reduces restrictions on loading untrusted code. Change it only after verifying that the RSTool receiver plugin comes from a trusted source. Do not load unknown plugins or scripts, and record the original value so it can be restored. This is a troubleshooting step, not the cause of every unresponsive transfer.
+
 ## Units and conversion
 
 - The Rhino document must have valid model units, and the AutoCAD drawing should have the correct `INSUNITS`. Transfer scales data according to real units on both sides and stops when units are undefined or unsupported.
