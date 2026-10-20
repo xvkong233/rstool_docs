@@ -1,4 +1,4 @@
-# rsEditOpening2D · 编辑二维门窗/电梯
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsEditOpening2D：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/7bf4e081-d3af-539d-a9ca-7ae644a76e75.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsEditOpening2D · 编辑二维门窗/电梯
 
 > 模块：二维建筑 / 门窗与电梯
 

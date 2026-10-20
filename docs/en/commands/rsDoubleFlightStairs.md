@@ -1,4 +1,4 @@
-# rsDoubleFlightStairs · Double-Flight Staircase
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsDoubleFlightStairs: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/693db912-4a2b-4e95-b462-8ca2e3a6139d.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsDoubleFlightStairs · Double-Flight Staircase
 
 > Module: Architecture / Stairs & Ramps
 

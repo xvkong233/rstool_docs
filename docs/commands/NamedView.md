@@ -1,10 +1,8 @@
-# NamedView
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="NamedView：GH 组件图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/NamedViewList_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> NamedView
 
 > 模块：GH组件 / Util
 
 [← 返回命令目录](/commands/)
-
-![图标](../assets/gh-icons/NamedViewList_24.png)
 
 **功能**：读取当前 Rhino 文档中的已命名视图。
 

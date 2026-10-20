@@ -1,4 +1,4 @@
-# rsFilletWall2D · 二维墙体倒角
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsFilletWall2D：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/8e572021-753f-4e5d-9a70-15347ba223a5.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsFilletWall2D · 二维墙体倒角
 
 > 模块：二维建筑 / 轴网与墙体
 

@@ -1,10 +1,8 @@
-# Tween Surface
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="Tween Surface: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/TweenSrf_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> Tween Surface
 
 > Module: Grasshopper Components / Surface
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/TweenSrf_24.png)
 
 **Function**: Reconstruct a NURBS transition surface between two surfaces by interpolating corresponding sample points.
 

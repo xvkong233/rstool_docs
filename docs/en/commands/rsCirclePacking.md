@@ -1,4 +1,4 @@
-# rsCirclePacking · Circle Packing
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsCirclePacking: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/7f4264d5-a6d6-4ae9-8ea6-751be5131c02.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsCirclePacking · Circle Packing
 
 > Module: Physics Simulation / Form Finding & Relaxation
 

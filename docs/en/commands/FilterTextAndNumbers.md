@@ -1,10 +1,8 @@
-# FilterTextAndNumbers
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="FilterTextAndNumbers: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/FilterTextAndNumbers_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> FilterTextAndNumbers
 
 > Module: Grasshopper Components / Text
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/FilterTextAndNumbers_24.png)
 
 **Function**: Filter and separate text content from digital content.
 

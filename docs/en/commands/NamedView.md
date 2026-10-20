@@ -1,10 +1,8 @@
-# NamedView
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="NamedView: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/NamedViewList_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> NamedView
 
 > Module: Grasshopper Components / Util
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/NamedViewList_24.png)
 
 **Function**: Reads named views in the current Rhino document.
 

@@ -1,4 +1,4 @@
-# rsPasteExcel · Paste Excel
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsPasteExcel: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/d26faab7-4f94-4a47-a3a8-7dfb06113841.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsPasteExcel · Paste Excel
 
 > Module: Utilities / Clipboard
 

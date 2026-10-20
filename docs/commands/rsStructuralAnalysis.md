@@ -1,4 +1,4 @@
-# rsStructuralAnalysis · 结构力学分析
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsStructuralAnalysis：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/ff60fa7f-d857-5064-9783-b9137b23fd32.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsStructuralAnalysis · 结构力学分析
 
 > 模块：分析 / 建筑物理分析
 

@@ -1,4 +1,4 @@
-# rsTileMeshBlendByColor · 按颜色生成渐变表皮
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsTileMeshBlendByColor：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/f23dd86a-f5c6-4161-92da-91208cbec877.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsTileMeshBlendByColor · 按颜色生成渐变表皮
 
 > 模块：铺装表皮
 

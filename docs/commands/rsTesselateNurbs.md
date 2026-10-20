@@ -1,4 +1,4 @@
-# rsTesselateNurbs · NURBS 细分铺装
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsTesselateNurbs：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/b83700e3-5cd7-428d-8328-8107cdb4a5ef.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsTesselateNurbs · NURBS 细分铺装
 
 > 模块：铺装表皮
 

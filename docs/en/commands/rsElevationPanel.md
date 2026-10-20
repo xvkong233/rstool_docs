@@ -1,4 +1,4 @@
-# rsElevationPanel · Elevation panel
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsElevationPanel: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/0f18c29a-be47-501c-9c11-0519b286d1b7.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsElevationPanel · Elevation panel
 
 > Module: 2D Architecture / Other 2D Tools
 

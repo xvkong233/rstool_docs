@@ -1,4 +1,4 @@
-# rsDiamondMesh · Diamond Mesh
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsDiamondMesh: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/4fd3faf4-54df-40b9-a9ca-bea9413768eb.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsDiamondMesh · Diamond Mesh
 
 > Module: Geometry / Meshes
 

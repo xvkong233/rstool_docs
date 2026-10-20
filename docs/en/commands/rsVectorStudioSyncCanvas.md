@@ -1,8 +1,10 @@
-# rsVectorStudioSyncCanvas · Sync Vector Studio Canvas Bounds
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--missing" title="No icon in the current toolbar" aria-hidden="true"></span> rsVectorStudioSyncCanvas · Sync Vector Studio Canvas Bounds
 
 > Module: Views & Documentation / Annotation & Documentation
 
 [← Back to command index](/en/commands/)
+
+> The current toolbar has no icon for this command. The dash is a placeholder, not a toolbar icon; run the command by name.
 
 **Function**: Place Vector Studio’s current canvas bounds and scale in Rhino to establish a shared drawing frame.
 

@@ -1,4 +1,4 @@
-# rsSpaceTruss · 双层网架
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsSpaceTruss：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/69c37c77-fed1-411a-a3b6-5db338c9918a.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/69c37c77-fed1-411a-a3b6-5db338c9918a.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSpaceTruss · 双层网架
 
 > 模块：建筑 / 建筑构件
 

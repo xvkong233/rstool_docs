@@ -1,4 +1,4 @@
-# rsCurtainWall2D · 二维幕墙
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsCurtainWall2D：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/b57a57b5-ac33-48a7-ae67-78666a0cfbcf.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsCurtainWall2D · 二维幕墙
 
 > 模块：二维建筑 / 其他二维
 

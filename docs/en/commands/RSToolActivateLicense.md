@@ -1,8 +1,10 @@
-# RSToolActivateLicense · Activate license
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--missing" title="No icon in the current toolbar" aria-hidden="true"></span> RSToolActivateLicense · Activate license
 
 > Module: Utilities / System Tools
 
 [← Back to command index](/en/commands/)
+
+> The current toolbar has no icon for this command. The dash is a placeholder, not a toolbar icon; run the command by name.
 
 **Function**: Open the RsTool license activation dialog box (enter the activation code to complete activation)
 

@@ -1,4 +1,4 @@
-# rsUnrollCrv · Straighten Curve
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsUnrollCrv: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/dd75cf96-c27b-428e-9c68-77f29ba0fc8e.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsUnrollCrv · Straighten Curve
 
 > Module: Geometry / Curves
 

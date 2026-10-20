@@ -1,4 +1,4 @@
-# rsRandomPtsOnObj · Randomly generated points on an object
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsRandomPtsOnObj: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/ec405540-f960-4d32-a393-a4c98e16d276.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsRandomPtsOnObj · Randomly generated points on an object
 
 > Module: Geometry / Points
 

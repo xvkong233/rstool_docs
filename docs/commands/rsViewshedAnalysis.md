@@ -1,4 +1,4 @@
-# rsViewshedAnalysis · 视野分析
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsViewshedAnalysis：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/314a3091-71ec-5e22-be6d-0c6f34a7bab2.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsViewshedAnalysis · 视野分析
 
 > 模块：分析 / 建筑物理分析
 

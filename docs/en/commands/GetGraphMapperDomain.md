@@ -1,10 +1,8 @@
-# GetGraphMapperDomain
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="GetGraphMapperDomain: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/GetGraphMapperDomain_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> GetGraphMapperDomain
 
 > Module: Grasshopper Components / Animation
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/GetGraphMapperDomain_24.png)
 
 **Function**: Read the domain of the Graph Mapper component.
 

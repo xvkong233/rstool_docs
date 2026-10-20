@@ -1,4 +1,4 @@
-# rsPerforation · Perforation
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsPerforation: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/49300bf6-ec6e-5b99-9aa5-46042ae8cf1e.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsPerforation · Perforation
 
 > Module: Paneling & Facades
 

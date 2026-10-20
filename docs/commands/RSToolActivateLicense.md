@@ -1,8 +1,10 @@
-# RSToolActivateLicense · 激活许可证
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--missing" title="当前工具栏中无对应图标" aria-hidden="true"></span> RSToolActivateLicense · 激活许可证
 
 > 模块：辅助工具 / 系统工具
 
 [← 返回命令目录](/commands/)
+
+> 当前工具栏中没有此命令的对应图标。横线仅表示暂无图标，不是实际按钮；请通过命令行调用。
 
 **功能**：打开 RSTool 许可证激活对话框（输入激活码完成激活）
 

@@ -1,4 +1,4 @@
-# rsArrayBetween · Array between two objects
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsArrayBetween: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/11c65a37-5b7b-4a3e-8645-7932579b9973.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsArrayBetween · Array between two objects
 
 > Module: Geometry / Object Transforms
 

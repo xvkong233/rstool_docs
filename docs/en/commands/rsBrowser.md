@@ -1,4 +1,4 @@
-# rsBrowser · Break-Time Browser
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsBrowser: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/b591df04-9e5d-44b3-9840-4000b8da4fc0.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsBrowser · Break-Time Browser
 
 > Module: Fun / Interactive Entertainment
 

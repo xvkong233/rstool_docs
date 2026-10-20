@@ -1,4 +1,4 @@
-# rsFilletNonPlanar · Fillet Non-Planar Curves
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsFilletNonPlanar: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/335b1cd7-0fed-48b1-8400-e871d8b26f5c.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsFilletNonPlanar · Fillet Non-Planar Curves
 
 > Module: Geometry / Curves
 

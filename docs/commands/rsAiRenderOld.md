@@ -1,8 +1,10 @@
-# rsAiRenderOld · 旧版 AI 渲染
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsAiRenderOld：右键点击 rsAiRender 按钮" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/8fa021d9-e321-4ae1-b218-205fa2451c7d.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsAiRenderOld · 旧版 AI 渲染
 
 > 模块：AI / 渲染与建模
 
 [← 返回命令目录](/commands/)
+
+> 右键点击工具栏中的 [rsAiRender](./rsAiRender) 按钮可运行本命令；这里显示的是它们共用的按钮图标。
 
 **功能**：旧版：基于视口/参考图生成 AI 渲染图（WinForms 实现），可保存到本地
 

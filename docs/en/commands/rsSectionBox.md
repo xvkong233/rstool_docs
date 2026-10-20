@@ -1,4 +1,4 @@
-# rsSectionBox · Section Box
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsSectionBox: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/db146960-c9fd-41f4-8fd0-7acc140f1ca3.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSectionBox · Section Box
 
 > Module: Views & Documentation / Annotation & Documentation
 

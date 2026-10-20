@@ -1,10 +1,8 @@
-# CurveProjectToMesh
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="CurveProjectToMesh: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/CrvProjectToMesh_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> CurveProjectToMesh
 
 > Module: Grasshopper Components / Mesh
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/CrvProjectToMesh_24.png)
 
 **Function**: Projects a curve to the mesh in the specified direction.
 

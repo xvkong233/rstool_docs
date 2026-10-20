@@ -1,4 +1,4 @@
-# rsMembrane · Membrane structure form finding
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsMembrane: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/9687d4c6-7d93-441c-99ca-e8c1ab8bd965.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsMembrane · Membrane structure form finding
 
 > Module: Physics Simulation / Form Finding & Relaxation
 

@@ -1,4 +1,4 @@
-# rsSolarFocusRiskSimulation · 泛光聚光分析
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsSolarFocusRiskSimulation：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/f07c2447-f23e-4415-92a3-076dc3254d69.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSolarFocusRiskSimulation · 泛光聚光分析
 
 > 模块：分析 / 建筑物理分析
 

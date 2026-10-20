@@ -1,10 +1,8 @@
-# PointGroup
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="PointGroup：GH 组件图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/PointsGroup_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> PointGroup
 
 > 模块：GH组件 / Points
 
 [← 返回命令目录](/commands/)
-
-![图标](../assets/gh-icons/PointsGroup_24.png)
 
 **功能**：根据点之间的距离将点划分为多个组。
 

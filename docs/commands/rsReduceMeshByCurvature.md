@@ -1,4 +1,4 @@
-# rsReduceMeshByCurvature · 按曲率减网格面
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsReduceMeshByCurvature：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/9e7243ca-cc4b-4273-b950-9ae07ec5fef3.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsReduceMeshByCurvature · 按曲率减网格面
 
 > 模块：几何 / 网格
 

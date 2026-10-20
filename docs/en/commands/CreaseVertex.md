@@ -1,10 +1,8 @@
-# CreaseVertex
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="CreaseVertex: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/CreaseVertex_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> CreaseVertex
 
 > Module: Grasshopper Components / SubD
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/CreaseVertex_24.png)
 
 **Function**: Sets the specified SubD vertex to an acute vertex.
 

@@ -1,4 +1,4 @@
-# rsAIModeler · AI 建模
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsAIModeler：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/23d497e1-df78-5dfa-95d3-cf3c56f968a4.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsAIModeler · AI 建模
 
 > 模块：AI / 渲染与建模
 

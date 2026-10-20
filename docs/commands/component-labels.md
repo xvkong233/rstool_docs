@@ -1,10 +1,8 @@
-# Component Labels
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="Component Labels：GH 组件图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/ComponentLabels_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> Component Labels
 
 > 模块：GH组件 / Util
 
 [← 返回命令目录](/commands/)
-
-![图标](../assets/gh-icons/ComponentLabels_24.png)
 
 **功能**：在 Grasshopper 组件旁显示浮动名称标签，并支持例外配置。
 

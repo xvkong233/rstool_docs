@@ -1,10 +1,8 @@
-# Value Quantization
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="Value Quantization: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/ValueQuantization_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> Value Quantization
 
 > Module: Grasshopper Components / Math
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/ValueQuantization_24.png)
 
 **Function**: Replaces values within the specified range with the nearest value in the custom target list, leaving the values outside the range unchanged.
 

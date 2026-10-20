@@ -1,10 +1,8 @@
-# ZigzagRamp
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="ZigzagRamp: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/ZigzagRamp_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> ZigzagRamp
 
 > Module: Grasshopper Components / Architecture
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/ZigzagRamp_24.png)
 
 **Function**: Create a switchback ramp from multiple straight or polyline paths.
 

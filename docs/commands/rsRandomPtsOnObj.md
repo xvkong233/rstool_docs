@@ -1,4 +1,4 @@
-# rsRandomPtsOnObj · 物体上随机生成点
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsRandomPtsOnObj：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/ec405540-f960-4d32-a393-a4c98e16d276.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsRandomPtsOnObj · 物体上随机生成点
 
 > 模块：几何 / 点
 

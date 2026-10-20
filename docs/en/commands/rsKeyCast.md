@@ -1,4 +1,4 @@
-# rsKeyCast · Keystroke Display
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsKeyCast: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/5116ce49-1a8f-564e-9f29-0b636a9dd0fc.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsKeyCast · Keystroke Display
 
 > Module: Productivity / Screen Tools
 

@@ -1,4 +1,4 @@
-# rsRoofTile · 屋顶瓦生成
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsRoofTile：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/673e42a0-aa57-4aa1-98c3-04ddc27f6251.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsRoofTile · 屋顶瓦生成
 
 > 模块：建筑 / 建筑构件
 

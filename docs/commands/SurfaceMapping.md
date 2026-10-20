@@ -1,10 +1,8 @@
-# SurfaceMapping
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="SurfaceMapping：GH 组件图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/SurfaceMapping_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> SurfaceMapping
 
 > 模块：GH组件 / TextureMapping
 
 [← 返回命令目录](/commands/)
-
-![图标](../assets/gh-icons/SurfaceMapping_24.png)
 
 **功能**：为对象应用曲面纹理映射。
 

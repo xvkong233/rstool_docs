@@ -1,4 +1,4 @@
-# rsMultiFlightStairs · Multi-Flight Staircase
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsMultiFlightStairs: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/7d2d8f5c-70bc-5755-96d0-36499124f174.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsMultiFlightStairs · Multi-Flight Staircase
 
 > Module: Architecture / Stairs & Ramps
 

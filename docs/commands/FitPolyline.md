@@ -1,10 +1,8 @@
-# FitPolyline
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="FitPolyline：GH 组件图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/FitPolyline_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> FitPolyline
 
 > 模块：GH组件 / Curve
 
 [← 返回命令目录](/commands/)
-
-![图标](../assets/gh-icons/FitPolyline_24.png)
 
 **功能**：将多段线中近似平滑的部分拟合为曲线。
 

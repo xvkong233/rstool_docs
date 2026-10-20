@@ -1,8 +1,10 @@
-# rsKeyCastSettings · Keystroke Display Settings
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--missing" title="No icon in the current toolbar" aria-hidden="true"></span> rsKeyCastSettings · Keystroke Display Settings
 
 > Module: Productivity / Screen Tools
 
 [← Back to command index](/en/commands/)
+
+> The current toolbar has no icon for this command. The dash is a placeholder, not a toolbar icon; run the command by name.
 
 **Function**: Configure and save key display appearance settings
 

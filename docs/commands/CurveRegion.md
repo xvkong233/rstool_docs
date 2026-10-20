@@ -1,10 +1,8 @@
-# CurveRegion
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="CurveRegion：GH 组件图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/CurveRegion_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> CurveRegion
 
 > 模块：GH组件 / Curve
 
 [← 返回命令目录](/commands/)
-
-![图标](../assets/gh-icons/CurveRegion_24.png)
 
 **功能**：分析平面曲线并生成封闭区域。
 

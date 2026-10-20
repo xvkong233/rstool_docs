@@ -1,4 +1,4 @@
-# rsDiagramArrowMatch · Match Diagram Arrow Style
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsDiagramArrowMatch: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/ea066256-b179-51fa-aba7-fe1b6a073877.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsDiagramArrowMatch · Match Diagram Arrow Style
 
 > Module: Views & Documentation / Annotation & Documentation
 

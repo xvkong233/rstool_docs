@@ -1,4 +1,4 @@
-# rsSelectHathByName · Select Hatches by Name
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsSelectHathByName: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/515e0231-8892-4927-8bd4-cb0ec265ac2b.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSelectHathByName · Select Hatches by Name
 
 > Module: Organization & Selection / Selection
 

@@ -1,4 +1,4 @@
-# rsMeshColorPaint · 网格笔刷
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsMeshColorPaint：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/84d75b11-4441-4ca5-8b32-43e4cf565936.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsMeshColorPaint · 网格笔刷
 
 > 模块：铺装表皮
 

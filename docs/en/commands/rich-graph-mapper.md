@@ -1,10 +1,8 @@
-# Rich Graph Mapper
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="Rich Graph Mapper: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/RichGraphMapper.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> Rich Graph Mapper
 
 > Module: Grasshopper Components / Util
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/RichGraphMapper.png)
 
 **Function**: Provides editable enhanced numerical mapping curves.
 

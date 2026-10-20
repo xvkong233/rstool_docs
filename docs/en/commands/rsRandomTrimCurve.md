@@ -1,4 +1,4 @@
-# rsRandomTrimCurve · Randomly trim curves
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsRandomTrimCurve: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/24b05cfe-cfa7-4c8e-a4cc-6a5f129d3078.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsRandomTrimCurve · Randomly trim curves
 
 > Module: Geometry / Curves
 

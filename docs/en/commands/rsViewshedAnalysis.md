@@ -1,4 +1,4 @@
-# rsViewshedAnalysis · Viewshed Analysis
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsViewshedAnalysis: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/314a3091-71ec-5e22-be6d-0c6f34a7bab2.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsViewshedAnalysis · Viewshed Analysis
 
 > Module: Analysis / Building Performance Analysis
 

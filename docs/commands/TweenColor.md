@@ -1,10 +1,8 @@
-# TweenColor
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="TweenColor：GH 组件图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/TweenColor_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> TweenColor
 
 > 模块：GH组件 / Color
 
 [← 返回命令目录](/commands/)
-
-![图标](../assets/gh-icons/TweenColor_24.png)
 
 **功能**：在两种颜色之间进行线性插值。
 

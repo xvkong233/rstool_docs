@@ -7,6 +7,7 @@ const os = require('node:os')
 const path = require('node:path')
 const { spawnSync } = require('node:child_process')
 const { normalizeIllustrations, sourceHash } = require('./i18n.cjs')
+const { getCommandIcon, renderCommandIcon } = require('./command_icons.cjs')
 
 const repoRoot = path.resolve(__dirname, '../..')
 const docsDir = path.join(repoRoot, 'docs')
@@ -36,6 +37,63 @@ function walkMarkdown(directory) {
 }
 
 const markdownFiles = walkMarkdown(docsDir)
+
+// Icons are rendered as inline HTML, so validate the manifest and every image
+// separately from the Markdown-only illustration checks below.
+{
+  const mappings = require('./command-icons.json').commands
+  const names = new Set(source.data.map((item) => item.name))
+  const counts = {}
+  for (const name of Object.keys(mappings)) {
+    if (!names.has(name)) fail(`孤儿图标映射: ${name}`)
+  }
+  for (const item of source.data) {
+    const icon = mappings[item.name]
+    if (!icon) {
+      fail(`缺少图标映射: ${item.name}`)
+      continue
+    }
+    counts[icon.kind] = (counts[icon.kind] || 0) + 1
+    if (
+      !['toolbar', 'toolbar-right', 'grasshopper', 'unavailable'].includes(
+        icon.kind
+      )
+    )
+      fail(`图标类型无效: ${item.name}`)
+    if (icon.kind === 'unavailable') {
+      if (icon.light || icon.dark)
+        fail(`无工具栏图标的命令不应配假图: ${item.name}`)
+      continue
+    }
+    if (!icon.light) fail(`缺少浅色图标: ${item.name}`)
+    for (const target of [icon.light, icon.dark].filter(Boolean)) {
+      if (!/^\/command-icons\/(light|dark|gh)\/[\w-]+\.png$/.test(target)) {
+        fail(`图标路径无效: ${item.name} -> ${target}`)
+        continue
+      }
+      const absolute = path.join(docsDir, 'public', target)
+      if (!fs.existsSync(absolute)) fail(`缺图标: ${item.name} -> ${target}`)
+    }
+    if (icon.kind.startsWith('toolbar')) {
+      if (!icon.source || !icon.iconGuid || !icon.buttonGuid || !icon.macroGuid)
+        fail(`图标来源记录不完整: ${item.name}`)
+    }
+    if (icon.kind === 'toolbar-right') {
+      const button = source.data.find(
+        (entry) =>
+          entry.name.toLowerCase() === icon.buttonCommand?.toLowerCase()
+      )
+      if (!button || getCommandIcon(button.name).light !== icon.light)
+        fail(`右键命令与按钮图标不一致: ${item.name}`)
+    }
+    for (const locale of ['zh', 'en']) {
+      const html = renderCommandIcon(item.name, { locale })
+      if (locale === 'en' && /[\u3400-\u9fff]/.test(html))
+        fail(`英文图标提示仍含中文: ${item.name}`)
+    }
+  }
+  console.log(`ok 图标映射 ${names.size} 条: ${JSON.stringify(counts)}`)
+}
 
 // 1. 本地图片引用完整性。先尝试完整目标，以兼容未用尖括号包裹的空格路径。
 {

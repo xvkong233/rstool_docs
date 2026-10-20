@@ -1,10 +1,8 @@
-# CreaseVertex
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="CreaseVertex：GH 组件图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/CreaseVertex_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> CreaseVertex
 
 > 模块：GH组件 / SubD
 
 [← 返回命令目录](/commands/)
-
-![图标](../assets/gh-icons/CreaseVertex_24.png)
 
 **功能**：将指定的 SubD 顶点设置为锐角顶点。
 

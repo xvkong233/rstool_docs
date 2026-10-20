@@ -1,4 +1,4 @@
-# rsPdfTools · PDF 工具
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsPdfTools：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/c93a0331-2dd5-54df-8c4b-6df858a173d7.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsPdfTools · PDF 工具
 
 > 模块：效率工具 / 生产力
 

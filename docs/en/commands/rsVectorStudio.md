@@ -1,4 +1,4 @@
-# rsVectorStudio · Vector Studio
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsVectorStudio: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/55cf292a-7bc5-570f-9381-cb7b5eed873b.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsVectorStudio · Vector Studio
 
 > Module: Productivity / Productivity
 

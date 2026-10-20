@@ -1,10 +1,8 @@
-# ViewCaptureToFile
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="ViewCaptureToFile: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/ViewCaptrueToFile_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> ViewCaptureToFile
 
 > Module: Grasshopper Components / Util
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/ViewCaptrueToFile_24.png)
 
 **Function**: Captures the current Rhino viewport from Grasshopper and saves it to a specified path.
 

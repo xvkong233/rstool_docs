@@ -1,10 +1,8 @@
-# RhinoRandomSelect
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="RhinoRandomSelect：GH 组件图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/RhinoRandomUnselect_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> RhinoRandomSelect
 
 > 模块：GH组件 / Util
 
 [← 返回命令目录](/commands/)
-
-![图标](../assets/gh-icons/RhinoRandomUnselect_24.png)
 
 **功能**：按指定比例随机选择 Rhino 文档对象。
 

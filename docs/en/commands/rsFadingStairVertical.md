@@ -1,4 +1,4 @@
-# rsFadingStairVertical · Vertical Tapered Staircase
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsFadingStairVertical: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/a6ce9911-4b49-4eb2-bc72-97a2652181ca.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsFadingStairVertical · Vertical Tapered Staircase
 
 > Module: Architecture / Stairs & Ramps
 

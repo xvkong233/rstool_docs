@@ -1,4 +1,4 @@
-# rsMoveAlongNormal · Move Along Normal
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsMoveAlongNormal: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/3a849ec0-ff05-4fd0-b292-b796f75db64f.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/3a849ec0-ff05-4fd0-b292-b796f75db64f.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsMoveAlongNormal · Move Along Normal
 
 > Module: SubD Tools / Editing Tools
 

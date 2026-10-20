@@ -1,4 +1,4 @@
-# rsConvertWallToNormalBrep · 转换墙体为普通Brep
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsConvertWallToNormalBrep：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/6a0dac4a-f392-4cf4-8550-7748362c7a39.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsConvertWallToNormalBrep · 转换墙体为普通Brep
 
 > 模块：建筑 / 三维墙体
 

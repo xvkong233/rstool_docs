@@ -1,4 +1,4 @@
-# rsDiscreteCity · Discrete City
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsDiscreteCity: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/4ad82529-de9f-584b-a57a-6707c96e66c2.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsDiscreteCity · Discrete City
 
 > Module: Architecture / Building Elements
 

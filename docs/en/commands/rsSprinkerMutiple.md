@@ -1,4 +1,4 @@
-# rsSprinkerMutiple · Multi-Point Scatter
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsSprinkerMutiple: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/8043f71b-48e8-494a-8a8f-0b7f89e54c74.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSprinkerMutiple · Multi-Point Scatter
 
 > Module: Geometry / Object Transforms
 

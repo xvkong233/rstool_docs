@@ -1,4 +1,4 @@
-# rsZigZagRamp · Zigzag ramp
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsZigZagRamp: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/50c520bd-1aa2-437b-9cca-bbb04f0107b9.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsZigZagRamp · Zigzag ramp
 
 > Module: Architecture / Stairs & Ramps
 

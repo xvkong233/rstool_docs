@@ -1,4 +1,4 @@
-# rsQuickMeasure · 快捷测量
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsQuickMeasure：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/4f1c8824-e8dd-5742-8f76-fc5277d93608.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsQuickMeasure · 快捷测量
 
 > 模块：视图出图 / 标注出图
 

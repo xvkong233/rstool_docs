@@ -1,8 +1,10 @@
-# rsVectorStudioSyncCanvas · 同步矢量画板范围
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--missing" title="当前工具栏中无对应图标" aria-hidden="true"></span> rsVectorStudioSyncCanvas · 同步矢量画板范围
 
 > 模块：视图出图 / 标注出图
 
 [← 返回命令目录](/commands/)
+
+> 当前工具栏中没有此命令的对应图标。横线仅表示暂无图标，不是实际按钮；请通过命令行调用。
 
 **功能**：把矢量工作室当前画板的范围和比例定位到 Rhino，方便两边按同一个画幅继续作图。
 

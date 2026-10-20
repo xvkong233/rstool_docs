@@ -1,10 +1,8 @@
-# LockGroupByName
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="LockGroupByName：GH 组件图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/LockGroupByName_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> LockGroupByName
 
 > 模块：GH组件 / Animation
 
 [← 返回命令目录](/commands/)
-
-![图标](../assets/gh-icons/LockGroupByName_24.png)
 
 **功能**：根据名称锁定或解锁 Grasshopper 分组中的对象。
 

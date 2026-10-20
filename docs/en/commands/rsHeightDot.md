@@ -1,4 +1,4 @@
-# rsHeightDot · Elevation Marker
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsHeightDot: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/4aec62bb-26b5-4079-bdae-f32cb06de2f8.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsHeightDot · Elevation Marker
 
 > Module: Views & Documentation / Annotation & Documentation
 

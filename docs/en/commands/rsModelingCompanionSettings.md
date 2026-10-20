@@ -1,8 +1,10 @@
-# rsModelingCompanionSettings · Modeling companion settings
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--missing" title="No icon in the current toolbar" aria-hidden="true"></span> rsModelingCompanionSettings · Modeling companion settings
 
 > Module: Productivity / Productivity
 
 [← Back to command index](/en/commands/)
+
+> The current toolbar has no icon for this command. The dash is a placeholder, not a toolbar icon; run the command by name.
 
 **Function**: Open the modeling companion settings window
 

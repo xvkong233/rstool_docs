@@ -1,4 +1,4 @@
-# rsGradientSelcectByCrv · 按曲线渐变选择
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsGradientSelcectByCrv：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/130222e6-20fa-4d4c-bb62-c7ae4e7d2fc3.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsGradientSelcectByCrv · 按曲线渐变选择
 
 > 模块：组织与选择 / 选择
 

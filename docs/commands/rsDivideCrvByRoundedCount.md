@@ -1,4 +1,4 @@
-# rsDivideCrvByRoundedCount · 按圆整数量分割曲线
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsDivideCrvByRoundedCount：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/288a83f1-eaf9-4dc2-973e-d4ff16e768ef.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsDivideCrvByRoundedCount · 按圆整数量分割曲线
 
 > 模块：几何 / 点
 

@@ -1,4 +1,4 @@
-# rsEmbedLinkedBlocks · 外链图块转嵌入
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsEmbedLinkedBlocks：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/de68caa9-95de-55db-a146-6386933a941b.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsEmbedLinkedBlocks · 外链图块转嵌入
 
 > 模块：辅助工具 / 块操作
 

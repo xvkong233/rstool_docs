@@ -1,4 +1,4 @@
-# rsTileMeshBlendByBitmap · Blend Mesh Panels by Bitmap
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsTileMeshBlendByBitmap: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/0a2f78ca-a146-4ed1-89c4-acf5a5e2c437.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsTileMeshBlendByBitmap · Blend Mesh Panels by Bitmap
 
 > Module: Paneling & Facades
 

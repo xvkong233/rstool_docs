@@ -1,4 +1,4 @@
-# rsStair2D · 2D stairs
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsStair2D: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/d50f511b-bafd-4929-985b-c72f8c177ed4.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsStair2D · 2D stairs
 
 > Module: 2D Architecture / Other 2D Tools
 

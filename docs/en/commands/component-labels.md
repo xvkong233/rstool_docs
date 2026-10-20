@@ -1,10 +1,8 @@
-# Component Labels
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="Component Labels: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/ComponentLabels_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> Component Labels
 
 > Module: Grasshopper Components / Util
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/ComponentLabels_24.png)
 
 **Function**: Displays floating name labels next to Grasshopper components and supports exception configuration.
 

@@ -1,4 +1,4 @@
-# rsEmbedLinkedBlocks · Embed Linked Blocks
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsEmbedLinkedBlocks: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/de68caa9-95de-55db-a146-6386933a941b.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsEmbedLinkedBlocks · Embed Linked Blocks
 
 > Module: Utilities / Block Operations
 

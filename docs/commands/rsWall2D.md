@@ -1,4 +1,4 @@
-# rsWall2D · 二维墙体
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsWall2D：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/c9c049b6-e51b-430c-ae72-d3ff435f3c14.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsWall2D · 二维墙体
 
 > 模块：二维建筑 / 轴网与墙体
 

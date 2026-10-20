@@ -1,4 +1,4 @@
-# rsSendToCAD · Send Model to AutoCAD
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsSendToCAD: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/85237897-e500-54bb-85ae-7c4b3a80d8ff.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSendToCAD · Send Model to AutoCAD
 
 > Module: Utilities / Import & Export
 

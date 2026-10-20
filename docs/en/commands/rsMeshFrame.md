@@ -1,4 +1,4 @@
-# rsMeshFrame · Mesh Frame
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsMeshFrame: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/771dfd3a-2d24-4b15-921a-117c32568627.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsMeshFrame · Mesh Frame
 
 > Module: Geometry / Meshes
 

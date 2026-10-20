@@ -1,8 +1,10 @@
-# rsDynamicComponentSelfTest · Dynamic component self-test
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--missing" title="No icon in the current toolbar" aria-hidden="true"></span> rsDynamicComponentSelfTest · Dynamic component self-test
 
 > Module: Dynamic Components / Maintenance
 
 [← Back to command index](/en/commands/)
+
+> The current toolbar has no icon for this command. The dash is a placeholder, not a toolbar icon; run the command by name.
 
 **Function**: The command line outputs the self-test results one by one, and gives "Dynamic component Rhino self-test: N/M passed"; if all passes, Success is returned, otherwise Failure.
 

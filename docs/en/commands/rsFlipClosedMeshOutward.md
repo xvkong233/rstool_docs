@@ -1,4 +1,4 @@
-# rsFlipClosedMeshOutward · Flip Closed Mesh Outward
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsFlipClosedMeshOutward: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/7624060b-b033-4a46-a2ab-8b83f7d49f33.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsFlipClosedMeshOutward · Flip Closed Mesh Outward
 
 > Module: Geometry / Meshes
 

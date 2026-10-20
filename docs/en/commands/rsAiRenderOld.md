@@ -1,8 +1,10 @@
-# rsAiRenderOld · Legacy AI rendering
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsAiRenderOld: right-click the rsAiRender button" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/8fa021d9-e321-4ae1-b218-205fa2451c7d.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsAiRenderOld · Legacy AI rendering
 
 > Module: AI / Rendering & Modeling
 
 [← Back to command index](/en/commands/)
+
+> Right-click the [rsAiRender](./rsAiRender) toolbar button to run this command. The two commands share the visible button icon.
 
 **Function**: Old version: Generate AI renderings based on viewport/reference images (WinForms implementation), which can be saved locally
 

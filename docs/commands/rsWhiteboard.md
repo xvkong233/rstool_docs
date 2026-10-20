@@ -1,4 +1,4 @@
-# rsWhiteboard · 白板
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsWhiteboard：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/e9ced1e3-617c-5365-b83c-5dcd7bc4eb2c.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsWhiteboard · 白板
 
 > 模块：效率工具 / 生产力
 

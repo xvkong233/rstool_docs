@@ -1,4 +1,4 @@
-# rsPointDim · Point Dimension
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsPointDim: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/a7d518ac-db32-5867-ae69-b77f75530fbf.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsPointDim · Point Dimension
 
 > Module: Views & Documentation / Annotation & Documentation
 

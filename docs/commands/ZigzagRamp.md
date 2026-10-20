@@ -1,10 +1,8 @@
-# ZigzagRamp
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="ZigzagRamp：GH 组件图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/ZigzagRamp_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> ZigzagRamp
 
 > 模块：GH组件 / Architecture
 
 [← 返回命令目录](/commands/)
-
-![图标](../assets/gh-icons/ZigzagRamp_24.png)
 
 **功能**：根据多重直线或折线路径创建折返坡道。
 

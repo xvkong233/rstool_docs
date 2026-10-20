@@ -1,4 +1,4 @@
-# rsCleanUpOverlappingCurves · Clean up overlapping curves
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsCleanUpOverlappingCurves: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/d939a2e5-abc9-4f7f-be25-0e47cbcf7d88.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsCleanUpOverlappingCurves · Clean up overlapping curves
 
 > Module: Geometry / Curves
 

@@ -1,10 +1,8 @@
-# TweenColor
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="TweenColor: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/TweenColor_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> TweenColor
 
 > Module: Grasshopper Components / Color
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/TweenColor_24.png)
 
 **Function**: Linearly interpolates between two colors.
 

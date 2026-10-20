@@ -1,4 +1,4 @@
-# rsDetachDynamicComponent · Separate dynamic components
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsDetachDynamicComponent: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/9a77948f-ddf1-5f09-a4d2-932043d82c0f.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsDetachDynamicComponent · Separate dynamic components
 
 > Module: Dynamic Components / Assembly
 

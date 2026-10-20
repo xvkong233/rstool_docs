@@ -1,4 +1,4 @@
-# rsDiagramArrowMatch · 分析箭头样式匹配
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsDiagramArrowMatch：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/ea066256-b179-51fa-aba7-fe1b6a073877.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsDiagramArrowMatch · 分析箭头样式匹配
 
 > 模块：视图出图 / 标注出图
 

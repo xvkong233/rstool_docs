@@ -1,4 +1,4 @@
-# rsPickMaterial · 拾取材质
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsPickMaterial：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/20196af7-70f7-4f8e-98af-fd3816a9c209.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsPickMaterial · 拾取材质
 
 > 模块：组织与选择 / 材质辅助
 

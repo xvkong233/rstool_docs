@@ -1,4 +1,4 @@
-# rsDoubleFlightStairs · 双跑楼梯
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsDoubleFlightStairs：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/693db912-4a2b-4e95-b462-8ca2e3a6139d.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsDoubleFlightStairs · 双跑楼梯
 
 > 模块：建筑 / 楼梯与坡道
 

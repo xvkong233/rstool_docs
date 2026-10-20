@@ -1,4 +1,4 @@
-# rsScreenPin · Screenshot floating window
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsScreenPin: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/fffe7a99-e923-5024-ac3e-b48f3edd7225.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsScreenPin · Screenshot floating window
 
 > Module: Productivity / Screen Tools
 

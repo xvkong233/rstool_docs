@@ -1,4 +1,4 @@
-# rsMeshRelax · Uniform Mesh Relaxation
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsMeshRelax: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/9cc2c6ce-db50-459b-8672-9422d77177ef.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsMeshRelax · Uniform Mesh Relaxation
 
 > Module: Physics Simulation / Form Finding & Relaxation
 

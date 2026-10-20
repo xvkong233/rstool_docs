@@ -1,4 +1,4 @@
-# rsDoor · 门
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsDoor：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/79bb62c2-0b09-4cac-bd18-52152652f169.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsDoor · 门
 
 > 模块：建筑 / 建筑构件
 

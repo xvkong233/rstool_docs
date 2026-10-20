@@ -1,8 +1,10 @@
-# rsEarthOld · Legacy Terrain Downloader
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--missing" title="No icon in the current toolbar" aria-hidden="true"></span> rsEarthOld · Legacy Terrain Downloader
 
 > Module: Terrain / Acquisition & Editing
 
 [← Back to command index](/en/commands/)
+
+> The current toolbar has no icon for this command. The dash is a placeholder, not a toolbar icon; run the command by name.
 
 **Function**: Write the terrain mesh and its texture obtained by box selection into the current document
 

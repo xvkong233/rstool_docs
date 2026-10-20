@@ -1,4 +1,4 @@
-# rsWall2D · 2D wall
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsWall2D: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/c9c049b6-e51b-430c-ae72-d3ff435f3c14.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsWall2D · 2D wall
 
 > Module: 2D Architecture / Grids & Walls
 

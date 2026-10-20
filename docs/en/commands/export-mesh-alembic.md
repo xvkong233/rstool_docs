@@ -1,10 +1,8 @@
-# Export Mesh Alembic
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="Export Mesh Alembic: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/ExportMeshAlembic_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> Export Mesh Alembic
 
 > Module: Grasshopper Components / Animation
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/ExportMeshAlembic_24.png)
 
 **Function**: Success (whether the latest one was successful)/File Path (actual absolute path)/Progress (0~1, Path and Progress share the P name)/Frames Written (number of frames written)/Message (bilingual status, warning or error message in Chinese and English)
 

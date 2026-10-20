@@ -1,8 +1,10 @@
-# rsCadReceivePending · 手动接收 CAD 待传批次
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--missing" title="当前工具栏中无对应图标" aria-hidden="true"></span> rsCadReceivePending · 手动接收 CAD 待传批次
 
 > 模块：辅助工具 / 导入导出
 
 [← 返回命令目录](/commands/)
+
+> 当前工具栏中没有此命令的对应图标。横线仅表示暂无图标，不是实际按钮；请通过命令行调用。
 
 **功能**：在 Rhino 中手动检查 CAD 已发送的待接收批次，将其导入当前文档。
 

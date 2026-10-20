@@ -1,4 +1,4 @@
-# rsEditOpening2D · Edit 2D Opening
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsEditOpening2D: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/7bf4e081-d3af-539d-a9ca-7ae644a76e75.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsEditOpening2D · Edit 2D Opening
 
 > Module: 2D Architecture / Doors, Windows & Elevators
 

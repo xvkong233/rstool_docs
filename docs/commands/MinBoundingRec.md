@@ -1,10 +1,8 @@
-# MinBoundingRec
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="MinBoundingRec：GH 组件图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/MinBoundingRec_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> MinBoundingRec
 
 > 模块：GH组件 / Curve
 
 [← 返回命令目录](/commands/)
-
-![图标](../assets/gh-icons/MinBoundingRec_24.png)
 
 **功能**：计算几何对象的最小包围矩形。
 

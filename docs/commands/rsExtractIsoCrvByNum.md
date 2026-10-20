@@ -1,4 +1,4 @@
-# rsExtractIsoCrvByNum · 按数量提取等参线
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsExtractIsoCrvByNum：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/dfd45615-0f44-4720-b672-b5fc02b8a5fc.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsExtractIsoCrvByNum · 按数量提取等参线
 
 > 模块：几何 / 曲线
 

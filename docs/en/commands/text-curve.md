@@ -1,10 +1,8 @@
-# Text curve
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="Text curve: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/TextCurve_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> Text curve
 
 > Module: Grasshopper Components / Curve
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/TextCurve_24.png)
 
 **Function**: Create text outline curves based on text content and font.
 

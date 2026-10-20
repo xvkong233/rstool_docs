@@ -1,4 +1,4 @@
-# rsConvertA2DToNormalCurves · 二维转普通线条
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsConvertA2DToNormalCurves：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/f3ccbe37-19c8-46e6-bfa3-77790be5a036.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsConvertA2DToNormalCurves · 二维转普通线条
 
 > 模块：二维建筑 / 其他二维
 

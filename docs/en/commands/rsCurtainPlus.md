@@ -1,4 +1,4 @@
-# rsCurtainPlus · Enhanced Curtain Wall
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsCurtainPlus: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/fd5ab500-217d-5e5b-a0ee-60047a65cbf9.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsCurtainPlus · Enhanced Curtain Wall
 
 > Module: Architecture / Building Elements
 

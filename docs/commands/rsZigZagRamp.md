@@ -1,4 +1,4 @@
-# rsZigZagRamp · 折线坡道
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsZigZagRamp：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/50c520bd-1aa2-437b-9cca-bbb04f0107b9.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsZigZagRamp · 折线坡道
 
 > 模块：建筑 / 楼梯与坡道
 

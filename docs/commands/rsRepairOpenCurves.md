@@ -1,4 +1,4 @@
-# rsRepairOpenCurves · 修复开放曲线
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsRepairOpenCurves：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/7bf011ab-786a-4a39-9d5d-1abeedce69f7.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsRepairOpenCurves · 修复开放曲线
 
 > 模块：几何 / 曲线
 

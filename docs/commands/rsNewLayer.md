@@ -1,4 +1,4 @@
-# rsNewLayer · 新建图层
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsNewLayer：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/ca1502b2-08dc-4640-95ec-03b4a4df0462.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsNewLayer · 新建图层
 
 > 模块：组织与选择 / 图层
 

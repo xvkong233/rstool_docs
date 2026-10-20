@@ -1,4 +1,4 @@
-# rsSlab · 参数楼板
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsSlab：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/8ac423d0-d56d-5409-ad5b-e4a7bc0148c4.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSlab · 参数楼板
 
 > 模块：建筑 / 建筑构件
 

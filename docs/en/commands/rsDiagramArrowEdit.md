@@ -1,4 +1,4 @@
-# rsDiagramArrowEdit · Edit Diagram Arrow
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsDiagramArrowEdit: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/761e3f20-7ce1-53d2-abe0-208977afd9dc.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsDiagramArrowEdit · Edit Diagram Arrow
 
 > Module: Views & Documentation / Annotation & Documentation
 

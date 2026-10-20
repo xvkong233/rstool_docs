@@ -1,4 +1,4 @@
-# rsDoor2D · 2D Door
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsDoor2D: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/b891cbb7-0f98-4abb-805a-c8fdda2a69fa.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsDoor2D · 2D Door
 
 > Module: 2D Architecture / Doors, Windows & Elevators
 

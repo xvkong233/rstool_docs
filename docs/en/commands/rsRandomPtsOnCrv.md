@@ -1,8 +1,10 @@
-# rsRandomPtsOnCrv · Random point on curve
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsRandomPtsOnCrv: right-click the rsDivideCrvByRoundedCount button" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/288a83f1-eaf9-4dc2-973e-d4ff16e768ef.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsRandomPtsOnCrv · Random point on curve
 
 > Module: Geometry / Points
 
 [← Back to command index](/en/commands/)
+
+> Right-click the [rsDivideCrvByRoundedCount](./rsDivideCrvByRoundedCount) toolbar button to run this command. The two commands share the visible button icon.
 
 **Function**: Generates a specified number of random points with a specified distribution pattern on the selected curve (removing too close points)
 

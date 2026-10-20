@@ -1,4 +1,4 @@
-# rsCopyOpening2D · Copy 2D Opening
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsCopyOpening2D: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/ba5f2af0-f80d-551c-8de3-db8ee4deb002.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsCopyOpening2D · Copy 2D Opening
 
 > Module: 2D Architecture / Doors, Windows & Elevators
 

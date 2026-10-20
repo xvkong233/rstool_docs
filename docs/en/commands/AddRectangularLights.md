@@ -1,10 +1,8 @@
-# AddRectangularLights
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="AddRectangularLights: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/AddRecLights_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> AddRectangularLights
 
 > Module: Grasshopper Components / Light
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/AddRecLights_24.png)
 
 **Function**: Batch add rectangular lights to Rhino documents based on input geometry.
 

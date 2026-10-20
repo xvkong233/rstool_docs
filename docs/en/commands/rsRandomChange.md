@@ -1,4 +1,4 @@
-# rsRandomChange · Random Transform
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsRandomChange: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/21970dd9-64fd-465c-9310-566eb96a9843.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsRandomChange · Random Transform
 
 > Module: Geometry / Object Transforms
 

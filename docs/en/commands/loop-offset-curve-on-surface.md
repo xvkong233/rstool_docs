@@ -1,10 +1,8 @@
-# Loop Offset Curve On Surface
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="Loop Offset Curve On Surface: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/LoopOffsetCrvOnSrf_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> Loop Offset Curve On Surface
 
 > Module: Grasshopper Components / Curve
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/LoopOffsetCrvOnSrf_24.png)
 
 **Function**: Continuously offset the curve on the surface, and continue with the next round of offset after each fitting and extension to the boundary.
 

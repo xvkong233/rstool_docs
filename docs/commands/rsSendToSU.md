@@ -1,4 +1,4 @@
-# rsSendToSU · 发送模型到SketchUp
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsSendToSU：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/5bb1d2fe-db19-5ebf-8a7b-61e233138a61.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSendToSU · 发送模型到SketchUp
 
 > 模块：辅助工具 / 导入导出
 

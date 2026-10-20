@@ -1,10 +1,8 @@
-# FilterTextAndNumbers
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="FilterTextAndNumbers：GH 组件图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/FilterTextAndNumbers_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> FilterTextAndNumbers
 
 > 模块：GH组件 / Text
 
 [← 返回命令目录](/commands/)
-
-![图标](../assets/gh-icons/FilterTextAndNumbers_24.png)
 
 **功能**：筛选并分离文字内容与数字内容。
 

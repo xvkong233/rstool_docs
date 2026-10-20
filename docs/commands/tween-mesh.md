@@ -1,10 +1,8 @@
-# Tween Mesh
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="Tween Mesh：GH 组件图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/TweenMesh_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> Tween Mesh
 
 > 模块：GH组件 / Mesh
 
 [← 返回命令目录](/commands/)
-
-![图标](../assets/gh-icons/TweenMesh_24.png)
 
 **功能**：在拓扑兼容的两张网格之间插值对应顶点，生成过渡网格。
 

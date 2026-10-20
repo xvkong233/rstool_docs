@@ -1,10 +1,8 @@
-# Unroller
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="Unroller: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/Unroll_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> Unroller
 
 > Module: Grasshopper Components / Surface
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/Unroll_24.png)
 
 **Function**: Unfold single or polysurfaces and output the corresponding unfolded geometry.
 

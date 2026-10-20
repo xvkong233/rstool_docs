@@ -1,4 +1,4 @@
-# rsUnlockAllLayers · Unlock All Layers
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsUnlockAllLayers: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/dcfdf417-d8a1-5284-a440-7b5c8280ee25.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsUnlockAllLayers · Unlock All Layers
 
 > Module: Organization & Selection / Layers
 

@@ -1,10 +1,8 @@
-# FitPolyline
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="FitPolyline: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/FitPolyline_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> FitPolyline
 
 > Module: Grasshopper Components / Curve
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/FitPolyline_24.png)
 
 **Function**: Fits an approximately smooth portion of a polyline to a curve.
 

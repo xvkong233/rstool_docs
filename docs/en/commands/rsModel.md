@@ -1,4 +1,4 @@
-# rsModel · Model library
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsModel: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/e1ce8160-0b74-4d42-8615-4c67815dfbf3.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsModel · Model library
 
 > Module: Libraries / Model Library
 

@@ -1,4 +1,4 @@
-# rsMaterial · 材质库
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsMaterial：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/1d9adb07-8e80-483d-b6eb-9b288bf76f5a.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsMaterial · 材质库
 
 > 模块：资源库 / 材质库
 

@@ -1,4 +1,4 @@
-# rsSmartPipe · Smart Pipes
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsSmartPipe: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/5a1f4e13-77f8-5a5a-8728-08ff359e34a6.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSmartPipe · Smart Pipes
 
 > Module: Architecture / Building Elements
 

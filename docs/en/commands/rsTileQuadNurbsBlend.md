@@ -1,4 +1,4 @@
-# rsTileQuadNurbsBlend · Blend Panels on Quad NURBS
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsTileQuadNurbsBlend: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/8762b5f2-2668-447c-9198-296d9e4e14e0.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsTileQuadNurbsBlend · Blend Panels on Quad NURBS
 
 > Module: Paneling & Facades
 

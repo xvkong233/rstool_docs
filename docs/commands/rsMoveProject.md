@@ -1,4 +1,4 @@
-# rsMoveProject · 工程移动
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsMoveProject：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/f5515c62-04b9-4281-b28e-b278ac475fab.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsMoveProject · 工程移动
 
 > 模块：几何 / 对象变换
 

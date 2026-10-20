@@ -1,4 +1,4 @@
-# rsExtractIsoCrvByNum · Extract isoparms by quantity
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsExtractIsoCrvByNum: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/dfd45615-0f44-4720-b672-b5fc02b8a5fc.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsExtractIsoCrvByNum · Extract isoparms by quantity
 
 > Module: Geometry / Curves
 

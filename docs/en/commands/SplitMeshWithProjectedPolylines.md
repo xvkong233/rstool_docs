@@ -1,10 +1,8 @@
-# SplitMeshWithProjectedPolylines
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="SplitMeshWithProjectedPolylines: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/SplitMeshWithProjectedPolylines_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> SplitMeshWithProjectedPolylines
 
 > Module: Grasshopper Components / Mesh
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/SplitMeshWithProjectedPolylines_24.png)
 
 **Function**: Split the mesh using polylines projected onto the mesh.
 

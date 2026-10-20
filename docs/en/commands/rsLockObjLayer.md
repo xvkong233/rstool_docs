@@ -1,4 +1,4 @@
-# rsLockObjLayer · Lock Selected Objects’ Layers
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsLockObjLayer: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/e3c9c5bd-3c11-5477-ac9d-83252f192ca6.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsLockObjLayer · Lock Selected Objects’ Layers
 
 > Module: Organization & Selection / Layers
 

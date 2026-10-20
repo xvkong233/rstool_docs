@@ -1,10 +1,8 @@
-# Linked C#
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="Linked C#：GH 组件图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/LinkedCSharp_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> Linked C#
 
 > 模块：GH组件 / Developer
 
 [← 返回命令目录](/commands/)
-
-![图标](../assets/gh-icons/LinkedCSharp_24.png)
 
 **功能**：在画布中执行外部 .cs 脚本求解；输入/输出端由 .cs 内 RegisterInputParams/RegisterOutputParams 注册定义，画布会自动同步显示
 

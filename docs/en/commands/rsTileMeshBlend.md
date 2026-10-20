@@ -1,4 +1,4 @@
-# rsTileMeshBlend · Blend Panels on Mesh
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsTileMeshBlend: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/0e9f226f-4cd6-4f23-ad81-33dc7697b492.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsTileMeshBlend · Blend Panels on Mesh
 
 > Module: Paneling & Facades
 

@@ -1,10 +1,8 @@
-# ExtendCrvOnSrf
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="ExtendCrvOnSrf: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/ExtendCrvOnSrf_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> ExtendCrvOnSrf
 
 > Module: Grasshopper Components / Curve
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/ExtendCrvOnSrf_24.png)
 
 **Function**: Extends the ends of the curve along the surface to the surface boundary.
 

@@ -1,4 +1,4 @@
-# rsStructuralAnalysis · Structural mechanics analysis
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsStructuralAnalysis: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/ff60fa7f-d857-5064-9783-b9137b23fd32.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsStructuralAnalysis · Structural mechanics analysis
 
 > Module: Analysis / Building Performance Analysis
 

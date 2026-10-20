@@ -1,4 +1,4 @@
-# rsSelectSubDEdgeDirection · Select Co-Directional SubD Edges
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsSelectSubDEdgeDirection: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/549c1c6b-507c-5601-ba16-a2b205480476.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSelectSubDEdgeDirection · Select Co-Directional SubD Edges
 
 > Module: SubD Tools / Editing Tools
 

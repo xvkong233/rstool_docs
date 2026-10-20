@@ -1,10 +1,8 @@
-# PolyCrv to Arc
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="PolyCrv to Arc：GH 组件图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/PolyCrvtoArc_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> PolyCrv to Arc
 
 > 模块：GH组件 / Curve
 
 [← 返回命令目录](/commands/)
-
-![图标](../assets/gh-icons/PolyCrvtoArc_24.png)
 
 **功能**：将多重曲线转换为圆弧或直线段。
 

@@ -1,4 +1,4 @@
-# rsSectionSweep · Section sweep
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsSectionSweep: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/53407132-d3b3-4559-9422-d8038ba1222c.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSectionSweep · Section sweep
 
 > Module: Geometry / Surfaces
 

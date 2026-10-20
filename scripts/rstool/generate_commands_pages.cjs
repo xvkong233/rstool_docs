@@ -7,6 +7,7 @@
 const fs = require('node:fs')
 const path = require('node:path')
 const { localizeCommand } = require('./i18n.cjs')
+const { renderCommandIcon, commandIconNote } = require('./command_icons.cjs')
 
 const SRC = path.join(__dirname, 'commands.json')
 const EN_SRC = path.join(__dirname, 'i18n/commands.en.json')
@@ -62,6 +63,8 @@ const labels = {
     videos: '教学视频',
     video: '视频',
     indexTitle: 'RsTool 命令参考',
+    iconGuide:
+      '图标与工具栏按钮对应；共用按钮的命令可查看页面内的右键说明。「—」表示当前工具栏没有对应图标。',
     indexIntro: (count, duplicates) =>
       `覆盖 RsTool 插件全部 ${count} 条命令${duplicates}，每条命令一个独立页面，含功能、调用方式、交互流程、参数表、输出、备注与教学视频。`,
     duplicateNote: (names) =>
@@ -106,6 +109,8 @@ const labels = {
     videos: 'Tutorial videos',
     video: 'Video',
     indexTitle: 'RsTool Command Reference',
+    iconGuide:
+      'Icons match toolbar buttons; shared-button commands include right-click instructions on their pages. A dash means no icon exists in the current toolbar.',
     indexIntro: (count, duplicates) =>
       `Complete reference for all ${count} RsTool commands${duplicates}. Each command has a dedicated page covering its purpose, invocation, workflow, parameters, output, notes, and tutorials.`,
     duplicateNote: (names) =>
@@ -150,7 +155,9 @@ function renderCommand(item, detail, locale) {
   const category = item.cat || text.uncategorized
   const subcategory = item.sub || ''
   const lines = []
-  lines.push(`# ${name !== displayName ? `${name} · ${displayName}` : name}`)
+  lines.push(
+    `# ${renderCommandIcon(name, { locale, context: 'heading' })} ${name !== displayName ? `${name} · ${displayName}` : name}`
+  )
   lines.push('')
   lines.push(
     `> ${text.module}${text.separator}${category}${subcategory ? ` / ${subcategory}` : ''}`
@@ -161,8 +168,9 @@ function renderCommand(item, detail, locale) {
   )
   lines.push('')
 
-  if (detail.icon) {
-    lines.push(`![${text.icon}](${fixAsset(esc(detail.icon), locale)})`)
+  const iconNote = commandIconNote(name, locale)
+  if (iconNote) {
+    lines.push(`> ${iconNote}`)
     lines.push('')
   }
 
@@ -343,6 +351,8 @@ function renderIndex(data, locale) {
     `# ${text.indexTitle}`,
     '',
     `> ${text.indexIntro(data.length, duplicateNote)}`,
+    '',
+    text.iconGuide,
     ''
   ]
 
@@ -359,7 +369,7 @@ function renderIndex(data, locale) {
       for (const item of items) {
         const desc = item.desc ? ` — ${esc(item.desc)}` : ''
         lines.push(
-          `- [${commandText(item)}](${prefix}${slug(item.name)})${desc}`
+          `- [${renderCommandIcon(item.name, { locale })} ${commandText(item)}](${prefix}${slug(item.name)})${desc}`
         )
       }
       lines.push('')

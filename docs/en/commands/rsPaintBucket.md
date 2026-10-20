@@ -1,4 +1,4 @@
-# rsPaintBucket · Paint Bucket
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsPaintBucket: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/976e0305-0134-5f44-b1f3-395aabdf2476.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsPaintBucket · Paint Bucket
 
 > Module: Organization & Selection / Material Tools
 

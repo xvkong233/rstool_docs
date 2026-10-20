@@ -1,10 +1,8 @@
-# Rich Graph Mapper
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="Rich Graph Mapper：GH 组件图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/RichGraphMapper.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> Rich Graph Mapper
 
 > 模块：GH组件 / Util
 
 [← 返回命令目录](/commands/)
-
-![图标](../assets/gh-icons/RichGraphMapper.png)
 
 **功能**：提供可编辑的增强型数值映射曲线。
 

@@ -1,10 +1,8 @@
-# PolyCrv to Arc
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="PolyCrv to Arc: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/PolyCrvtoArc_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> PolyCrv to Arc
 
 > Module: Grasshopper Components / Curve
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/PolyCrvtoArc_24.png)
 
 **Function**: Convert polycurves to arcs or straight line segments.
 

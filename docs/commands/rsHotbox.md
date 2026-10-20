@@ -1,4 +1,4 @@
-# rsHotbox · Hotbox 热盒
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsHotbox：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/4ebb1608-a541-538a-ac84-52fcdc735b3b.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsHotbox · Hotbox 热盒
 
 > 模块：辅助工具 / 系统工具
 

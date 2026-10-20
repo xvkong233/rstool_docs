@@ -1,4 +1,4 @@
-# rsWall · Smart wall
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsWall: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/69a10f7f-e037-437d-889f-55a053c0c4f7.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsWall · Smart wall
 
 > Module: Architecture / 3D Walls
 

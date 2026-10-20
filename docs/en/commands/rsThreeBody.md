@@ -1,4 +1,4 @@
-# rsThreeBody · Three-body motion simulation
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsThreeBody: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/15f41dd7-45c3-4763-8b89-c8776e7becb0.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsThreeBody · Three-body motion simulation
 
 > Module: Fun / Interactive Entertainment
 

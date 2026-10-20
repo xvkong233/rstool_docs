@@ -1,4 +1,4 @@
-# rsAssignRandomColorToLayer · 图层随机着色
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsAssignRandomColorToLayer：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/5f16386b-3bf2-40d4-ab3d-cc93e4e4eda7.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsAssignRandomColorToLayer · 图层随机着色
 
 > 模块：组织与选择 / 图层
 

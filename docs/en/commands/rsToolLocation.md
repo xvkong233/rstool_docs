@@ -1,4 +1,4 @@
-# rsToolLocation · Open the plugin directory
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsToolLocation: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/ef46df2d-03ba-5cca-b554-ed82a6cd9caa.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsToolLocation · Open the plugin directory
 
 > Module: Utilities / System Tools
 

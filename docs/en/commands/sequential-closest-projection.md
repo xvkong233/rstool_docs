@@ -1,10 +1,8 @@
-# Sequential Closest Projection
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="Sequential Closest Projection: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/SequentialClosestProjection_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> Sequential Closest Projection
 
 > Module: Grasshopper Components / Points
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/SequentialClosestProjection_24.png)
 
 **Function**: The starting point is projected to the nearest point of the curve list in sequence, and the projection can be continued after moving along the tangential direction of the current curve at fixed intervals.
 

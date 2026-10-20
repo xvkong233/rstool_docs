@@ -1,4 +1,4 @@
-# rsDeleteWall2D · Delete 2D wall
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsDeleteWall2D: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/63a0ee4a-feef-5027-bb07-6fb1e917adf4.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsDeleteWall2D · Delete 2D wall
 
 > Module: 2D Architecture / Grids & Walls
 

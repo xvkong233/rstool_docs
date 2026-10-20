@@ -1,4 +1,4 @@
-# rsModel · 模型库
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsModel：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/e1ce8160-0b74-4d42-8615-4c67815dfbf3.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsModel · 模型库
 
 > 模块：资源库 / 模型库
 

@@ -1,10 +1,8 @@
-# FontTable
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="FontTable: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/FontTable_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> FontTable
 
 > Module: Grasshopper Components / Text
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/FontTable_24.png)
 
 **Function**: Read the list of available fonts and distinguish between Chinese and Western fonts.
 

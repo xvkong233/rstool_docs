@@ -1,4 +1,4 @@
-# rsPurgeDynamicComponentCache · Purge Dynamic Component Cache
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsPurgeDynamicComponentCache: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/cf88996d-7a25-573c-a362-67601f00a6e2.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsPurgeDynamicComponentCache · Purge Dynamic Component Cache
 
 > Module: Dynamic Components / Maintenance
 

@@ -1,10 +1,8 @@
-# PolylineMaxDistance
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="PolylineMaxDistance: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/PolylineMaxDistance_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> PolylineMaxDistance
 
 > Module: Grasshopper Components / Curve
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/PolylineMaxDistance_24.png)
 
 **Function**: Finds the two furthest vertices in a polyline and creates a connection.
 

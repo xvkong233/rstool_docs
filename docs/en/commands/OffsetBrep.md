@@ -1,10 +1,8 @@
-# OffsetBrep
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="OffsetBrep: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/OffsetBrep_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> OffsetBrep
 
 > Module: Grasshopper Components / Surface
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/OffsetBrep_24.png)
 
 **Function**: Offset Breps or polysurfaces and produce solid results.
 

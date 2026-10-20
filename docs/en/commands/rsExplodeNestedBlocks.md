@@ -1,4 +1,4 @@
-# rsExplodeNestedBlocks · Explode nested blocks
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsExplodeNestedBlocks: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/0f1a1755-2b37-412a-8dc8-7b7e75aa24a4.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsExplodeNestedBlocks · Explode nested blocks
 
 > Module: Utilities / Block Operations
 

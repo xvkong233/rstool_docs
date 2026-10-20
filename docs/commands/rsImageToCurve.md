@@ -1,4 +1,4 @@
-# rsImageToCurve · 图片转曲线
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsImageToCurve：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/617dd873-1250-43a8-9721-cf9fe4d3660b.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsImageToCurve · 图片转曲线
 
 > 模块：几何 / 曲线
 

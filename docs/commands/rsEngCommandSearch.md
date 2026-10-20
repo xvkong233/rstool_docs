@@ -1,4 +1,4 @@
-# rsEngCommandSearch · 英文命令搜索
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsEngCommandSearch：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/af9345e8-be49-5287-9642-9e5c1b3e1849.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsEngCommandSearch · 英文命令搜索
 
 > 模块：辅助工具 / 系统工具
 

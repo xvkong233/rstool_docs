@@ -1,10 +1,8 @@
-# OffsetCrvOnSrfThroughPt
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="OffsetCrvOnSrfThroughPt: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/OffsetCrvOnSrfThoughtPt_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> OffsetCrvOnSrfThroughPt
 
 > Module: Grasshopper Components / Curve
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/OffsetCrvOnSrfThoughtPt_24.png)
 
 **Function**: Offsets a curve on a surface and passes the result through specified points.
 

@@ -1,10 +1,8 @@
-# Export Mesh Alembic
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="Export Mesh Alembic：GH 组件图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/ExportMeshAlembic_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> Export Mesh Alembic
 
 > 模块：GH组件 / Animation
 
 [← 返回命令目录](/commands/)
-
-![图标](../assets/gh-icons/ExportMeshAlembic_24.png)
 
 **功能**：Success（最近一次是否成功）/ File Path（实际绝对路径）/ Progress（0~1，Path 与 Progress 复用 P 名）/ Frames Written（已写入帧数）/ Message（中英双语状态、警告或错误信息）
 

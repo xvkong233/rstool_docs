@@ -1,4 +1,4 @@
-# rsTileQuadNurbsBlend · 四边 NURBS 铺装混接
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsTileQuadNurbsBlend：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/8762b5f2-2668-447c-9198-296d9e4e14e0.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsTileQuadNurbsBlend · 四边 NURBS 铺装混接
 
 > 模块：铺装表皮
 

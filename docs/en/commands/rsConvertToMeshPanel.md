@@ -1,4 +1,4 @@
-# rsConvertToMeshPanel · NURBS unit to Mesh unit
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsConvertToMeshPanel: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/cbf652dd-6337-437c-99c7-70f5819fc630.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsConvertToMeshPanel · NURBS unit to Mesh unit
 
 > Module: Geometry / Meshes
 

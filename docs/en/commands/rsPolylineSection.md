@@ -1,4 +1,4 @@
-# rsPolylineSection · Polyline section
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsPolylineSection: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/74620dcc-4d04-56cb-a8cf-242af0bf5850.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsPolylineSection · Polyline section
 
 > Module: Views & Documentation / Annotation & Documentation
 

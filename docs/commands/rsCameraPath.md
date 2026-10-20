@@ -1,4 +1,4 @@
-# rsCameraPath · 相机路径
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsCameraPath：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/1bbbb943-f354-4682-a0db-85e6956ab023.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsCameraPath · 相机路径
 
 > 模块：视图出图 / 视图相机
 

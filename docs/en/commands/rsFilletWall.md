@@ -1,4 +1,4 @@
-# rsFilletWall · Fillet Wall Corners
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsFilletWall: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/05ced16b-d2f6-4569-a356-53ecfe1161eb.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsFilletWall · Fillet Wall Corners
 
 > Module: Architecture / 3D Walls
 

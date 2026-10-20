@@ -1,4 +1,4 @@
-# rsHatchPlanarSurfaces · Hatch Planar Surfaces
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsHatchPlanarSurfaces: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/02495ef7-dcec-44c5-859a-01cf611b5a82.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsHatchPlanarSurfaces · Hatch Planar Surfaces
 
 > Module: Views & Documentation / Annotation & Documentation
 

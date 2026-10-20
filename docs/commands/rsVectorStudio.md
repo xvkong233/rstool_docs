@@ -1,4 +1,4 @@
-# rsVectorStudio · 矢量工作室
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsVectorStudio：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/55cf292a-7bc5-570f-9381-cb7b5eed873b.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsVectorStudio · 矢量工作室
 
 > 模块：效率工具 / 生产力
 

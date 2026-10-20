@@ -1,8 +1,10 @@
-# rsEarthOld · 旧版下载地形
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--missing" title="当前工具栏中无对应图标" aria-hidden="true"></span> rsEarthOld · 旧版下载地形
 
 > 模块：地形 / 获取与编辑
 
 [← 返回命令目录](/commands/)
+
+> 当前工具栏中没有此命令的对应图标。横线仅表示暂无图标，不是实际按钮；请通过命令行调用。
 
 **功能**：将框选下载得到的地形网格及其贴图写入当前文档
 

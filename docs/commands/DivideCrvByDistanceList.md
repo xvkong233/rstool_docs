@@ -1,10 +1,8 @@
-# DivideCrvByDistanceList
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="DivideCrvByDistanceList：GH 组件图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/DivideCrvByDistanceList_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> DivideCrvByDistanceList
 
 > 模块：GH组件 / Curve
 
 [← 返回命令目录](/commands/)
-
-![图标](../assets/gh-icons/DivideCrvByDistanceList_24.png)
 
 **功能**：按照给定的距离列表依次获取曲线上的分点。
 

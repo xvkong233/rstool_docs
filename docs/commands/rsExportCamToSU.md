@@ -1,8 +1,10 @@
-# rsExportCamToSU · 导出相机到 SketchUp
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsExportCamToSU：右键点击 rsImportCamFromSU 按钮" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/e98fe49c-34c1-43b2-87f5-bbf99c6b96e3.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsExportCamToSU · 导出相机到 SketchUp
 
 > 模块：视图出图 / 视图相机
 
 [← 返回命令目录](/commands/)
+
+> 右键点击工具栏中的 [rsImportCamFromSU](./rsImportCamFromSU) 按钮可运行本命令；这里显示的是它们共用的按钮图标。
 
 **功能**：复制当前相机参数 JSON 到剪贴板 (mode/eye/target/up/fov/viewHeight)
 

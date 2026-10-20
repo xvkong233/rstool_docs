@@ -1,4 +1,4 @@
-# rsWindAnalysis · 风环境分析
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsWindAnalysis：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/bab8cfab-9f8d-4f1e-9ec8-87086d663716.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsWindAnalysis · 风环境分析
 
 > 模块：分析 / 建筑物理分析
 

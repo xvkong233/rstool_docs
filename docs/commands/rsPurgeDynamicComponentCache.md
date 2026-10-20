@@ -1,4 +1,4 @@
-# rsPurgeDynamicComponentCache · 清理动态组件缓存
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsPurgeDynamicComponentCache：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/cf88996d-7a25-573c-a362-67601f00a6e2.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsPurgeDynamicComponentCache · 清理动态组件缓存
 
 > 模块：动态组件 / 维护
 

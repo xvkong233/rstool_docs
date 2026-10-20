@@ -1,4 +1,4 @@
-# rsAcousticAnalysis · Indoor Acoustic Analysis
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsAcousticAnalysis: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/a5ae95aa-0383-53e6-bc96-f7f4e999d1b8.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsAcousticAnalysis · Indoor Acoustic Analysis
 
 > Module: Analysis / Building Performance Analysis
 

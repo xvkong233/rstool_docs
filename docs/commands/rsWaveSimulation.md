@@ -1,4 +1,4 @@
-# rsWaveSimulation · 水面波浪与涟漪
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsWaveSimulation：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/33e38c7b-40f6-5eec-a753-de0393493802.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsWaveSimulation · 水面波浪与涟漪
 
 > 模块：物理模拟 / 动力学
 

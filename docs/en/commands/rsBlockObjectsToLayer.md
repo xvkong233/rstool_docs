@@ -1,4 +1,4 @@
-# rsBlockObjectsToLayer · Move Block Hierarchy to Layers
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsBlockObjectsToLayer: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/979580b2-335e-4a8c-ba93-2131052e3b1b.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsBlockObjectsToLayer · Move Block Hierarchy to Layers
 
 > Module: Organization & Selection / Layers
 

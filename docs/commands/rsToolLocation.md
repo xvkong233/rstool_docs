@@ -1,4 +1,4 @@
-# rsToolLocation · 打开插件目录
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsToolLocation：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/ef46df2d-03ba-5cca-b554-ed82a6cd9caa.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsToolLocation · 打开插件目录
 
 > 模块：辅助工具 / 系统工具
 

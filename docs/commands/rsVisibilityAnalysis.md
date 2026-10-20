@@ -1,4 +1,4 @@
-# rsVisibilityAnalysis · 可见性分析
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsVisibilityAnalysis：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/9fd9085a-9c7d-514f-9b86-12249b8a6f1b.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsVisibilityAnalysis · 可见性分析
 
 > 模块：分析 / 建筑物理分析
 

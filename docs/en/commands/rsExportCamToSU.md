@@ -1,8 +1,10 @@
-# rsExportCamToSU · Export camera to SketchUp
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsExportCamToSU: right-click the rsImportCamFromSU button" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/e98fe49c-34c1-43b2-87f5-bbf99c6b96e3.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsExportCamToSU · Export camera to SketchUp
 
 > Module: Views & Documentation / Views & Cameras
 
 [← Back to command index](/en/commands/)
+
+> Right-click the [rsImportCamFromSU](./rsImportCamFromSU) toolbar button to run this command. The two commands share the visible button icon.
 
 **Function**: Copy current camera parameters JSON to clipboard (mode/eye/target/up/fov/viewHeight)
 

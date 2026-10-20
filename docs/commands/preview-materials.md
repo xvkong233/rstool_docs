@@ -1,10 +1,8 @@
-# Preview Materials
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="Preview Materials：GH 组件图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/PreviewMaterials_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> Preview Materials
 
 > 模块：GH组件 / Display
 
 [← 返回命令目录](/commands/)
-
-![图标](../assets/gh-icons/PreviewMaterials_24.png)
 
 **功能**：在 Grasshopper 预览中显示输入材质。
 

@@ -1,4 +1,4 @@
-# rsSplitCrvAtIntersection · 交点处分割曲线
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsSplitCrvAtIntersection：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/156b68a6-a6ec-4bde-9db4-90303b19a8f4.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSplitCrvAtIntersection · 交点处分割曲线
 
 > 模块：几何 / 曲线
 

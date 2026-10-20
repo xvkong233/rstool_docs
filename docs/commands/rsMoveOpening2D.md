@@ -1,4 +1,4 @@
-# rsMoveOpening2D · 移动二维门窗/电梯
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsMoveOpening2D：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/d37ab18c-6701-55a0-b078-e930e91f2bd7.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsMoveOpening2D · 移动二维门窗/电梯
 
 > 模块：二维建筑 / 门窗与电梯
 

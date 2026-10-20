@@ -1,8 +1,10 @@
-# rsMaterialLibraryOld · 旧版材质库
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsMaterialLibraryOld：右键点击 rsMaterial 按钮" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/1d9adb07-8e80-483d-b6eb-9b288bf76f5a.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsMaterialLibraryOld · 旧版材质库
 
 > 模块：资源库 / 材质库
 
 [← 返回命令目录](/commands/)
+
+> 右键点击工具栏中的 [rsMaterial](./rsMaterial) 按钮可运行本命令；这里显示的是它们共用的按钮图标。
 
 **功能**：打开旧版材质库，选择材质后拾取对象或图层进行赋予
 

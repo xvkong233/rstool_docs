@@ -1,10 +1,8 @@
-# SubDToBrep
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="SubDToBrep: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/SubDToBrep_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> SubDToBrep
 
 > Module: Grasshopper Components / SubD
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/SubDToBrep_24.png)
 
 **Function**: Convert SubD object to NURBS Brep.
 

@@ -1,10 +1,8 @@
-# GetGraphMapperDomain
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="GetGraphMapperDomain：GH 组件图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/GetGraphMapperDomain_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> GetGraphMapperDomain
 
 > 模块：GH组件 / Animation
 
 [← 返回命令目录](/commands/)
-
-![图标](../assets/gh-icons/GetGraphMapperDomain_24.png)
 
 **功能**：读取 Graph Mapper 组件的定义域。
 

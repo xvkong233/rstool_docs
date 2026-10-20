@@ -1,4 +1,4 @@
-# rsToolStart · 工具启动
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsToolStart：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/182bf349-c9eb-5acb-b92e-efce7385862d.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsToolStart · 工具启动
 
 > 模块：辅助工具 / 系统工具
 

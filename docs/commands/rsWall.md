@@ -1,4 +1,4 @@
-# rsWall · 智能墙体
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsWall：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/69a10f7f-e037-437d-889f-55a053c0c4f7.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsWall · 智能墙体
 
 > 模块：建筑 / 三维墙体
 

@@ -1,10 +1,8 @@
-# FilletMultipleRadii
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="FilletMultipleRadii: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/FilletsMutipleRadius_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> FilletMultipleRadii
 
 > Module: Grasshopper Components / Curve
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/FilletsMutipleRadius_24.png)
 
 **Function**: Use multiple radii to sequentially fillet the corners of a curve.
 

@@ -1,10 +1,8 @@
-# RandomFlash
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="RandomFlash：GH 组件图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/RandomFlash_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> RandomFlash
 
 > 模块：GH组件 / Animation
 
 [← 返回命令目录](/commands/)
-
-![图标](../assets/gh-icons/RandomFlash_24.png)
 
 **功能**：为对象生成随机闪现动画效果。
 

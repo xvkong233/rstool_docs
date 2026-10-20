@@ -1,8 +1,10 @@
-# rsBatchSnapshotCapture · 批量截图
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsBatchSnapshotCapture：右键点击 rsBatchViewCapture 按钮" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/3755e636-1bec-4b0a-9ed8-16e18d13b985.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsBatchSnapshotCapture · 批量截图
 
 > 模块：视图出图 / 视图相机
 
 [← 返回命令目录](/commands/)
+
+> 右键点击工具栏中的 [rsBatchViewCapture](./rsBatchViewCapture) 按钮可运行本命令；这里显示的是它们共用的按钮图标。
 
 **功能**：批量导出所有快照为 PNG 图片到指定文件夹
 

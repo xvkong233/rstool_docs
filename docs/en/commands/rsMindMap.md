@@ -1,4 +1,4 @@
-# rsMindMap · Mind Map
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsMindMap: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/4071a7e1-79df-5a73-ada5-ee98faca18f3.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsMindMap · Mind Map
 
 > Module: Productivity / Productivity
 

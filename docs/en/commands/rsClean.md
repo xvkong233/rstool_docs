@@ -1,4 +1,4 @@
-# rsClean · Deep Clean
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsClean: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/d4df9a93-2c68-4ad6-9250-8154a3004941.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsClean · Deep Clean
 
 > Module: Utilities / System Tools
 

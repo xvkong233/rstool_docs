@@ -1,4 +1,4 @@
-# rsLoftCurvesPairs · 成对放样
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsLoftCurvesPairs：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/e95cff3d-44a7-4f7e-838b-b061e74b2b82.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsLoftCurvesPairs · 成对放样
 
 > 模块：几何 / 曲面
 

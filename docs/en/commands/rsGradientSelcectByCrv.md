@@ -1,4 +1,4 @@
-# rsGradientSelcectByCrv · Gradient Selection by Curve
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsGradientSelcectByCrv: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/130222e6-20fa-4d4c-bb62-c7ae4e7d2fc3.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsGradientSelcectByCrv · Gradient Selection by Curve
 
 > Module: Organization & Selection / Selection
 

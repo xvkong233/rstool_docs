@@ -1,4 +1,4 @@
-# rsSprinkerBrush · 曲面散布笔刷
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsSprinkerBrush：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/5ac0bfa4-9b36-5a87-b496-d9074502053f.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSprinkerBrush · 曲面散布笔刷
 
 > 模块：几何 / 对象变换
 

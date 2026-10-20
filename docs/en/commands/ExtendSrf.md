@@ -1,10 +1,8 @@
-# ExtendSrf
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="ExtendSrf: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/ExtendSrf_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> ExtendSrf
 
 > Module: Grasshopper Components / Surface
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/ExtendSrf_24.png)
 
 **Function**: Extends the surface in the specified direction.
 

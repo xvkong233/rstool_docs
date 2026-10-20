@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 import { readFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, resolve } from 'node:path'
+import { renderCommandIcon } from '../../scripts/rstool/command_icons.cjs'
 
 type CmdItem = {
   name: string
@@ -107,17 +108,25 @@ const enGroups = groupCommands(
   english.categories['趣味'] || 'Fun'
 )
 
-const commandText = (item: CmdItem) =>
-  item.zh && item.zh !== item.name ? `${item.name} · ${item.zh}` : item.name
+const commandText = (item: CmdItem, locale: 'zh' | 'en') => {
+  const label =
+    item.zh && item.zh !== item.name ? `${item.name} · ${item.zh}` : item.name
+  const escaped = label
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+  return `${renderCommandIcon(item.name, { locale, context: 'sidebar' })}<span class="rstool-command-label">${escaped}</span>`
+}
 
 function buildCatItems(group: CatGroup, prefix: string, common: string) {
+  const locale = prefix.startsWith('/en/') ? 'en' : 'zh'
   const output: any[] = []
   for (const subcategory of group.subOrder) {
     output.push({
       text: subcategory,
       collapsed: true,
       items: group.bySub[subcategory].map((item) => ({
-        text: commandText(item),
+        text: commandText(item, locale),
         link: `${prefix}${slug(item.name)}`
       }))
     })
@@ -126,7 +135,7 @@ function buildCatItems(group: CatGroup, prefix: string, common: string) {
     if (group.subOrder.length === 0) {
       output.push(
         ...group.noSub.map((item) => ({
-          text: commandText(item),
+          text: commandText(item, locale),
           link: `${prefix}${slug(item.name)}`
         }))
       )
@@ -135,7 +144,7 @@ function buildCatItems(group: CatGroup, prefix: string, common: string) {
         text: common,
         collapsed: true,
         items: group.noSub.map((item) => ({
-          text: commandText(item),
+          text: commandText(item, locale),
           link: `${prefix}${slug(item.name)}`
         }))
       })

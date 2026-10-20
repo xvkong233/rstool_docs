@@ -1,4 +1,4 @@
-# rsWallExtend · 墙体延伸
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsWallExtend：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/dad8bbd4-aef0-4c7d-bb49-7c648275e2d5.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsWallExtend · 墙体延伸
 
 > 模块：建筑 / 三维墙体
 

@@ -1,10 +1,8 @@
-# SetCamera
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="SetCamera：GH 组件图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/Camera_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> SetCamera
 
 > 模块：GH组件 / Animation
 
 [← 返回命令目录](/commands/)
-
-![图标](../assets/gh-icons/Camera_24.png)
 
 **功能**：设置当前 Rhino 视口的摄像机位置与方向。
 

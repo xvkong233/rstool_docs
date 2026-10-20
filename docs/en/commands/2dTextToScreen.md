@@ -1,10 +1,8 @@
-# 2dTextToScreen
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="2dTextToScreen: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/2dTxtToScreen_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> 2dTextToScreen
 
 > Module: Grasshopper Components / Display
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/2dTxtToScreen_24.png)
 
 **Function**: Displays 2D text in screen coordinates of the Rhino viewport, suitable for auxiliary annotation and previewing.
 

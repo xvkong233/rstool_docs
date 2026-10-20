@@ -1,4 +1,4 @@
-# rsTerrain · Terrain Mesh
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsTerrain: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/b9e61b41-7866-4395-8c29-a2b7a6a60685.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/b9e61b41-7866-4395-8c29-a2b7a6a60685.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsTerrain · Terrain Mesh
 
 > Module: Terrain / Analysis & Simulation
 

@@ -1,8 +1,10 @@
-# rsCadReceivePending · Receive Pending CAD Transfer
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--missing" title="No icon in the current toolbar" aria-hidden="true"></span> rsCadReceivePending · Receive Pending CAD Transfer
 
 > Module: Utilities / Import & Export
 
 [← Back to command index](/en/commands/)
+
+> The current toolbar has no icon for this command. The dash is a placeholder, not a toolbar icon; run the command by name.
 
 **Function**: Manually check CAD-to-Rhino transfer batches and import a pending batch into the active Rhino document.
 

@@ -1,4 +1,4 @@
-# rsCreateDynamicComponent · Create Dynamic Component
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsCreateDynamicComponent: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/64477f1e-54cf-56ab-b637-e38df8fb4074.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsCreateDynamicComponent · Create Dynamic Component
 
 > Module: Dynamic Components / Creation
 

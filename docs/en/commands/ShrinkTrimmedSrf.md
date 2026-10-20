@@ -1,10 +1,8 @@
-# ShrinkTrimmedSrf
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="ShrinkTrimmedSrf: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/TrimmedSrf_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> ShrinkTrimmedSrf
 
 > Module: Grasshopper Components / Surface
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/TrimmedSrf_24.png)
 
 **Function**: Shrinks the underlying surface of the trimmed surface to the trimming boundary.
 

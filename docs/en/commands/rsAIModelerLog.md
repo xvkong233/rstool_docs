@@ -1,8 +1,10 @@
-# rsAIModelerLog · AI Modeler Execution Log
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--missing" title="No icon in the current toolbar" aria-hidden="true"></span> rsAIModelerLog · AI Modeler Execution Log
 
 > Module: AI / Rendering & Modeling
 
 [← Back to command index](/en/commands/)
+
+> The current toolbar has no icon for this command. The dash is a placeholder, not a toolbar icon; run the command by name.
 
 **Function**: Open the AI Modeler execution log to investigate script failures, cancellations, and rollbacks.
 

@@ -1,10 +1,8 @@
-# Tessellate NURBS
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="Tessellate NURBS: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/TessellateNurbs_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> Tessellate NURBS
 
 > Module: Grasshopper Components / Surface
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/TessellateNurbs_24.png)
 
 **Function**: Generate parametric pavement panels on NURBS single or polysurface surfaces.
 

@@ -1,4 +1,4 @@
-# rsBuildingArea2D · Building area
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsBuildingArea2D: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/8df5803a-0ca4-5601-82ab-decd6579cd36.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsBuildingArea2D · Building area
 
 > Module: 2D Architecture / Other 2D Tools
 

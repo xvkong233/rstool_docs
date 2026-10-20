@@ -1,4 +1,4 @@
-# rsDoor · Door
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsDoor: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/79bb62c2-0b09-4cac-bd18-52152652f169.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsDoor · Door
 
 > Module: Architecture / Building Elements
 

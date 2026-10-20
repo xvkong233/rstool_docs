@@ -1,4 +1,4 @@
-# rsCurtain · Curtain wall
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsCurtain: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/a50ee3ce-db38-441f-b765-32522de8778f.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsCurtain · Curtain wall
 
 > Module: Architecture / Building Elements
 

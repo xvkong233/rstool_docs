@@ -1,4 +1,4 @@
-# rsElevator2D · 二维电梯
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsElevator2D：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/390742bf-dcad-51a1-9473-0b74e2edb9dd.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsElevator2D · 二维电梯
 
 > 模块：二维建筑 / 门窗与电梯
 

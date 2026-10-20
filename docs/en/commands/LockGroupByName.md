@@ -1,10 +1,8 @@
-# LockGroupByName
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="LockGroupByName: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/LockGroupByName_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> LockGroupByName
 
 > Module: Grasshopper Components / Animation
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/LockGroupByName_24.png)
 
 **Function**: Lock or unlock objects in a Grasshopper group by name.
 

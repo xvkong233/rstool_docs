@@ -1,4 +1,4 @@
-# rsAssignLayerMaterialToObj · Assign layer material to object
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsAssignLayerMaterialToObj: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/b8ffb8ad-cdca-486c-9ed7-bb9cd1cf825e.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsAssignLayerMaterialToObj · Assign layer material to object
 
 > Module: Organization & Selection / Layers
 

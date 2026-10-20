@@ -1,4 +1,4 @@
-# rsClothFluttering · Cloth Wind Simulation
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsClothFluttering: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/5deaf6a1-e601-47de-8aef-9795dc9c8e4f.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsClothFluttering · Cloth Wind Simulation
 
 > Module: Physics Simulation / Dynamics
 

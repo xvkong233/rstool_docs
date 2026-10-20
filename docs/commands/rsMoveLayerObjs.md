@@ -1,4 +1,4 @@
-# rsMoveLayerObjs · 移动图层对象
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsMoveLayerObjs：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/2376805a-6443-4dae-b94b-c35d11cf1d76.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsMoveLayerObjs · 移动图层对象
 
 > 模块：组织与选择 / 图层
 

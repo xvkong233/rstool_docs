@@ -1,8 +1,10 @@
-# rsModelOld · Old model library
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsModelOld: right-click the rsModel button" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/e1ce8160-0b74-4d42-8615-4c67815dfbf3.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsModelOld · Old model library
 
 > Module: Libraries / Model Library
 
 [← Back to command index](/en/commands/)
+
+> Right-click the [rsModel](./rsModel) toolbar button to run this command. The two commands share the visible button icon.
 
 **Function**: Open the old model library window, browse and insert models/components
 

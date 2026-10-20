@@ -1,10 +1,8 @@
-# RhinoViewCaptureToFile
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="RhinoViewCaptureToFile: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/RhinoViewCaptureToFile_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> RhinoViewCaptureToFile
 
 > Module: Grasshopper Components / Util
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/RhinoViewCaptureToFile_24.png)
 
 **Function**: Batch capture Rhino named views and save to file.
 

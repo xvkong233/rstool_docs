@@ -1,4 +1,4 @@
-# rsAiRender · AI rendering
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsAiRender: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/8fa021d9-e321-4ae1-b218-205fa2451c7d.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsAiRender · AI rendering
 
 > Module: AI / Rendering & Modeling
 

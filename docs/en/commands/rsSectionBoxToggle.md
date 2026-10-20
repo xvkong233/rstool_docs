@@ -1,4 +1,4 @@
-# rsSectionBoxToggle · Toggle Section Box
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsSectionBoxToggle: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/017dfd7f-2fda-550d-b2cf-b65dccb4f973.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSectionBoxToggle · Toggle Section Box
 
 > Module: Views & Documentation / Annotation & Documentation
 

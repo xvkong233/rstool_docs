@@ -1,10 +1,8 @@
-# ArcBlend
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="ArcBlend: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/ArcBlend_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> ArcBlend
 
 > Module: Grasshopper Components / Curve
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/ArcBlend_24.png)
 
 **Function**: Use arcs to create transitional connections between curves.
 

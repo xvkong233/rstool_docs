@@ -1,4 +1,4 @@
-# rsProfileDirector · Profile Director
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsProfileDirector: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/232863f4-be5a-4ae5-a907-62fcb4023c31.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsProfileDirector · Profile Director
 
 > Module: Section Management / Profile Director
 

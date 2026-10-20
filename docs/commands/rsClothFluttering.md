@@ -1,4 +1,4 @@
-# rsClothFluttering · 布料风动分析
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsClothFluttering：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/5deaf6a1-e601-47de-8aef-9795dc9c8e4f.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsClothFluttering · 布料风动分析
 
 > 模块：物理模拟 / 动力学
 

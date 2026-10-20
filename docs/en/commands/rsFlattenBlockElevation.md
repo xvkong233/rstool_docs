@@ -1,4 +1,4 @@
-# rsFlattenBlockElevation · Flatten Block Elevation
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsFlattenBlockElevation: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/caf50557-dd2f-581e-87cf-2b1da2ac7363.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsFlattenBlockElevation · Flatten Block Elevation
 
 > Module: Utilities / Block Operations
 

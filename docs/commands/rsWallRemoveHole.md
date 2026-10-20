@@ -1,4 +1,4 @@
-# rsWallRemoveHole · 墙体去洞
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsWallRemoveHole：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/f24464db-3b24-46cd-930a-cc2bee90dc68.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsWallRemoveHole · 墙体去洞
 
 > 模块：建筑 / 三维墙体
 

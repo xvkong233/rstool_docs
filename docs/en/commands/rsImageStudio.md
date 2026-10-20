@@ -1,4 +1,4 @@
-# rsImageStudio · Image Studio
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsImageStudio: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/0a634da4-1b7d-5b20-a5d5-a163eacfe9a5.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsImageStudio · Image Studio
 
 > Module: Productivity / Productivity
 

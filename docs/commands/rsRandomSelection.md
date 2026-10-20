@@ -1,4 +1,4 @@
-# rsRandomSelection · 随机选择
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsRandomSelection：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/aa47178a-240c-45b0-b36d-aaec80323b6a.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsRandomSelection · 随机选择
 
 > 模块：组织与选择 / 选择
 

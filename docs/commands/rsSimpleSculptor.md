@@ -1,4 +1,4 @@
-# rsSimpleSculptor · 快速雕刻工具
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsSimpleSculptor：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/d6e65cbf-0884-4f66-9b0d-0d80544a310b.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSimpleSculptor · 快速雕刻工具
 
 > 模块：几何 / 网格
 

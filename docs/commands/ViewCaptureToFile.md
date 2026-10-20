@@ -1,10 +1,8 @@
-# ViewCaptureToFile
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="ViewCaptureToFile：GH 组件图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/ViewCaptrueToFile_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> ViewCaptureToFile
 
 > 模块：GH组件 / Util
 
 [← 返回命令目录](/commands/)
-
-![图标](../assets/gh-icons/ViewCaptrueToFile_24.png)
 
 **功能**：从 Grasshopper 捕捉当前 Rhino 视口并保存到指定路径。
 

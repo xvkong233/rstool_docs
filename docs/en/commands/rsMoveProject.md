@@ -1,4 +1,4 @@
-# rsMoveProject · Move Project
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsMoveProject: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/f5515c62-04b9-4281-b28e-b278ac475fab.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsMoveProject · Move Project
 
 > Module: Geometry / Object Transforms
 

@@ -1,4 +1,4 @@
-# rsDiagramArrow · Diagram Arrow
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsDiagramArrow: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/08b7810e-16d2-4012-bf4a-0119c2924c5b.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsDiagramArrow · Diagram Arrow
 
 > Module: Views & Documentation / Annotation & Documentation
 

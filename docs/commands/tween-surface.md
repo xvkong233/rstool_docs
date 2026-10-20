@@ -1,10 +1,8 @@
-# Tween Surface
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="Tween Surface：GH 组件图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/TweenSrf_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> Tween Surface
 
 > 模块：GH组件 / Surface
 
 [← 返回命令目录](/commands/)
-
-![图标](../assets/gh-icons/TweenSrf_24.png)
 
 **功能**：通过对应采样点插值，在两张曲面之间重建 NURBS 过渡曲面。
 

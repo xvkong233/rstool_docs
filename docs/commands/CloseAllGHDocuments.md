@@ -1,10 +1,8 @@
-# CloseAllGHDocuments
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="CloseAllGHDocuments：GH 组件图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/CloseAllGhFile_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> CloseAllGHDocuments
 
 > 模块：GH组件 / Util
 
 [← 返回命令目录](/commands/)
-
-![图标](../assets/gh-icons/CloseAllGhFile_24.png)
 
 **功能**：关闭当前 Grasshopper 会话中打开的全部文档。
 

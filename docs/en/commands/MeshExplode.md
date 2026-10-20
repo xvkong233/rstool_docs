@@ -1,10 +1,8 @@
-# MeshExplode
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="MeshExplode: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/ExplodeMesh_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> MeshExplode
 
 > Module: Grasshopper Components / Mesh
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/ExplodeMesh_24.png)
 
 **Function**: Split the mesh into independent parts based on angular tolerances.
 

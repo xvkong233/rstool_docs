@@ -1,4 +1,4 @@
-# rsBreakWall2D · Break a 2D wall
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsBreakWall2D: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/21650b40-c0fb-56c4-8469-6dec2f9126c3.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsBreakWall2D · Break a 2D wall
 
 > Module: 2D Architecture / Grids & Walls
 

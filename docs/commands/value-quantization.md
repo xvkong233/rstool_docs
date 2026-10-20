@@ -1,10 +1,8 @@
-# Value Quantization
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="Value Quantization：GH 组件图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/ValueQuantization_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> Value Quantization
 
 > 模块：GH组件 / Math
 
 [← 返回命令目录](/commands/)
-
-![图标](../assets/gh-icons/ValueQuantization_24.png)
 
 **功能**：将指定区间内的数值替换为自定义目标列表中的最近值，区间外保持不变。
 

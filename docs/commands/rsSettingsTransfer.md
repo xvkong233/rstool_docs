@@ -1,4 +1,4 @@
-# rsSettingsTransfer · Rhino / RSTool 设置迁移
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsSettingsTransfer：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/b030732e-555f-54a9-9eea-d5aeb2802a9f.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSettingsTransfer · Rhino / RSTool 设置迁移
 
 > 模块：效率工具 / 生产力
 

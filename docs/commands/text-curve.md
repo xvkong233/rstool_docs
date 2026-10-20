@@ -1,10 +1,8 @@
-# Text curve
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="Text curve：GH 组件图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/TextCurve_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> Text curve
 
 > 模块：GH组件 / Curve
 
 [← 返回命令目录](/commands/)
-
-![图标](../assets/gh-icons/TextCurve_24.png)
 
 **功能**：根据文字内容与字体创建文字轮廓曲线。
 

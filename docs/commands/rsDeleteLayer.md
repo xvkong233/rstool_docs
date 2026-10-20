@@ -1,4 +1,4 @@
-# rsDeleteLayer · 删除图层
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsDeleteLayer：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/f39a492a-c491-5b08-a48e-5b4a4f5cc5fd.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsDeleteLayer · 删除图层
 
 > 模块：组织与选择 / 图层
 

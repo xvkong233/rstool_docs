@@ -1,4 +1,4 @@
-# rsRandomOffsetMesh · 随机偏移网格
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsRandomOffsetMesh：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/1100063f-0e8b-502f-87c6-c5d9bdd161d6.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsRandomOffsetMesh · 随机偏移网格
 
 > 模块：几何 / 网格
 

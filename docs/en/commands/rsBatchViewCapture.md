@@ -1,4 +1,4 @@
-# rsBatchViewCapture · Batch view capture
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsBatchViewCapture: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/3755e636-1bec-4b0a-9ed8-16e18d13b985.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsBatchViewCapture · Batch view capture
 
 > Module: Views & Documentation / Views & Cameras
 

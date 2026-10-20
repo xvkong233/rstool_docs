@@ -1,8 +1,10 @@
-# rsRandomPtsOnCrv · 曲线上随机点
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsRandomPtsOnCrv：右键点击 rsDivideCrvByRoundedCount 按钮" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/288a83f1-eaf9-4dc2-973e-d4ff16e768ef.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsRandomPtsOnCrv · 曲线上随机点
 
 > 模块：几何 / 点
 
 [← 返回命令目录](/commands/)
+
+> 右键点击工具栏中的 [rsDivideCrvByRoundedCount](./rsDivideCrvByRoundedCount) 按钮可运行本命令；这里显示的是它们共用的按钮图标。
 
 **功能**：在所选曲线上生成指定数量、按指定分布模式的随机点（去除过近点）
 

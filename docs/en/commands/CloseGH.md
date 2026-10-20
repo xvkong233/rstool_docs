@@ -1,10 +1,8 @@
-# CloseGH
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="CloseGH: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/CloseGH_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> CloseGH
 
 > Module: Grasshopper Components / Util
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/CloseGH_24.png)
 
 **Function**: Close the Grasshopper window.
 

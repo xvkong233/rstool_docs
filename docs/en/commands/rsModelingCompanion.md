@@ -1,4 +1,4 @@
-# rsModelingCompanion · Modeling Companion
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsModelingCompanion: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/a904cf0c-89db-51a9-8ecc-8540bec11012.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsModelingCompanion · Modeling Companion
 
 > Module: Productivity / Productivity
 

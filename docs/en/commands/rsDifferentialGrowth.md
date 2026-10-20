@@ -1,4 +1,4 @@
-# rsDifferentialGrowth · Differential Growth
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsDifferentialGrowth: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/5a759382-750c-5b3d-8e1a-3263ee1d13eb.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsDifferentialGrowth · Differential Growth
 
 > Module: Physics Simulation / Form Finding & Relaxation
 

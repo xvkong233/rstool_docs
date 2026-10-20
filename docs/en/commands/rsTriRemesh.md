@@ -1,4 +1,4 @@
-# rsTriRemesh · Triangle Remesh
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsTriRemesh: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/2992b45a-9bcf-4e78-906e-80e24646a06e.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsTriRemesh · Triangle Remesh
 
 > Module: Geometry / Meshes
 

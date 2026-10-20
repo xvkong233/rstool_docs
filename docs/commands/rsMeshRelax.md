@@ -1,4 +1,4 @@
-# rsMeshRelax · 网格均匀松弛
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsMeshRelax：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/9cc2c6ce-db50-459b-8672-9422d77177ef.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsMeshRelax · 网格均匀松弛
 
 > 模块：物理模拟 / 找形与松弛
 

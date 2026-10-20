@@ -1,4 +1,4 @@
-# rsMindMap · 思维导图
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsMindMap：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/4071a7e1-79df-5a73-ada5-ee98faca18f3.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsMindMap · 思维导图
 
 > 模块：效率工具 / 生产力
 

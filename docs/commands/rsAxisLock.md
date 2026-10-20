@@ -1,4 +1,4 @@
-# rsAxisLock · 方向键轴锁定开关
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsAxisLock：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/ff0aa945-6c5b-58b3-ada3-7e51f989da82.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsAxisLock · 方向键轴锁定开关
 
 > 模块：效率工具 / 生产力
 

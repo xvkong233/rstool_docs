@@ -1,4 +1,4 @@
-# rsMoveToOrigin · Move to origin
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsMoveToOrigin: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/cba45b6a-ac50-492f-a442-fe26ae0cd4bb.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsMoveToOrigin · Move to origin
 
 > Module: Geometry / Object Transforms
 

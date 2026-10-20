@@ -1,4 +1,4 @@
-# rsCurtainPlus · 增强版幕墙
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsCurtainPlus：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/fd5ab500-217d-5e5b-a0ee-60047a65cbf9.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsCurtainPlus · 增强版幕墙
 
 > 模块：建筑 / 建筑构件
 

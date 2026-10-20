@@ -1,4 +1,4 @@
-# rsFadingStairVertical · 竖向渐变楼梯
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsFadingStairVertical：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/a6ce9911-4b49-4eb2-bc72-97a2652181ca.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsFadingStairVertical · 竖向渐变楼梯
 
 > 模块：建筑 / 楼梯与坡道
 

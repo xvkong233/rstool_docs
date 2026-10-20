@@ -1,4 +1,4 @@
-# rsIndoorIlluminance · Indoor Illuminance and Daylight
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsIndoorIlluminance: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/a7e59d9a-a71a-5d61-b276-8c6a6b05871e.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsIndoorIlluminance · Indoor Illuminance and Daylight
 
 > Module: Analysis / Building Performance Analysis
 

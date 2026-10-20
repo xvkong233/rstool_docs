@@ -1,10 +1,8 @@
-# Sequential Closest Projection
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="Sequential Closest Projection：GH 组件图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/SequentialClosestProjection_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> Sequential Closest Projection
 
 > 模块：GH组件 / Points
 
 [← 返回命令目录](/commands/)
-
-![图标](../assets/gh-icons/SequentialClosestProjection_24.png)
 
 **功能**：将起始点依次投影到曲线列表的最近点，并可按固定间隔沿当前曲线切向移动后继续投影。
 

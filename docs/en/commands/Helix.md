@@ -1,10 +1,8 @@
-# Helix
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="Helix: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/HelixCrv_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> Helix
 
 > Module: Grasshopper Components / Curve
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/HelixCrv_24.png)
 
 **Function**: Create a spiral or spring-like curve.
 

@@ -1,8 +1,10 @@
-# rsBatchSnapshotCapture · Batch screenshots
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsBatchSnapshotCapture: right-click the rsBatchViewCapture button" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/3755e636-1bec-4b0a-9ed8-16e18d13b985.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsBatchSnapshotCapture · Batch screenshots
 
 > Module: Views & Documentation / Views & Cameras
 
 [← Back to command index](/en/commands/)
+
+> Right-click the [rsBatchViewCapture](./rsBatchViewCapture) toolbar button to run this command. The two commands share the visible button icon.
 
 **Function**: Batch export all snapshots as PNG images to a specified folder
 

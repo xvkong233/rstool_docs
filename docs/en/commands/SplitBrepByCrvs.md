@@ -1,10 +1,8 @@
-# SplitBrepByCrvs
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="SplitBrepByCrvs: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/SpitBrepByCrvs_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> SplitBrepByCrvs
 
 > Module: Grasshopper Components / Surface
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/SpitBrepByCrvs_24.png)
 
 **Function**: Split the Brep using curves lying on the surface.
 

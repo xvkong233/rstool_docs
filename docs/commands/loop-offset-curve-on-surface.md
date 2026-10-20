@@ -1,10 +1,8 @@
-# Loop Offset Curve On Surface
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="Loop Offset Curve On Surface：GH 组件图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/LoopOffsetCrvOnSrf_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> Loop Offset Curve On Surface
 
 > 模块：GH组件 / Curve
 
 [← 返回命令目录](/commands/)
-
-![图标](../assets/gh-icons/LoopOffsetCrvOnSrf_24.png)
 
 **功能**：在曲面上连续偏移曲线，每次拟合并延伸至边界后继续下一轮偏移。
 

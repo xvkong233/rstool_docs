@@ -1,10 +1,8 @@
-# DeletePlaceholder
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="DeletePlaceholder: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/DeletePlaceholder_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> DeletePlaceholder
 
 > Module: Grasshopper Components / Util
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/DeletePlaceholder_24.png)
 
 **Function**: Remove placeholder components from Grasshopper documents.
 

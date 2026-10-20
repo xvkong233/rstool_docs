@@ -1,10 +1,8 @@
-# MeshPipe
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="MeshPipe：GH 组件图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/MeshPipe_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> MeshPipe
 
 > 模块：GH组件 / Mesh
 
 [← 返回命令目录](/commands/)
-
-![图标](../assets/gh-icons/MeshPipe_24.png)
 
 **功能**：沿曲线生成网格圆管。
 

@@ -1,4 +1,4 @@
-# rsTerrainAnalysis · Terrain analysis
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsTerrainAnalysis: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/8213dcda-296a-4dc4-b30f-e255495f9acc.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsTerrainAnalysis · Terrain analysis
 
 > Module: Terrain / Analysis & Simulation
 

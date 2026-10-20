@@ -1,4 +1,4 @@
-# rsCopy · Copy with origin
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsCopy: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/cb2e69e6-8ce2-4c35-accb-982a027b5eba.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsCopy · Copy with origin
 
 > Module: Utilities / Clipboard
 

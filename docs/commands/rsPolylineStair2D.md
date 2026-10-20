@@ -1,4 +1,4 @@
-# rsPolylineStair2D · 自由二维楼梯
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsPolylineStair2D：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/0be5eb04-840c-557a-8921-9dc350c217bd.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsPolylineStair2D · 自由二维楼梯
 
 > 模块：二维建筑 / 其他二维
 

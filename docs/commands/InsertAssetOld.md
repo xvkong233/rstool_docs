@@ -1,8 +1,10 @@
-# InsertAssetOld · 旧版插入模型
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--missing" title="当前工具栏中无对应图标" aria-hidden="true"></span> InsertAssetOld · 旧版插入模型
 
 > 模块：资源库 / 模型库
 
 [← 返回命令目录](/commands/)
+
+> 当前工具栏中没有此命令的对应图标。横线仅表示暂无图标，不是实际按钮；请通过命令行调用。
 
 **功能**：插入旧版模型库中的模型到当前文档
 

@@ -1,10 +1,8 @@
-# Tween Mesh
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="Tween Mesh: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/TweenMesh_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> Tween Mesh
 
 > Module: Grasshopper Components / Mesh
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/TweenMesh_24.png)
 
 **Function**: Interpolate corresponding vertices between two topologically compatible meshes to generate a transition mesh.
 

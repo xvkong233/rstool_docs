@@ -1,4 +1,4 @@
-# rsBoids · 类群体运动分析
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsBoids：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/04840a1b-9518-4905-9727-7dfd622972b4.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsBoids · 类群体运动分析
 
 > 模块：物理模拟 / 动力学
 

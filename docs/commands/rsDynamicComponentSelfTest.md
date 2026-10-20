@@ -1,8 +1,10 @@
-# rsDynamicComponentSelfTest · 动态组件自检
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--missing" title="当前工具栏中无对应图标" aria-hidden="true"></span> rsDynamicComponentSelfTest · 动态组件自检
 
 > 模块：动态组件 / 维护
 
 [← 返回命令目录](/commands/)
+
+> 当前工具栏中没有此命令的对应图标。横线仅表示暂无图标，不是实际按钮；请通过命令行调用。
 
 **功能**：命令行逐条输出自检结果，并给出“动态组件 Rhino 自检：N/M passed”；全通过返回 Success，否则 Failure。
 

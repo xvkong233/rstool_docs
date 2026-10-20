@@ -1,4 +1,4 @@
-# rsGradientChangeByCrv · Gradient transformation along curve
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsGradientChangeByCrv: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/586910d9-c069-4843-973f-065176591770.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsGradientChangeByCrv · Gradient transformation along curve
 
 > Module: Geometry / Object Transforms
 

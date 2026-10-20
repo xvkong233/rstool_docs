@@ -1,4 +1,4 @@
-# rsCloseObjLayer · Close the layer where the object is located
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsCloseObjLayer: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/3b1d6117-d379-4146-bd7b-30bf154eb6a0.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsCloseObjLayer · Close the layer where the object is located
 
 > Module: Organization & Selection / Layers
 

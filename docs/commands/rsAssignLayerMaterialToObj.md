@@ -1,4 +1,4 @@
-# rsAssignLayerMaterialToObj · 图层材质赋给对象
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsAssignLayerMaterialToObj：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/b8ffb8ad-cdca-486c-9ed7-bb9cd1cf825e.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsAssignLayerMaterialToObj · 图层材质赋给对象
 
 > 模块：组织与选择 / 图层
 

@@ -1,4 +1,4 @@
-# rsArchiGrid · 智能轴网
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsArchiGrid：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/115ccf87-dff8-4a36-bbc8-4a06df8dca60.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/115ccf87-dff8-4a36-bbc8-4a06df8dca60.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsArchiGrid · 智能轴网
 
 > 模块：二维建筑 / 轴网与墙体
 

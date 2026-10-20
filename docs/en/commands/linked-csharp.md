@@ -1,10 +1,8 @@
-# Linked C#
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="Linked C#: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/LinkedCSharp_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> Linked C#
 
 > Module: Grasshopper Components / Developer
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/LinkedCSharp_24.png)
 
 **Function**: Execute external .cs script solution in canvas; input/output terminals are registered and defined by RegisterInputParams/RegisterOutputParams in .cs, and the canvas will automatically display synchronously
 

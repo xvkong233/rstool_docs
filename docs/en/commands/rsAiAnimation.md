@@ -1,4 +1,4 @@
-# rsAiAnimation · AI animation
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsAiAnimation: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/2dbca007-3a3f-587f-a17c-3df60ccf2bd6.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsAiAnimation · AI animation
 
 > Module: AI / Video Generation
 

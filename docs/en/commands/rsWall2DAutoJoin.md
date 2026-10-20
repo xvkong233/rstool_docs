@@ -1,4 +1,4 @@
-# rsWall2DAutoJoin · Auto-Join 2D Walls
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsWall2DAutoJoin: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/506768ca-cb9f-5ef9-bfa1-91308a94118f.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsWall2DAutoJoin · Auto-Join 2D Walls
 
 > Module: 2D Architecture / Grids & Walls
 

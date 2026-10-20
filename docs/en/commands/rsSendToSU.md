@@ -1,4 +1,4 @@
-# rsSendToSU · Send model to SketchUp
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsSendToSU: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/5bb1d2fe-db19-5ebf-8a7b-61e233138a61.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSendToSU · Send model to SketchUp
 
 > Module: Utilities / Import & Export
 

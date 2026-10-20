@@ -1,4 +1,4 @@
-# rsScreenGif · 区域录屏 GIF
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsScreenGif：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/7ac0bbfb-4844-5e5a-8f3a-fff0d3e78cb3.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsScreenGif · 区域录屏 GIF
 
 > 模块：效率工具 / 屏幕工具
 

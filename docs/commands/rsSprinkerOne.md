@@ -1,8 +1,10 @@
-# rsSprinkerOne · 单点散布
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsSprinkerOne：右键点击 rsSprinkerMutiple 按钮" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/8043f71b-48e8-494a-8a8f-0b7f89e54c74.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSprinkerOne · 单点散布
 
 > 模块：几何 / 对象变换
 
 [← 返回命令目录](/commands/)
+
+> 右键点击工具栏中的 [rsSprinkerMutiple](./rsSprinkerMutiple) 按钮可运行本命令；这里显示的是它们共用的按钮图标。
 
 **功能**：将所选单个物体按随机点、随机旋转与随机缩放散布到目标面/网格上
 

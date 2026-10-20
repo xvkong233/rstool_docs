@@ -1,4 +1,4 @@
-# rsArrayBetween · 两对象间阵列
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsArrayBetween：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/11c65a37-5b7b-4a3e-8645-7932579b9973.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsArrayBetween · 两对象间阵列
 
 > 模块：几何 / 对象变换
 

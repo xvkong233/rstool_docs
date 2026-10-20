@@ -84,6 +84,7 @@
     "docs:build:only": "pnpm -F=docs build",
     "docs:preview": "pnpm -F=docs preview",
     "rstool:verify": "node scripts/rstool/verify_docs.cjs",
+    "lint-staged": "lint-staged --max-arg-length 6000",
     "format": "prettier --experimental-cli --write .",
     "format:fail": "prettier --experimental-cli --check .",
     "check": "pnpm format:fail && pnpm build && pnpm test",
@@ -94,7 +95,7 @@
     "pre-commit": "pnpm lint-staged"
   },
   "lint-staged": {
-    "*": "prettier --experimental-cli --ignore-unknown --write"
+    "*.{js,jsx,ts,tsx,cjs,mjs,cts,mts,json,jsonc,css,scss,less,html,md,mdx,vue,yaml,yml}": "prettier --ignore-unknown --write"
   },
   "dependencies": {
     "@docsearch/css": "^4.7.0",

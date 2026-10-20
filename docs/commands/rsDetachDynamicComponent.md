@@ -1,4 +1,4 @@
-# rsDetachDynamicComponent · 分离动态组件
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsDetachDynamicComponent：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/9a77948f-ddf1-5f09-a4d2-932043d82c0f.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsDetachDynamicComponent · 分离动态组件
 
 > 模块：动态组件 / 装配
 

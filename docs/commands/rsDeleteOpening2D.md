@@ -1,4 +1,4 @@
-# rsDeleteOpening2D · 删除二维门窗
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsDeleteOpening2D：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/6de44462-26d9-4dfc-9ff6-01416f964458.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsDeleteOpening2D · 删除二维门窗
 
 > 模块：二维建筑 / 门窗与电梯
 

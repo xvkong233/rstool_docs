@@ -1,4 +1,4 @@
-# rsSendToMaya · 发送模型到 Maya
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsSendToMaya：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/a79144d4-390a-553e-b8d8-b99e2b290ad1.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSendToMaya · 发送模型到 Maya
 
 > 模块：辅助工具 / 导入导出
 

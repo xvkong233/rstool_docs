@@ -1,4 +1,4 @@
-# rsWindAnalysis · Wind environment analysis
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsWindAnalysis: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/bab8cfab-9f8d-4f1e-9ec8-87086d663716.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsWindAnalysis · Wind environment analysis
 
 > Module: Analysis / Building Performance Analysis
 

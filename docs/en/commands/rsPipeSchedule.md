@@ -1,4 +1,4 @@
-# rsPipeSchedule · Pipe Schedule
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsPipeSchedule: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/7ed5b0ff-64d9-50f7-bab0-26a0a11c909c.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsPipeSchedule · Pipe Schedule
 
 > Module: Architecture / Building Elements
 

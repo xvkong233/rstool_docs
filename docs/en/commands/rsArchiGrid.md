@@ -1,4 +1,4 @@
-# rsArchiGrid · Smart Architectural Grid
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsArchiGrid: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/115ccf87-dff8-4a36-bbc8-4a06df8dca60.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/115ccf87-dff8-4a36-bbc8-4a06df8dca60.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsArchiGrid · Smart Architectural Grid
 
 > Module: 2D Architecture / Grids & Walls
 

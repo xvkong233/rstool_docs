@@ -1,10 +1,8 @@
-# MeshEdgeSelect
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="MeshEdgeSelect: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/MeshEdgeSelect_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> MeshEdgeSelect
 
 > Module: Grasshopper Components / Mesh
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/MeshEdgeSelect_24.png)
 
 **Function**: Filter mesh edges based on the angle between adjacent mesh faces.
 

@@ -1,4 +1,4 @@
-# rsGroupToBlock · 组转块
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsGroupToBlock：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/1a4e9caa-e784-56cd-a384-c24f8a7b302e.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsGroupToBlock · 组转块
 
 > 模块：辅助工具 / 块操作
 

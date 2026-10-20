@@ -1,4 +1,4 @@
-# rsFilterHeavyObjects · Filter Heavy Objects
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsFilterHeavyObjects: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/62a618d5-effc-5962-86cf-b45089870b88.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsFilterHeavyObjects · Filter Heavy Objects
 
 > Module: Utilities / System Tools
 

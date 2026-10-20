@@ -1,10 +1,8 @@
-# ApplyPlanarMapping
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="ApplyPlanarMapping: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/PlanarMapping_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> ApplyPlanarMapping
 
 > Module: Grasshopper Components / TextureMapping
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/PlanarMapping_24.png)
 
 **Function**: Applies a flat texture map to the object.
 

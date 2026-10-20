@@ -1,4 +1,4 @@
-# rsRailing · Railing
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsRailing: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/174af50d-b91f-4808-9f67-c92a004928b4.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsRailing · Railing
 
 > Module: Architecture / Building Elements
 

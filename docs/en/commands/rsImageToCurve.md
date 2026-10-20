@@ -1,4 +1,4 @@
-# rsImageToCurve · Convert image to curve
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsImageToCurve: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/617dd873-1250-43a8-9721-cf9fe4d3660b.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsImageToCurve · Convert image to curve
 
 > Module: Geometry / Curves
 

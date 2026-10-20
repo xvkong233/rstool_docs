@@ -1,8 +1,10 @@
-# rsAssignRandomMaterialToLayers · 按图层随机赋材质
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsAssignRandomMaterialToLayers：右键点击 rsAssignRandomColorToLayer 按钮" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/5f16386b-3bf2-40d4-ab3d-cc93e4e4eda7.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsAssignRandomMaterialToLayers · 按图层随机赋材质
 
 > 模块：组织与选择 / 图层
 
 [← 返回命令目录](/commands/)
+
+> 右键点击工具栏中的 [rsAssignRandomColorToLayer](./rsAssignRandomColorToLayer) 按钮可运行本命令；这里显示的是它们共用的按钮图标。
 
 **功能**：为所有尚未分配渲染材质的图层随机创建并指派一个材质（名称 RM-&lt;图层路径&gt;）
 

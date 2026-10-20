@@ -1,10 +1,8 @@
-# EventOperation
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="EventOperation: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/EventOperation_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> EventOperation
 
 > Module: Grasshopper Components / Animation
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/EventOperation_24.png)
 
 **Function**: Handle events and time intervals in the Grasshopper timeline.
 

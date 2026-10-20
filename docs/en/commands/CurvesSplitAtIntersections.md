@@ -1,10 +1,8 @@
-# CurvesSplitAtIntersections
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="CurvesSplitAtIntersections: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/CurvsSplitAtIntersection_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> CurvesSplitAtIntersections
 
 > Module: Grasshopper Components / Curve
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/CurvsSplitAtIntersection_24.png)
 
 **Function**: Split multiple curves where they intersect.
 

@@ -1,4 +1,4 @@
-# rsFilletWall2D · Fillet 2D Wall Corners
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsFilletWall2D: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/8e572021-753f-4e5d-9a70-15347ba223a5.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsFilletWall2D · Fillet 2D Wall Corners
 
 > Module: 2D Architecture / Grids & Walls
 

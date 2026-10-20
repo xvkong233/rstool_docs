@@ -1,4 +1,4 @@
-# rsSectionPositionPanel · 建筑剖切面板
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsSectionPositionPanel：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/ddd4aed4-e745-5d39-993a-b0f9e047f125.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSectionPositionPanel · 建筑剖切面板
 
 > 模块：视图出图 / 标注出图
 

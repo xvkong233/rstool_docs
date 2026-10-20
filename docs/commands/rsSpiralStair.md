@@ -1,4 +1,4 @@
-# rsSpiralStair · 旋转楼梯
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsSpiralStair：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/3287afbe-aa1c-48ab-bd33-70fc7b6664ce.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSpiralStair · 旋转楼梯
 
 > 模块：建筑 / 楼梯与坡道
 

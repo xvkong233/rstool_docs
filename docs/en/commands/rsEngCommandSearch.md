@@ -1,4 +1,4 @@
-# rsEngCommandSearch · English command search
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsEngCommandSearch: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/af9345e8-be49-5287-9642-9e5c1b3e1849.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsEngCommandSearch · English command search
 
 > Module: Utilities / System Tools
 

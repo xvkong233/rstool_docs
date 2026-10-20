@@ -1,4 +1,4 @@
-# rsGradientChangeByCrv · 沿曲线渐变变换
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsGradientChangeByCrv：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/586910d9-c069-4843-973f-065176591770.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsGradientChangeByCrv · 沿曲线渐变变换
 
 > 模块：几何 / 对象变换
 

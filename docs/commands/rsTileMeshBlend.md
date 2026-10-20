@@ -1,4 +1,4 @@
-# rsTileMeshBlend · 网格铺装混接
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsTileMeshBlend：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/0e9f226f-4cd6-4f23-ad81-33dc7697b492.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsTileMeshBlend · 网格铺装混接
 
 > 模块：铺装表皮
 

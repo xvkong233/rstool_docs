@@ -1,10 +1,8 @@
-# PointGroup
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="PointGroup: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/PointsGroup_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> PointGroup
 
 > Module: Grasshopper Components / Points
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/PointsGroup_24.png)
 
 **Function**: Divide points into groups based on the distance between them.
 

@@ -1,4 +1,4 @@
-# rsHairSystem · Hair system
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsHairSystem: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/561b0aad-97a6-562f-97e2-406ad5653eeb.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsHairSystem · Hair system
 
 > Module: Geometry / Meshes
 

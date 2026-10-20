@@ -1,4 +1,4 @@
-# rsEarth · Terrain Downloader
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsEarth: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/0804d532-d707-42f0-a2e8-a876c653d12f.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsEarth · Terrain Downloader
 
 > Module: Terrain / Acquisition & Editing
 

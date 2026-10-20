@@ -1,10 +1,8 @@
-# MaterialPlus
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="MaterialPlus: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/MaterialPlus_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> MaterialPlus
 
 > Module: Grasshopper Components / Display
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/MaterialPlus_24.png)
 
 **Function**: Create a Rhino material with basic color and map settings.
 

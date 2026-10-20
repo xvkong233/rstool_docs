@@ -1,8 +1,10 @@
-# InsertAssetOld · Legacy insert model
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--missing" title="No icon in the current toolbar" aria-hidden="true"></span> InsertAssetOld · Legacy insert model
 
 > Module: Libraries / Model Library
 
 [← Back to command index](/en/commands/)
+
+> The current toolbar has no icon for this command. The dash is a placeholder, not a toolbar icon; run the command by name.
 
 **Function**: Insert a model from the legacy model library into the current document
 

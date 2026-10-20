@@ -1,10 +1,8 @@
-# MeshEdgeSelect
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="MeshEdgeSelect：GH 组件图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/MeshEdgeSelect_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> MeshEdgeSelect
 
 > 模块：GH组件 / Mesh
 
 [← 返回命令目录](/commands/)
-
-![图标](../assets/gh-icons/MeshEdgeSelect_24.png)
 
 **功能**：根据相邻网格面的夹角筛选网格边。
 

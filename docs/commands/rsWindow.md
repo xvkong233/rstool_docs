@@ -1,4 +1,4 @@
-# rsWindow · 窗
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsWindow：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/46697e9c-1125-42c5-8b9d-2a6ce28964a5.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsWindow · 窗
 
 > 模块：建筑 / 建筑构件
 

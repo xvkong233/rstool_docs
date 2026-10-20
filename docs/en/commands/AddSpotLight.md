@@ -1,10 +1,8 @@
-# AddSpotLight
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--gh rstool-command-icon--single" title="AddSpotLight: Grasshopper component icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/AddSpotLights_24.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> AddSpotLight
 
 > Module: Grasshopper Components / Light
 
 [← Back to command index](/en/commands/)
-
-![Icon](../../assets/gh-icons/AddSpotLights_24.png)
 
 **Function**: Batch add spotlights to Rhino documents based on input position and orientation.
 

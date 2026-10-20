@@ -1,4 +1,4 @@
-# rsSelectBySrfEdgeCount · 按曲面边数选择
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsSelectBySrfEdgeCount：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/7470097d-5d9e-4602-b033-aec551a48a90.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSelectBySrfEdgeCount · 按曲面边数选择
 
 > 模块：组织与选择 / 选择
 

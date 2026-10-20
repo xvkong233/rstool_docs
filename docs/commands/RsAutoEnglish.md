@@ -1,4 +1,4 @@
-# RsAutoEnglish · 自动英文命令
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="RsAutoEnglish：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/7dfeedc4-3563-497f-8009-c53a69c84f37.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> RsAutoEnglish · 自动英文命令
 
 > 模块：辅助工具 / 系统工具
 

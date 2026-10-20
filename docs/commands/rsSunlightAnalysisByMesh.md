@@ -1,4 +1,4 @@
-# rsSunlightAnalysisByMesh · 三维网格日照分析
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsSunlightAnalysisByMesh：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/5d38c9c8-012f-4e27-9df2-a92eba305f1c.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSunlightAnalysisByMesh · 三维网格日照分析
 
 > 模块：分析 / 建筑物理分析
 

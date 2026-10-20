@@ -1,4 +1,4 @@
-# rsTxtReader · 命令行 TXT 阅读器
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsTxtReader：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/02255b59-8bd2-5c4c-bb96-3209b77c5040.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsTxtReader · 命令行 TXT 阅读器
 
 > 模块：趣味 / 互动娱乐
 

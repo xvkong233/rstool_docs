@@ -1,4 +1,4 @@
-# rsCopyOpening2D · 复制二维门窗/电梯
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsCopyOpening2D：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/ba5f2af0-f80d-551c-8de3-db8ee4deb002.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsCopyOpening2D · 复制二维门窗/电梯
 
 > 模块：二维建筑 / 门窗与电梯
 

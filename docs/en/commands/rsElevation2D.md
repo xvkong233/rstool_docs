@@ -1,4 +1,4 @@
-# rsElevation2D · Building elevation
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsElevation2D: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/5ecabb50-05aa-5e54-a75f-b484d79f6e4f.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsElevation2D · Building elevation
 
 > Module: 2D Architecture / Other 2D Tools
 

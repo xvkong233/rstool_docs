@@ -1,4 +1,4 @@
-# rsOldTownRoof · Traditional Roof
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsOldTownRoof: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/541e1634-cdd2-4866-be66-965e61123e7d.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsOldTownRoof · Traditional Roof
 
 > Module: Architecture / Building Elements
 
