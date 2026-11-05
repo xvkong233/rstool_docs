@@ -28,6 +28,8 @@ function iconTitle(name, locale) {
     return en ? 'No icon in the current toolbar' : '当前工具栏中无对应图标'
   if (icon.kind === 'grasshopper')
     return en ? `${name}: Grasshopper component icon` : `${name}：GH 组件图标`
+  if (icon.kind === 'source')
+    return en ? `${name}: dedicated source icon` : `${name}：源码专属图标`
   if (icon.kind === 'toolbar-right')
     return en
       ? `${name}: right-click the ${buttonCommand(icon)} button`
@@ -56,6 +58,10 @@ function renderCommandIcon(
 
 function commandIconNote(name, locale) {
   const icon = getCommandIcon(name)
+  if (icon.kind === 'source')
+    return locale === 'en'
+      ? 'This dedicated icon comes from the plugin source assets. The current RUI has no button binding for this command; run it by name or from the menu.'
+      : '此处使用插件源码中的专属图标，当前 RUI 尚未绑定此命令的工具栏按钮；可通过命令行或菜单调用。'
   if (icon.kind === 'unavailable')
     return locale === 'en'
       ? 'The current toolbar has no icon for this command. The dash is a placeholder, not a toolbar icon; run the command by name.'

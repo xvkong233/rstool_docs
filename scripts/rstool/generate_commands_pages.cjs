@@ -62,6 +62,7 @@ const labels = {
     notes: '备注',
     videos: '教学视频',
     video: '视频',
+    videoLink: '观看原视频及补充内容',
     indexTitle: 'RsTool 命令参考',
     iconGuide:
       '图标与工具栏按钮对应；共用按钮的命令可查看页面内的右键说明。「—」表示当前工具栏没有对应图标。',
@@ -108,6 +109,7 @@ const labels = {
     notes: 'Notes',
     videos: 'Tutorial videos',
     video: 'Video',
+    videoLink: 'Watch the original video and supplementary content',
     indexTitle: 'RsTool Command Reference',
     iconGuide:
       'Icons match toolbar buttons; shared-button commands include right-click instructions on their pages. A dash means no icon exists in the current toolbar.',
@@ -303,6 +305,12 @@ function renderCommand(item, detail, locale) {
         `<iframe class="rstool-video" src="${escAttr(video.src)}" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" title="${escAttr(title)}"></iframe>`
       )
       if (video.title) lines.push(`*${esc(video.title)}*`)
+      if (video.url) {
+        lines.push('')
+        lines.push(
+          `<a href="${escAttr(video.url)}" target="_blank" rel="noopener noreferrer">${text.videoLink}</a>`
+        )
+      }
       lines.push('')
     }
   }

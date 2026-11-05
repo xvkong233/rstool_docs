@@ -1,6 +1,6 @@
 # RsTool 命令参考
 
-> 覆盖 RsTool 插件全部 313 条命令，每条命令一个独立页面，含功能、调用方式、交互流程、参数表、输出、备注与教学视频。
+> 覆盖 RsTool 插件全部 318 条命令，每条命令一个独立页面，含功能、调用方式、交互流程、参数表、输出、备注与教学视频。
 
 图标与工具栏按钮对应；共用按钮的命令可查看页面内的右键说明。「—」表示当前工具栏没有对应图标。
 
@@ -69,7 +69,7 @@
 - [<span class="rstool-command-icon rstool-command-icon--index rstool-command-icon--single" title="rsLSystemTree：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/d6efca4b-5c89-5edc-ae65-d2e7336d3750.png" alt="" width="48" height="48" loading="lazy" decoding="async"></span> rsLSystemTree · L-system 树枝](/commands/rsLSystemTree) — 从指定根部生成自然分叉的树枝，支持多种树形预设、实时预览及中心线、SubD、网格输出。
 - [<span class="rstool-command-icon rstool-command-icon--index rstool-command-icon--single" title="rsIvy：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/cb4b4085-dec7-59ca-8d97-8d8665d7f88e.png" alt="" width="48" height="48" loading="lazy" decoding="async"></span> rsIvy · 藤蔓生成](/commands/rsIvy) — 让藤蔓沿选定物体表面攀爬，自动分枝并生成叶片，可调整生长方式、藤条粗细和叶片密度。
 
-## 建筑（29 条）
+## 建筑（31 条）
 
 ### 道路
 
@@ -98,10 +98,12 @@
 - [<span class="rstool-command-icon rstool-command-icon--index rstool-command-icon--single" title="rsCurtainPlus：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/fd5ab500-217d-5e5b-a0ee-60047a65cbf9.png" alt="" width="48" height="48" loading="lazy" decoding="async"></span> rsCurtainPlus · 增强版幕墙](/commands/rsCurtainPlus) — 增强版幕墙创建工具，提供更多参数和定制选项。
 - [<span class="rstool-command-icon rstool-command-icon--index rstool-command-icon--single" title="rsOldTownRoof：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/541e1634-cdd2-4866-be66-965e61123e7d.png" alt="" width="48" height="48" loading="lazy" decoding="async"></span> rsOldTownRoof · 老镇屋顶](/commands/rsOldTownRoof) — 生成老镇风格的传统坡屋顶，含屋脊、檐口等构件。
 - [<span class="rstool-command-icon rstool-command-icon--index rstool-command-icon--single" title="rsRoofTile：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/673e42a0-aa57-4aa1-98c3-04ddc27f6251.png" alt="" width="48" height="48" loading="lazy" decoding="async"></span> rsRoofTile · 屋顶瓦生成](/commands/rsRoofTile) — 在屋顶曲面上生成瓦片铺装，支持不同瓦片类型和排列方式。
+- [<span class="rstool-command-icon rstool-command-icon--index rstool-command-icon--single" title="rsTimberJoint：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/da536ef8-27d7-5aae-a0bf-b3ce03904dc4.png" alt="" width="48" height="48" loading="lazy" decoding="async"></span> rsTimberJoint · 钢木节点](/commands/rsTimberJoint) — 为木柱、木梁生成钢木连接节点，支持 12 种柱脚、梁连接、柱梁连接和交叉加固样式，可预览钢件、紧固件及加工后的木构件副本。
 - [<span class="rstool-command-icon rstool-command-icon--index rstool-command-icon--single" title="rsSlab：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/8ac423d0-d56d-5409-ad5b-e4a7bc0148c4.png" alt="" width="48" height="48" loading="lazy" decoding="async"></span> rsSlab · 参数楼板](/commands/rsSlab) — 由一条或多条封闭平面曲线生成向下加厚的参数楼板，支持嵌套边界与通过自定义属性文本修改板厚。
 - [<span class="rstool-command-icon rstool-command-icon--index rstool-command-icon--single" title="rsSmartPipe：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/5a1f4e13-77f8-5a5a-8728-08ff359e34a6.png" alt="" width="48" height="48" loading="lazy" decoding="async"></span> rsSmartPipe · 智能管道与管综](/commands/rsSmartPipe) — 按不同规格的中心线生成空心管段与连接管件，先看预览，再统一写入模型。
 - [<span class="rstool-command-icon rstool-command-icon--index rstool-command-icon--single" title="rsPipeSchedule：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/7ed5b0ff-64d9-50f7-bab0-26a0a11c909c.png" alt="" width="48" height="48" loading="lazy" decoding="async"></span> rsPipeSchedule · 智能管道清单](/commands/rsPipeSchedule) — 读取智能管道对象的规格与长度记录，按类型、规格和生成时单位汇总成 CSV 清单。
 - [<span class="rstool-command-icon rstool-command-icon--index rstool-command-icon--single" title="rsDiscreteCity：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/4ad82529-de9f-584b-a57a-6707c96e66c2.png" alt="" width="48" height="48" loading="lazy" decoding="async"></span> rsDiscreteCity · 离散建筑组团](/commands/rsDiscreteCity) — 把建筑模块放进规则网格中，按接口、支承与通行约束生成组团，比较方案后再写入 Rhino 图块。
+- [<span class="rstool-command-icon rstool-command-icon--index" title="rsCityGenerator：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/435ccc02-2d6a-517c-a491-3e56c23a454f.png" alt="" width="48" height="48" loading="lazy" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/435ccc02-2d6a-517c-a491-3e56c23a454f.png" alt="" width="48" height="48" loading="lazy" decoding="async"></span> rsCityGenerator · 城市生成器](/commands/rsCityGenerator) — 从场地边界生成道路、街区、建筑和景观配套，支持地形、水域、功能分区、局部编辑与多方案比较，预览满意后再写入 Rhino。
 
 ### 三维墙体
 
@@ -262,10 +264,11 @@
 - [<span class="rstool-command-icon rstool-command-icon--index rstool-command-icon--single" title="rsAutoBoxMapping：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/19ff926a-9d32-43f4-bf99-a508767e7f4d.png" alt="" width="48" height="48" loading="lazy" decoding="async"></span> rsAutoBoxMapping · 自动盒映射](/commands/rsAutoBoxMapping) — 自动为对象设置盒映射贴图坐标，适合建筑模型快速贴图。
 - [<span class="rstool-command-icon rstool-command-icon--index rstool-command-icon--single" title="rsPBRToCustomMaterial：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/635b13f7-1bcf-5e90-aaef-daaabcc79a36.png" alt="" width="48" height="48" loading="lazy" decoding="async"></span> rsPBRToCustomMaterial · PBR转自定义材质](/commands/rsPBRToCustomMaterial) — 将 PBR 材质转换为 Rhino 自定义材质，便于在低版本 Rhino 中使用。
 
-## 视图出图（22 条）
+## 视图出图（23 条）
 
 ### 标注出图
 
+- [<span class="rstool-command-icon rstool-command-icon--index rstool-command-icon--single" title="rsExportLayoutToDwg：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/f8316960-e173-50cc-a26d-0be2fd8341f5.png" alt="" width="48" height="48" loading="lazy" decoding="async"></span> rsExportLayoutToDwg · 布局导出 DWG](/commands/rsExportLayoutToDwg) — 把选中的 Rhino Layout 按纸面排版压平成二维 DWG，每个布局单独导出一个文件，保留可矢量打印的视图投影、比例和裁切效果。
 - [<span class="rstool-command-icon rstool-command-icon--index rstool-command-icon--single" title="rsHatchPlanarSurfaces：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/02495ef7-dcec-44c5-859a-01cf611b5a82.png" alt="" width="48" height="48" loading="lazy" decoding="async"></span> rsHatchPlanarSurfaces · 平面填充](/commands/rsHatchPlanarSurfaces) — 自动为平面曲面添加填充图案，适合平面图材料表示。
 - [<span class="rstool-command-icon rstool-command-icon--index rstool-command-icon--single" title="rsSectionBox：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/db146960-c9fd-41f4-8fd0-7acc140f1ca3.png" alt="" width="48" height="48" loading="lazy" decoding="async"></span> rsSectionBox · 剖切框](/commands/rsSectionBox) — 创建三维剖切框，交互式调整剖切范围，用于查看模型内部。
 - [<span class="rstool-command-icon rstool-command-icon--index rstool-command-icon--single" title="rsSectionBoxToggle：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/017dfd7f-2fda-550d-b2cf-b65dccb4f973.png" alt="" width="48" height="48" loading="lazy" decoding="async"></span> rsSectionBoxToggle · 开关剖切框](/commands/rsSectionBoxToggle) — 临时关闭或恢复 Section Box 剖切显示，主控盒保留，可再次切换恢复。
@@ -292,7 +295,7 @@
 - [<span class="rstool-command-icon rstool-command-icon--index rstool-command-icon--single" title="rsExportCamToSU：右键点击 rsImportCamFromSU 按钮" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/e98fe49c-34c1-43b2-87f5-bbf99c6b96e3.png" alt="" width="48" height="48" loading="lazy" decoding="async"></span> rsExportCamToSU · 导出相机到 SketchUp](/commands/rsExportCamToSU) — 将 Rhino 当前视图的相机导出到 SketchUp 文件。
 - [<span class="rstool-command-icon rstool-command-icon--index rstool-command-icon--single" title="rsCameraPath：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/1bbbb943-f354-4682-a0db-85e6956ab023.png" alt="" width="48" height="48" loading="lazy" decoding="async"></span> rsCameraPath · 相机路径](/commands/rsCameraPath) — 创建相机动画路径，用于生成漫游动画。
 
-## 分析（10 条）
+## 分析（11 条）
 
 ### 建筑物理分析
 
@@ -306,6 +309,7 @@
 - [<span class="rstool-command-icon rstool-command-icon--index rstool-command-icon--single" title="rsStructuralAnalysis：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/ff60fa7f-d857-5064-9783-b9137b23fd32.png" alt="" width="48" height="48" loading="lazy" decoding="async"></span> rsStructuralAnalysis · 结构力学分析](/commands/rsStructuralAnalysis) — 对结构进行力学分析，可视化和计算受力情况。
 - [<span class="rstool-command-icon rstool-command-icon--index rstool-command-icon--single" title="rsIndoorIlluminance：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/a7e59d9a-a71a-5d61-b276-8c6a6b05871e.png" alt="" width="48" height="48" loading="lazy" decoding="async"></span> rsIndoorIlluminance · 室内照度与采光分析](/commands/rsIndoorIlluminance) — 对室内分析区域计算时点照度、采光系数或日累计照度，用彩色网格和统计结果比较采光方案。
 - [<span class="rstool-command-icon rstool-command-icon--index rstool-command-icon--single" title="rsAcousticAnalysis：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/a5ae95aa-0383-53e6-bc96-f7f4e999d1b8.png" alt="" width="48" height="48" loading="lazy" decoding="async"></span> rsAcousticAnalysis · 室内声学分析](/commands/rsAcousticAnalysis) — 从封闭的室内空气体积出发，结合吸声材料、声源和接收点，估算混响并比较室内声学方案。
+- [<span class="rstool-command-icon rstool-command-icon--index rstool-command-icon--single" title="rsNoiseAnalysis：源码专属图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/rsNoiseAnalysis.png" alt="" width="48" height="48" loading="lazy" decoding="async"></span> rsNoiseAnalysis · 场地噪声分析](/commands/rsNoiseAnalysis) — 分析道路、设备等声源对建筑立面的噪声影响，对比屏障、绿化等降噪方案，查看声级云图、降噪量并导出统计。
 
 ## 物理模拟（10 条）
 
@@ -407,7 +411,7 @@
 
 - [<span class="rstool-command-icon rstool-command-icon--index rstool-command-icon--single" title="rsDetachDynamicComponent：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/9a77948f-ddf1-5f09-a4d2-932043d82c0f.png" alt="" width="48" height="48" loading="lazy" decoding="async"></span> rsDetachDynamicComponent · 分离动态组件](/commands/rsDetachDynamicComponent) — 将选中的动态组件实例分离为普通几何，解除与动态模板的关联。
 
-## GH组件（73 条）
+## GH组件（74 条）
 
 ### Animation
 
@@ -472,6 +476,7 @@
 
 ### Mesh
 
+- [<span class="rstool-command-icon rstool-command-icon--index rstool-command-icon--gh rstool-command-icon--single" title="Bake Vertex Color Texture：GH 组件图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/BakeVertexColorTexture_24.png" alt="" width="48" height="48" loading="lazy" decoding="async"></span> Bake Vertex Color Texture · 顶点色烘焙贴图](/commands/bake-vertex-color-texture) — 把网格顶点色转成 PNG 贴图，并输出与贴图配套的 UV 网格，方便在不支持顶点色的渲染或导出流程中继续使用颜色。
 - [<span class="rstool-command-icon rstool-command-icon--index rstool-command-icon--gh rstool-command-icon--single" title="CurveProjectToMesh：GH 组件图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/CrvProjectToMesh_24.png" alt="" width="48" height="48" loading="lazy" decoding="async"></span> CurveProjectToMesh](/commands/CurveProjectToMesh) — 沿指定方向将曲线投影到网格。
 - [<span class="rstool-command-icon rstool-command-icon--index rstool-command-icon--gh rstool-command-icon--single" title="MeshEdgeSelect：GH 组件图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/MeshEdgeSelect_24.png" alt="" width="48" height="48" loading="lazy" decoding="async"></span> MeshEdgeSelect](/commands/MeshEdgeSelect) — 根据相邻网格面的夹角筛选网格边。
 - [<span class="rstool-command-icon rstool-command-icon--index rstool-command-icon--gh rstool-command-icon--single" title="MeshExplode：GH 组件图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/gh/ExplodeMesh_24.png" alt="" width="48" height="48" loading="lazy" decoding="async"></span> MeshExplode](/commands/MeshExplode) — 根据角度公差将网格拆分成独立部分。

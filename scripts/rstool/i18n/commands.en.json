@@ -79,6 +79,680 @@
     "装配": "Assembly"
   },
   "commands": {
+    "rsExportLayoutToDwg": {
+      "sourceHash": "58563b2e316c004a705b5c49ca3e8c9a05471d8c21af218a88e7a9b7fcedb07f",
+      "title": "Export Layouts to DWG",
+      "desc": "Flatten selected Rhino layouts into separate 2D DWGs, preserving sheet placement and vector-printable view projections, scales, and clipping.",
+      "detail": {
+        "flow": [
+          "Prepare the Rhino layouts: paper sizes, Detail projections and scales, layer visibility, and paper-space text, dimensions, and borders. The command reports and exits if no layout pages exist.",
+          "Run rsExportLayoutToDwg to open Export Layouts to DWG. Alternatively, use RSTool → Views & Documentation → Annotation & Documentation → Export Layouts to DWG, or rsMenu → Drafting → Export Layouts to DWG.",
+          "Check the required pages, using Select all, Clear, or Current layout as needed. If a layout is active, only that page is initially selected; from a model view, all pages are selected. At least one page is required.",
+          "Browse for an output folder or enter a full absolute path. Vector resolution defaults to 1200 DPI; start with the default. Enable Overwrite existing DWGs only when replacement of existing drawings is intended.",
+          "Click Export DWG. Pages are processed individually. The Rhino command line reports output paths, errors, and a summary. A page failure does not stop later pages. Esc stops after the current processing step and keeps completed DWGs."
+        ],
+        "params": [
+          {
+            "label": "Layout selection",
+            "type": "multi-select list",
+            "def": "Active layout; all pages from a model view",
+            "range": "One or more layouts in the current document",
+            "note": "Select all checks every page, Clear unchecks every page, and Current layout selects only the active page. Current layout is unavailable from a model view."
+          },
+          {
+            "label": "Output folder",
+            "type": "folder path",
+            "def": "Last valid folder used in this session, otherwise the model folder",
+            "range": "Valid absolute folder path",
+            "note": "All selected DWGs are written here. Specify a folder if the model is unsaved and no previous valid folder exists. Missing folders are created if possible; write permission is still required."
+          },
+          {
+            "label": "Vector resolution (DPI)",
+            "type": "integer",
+            "def": 1200,
+            "range": "300–9600; increment 300",
+            "note": "Controls coordinate precision in vector printing, not screenshot resolution. Output remains 2D CAD geometry. Increasing it does not convert raster or rendered views into linework."
+          },
+          {
+            "label": "Overwrite existing DWGs",
+            "type": "toggle",
+            "def": "Off",
+            "range": "On / Off",
+            "note": "Off preserves existing files and adds suffixes such as (2) and (3). On permits replacement. Different pages within the same batch still receive separate names."
+          }
+        ],
+        "output": "Create one AutoCAD 2018 DWG per selected layout, named after the page. The complete sheet is flattened into DWG model space at Z=0 in paper millimetres, rather than exporting the original 3D model or retaining CAD layout viewports.",
+        "notes": "## Paper dimensions versus model dimensions\n\nThink of this as turning the complete layout sheet into an editable 2D CAD drawing. Projections, clipping, and placement from multiple Details are combined in one DWG together with paper-space annotations, fills, and borders. Rhino layouts and Details are not copied as AutoCAD layouts and viewports.\n\nOutput is organized in paper millimetres. An A4 landscape sheet uses a 297×210 mm paper extent. A 10 m model object in a 1:100 Detail measures approximately 100 mm in the exported drawing, not its original model length. Blank paper margins do not create border geometry; draw a border in the layout if required.\n\n## What is preserved\n\nThe command captures the sheet through Rhino native vector printing, then uses native PDF import and DWG writing. AutoCAD, VisualARQ, and virtual printer installation are not required. Vector-printable projections, view scales, Detail clipping, sectioning, visibility results, and print widths are carried through. This is neither a screenshot nor a fresh hidden-line calculation of every 3D object.\n\nText is retained as editable text where possible, curves as CAD curves, and fills as hatch objects. Dimensions are split into their printed appearance and lose associative dimension relationships. Fonts, linetypes, and layers pass through the printing pipeline, so original text semantics, annotation object types, and Rhino layer structure are not guaranteed.\n\n## Images, shading, and blank pages\n\nThe layout paper extent and each Detail's current display mode determine the result. Only vector-printable content is supported. Shaded or rendered views are not automatically converted to complete hidden-line drawings. Images, textures, and raster shading cannot be fully converted into 2D linework. A page containing raster images is explicitly rejected rather than silently exported with missing image content.\n\nRemove images and check Detail display modes, then retry with vector-printable content. A blank page with no exportable 2D geometry also reports failure, while later pages continue processing.\n\n## Names, overwrites, and cancellation\n\nFile names come from layout names, with invalid Windows characters replaced. Names that become identical after sanitizing are distinguished automatically. Existing targets are preserved by default with numbered suffixes such as (2) and (3). Enable overwriting carefully: it permits replacement of existing drawings.\n\nEach page is first written to a staged DWG and read back to confirm content before publishing the final file. A failed generation or verification does not damage the existing destination. Esc takes effect after the current processing step, rather than interrupting all calculations immediately. Completed files remain after cancellation. The source Rhino model is not flattened or replaced.\n\n## Macros and scripted use\n\nUse -rsExportLayoutToDwg to bypass the dialog. The first input is All or Current, and the second is an absolute output folder path. Enter accepts All. Current requires an active layout; from a model view it reports the requirement and exits.\n\n```text\n_-rsExportLayoutToDwg _All \"D:/Drawings/DWG\"\n```\n\nReplace All with Current to export only the active layout. Scripted mode uses 1200 DPI and numbers existing files without overwriting. Use the interactive dialog to change resolution or enable overwriting.",
+        "illustrations": [],
+        "videos": []
+      }
+    },
+    "Bake Vertex Color Texture": {
+      "sourceHash": "c12e930c7493fc57db79c63b29e04a0cc682081cf6f9f5909001dfeac300ae60",
+      "title": "Bake Vertex Color Texture",
+      "desc": "Convert mesh vertex colors to a PNG texture and output a matching UV mesh for rendering and export workflows that do not support vertex colors.",
+      "detail": {
+        "flow": [
+          "In Grasshopper, find Bake Vertex Color Texture under RSTool → Mesh and place it on the canvas. Its nickname is ColorTexture. This is a GH component, not a Rhino command-line command.",
+          "Connect a mesh with a color for every vertex to Mesh (M). Triangles, quads, or a mixture of both are supported.",
+          "Keep Save=False initially and inspect the output mesh and Size. Set File Path (P) to a PNG destination in an existing folder. Use an absolute path while the GH document is unsaved.",
+          "Connect a Grasshopper Button to Save (S) and press it to save. Overwrite defaults to False. Choose a new path if the file exists, or enable Overwrite after confirming replacement is intended.",
+          "Check Saved (S) and Message (I). Only Saved=True confirms that this solve wrote the PNG; a File Path output alone does not confirm success.",
+          "Bake or export the output Mesh and assign the PNG as its base-color or diffuse texture using the existing mesh UVs. Do not substitute the input mesh or apply new box or planar mapping."
+        ],
+        "params": [
+          {
+            "label": "Vertex-colored mesh",
+            "type": "mesh",
+            "def": "Required",
+            "range": "Item; valid triangle/quad mesh with 1–1000000 faces",
+            "note": "The vertex-color count must equal the vertex count. The input is unchanged; the output is an independent copy."
+          },
+          {
+            "label": "PNG file path",
+            "type": "text",
+            "def": "Empty",
+            "range": "Item; .png path",
+            "note": "A missing extension is completed with .png; other extensions are rejected. Relative paths use the saved GH document directory. The destination folder must exist. Empty is allowed with Save=False; a supplied path is validated even when saving is disabled."
+          },
+          {
+            "label": "Save texture",
+            "type": "boolean",
+            "def": "False",
+            "range": "Item; False / True",
+            "note": "False outputs a UV mesh without writing a PNG. True attempts to save on every solve. Use a Button rather than leaving it True."
+          },
+          {
+            "label": "Allow overwrite",
+            "type": "boolean",
+            "def": "False",
+            "range": "Item; False / True",
+            "note": "Enable to replace an existing PNG. When disabled, an existing file is preserved and the save attempt reports failure."
+          }
+        ],
+        "output": "Bake triangle/quad mesh vertex colors to a PNG and output an independent mesh with matching UVs. Use it to transfer colors from analysis or gradient meshes into material-rendering and model-export workflows.",
+        "notes": "## Output ports\n\n| Name | Nickname | Type | Description |\n| --- | --- | --- | --- |\n| Mesh | M | Mesh | An independent mesh with face-local vertices and rebuilt UVs. Retains RGB vertex colors and source smooth normals, computing normals first if absent. Use this mesh for materials, baking, and export. |\n| File Path | P | Text | Absolute target path for this solve. No path is output when the input is empty and Save=False. This is not proof of a successful save. |\n| Size | R | Integer | Square PNG side length in pixels, calculated from the face count. |\n| Saved | S | Boolean | True only if this solve successfully wrote the PNG; False when saving is disabled or fails. |\n| Message | I | Text | Status or error details, including disabled saving, successful writes, invalid paths, and blocked overwrites. |\n\n## Why the output mesh is essential\n\nThis is not a viewport screenshot. It arranges face corner colors into a compact atlas. Each face receives a 2×2 pixel cell and its own UV island. Shared vertices are separated by face to align the UVs, increasing the vertex count and replacing original UVs and Ngon grouping. The original input remains unchanged.\n\nThe PNG side length is 2 × ceil(sqrt(face count)): 10000 faces produce a 200×200 pixel texture. There is no separate resolution input. Image size does not depend on model dimensions or viewport size. The compact atlas reconstructs face colors through its matching UVs and cannot simply be assigned to the original mesh.\n\n## Saving and connecting materials\n\nUse a Button for Save. Leaving a Boolean Toggle True can write again on any recomputation; with Overwrite=False, the next write to the same file is blocked. On failure, read Message and check the folder, extension, write permissions, and overwrite setting.\n\nFor preview, connect the PNG path to [MaterialPlus](./MaterialPlus) / DiffuseTex (DT) and use Grasshopper Custom Preview. Alternatively, connect the path to [Preview Materials](./preview-materials) / Diffuse with Color=White and Transparency=0 to avoid extra tinting or transparency. Both workflows must use the output mesh.\n\nHere, baking means converting vertex colors to a texture. The component does not add objects to the Rhino document or automatically create or assign Rhino materials. Bake or export the output mesh yourself and keep the PNG with the model.\n\n## Limitations\n\nSupports up to 1000000 faces without third-party plugins. Colors are opaque RGB; vertex alpha is not retained. Quad bilinear texture interpolation can differ slightly from vertex-color rendering after a renderer triangulates the quad.\n\nThe atlas has no additional mipmap padding, so distant or low-resolution sampling can bleed between neighboring faces. Prefer bilinear sampling and retain the generated UVs rather than remapping the atlas as an ordinary tiled image.",
+        "illustrations": [],
+        "videos": []
+      }
+    },
+    "rsTimberJoint": {
+      "title": "Timber Joints",
+      "desc": "Create twelve types of steel-to-timber connections for columns, beams, and cross-bracing, with previews of steel parts, fasteners, and processed timber copies.",
+      "detail": {
+        "flow": [
+          "Run rsTimberJoint to open the Steel-to-timber joints · Fu_Wood panel, or choose rsMenu → Architecture → Timber Joints.",
+          "Choose a category and joint type. Changing type clears selected objects and the support plane; select inputs again for the new type.",
+          "Select columns, beams, or guides using the displayed buttons and press Enter to finish each selection. Bases accept batches of columns; beam joints need at least two beams; column-to-beam joints need both roles; cross-bracing needs four surrounding members and two straight guides.",
+          "Adjust the dimensions for the selected type, always in millimetres. Inclinable bases can capture the current construction plane as a support plane or revert to automatic horizontal planes at column bottoms.",
+          "Complete inputs trigger an orange preview. Parameters or valid source changes refresh it; Preview recomputes manually. Check connection counts, part counts, and diagnostic messages.",
+          "Click Create to recompute the current inputs and write grouped geometry to the document. One undo reverses the batch. The panel remains open and clears selections for the next batch."
+        ],
+        "params": [
+          {
+            "label": "Category",
+            "type": "option",
+            "def": "Column bases",
+            "range": "Column bases / Beam joints / Column-to-beam joints / Bracing",
+            "note": "Choose a construction category before selecting a joint type."
+          },
+          {
+            "label": "Joint type",
+            "type": "option",
+            "def": "Adjustable-height column base",
+            "range": "Types in the selected category; twelve in total",
+            "note": "Changing type clears selections and the support plane and replaces the dimension fields."
+          },
+          {
+            "label": "Support plane",
+            "type": "plane",
+            "def": "Horizontal plane at each column bottom",
+            "range": "Automatic / Capture current construction plane",
+            "note": "Only available for the two inclinable bases; captures position and orientation at selection time."
+          },
+          {
+            "label": "Hide originals",
+            "type": "toggle",
+            "def": "On",
+            "range": "On / Off",
+            "note": "Hides only source timber with processed copies; never deletes source geometry."
+          },
+          {
+            "label": "Top plate width",
+            "type": "length (mm)",
+            "def": 220,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Transverse dimension of the upper plate."
+          },
+          {
+            "label": "Top plate length",
+            "type": "length (mm)",
+            "def": 400,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Longitudinal dimension of the upper plate."
+          },
+          {
+            "label": "Base plate width",
+            "type": "length (mm)",
+            "def": 250,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Transverse dimension of the base plate."
+          },
+          {
+            "label": "Base plate length",
+            "type": "length (mm)",
+            "def": 400,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Longitudinal dimension of the base plate."
+          },
+          {
+            "label": "Steel plate thickness",
+            "type": "length (mm)",
+            "def": 12,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Thickness of the base or connection plate for this type."
+          },
+          {
+            "label": "Rod / bolt radius",
+            "type": "length (mm)",
+            "def": 15,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Radius of the rod, bolt, pin, or headed pin used by this type; enter a radius, not a diameter."
+          },
+          {
+            "label": "Height",
+            "type": "length (mm)",
+            "def": 200,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Height of the base, knife plate, end plate, or connector identified by this type. Inclinable bases use hinge-axis distance normal to the support plane."
+          },
+          {
+            "label": "Width",
+            "type": "length (mm)",
+            "def": 300,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Width of the plate, connector, or hanger identified by this joint type."
+          },
+          {
+            "label": "Base plate length",
+            "type": "length (mm)",
+            "def": 200,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Longitudinal dimension of the base plate."
+          },
+          {
+            "label": "Steel plate thickness",
+            "type": "length (mm)",
+            "def": 12,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Thickness of the base or connection plate for this type."
+          },
+          {
+            "label": "Knife plate thickness",
+            "type": "length (mm)",
+            "def": 6,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Thickness of the crossed knife plates; must fit within the available section."
+          },
+          {
+            "label": "Height",
+            "type": "length (mm)",
+            "def": 310,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Height of the base, knife plate, end plate, or connector identified by this type. Inclinable bases use hinge-axis distance normal to the support plane."
+          },
+          {
+            "label": "Support plate height",
+            "type": "length (mm)",
+            "def": 50,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Support-plate height, with adequate separation from the base and knife plates."
+          },
+          {
+            "label": "Width",
+            "type": "length (mm)",
+            "def": 220,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Width of the plate, connector, or hanger identified by this joint type."
+          },
+          {
+            "label": "Base plate length",
+            "type": "length (mm)",
+            "def": 400,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Longitudinal dimension of the base plate."
+          },
+          {
+            "label": "Steel plate thickness",
+            "type": "length (mm)",
+            "def": 12,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Thickness of the base or connection plate for this type."
+          },
+          {
+            "label": "Height",
+            "type": "length (mm)",
+            "def": 200,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Height of the base, knife plate, end plate, or connector identified by this type. Inclinable bases use hinge-axis distance normal to the support plane."
+          },
+          {
+            "label": "Rod / bolt radius",
+            "type": "length (mm)",
+            "def": 5,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Radius of the rod, bolt, pin, or headed pin used by this type; enter a radius, not a diameter."
+          },
+          {
+            "label": "Width",
+            "type": "length (mm)",
+            "def": 150,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Width of the plate, connector, or hanger identified by this joint type."
+          },
+          {
+            "label": "Height",
+            "type": "length (mm)",
+            "def": 300,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Height of the base, knife plate, end plate, or connector identified by this type. Inclinable bases use hinge-axis distance normal to the support plane."
+          },
+          {
+            "label": "Steel plate thickness",
+            "type": "length (mm)",
+            "def": 12,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Thickness of the base or connection plate for this type."
+          },
+          {
+            "label": "Insertion / bearing depth",
+            "type": "length (mm)",
+            "def": 200,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Knife insertion depth for the T joint, or bearing depth along the incoming beam for BSA."
+          },
+          {
+            "label": "Width",
+            "type": "length (mm)",
+            "def": 300,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Width of the plate, connector, or hanger identified by this joint type."
+          },
+          {
+            "label": "Base plate length",
+            "type": "length (mm)",
+            "def": 200,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Longitudinal dimension of the base plate."
+          },
+          {
+            "label": "Steel plate thickness",
+            "type": "length (mm)",
+            "def": 20,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Thickness of the base or connection plate for this type."
+          },
+          {
+            "label": "Height",
+            "type": "length (mm)",
+            "def": 400,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Height of the base, knife plate, end plate, or connector identified by this type. Inclinable bases use hinge-axis distance normal to the support plane."
+          },
+          {
+            "label": "Height",
+            "type": "length (mm)",
+            "def": 200,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Height of the base, knife plate, end plate, or connector identified by this type. Inclinable bases use hinge-axis distance normal to the support plane."
+          },
+          {
+            "label": "Width",
+            "type": "length (mm)",
+            "def": 100,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Width of the plate, connector, or hanger identified by this joint type."
+          },
+          {
+            "label": "Steel plate thickness",
+            "type": "length (mm)",
+            "def": 10,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Thickness of the base or connection plate for this type."
+          },
+          {
+            "label": "Rod / cable radius",
+            "type": "length (mm)",
+            "def": 15,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Radius, not diameter, of the two diagonal rods or cables."
+          },
+          {
+            "label": "Clip hole spacing",
+            "type": "length (mm)",
+            "def": 75,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Distance between the clip connection holes."
+          },
+          {
+            "label": "Clip large-end radius",
+            "type": "length (mm)",
+            "def": 35,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Outline radius at the larger end of the clip."
+          },
+          {
+            "label": "Clip small-end radius",
+            "type": "length (mm)",
+            "def": 25,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Outline radius at the smaller end of the clip."
+          },
+          {
+            "label": "Clip thickness",
+            "type": "length (mm)",
+            "def": 5,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Thickness of the clip plate."
+          },
+          {
+            "label": "Top plate width",
+            "type": "length (mm)",
+            "def": 220,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Transverse dimension of the upper plate."
+          },
+          {
+            "label": "Top plate length",
+            "type": "length (mm)",
+            "def": 400,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Longitudinal dimension of the upper plate."
+          },
+          {
+            "label": "Base plate width",
+            "type": "length (mm)",
+            "def": 220,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Transverse dimension of the base plate."
+          },
+          {
+            "label": "Base plate length",
+            "type": "length (mm)",
+            "def": 400,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Longitudinal dimension of the base plate."
+          },
+          {
+            "label": "Steel plate thickness",
+            "type": "length (mm)",
+            "def": 12,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Thickness of the base or connection plate for this type."
+          },
+          {
+            "label": "Height",
+            "type": "length (mm)",
+            "def": 200,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Height of the base, knife plate, end plate, or connector identified by this type. Inclinable bases use hinge-axis distance normal to the support plane."
+          },
+          {
+            "label": "Rod / bolt radius",
+            "type": "length (mm)",
+            "def": 5,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Radius of the rod, bolt, pin, or headed pin used by this type; enter a radius, not a diameter."
+          },
+          {
+            "label": "Cradle clear width",
+            "type": "length (mm)",
+            "def": 220,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Clear internal cradle width; must accommodate the column section."
+          },
+          {
+            "label": "Cradle clear length",
+            "type": "length (mm)",
+            "def": 400,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Clear internal cradle length; must accommodate the column section."
+          },
+          {
+            "label": "Base plate width",
+            "type": "length (mm)",
+            "def": 220,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Transverse dimension of the base plate."
+          },
+          {
+            "label": "Base plate length",
+            "type": "length (mm)",
+            "def": 400,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Longitudinal dimension of the base plate."
+          },
+          {
+            "label": "Steel plate thickness",
+            "type": "length (mm)",
+            "def": 12,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Thickness of the base or connection plate for this type."
+          },
+          {
+            "label": "Height",
+            "type": "length (mm)",
+            "def": 200,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Height of the base, knife plate, end plate, or connector identified by this type. Inclinable bases use hinge-axis distance normal to the support plane."
+          },
+          {
+            "label": "Rod / bolt radius",
+            "type": "length (mm)",
+            "def": 5,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Radius of the rod, bolt, pin, or headed pin used by this type; enter a radius, not a diameter."
+          },
+          {
+            "label": "Base plate radius",
+            "type": "length (mm)",
+            "def": 220,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Radius, not diameter, of the round base plate."
+          },
+          {
+            "label": "Steel plate thickness",
+            "type": "length (mm)",
+            "def": 12,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Thickness of the base or connection plate for this type."
+          },
+          {
+            "label": "Height",
+            "type": "length (mm)",
+            "def": 200,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Height of the base, knife plate, end plate, or connector identified by this type. Inclinable bases use hinge-axis distance normal to the support plane."
+          },
+          {
+            "label": "Rod / bolt radius",
+            "type": "length (mm)",
+            "def": 5,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Radius of the rod, bolt, pin, or headed pin used by this type; enter a radius, not a diameter."
+          },
+          {
+            "label": "Width",
+            "type": "length (mm)",
+            "def": 150,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Width of the plate, connector, or hanger identified by this joint type."
+          },
+          {
+            "label": "Height",
+            "type": "length (mm)",
+            "def": 300,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Height of the base, knife plate, end plate, or connector identified by this type. Inclinable bases use hinge-axis distance normal to the support plane."
+          },
+          {
+            "label": "Steel plate thickness",
+            "type": "length (mm)",
+            "def": 12,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Thickness of the base or connection plate for this type."
+          },
+          {
+            "label": "Insertion / bearing depth",
+            "type": "length (mm)",
+            "def": 180,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Knife insertion depth for the T joint, or bearing depth along the incoming beam for BSA."
+          },
+          {
+            "label": "Rod / bolt radius",
+            "type": "length (mm)",
+            "def": 5,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Radius of the rod, bolt, pin, or headed pin used by this type; enter a radius, not a diameter."
+          },
+          {
+            "label": "Width",
+            "type": "length (mm)",
+            "def": 150,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Width of the plate, connector, or hanger identified by this joint type."
+          },
+          {
+            "label": "Height",
+            "type": "length (mm)",
+            "def": 300,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Height of the base, knife plate, end plate, or connector identified by this type. Inclinable bases use hinge-axis distance normal to the support plane."
+          },
+          {
+            "label": "Steel plate thickness",
+            "type": "length (mm)",
+            "def": 12,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Thickness of the base or connection plate for this type."
+          },
+          {
+            "label": "Rod / bolt radius",
+            "type": "length (mm)",
+            "def": 5,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Radius of the rod, bolt, pin, or headed pin used by this type; enter a radius, not a diameter."
+          },
+          {
+            "label": "Assembly clearance",
+            "type": "length (mm)",
+            "def": 1,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Reserved gap at mating connector parts."
+          },
+          {
+            "label": "Width",
+            "type": "length (mm)",
+            "def": 150,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Width of the plate, connector, or hanger identified by this joint type."
+          },
+          {
+            "label": "Height",
+            "type": "length (mm)",
+            "def": 300,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Height of the base, knife plate, end plate, or connector identified by this type. Inclinable bases use hinge-axis distance normal to the support plane."
+          },
+          {
+            "label": "Steel plate thickness",
+            "type": "length (mm)",
+            "def": 12,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Thickness of the base or connection plate for this type."
+          },
+          {
+            "label": "Rod / bolt radius",
+            "type": "length (mm)",
+            "def": 5,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Radius of the rod, bolt, pin, or headed pin used by this type; enter a radius, not a diameter."
+          },
+          {
+            "label": "Assembly clearance",
+            "type": "length (mm)",
+            "def": 1,
+            "range": "0.001–1000000; also > 2 × document tolerance in mm",
+            "note": "Reserved gap at mating connector parts."
+          }
+        ],
+        "paramSections": [
+          {
+            "title": "Shared panel controls",
+            "intro": "The category determines available types; input buttons and dimensions depend on the selected type. All joint dimensions below are in millimetres."
+          },
+          {
+            "title": "Adjustable-height column base",
+            "intro": "Select rectangular-section columns, individually or in a batch. A connecting rod joins the upper and lower plates. Fit the upper plate to the column section before adjusting the base height."
+          },
+          {
+            "title": "Cross knife-plate column base",
+            "intro": "Select rectangular-section columns. Crossed knife plates enter the timber above a support plate. Leave sufficient clearance between knife thickness, support height, and knife height."
+          },
+          {
+            "title": "T-shaped knife-plate column base",
+            "intro": "Select rectangular-section columns to create base plates, knife plates, through-bolts, and processed timber copies with matching slots and holes."
+          },
+          {
+            "title": "Concealed T-shaped beam joint",
+            "intro": "Select at least two connected beams. The joint is located where an incoming beam end meets a receiving beam side, including curved beam ends. Fit the end plate to the incoming section."
+          },
+          {
+            "title": "Concealed T-shaped column-to-beam joint",
+            "intro": "Select columns and beams separately, with at least one of each. Connections are located at column-top to beam-underside contacts. Coaxial beams at the same location can share a connector."
+          },
+          {
+            "title": "Cross-cable bracing joint",
+            "intro": "Select exactly four surrounding members and two intersecting, coplanar straight guide lines. Place their endpoints near the four actual inside corners. The command creates corner plates, clips, pins, and offset diagonal rods; it does not process the frame or guides."
+          },
+          {
+            "title": "Reinforced column base",
+            "intro": "Select columns. A tubular support connects the upper and lower plates, while a central rod and top-plate bolts connect the timber. Upper and lower plate dimensions are independently adjustable."
+          },
+          {
+            "title": "Inclinable rectangular column base",
+            "intro": "Select rectangular-section columns. The cradle follows the actual column inclination. Its clear width and length must accommodate the section. Height is the normal distance from the hinge axis to the support plane, not a distance along the inclined column."
+          },
+          {
+            "title": "Inclinable round column base",
+            "intro": "Select columns with circular end faces to create round bases, cylindrical collars, and hinges. A support plane can be specified as for the rectangular inclinable base; height is measured normal to that plane."
+          },
+          {
+            "title": "BSA external-wing beam hanger",
+            "intro": "Select at least two beams for an end-to-side connection. The clear hanger width must accommodate the incoming beam. Bearing depth controls extension along the beam end. Curved beam ends are supported."
+          },
+          {
+            "title": "Lock-T concealed connector",
+            "intro": "Select at least two beams to create paired end plates, keyholes, headed pins, and installation recesses on both sides. Assembly clearance reserves space at mating parts; it is not an approved structural fabrication tolerance."
+          },
+          {
+            "title": "UV-T dovetail concealed connector",
+            "intro": "Select at least two beams to create dovetail rails, mating plates, fixing holes, and installation recesses on both sides. Fit the connector to the beam section before adjusting assembly clearance."
+          }
+        ],
+        "output": "Create steel parts, fasteners, and timber copies with the required slots, holes, or cuts. Processed timber inherits source layers and materials. Steel and fasteners are placed on separate sublayers under the joint output layer; each batch is grouped.",
+        "notes": "## Using the panel\n\nChoose Column bases, Beam joints, Column-to-beam joints, or Bracing, then select a specific type. The illustration explains component positions. Only the relevant input buttons and dimensions are displayed. Type prefixes in the parameter tables distinguish repeated keys; they are not text to enter in Rhino.\n\nAll dimensions are entered in millimetres, even in a metre-based model; results are converted back to document units. Tables show first-use defaults. Each type remembers its dimensions within the session. Numeric controls allow 0.001–1000000, but every dimension must also exceed twice the model absolute tolerance converted to millimetres and fit the member section and joint geometry.\n\n## Preparing the model\n\nTimber inputs can be Breps, surfaces, or Extrusions, including curved beams and open surfaces. Meshes and block instances are unsupported. End joints and bases still require identifiable planar end faces; cross-bracing can use individual side faces. Inputs must be visible, unlocked, and editable. An object cannot act as both a column and a beam.\n\nJoints are located from actual geometric contact, not proximity alone. Incoming beam ends must meet receiving sides, and column tops must meet beam undersides. Resolve missing contacts or ambiguous receiving members using the diagnostic messages. Cross-bracing requires two intersecting, coplanar straight guides with endpoints near the four inside corners.\n\n## Support planes for inclined bases\n\nInclinable rectangular and round bases default to horizontal planes at each column bottom. Capture current construction plane saves its full position and orientation as a common support plane. Later construction-plane changes do not update it; capture again if necessary. Automatic restores the default. Height means hinge-axis distance normal to the support plane. Round bases require circular column ends.\n\n## Source geometry and output\n\nProcessing works on copies without deleting or rewriting the original timber. Hide originals is on by default. During preview, only sources with processed copies are temporarily suppressed, and they reappear when the preview ends or the panel closes. Creation hides those sources and retains processed copies. Turn the option off to keep originals visible, potentially overlapping output. Unconnected members and the original cross-bracing frame and guides remain unchanged.\n\nResults are ordinary geometry, not joints that can be reopened for parametric editing. One undo removes the batch and restores hidden originals; redo is supported. Switching documents closes the panel. Remembered session settings do not provide editable node history.\n\n## Scope\n\nThis is a connection-modeling tool, not a structural analysis, fabrication drawing, or bill-of-materials tool. BSA, Lock-T, UV-T, and other types are parametric construction representations rather than exact manufacturer replicas. Defaults and assembly clearances do not replace project-specific structural design and fabrication approval.",
+        "illustrations": [
+          {
+            "alt": "Construction diagrams of the twelve rsTimberJoint connection types",
+            "caption": "Twelve connection types: translucent pale timber, blue-grey steel, dark-grey fasteners, and orange mating regions. Diagrams explain construction and do not update with dimensions; the orange viewport preview shows the calculated geometry."
+          }
+        ],
+        "videos": []
+      },
+      "sourceHash": "c7d622552860989f5b07663e6dfecb0347be63466c449a20ca028dbf19c5981d"
+    },
     "rsUnlockAllLayers": {
       "sourceHash": "c4cd5d9749f38260d102dd6131dd78881e92476e22b7ef4f9ae649425e3758fb",
       "title": "Unlock All Layers",
@@ -690,6 +1364,255 @@
         ]
       }
     },
+    "rsNoiseAnalysis": {
+      "sourceHash": "9b2a2595d3129d83542a78a4136a34ff5fd6a4a15a854c1cb8b0f0848113ad9f",
+      "title": "Site Noise Analysis",
+      "desc": "Estimate road and equipment noise on building facades, compare screen and vegetation scenarios, view noise maps and reductions, and export statistics.",
+      "detail": {
+        "flow": [
+          "Run rsNoiseAnalysis in Rhino to open Site Noise Analysis, or use RSTool → Terrain → Analysis.",
+          "On Scene, select buildings and optional surrounding obstacles. Confirm document units and sampling spacing, then preview receivers and normals to check that arrows point outward.",
+          "On Sources, choose a preset before selecting points / curves or picking a point-source position. Edit reference levels, distances, and duty factors individually, then Apply Source Settings.",
+          "Create, duplicate, or rename scenarios on Results. Return to Measures to assign screens and vegetation to Existing baseline measures or Current scenario additions, then apply and preview.",
+          "Click Calculate All. On Results, compare baseline levels, scenario levels, and reductions; inspect building samples for local values and individual source contributions.",
+          "Use Bake Result for coloured meshes with legends, or export all scenarios to CSV. Save Settings in 3dm and save the Rhino file to continue later."
+        ],
+        "params": [
+          {
+            "label": "Spacing",
+            "type": "double",
+            "def": "2 m",
+            "range": "0.1–100 m",
+            "note": "Smaller spacing gives denser facade samples and costs more computation. Start with the default."
+          },
+          {
+            "label": "Receiver offset",
+            "type": "double",
+            "def": "0.1 m",
+            "range": "0.001–5 m",
+            "note": "Moves receivers outward along analysis normals to keep them outside the wall."
+          },
+          {
+            "label": "Include roofs",
+            "type": "bool",
+            "def": "Off",
+            "range": "On / Off",
+            "note": "Facades are analysed by default. Enable to include roof exposure."
+          },
+          {
+            "label": "Flip receiver normals",
+            "type": "bool",
+            "def": "Off",
+            "range": "On / Off",
+            "note": "Use Preview Normals / Receivers first. Arrows should point outward; flip for open geometry if needed."
+          },
+          {
+            "label": "Analysis period",
+            "type": "double",
+            "def": "1 h",
+            "range": "0.01–24 h",
+            "note": "Results are LAeq,T for this period. Changing the period does not infer traffic or source duty factors."
+          },
+          {
+            "label": "Temperature",
+            "type": "double",
+            "def": "20 °C",
+            "range": "−20–50 °C",
+            "note": "Used for sound speed and, when enabled, air absorption."
+          },
+          {
+            "label": "Relative humidity",
+            "type": "double",
+            "def": "50%",
+            "range": "1–100%",
+            "note": "Used with temperature for air absorption."
+          },
+          {
+            "label": "Air absorption",
+            "type": "bool",
+            "def": "On",
+            "range": "On / Off",
+            "note": "Estimates octave-band atmospheric attenuation using uniform site conditions."
+          },
+          {
+            "label": "Source preset",
+            "type": "enum",
+            "def": "Road · medium scenario",
+            "range": "Road low/medium/high, rail, fan, generator, compressor, excavator, jackhammer, crowd, custom point",
+            "note": "Choose a preset before adding sources. Roads and rail use curves; equipment and crowds use points or picked positions."
+          },
+          {
+            "label": "Source name / enabled",
+            "type": "text / bool",
+            "def": "Preset name; enabled",
+            "range": "Custom name; On / Off",
+            "note": "Edit sources individually and click Apply Source Settings."
+          },
+          {
+            "label": "Level type",
+            "type": "enum",
+            "def": "Preset-dependent",
+            "range": "Period average LAeq,T / Operating level or Lmax estimate",
+            "note": "Period averages are not duty-corrected again. Operating levels are converted using the duty factor."
+          },
+          {
+            "label": "Reference level",
+            "type": "double",
+            "def": "Medium road 70 dB(A); otherwise preset-dependent",
+            "range": "−100–180 dB(A)",
+            "note": "Enter the SPL from this source alone at the reference position, not sound power. Road values 60/70/80 are illustrative scenarios."
+          },
+          {
+            "label": "Level entered / confirmed",
+            "type": "bool",
+            "def": "Unconfirmed for rail / crowd; confirmed for other presets",
+            "range": "Checked / Unchecked",
+            "note": "Rail and crowd presets require measured levels and confirmation; placeholder values are not measurements."
+          },
+          {
+            "label": "Reference distance",
+            "type": "double",
+            "def": "Road 10 m; equipment presets 15.24 m",
+            "range": "0.5–10000 m (UI)",
+            "note": "A finite line source is calibrated as a whole at a horizontal side offset from its arc-length midpoint. A picked measurement reference overrides this default position."
+          },
+          {
+            "label": "Height offset",
+            "type": "double",
+            "def": "0 m",
+            "range": "−1000–1000 m",
+            "note": "Adds an offset to the selected point or curve height, rather than setting an absolute elevation."
+          },
+          {
+            "label": "Duty factor",
+            "type": "double",
+            "def": "Road 100%; otherwise preset-dependent",
+            "range": "0–100%",
+            "note": "For operating / Lmax estimates only: equivalent level is approximately L + 10log10(fraction). Zero means no contribution."
+          },
+          {
+            "label": "Octave-band SPL",
+            "type": "text",
+            "def": "Empty",
+            "range": "Eight comma-separated values, −100–180 dB",
+            "note": "Enter unweighted SPL at 63/125/250/500/1000/2000/4000/8000 Hz. Entered bands determine the total; empty uses a normalized flat spectrum matching total dB(A)."
+          },
+          {
+            "label": "Measure assignment",
+            "type": "enum",
+            "def": "Current scenario additions",
+            "range": "Existing baseline measures / Current scenario additions",
+            "note": "Existing measures apply to baseline and every scenario. Additions apply only to the current scenario selected on Results."
+          },
+          {
+            "label": "Measure geometry",
+            "type": "geometry",
+            "def": "User selection",
+            "range": "Existing screens or trees; screen curves or closed vegetation regions",
+            "note": "Select existing screens or define them with curves and height. Use tree models or horizontal closed regions with height for vegetation."
+          },
+          {
+            "label": "Measure name / enabled",
+            "type": "text / bool",
+            "def": "Automatic name; enabled",
+            "range": "Custom name; On / Off",
+            "note": "Copy measures into the current scenario to compare combinations. Apply and preview to check placement."
+          },
+          {
+            "label": "Measure height",
+            "type": "double",
+            "def": "3 m",
+            "range": "0.1–200 m",
+            "note": "Used for curve-defined measures and existing vegetation with Use model height disabled. Existing screens use their actual geometry."
+          },
+          {
+            "label": "Use model height",
+            "type": "bool",
+            "def": "On",
+            "range": "On / Off",
+            "note": "Uses existing vegetation height for its calculation envelope. Disable to use the Height field."
+          },
+          {
+            "label": "Screen transmission loss",
+            "type": "double",
+            "def": "25 dB",
+            "range": "0–100 dB",
+            "note": "Controls transmission through a screen and combines with diffraction by energy. It is not a guaranteed reduction at each receiver."
+          },
+          {
+            "label": "Vegetation density",
+            "type": "double",
+            "def": "0%",
+            "range": "0–100%",
+            "note": "Zero gives no attenuation credit for sparse trees. Dense continuous undergrowth at 100% gives about 5 dB over 30 m, capped at 5 dB; overlap is not double-counted."
+          },
+          {
+            "label": "Vegetation envelope width scale",
+            "type": "double",
+            "def": "1",
+            "range": "0.1–5",
+            "note": "Adjusts the calculation envelope width for existing vegetation, not the tree geometry itself."
+          },
+          {
+            "label": "Current scenario / name",
+            "type": "scenario",
+            "def": "Scenario 1",
+            "range": "New, duplicate, rename, remove; keep at least one",
+            "note": "Create separate planting, screen, and combined scenarios. Calculate All computes baseline and every scenario together."
+          },
+          {
+            "label": "Display mode",
+            "type": "enum",
+            "def": "Scenario level",
+            "range": "Baseline level / Scenario level / Reduction",
+            "note": "Reduction equals baseline minus scenario: green is improvement, red is an increase, white is no change."
+          },
+          {
+            "label": "Level colour scale",
+            "type": "double",
+            "def": "35–85 dB(A)",
+            "range": "Minimum −100–179; maximum at least 1 higher and no greater than 180",
+            "note": "All scenarios share the level scale. Reduction maps use a separate signed scale."
+          },
+          {
+            "label": "Smooth display only",
+            "type": "bool",
+            "def": "Off",
+            "range": "On / Off",
+            "note": "Changes display only, not raw receiver values or statistics. Apply with Update Display and Statistics."
+          },
+          {
+            "label": "Area target / target level",
+            "type": "bool / double",
+            "def": "Disabled; field 55 dB(A)",
+            "range": "On / Off; 0–180 dB(A)",
+            "note": "Reports the sampled building area above the chosen target. It does not make an automatic regulatory compliance judgement."
+          }
+        ],
+        "paramSections": [
+          {
+            "title": "Scene: buildings and sampling",
+            "intro": "Select buildings to analyse and optional surrounding buildings or terrain as obstacles. Surfaces, solids, extrusions, SubD, meshes, and block instances are converted into temporary meshes while preserving originals. Analysed buildings also obstruct themselves and each other. Apply Analysis Settings, then check normals and receivers."
+          },
+          {
+            "title": "Sources: roads, equipment, and measured input",
+            "intro": "Multiple sources are combined by energy. Establish the measurement distance and time period before adjusting duty factors. Pick Measurement Reference Point calibrates the selected source at a measured location; Use Default Reference Position restores the default."
+          },
+          {
+            "title": "Measures: screens, vegetation, and assignment",
+            "intro": "Select a scenario on Results before adding measures here. Apply and Preview Measure only previews the measure. Bake Selected Measure Geometry creates display meshes on a separate layer; calculation retains the original input references."
+          },
+          {
+            "title": "Results: scenario comparison, maps, and statistics",
+            "intro": "Calculate All at the bottom computes the baseline and every scenario and can be cancelled. Switch maps, inspect raw receiver levels and individual source contributions, bake result meshes, or export all scenarios to CSV."
+          }
+        ],
+        "output": "Preview building-surface LAeq,T maps and baseline-minus-scenario reduction maps. Bake coloured meshes with legends and report area-weighted energy means, maximum levels, and optional above-target area percentages by building. CSV includes every scenario, receiver coordinates, source contributions, and calculation diagnostics.",
+        "notes": "## Try the procedural demo first\n\nGenerate and Calculate Demo at the top of Scene creates two buildings, a road, a generator, a 3 m screen with a gap, and a 7 m wide dense planting strip on separate layers to the right of the existing model. It calculates planting, screen, and combined scenarios and opens Results. This switches the current window to the demo project; added geometry can be undone. Demo reductions apply only to those inputs, not to arbitrary real sites.\n\n## Enter meaningful sound levels\n\nSource input is sound pressure level at a reference position, not sound power. The road presets of 60/70/80 dB(A) at 10 m are illustrative design scenarios, not guaranteed levels for road classes. Rail and crowd presets require measured values and confirmation. Equipment presets reference [FHWA historical construction equipment data](https://www.fhwa.dot.gov/environment/noise/construction_noise/handbook/handbook09.cfm); Lmax combined with a duty factor is only an equivalent estimate.\n\nDo not duty-correct an existing LAeq,T period average again. Levels and duty factors must match the chosen analysis period; changing 1 hour to 8 hours does not convert the inputs automatically. Reference measurements should represent free-field or corrected contributions from one source, avoiding double-counting other sources or existing screening effects.\n\nA finite line is calibrated as a whole. Integration subdivision does not increase total strength, but splitting a road into independent sources and assigning the same whole-road level to each changes the input meaning. Octave bands require unweighted SPL, not eight A-weighted or sound-power values.\n\n## Interpret screens and vegetation\n\nScreen performance depends on actual height, ends, gaps, and receiver positions. A 25 dB screen transmission loss is not a guaranteed 25 dB facade reduction. Diffraction uses a design-stage Maekawa path-difference approximation capped at 25 dB. Where complex obstruction yields no usable path, screening credit is conservatively omitted and diagnostics are recorded.\n\nVegetation attenuation uses effective path length through its envelope and density; crowns are not treated as solid walls. Sparse trees receive no default attenuation credit. Dense continuous undergrowth uses an empirical approximation of about 5 dB over 30 m, capped at 5 dB overall, with overlap counted once. See [FHWA vegetation guidance](https://www.fhwa.dot.gov/environment/noise/noise_barriers/design_construction/keepdown.cfm).\n\n## Save and recalculate\n\nSettings, object references, and scenarios are stored in the current document; save the 3dm to retain them. Recalculate after reopening or changing buildings, sources, or measures. Smoothing, colour scales, and target values affect presentation or statistics without changing raw receiver results. A CSV value of −∞ means no sound-energy contribution, not a failed calculation.\n\n## Scope\n\nUse this for design-stage site-noise and mitigation comparisons. Results represent incident building-surface sound, excluding facade reflection corrections, indoor transmission, multiple reflections, ground interference, atmospheric refraction, and traffic-flow prediction. Octave-band air absorption uses uniform temperature and humidity. Complex concave geometry, multiple screens, and reflective street canyons need further professional validation.\n\nDefault limits are 100,000 receivers, 20,000 integration cells per curve query, and 5 million receiver × source × scenario records. Increase spacing or simplify inputs if limits are exceeded; precision is not silently reduced. Results support design decisions and do not replace professional environmental-noise prediction, measurements, or acceptance testing.",
+        "illustrations": [],
+        "videos": []
+      }
+    },
     "rsAcousticAnalysis": {
       "sourceHash": "fbfb7a4895d293014a11109b909910bfdfcb545369f9d0d2ac40f4482beef7ac",
       "title": "Indoor Acoustic Analysis",
@@ -1116,6 +2039,302 @@
             "intro": "Adds local 3D water inside a box, not a fully 3D ocean. Include water depth, use static collider snapshots, and keep an obstacle-free transition near box edges."
           }
         ]
+      }
+    },
+    "rsCityGenerator": {
+      "sourceHash": "61c8cf50147321c521f8d21a93b8378ced6a175ffdb91f63be0bc10e9316662a",
+      "title": "City Generator",
+      "desc": "Generate roads, blocks, buildings, and landscape from a site boundary, with terrain, water, zoning, local editing, and variant comparison before baking into Rhino.",
+      "detail": {
+        "flow": [
+          "Run rsCityGenerator to open City Generator · Mesh City. Choose a preset on Site, then select a closed boundary. For a first trial, explicitly use the 600×450 m example site.",
+          "Add exclusions, water, terrain, and zones as needed. Choose a road pattern and adjust block spacing and widths, or import / select your own road centrelines.",
+          "Set parcel area, setbacks, floors, and detail on Buildings, then choose facades, roofs, or modules on Appearance. Start with massing for a large site.",
+          "Click Preview at the bottom to inspect roads and buildings. New seed explores alternatives. Preview does not bake the city into document objects; cancellation or failure retains the last valid preview.",
+          "Use Editing or Quick editing to lock good parcels and refine roads or buildings. For overall alternatives, generate a batch of massing variants and apply the selected result.",
+          "Review statistics and diagnostics on Output and add trees, vehicles, or site facilities as needed. Generate model at the bottom creates a new independent scheme. Use Select update target and Update selected scheme to replace an existing scheme.",
+          "Save a .rstcity project and, if needed, a separate .rstcityassets library. Save the Rhino 3dm after baking. Later, open the project or recover parameters from generated objects."
+        ],
+        "params": [
+          {
+            "label": "City preset",
+            "type": "enum",
+            "def": "Curvilinear city",
+            "range": "17 presets including mixed city, business district, garden housing, small town, industry, Japanese city, and cyberpunk",
+            "note": "Presets are starting points, not fixed models. Customise settings and try new seeds."
+          },
+          {
+            "label": "Boundary / exclusions / water",
+            "type": "geometry",
+            "def": "Select a boundary or example site",
+            "range": "Closed boundaries; XY projection in terrain mode",
+            "note": "The city is organised inside the boundary. Exclusions reserve space; water has separate level and bank settings. Panel lengths are in metres."
+          },
+          {
+            "label": "Terrain mesh",
+            "type": "mesh",
+            "def": "No terrain",
+            "range": "Optional single-valued XY terrain",
+            "note": "Roads and ground conform to terrain. Buildings retain level bases with terrace foundations; source terrain is preserved."
+          },
+          {
+            "label": "Maximum foundation rise",
+            "type": "double",
+            "def": "15 m",
+            "range": "0.1–100 m",
+            "note": "Limits terrain relief across a footprint; it does not add 15 m to building height."
+          },
+          {
+            "label": "Road grade warning",
+            "type": "double",
+            "def": "15%",
+            "range": "1–100%",
+            "note": "Grades above the threshold are reported. This is not automatic grading or engineering validation."
+          },
+          {
+            "label": "Land-use zones",
+            "type": "group",
+            "def": "User-defined",
+            "range": "Use, floors, massing, appearance, and related overrides",
+            "note": "Use zones to guide local housing, offices, industry, and parks rather than relying solely on global settings. Quick editing also supports zones."
+          },
+          {
+            "label": "Road pattern",
+            "type": "enum",
+            "def": "Curvilinear network",
+            "range": "Grid, perturbed, radial, input-only, curvilinear, neighbourhood, old town, centre-linked, and two Japanese networks",
+            "note": "Input-only suits an existing street plan; other patterns create automatic networks."
+          },
+          {
+            "label": "Block spacing",
+            "type": "double",
+            "def": "120 m initially; preset-dependent",
+            "range": "30–2000 m",
+            "note": "Controls automatic-network scale, not an exact dimension for every block."
+          },
+          {
+            "label": "Default road width",
+            "type": "double",
+            "def": "14 m; preset-dependent",
+            "range": "3–100 m",
+            "note": "New roads capture the current width. Existing roads can be edited individually; changing the default alone does not update all roads."
+          },
+          {
+            "label": "Sidewalk width",
+            "type": "double",
+            "def": "3 m; preset-dependent",
+            "range": "0–20 m",
+            "note": "Affects walking connections, entrances, and facilities. Narrow sidewalks constrain scenery placement."
+          },
+          {
+            "label": "Network angle",
+            "type": "double",
+            "def": "0°",
+            "range": "−360–360°",
+            "note": "Rotates the automatic network; parcels and buildings can align with their main frontage."
+          },
+          {
+            "label": "Irregularity",
+            "type": "double",
+            "def": "0.4 initially; preset-dependent",
+            "range": "0–0.6",
+            "note": "Controls variation in patterns that use it. Larger values do not imply better layouts."
+          },
+          {
+            "label": "Endpoint snap distance",
+            "type": "double",
+            "def": "0.25 m",
+            "range": "0–3 m",
+            "note": "Connects input-road endpoints. Excessive tolerance may merge intentionally separate nodes."
+          },
+          {
+            "label": "Target parcel area",
+            "type": "double",
+            "def": "2200 m²; preset-dependent",
+            "range": "100–100000 m²",
+            "note": "Subdivision also considers frontage and setbacks. Very small parcels may remain open."
+          },
+          {
+            "label": "Building setback",
+            "type": "double",
+            "def": "4 m; preset-dependent",
+            "range": "0.5–50 m",
+            "note": "Reserves space around buildings and affects whether balconies or overhangs fit."
+          },
+          {
+            "label": "Massing coverage preference",
+            "type": "double",
+            "def": "0.55; preset-dependent",
+            "range": "0.1–0.85",
+            "note": "A massing preference, not an exact coverage target. Check the resulting statistics."
+          },
+          {
+            "label": "Minimum / maximum floors",
+            "type": "int",
+            "def": "3 / 18; preset-dependent",
+            "range": "Each 1–150; minimum no greater than maximum",
+            "note": "Zone limits and building forms further constrain floors. Detached and industrial forms have specific conditions."
+          },
+          {
+            "label": "Floor height",
+            "type": "double",
+            "def": "3.3 m; preset-dependent",
+            "range": "2–8 m",
+            "note": "Controls nominal storey height; roof elements and crowns can add height."
+          },
+          {
+            "label": "Central height bias",
+            "type": "double",
+            "def": "0.55; preset-dependent",
+            "range": "0–1",
+            "note": "Biases taller forms towards centres; zones and custom centres provide additional control."
+          },
+          {
+            "label": "Random park ratio",
+            "type": "double",
+            "def": "0.12; preset-dependent",
+            "range": "0–1",
+            "note": "A random assignment preference, not a guaranteed land-area share. Assign park zones for explicit control."
+          },
+          {
+            "label": "Detail level",
+            "type": "enum",
+            "def": "Standard",
+            "range": "Massing / Standard / Close-up",
+            "note": "Use massing for large sites. Standard and close-up progressively add facade, roof, and scenery details."
+          },
+          {
+            "label": "Random seed",
+            "type": "int",
+            "def": "42",
+            "range": "0–2147483647",
+            "note": "Identical inputs and seeds reproduce a result. With locks or local edits, reseeding preserves roads and varies unlocked buildings."
+          },
+          {
+            "label": "Window spacing / width ratio",
+            "type": "double",
+            "def": "3.4 m / 0.6; preset-dependent",
+            "range": "2–12 m / 0.2–0.95",
+            "note": "Controls facade rhythm. Window panels generally represent surfaces rather than construction-ready wall openings."
+          },
+          {
+            "label": "Balcony ratio / depth",
+            "type": "double",
+            "def": "0.35 / 1.2 m; preset-dependent",
+            "range": "0–1 / 0.3–2.5 m",
+            "note": "Setback and neighbouring buildings are checked; balconies are omitted where space is insufficient."
+          },
+          {
+            "label": "Roof style / slope / overhang",
+            "type": "group",
+            "def": "By building type and preset",
+            "range": "Automatic, flat, gable, hip, shed; slope 0.1–0.8; overhang 0–2 m",
+            "note": "Slope is rise/run, not degrees. Unstable complex outlines can fall back to flat roofs with a diagnostic."
+          },
+          {
+            "label": "Custom facade modules and patterns",
+            "type": "group",
+            "def": "Built-in appearance",
+            "range": "Ground, standard, top, entrance; alternating, random, custom sequences",
+            "note": "Capture modules and assign families, slots, and codes on Assets, then select them here. AAB. repeats two A modules, one B, and a solid-wall slot."
+          },
+          {
+            "label": "Asset random weight",
+            "type": "double",
+            "def": "1",
+            "range": "0–1000",
+            "note": "Weights affect automatic assignment. Zero means manual use only and does not prevent explicit building assignment."
+          },
+          {
+            "label": "Automatic building replacement ratio",
+            "type": "double",
+            "def": "0.5",
+            "range": "0–1",
+            "note": "Controls automatic use of eligible building assets, subject to size and footprint checks."
+          },
+          {
+            "label": "Streetscape and site scenery",
+            "type": "group",
+            "def": "By current preset",
+            "range": "Trees, lamps, cars, paving, planting, seats, bicycles, parking, and related items",
+            "note": "Some facilities require standard or close-up detail. Walking width, entrances, and vehicle access constrain placement; enabling an item does not guarantee it everywhere."
+          },
+          {
+            "label": "Merge output by block and material",
+            "type": "bool",
+            "def": "Current Output setting",
+            "range": "On / Off",
+            "note": "Reduces Rhino object count. Buildings and roads are meshes; repeated scenery can use mesh block instances."
+          },
+          {
+            "label": "Adaptive / progressive preview",
+            "type": "bool",
+            "def": "On",
+            "range": "On / Off",
+            "note": "Simplifies distant or moving views and can show incremental simplified results. It does not reduce the selected detail of baked meshes."
+          },
+          {
+            "label": "Variant count / seed step",
+            "type": "int",
+            "def": "3 / 1",
+            "range": "2–6 / 1–100000",
+            "note": "Comparison uses massing meshes without streetscape, making it suitable for choosing layouts."
+          }
+        ],
+        "paramSections": [
+          {
+            "title": "Site: establish the extent and choose a preset",
+            "intro": "Select a horizontal closed city boundary, or explicitly use the 600×450 m example site. Presets change roads, land use, and appearance together, so choose one before customising. Add exclusions, water, zones, or terrain as needed."
+          },
+          {
+            "title": "Roads: establish the network before fine tuning",
+            "intro": "Combine automatic roads with input centrelines. Edit individual widths and sections and inspect short dead ends or gaps. Quick editing can select roads, edit control curves, and preview affected parcels."
+          },
+          {
+            "title": "Buildings: parcel scale and skyline",
+            "intro": "Start with parcel area, setback, floor counts, and land use, then choose housing or office forms, block compositions, parks, or parking. Frontage-first subdivision reduces landlocked parcels; target area is a layout preference rather than a hard allocation."
+          },
+          {
+            "title": "Appearance: facades, roofs, and module patterns",
+            "intro": "Choose built-in facades, Japanese prototypes, and roofs, or use your own facade modules. Zones and individual buildings can override global settings. Custom building assets retain their own appearance."
+          },
+          {
+            "title": "Assets: use your own buildings and streetscape",
+            "intro": "Capture meshes or nested mesh-only blocks as buildings, trees, lamps, cars, or facade modules while preserving source objects. Assets are normalised in metres around the base centre; buildings are uniformly scaled and footprint-checked. Import or export .rstcityassets libraries."
+          },
+          {
+            "title": "Editing: preserve what works and refine locally",
+            "intro": "Select parcels in the viewport to lock, unlock, regenerate locally, or override use and floors. Individual buildings support floors, appearance, roof, and asset overrides. Locks still require compatibility with changed roads, setbacks, and terrain."
+          },
+          {
+            "title": "Output: scenery, display, and model generation",
+            "intro": "Control trees, lamps, cars, entrance paving, activity spaces, and planting. Generate model at the bottom creates a new independent scheme, regenerating first if the preview is stale. To replace an existing generated city, select its update target and use Update selected scheme."
+          },
+          {
+            "title": "Variants: compare a batch before applying",
+            "intro": "Generate massing alternatives from one input snapshot and compare building counts, coverage, FAR, and parking. Previewing a row does not replace the project; Apply selected variant restores the full detail settings. Comparison batches are cleared when the panel closes; export variants you need."
+          },
+          {
+            "title": "Transport: rail, elevated routes, and connections",
+            "intro": "Use centrelines for surface rail, elevated roads, or elevated rail, with width, track count, clearance, and pier-spacing settings. Stations, crossings, ramps, and water crossings have additional controls. Ground connections are not automatic and crossing water requires explicit permission. Geometry is conceptual rather than bridge or traffic engineering."
+          },
+          {
+            "title": "Landmarks: place public buildings on suitable parcels",
+            "intro": "Select a sufficiently large frontage parcel, then set landmark type, height, footprint, and orientation. Options include libraries, hospitals, schools, and commercial complexes. Each type has minimum dimensions and reports insufficient space. Reference-inspired forms are conceptual, not exact replicas."
+          },
+          {
+            "title": "Layout checks: inspect findings before changing the city",
+            "intro": "Check high-rise clusters and abrupt height changes, locate affected areas, and export JSON reports. Checks do not modify the city or certify compliance. Rerun after changing the city or checking parameters."
+          },
+          {
+            "title": "Quick editing: edit roads, water, and buildings in the viewport",
+            "intro": "Select roads, water, buildings, parcels, or zones by click, box, or region. Edit control curves and review local impacts. Apply or cancel curve drafts before switching objects. Confirm the linked target and synchronisation setting before updating a baked model. Panel Undo/Redo tracks successfully generated parameter states within the session, separately from Rhino document Undo."
+          }
+        ],
+        "output": "Preview a procedural city and bake it to independent scheme layers. Buildings, roads, and ground are primarily meshes; repeated scenery can be mesh block instances. Supports updating existing schemes, project and asset-library storage, variant statistics, and layout-check reports.",
+        "notes": "## A practical first run\n\nChoose a preset and a small site, then generate at massing detail. Check road connectivity and parcel scale before adjusting height and coverage preferences. Add standard / close-up detail and more scenery once the layout works. Dense windows, vehicles, and close-up detail across a large site increase calculation time, display cost, and file size.\n\nChoose presets before customising because they change multiple settings together. Reseeding explores automatic layouts. With locks or local edits, it preserves roads and varies only unlocked buildings; read the status message for the actual behaviour.\n\n## Preview, generate model, and update\n\nPreview shows the current result without baking the city into Rhino objects. Generate model reuses an up-to-date preview, or regenerates from changed settings, and creates a new scheme with one-step Undo. To change an existing baked city, select its update target on Output and update it. Repeated generation creates additional schemes rather than replacing the previous city.\n\nUpdating checks for manual changes to target objects. Review warnings about manual edits or ambiguous ownership before allowing replacement. Quick-edit synchronisation should point only to the scheme you intend to change. Local impacts can expand when roads reconnect.\n\n## Save projects, source curves, and materials\n\n.rstcity stores generator settings and project data; .rstcityassets stores reusable assets. These serve different purposes from Rhino 3dm files. Save the 3dm after generating a model; parameters can also be recovered from generated objects. Variant batches and panel editing history last only for the session, so export variants you want to retain.\n\nLinked source curves such as boundaries, roads, and water can be edited in Rhino and trigger regeneration. Apply or cancel curve drafts first. Do not assume every input is a permanently static snapshot. Custom assets retain basic material properties, UVs, and vertex colours and can carry ordinary base-colour textures; this is not a complete third-party PBR-material migration.\n\n## Terrain and metrics\n\nTerrain must be a single-valued XY height field, not a closed mountain solid, overhanging layers, or overlapping surfaces. Roads follow terrain and building bases remain level. Grade warnings and terrace foundations do not constitute road grading or earthworks design.\n\nCoverage preferences, park ratios, and FAR support conceptual comparisons rather than exact planning targets. Statistics estimate generated geometry and nominal floors; custom assets, pitched roofs, crowns, and landmarks can use their own conceptual measurements. Output supports urban design and scene modelling, not construction documents or structural or transport engineering.",
+        "illustrations": [],
+        "videos": []
       }
     },
     "rsDiscreteCity": {
@@ -6652,7 +7871,7 @@
       }
     },
     "rsPerforation": {
-      "sourceHash": "1d409c96d8a97507103f429aa788d387a38be3f26f7625603e23efbd73fb47af",
+      "sourceHash": "91eb68053fc0035e2f85d9e070deae0661feeeea8f03efa5547415af5da80651",
       "title": "Perforation",
       "desc": "Generate circular or regular polygon perforation patterns inside a closed planar boundary, with sizes driven by curve distance, image grayscale, or a directional gradient.",
       "detail": {
@@ -6893,8 +8112,17 @@
         ],
         "output": "Generate circular or regular polygon hole outlines inside a planar boundary, with optional center points and solid hole hatches. Results are grouped on the current layer and can be undone together.",
         "notes": "## Image perforation workflow\n\nSelect Image grayscale and load a PNG, JPG, JPEG, or BMP. Use Fit to boundary for quick placement. For custom position, direction, and size, use Set image rectangle and pick the lower-left corner, lower-right corner, then a point on the upper side. With aspect ratio enabled, the third point sets the upper side while image proportions determine height. Background visibility and transparency do not change the pattern.\n\n## Radius limits and filtering\n\nWith overlap prevention on, allowed radii are (nearest center distance − hole gap) ÷ 2, using grid neighbors before clipping. If the requested maximum exceeds the limit, size variation is mapped into the safe range, so actual radii may be smaller. Use allowed maximum radius provides a quick setting.\n\nCandidates outside the boundary or image frame, outlines crossing the boundary, insufficient edge margins, and radii that are too small are removed instead of creating partial holes. The panel reports reasons, counts, and radius ranges. With overlap prevention off, the area ratio sums hole areas without deducting overlaps.\n\n## Creation and further use\n\nThe command outputs hole outlines rather than cutting panels. Use those curves for subsequent surface trimming or solid cutting. Solid hole hatches support 2D graphic presentation.\n\nThere is a limit of 50,000 candidates. Reduce counts or increase spacing if exceeded. Wait for preview completion before Create and close. Cancelling creation removes partial output; successful creation closes the window.\n\nSettings are remembered, with lengths stored separately by document units. Influence curves, images, and placement frames must be selected or set again. Close and rerun after changing document units or tolerance.",
-        "illustrations": [],
-        "videos": []
+        "illustrations": [
+          {
+            "alt": "rsPerforation settings panel and image-based perforation result",
+            "caption": "Perforation settings and an image-based example: varying hole sizes reproduce the image's light and dark tones."
+          }
+        ],
+        "videos": [
+          {
+            "title": "RsTool · rsPerforation Perforation Overview (Bilibili)"
+          }
+        ]
       }
     },
     "rsTesselateNurbs": {

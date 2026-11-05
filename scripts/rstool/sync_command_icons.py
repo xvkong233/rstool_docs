@@ -88,15 +88,22 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--toolbar-root", required=True, type=Path)
     parser.add_argument("--write", action="store_true")
+    parser.add_argument("--command", help="Update only one documented command, preserving other icons")
     args = parser.parse_args()
     source = json.loads((ROOT / "scripts/rstool/commands.json").read_text(encoding="utf-8"))
     found = bindings(args.toolbar_root)
     manifest = {"commands": {}}
+    if args.command:
+        if not any(item["name"] == args.command for item in source["data"]):
+            parser.error(f"Unknown documented command: {args.command}")
+        manifest = json.loads((ROOT / "scripts/rstool/command-icons.json").read_text(encoding="utf-8"))
     counts = {}
     unavailable = []
     shared = []
     for item in source["data"]:
         name = item["name"]
+        if args.command and name != args.command:
+            continue
         detail = source["details"][name]
         binding = found.get(name.lower())
         if detail.get("style") == "gh":
@@ -119,6 +126,15 @@ def main():
                     save_png(data, ROOT / "docs/public" / entry[mode].lstrip("/"))
             if entry["kind"] == "toolbar-right":
                 shared.append({"command": name, "button": entry["buttonCommand"]})
+        elif (toolbar_root_icon := args.toolbar_root / "icons" / f"{name}.png").is_file():
+            # A dedicated source asset is not proof of an RUI button binding.
+            entry = {
+                "kind": "source",
+                "source": f"icons/{name}.png",
+                "light": f"/command-icons/light/{name}.png",
+            }
+            if args.write:
+                save_png(toolbar_root_icon.read_bytes(), ROOT / "docs/public" / entry["light"].lstrip("/"))
         else:
             # Do not invent associations for settings, logs, or retired commands.
             entry = {"kind": "unavailable"}

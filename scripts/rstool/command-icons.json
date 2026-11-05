@@ -2365,6 +2365,43 @@
       "buttonGuid": "5f429efc-8a0f-5a0e-be49-645d5fa9c3f2",
       "buttonCommand": "rsTxtReader",
       "light": "/command-icons/light/02255b59-8bd2-5c4c-bb96-3209b77c5040.png"
+    },
+    "rsTimberJoint": {
+      "kind": "toolbar",
+      "source": "RUI/RSTool_CN.rui",
+      "iconGuid": "da536ef8-27d7-5aae-a0bf-b3ce03904dc4",
+      "macroGuid": "8663f3d6-0b29-52d1-a639-20c932da6301",
+      "buttonGuid": "45d2d719-0b39-5e2f-9475-05d20fc87181",
+      "buttonCommand": "rsTimberJoint",
+      "light": "/command-icons/light/da536ef8-27d7-5aae-a0bf-b3ce03904dc4.png"
+    },
+    "rsExportLayoutToDwg": {
+      "kind": "toolbar",
+      "source": "RUI/RSTool_CN.rui",
+      "iconGuid": "f8316960-e173-50cc-a26d-0be2fd8341f5",
+      "macroGuid": "6f610158-a6cf-57b6-a00d-f683fef7970b",
+      "buttonGuid": "6b25f710-c462-5d8a-bc72-d6e6e2d62761",
+      "buttonCommand": "rsExportLayoutToDwg",
+      "light": "/command-icons/light/f8316960-e173-50cc-a26d-0be2fd8341f5.png"
+    },
+    "Bake Vertex Color Texture": {
+      "kind": "grasshopper",
+      "light": "/command-icons/gh/BakeVertexColorTexture_24.png"
+    },
+    "rsNoiseAnalysis": {
+      "kind": "source",
+      "source": "icons/rsNoiseAnalysis.png",
+      "light": "/command-icons/light/rsNoiseAnalysis.png"
+    },
+    "rsCityGenerator": {
+      "kind": "toolbar",
+      "source": "RUI/RSTool_CN.rui",
+      "iconGuid": "435ccc02-2d6a-517c-a491-3e56c23a454f",
+      "macroGuid": "3ea0a2f5-396f-501c-b219-c1a0eb0c0a29",
+      "buttonGuid": "65f24bec-bd67-5692-870c-93fefe243dda",
+      "buttonCommand": "rsCityGenerator",
+      "light": "/command-icons/light/435ccc02-2d6a-517c-a491-3e56c23a454f.png",
+      "dark": "/command-icons/dark/435ccc02-2d6a-517c-a491-3e56c23a454f.png"
     }
   }
 }

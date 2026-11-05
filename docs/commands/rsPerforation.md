@@ -6,6 +6,9 @@
 
 **功能**：在平面边界内生成圆或正多边形孔轮廓，可附加中心点和孔内实心 Hatch；结果写入当前图层并成组，可一次撤销。
 
+![rsPerforation 一键排孔参数面板与图片排孔效果](../assets/rsPerforation/image-perforation-panel.png)
+*一键排孔面板与图片排孔效果示例：通过孔径大小的变化表现图片的明暗层次。*
+
 **调用**：在 Rhino 命令行输入 `rsPerforation`（打开设置窗口）
 
 **交互流程**：
@@ -102,3 +105,10 @@
 总候选点上限为 50000，超过时减少行列数或增大间距。修改参数后等待预览计算完成，再点击“生成并关闭”。生成过程中取消会清理本次部分输出，成功后窗口关闭。
 
 参数会记忆，长度设置按文档单位分别保存；干扰曲线、图片和定位范围需重新选择或设置。更改文档单位或公差后应关闭并重新运行命令。
+
+**教学视频**：
+
+<iframe class="rstool-video" src="https://player.bilibili.com/player.html?isOutside=true&bvid=BV1banN6EEto&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" title="RsTool · rsPerforation 一键排孔功能介绍（B 站）"></iframe>
+*RsTool · rsPerforation 一键排孔功能介绍（B 站）*
+
+<a href="https://www.bilibili.com/video/BV1banN6EEto/#reply317680401521" target="_blank" rel="noopener noreferrer">观看原视频及补充内容</a>

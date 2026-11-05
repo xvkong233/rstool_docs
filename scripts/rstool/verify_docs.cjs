@@ -55,9 +55,13 @@ const markdownFiles = walkMarkdown(docsDir)
     }
     counts[icon.kind] = (counts[icon.kind] || 0) + 1
     if (
-      !['toolbar', 'toolbar-right', 'grasshopper', 'unavailable'].includes(
-        icon.kind
-      )
+      ![
+        'toolbar',
+        'toolbar-right',
+        'grasshopper',
+        'source',
+        'unavailable'
+      ].includes(icon.kind)
     )
       fail(`图标类型无效: ${item.name}`)
     if (icon.kind === 'unavailable') {
@@ -86,6 +90,8 @@ const markdownFiles = walkMarkdown(docsDir)
       if (!button || getCommandIcon(button.name).light !== icon.light)
         fail(`右键命令与按钮图标不一致: ${item.name}`)
     }
+    if (icon.kind === 'source' && icon.source !== `icons/${item.name}.png`)
+      fail(`专属图标来源记录无效: ${item.name}`)
     for (const locale of ['zh', 'en']) {
       const html = renderCommandIcon(item.name, { locale })
       if (locale === 'en' && /[\u3400-\u9fff]/.test(html))

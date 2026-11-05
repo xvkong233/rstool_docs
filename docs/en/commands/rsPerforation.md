@@ -6,6 +6,11 @@
 
 **Function**: Generate circular or regular polygon hole outlines inside a planar boundary, with optional center points and solid hole hatches. Results are grouped on the current layer and can be undone together.
 
+![rsPerforation settings panel and image-based perforation result](../../assets/rsPerforation/image-perforation-panel.png)
+*Perforation settings and an image-based example: varying hole sizes reproduce the image's light and dark tones.*
+
+> Screenshots and videos may show a Chinese-language interface. Labels and control positions can vary by Rhino or RSTool version.
+
 **Run**: Enter `rsPerforation` in the Rhino command line (opens a settings window).
 
 **Workflow**:
@@ -102,3 +107,10 @@ The command outputs hole outlines rather than cutting panels. Use those curves f
 There is a limit of 50,000 candidates. Reduce counts or increase spacing if exceeded. Wait for preview completion before Create and close. Cancelling creation removes partial output; successful creation closes the window.
 
 Settings are remembered, with lengths stored separately by document units. Influence curves, images, and placement frames must be selected or set again. Close and rerun after changing document units or tolerance.
+
+**Tutorial videos**:
+
+<iframe class="rstool-video" src="https://player.bilibili.com/player.html?isOutside=true&bvid=BV1banN6EEto&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" title="RsTool · rsPerforation Perforation Overview (Bilibili)"></iframe>
+*RsTool · rsPerforation Perforation Overview (Bilibili)*
+
+<a href="https://www.bilibili.com/video/BV1banN6EEto/#reply317680401521" target="_blank" rel="noopener noreferrer">Watch the original video and supplementary content</a>
