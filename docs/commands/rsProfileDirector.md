@@ -23,7 +23,7 @@
 
 ## 素材库下载与使用
 
-不想从头整理素材的话，可以直接下载现成的 [rsProfileDirector 素材库（百度网盘）](https://pan.baidu.com/s/5zLhuX4hCtyEUVvoC1rHkmA)。把素材库放到 `rsProfileDirector` 目录即可使用；如果下载的是压缩包，请先解压并保留素材库原有的文件夹结构。
+不想从头整理素材的话，可以通过 [百度网盘](https://pan.baidu.com/s/5zLhuX4hCtyEUVvoC1rHkmA) 或 [Google Drive](https://drive.google.com/file/d/14BEQIffkTACkzKiMitR35b6zeuNCczRn/view?usp=sharing) 下载现成的 rsProfileDirector 素材库，海外用户可优先选择 Google Drive。把素材库放到 `rsProfileDirector` 目录即可使用；如果下载的是压缩包，请先解压并保留素材库原有的文件夹结构。
 
 1. 在 `rsProfileDirector` 主面板点击「打开样式库」（Open style library）。
 2. 查看样式库窗口下方的「文件夹」（Folder）路径，把下载的素材库放到这里指向的 `rsProfileDirector` 目录。

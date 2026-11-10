@@ -25,7 +25,7 @@
 
 ## Download and use the asset library
 
-To get started without building your own collection, download the ready-made [rsProfileDirector asset library from Baidu Netdisk](https://pan.baidu.com/s/5zLhuX4hCtyEUVvoC1rHkmA). Place the library in the `rsProfileDirector` folder to use it. If the download is an archive, extract it first and keep the library's existing folder structure.
+To get started without building your own collection, download the ready-made rsProfileDirector asset library from [Baidu Netdisk](https://pan.baidu.com/s/5zLhuX4hCtyEUVvoC1rHkmA) or [Google Drive](https://drive.google.com/file/d/14BEQIffkTACkzKiMitR35b6zeuNCczRn/view?usp=sharing). Google Drive is recommended for users outside mainland China. Place the library in the `rsProfileDirector` folder to use it. If the download is an archive, extract it first and keep the library's existing folder structure.
 
 1. Click **Open style library** in the `rsProfileDirector` main panel.
 2. Check the **Folder** path near the bottom of the Style Library window, and place the downloaded library in the `rsProfileDirector` folder shown there.
