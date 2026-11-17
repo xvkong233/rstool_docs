@@ -1,10 +1,18 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsWhiteboard：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/e9ced1e3-617c-5365-b83c-5dcd7bc4eb2c.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsWhiteboard · 白板
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsWhiteboard：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/59728ab6-858e-5c1a-a201-05a78e73ac5e.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/59728ab6-858e-5c1a-a201-05a78e73ac5e.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsWhiteboard · 白板
 
 > 模块：效率工具 / 生产力
 
 [← 返回命令目录](/commands/)
 
-**功能**：打开白板窗口进行绘制、批注、协作与素材管理
+::: info 2.0 说明
+
+2.0 使用 RSTool 客户端承载面板，请先保持客户端运行并登录。
+
+[查看 2.0 命令变化与对照](/commands/v2)
+
+:::
+
+**功能**：打开客户端的白板，用图形、箭头、文字和图片整理方案，并通过共享目录进行团队协作。
 
 ![RSTool 白板主界面（杭州来福士广场资料整理场景）](../assets/rsWhiteboard/image1.png)
 *白板主界面：顶部居中 Excalidraw 主工具栏（锁/撤销重做/选择/矩形/椭圆/直线/箭头/自由画/铅笔/文字/图片/橡皮/删除）+ 右侧库按钮；左上 ≡ 汉堡菜单；底部 RSTool 自定义工具栏（截取 Rhino 视图 / 自动对齐:开 / 放置评论 / 本地快照）+ 左侧缩放 50% 控制；画板上排列项目实景与设计图参考，右上角嵌入 B 站视频卡用于设计成果回放*
@@ -13,9 +21,11 @@
 
 **交互流程**：
 
-1. 命令行输入 rsWhiteboard，打开白板窗口
-2. 在白板上自由绘制 / 批注，或使用顶部工具栏的矩形、箭头、文字、图片等工具
-3. 开启共享白板可与团队成员实时协作；可截取 Rhino 视窗作为参考图嵌入画板
+1. 输入 rsWhiteboard，打开客户端“创作工具 → 白板”。
+2. 新建或打开 .excalidraw 文档，使用形状、箭头、文字、画笔和图片整理内容。
+3. 需要 Rhino 截图时，先确认客户端目标，再点击“截取 Rhino 视图”。
+4. 需要协作时，把白板保存到团队可访问的共享目录，开启或加入共享，并使用评论沟通。
+5. 保存原白板以继续编辑，按需导出 PNG / SVG 或分镜 PDF；多份白板可在标签间切换。
 
 **参数**：
 
@@ -23,7 +33,11 @@
 | --- | --- | --- | --- | --- | --- |
 | 自动对齐 | AutoAlign | toggle | 开 | 开 / 关 | 底部自定义工具栏开关，控制元素放置时自动对齐 |
 
-**备注**：白板是 RSTool 内置的协作绘图工具，基于 Excalidraw + React，与 Rhino 同窗口、可被 Rhino 正常遮挡。窗口标题为「RSTool 白板」，可在标题栏随时改名。文档以 Excalidraw 原生 `.excalidraw` 持久化（结构 `{type:"excalidraw", version, source, elements, appState, files}`）。支持**本地白板**与**公司共享白板（SMB 文件夹）**两种模式，并可保存 / 加载 Excalidraw **素材库** (`*.excalidrawlib`)。
+**输出**：保存可编辑 .excalidraw 白板，导出 PNG / SVG 或分镜 PDF；通过共享目录同步内容和评论。
+
+**备注**：2.0 中，输入 rsWhiteboard 会打开客户端“创作工具 → 白板”，不再打开旧版独立窗口。白板保留 Excalidraw 绘图、个人/公司素材库、共享目录协作与评论；文档仍保存为 .excalidraw。主题和语言跟随客户端。
+
+可以同时打开多份白板，各页独立保存、恢复和撤销；最多 16 页。切换客户端功能会保留工作区。白板可独立编辑，只有“截取 Rhino 视图”需要连接客户端当前选中的 Rhino 文档。
 
 ## 主工具栏（顶部居中，从左到右）
 
@@ -68,7 +82,7 @@ Hamburger 菜单由 RSTool 在 Excalidraw `MainMenu` 中注入，**与协作会�
 | 导出 | 导出 PNG | 把当前画板导出为 PNG 位图 |
 | 导出 | 导出 SVG | 把当前画板导出为矢量 SVG |
 | 默认 | 清空画板 | Excalidraw `DefaultItems.ClearCanvas` |
-| 默认 | 切换主题 | Excalidraw `DefaultItems.ToggleTheme` |
+| 外观 | 主题 | 跟随客户端主题设置 |
 | 默认 | 帮助 | Excalidraw `DefaultItems.Help` |
 
 ## 底部工具栏（Footer，底部中央）
@@ -125,11 +139,11 @@ clients\&lt;clientId&gt;.json    # 客户端元信息 (userName / machineName / 
 
 **添加**：选中任意白板元素 → 右键 → **添加到素材库** → 自动以 `onLibraryChange` 事件触发 500ms 防抖后写入本机库文件。
 
-**个人库**：自动保存到 `%LOCALAPPDATA%\RSTool\Whiteboard\Library\`，每次添加后 500ms 自动写入（关闭窗口时会绕过防抖强制同步一次，避免丢失刚添加的素材）。
+**个人库**：按当前账号保存在本机，每次添加后 500ms 自动写入（关闭窗口时会绕过防抖强制同步一次，避免丢失刚添加的素材）。
 
 **公司库**：支持 `.excalidrawlib` 文件；连接 → 刷新 → 断开 三件套在汉堡菜单中。管理员可「将个人素材库发布到公司…」 → 选目标 `.excalidrawlib` 文件覆盖，其他成员通过「连接公司素材库…」共享同一份。
 
-**容量**：RSTool **不限制**素材库大小，但 > 500KB 时弹性能提示（读写和打开面板可能更慢）。
+**容量**：较大的素材库会增加读写和面板加载时间，建议按项目分类整理。
 
 ## 与 Rhino 的双向协作
 
@@ -145,6 +159,10 @@ clients\&lt;clientId&gt;.json    # 客户端元信息 (userName / machineName / 
 
 - 编辑停止 3 秒后自动写入一次恢复快照
 - 共享模式下同时保留共享目录的最新快照 + 本机 Recovery 双保险（共享目录离线时仍写到本地，恢复后写回共享）
-- 关闭窗口时若仍有未保存改动：非共享模式弹「是否保存」对话框；**共享模式则不会弹**——会强制写完整快照并停止会话（避免阻塞 + 防止丢失）
+- 关闭未保存的本地白板时，可选择保存、不保存或取消；共享白板会尝试同步，目录离线时保留本页恢复与待同步修改。退出整个客户端时会逐页确认，取消后继续保留工作区。
 - 文档体积 > 512KB 时弹 `LargeDocumentPerformanceWarning`（仅首次提醒）
 - 关闭后再启动会优先用最近文件恢复空态画板
+
+## 分镜导出
+
+电影分镜支持场次、镜头和元数据，可按 A3/A4、横向/纵向及每页 3/6/9 镜头导出多页 PDF。导出的 PDF 页面为图像，文字不能直接选择；保留原始白板文件以便后续编辑。

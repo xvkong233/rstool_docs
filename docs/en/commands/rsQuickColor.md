@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsQuickColor: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/30bddf50-55a8-4434-af3c-b76aab9ef1c5.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsQuickColor · Quick coloring
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsQuickColor: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/e7a2a448-616d-5139-a1e8-90bd4a7b515d.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/e7a2a448-616d-5139-a1e8-90bd4a7b515d.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsQuickColor · Quick coloring
 
 > Module: Organization & Selection / Material Tools
 

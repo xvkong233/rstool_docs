@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsHeightDot：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/4aec62bb-26b5-4079-bdae-f32cb06de2f8.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsHeightDot · 高程点
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsHeightDot：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/7393f54a-7635-5a9b-916f-9c5312992d74.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/7393f54a-7635-5a9b-916f-9c5312992d74.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsHeightDot · 高程点
 
 > 模块：视图出图 / 标注出图
 

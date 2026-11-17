@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsHatchPlanarSurfaces：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/02495ef7-dcec-44c5-859a-01cf611b5a82.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsHatchPlanarSurfaces · 平面填充
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsHatchPlanarSurfaces：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/c78eca67-6b48-51fe-992a-f0154e9d56a8.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/c78eca67-6b48-51fe-992a-f0154e9d56a8.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsHatchPlanarSurfaces · 平面填充
 
 > 模块：视图出图 / 标注出图
 

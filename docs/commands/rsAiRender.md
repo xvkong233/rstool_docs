@@ -1,8 +1,22 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsAiRender：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/8fa021d9-e321-4ae1-b218-205fa2451c7d.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsAiRender · AI 渲染
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsAiRender：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/8fa021d9-e321-4ae1-b218-205fa2451c7d.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsAiRender · AI 渲染（旧版入口）
 
 > 模块：AI / 渲染与建模
 
 [← 返回命令目录](/commands/)
+
+::: warning 2.0：旧版入口已调整
+
+当前 2.0 未注册这个 Rhino 命令。客户端中的 AI 渲染页面不等于保留了旧命令入口。
+
+这个旧名称在本次核对的 2.0 中不是可直接输入的兼容别名；下方保留的是 1.x 历史说明。
+
+[查看 2.0 命令变化与对照](/commands/v2)
+
+:::
+
+::: details 查看 1.x 历史说明
+
+> 本节的图标、截图、参数与操作流程均为旧版资料。
 
 **功能**：可以截取 Rhino 当中的模型截图，或者上传特定图片，发送给 Gemini 或 ChatGPT 进行 AI 渲染。渲染完成后可以进行局部重绘或者局部替换。推荐直接截取 Rhino 当中的模型进行 AI 渲染——本命令会自动截取深度图和 AO 图等信息进行补充，确保渲染效果更真实。本命令既可以直接使用个人注册的 API，也可以使用由悠洛仁提供的中转站服务 API。
 
@@ -23,8 +37,6 @@
 
 ![局部重绘成功：状态栏显示「已完成 · 渲染成功」，新结果进入历史记录第 3 条，原区域被替换为重绘内容](../assets/rsAiRender/image5_inpaint_success.jpg)
 *图 6：局部重绘成功。状态栏「已完成 · 渲染成功」+ 顶部 渲染成功 提示，历史记录第 3 条以绿色「已完成」徽章显示本次结果（Nano Banana 2），其他区域（天空、塔楼、街道）保持上一版不动，仅框选范围的裙房被重绘——这正是「局部重绘」相对「整图重渲染」的核心优势：迭代只影响你想改的那一块*
-
-**调用**：在 Rhino 命令行输入 `rsAiRender`（打开设置窗口）
 
 **交互流程**：
 
@@ -55,3 +67,6 @@
 | 主题 | theme | radio | System | System / Light / Dark | UI 主题，跟随系统/浅色/深色；切换立即生效 |
 
 **备注**：需要联网；所有参数在窗口内设置并加密保存到本机配置，提示词模板、灵感工具预设、参考图与历史记录均存本机
+
+
+:::

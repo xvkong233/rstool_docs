@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsWalker: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/a070a6e4-9a54-4126-967b-96bbb6633527.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsWalker · Walkthrough Mode
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsWalker: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/2bb1c859-1f2c-5518-9ef9-b216ae5a5656.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/2bb1c859-1f2c-5518-9ef9-b216ae5a5656.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsWalker · Walkthrough Mode
 
 > Module: Fun / Interactive Entertainment
 

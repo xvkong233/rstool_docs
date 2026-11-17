@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsFitArcChain: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/d8e34691-f15d-57da-9694-1822ad50ed87.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsFitArcChain · Tangent arc fitting
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsFitArcChain: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/593bb4c2-4e92-500d-9443-ed2230b625b8.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/593bb4c2-4e92-500d-9443-ed2230b625b8.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsFitArcChain · Tangent arc fitting
 
 > Module: Geometry / Curves
 

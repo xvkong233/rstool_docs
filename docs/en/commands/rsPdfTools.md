@@ -1,10 +1,18 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsPdfTools: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/c93a0331-2dd5-54df-8c4b-6df858a173d7.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsPdfTools · PDF tools
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsPdfTools: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/b11a7702-9cb2-5dc0-8ca1-36235a13b556.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/b11a7702-9cb2-5dc0-8ca1-36235a13b556.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsPdfTools · PDF tools
 
 > Module: Productivity / Productivity
 
 [← Back to command index](/en/commands/)
 
-**Function**: Perform split/rotate/compress/extract/delete/merge/encrypt/decrypt/watermark operations on PDF and drop the resulting PDF to the output directory
+::: info Version 2.0
+
+Version 2.0 hosts this panel in the RSTool client. Keep the client running and signed in.
+
+[View the 2.0 command changes](/en/commands/v2)
+
+:::
+
+**Function**: Open PDF Tools in the client to merge, split, compress, and organize pages, convert images, add watermarks, and manage passwords. Version 2.0 also supports rsPdfTool.
 
 ![PDF tool main interface (merge - 11 function modules on the left)](../../assets/rsPdfTools/image1.png)
 *PDF Tool main interface: Title "PDF Tools/Document Processing Workbench"; 11 functional modules on the left (Merge/Split/Compress/Encrypt/Decrypt/Extract Pages/Delete Pages/Rotate Pages/Add Watermark/PDF to Image/Image to PDF), "Merge" is currently selected; Tool buttons on the top bar of the main area (Add File, Delete Selected, Clear List, Move Up and Down, Set Input Password) + File List + Page Thumbnail Preview + Operation settings (output name, output directory) + bottom (open output directory / cancel task / start merging)*
@@ -15,13 +23,11 @@
 
 **Workflow**:
 
-1. Command line input rsPdfTools
-2. Create a PdfToolsDialog (Eto) window; window title "PDF Tools"
-3. Select the processing method from the 11 functional modules on the left; drag in the intermediate file list or "Add File"
-4. Adjust parameters by module in the "Current Operation Settings" panel (split mode/rotation angle/watermark style, etc.)
-5. Select the output directory below or leave it blank to go to the source file directory.
-6. Click "Start XXX" to execute; the progress bar + status text is updated in real time; you can click "Cancel Task" to interrupt
-7. After completion, the "Start" button is restored, "Open Output Directory" is activated, and the button copy is adapted according to the current module.
+1. Run rsPdfTool or rsPdfTools in Rhino to open PDF Tools in the client, or open it directly from Creative Tools.
+2. Choose merge, split, compression, encryption, decryption, extraction, deletion, rotation, watermarking, PDF-to-image, or image-to-PDF.
+3. Add files, inspect thumbnails and previews, and adjust ordering, page ranges, and settings.
+4. Choose an output folder, or leave it empty to use each source folder. Set input passwords separately when needed.
+5. Start the task, watch progress or cancel, then open the output folder to inspect results.
 
 **Parameters**:
 
@@ -37,34 +43,21 @@
 | watermark horizontal spacing | WatermarkHorizontalSpacing | integer | 70 | 20-500 | Watermark horizontal repeat spacing (mm), default 70 |
 | watermark vertical spacing | WatermarkVerticalSpacing | integer | 50 | 20-500 | Watermark vertical repeat spacing (mm), default 50 |
 
-**Notes**: Eto dialog; PDF processing is done in a separate background pipeline.
+**Output**: Perform split/rotate/compress/extract/delete/merge/encrypt/decrypt/watermark operations on PDF and drop the resulting PDF to the output directory
 
-**11 functional modules on the left** (click to switch the settings panel; the "Start XXX" button at the bottom is dynamically named according to the current module): Merge (default) / Split / Compress / Encrypt / Decrypt / Extract page / Delete page / Rotate page / Add watermark / PDF to picture / Picture to PDF.
+**Notes**: PDF Tools runs locally in the 2.0 client and does not upload PDF files. Both rsPdfTool and rsPdfTools open the same page. Once open, it can work independently of the Rhino connection.
 
-**File operation area** (button group at the top of the main area):
+## Operations and settings
 
-| Button | Function |
+| Operation | Main settings |
 | --- | --- |
-| Add files | Pop up the file selection dialog box, multiple selections |
-| Delete selected | Remove checked rows from table |
-| Clear the list | Clear with one click |
-| ↑ / ↓ | Only enabled in the "Merge" module, rearranged in list order |
-| Set the input password | Set the opening password individually for the selected file (used by the decryption module) |
+| Merge and organize | File/page order, ranges, copying, removal, reversal, and dragging pages |
+| Split | Individual pages, every N pages, or custom groups |
+| Compress | Clear, Balanced, or Maximum presets, retaining text and vectors |
+| Encrypt/decrypt | Open/owner passwords and print/copy/edit/annotation permissions; known input passwords for decryption |
+| Extract/delete/rotate | Page ranges and rotation angles; deletion must leave at least one page |
+| Watermark | Text, opacity, size, angle, repeated spacing, and preview |
+| PDF to images | PNG/JPEG, DPI, and JPEG quality |
+| Images to PDF | Image list order |
 
-**File table** (5 columns): file name/number of pages/size/page range (double-click to directly edit the page range of each row)/status. It also supports dragging PDF files directly into this area to add them in batches.
-
-**Current operating settings** (Panel switched by module):
-
-| Module | Settings |
-| --- | --- |
-| Merge | Output name (default merge PDF) + list order is the merge order |
-| Split | Split mode (page by page/every N pages/custom grouping) The "number of pages per group" and "custom grouping" input boxes appear according to the mode |
-| Compression | Compression gear (clear/balanced/extreme)|
-| Encryption | Open password + Confirm open password + Owner password + Confirm owner password + 4 permissions CheckBox (allow printing/copying/modification/annotation) |
-| Decryption | Prompt text (use the "Set password" above to assign a separate password for each file) |
-| Extract/Delete/Rotate | Page number input box + page range syntax (same as Rhino style: `1;3;5-7` or `1-3;4-6;7,9`) |
-| Add watermark | Watermark text + application page number + transparency 1–100 + font size 8–200 pt + angle -180~180 + horizontal/vertical spacing 20–500 mm |
-
-**Output directory line**: Output directory input box (default "Leave blank to save to source folder" prompt) + Select directory + Use source directory two buttons.
-
-**Bottom bar**: Status text (default "Please add PDF file.") / Progress bar / Three buttons: Start XXX (dynamically named according to the current module) / Cancel task (activated only during execution) / Open output directory (activated after completion). Closing the window automatically cancels running tasks. The minimum window size is 780×520, and the startup size is 920×620.
+Inspect thumbnails and the large preview before processing. Leave the output folder empty to use the source folder. Existing output files receive a new filename rather than being overwritten, and source files are preserved. Leaving the page requests cancellation of unfinished tasks.

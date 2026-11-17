@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsWeChatSend: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/19d1d6ae-329a-4beb-bfca-5b8b6c2d5bb5.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsWeChatSend · Automatically send WeChat messages
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsWeChatSend: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/b527c43f-589c-526e-953e-6962b4538a62.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/b527c43f-589c-526e-953e-6962b4538a62.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsWeChatSend · Automatically send WeChat messages
 
 > Module: Utilities / System Tools
 

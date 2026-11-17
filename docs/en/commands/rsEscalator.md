@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsEscalator: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/6e0cf860-11c3-4a0d-ba89-610d10484941.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsEscalator · Escalator
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsEscalator: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/61110f96-bba2-593b-a676-74f10b97a70f.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/61110f96-bba2-593b-a676-74f10b97a70f.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsEscalator · Escalator
 
 > Module: Architecture / Stairs & Ramps
 

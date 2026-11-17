@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsSunlightAnalysisByGrid：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/ed908633-37eb-46ca-949b-5b6d89bac256.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSunlightAnalysisByGrid · 日照平面分析
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsSunlightAnalysisByGrid：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/b378f772-f294-583e-b2b1-37af72470454.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/b378f772-f294-583e-b2b1-37af72470454.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSunlightAnalysisByGrid · 日照平面分析
 
 > 模块：分析 / 建筑物理分析
 

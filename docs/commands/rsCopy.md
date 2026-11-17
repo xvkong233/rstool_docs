@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsCopy：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/cb2e69e6-8ce2-4c35-accb-982a027b5eba.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsCopy · 带原点Copy
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsCopy：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/bd2e6661-e556-5292-958e-0da90ad05adf.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/bd2e6661-e556-5292-958e-0da90ad05adf.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsCopy · 带原点Copy
 
 > 模块：辅助工具 / 剪贴板
 

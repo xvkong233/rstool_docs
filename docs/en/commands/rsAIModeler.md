@@ -1,16 +1,28 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsAIModeler: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/23d497e1-df78-5dfa-95d3-cf3c56f968a4.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsAIModeler · AI modeling
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsAIModeler: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/23d497e1-df78-5dfa-95d3-cf3c56f968a4.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsAIModeler · AI modeling (legacy entry)
 
 > Module: AI / Rendering & Modeling
 
 [← Back to command index](/en/commands/)
+
+::: warning Version 2.0: legacy entry
+
+This command is not registered in the reviewed 2.0 source. The legacy AI-modeling workflow cannot be invoked from this page.
+
+The old name is not a callable alias in the reviewed 2.0 source. The historical reference below is for 1.x.
+
+[View the 2.0 command changes](/en/commands/v2)
+
+:::
+
+::: details View the 1.x historical reference
+
+> Icons, screenshots, parameters, and workflows in this section describe the old version.
 
 **Function**: This command can call the AI large model to quickly generate a script for editing Rhino; you can also select Agent mode to use the large model to directly modify and edit Rhino. In Generate Script mode, AI outputs Python/RhinoScript code, which needs to be executed manually in Rhino; in Agent mode, AI directly controls Rhino geometry through tool calls (Delete/Replace/Boolean, etc. will prompt Approve/Deny for confirmation)
 
 ![RsTool AI Modeler window: The left side is the script display area (the default is empty "no script"), the right "AI Modeling Assistant" from top to bottom is the status, setting entrance, work mode drop-down (generate script/Agent modeling), requirement description, reference picture (upload picture/capture Rhino viewport/paste clipboard picture), continuous dialogue switch, model drop-down and the green "Generate Script" button at the bottom](../../assets/rsAIModeler/image1.png)
 
 > Screenshots and videos may show a Chinese-language interface. Labels and control positions can vary by Rhino or RSTool version.
-
-**Run**: Enter `rsAIModeler` in the Rhino command line (opens a settings window).
 
 **Workflow**:
 
@@ -38,3 +50,6 @@
 | Model | modelSelect | select | Gemini Preset (Nano Banana 2) | Default model/custom model name | The multimodal model used for plotting and understanding; you can select or enter a custom model name in the drop-down |
 
 **Notes**: Internet connection is required; all parameters are set within the window. The Generate Script mode generates the script first for review and then runs it, which is relatively safe; Agent Modeling has create/modify/delete permissions, and deletion and Boolean replacement will trigger a confirmation pop-up window.
+
+
+:::

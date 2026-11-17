@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsBoids: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/04840a1b-9518-4905-9727-7dfd622972b4.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsBoids · Boids Simulation
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsBoids: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/0ba85604-d89c-5a66-94f5-1f3fba3c3de2.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/0ba85604-d89c-5a66-94f5-1f3fba3c3de2.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsBoids · Boids Simulation
 
 > Module: Physics Simulation / Dynamics
 

@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsBrowser：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/b591df04-9e5d-44b3-9840-4000b8da4fc0.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsBrowser · 摸鱼浏览器
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsBrowser：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/afeb8a72-649e-5899-8d48-cbdd42019a34.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/afeb8a72-649e-5899-8d48-cbdd42019a34.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsBrowser · 摸鱼浏览器
 
 > 模块：趣味 / 互动娱乐
 

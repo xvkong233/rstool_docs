@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsFadingStairVertical: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/a6ce9911-4b49-4eb2-bc72-97a2652181ca.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsFadingStairVertical · Vertical Tapered Staircase
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsFadingStairVertical: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/a1cce2f9-310f-53b8-9a13-4a5b823f4b36.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/a1cce2f9-310f-53b8-9a13-4a5b823f4b36.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsFadingStairVertical · Vertical Tapered Staircase
 
 > Module: Architecture / Stairs & Ramps
 

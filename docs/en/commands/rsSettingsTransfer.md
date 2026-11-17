@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsSettingsTransfer: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/b030732e-555f-54a9-9eea-d5aeb2802a9f.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSettingsTransfer · Rhino / RSTool Settings Transfer
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsSettingsTransfer: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/3d883cfd-2acd-54f7-af22-d5d514a777f5.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/3d883cfd-2acd-54f7-af22-d5d514a777f5.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSettingsTransfer · Rhino / RSTool Settings Transfer
 
 > Module: Productivity / Productivity
 

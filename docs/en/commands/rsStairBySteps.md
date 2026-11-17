@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsStairBySteps: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/02ea1fbc-42e5-4170-8db5-b1c696ebf3dd.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsStairBySteps · Staircase by Step Count
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsStairBySteps: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/4e7e5cd7-0486-5b50-ba2c-79bfb9335edf.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/4e7e5cd7-0486-5b50-ba2c-79bfb9335edf.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsStairBySteps · Staircase by Step Count
 
 > Module: Architecture / Stairs & Ramps
 

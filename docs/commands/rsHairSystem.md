@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsHairSystem：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/561b0aad-97a6-562f-97e2-406ad5653eeb.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsHairSystem · 毛发系统
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsHairSystem：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/ad492b7f-c60e-549f-ba3d-99e064df8adb.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/ad492b7f-c60e-549f-ba3d-99e064df8adb.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsHairSystem · 毛发系统
 
 > 模块：几何 / 网格
 

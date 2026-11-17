@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading" title="rsSpaceTruss: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/69c37c77-fed1-411a-a3b6-5db338c9918a.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/69c37c77-fed1-411a-a3b6-5db338c9918a.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSpaceTruss · Double-Layer Space Frame
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsSpaceTruss: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/56c85556-c5ac-5f07-9ee7-85f3c15904be.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/56c85556-c5ac-5f07-9ee7-85f3c15904be.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSpaceTruss · Double-Layer Space Frame
 
 > Module: Architecture / Building Elements
 

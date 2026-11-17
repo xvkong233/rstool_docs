@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsFilterHeavyObjects: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/62a618d5-effc-5962-86cf-b45089870b88.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsFilterHeavyObjects · Filter Heavy Objects
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsFilterHeavyObjects: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/477fdf09-1b3a-5d5d-8822-0fe041d3ca4a.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/477fdf09-1b3a-5d5d-8822-0fe041d3ca4a.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsFilterHeavyObjects · Filter Heavy Objects
 
 > Module: Utilities / System Tools
 

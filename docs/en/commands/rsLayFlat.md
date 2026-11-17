@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsLayFlat: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/3898b155-215c-58cf-b266-c218c55ecb04.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsLayFlat · Flatten with one click
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsLayFlat: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/7937c930-6974-54de-a8f6-ad6aefe49344.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/7937c930-6974-54de-a8f6-ad6aefe49344.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsLayFlat · Flatten with one click
 
 > Module: Geometry / Object Transforms
 

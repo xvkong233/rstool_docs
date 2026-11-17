@@ -1,10 +1,8 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--missing" title="当前工具栏中无对应图标" aria-hidden="true"></span> rsKeyCastSettings · 按键显示设置
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsKeyCastSettings：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/bd9d6b06-0a7b-5b13-a455-d58a767ddae6.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/bd9d6b06-0a7b-5b13-a455-d58a767ddae6.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsKeyCastSettings · 按键显示设置
 
 > 模块：效率工具 / 屏幕工具
 
 [← 返回命令目录](/commands/)
-
-> 当前工具栏中没有此命令的对应图标。横线仅表示暂无图标，不是实际按钮；请通过命令行调用。
 
 **功能**：配置并保存按键显示的外观设置
 

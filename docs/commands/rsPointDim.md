@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsPointDim：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/a7d518ac-db32-5867-ae69-b77f75530fbf.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsPointDim · 逐点标注
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsPointDim：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/44a457f4-2ca0-5691-82ed-a0f48c043ea6.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/44a457f4-2ca0-5691-82ed-a0f48c043ea6.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsPointDim · 逐点标注
 
 > 模块：视图出图 / 标注出图
 

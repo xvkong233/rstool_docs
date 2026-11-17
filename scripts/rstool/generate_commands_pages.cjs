@@ -8,6 +8,11 @@ const fs = require('node:fs')
 const path = require('node:path')
 const { localizeCommand } = require('./i18n.cjs')
 const { renderCommandIcon, commandIconNote } = require('./command_icons.cjs')
+const {
+  versions,
+  isLegacyCommand,
+  versionNotice
+} = require('./command_versions.cjs')
 
 const SRC = path.join(__dirname, 'commands.json')
 const EN_SRC = path.join(__dirname, 'i18n/commands.en.json')
@@ -48,6 +53,7 @@ const labels = {
     function: '功能',
     call: '调用',
     formCall: '打开设置窗口',
+    propertiesCall: '进入对象属性编辑',
     cliCall: '命令行交互',
     callText: (name, type) => `在 Rhino 命令行输入 \`${name}\`（${type}）`,
     ghFlow: '使用步骤',
@@ -67,7 +73,7 @@ const labels = {
     iconGuide:
       '图标与工具栏按钮对应；共用按钮的命令可查看页面内的右键说明。「—」表示当前工具栏没有对应图标。',
     indexIntro: (count, duplicates) =>
-      `覆盖 RsTool 插件全部 ${count} 条命令${duplicates}，每条命令一个独立页面，含功能、调用方式、交互流程、参数表、输出、备注与教学视频。`,
+      `这里按 RSTool 2.0 当前入口整理命令，并保留 Grasshopper 组件参考${duplicates}。已合并或暂未保留的旧入口收在「2.0 命令变化与对照」中，不计入下方目录。`,
     duplicateNote: (names) =>
       `（${names.map((name) => `\`${name}\``).join('、')} 在多个分类重复列出）`,
     categoryHeading: (category, count) => `## ${category}（${count} 条）`,
@@ -85,6 +91,7 @@ const labels = {
     function: 'Function',
     call: 'Run',
     formCall: 'opens a settings window',
+    propertiesCall: 'opens object properties for editing',
     cliCall: 'command-line interaction',
     callText: (name, type) =>
       `Enter \`${name}\` in the Rhino command line (${type}).`,
@@ -114,7 +121,7 @@ const labels = {
     iconGuide:
       'Icons match toolbar buttons; shared-button commands include right-click instructions on their pages. A dash means no icon exists in the current toolbar.',
     indexIntro: (count, duplicates) =>
-      `Complete reference for all ${count} RsTool commands${duplicates}. Each command has a dedicated page covering its purpose, invocation, workflow, parameters, output, notes, and tutorials.`,
+      `Browse documented RSTool 2.0 command entries and Grasshopper component references${duplicates}. Merged and unavailable legacy entries are listed separately in the 2.0 command changes guide.`,
     duplicateNote: (names) =>
       ` (${names.map((name) => `\`${name}\``).join(', ')} appear in more than one category)`,
     categoryHeading: (category, count) => `## ${category} (${count})`,
@@ -157,8 +164,9 @@ function renderCommand(item, detail, locale) {
   const category = item.cat || text.uncategorized
   const subcategory = item.sub || ''
   const lines = []
+  const legacy = isLegacyCommand(name)
   lines.push(
-    `# ${renderCommandIcon(name, { locale, context: 'heading' })} ${name !== displayName ? `${name} · ${displayName}` : name}`
+    `# ${renderCommandIcon(name, { locale, context: 'heading' })} ${name !== displayName ? `${name} · ${displayName}` : name}${legacy ? (locale === 'en' ? ' (legacy entry)' : '（旧版入口）') : ''}`
   )
   lines.push('')
   lines.push(
@@ -170,13 +178,34 @@ function renderCommand(item, detail, locale) {
   )
   lines.push('')
 
-  const iconNote = commandIconNote(name, locale)
+  const notice = versionNotice(name, locale)
+  if (notice) lines.push(notice)
+  if (legacy) {
+    lines.push(
+      locale === 'en'
+        ? '::: details View the 1.x historical reference'
+        : '::: details 查看 1.x 历史说明',
+      ''
+    )
+    lines.push(
+      locale === 'en'
+        ? '> Icons, screenshots, parameters, and workflows in this section describe the old version.'
+        : '> 本节的图标、截图、参数与操作流程均为旧版资料。',
+      ''
+    )
+  }
+  const iconNote = legacy ? '' : commandIconNote(name, locale)
   if (iconNote) {
     lines.push(`> ${iconNote}`)
     lines.push('')
   }
 
-  const func = detail.output || detail.help || item.desc || text.unavailable
+  const func =
+    (detail.descriptionFirst && item.desc) ||
+    detail.output ||
+    detail.help ||
+    item.desc ||
+    text.unavailable
   lines.push(`**${text.function}**${text.separator}${esc(func)}`)
   lines.push('')
 
@@ -198,8 +227,13 @@ function renderCommand(item, detail, locale) {
     lines.push('')
   }
 
-  if (detail.style !== 'gh') {
-    const callType = detail.style === 'form' ? text.formCall : text.cliCall
+  if (detail.style !== 'gh' && !legacy) {
+    const callType =
+      detail.style === 'form'
+        ? text.formCall
+        : detail.style === 'properties'
+          ? text.propertiesCall
+          : text.cliCall
     lines.push(
       `**${text.call}**${text.separator}${text.callText(name, callType)}`
     )
@@ -316,6 +350,7 @@ function renderCommand(item, detail, locale) {
   }
 
   lines.push(...deferredParameters)
+  if (legacy) lines.push('', ':::', '')
   return lines.join('\n')
 }
 
@@ -347,6 +382,7 @@ const commandText = (item) =>
   item.zh && item.zh !== item.name ? `${item.name} · ${item.zh}` : item.name
 
 function renderIndex(data, locale) {
+  data = data.filter((item) => !isLegacyCommand(item.name))
   const text = labels[locale]
   const categories = groupByCategory(data)
   const names = new Set(data.map((item) => item.name))
@@ -361,6 +397,8 @@ function renderIndex(data, locale) {
     `> ${text.indexIntro(data.length, duplicateNote)}`,
     '',
     text.iconGuide,
+    '',
+    `[${locale === 'en' ? '2.0 command changes and legacy entry mapping' : '2.0 命令变化与旧入口对照'}](${prefix}v2)`,
     ''
   ]
 
@@ -396,6 +434,74 @@ function renderIndex(data, locale) {
   return lines.join('\n') + '\n'
 }
 
+function renderVersionGuide(data, locale) {
+  const en = locale === 'en'
+  const prefix = en ? '/en/commands/' : '/commands/'
+  const link = (name) => `[\`${name}\`](${prefix}${slug(name)})`
+  const lines = [
+    en ? '# RSTool 2.0: command changes' : '# RSTool 2.0：命令变化与对照',
+    '',
+    en
+      ? `Reviewed against the 2.0 source on ${versions.reviewedAt}. Use this page to find where an old command has moved; availability depends on the version you have installed.`
+      : `根据 ${versions.reviewedAt} 的 2.0 源码核对。升级后找不到原来的命令，可以先在这里看它现在从哪里进入；实际可用功能以所装版本为准。`,
+    '',
+    en ? '## What changed' : '## 先看这几个变化',
+    '',
+    en
+      ? '- Walls, doors, windows, curtain walls, and elevators share 2D/3D panels. The double-flight and multi-flight stair panels also include their former 2D commands.\n- Select a parametric object and edit it in Properties. Some old editing commands have become Rhino actions or panel controls.\n- Libraries, studios, and several utility panels run in the RSTool client. Keep it running and signed in.\n- Old command names are not automatically aliases. Update custom toolbar macros and shortcuts to the current entry.'
+      : '- 墙体、门窗、幕墙和电梯用同一套面板选择二维或三维；双跑、多跑楼梯也整合了原来的二维命令。\n- 参数对象选中后到属性面板继续修改，部分旧编辑命令改成了 Rhino 原生操作或面板按钮。\n- 资源库、工作室和部分工具面板放到了 RSTool 客户端里，使用时保持客户端运行并登录。\n- 旧命令名不会自动变成兼容别名。自己设置的工具栏宏和快捷键，需要改成现在的入口。',
+    '',
+    en ? '## Unified panels and current entries' : '## 统一面板与现用入口',
+    '',
+    en ? '| Entry | What to use in 2.0 |' : '| 入口 | 2.0 怎么用 |',
+    '| --- | --- |'
+  ]
+  for (const item of data) {
+    const info = versions.commands[item.name]
+    if (!info || isLegacyCommand(item.name)) continue
+    lines.push(`| ${link(item.name)} | ${esc(info[locale])} |`)
+  }
+  for (const [status, zh, english] of [
+    ['merged', '旧命令现在用哪个', 'Replacement commands'],
+    ['workflow', '改成原生操作或面板设置', 'Rhino actions and panel settings'],
+    [
+      'unavailable',
+      '当前未保留的旧入口',
+      'Legacy entries not currently registered'
+    ]
+  ]) {
+    lines.push(
+      '',
+      `## ${en ? english : zh}`,
+      '',
+      en
+        ? '| Old entry (historical page) | Current entry / action |'
+        : '| 旧入口（点击查看历史页） | 现用入口 / 操作 |',
+      '| --- | --- |'
+    )
+    for (const item of data) {
+      const info = versions.commands[item.name]
+      if (info?.status !== status) continue
+      const target = info.replacements.map(link).join(en ? ', ' : '、')
+      lines.push(
+        `| ${link(item.name)} | ${target ? target + ' — ' : ''}${esc(info[locale])} |`
+      )
+    }
+  }
+  lines.push(
+    '',
+    en ? '## Screenshots, videos, and older files' : '## 截图、视频与旧文件',
+    '',
+    en
+      ? 'Some screenshots and tutorials show 1.x panels. Follow the 2.0 entry and text on the page when labels differ. Merged command names do not mean that every old document object is converted automatically.'
+      : '部分截图和视频仍来自 1.x，按钮文字和界面可能不同；遇到差异，先按页面中的 2.0 入口和文字说明操作。命令入口合并，也不代表旧文件中的所有对象都会自动变成新的参数对象。',
+    '',
+    `[${en ? 'Installation and startup' : '安装与启动说明'}](${prefix}installation/) · [${en ? 'Command index' : '返回命令总目录'}](${prefix})`,
+    ''
+  )
+  return lines.join('\n')
+}
+
 function generate(locale) {
   const outputDir = locale === 'en' ? EN_OUT_DIR : ZH_OUT_DIR
   fs.mkdirSync(outputDir, { recursive: true })
@@ -416,6 +522,14 @@ function generate(locale) {
   fs.writeFileSync(
     path.join(outputDir, 'index.md'),
     renderIndex(
+      localized.map(({ item }) => item),
+      locale
+    ),
+    'utf8'
+  )
+  fs.writeFileSync(
+    path.join(outputDir, 'v2.md'),
+    renderVersionGuide(
       localized.map(({ item }) => item),
       locale
     ),

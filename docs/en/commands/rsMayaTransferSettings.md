@@ -1,10 +1,8 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--missing" title="No icon in the current toolbar" aria-hidden="true"></span> rsMayaTransferSettings · Rhino-Maya transfer settings
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsMayaTransferSettings: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/34f12816-446c-5d54-af70-b9efdb19b2b2.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/34f12816-446c-5d54-af70-b9efdb19b2b2.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsMayaTransferSettings · Rhino-Maya transfer settings
 
 > Module: Utilities / Import & Export
 
 [← Back to command index](/en/commands/)
-
-> The current toolbar has no icon for this command. The dash is a placeholder, not a toolbar icon; run the command by name.
 
 **Function**: Open the Rhino-Maya Transfer Settings window
 

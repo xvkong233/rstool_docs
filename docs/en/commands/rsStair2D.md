@@ -1,12 +1,26 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsStair2D: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/d50f511b-bafd-4929-985b-c72f8c177ed4.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsStair2D · 2D stairs
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsStair2D: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/d50f511b-bafd-4929-985b-c72f8c177ed4.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsStair2D · 2D stairs (legacy entry)
 
-> Module: 2D Architecture / Other 2D Tools
+> Module: Architecture / Stairs & Ramps
 
 [← Back to command index](/en/commands/)
 
-**Function**: Double run staircase 2D plane symbols (stairs, platforms, up and down arrows and step lines, dimensions)
+::: warning Version 2.0: legacy entry
 
-**Run**: Enter `rsStair2D` in the Rhino command line (command-line interaction).
+2D double-flight stairs are now part of the double-flight stair window, with 2D and 3D modes.
+
+Use [`rsDoubleFlightStairs`](/en/commands/rsDoubleFlightStairs).
+
+The old name is not a callable alias in the reviewed 2.0 source. The historical reference below is for 1.x.
+
+[View the 2.0 command changes](/en/commands/v2)
+
+:::
+
+::: details View the 1.x historical reference
+
+> Icons, screenshots, parameters, and workflows in this section describe the old version.
+
+**Function**: Double run staircase 2D plane symbols (stairs, platforms, up and down arrows and step lines, dimensions)
 
 **Workflow**:
 
@@ -27,3 +41,6 @@
 | Upward side | UpSide | list | left | left/right |  |
 
 **Notes**: Two-run stairs; the width of the stairwell is automatically not less than 2 × the width of the stair section.
+
+
+:::

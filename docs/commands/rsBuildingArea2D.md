@@ -1,6 +1,6 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsBuildingArea2D：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/8df5803a-0ca4-5601-82ab-decd6579cd36.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsBuildingArea2D · 建筑面积
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsBuildingArea2D：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/f416aa75-c218-5728-8db0-0abdaa1f1522.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/f416aa75-c218-5728-8db0-0abdaa1f1522.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsBuildingArea2D · 建筑面积
 
-> 模块：二维建筑 / 其他二维
+> 模块：建筑 / 标高与面积
 
 [← 返回命令目录](/commands/)
 

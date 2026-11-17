@@ -8,6 +8,11 @@ const path = require('node:path')
 const { spawnSync } = require('node:child_process')
 const { normalizeIllustrations, sourceHash } = require('./i18n.cjs')
 const { getCommandIcon, renderCommandIcon } = require('./command_icons.cjs')
+const {
+  versions,
+  isLegacyCommand,
+  isRegisteredCommand
+} = require('./command_versions.cjs')
 
 const repoRoot = path.resolve(__dirname, '../..')
 const docsDir = path.join(repoRoot, 'docs')
@@ -19,6 +24,69 @@ let failures = 0
 const fail = (message) => {
   failures++
   console.log('FAIL', message)
+}
+
+// Version mappings drive both locales and navigation. Missing command entries
+// must not silently appear as callable 2.0 tools after later data edits.
+{
+  const names = new Set(source.data.map((item) => item.name))
+  const registered = versions.registeredCommands.map((name) =>
+    name.toLowerCase()
+  )
+  if (new Set(registered).size !== registered.length)
+    fail('2.0 注册快照包含重复入口')
+  for (const [name, info] of Object.entries(versions.commands)) {
+    if (!names.has(name)) fail(`2.0 状态存在孤儿命令: ${name}`)
+    if (
+      ![
+        'merged',
+        'workflow',
+        'unavailable',
+        'updated',
+        'client',
+        'alias'
+      ].includes(info.status)
+    )
+      fail(`2.0 状态无效: ${name}`)
+    if (!info.zh || !info.en || /[\u3400-\u9fff]/.test(info.en || ''))
+      fail(`2.0 双语提示不完整: ${name}`)
+    if (isLegacyCommand(name) && isRegisteredCommand(name))
+      fail(`已注册入口被误标旧版: ${name}`)
+    for (const target of info.replacements || []) {
+      if (
+        !names.has(target) ||
+        !isRegisteredCommand(target) ||
+        isLegacyCommand(target)
+      )
+        fail(`2.0 替代入口不可用: ${name} -> ${target}`)
+    }
+  }
+  for (const item of source.data) {
+    if (
+      source.details[item.name]?.style !== 'gh' &&
+      !isRegisteredCommand(item.name) &&
+      !isLegacyCommand(item.name)
+    )
+      fail(`2.0 未注册入口缺少去向说明: ${item.name}`)
+    if (!isLegacyCommand(item.name)) continue
+    for (const prefix of ['commands', 'en/commands']) {
+      const index = fs.readFileSync(
+        path.join(docsDir, prefix, 'index.md'),
+        'utf8'
+      )
+      if (index.includes(`](/${prefix}/${item.name})`))
+        fail(`旧入口仍在主目录: ${item.name}`)
+      const page = fs.readFileSync(
+        path.join(docsDir, prefix, `${item.name}.md`),
+        'utf8'
+      )
+      if (/\*\*(调用|Run)\*\*/.test(page))
+        fail(`旧入口仍展示当前调用方式: ${item.name}`)
+    }
+  }
+  console.log(
+    `ok 2.0 入口映射与历史页隔离（${source.data.filter((item) => isLegacyCommand(item.name)).length} 个旧入口）`
+  )
 }
 
 function walkMarkdown(directory) {
@@ -82,7 +150,7 @@ const markdownFiles = walkMarkdown(docsDir)
       if (!icon.source || !icon.iconGuid || !icon.buttonGuid || !icon.macroGuid)
         fail(`图标来源记录不完整: ${item.name}`)
     }
-    if (icon.kind === 'toolbar-right') {
+    if (icon.kind === 'toolbar-right' && !isLegacyCommand(item.name)) {
       const button = source.data.find(
         (entry) =>
           entry.name.toLowerCase() === icon.buttonCommand?.toLowerCase()

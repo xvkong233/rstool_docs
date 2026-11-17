@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsDifferentialGrowth：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/5a759382-750c-5b3d-8e1a-3263ee1d13eb.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsDifferentialGrowth · 差异生长线条
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsDifferentialGrowth：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/29a3ea8d-bbb8-5b85-a4d4-762ed05b74e7.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/29a3ea8d-bbb8-5b85-a4d4-762ed05b74e7.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsDifferentialGrowth · 差异生长线条
 
 > 模块：物理模拟 / 找形与松弛
 

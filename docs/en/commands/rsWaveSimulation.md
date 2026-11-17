@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsWaveSimulation: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/33e38c7b-40f6-5eec-a753-de0393493802.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsWaveSimulation · Water Surface Waves
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsWaveSimulation: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/f8ca622a-d8ba-52e4-85c2-7e259452dd5d.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/f8ca622a-d8ba-52e4-85c2-7e259452dd5d.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsWaveSimulation · Water Surface Waves
 
 > Module: Physics Simulation / Dynamics
 

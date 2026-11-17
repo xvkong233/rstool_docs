@@ -1,12 +1,24 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsModelingCompanion：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/a904cf0c-89db-51a9-8ecc-8540bec11012.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsModelingCompanion · 建模陪伴
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsModelingCompanion：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/a904cf0c-89db-51a9-8ecc-8540bec11012.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsModelingCompanion · 建模陪伴（旧版入口）
 
 > 模块：效率工具 / 生产力
 
 [← 返回命令目录](/commands/)
 
-**功能**：切换建模陪伴助手的显示 / 隐藏
+::: warning 2.0：旧版入口已调整
 
-**调用**：在 Rhino 命令行输入 `rsModelingCompanion`（命令行交互）
+当前 2.0 未注册这个命令，暂保留旧版参考。
+
+这个旧名称在本次核对的 2.0 中不是可直接输入的兼容别名；下方保留的是 1.x 历史说明。
+
+[查看 2.0 命令变化与对照](/commands/v2)
+
+:::
+
+::: details 查看 1.x 历史说明
+
+> 本节的图标、截图、参数与操作流程均为旧版资料。
+
+**功能**：切换建模陪伴助手的显示 / 隐藏
 
 **交互流程**：
 
@@ -61,3 +73,6 @@
 - 6 种可选性格：温柔陪伴、专业建筑师、元气搭档、严格监工、霸道总裁、安静助手——决定语气与反馈风格。
 - 可换宠物形象，调节大小、透明度、是否置顶、点击穿透、位置锁定、空闲闲聊频率等。
 - 长时间未保存（约 1 小时）会主动提醒你按 Ctrl+S。
+
+
+:::

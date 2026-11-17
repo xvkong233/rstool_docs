@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsDynamicComponentInteract: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/f697c704-4b3f-5fe4-a384-103da6b5bd50.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsDynamicComponentInteract · Dynamic component interaction
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsDynamicComponentInteract: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/f0c2f593-67ca-5335-9876-f6c1576fdf6d.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/f0c2f593-67ca-5335-9876-f6c1576fdf6d.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsDynamicComponentInteract · Dynamic component interaction
 
 > Module: Dynamic Components / Interaction
 

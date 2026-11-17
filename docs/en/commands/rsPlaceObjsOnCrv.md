@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsPlaceObjsOnCrv: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/467448fe-5b1d-4e91-a635-23229c9b464c.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsPlaceObjsOnCrv · Place objects along a curve
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsPlaceObjsOnCrv: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/4b0dcc96-9f97-5760-8a18-d936b47e6106.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/4b0dcc96-9f97-5760-8a18-d936b47e6106.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsPlaceObjsOnCrv · Place objects along a curve
 
 > Module: Geometry / Object Transforms
 

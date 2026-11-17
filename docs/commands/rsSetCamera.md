@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsSetCamera：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/70838512-348d-4db6-be5b-67ef0cf70b9d.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSetCamera · 设置相机
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsSetCamera：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/88ffefbc-f685-5f5e-87b8-680d0ab2d03d.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/88ffefbc-f685-5f5e-87b8-680d0ab2d03d.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSetCamera · 设置相机
 
 > 模块：视图出图 / 视图相机
 

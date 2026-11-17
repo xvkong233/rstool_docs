@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsPickMaterial: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/20196af7-70f7-4f8e-98af-fd3816a9c209.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsPickMaterial · Pick Material
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsPickMaterial: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/eb4114bd-e408-5843-a06f-8e9f8fd1212b.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/eb4114bd-e408-5843-a06f-8e9f8fd1212b.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsPickMaterial · Pick Material
 
 > Module: Organization & Selection / Material Tools
 

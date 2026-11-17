@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsDiscreteCity：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/4ad82529-de9f-584b-a57a-6707c96e66c2.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsDiscreteCity · 离散建筑组团
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsDiscreteCity：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/2b5d29f1-7332-5e49-880c-91b6ecd270ce.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/2b5d29f1-7332-5e49-880c-91b6ecd270ce.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsDiscreteCity · 离散建筑组团
 
 > 模块：建筑 / 建筑构件
 

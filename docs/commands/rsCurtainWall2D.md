@@ -1,31 +1,53 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsCurtainWall2D：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/b57a57b5-ac33-48a7-ae67-78666a0cfbcf.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsCurtainWall2D · 二维幕墙
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--missing" title="当前工具栏中无对应图标" aria-hidden="true"></span> rsCurtainWall2D · 二维幕墙快捷入口
 
-> 模块：二维建筑 / 其他二维
+> 模块：建筑 / 建筑构件
 
 [← 返回命令目录](/commands/)
 
-**功能**：沿中心线生成的 2D 幕墙（竖梃、玻璃夹板曲线），归入幕墙组
+::: info 2.0 说明
+
+此快捷入口仍保留，以二维模式打开统一幕墙面板，也可在面板中切换三维。
+
+[查看 2.0 命令变化与对照](/commands/v2)
+
+:::
+
+> 当前工具栏中没有此命令的对应图标。横线仅表示暂无图标，不是实际按钮；请通过命令行调用。
+
+**功能**：直接打开统一简单幕墙窗口的二维模式；沿路径连续画竖梃和玻璃表示，也可在窗口中切换三维。
 
 ![rsCurtainWall2D · 2D 幕墙延伸预览：Rhino 视口一段已生成的 L 形幕墙（黑色线段 + 朝外短斜线竖梃），右上角第二段正在用橙色橡皮线预览延伸，长度标签 7.0066 m 与十字光标同显](../assets/rsCurtainWall2D/image1.png)
 *rsCurtainWall2D 沿中心线延伸幕墙时，Rhino 视口在前一段已生成的幕墙（黑色墙线 + 等间距朝外短斜线竖梃）基础上，下一段用橙色橡皮线实时预览并附带长度标签（图中右上角 7.0066 m），便于按设计分段控制幕墙长度与折角*
 
-**调用**：在 Rhino 命令行输入 `rsCurtainWall2D`（命令行交互）
+**调用**：在 Rhino 命令行输入 `rsCurtainWall2D`（打开设置窗口）
 
 **交互流程**：
 
-1. 命令行输入 rsCurtainWall2D
-2. 设置竖梃间距、竖梃宽/深、玻璃夹板宽、玻璃位置、绘制模式（直线/弧线/样条）
-3. 指定起点并连续绘制幕墙中心线，回车结束
+1. 输入 rsCurtainWall2D，直接进入二维幕墙绘制，其余操作与 rsCurtain 相同。
+2. 二维设置竖梃、玻璃夹与玻璃位置；三维设置高度、底标高、内部横竖挺数量和截面。
+3. 在视口画基线。直线可连续拾点，圆弧按三点，自由曲线回车生成。
+4. 需要独立新对象时点“另起一段”，结束时按 Esc 或关闭面板。
 
 **参数**：
 
 | 中文名 | 英文名 | 类型 | 默认值 | 范围 | 说明 |
 | --- | --- | --- | --- | --- | --- |
-| 竖梃间距 | MullionSpacing | double | 1.2 | >模型公差 | 默认 1.2m（1200mm） |
-| 竖梃宽 | MullionWidth | double | 0.04 | >模型公差 | 默认 0.04m（40mm） |
-| 竖梃深 | MullionDepth | double | 0.2 | >模型公差 | 默认 0.2m（200mm） |
-| 玻璃夹板宽 | GlassClampWidth | double | 0.03 | >模型公差 | 默认 0.03m（30mm） |
-| 玻璃位置 | GlassPosition | list | 外侧 | 外侧/中心/内侧 |  |
-| 绘制模式 | Mode | list | 直线 | 直线/弧线/样条 |  |
+| 绘制用途 | OutputMode | enum | 首次二维；之后记住上次成功模式 | 二维 / 三维 | 切换只影响后续绘制；修改已有对象请使用属性面板。 |
+| 绘制方式 | DrawingMode | enum | 直线 | 直线 / 圆弧 / 自由曲线 | 圆弧按三点画，自由曲线逐点拾取经过点。 |
+| 二维竖梃间距 | Spacing | double | 1200 mm | 正值 | 控制平面竖梃沿路径的间隔。 |
+| 二维竖梃／玻璃夹 | Mullions2D | group | 宽40 / 深200 / 玻璃夹30 mm | 须能容纳当前路径与间距 | 玻璃位置可选外侧、居中或内侧，默认外侧。 |
+| 三维高度／底标高 | HeightElevation | group | 3000 mm / 0 | 高度须容纳分格 | 三维按各段基线生成独立幕墙。 |
+| 内部竖挺／横挺数量 | Counts | group | 3 / 2 | 各 0–64；总格数 ≤1024 | 不含四周外框；3根内部竖挺形成4列玻璃。 |
+| 三维截面／外框／玻璃 | Sections3D | group | 横竖挺与外框50×100 mm；玻璃12 mm | 截面须大于容差且能容纳净格 | 分别控制正面宽度或高度与进深。 |
 
-**备注**：默认按 1200/40/200/30mm 适配模型单位
+**输出**：参数二维幕墙。
+
+**备注**：尺寸按当前 Rhino 文档单位显示；下列 mm、m 是等效物理尺寸示例。
+
+`rsCurtain` 统一简单二维／三维幕墙，`rsCurtainWall2D` 仍是同一窗口的二维快捷入口。首次默认二维，以后记住成功使用的模式。
+
+二维连续绘制保留为同一个参数幕墙，逐段更新路径；“另起一段”创建新对象。三维每确认一段基线生成一个独立参数幕墙。切换模式保留已完成对象，放弃未完成基线并重新拾起点。
+
+这里按路径绘制简单幕墙；需要在复杂多重曲面上布置幕墙时，使用独立的 `rsCurtainPlus`。
+
+配图或视频可能来自旧版界面，2.0 请以本文的入口、模式和参数说明为准。

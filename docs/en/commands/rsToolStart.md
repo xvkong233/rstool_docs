@@ -1,21 +1,21 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsToolStart: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/182bf349-c9eb-5acb-b92e-efce7385862d.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsToolStart · Start RsTool
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsToolStart: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/2831bea5-0f16-5a82-a57d-276aa8945f27.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/2831bea5-0f16-5a82-a57d-276aa8945f27.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsToolStart · Restore Toolbars
 
 > Module: Utilities / System Tools
 
 [← Back to command index](/en/commands/)
 
-**Function**: Reload the RsTool toolbar and pop up the corresponding language panel
+**Function**: Restore the RSTool 2.0 toolbars using the saved language, or the Rhino interface language on first use.
 
 **Run**: Enter `rsToolStart` in the Rhino command line (command-line interaction).
 
 **Workflow**:
 
-1. Enter RsToolStart on the command line to automatically load and pop up the RsTool toolbar (matching Chinese/English configuration according to the interface language)
+1. Run `rsToolStart`.
+2. The appropriate RSTool toolbar group reopens if it was closed or hidden.
+3. Use `rsToolCN` for Chinese or `rsToolEN` for English when you want to choose a language explicitly.
 
 **Parameters**:
 
-> This command has no numeric command-line parameters. Adjust its options in the settings window.
+> No numeric settings or separate settings window are required. Follow the workflow above.
 
-**Notes**: Depends on the version folder and RsTool_CN/EN.rui under the Package directory %APPDATA%\McNeel\Rhinoceros\packages\8.0\RsTool; requires Rhino 8
-
-After executing RsToolStart, RsTool will automatically pop up the toolbar (tool panel) without the need to manually call it up in Rhino; if the toolbar has been closed, hidden or not loaded after a version update, re-run this command to restore the display.
+**Notes**: This restores the toolbars inside Rhino. Version 2.0 uses the resources shipped with the loaded plugin rather than searching an old package directory. Opening the toolbars does not require sign-in; individual tools still require their own account permissions.

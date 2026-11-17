@@ -1,14 +1,24 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsAiRenderOld：右键点击 rsAiRender 按钮" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/8fa021d9-e321-4ae1-b218-205fa2451c7d.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsAiRenderOld · 旧版 AI 渲染
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsAiRenderOld：右键点击 rsAiRender 按钮" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/8fa021d9-e321-4ae1-b218-205fa2451c7d.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsAiRenderOld · 旧版 AI 渲染（旧版入口）
 
 > 模块：AI / 渲染与建模
 
 [← 返回命令目录](/commands/)
 
-> 右键点击工具栏中的 [rsAiRender](./rsAiRender) 按钮可运行本命令；这里显示的是它们共用的按钮图标。
+::: warning 2.0：旧版入口已调整
+
+旧版 AI 渲染入口不再保留；请从客户端进入 AI 渲染，不要将 rsAiRender 当作已可用的替代命令。
+
+这个旧名称在本次核对的 2.0 中不是可直接输入的兼容别名；下方保留的是 1.x 历史说明。
+
+[查看 2.0 命令变化与对照](/commands/v2)
+
+:::
+
+::: details 查看 1.x 历史说明
+
+> 本节的图标、截图、参数与操作流程均为旧版资料。
 
 **功能**：旧版：基于视口/参考图生成 AI 渲染图（WinForms 实现），可保存到本地
-
-**调用**：在 Rhino 命令行输入 `rsAiRenderOld`（打开设置窗口）
 
 **交互流程**：
 
@@ -32,3 +42,6 @@
 | 参考图 | ReferenceImage | file | — | png/jpg/jpeg/bmp/webp | 可选；上传后仅用于整体风格 / 光照 / 材质色调参考，不复制物体或构图 |
 
 **备注**：旧版命令，WinForms 实现，保留用于兼容；需自行配置 API Key。与新版 rsAiRender 相比不区分渲染/灵感工作区，功能较简单
+
+
+:::

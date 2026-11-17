@@ -1,8 +1,22 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsAiAnimation：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/2dbca007-3a3f-587f-a17c-3df60ccf2bd6.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsAiAnimation · AI 动画
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsAiAnimation：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/2dbca007-3a3f-587f-a17c-3df60ccf2bd6.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsAiAnimation · AI 动画（旧版入口）
 
 > 模块：AI / 视频生成
 
 [← 返回命令目录](/commands/)
+
+::: warning 2.0：旧版入口已调整
+
+当前 2.0 未注册这个 Rhino 动画命令；客户端视频生成功能与旧版相机动画流程不能直接等同。
+
+这个旧名称在本次核对的 2.0 中不是可直接输入的兼容别名；下方保留的是 1.x 历史说明。
+
+[查看 2.0 命令变化与对照](/commands/v2)
+
+:::
+
+::: details 查看 1.x 历史说明
+
+> 本节的图标、截图、参数与操作流程均为旧版资料。
 
 **功能**：本命令接入字节跳动（ByteDance）自研的 Seedance / Seedream 大模型，在同一窗口内提供两种生成类型：视频模式基于 Seedance，以参考图（必选）为核心，可叠加参考视频与参考音频做多模态视频生成，或图生视频（首帧/首尾帧）；图片模式基于 Seedream，支持文生图与图生图（以参考图做图生图），一次性生成多张结果。两种模式均支持多任务并发，结果保存到本地并可直接预览
 
@@ -11,8 +25,6 @@
 
 ![rsAiAnimation 参考图模式生成效果：图片模式下以两张参考图驱动生成的扭曲双塔建筑夜景效果图，右侧 AI 主界面任务列表显示已完成任务](../assets/rsAiAnimation/image2.png)
 *图 2：参考图模式生成示例。左侧大图为以参考图驱动生成的扭曲双塔建筑夜景效果图；右侧为 AI 动画生成主界面：生成类型=图片、模型=doubao-seedream-5-0-pro-26028、参考图片区上传了 2 张缩略图（红 × 可删除）、提示词 textarea、参考视频 / 参考音频留空、参数尺寸 2K / 张数 1，生成完成后状态栏显示已完成任务，底部任务列表中已完成项可点开查看 / 保存生成图*
-
-**调用**：在 Rhino 命令行输入 `rsAiAnimation`（打开设置窗口）
 
 **交互流程**：
 
@@ -53,3 +65,6 @@
 
 <iframe class="rstool-video" src="https://player.bilibili.com/player.html?isOutside=true&aid=117157279044608&bvid=BV1gYhj6CEvU&cid=41265071172&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" title="【RSTool】字节的图像大模型，终于支棱起来了？建筑人狂喜！"></iframe>
 *【RSTool】字节的图像大模型，终于支棱起来了？建筑人狂喜！*
+
+
+:::

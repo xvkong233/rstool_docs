@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsPBRToCustomMaterial：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/635b13f7-1bcf-5e90-aaef-daaabcc79a36.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsPBRToCustomMaterial · PBR转自定义材质
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsPBRToCustomMaterial：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/d766a062-a795-593c-8877-a47fadd6fd74.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/d766a062-a795-593c-8877-a47fadd6fd74.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsPBRToCustomMaterial · PBR转自定义材质
 
 > 模块：组织与选择 / 材质辅助
 

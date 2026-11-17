@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsFaceCamera: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/a1631159-e9ea-4c32-a6f3-a9d8e03b3045.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsFaceCamera · Orient Toward Camera
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsFaceCamera: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/5d0fdd71-0009-5de1-a608-13e7ec289344.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/5d0fdd71-0009-5de1-a608-13e7ec289344.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsFaceCamera · Orient Toward Camera
 
 > Module: Views & Documentation / Views & Cameras
 

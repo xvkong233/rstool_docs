@@ -1,32 +1,42 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsTileMeshBlendByColor：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/f23dd86a-f5c6-4161-92da-91208cbec877.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsTileMeshBlendByColor · 按颜色生成渐变表皮
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsTileMeshBlendByColor：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/ff29ba89-dac7-5544-9c86-28be8aadc14f.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/ff29ba89-dac7-5544-9c86-28be8aadc14f.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsTileMeshBlendByColor · 按颜色生成渐变表皮
 
 > 模块：铺装表皮
 
 [← 返回命令目录](/commands/)
 
-**功能**：按顶点颜色权重在单元A/B之间混合铺设的网格
+**功能**：用目标网格的顶点颜色控制 A/B 单元混合，默认生成可继续绘色和改参的 rsMeshFacade。
 
 **调用**：在 Rhino 命令行输入 `rsTileMeshBlendByColor`（打开设置窗口）
 
 **交互流程**：
 
-1. 打开“网格单元混合(按颜色)”窗口
-2. 选取目标网格、参照多边形、单元A、单元B
-3. 点击“启动网格颜色绘制”后在目标网格上按颜色绘制混合权重
-4. 应用 / 取消
+1. 打开“网格单元混合（按颜色）”窗口，选目标网格、参照多边形和单元 A/B。
+2. 使用已有顶点颜色，或点“启动网格颜色绘制”用 rsMeshColorPaint 绘制混合权重。
+3. 按效果调整采样、反转颜色映射、旋转和统一 UV；颜色模式不需要干扰曲线。
+4. 保持“生成可编辑 rsMeshFacade 表皮”勾选，点“应用”把颜色、输入和结果一起存进表皮。
+5. 后续在属性页调整采样或黑白反转；需要重绘时用“编辑颜色网格”，改好再“拾取并更新”。
 
 **参数**：
 
 | 中文名 | 英文名 | 类型 | 默认值 | 范围 | 说明 |
 | --- | --- | --- | --- | --- | --- |
-| 隐藏目标网格 | Hide target mesh | toggle | false |  |  |
-| 旋转参照多边形90° | Rotate ref polyline 90° | toggle | false |  |  |
-| 采样方式 | Sample mode | list | 流动后UnitA顶点 | 流动后UnitA顶点 / 目标网格面中心 |  |
-| 反转颜色映射 | Invert color mapping | toggle | false |  |  |
-| 组合结果网格 | Join result meshes | toggle | false |  |  |
-| 统一网格UV方向 | Unify mesh UV direction | toggle | false |  |  |
+| 生成可编辑 rsMeshFacade 表皮 | Create editable rsMeshFacade | toggle | true | true / false | 默认开启，生成后可在属性页持续修改；关闭输出普通 Mesh/SubD。 |
+| 采样方式 | Sample mode | list | 流动后 A 单元采样 | 流动后 A 单元采样 / 目标网格面中心 | 决定按单元上的采样点还是目标面中心计算混合权重。 |
+| 旋转参照多边形 90° | Rotate reference polygon 90° | toggle | false | true / false | 调整单元铺设朝向。 |
+| 统一网格 UV 方向 | Unify mesh UV direction | toggle | false | true / false | 统一网格面的方向，减少不同面之间的方向跳变。 |
+| 隐藏目标网格 | Hide target mesh | toggle | false | true / false | 控制创建时原始目标网格的可见性。 |
+| 合并网格 / 同序号面分组 | Merge meshes / Group faces by index | toggle | false | 二选一或均关闭 | 用于普通几何输出或后续 Bake，两项不能同时开启。 |
+| 反转颜色映射 / 黑白反转 | Invert color mapping | toggle | false | true / false | 默认白色接近 A、黑色接近 B；反转后互换。没有顶点颜色的目标按 A 处理。 |
 
-**备注**：默认白色接近 TypeA、黑色接近 TypeB；未绘制默认为白色。基于顶点色作为混合权重
+**输出**：默认生成带完整目标网格顶点颜色的 rsMeshFacade；关闭参数对象选项后输出普通 Mesh/SubD。
+
+**备注**：rsTileMeshBlend 和 rsTileMeshBlendByColor 负责创建，rsMeshFacade 负责后续编辑；按贴图生成的 rsTileMeshBlendByBitmap 仍走原有流程，不要把它当作同一种参数对象。网格表皮内部保存目标网格、顶点颜色、参考多边形、单元及映射设置，原始输入删除后仍能编辑。
+
+“编辑单元 A/B”会提取内部原型；颜色表皮还可点“编辑颜色网格”，提取内部目标网格，用 rsMeshColorPaint 或 Rhino 修改。改好以后重新选择表皮，点“拾取并更新”，不会自动关联。局部替换支持未变形的 Mesh/SubD 单元；换目标网格造成拓扑或位置身份不对应时，需要明确确认清除旧覆盖，取消则保留原表皮。
+
+Bake 保留表皮，另外输出普通几何；“分解”或 rsMeshFacadeExplode 删除表皮，输出完整 Mesh/SubD 单元，可一次 Undo 恢复。请使用专用分解入口，不要直接输入 Rhino 的 Explode。Bake 的“合并网格”和“同序号面分组”不能同时开启；不适合分组的混合类型会保留完整单元并提示。
+
+属性页“读取几何（保留表皮）”可运行 Make2D、复制全部边缘、复制边界等操作，不必先 Bake，也不会移除参数；Mesh 的复制边缘会输出拓扑边线，SubD 输出极限边曲线。当前版 3dm 保存参数与精确结果；跨文件复制、放入图块、导入插入、旧版或第三方交换前先 Bake。单位变化后仍能输出已有结果，重新改参前须恢复一致单位。
 
 **教学视频**：
 

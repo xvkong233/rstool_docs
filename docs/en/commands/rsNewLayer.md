@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsNewLayer: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/ca1502b2-08dc-4640-95ec-03b4a4df0462.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsNewLayer · Create new layer
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsNewLayer: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/d0354ebf-596f-5c33-8fa6-aced691ad74a.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/d0354ebf-596f-5c33-8fa6-aced691ad74a.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsNewLayer · Create new layer
 
 > Module: Organization & Selection / Layers
 

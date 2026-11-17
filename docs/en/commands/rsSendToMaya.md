@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsSendToMaya: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/a79144d4-390a-553e-b8d8-b99e2b290ad1.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSendToMaya · Send model to Maya
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsSendToMaya: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/34f12816-446c-5d54-af70-b9efdb19b2b2.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/34f12816-446c-5d54-af70-b9efdb19b2b2.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSendToMaya · Send model to Maya
 
 > Module: Utilities / Import & Export
 

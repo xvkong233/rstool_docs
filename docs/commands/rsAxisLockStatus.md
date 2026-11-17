@@ -1,10 +1,8 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--missing" title="当前工具栏中无对应图标" aria-hidden="true"></span> rsAxisLockStatus · 查看轴锁定状态
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsAxisLockStatus：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/0990a32c-00d2-528d-9505-31928da21d44.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/0990a32c-00d2-528d-9505-31928da21d44.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsAxisLockStatus · 查看轴锁定状态
 
 > 模块：效率工具 / 生产力
 
 [← 返回命令目录](/commands/)
-
-> 当前工具栏中没有此命令的对应图标。横线仅表示暂无图标，不是实际按钮；请通过命令行调用。
 
 **功能**：在命令行打印方向键轴锁定的运行状态，帮助判断为什么按方向键没有锁轴。
 

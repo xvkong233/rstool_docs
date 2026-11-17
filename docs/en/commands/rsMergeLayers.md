@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsMergeLayers: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/5a3b6351-3822-4d66-87b4-81ea8528582b.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsMergeLayers · Merge layers
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsMergeLayers: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/e78af8f2-8ab6-5e97-bd64-b4bde30301bf.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/e78af8f2-8ab6-5e97-bd64-b4bde30301bf.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsMergeLayers · Merge layers
 
 > Module: Organization & Selection / Layers
 

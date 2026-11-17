@@ -1,12 +1,24 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsConvertA2DToNormalCurves: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/f3ccbe37-19c8-46e6-bfa3-77790be5a036.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsConvertA2DToNormalCurves · Convert 2D Architecture to Curves
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsConvertA2DToNormalCurves: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/f3ccbe37-19c8-46e6-bfa3-77790be5a036.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsConvertA2DToNormalCurves · Convert 2D Architecture to Curves (legacy entry)
 
-> Module: 2D Architecture / Other 2D Tools
+> Module: Architecture / Walls and Editing
 
 [← Back to command index](/en/commands/)
 
-**Function**: Convert selected A2D wall/door/window objects to normal Rhino curves (clear RsTool metadata, delete wall hatch)
+::: warning Version 2.0: legacy entry
 
-**Run**: Enter `rsConvertA2DToNormalCurves` in the Rhino command line (command-line interaction).
+This general 2D conversion command is not registered in the reviewed 2.0 source. Its legacy reference is retained.
+
+The old name is not a callable alias in the reviewed 2.0 source. The historical reference below is for 1.x.
+
+[View the 2.0 command changes](/en/commands/v2)
+
+:::
+
+::: details View the 1.x historical reference
+
+> Icons, screenshots, parameters, and workflows in this section describe the old version.
+
+**Function**: Convert selected A2D wall/door/window objects to normal Rhino curves (clear RsTool metadata, delete wall hatch)
 
 **Workflow**:
 
@@ -19,3 +31,6 @@
 > This command has no numeric command-line parameters. Adjust its options in the settings window.
 
 **Notes**: No parameters; A2D smart associations are lost after conversion
+
+
+:::

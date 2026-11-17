@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsLoftCurvesPairs: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/e95cff3d-44a7-4f7e-838b-b061e74b2b82.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsLoftCurvesPairs · Loft Curve Pairs
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsLoftCurvesPairs: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/67341c0c-abc6-5485-9d83-56f6bdab301e.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/67341c0c-abc6-5485-9d83-56f6bdab301e.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsLoftCurvesPairs · Loft Curve Pairs
 
 > Module: Geometry / Surfaces
 

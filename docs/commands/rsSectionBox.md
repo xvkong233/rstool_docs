@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsSectionBox：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/db146960-c9fd-41f4-8fd0-7acc140f1ca3.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSectionBox · 剖切框
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsSectionBox：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/0672251e-b70d-524a-a184-1bf5a26464a2.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/0672251e-b70d-524a-a184-1bf5a26464a2.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSectionBox · 剖切框
 
 > 模块：视图出图 / 标注出图
 

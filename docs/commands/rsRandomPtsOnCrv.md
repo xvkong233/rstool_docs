@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsRandomPtsOnCrv：右键点击 rsDivideCrvByRoundedCount 按钮" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/288a83f1-eaf9-4dc2-973e-d4ff16e768ef.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsRandomPtsOnCrv · 曲线上随机点
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsRandomPtsOnCrv：右键点击 rsDivideCrvByRoundedCount 按钮" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/b35d546d-dd66-5374-afaa-162392f61154.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/b35d546d-dd66-5374-afaa-162392f61154.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsRandomPtsOnCrv · 曲线上随机点
 
 > 模块：几何 / 点
 

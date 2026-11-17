@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsRoadLine: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/70f6963c-e0cb-432a-bcfa-99bd37c2d5b7.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsRoadLine · Road Centerline
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsRoadLine: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/8729982c-0d86-54ef-90ff-f629d3a9c477.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/8729982c-0d86-54ef-90ff-f629d3a9c477.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsRoadLine · Road Centerline
 
 > Module: Architecture / Roads
 

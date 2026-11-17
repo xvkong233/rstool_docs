@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsCircularizeSubD：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/59181ced-45a6-5d88-a0bd-e77f58fe49c9.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsCircularizeSubD · SubD 选区圆形化
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsCircularizeSubD：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/45f4b7b0-ada6-533b-94c4-914c8db8b138.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/45f4b7b0-ada6-533b-94c4-914c8db8b138.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsCircularizeSubD · SubD 选区圆形化
 
 > 模块：SubD辅助 / 编辑工具
 

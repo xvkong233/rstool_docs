@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsRoadGenerator: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/f8819c90-e6a3-4894-86dd-f2ab3b828dbb.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsRoadGenerator · Road Generator
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsRoadGenerator: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/9e6948cf-842c-5c6f-86d9-1fadd899a93b.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/9e6948cf-842c-5c6f-86d9-1fadd899a93b.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsRoadGenerator · Road Generator
 
 > Module: Architecture / Roads
 

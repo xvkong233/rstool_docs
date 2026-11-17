@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsCreateDynamicComponent：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/64477f1e-54cf-56ab-b637-e38df8fb4074.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsCreateDynamicComponent · 创建动态组件
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsCreateDynamicComponent：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/634b8d4b-4d24-553a-a675-68a6018890d0.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/634b8d4b-4d24-553a-a675-68a6018890d0.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsCreateDynamicComponent · 创建动态组件
 
 > 模块：动态组件 / 创建
 

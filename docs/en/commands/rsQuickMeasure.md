@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsQuickMeasure: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/4f1c8824-e8dd-5742-8f76-fc5277d93608.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsQuickMeasure · Quick Measure
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsQuickMeasure: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/62dfcaf0-98a3-543f-9286-2427df054f86.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/62dfcaf0-98a3-543f-9286-2427df054f86.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsQuickMeasure · Quick Measure
 
 > Module: Views & Documentation / Annotation & Documentation
 

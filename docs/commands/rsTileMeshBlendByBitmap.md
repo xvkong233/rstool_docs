@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsTileMeshBlendByBitmap：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/0a2f78ca-a146-4ed1-89c4-acf5a5e2c437.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsTileMeshBlendByBitmap · 按贴图生成渐变表皮
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsTileMeshBlendByBitmap：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/c0934825-8918-573f-a4f8-d9ef71c3dd77.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/c0934825-8918-573f-a4f8-d9ef71c3dd77.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsTileMeshBlendByBitmap · 按贴图生成渐变表皮
 
 > 模块：铺装表皮
 

@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsWindAnalysis：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/bab8cfab-9f8d-4f1e-9ec8-87086d663716.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsWindAnalysis · 风环境分析
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsWindAnalysis：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/48103e7c-9edd-5319-a4fc-80cf6b0eae3e.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/48103e7c-9edd-5319-a4fc-80cf6b0eae3e.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsWindAnalysis · 风环境分析
 
 > 模块：分析 / 建筑物理分析
 

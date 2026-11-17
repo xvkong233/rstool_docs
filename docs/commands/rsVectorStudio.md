@@ -1,10 +1,18 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsVectorStudio：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/55cf292a-7bc5-570f-9381-cb7b5eed873b.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsVectorStudio · 矢量工作室
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsVectorStudio：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/01acdb9c-f67e-560e-86a0-cc5e3c717c6c.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/01acdb9c-f67e-560e-86a0-cc5e3c717c6c.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsVectorStudio · 矢量工作室
 
 > 模块：效率工具 / 生产力
 
 [← 返回命令目录](/commands/)
 
-**功能**：打开矢量工作室 (Vector Studio) 窗口，编辑 SVG 矢量图、可与 Rhino 双向同步（曲线 / 贴图 / 视窗截图 / 画板尺寸同步）
+::: info 2.0 说明
+
+2.0 使用 RSTool 客户端承载面板，请先保持客户端运行并登录。
+
+[查看 2.0 命令变化与对照](/commands/v2)
+
+:::
+
+**功能**：打开客户端的矢量工作室，编辑 SVG 和分析图，并与所选 Rhino 文档交换曲线、图片及画板尺寸。
 
 ![RsTool · Vector Studio 矢量编辑器主界面](../assets/rsVectorStudio/image1.png)
 
@@ -12,11 +20,11 @@
 
 **交互流程**：
 
-1. 命令行输入 rsVectorStudio，打开矢量工作室窗口
-2. 用左侧绘图工具（选择 / 铅笔 / 钢笔 / 矩形 / 圆 / 文本 / 图片等）在画板上绘制
-3. 用顶部工具栏做导入 / 导出、布尔运算、路径画笔 / 箭头画笔，以及截取 Rhino 视窗、与 Rhino 双向同步
-4. 选中元素后，在右侧属性面板调整填充 / 描边 / 渐变 / 图层
-5. Ctrl+S 或关闭窗口前自动写回 Rhino 与本地文件
+1. 在 Rhino 输入 rsVectorStudio，打开客户端“创作工具 → 矢量工作室”。
+2. 新建或打开 SVG，用选择、钢笔、形状、文字、路径和图层工具编辑，也可导入图片。
+3. 需要模型内容时，确认客户端的 Rhino 文档，再使用截取视窗、曲线投影或 UV 贴图导入。
+4. 用右侧属性设置填充、描边、渐变和图层；用布尔、路径画笔和箭头工具整理分析图。
+5. 保存 SVG 或导出 PNG/JPEG/WebP；需要回传模型时，主动选择“发送到 Rhino”或“同步画板到 Rhino”。
 
 **参数**：
 
@@ -27,7 +35,9 @@
 | 宽度 | Width | int | 源尺寸 | 1 – 8192 | 导出时设置：指定时按宽高精确输出 |
 | 高度 | Height | int | 源尺寸 | 1 – 8192 | 导出时设置：指定时按宽高精确输出 |
 
-**备注**：基于 svg-edit 7.4.2 引擎，自定义功能代码在 vector-studio-app.js + vector-studio.css。
+**输出**：保存可编辑 SVG 或导出位图；按需将曲线、带贴图图片和画板尺寸写入所选 Rhino 文档。
+
+**备注**：2.0 中，矢量工作室位于客户端“创作工具”，保留 SVG-Edit 的可编辑 SVG 工作区；主题与中英文跟随客户端。
 
 **左侧绘图工具**（vendor/Editor.js 自带）：选择 (V) / 铅笔 / 钢笔 / 矩形 / 圆角矩形 / 椭圆 / 多边形 / 直线 / 路径 / 文本 / 图片（点击选择后在画板拖动绘制，多段路径双击或回车闭合）。
 
@@ -64,9 +74,11 @@
 
 **保存与恢复**：
 
-- Ctrl+S 写为 SVG 文本导出到本地（默认 `untitled.svg`，可另存为）
-- 未保存时关闭面板会弹确认「放弃修改吗？」
+- Ctrl+S 保存 SVG 文档，可另存为；PNG/JPEG/WebP 用于导出位图。保存文件不会自动把内容写入 Rhino，需要主动使用发送或同步操作。
+- 未保存时关闭文档可选择保存、不保存或取消。每个工作室最多同时打开 16 页，各自保留撤销记录；切换客户端功能会保留工作区。
 - 异常退出后下次打开弹「检测到上次未保存的矢量文档，是否恢复？」
+
+“导入视图曲线”读取所选曲线的当前视窗投影，“从 Rhino 导入”可按工作平面获取曲线。这里的线稿来源是 Curve，不会对整个 Brep / Mesh 模型自动计算隐藏线。从 Rhino 获取内容或发送回模型前，请确认客户端顶部的 Rhino 实例与文档。
 
 **教学视频**：
 

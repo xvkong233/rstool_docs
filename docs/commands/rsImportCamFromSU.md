@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsImportCamFromSU：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/e98fe49c-34c1-43b2-87f5-bbf99c6b96e3.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsImportCamFromSU · 从 SketchUp 导入相机
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsImportCamFromSU：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/b9293776-c4dc-563e-b51d-a3c03115e25a.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/b9293776-c4dc-563e-b51d-a3c03115e25a.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsImportCamFromSU · 从 SketchUp 导入相机
 
 > 模块：视图出图 / 视图相机
 

@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsPerforation：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/49300bf6-ec6e-5b99-9aa5-46042ae8cf1e.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsPerforation · 一键排孔
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsPerforation：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/bf0911ba-7098-5b5c-ab5f-3d085e6556ea.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/bf0911ba-7098-5b5c-ab5f-3d085e6556ea.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsPerforation · 一键排孔
 
 > 模块：铺装表皮
 

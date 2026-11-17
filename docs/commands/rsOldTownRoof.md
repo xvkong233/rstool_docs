@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsOldTownRoof：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/541e1634-cdd2-4866-be66-965e61123e7d.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsOldTownRoof · 老镇屋顶
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsOldTownRoof：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/d4393881-7043-534e-99d5-9cc65a6159b0.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/d4393881-7043-534e-99d5-9cc65a6159b0.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsOldTownRoof · 老镇屋顶
 
 > 模块：建筑 / 建筑构件
 

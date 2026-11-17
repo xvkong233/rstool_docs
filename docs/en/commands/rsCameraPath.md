@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsCameraPath: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/1bbbb943-f354-4682-a0db-85e6956ab023.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsCameraPath · Camera Path
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsCameraPath: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/e8178925-a13a-5f2d-9bd2-845f810a94cb.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/e8178925-a13a-5f2d-9bd2-845f810a94cb.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsCameraPath · Camera Path
 
 > Module: Views & Documentation / Views & Cameras
 

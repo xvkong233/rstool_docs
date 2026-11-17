@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsPaste: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/4f1b4688-9af4-415b-90d8-00d3aa40b118.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsPaste · Paste with origin
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsPaste: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/ba63b5e7-477c-5ab6-83e7-91be4572ee1a.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/ba63b5e7-477c-5ab6-83e7-91be4572ee1a.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsPaste · Paste with origin
 
 > Module: Utilities / Clipboard
 

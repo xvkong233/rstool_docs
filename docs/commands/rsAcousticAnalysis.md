@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsAcousticAnalysis：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/a5ae95aa-0383-53e6-bc96-f7f4e999d1b8.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsAcousticAnalysis · 室内声学分析
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsAcousticAnalysis：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/3e89a428-8a57-597a-8cd7-34bf705c28c8.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/3e89a428-8a57-597a-8cd7-34bf705c28c8.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsAcousticAnalysis · 室内声学分析
 
 > 模块：分析 / 建筑物理分析
 

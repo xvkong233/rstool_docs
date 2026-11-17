@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsScreenPin：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/fffe7a99-e923-5024-ac3e-b48f3edd7225.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsScreenPin · 截图浮窗
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsScreenPin：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/7da7e174-817f-5316-a770-013fe66adbfe.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/7da7e174-817f-5316-a770-013fe66adbfe.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsScreenPin · 截图浮窗
 
 > 模块：效率工具 / 屏幕工具
 

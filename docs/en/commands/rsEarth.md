@@ -1,10 +1,18 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsEarth: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/0804d532-d707-42f0-a2e8-a876c653d12f.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsEarth · Terrain Downloader
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsEarth: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/f4eab1f0-073b-5baf-9472-90c7e8549097.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/f4eab1f0-073b-5baf-9472-90c7e8549097.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsEarth · Terrain Downloader
 
 > Module: Terrain / Acquisition & Editing
 
 [← Back to command index](/en/commands/)
 
-**Function**: Write the downloaded terrain mesh (Rhino mesh with map) into the current document
+::: info Version 2.0
+
+Version 2.0 hosts this panel in the RSTool client. Keep the client running and signed in.
+
+[View the 2.0 command changes](/en/commands/v2)
+
+:::
+
+**Function**: Open Terrain Download in the client to select an area, download terrain with satellite imagery, and optionally generate OSM buildings.
 
 ![RsTool terrain download window (satellite basemap + right control panel)](../../assets/rsEarth/image1.png)
 
@@ -14,10 +22,11 @@
 
 **Workflow**:
 
-1. Before first use, register or sign in at the [Mapbox website](https://www.mapbox.com/), then create or copy a public access token beginning with `pk.` from your account's Access Tokens page.
-2. Run rsEarth to open the terrain download window, then paste the token into the Mapbox Token field in the right-hand control panel.
-3. Download the terrain after searching for the area in the form, selecting the map source, and setting the download precision.
-4. If the new version of the window is unavailable, it will automatically fall back to the old version of the map form rsEarthOld
+1. Create an account at [Mapbox](https://www.mapbox.com/) and create or copy a public access token starting with pk. from Access tokens.
+2. Run rsEarth in Rhino to open Creative Tools → Terrain Download, confirm the target document, and enter the token.
+3. Search for a location and draw a rectangle. Check estimated tiles, vertices, and memory, then choose quality, initial tile budget, and optional buildings.
+4. Click Generate and wait for downloads, mesh generation, and Rhino output. Use Cancel Task when needed.
+5. For adjacent areas, use the arrows around the selection to move by its width or height and generate again.
 
 **Parameters**:
 
@@ -25,36 +34,23 @@
 | --- | --- | --- | --- | --- | --- |
 | Mapbox Token | Token | password | None | pk.xxxxx | Required for first use: register at mapbox.com and obtain a public access token beginning with pk. The pasted token is encrypted and stored locally. Do not share it publicly or enter a Secret Token beginning with sk. |
 | Accuracy | Precision | radio | in | High / Medium / Low (sampling step 1 / 2 / 4) | Panel settings: Control grid sampling density |
-| Tile limit | MaxTiles | radio | 60 | 20 / 60 / 100 | Panel settings: The number of tiles allowed to be pulled by a single task. Excessive tiles will be discarded by the server. |
-| zoom level | Zoom | int | automatic | Automatically calculate optimal value based on range | Panel Settings: Map zoom level automatically calculated on generation |
-| Generate buildings | GenerateBuildings | bool | close | on/off | Panel settings: Check to pull OSM 3D buildings through Overpass |
-| theme | Theme | radio | Follow the system | Follow the system / light / dark | Panel settings: interface theme, effective immediately and written to global configuration |
+| Initial tile budget | MaxTiles | radio | Current setting | 20 / 60 / 100 | 20 / 60 / 100 guides the initial zoom calculation. Once a project is locked, adjacent downloads reuse its zoom and coordinate origin; this is not simply a final total-tile cap. |
+| zoom level | Zoom | int | automatic | Automatically calculate optimal value based on range | Calculated from the initial selection and tile budget, then retained for a locked project so adjacent terrain aligns. |
+| Generate buildings | GenerateBuildings | bool | Current setting | on/off | Request building data from OSM / Overpass. If it is unavailable, the tool reports this and continues generating terrain. |
 | agent | Proxy | bool | close | On/off (supports http:// or socks5://) | Panel settings: Only Debug builds are visible, you can click Test to verify connectivity |
 
-**Notes**: RsTool Terrain Download is an online terrain elevation acquisition tool in Rhino; after startup, a window opens with the Leaflet map on the left and the control panel on the right. All interactions are completed on the web page.
+**Output**: Write the downloaded terrain mesh (Rhino mesh with map) into the current document
 
-The interface is divided into two columns. **The left side is the map preview area** (corresponding to the form `#map`), and the whole block is a Leaflet map: search box (geosearch, supports Esri + OSM, address input is positioning), Zoom zoom, base map switching button; 4 additional movement buttons (▲▼◀▶) are placed in the four directions of the map, which are specially used to pan the currently selected range in steps of "one tile" when there is no scroll bar for precise positioning or the mouse is inconvenient. A LOADING mask will appear above the map until the tiles are loaded.
+**Notes**: In 2.0, rsEarth opens the client page directly; the earlier rsEarthOld window is no longer a fallback. Terrain is written to the selected Rhino document, so check its instance, document, and model units first.
 
-**The right control panel is partitioned from top to bottom** (in order of form `#panel-inner`):
+## Map and selection
 
-| Sequence | Partition | Control | Description |
-| --- | --- | --- | --- |
-| 1 | Title bar | `Terrain Download` + `Reset` | Title and one-click reset of current range/parameters |
-| 2 | Theme | Radio Choose one of three | Follow the system / light / dark; the switch takes effect immediately and is written to the global configuration |
-| 3 | Mapbox Token | Password box + show/hide | Used to download terrain and satellite tiles (starting with pk.xxxxx), local encrypted archive |
-| 4 | Agent (Debug) | Switch + Address + Test | Only Debug build is visible; supports `http://` or `socks5://`, you can click Test to verify connectivity |
-| 5 | Range drawing | Draw range button + direction keys | Drag a rectangular selection on the map, and use the 4 direction keys to pan the selection at tile granularity |
-| 6 | Quality and tiles | Accuracy select + Tile upper limit select + Building checkbox | Accuracy: high/medium/low → Grid sampling step 1/2/4; Tile upper limit: 20/60/100; Building: Check to enable OSM 3D building |
-| 7 | Operations | Start generation + cancel task | Primary/secondary buttons: Green generation, white background Cancel |
-| 8 | Status | Status box + progress line | Real-time display of the current stage text and `Nx Elapsed` progress description |
-| 9 | Task log | Log list + export button | Scroll log area, can be exported as `TerrainLog.txt` |
+Search, zoom, switch street/satellite maps, and draw a rectangular selection on the left. The surrounding arrows move by the selection width or height for adjacent downloads. The right panel shows coordinates and estimated tiles, vertices, and memory.
 
-**Operation process** - After opening the command, first locate the target area in the search box and zoom in on the map to the target plot; hold down the mouse on the map and drag out a rectangular selection, and the 4 direction buttons can make fine adjustments to the tile granularity of the selection; after pressing "Start Generation", the process is: Token verification → bounds verification (north and south latitude does not exceed ±85.05112878, east and west longitude does not exceed ±180) → calculate optimal zoom → check tile budget → Download the elevation tiles and splice them into a Rhino grid → If 3D architecture is turned on, call Overpass to pull the OSM `building` relationship and fit the height.
+## Quality and project origin
 
-**Accuracy and tile upper limit** determine the grid density and download tile quota: precision drop-down mapping sample step (high = 1, medium = 2, low = 4), tile upper limit three levels of 20/60/100 determine the number of tiles allowed to be pulled by a single task. If it is exceeded, it will be discarded by the server and errored. Adjusting these two values ​​​​will affect the details and generation time of the final geometry. To generate a 3D building, pull the `building` geometry in OSM through the Overpass API, and then use the height strategy to generate a Rhino mesh.
+High/medium/low quality controls sampling density. The initial tile budget helps determine the first download zoom. A locked project reuses its zoom, sampling, and coordinate origin to align adjacent terrain. Larger areas and higher detail take more time and memory; start with a small area to check the result.
 
-**Cancel and Log** - Clicking "Cancel Task" during generation will immediately stop downloading and discard the pulled tiles; the task log scrolls by row, error items are displayed in red, and can be exported to local txt with one click for troubleshooting. In addition to the text of the current stage, the status area also displays the stage time-consuming summary (`Nx spent, stage time-consuming summary...`) in the lower right corner.
+## Token, buildings, and logs
 
-**Configuration memory** - Token, theme, latest map position (lat/lon/zoom), accuracy, tile upper limit, building switch, proxy address and switch will be persisted to local JSON through `TerrainDownloadWebForm.Config` (encrypted archive in the Windows `%LocalAppData%` directory), and will be automatically restored next time the command is opened. When you open it for the first time, it will try to migrate data from the old version `rsEarth_Data/token.txt` and `location.txt`.
-
-**Network and Performance** - All downloads go through the own `TerrainNetwork` slot (15s timeout for tiles / 30s timeout for Overpass / 15s timeout for geographical search); if the agent is enabled, the corresponding startup parameters will be injected. Requires Internet connection and Mapbox credentials; automatically falls back to the `rsEarthOld` form when running the old version without dependencies.
+Use a Mapbox public access token for terrain and satellite tiles. Do not share it publicly or use a Secret Token starting with sk. OSM buildings depend on local data coverage; unavailable building data does not prevent terrain generation. The status panel reports download, meshing, and output stages, with exportable task logs. Theme and language follow the client; proxy tests are only available in applicable development builds.

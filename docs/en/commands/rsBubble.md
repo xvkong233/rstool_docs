@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsBubble: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/ff1aca75-ba04-4b49-914c-7ac1ac695bf1.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsBubble · Bubble
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsBubble: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/61e7a341-cca2-5d90-a8e5-de571f99b18c.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/61e7a341-cca2-5d90-a8e5-de571f99b18c.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsBubble · Bubble
 
 > Module: Physics Simulation / Form Finding & Relaxation
 

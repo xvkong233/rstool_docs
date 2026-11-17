@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsAutoBoxMapping: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/19ff926a-9d32-43f4-bf99-a508767e7f4d.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsAutoBoxMapping · Automatic box mapping
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsAutoBoxMapping: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/54bda5ce-c4c9-5793-85b3-8f1a2799a45d.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/54bda5ce-c4c9-5793-85b3-8f1a2799a45d.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsAutoBoxMapping · Automatic box mapping
 
 > Module: Organization & Selection / Material Tools
 

@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsLSystemTree: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/d6efca4b-5c89-5edc-ae65-d2e7336d3750.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsLSystemTree · L-system Tree
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsLSystemTree: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/1190a0d8-1e10-59fd-b2de-abc3a29c979a.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/1190a0d8-1e10-59fd-b2de-abc3a29c979a.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsLSystemTree · L-system Tree
 
 > Module: Fun / Plant Generation
 

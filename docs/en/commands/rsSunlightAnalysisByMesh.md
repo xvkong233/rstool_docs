@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsSunlightAnalysisByMesh: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/5d38c9c8-012f-4e27-9df2-a92eba305f1c.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSunlightAnalysisByMesh · 3D Mesh Sunlight Analysis
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsSunlightAnalysisByMesh: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/6f50ed7e-dd21-5b5c-952a-7883648aaa60.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/6f50ed7e-dd21-5b5c-952a-7883648aaa60.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSunlightAnalysisByMesh · 3D Mesh Sunlight Analysis
 
 > Module: Analysis / Building Performance Analysis
 

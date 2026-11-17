@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsTerrainEdit: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/1a7fb3df-09c7-4bf4-9c4e-fbfc8887f09e.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsTerrainEdit · Edit terrain
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsTerrainEdit: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/c79850b4-c259-530a-8bf1-57d099ebaf4c.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/c79850b4-c259-530a-8bf1-57d099ebaf4c.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsTerrainEdit · Edit terrain
 
 > Module: Terrain / Acquisition & Editing
 

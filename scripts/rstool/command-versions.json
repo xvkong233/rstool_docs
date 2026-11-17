@@ -1,0 +1,593 @@
+{
+  "version": "2.0",
+  "reviewedAt": "2026-11-11",
+  "source": "src/RSTool.Rhino/RSToolPlugin.cs:CreateCommands (working tree)",
+  "registeredCommands": [
+    "rs2Status",
+    "rs2Connect",
+    "rs2DocumentSummary",
+    "rsPdfTool",
+    "rsPdfTools",
+    "rsWhiteboard",
+    "rsImageStudio",
+    "rsVectorStudio",
+    "rsMindMap",
+    "rsModel",
+    "rsMaterial",
+    "rsEarth",
+    "rsProfileDirector",
+    "rsProfileDirectorAddProfile",
+    "rsKeyCast",
+    "rsKeyCastSettings",
+    "rsScreenGif",
+    "rsAxisLock",
+    "rsAxisLockBasis",
+    "rsAxisLockStatus",
+    "rsRoadLine",
+    "rsRoadGenerator",
+    "rsAutoParking",
+    "rsTerrainEdit",
+    "rsTerrain",
+    "rsTerrainAnalysis",
+    "rsRainFlowSimulation",
+    "rsRandomPtsOnCrv",
+    "rsRandomPtsOnObj",
+    "rsDivideCrvByRoundedCount",
+    "rsFilletNonPlanar",
+    "rsFitArcChain",
+    "rsImageToCurve",
+    "rsExtractIsoCrvByNum",
+    "rsRandomTrimCurve",
+    "rsSplitCrvAtIntersection",
+    "rsRepairOpenCurves",
+    "rsFindCurveGaps",
+    "rsCleanUpOverlappingCurves",
+    "rsUnrollCrv",
+    "rsElevation2D",
+    "rsBuildingArea2D",
+    "rsElevationPanel",
+    "rsPolylineSection",
+    "rsSectionPositionPanel",
+    "rsSpiralStair",
+    "rsArchiGrid",
+    "rsDiscreteCity",
+    "rsSlab",
+    "rsDynamicComponent",
+    "rsDynamicComponentGuide",
+    "rsDynamicComponentSelfTest",
+    "rsCreateDynamicComponent",
+    "rsCreateDynamicComponentSamples",
+    "rsDynamicComponentInteract",
+    "rsDetachDynamicComponent",
+    "rsPurgeDynamicComponentCache",
+    "rsSmartPipe",
+    "rsPipeSchedule",
+    "rsHotbox",
+    "rsHotboxSettings",
+    "rsMenu",
+    "rsToolStart",
+    "rsToolCN",
+    "rsToolEN",
+    "rsEngCommandSearch",
+    "rsSettingsTransfer",
+    "rsEmbedLinkedBlocks",
+    "rsLoftCurvesPairs",
+    "rsSectionSweep",
+    "rsRandomOffsetSrf",
+    "rsMeshWindow",
+    "rsRandomOffsetMesh",
+    "rsTriRemesh",
+    "rsDualMesh",
+    "rsDiamondMesh",
+    "rsSubdivideMesh",
+    "rsUnifyQuadMesh",
+    "rsFlipClosedMeshOutward",
+    "rsJoinMeshesByMaterials",
+    "rsReduceMeshByCurvature",
+    "rsDisplacementToMesh",
+    "rsMeshFrame",
+    "rsHairSystem",
+    "rsConvertToMeshPanel",
+    "rsSimpleSculptor",
+    "rsArrayBetween",
+    "rsSprinkerOne",
+    "rsSprinkerMutiple",
+    "rsPlaceObjsOnCrv",
+    "rsGradientChangeByCrv",
+    "rsRandomChange",
+    "rsMoveToOrigin",
+    "rsMoveProject",
+    "rsLayFlat",
+    "rsSprinkerBrush",
+    "rsPerforation",
+    "rsTesselateNurbs",
+    "rsTileQuadNurbsBlend",
+    "rsNurbsFacade",
+    "rsNurbsFacadeExplode",
+    "rsNurbsFacadeRead",
+    "rsNurbsFacadeMake2D",
+    "rsNurbsFacadeDupEdge",
+    "rsNurbsFacadeDupBorder",
+    "rsNurbsFacadeReadQueued",
+    "rsTileMeshBlend",
+    "rsMeshFacade",
+    "rsMeshFacadeExplode",
+    "rsMeshFacadeRead",
+    "rsMeshFacadeMake2D",
+    "rsMeshFacadeDupEdge",
+    "rsMeshFacadeDupBorder",
+    "rsMeshFacadeReadQueued",
+    "rsTileMeshBlendByColor",
+    "rsTileMeshBlendByBitmap",
+    "rsMeshColorPaint",
+    "rsNewLayer",
+    "rsCloseObjLayer",
+    "rsMoveLayerObjs",
+    "rsMergeLayers",
+    "rsAssignLayerMaterialToObj",
+    "rsAssignRandomMaterialToLayers",
+    "rsAssignRandomColorToLayer",
+    "rsAutoSegColorToLayer",
+    "rsBlockObjectsToLayer",
+    "rsDeleteLayer",
+    "rsUnlockAllLayers",
+    "rsLockObjLayer",
+    "rsPickMaterial",
+    "rsPaintBucket",
+    "rsQuickColor",
+    "rsAutoBoxMapping",
+    "rsPBRToCustomMaterial",
+    "rsExportLayoutToDwg",
+    "rsShadow",
+    "rsShadowRender",
+    "rsBubble",
+    "rsMoveAlongNormal",
+    "rsCopyMayaToRhino",
+    "rsSelectSubDEdgeDirection",
+    "rsCircularizeSubD",
+    "rsSendToSU",
+    "rsSendToCAD",
+    "rsMayaTransferSettings",
+    "rsSendToMaya",
+    "rsCadReceivePending",
+    "rsSunlightAnalysisByGrid",
+    "rsSunlightAnalysisByMesh",
+    "rsVisibilityAnalysis",
+    "rsViewshedAnalysis",
+    "rsWindAnalysis",
+    "rsNoiseAnalysis",
+    "rsMembrane",
+    "rsMeshRelax",
+    "rsSolarFocusRiskSimulation",
+    "rsStructuralAnalysis",
+    "rsIndoorIlluminance",
+    "rsAcousticAnalysis",
+    "rsCirclePacking",
+    "rsDifferentialGrowth",
+    "rsClothFluttering",
+    "rsBoids",
+    "rsPhysarum",
+    "rsFluidSimulation",
+    "rsWaveSimulation",
+    "rsStairBySteps",
+    "rsDoubleFlightStairs",
+    "rsMultiFlightStairs",
+    "rsEscalator",
+    "rsZigZagRamp",
+    "rsFadingStair",
+    "rsFadingStairVertical",
+    "rsCurtain",
+    "rsWallToCurtain",
+    "rsCurtainPlus",
+    "rsOldTownRoof",
+    "rsRoofTile",
+    "rsCityGenerator",
+    "rsSpaceTruss",
+    "rsRailing",
+    "rsRailingRead",
+    "rsRailingMake2D",
+    "rsRailingDupEdge",
+    "rsRailingDupBorder",
+    "rsRailingReadQueued",
+    "rsRailingToGeometry",
+    "rsStairToGeometry",
+    "rsStairReadQueued",
+    "rsStairMake2D",
+    "rsStairDupEdge",
+    "rsWall2D",
+    "rsWall2DProperties",
+    "rsWall",
+    "rsWallBoolean",
+    "rsWallRemoveHole",
+    "rsWallJoint",
+    "rsDoor",
+    "rsWindow",
+    "rsWallAutoJoin",
+    "rsWallReconnect",
+    "rsWallConnect",
+    "rsWallTrim",
+    "rsFilletWall",
+    "rsChamferWall",
+    "rsBreakWall",
+    "rsWallExtend",
+    "rsCurtainWall2D",
+    "rsElevator",
+    "rsHeightDot",
+    "rsHatchPlanarSurfaces",
+    "rsSectionBox",
+    "rsSectionBoxToggle",
+    "rsDiagramArrow",
+    "rsDiagramArrowEdit",
+    "rsDiagramArrowMatch",
+    "rsFpsGame",
+    "rsPointDim",
+    "rsQuickNest",
+    "rsQuickMeasure",
+    "rsSetCamera",
+    "rsFaceCamera",
+    "rsBatchSnapshotCapture",
+    "rsBatchViewCapture",
+    "rsImportCamFromSU",
+    "rsExportCamToSU",
+    "rsCameraPath",
+    "rsWalker",
+    "rsIvy",
+    "rsLSystemTree",
+    "rsTxtReader",
+    "rsCopy",
+    "rsPaste",
+    "rsPasteExcel",
+    "rsGroupToBlock",
+    "rsExplodeNestedBlocks",
+    "rsFlattenBlockElevation",
+    "RsAutoEnglish",
+    "rsToolLocation",
+    "rsClean",
+    "rsFilterHeavyObjects",
+    "rsWeChatSend",
+    "rsHelp",
+    "rsSuExport",
+    "rsSelectSimilar",
+    "rsSelectByPrintWidth",
+    "rsSelectBySrfEdgeCount",
+    "rsSelectHathByName",
+    "rsRandomSelection",
+    "rsScreenPin",
+    "rsGradientSelcectByCrv",
+    "rsThreeBody",
+    "rsBrowser",
+    "rsTimberJoint"
+  ],
+  "commands": {
+    "rsWallJoin": {
+      "status": "merged",
+      "replacements": ["rsWallConnect", "rsWallJoint"],
+      "zh": "接长、连接墙段用 rsWallConnect；整理 T 形或十字交接用 rsWallJoint。",
+      "en": "Use rsWallConnect to connect or extend wall segments; use rsWallJoint for T and cross junctions."
+    },
+    "rsWall2DReconnect": {
+      "status": "merged",
+      "replacements": ["rsWallReconnect"],
+      "zh": "二维墙体重连已归入统一的墙体重连命令。",
+      "en": "2D wall reconnection now uses the unified wall reconnection command."
+    },
+    "rsWall2DAutoJoin": {
+      "status": "merged",
+      "replacements": ["rsWallAutoJoin"],
+      "zh": "二维墙体自动交接已归入统一的墙体自动交接命令。",
+      "en": "2D automatic wall junctions now use the unified automatic junction command."
+    },
+    "rsFilletWall2D": {
+      "status": "merged",
+      "replacements": ["rsFilletWall"],
+      "zh": "二维墙体圆角改用统一的墙体圆角命令。",
+      "en": "Use the unified wall fillet command for 2D wall corners."
+    },
+    "rsBreakWall2D": {
+      "status": "merged",
+      "replacements": ["rsBreakWall"],
+      "zh": "二维墙体打断改用统一的墙体打断命令。",
+      "en": "Use the unified wall break command for 2D walls."
+    },
+    "rsDoor2D": {
+      "status": "merged",
+      "replacements": ["rsDoor"],
+      "zh": "门的二维和三维绘制合并到同一个窗口，在面板中选择模式。",
+      "en": "2D and 3D doors share one window. Choose the output mode in the panel."
+    },
+    "rsWindow2D": {
+      "status": "merged",
+      "replacements": ["rsWindow"],
+      "zh": "窗的二维和三维绘制合并到同一个窗口，在面板中选择模式。",
+      "en": "2D and 3D windows share one window. Choose the output mode in the panel."
+    },
+    "rsElevator2D": {
+      "status": "merged",
+      "replacements": ["rsElevator"],
+      "zh": "电梯改用统一入口，在面板中选择二维或三维。",
+      "en": "Use the unified elevator command and choose 2D or 3D in its panel."
+    },
+    "rsStair2D": {
+      "status": "merged",
+      "replacements": ["rsDoubleFlightStairs"],
+      "zh": "二维双跑楼梯已合并到双跑楼梯窗口，可切换二维和三维。",
+      "en": "2D double-flight stairs are now part of the double-flight stair window, with 2D and 3D modes."
+    },
+    "rsPolylineStair2D": {
+      "status": "merged",
+      "replacements": ["rsMultiFlightStairs"],
+      "zh": "自由二维楼梯已合并到多跑楼梯窗口，共用路径和尺寸设置。",
+      "en": "Free-form 2D stairs now use the multi-flight stair window, sharing its path and dimensions."
+    },
+    "rsModelOld": {
+      "status": "merged",
+      "replacements": ["rsModel"],
+      "zh": "旧模型库窗口入口不再保留，改用客户端模型库。",
+      "en": "The legacy model-library window is no longer exposed. Use the client model library."
+    },
+    "InsertAssetOld": {
+      "status": "merged",
+      "replacements": ["rsModel"],
+      "zh": "旧插入模型入口不再保留，在客户端模型库中选择素材并导入。",
+      "en": "Use the client model library to select and import an asset. The old insertion command is no longer exposed."
+    },
+    "InsertAsset": {
+      "status": "merged",
+      "replacements": ["rsModel"],
+      "zh": "插入与连续插入已放进客户端模型库，不再单独输入此命令。",
+      "en": "Import and repeated import are actions inside the client model library rather than a separate Rhino command."
+    },
+    "rsMaterialLibraryOld": {
+      "status": "merged",
+      "replacements": ["rsMaterial"],
+      "zh": "旧材质库入口不再保留，改用客户端材质库。",
+      "en": "The legacy material-library command is no longer exposed. Use the client material library."
+    },
+    "rsEarthOld": {
+      "status": "merged",
+      "replacements": ["rsEarth"],
+      "zh": "地形下载改用客户端入口；rsTerrain 是地形生成，不是这个旧命令的替代名称。",
+      "en": "Use the client terrain-download entry. rsTerrain generates terrain and is not a renamed download command."
+    },
+    "rsVectorStudioSyncCanvas": {
+      "status": "merged",
+      "replacements": ["rsVectorStudio"],
+      "zh": "改在客户端矢量工作室中使用同步到 Rhino 的操作，不再单独运行旧命令。",
+      "en": "Use the sync-to-Rhino action inside the client vector studio instead of the old standalone command."
+    },
+    "rsDeleteWall2D": {
+      "status": "workflow",
+      "replacements": [],
+      "zh": "选择墙体后使用 Rhino 的 Delete，关联交接会随删除更新。",
+      "en": "Select the wall and use Rhino Delete. Connected junctions update with the deletion."
+    },
+    "rsMoveOpening2D": {
+      "status": "workflow",
+      "replacements": [],
+      "zh": "选择门窗后使用 Rhino 的平面 Move，位置变动由关联同步处理。",
+      "en": "Select the opening and move it in the wall plane with Rhino Move. Association synchronization handles the position change."
+    },
+    "rsEditOpening2D": {
+      "status": "workflow",
+      "replacements": [],
+      "zh": "选中门窗或电梯，在属性面板中调整对应的建筑参数。",
+      "en": "Select the door, window, or elevator and edit its building parameters in the Properties panel."
+    },
+    "rsDeleteOpening2D": {
+      "status": "workflow",
+      "replacements": [],
+      "zh": "选中门窗后使用 Rhino 的 Delete，宿主墙体的开口会同步更新。",
+      "en": "Select the opening and use Rhino Delete. The opening in its host wall updates accordingly."
+    },
+    "RSToolActivateLicense": {
+      "status": "workflow",
+      "replacements": [],
+      "zh": "在 RSTool 客户端中登录并完成设备授权；2.0 不再使用旧的独立激活命令。",
+      "en": "Sign in and authorize the device in the RSTool client. Version 2.0 no longer uses the old standalone activation command."
+    },
+    "rsAiRender": {
+      "status": "unavailable",
+      "replacements": [],
+      "zh": "当前 2.0 未注册这个 Rhino 命令。客户端中的 AI 渲染页面不等于保留了旧命令入口。",
+      "en": "This Rhino command is not registered in the reviewed 2.0 source. The client AI rendering page does not preserve the old command entry."
+    },
+    "rsAiRenderOld": {
+      "status": "unavailable",
+      "replacements": [],
+      "zh": "旧版 AI 渲染入口不再保留；请从客户端进入 AI 渲染，不要将 rsAiRender 当作已可用的替代命令。",
+      "en": "The legacy AI-rendering entry is no longer exposed. Open AI rendering in the client; rsAiRender is not an available replacement command."
+    },
+    "rsAIModeler": {
+      "status": "unavailable",
+      "replacements": [],
+      "zh": "当前 2.0 未注册这个命令，旧版 AI 建模流程不能按本页直接调用。",
+      "en": "This command is not registered in the reviewed 2.0 source. The legacy AI-modeling workflow cannot be invoked from this page."
+    },
+    "rsAIModelerLog": {
+      "status": "unavailable",
+      "replacements": [],
+      "zh": "当前 2.0 未注册这个旧日志入口。",
+      "en": "This legacy log command is not registered in the reviewed 2.0 source."
+    },
+    "rsAiAnimation": {
+      "status": "unavailable",
+      "replacements": [],
+      "zh": "当前 2.0 未注册这个 Rhino 动画命令；客户端视频生成功能与旧版相机动画流程不能直接等同。",
+      "en": "This Rhino animation command is not registered in the reviewed 2.0 source. Client video generation is not equivalent to the legacy camera-animation workflow."
+    },
+    "rsModelingCompanion": {
+      "status": "unavailable",
+      "replacements": [],
+      "zh": "当前 2.0 未注册这个命令，暂保留旧版参考。",
+      "en": "This command is not registered in the reviewed 2.0 source. Its legacy reference is retained."
+    },
+    "rsModelingCompanionSettings": {
+      "status": "unavailable",
+      "replacements": [],
+      "zh": "当前 2.0 未注册这个设置入口，暂保留旧版参考。",
+      "en": "This settings command is not registered in the reviewed 2.0 source. Its legacy reference is retained."
+    },
+    "rsConvertWallToNormalBrep": {
+      "status": "unavailable",
+      "replacements": [],
+      "zh": "当前 2.0 未注册这个旧墙体转换命令，不能直接沿用旧版操作步骤。",
+      "en": "The old wall-conversion command is not registered in the reviewed 2.0 source. Do not reuse the legacy steps unchanged."
+    },
+    "rsCopyOpening2D": {
+      "status": "unavailable",
+      "replacements": [],
+      "zh": "当前 2.0 未注册这个命令，也不能把普通 Copy 当作已完整替代的开洞复制流程。",
+      "en": "This command is not registered in the reviewed 2.0 source. Ordinary Copy is not a verified complete replacement for copying hosted openings."
+    },
+    "rsConvertA2DToNormalCurves": {
+      "status": "unavailable",
+      "replacements": [],
+      "zh": "当前 2.0 未注册这个通用二维转换命令，暂保留旧版参考。",
+      "en": "This general 2D conversion command is not registered in the reviewed 2.0 source. Its legacy reference is retained."
+    },
+    "rsXLine": {
+      "status": "unavailable",
+      "replacements": [],
+      "zh": "当前 2.0 未注册这个辅助长线命令，暂保留旧版参考。",
+      "en": "This construction-line command is not registered in the reviewed 2.0 source. Its legacy reference is retained."
+    },
+    "rsWall": {
+      "status": "updated",
+      "replacements": [],
+      "zh": "统一墙体窗口可选择二维或三维；rsWall2D 以二维模式打开同一面板。",
+      "en": "The unified wall window supports 2D and 3D. rsWall2D opens the same panel initially in 2D."
+    },
+    "rsWall2D": {
+      "status": "updated",
+      "replacements": [],
+      "zh": "此快捷入口仍保留，以二维模式打开统一墙体面板，也可在面板中切换三维。",
+      "en": "This shortcut is retained. It opens the unified wall panel initially in 2D, and the panel also allows switching to 3D."
+    },
+    "rsDoor": {
+      "status": "updated",
+      "replacements": [],
+      "zh": "二维和三维门统一在此绘制；旧 rsDoor2D 名称不再是独立入口。",
+      "en": "Create 2D and 3D doors here. The old rsDoor2D name is no longer a separate entry."
+    },
+    "rsWindow": {
+      "status": "updated",
+      "replacements": [],
+      "zh": "二维和三维窗统一在此绘制；旧 rsWindow2D 名称不再是独立入口。",
+      "en": "Create 2D and 3D windows here. The old rsWindow2D name is no longer a separate entry."
+    },
+    "rsElevator": {
+      "status": "updated",
+      "replacements": [],
+      "zh": "二维和三维电梯统一在此绘制，原 rsElevator2D 不再独立调用。",
+      "en": "Create 2D and 3D elevators here. rsElevator2D is no longer a standalone command."
+    },
+    "rsCurtain": {
+      "status": "updated",
+      "replacements": [],
+      "zh": "统一幕墙窗口支持二维和三维；rsCurtainWall2D 是二维快捷入口，rsCurtainPlus 仍独立保留。",
+      "en": "The unified curtain-wall window supports 2D and 3D. rsCurtainWall2D is a 2D shortcut; rsCurtainPlus remains separate."
+    },
+    "rsCurtainWall2D": {
+      "status": "updated",
+      "replacements": [],
+      "zh": "此快捷入口仍保留，以二维模式打开统一幕墙面板，也可在面板中切换三维。",
+      "en": "This shortcut is retained. It opens the unified curtain-wall panel initially in 2D, and the panel also allows switching to 3D."
+    },
+    "rsDoubleFlightStairs": {
+      "status": "updated",
+      "replacements": [],
+      "zh": "已合并原 rsStair2D，可在同一面板中绘制二维或三维双跑楼梯。",
+      "en": "Now includes the former rsStair2D workflow. Create 2D or 3D double-flight stairs in one panel."
+    },
+    "rsMultiFlightStairs": {
+      "status": "updated",
+      "replacements": [],
+      "zh": "已合并原 rsPolylineStair2D，共用路径，支持二维和三维多跑楼梯。",
+      "en": "Now includes the former rsPolylineStair2D workflow, sharing a path for 2D and 3D multi-flight stairs."
+    },
+    "rsSpiralStair": {
+      "status": "updated",
+      "replacements": [],
+      "zh": "支持二维和三维参数楼梯，并可在属性面板中切换；基础线控制点不适用于旋转楼梯。",
+      "en": "Supports 2D and 3D parametric stairs with switching in Properties. Baseline control-point editing does not apply to spiral stairs."
+    },
+    "rsModel": {
+      "status": "client",
+      "replacements": [],
+      "zh": "2.0 使用 RSTool 客户端承载面板，请先保持客户端运行并登录。",
+      "en": "Version 2.0 hosts this panel in the RSTool client. Keep the client running and signed in."
+    },
+    "rsMaterial": {
+      "status": "client",
+      "replacements": [],
+      "zh": "2.0 使用 RSTool 客户端承载面板，请先保持客户端运行并登录。",
+      "en": "Version 2.0 hosts this panel in the RSTool client. Keep the client running and signed in."
+    },
+    "rsEarth": {
+      "status": "client",
+      "replacements": [],
+      "zh": "2.0 使用 RSTool 客户端承载面板，请先保持客户端运行并登录。",
+      "en": "Version 2.0 hosts this panel in the RSTool client. Keep the client running and signed in."
+    },
+    "rsImageStudio": {
+      "status": "client",
+      "replacements": [],
+      "zh": "2.0 使用 RSTool 客户端承载面板，请先保持客户端运行并登录。",
+      "en": "Version 2.0 hosts this panel in the RSTool client. Keep the client running and signed in."
+    },
+    "rsVectorStudio": {
+      "status": "client",
+      "replacements": [],
+      "zh": "2.0 使用 RSTool 客户端承载面板，请先保持客户端运行并登录。",
+      "en": "Version 2.0 hosts this panel in the RSTool client. Keep the client running and signed in."
+    },
+    "rsPdfTools": {
+      "status": "client",
+      "replacements": [],
+      "zh": "2.0 使用 RSTool 客户端承载面板，请先保持客户端运行并登录。",
+      "en": "Version 2.0 hosts this panel in the RSTool client. Keep the client running and signed in."
+    },
+    "rsProfileDirector": {
+      "status": "updated",
+      "replacements": [],
+      "zh": "Rhino 参数主面板保留；样式库、组件库和截面库合并到客户端的同一工具页。",
+      "en": "The Rhino parameter panel is retained. Style, component, and profile libraries share one client tool page."
+    },
+    "rsMindMap": {
+      "status": "client",
+      "replacements": [],
+      "zh": "2.0 使用 RSTool 客户端承载面板，请先保持客户端运行并登录。",
+      "en": "Version 2.0 hosts this panel in the RSTool client. Keep the client running and signed in."
+    },
+    "rsWhiteboard": {
+      "status": "client",
+      "replacements": [],
+      "zh": "2.0 使用 RSTool 客户端承载面板，请先保持客户端运行并登录。",
+      "en": "Version 2.0 hosts this panel in the RSTool client. Keep the client running and signed in."
+    },
+    "rsNurbsFacade": {
+      "status": "updated",
+      "replacements": [],
+      "zh": "支持参数对象持续编辑，选中后在对应属性页修改；需要普通几何时使用页面中的专用转换或分解入口。",
+      "en": "Supports persistent editing of parametric objects in their Properties page. Use the dedicated conversion or explode entry described on the page when ordinary geometry is needed."
+    },
+    "rsMeshFacade": {
+      "status": "updated",
+      "replacements": [],
+      "zh": "支持参数对象持续编辑，选中后在对应属性页修改；需要普通几何时使用页面中的专用转换或分解入口。",
+      "en": "Supports persistent editing of parametric objects in their Properties page. Use the dedicated conversion or explode entry described on the page when ordinary geometry is needed."
+    },
+    "rsRailing": {
+      "status": "updated",
+      "replacements": [],
+      "zh": "支持参数对象持续编辑，选中后在对应属性页修改；需要普通几何时使用页面中的专用转换或分解入口。",
+      "en": "Supports persistent editing of parametric objects in their Properties page. Use the dedicated conversion or explode entry described on the page when ordinary geometry is needed."
+    },
+    "rsPdfTool": {
+      "status": "client",
+      "replacements": [],
+      "zh": "与 rsPdfTools 打开同一个客户端 PDF 工具页面，两个名称都保留。",
+      "en": "Opens the same client PDF Tools page as rsPdfTools. Both command names are retained."
+    }
+  }
+}

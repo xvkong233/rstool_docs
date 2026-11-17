@@ -37,8 +37,12 @@ def icon_bytes(icon, mode):
 
 def bindings(toolbar_root):
     result = {}
-    for locale in ("CN", "EN"):
-        rui = toolbar_root / "RUI" / f"RSTool_{locale}.rui"
+    legacy = [toolbar_root / "RUI" / f"RSTool_{locale}.rui" for locale in ("CN", "EN")]
+    current = [toolbar_root / "RSTool.rui", toolbar_root / "RSTool.EN.rui"]
+    files = current if current[0].is_file() else legacy
+    for rui in files:
+        if not rui.is_file():
+            continue
         root = ET.parse(rui).getroot()
         macros = {m.get("guid"): m for m in root.find("macros")}
         icons = {i.get("guid"): i for i in root.find("icons")}
@@ -57,7 +61,7 @@ def bindings(toolbar_root):
                         continue
                     candidate = {
                         "kind": "toolbar" if side == "left" else "toolbar-right",
-                        "source": f"RUI/RSTool_{locale}.rui",
+                        "source": rui.relative_to(toolbar_root).as_posix(),
                         "iconGuid": icon.get("guid"),
                         "macroGuid": macro.get("guid"),
                         "buttonGuid": button.get("guid"),
@@ -77,6 +81,10 @@ def save_png(data, target):
     with Image.open(io.BytesIO(data)) as original:
         image = original.convert("RGBA")
         image.thumbnail((96, 96), Image.Resampling.LANCZOS)
+        if target.exists():
+            with Image.open(target) as existing:
+                if existing.size == image.size and existing.convert("RGBA").tobytes() == image.tobytes():
+                    return
         output = io.BytesIO()
         image.save(output, format="PNG", optimize=True)
     content = output.getvalue()
@@ -89,14 +97,20 @@ def main():
     parser.add_argument("--toolbar-root", required=True, type=Path)
     parser.add_argument("--write", action="store_true")
     parser.add_argument("--command", help="Update only one documented command, preserving other icons")
+    parser.add_argument("--active-only", action="store_true", help="Sync current Rhino entries; preserve historical and Grasshopper icons")
     args = parser.parse_args()
     source = json.loads((ROOT / "scripts/rstool/commands.json").read_text(encoding="utf-8"))
     found = bindings(args.toolbar_root)
     manifest = {"commands": {}}
+    retired = set()
+    if args.active_only:
+        versions = json.loads((ROOT / "scripts/rstool/command-versions.json").read_text(encoding="utf-8"))
+        retired = {name for name, entry in versions["commands"].items() if entry["status"] in ("merged", "workflow", "unavailable")}
+    if args.command or args.active_only:
+        manifest = json.loads((ROOT / "scripts/rstool/command-icons.json").read_text(encoding="utf-8"))
     if args.command:
         if not any(item["name"] == args.command for item in source["data"]):
             parser.error(f"Unknown documented command: {args.command}")
-        manifest = json.loads((ROOT / "scripts/rstool/command-icons.json").read_text(encoding="utf-8"))
     counts = {}
     unavailable = []
     shared = []
@@ -105,6 +119,8 @@ def main():
         if args.command and name != args.command:
             continue
         detail = source["details"][name]
+        if args.active_only and (name in retired or detail.get("style") == "gh"):
+            continue
         binding = found.get(name.lower())
         if detail.get("style") == "gh":
             if not detail.get("icon"):

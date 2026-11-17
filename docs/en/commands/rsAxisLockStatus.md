@@ -1,10 +1,8 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--missing" title="No icon in the current toolbar" aria-hidden="true"></span> rsAxisLockStatus · Axis-Lock Status
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsAxisLockStatus: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/0990a32c-00d2-528d-9505-31928da21d44.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/0990a32c-00d2-528d-9505-31928da21d44.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsAxisLockStatus · Axis-Lock Status
 
 > Module: Productivity / Productivity
 
 [← Back to command index](/en/commands/)
-
-> The current toolbar has no icon for this command. The dash is a placeholder, not a toolbar icon; run the command by name.
 
 **Function**: Print axis-lock diagnostics to help explain why an arrow key is not constraining a point.
 

@@ -1,10 +1,10 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsFilletWall: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/05ced16b-d2f6-4569-a356-53ecfe1161eb.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsFilletWall · Fillet Wall Corners
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsFilletWall: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/235b87f0-d3c0-5824-b8e6-cfdfa13cf26d.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/235b87f0-d3c0-5824-b8e6-cfdfa13cf26d.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsFilletWall · Fillet Walls
 
-> Module: Architecture / 3D Walls
+> Module: Architecture / Walls and Editing
 
 [← Back to command index](/en/commands/)
 
-**Function**: Make arc chamfers on two smart walls
+**Function**: Fillet two straight walls of the same dimension, or connect them with zero radius.
 
 ![rsFilletWall Corner results: Two smart walls are chamfered by arcs at the corners, white model rendering under Rhino 8 perspective viewport](../../assets/rsFilletWall/image1.png)
 *Arc chamfering result of rsFilletWall (After): White model rendering under Rhino 8 perspective viewport (without UI panel), two smart walls with the same thickness complete a smooth transition at the lower right corner of the foreground - the outer facade of the wall forms an obvious arc corner, and the thickness direction of the wall also pours out equal radius fillets simultaneously; the top surface of the left wall, the top surface of the right wall and the background floor grid are all light gray (Rhino Default working plane and ground grid), the red X-axis mark and the "Perspective" viewport label are visible in the upper left corner*
@@ -15,15 +15,19 @@
 
 **Workflow**:
 
-1. Enter the corner radius
-2. Choose the first wall
-3. Select the second wall
-4. Make arc chamfers on two walls
+1. Pick the retained side of each wall.
+2. Enter the axis fillet radius and confirm.
 
 **Parameters**:
 
 | Display name | Parameter | Type | Default | Range | Description |
 | --- | --- | --- | --- | --- | --- |
-| corner radius | FilletRadius | double | 1000.0 | >0 | Default value 1.0m (in model units); only supports the same wall thickness/height/straight line walls |
+| Axis radius | Radius | double | Picked | ≥0 | Zero connects directly; positive values create a fillet wall. |
 
-**Notes**: Only supports the same wall thickness/height/straight line walls
+**Output**: Updated smart walls and associated objects.
+
+**Notes**: Nonzero radii require equal widths; 3D also requires equal height and base elevation. Zero radius allows unequal widths. Legacy rsFilletWall2D is merged.
+
+The unified entry uses the actual dimension of selected walls and rejects mixed dimensions.
+
+Images or videos may show the old interface. For 2.0, follow the entries, modes, and parameter descriptions on this page.

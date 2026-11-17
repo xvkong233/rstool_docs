@@ -1,10 +1,18 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsModel: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/e1ce8160-0b74-4d42-8615-4c67815dfbf3.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsModel · Model library
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsModel: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/4bd7565d-5878-5cb1-9bd3-a34a644adc49.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/4bd7565d-5878-5cb1-9bd3-a34a644adc49.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsModel · Model library
 
 > Module: Libraries / Model Library
 
 [← Back to command index](/en/commands/)
 
-**Function**: Import the selected .3dm file into Rhino as a block definition and trigger the InsertAsset command to place it at the clicked position in the viewport; or open the folder where the model is located in the explorer.
+::: info Version 2.0
+
+Version 2.0 hosts this panel in the RSTool client. Keep the client running and signed in.
+
+[View the 2.0 command changes](/en/commands/v2)
+
+:::
+
+**Function**: Open the model library in the RSTool 2.0 client to browse your local .3dm assets and place them in Rhino once or repeatedly.
 
 ![RsTool model library window: Path/Search/Theme/Collection/Recent/Folder Tree/Status Bar on the left, model thumbnail grid on the right (each card contains 3 action buttons)](../../assets/rsModel/image1.png)
 *Figure 1: Main interface of model library. "Refresh/select root directory" on the right side of the title bar is a global operation; the left column from top to bottom is: library directory (read-only input box + "select" button, with "previous level/return to root directory" to quickly jump), search (keyword filter files in the current directory), theme (follow the system / light / dark), collected models (one click only displays the collected assets, with a quantity badge), recently used (chip form, the recently visited root directory can be switched with one click), folder tree (the tree shows the subfolders under the current root, nod to switch); the main area on the right displays all models under the current path, each thumbnail card contains the file name, original path, modification time, and 3 circular action buttons side by side (Collect model/Import one/Import multiple, hover displays Chinese tooltip), and the right-click card can also bring up the right-click menu (Favorite Model/Import model/ Open the directory), there is a "Load More" paging button at the bottom*
@@ -15,14 +23,11 @@
 
 **Workflow**:
 
-1. Enter rsModel on the command line to open the model library window (it will automatically fall back to the old version rsModelOld when the new version window is unavailable)
-2. After the window is opened, the last used library directory is loaded by default (the "Select" button on the right side of the library directory input box can be changed to the root)
-3. Operations on the left sidebar: Use the "Search" box to filter files in the current directory; click "Collected Models" to only display favorites; use "Folder Tree" to switch subdirectories; use "Previous Level/Return to Root Directory" to quickly jump
-4. Main area browsing: card thumbnail + file name + metadata + 6 circular action buttons; right-click/long press to pop up the right-click menu (Favorite Model/Import model/Open directory)
-5. Click the card preview button (eye icon) → pop up the preview image: There are 4 buttons on the right: Favorite Model / Import one / Import multiple / Open directory, which can be directly collected or imported into Rhino
-6. Click "Import One": the model is imported into Rhino as a block definition and placed at the click position in the viewport. It supports the Angle/Rotate90 command line option to control rotation.
-7. Click "Import multiple": batch import, prompts to select multiple locations to place continuously.
-8. Switch sorting by name/time in the upper right corner; load more pages at the bottom to read all models
+1. Run rsModel in Rhino to open Creative Tools → Model Library in the client. Complete sign-in and device licensing first.
+2. Choose a local library root, then browse with the folder tree, search, favorites, and sorting. Use grid/list views and large previews as needed.
+3. Choose a block definition mode and click Import One or Import Multiple.
+4. Pick a position in Rhino and confirm rotation. Use Angle / Rotate90 to adjust orientation, and keep picking points for repeated placement.
+5. Return to the client when placement finishes. Select another Rhino target in the client before writing to a different document.
 
 **Parameters**:
 
@@ -30,22 +35,26 @@
 | --- | --- | --- | --- | --- | --- |
 | library directory | rootPath | text | last used value | local path | The root directory path of the model library; click "Select/Select Root Directory" to change to any folder containing .3dm; the index will be automatically rebuilt after switching directories. |
 | Search | searchInput | text | empty | any keyword | Perform instant filtering on file names/tags in the current directory |
-| theme | theme | radio | Follow the system | Follow the system / light / dark | Switch the UI theme and switch according to the current appearance of Windows when configuring to follow the system. |
 | favorite view | favoritesView | button | Close | — | The "Collected Models" button on the left: When lit, only the collected assets are displayed; the badge number indicates the number of collections in the current root directory. |
 | Recently used | recentRoots | chip | — | — | The root directory visited the last 5 times, click chip to quickly switch |
 | folder tree | folderTree | tree | — | — | To collapse the subfolder tree under the root directory, nod to switch browsing; click the triangle on the left side of the line to expand/collapse |
 | sort | sort | button | by time | by name/by time | Switch in the upper right corner of the main area, and the order of file cards is refreshed instantly |
-| Refresh | refresh | button | — | — | Rebuild index: scan all .3dm/.3dm.gz/.zip in the current root directory, generate thumbnails and metadata, and display the progress in the status bar |
+| Refresh | refresh | button | — | — | Rescan the selected local model folder to update its files, thumbnails, and metadata. |
 | Favorites/Unfavorites | favorite | button | — | — | Star button in card or preview pop-up window: lit yellow = Favorite; supports right-click menu Favorite Model |
-| Import a | importSingle | button | — | — | The model is imported into Rhino as a block definition and the InsertAsset command is used to place it at the click position in the viewport. |
-| Import multiple | importMultiple | button | — | — | Batch import, prompts you to select multiple positions to place the same definition in succession |
+| Import a | importSingle | button | — | — | Import the model as a block, pick its position in Rhino, and confirm rotation. Use Angle / Rotate90 to adjust its orientation. |
+| Import multiple | importMultiple | button | — | — | Pick successive positions to place the same model. Each placement has its own Undo step. |
 | Open directory | openFolder | button | — | — | Use Windows Explorer to open the folder where the model is located |
 | load more | loadMore | button | — | — | Button at the bottom of the main area: page loading, the default is 60 pictures per page; this button will appear if the number exceeds |
+| Block definition mode | definitionType | list | linked | embedded / linkedAndEmbedded / linked | Choose embedded, linked and embedded, or linked definitions. Keep source files in place for linked definitions. All three modes retain nested blocks, layers, and materials. |
 
-**Notes**: If the new window is unavailable, the command automatically falls back to the legacy rsModelOld command. The index is maintained per root directory, and thumbnails are cached under %LOCALAPPDATA%\RSTool\ModelLibrary. Importing uses InsertAsset for the standard placement workflow, with the Angle/Rotate90 command-line options controlling rotation.
+**Output**: Place local .3dm models as blocks in the selected Rhino document, retaining nested blocks, layers, materials, and source user data. Each placement has its own Undo step.
+
+**Notes**: In 2.0, the model library lives in the client. Its import actions replace the earlier standalone library windows and InsertAsset entry. Theme and language follow the client.
+
+Placement uses the bottom center of the model, and units are converted to the target document. If an asset contains a nested block whose name conflicts with a different definition in the document, resolve that conflict first; existing blocks are not overwritten automatically.
 
 ## Preparing the model library
 
-rsModel uses a local model library. You need to organize the model files yourself and sort your .3dm models into the selected library directory.
+rsModel uses a local model library. Organize your .3dm files into folders under the selected library root.
 
 To receive the model library curated by the RSTool team, share an RSTool-related video on WeChat Moments, keep a screenshot of the post, and contact RSTool customer service.

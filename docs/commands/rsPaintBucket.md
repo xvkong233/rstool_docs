@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsPaintBucket：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/976e0305-0134-5f44-b1f3-395aabdf2476.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsPaintBucket · 油漆桶
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsPaintBucket：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/e58e31b3-fb14-56da-9e8b-ebe8af789907.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/e58e31b3-fb14-56da-9e8b-ebe8af789907.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsPaintBucket · 油漆桶
 
 > 模块：组织与选择 / 材质辅助
 

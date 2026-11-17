@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsCopyMayaToRhino：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/d954b102-388a-548c-a116-b1f10ed9086c.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsCopyMayaToRhino · Maya文件复制到Rhino
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsCopyMayaToRhino：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/926c878b-4ffa-592a-812f-452c0824c52a.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/926c878b-4ffa-592a-812f-452c0824c52a.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsCopyMayaToRhino · Maya文件复制到Rhino
 
 > 模块：SubD辅助 / 编辑工具
 

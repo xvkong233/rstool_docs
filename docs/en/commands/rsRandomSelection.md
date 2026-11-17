@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsRandomSelection: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/aa47178a-240c-45b0-b36d-aaec80323b6a.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsRandomSelection · Random Selection
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsRandomSelection: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/006465b0-9925-5871-8ffe-32f5bd11260c.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/006465b0-9925-5871-8ffe-32f5bd11260c.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsRandomSelection · Random Selection
 
 > Module: Organization & Selection / Selection
 

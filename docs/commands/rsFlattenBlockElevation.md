@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsFlattenBlockElevation：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/caf50557-dd2f-581e-87cf-2b1da2ac7363.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsFlattenBlockElevation · 图块统一标高
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsFlattenBlockElevation：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/0e441c46-1bb1-53b6-887e-dc681ae594b5.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/0e441c46-1bb1-53b6-887e-dc681ae594b5.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsFlattenBlockElevation · 图块统一标高
 
 > 模块：辅助工具 / 块操作
 

@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsExplodeNestedBlocks：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/0f1a1755-2b37-412a-8dc8-7b7e75aa24a4.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsExplodeNestedBlocks · 炸开嵌套块
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsExplodeNestedBlocks：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/dd89ce33-660e-5e57-9cf4-a6d0ba4186b8.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/dd89ce33-660e-5e57-9cf4-a6d0ba4186b8.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsExplodeNestedBlocks · 炸开嵌套块
 
 > 模块：辅助工具 / 块操作
 

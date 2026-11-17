@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsJoinMeshesByMaterials：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/1025b121-1213-40f2-beb0-013e3ddf9134.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsJoinMeshesByMaterials · 按材质合并网格
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsJoinMeshesByMaterials：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/aec84ebe-7904-58ad-be75-3893aa4dabfc.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/aec84ebe-7904-58ad-be75-3893aa4dabfc.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsJoinMeshesByMaterials · 按材质合并网格
 
 > 模块：几何 / 网格
 

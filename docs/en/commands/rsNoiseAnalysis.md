@@ -1,10 +1,8 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsNoiseAnalysis: dedicated source icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/rsNoiseAnalysis.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsNoiseAnalysis · Site Noise Analysis
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsNoiseAnalysis: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/e601c36e-aeae-5894-a601-280ea1f88e70.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/e601c36e-aeae-5894-a601-280ea1f88e70.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsNoiseAnalysis · Site Noise Analysis
 
 > Module: Analysis / Building Performance Analysis
 
 [← Back to command index](/en/commands/)
-
-> This dedicated icon comes from the plugin source assets. The current RUI has no button binding for this command; run it by name or from the menu.
 
 **Function**: Preview building-surface LAeq,T maps and baseline-minus-scenario reduction maps. Bake coloured meshes with legends and report area-weighted energy means, maximum levels, and optional above-target area percentages by building. CSV includes every scenario, receiver coordinates, source contributions, and calculation diagnostics.
 

@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsSprinkerBrush: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/5ac0bfa4-9b36-5a87-b496-d9074502053f.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSprinkerBrush · Surface Scatter Brush
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsSprinkerBrush: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/0b62d64c-63cf-5807-abdd-9b212cfd7f92.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/0b62d64c-63cf-5807-abdd-9b212cfd7f92.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSprinkerBrush · Surface Scatter Brush
 
 > Module: Geometry / Object Transforms
 

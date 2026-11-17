@@ -3,6 +3,7 @@ import { readFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, resolve } from 'node:path'
 import { renderCommandIcon } from '../../scripts/rstool/command_icons.cjs'
+import { isLegacyCommand } from '../../scripts/rstool/command_versions.cjs'
 
 type CmdItem = {
   name: string
@@ -93,8 +94,8 @@ function groupCommands(items: CmdItem[], geometry: string, fun: string) {
   return groups
 }
 
-const zhItems = commands.data
-const enItems = commands.data.map((item) => ({
+const zhItems = commands.data.filter((item) => !isLegacyCommand(item.name))
+const enItems = zhItems.map((item) => ({
   ...item,
   cat: english.categories[item.cat] || item.cat,
   sub: item.sub ? english.subcategories[item.sub] || item.sub : '',
@@ -159,6 +160,7 @@ const zhCommandSidebar = [
     collapsed: false,
     items: [
       { text: '安装指南', link: '/commands/installation/' },
+      { text: '2.0 命令变化与对照', link: '/commands/v2' },
       { text: '总目录', link: '/commands/' },
       ...zhGroups.map((group) => ({
         text: group.cat,
@@ -175,6 +177,7 @@ const enCommandSidebar = [
     collapsed: false,
     items: [
       { text: 'Installation', link: '/en/commands/installation/' },
+      { text: '2.0 Command Changes', link: '/en/commands/v2' },
       { text: 'All Commands', link: '/en/commands/' },
       ...enGroups.map((group) => ({
         text: group.cat,

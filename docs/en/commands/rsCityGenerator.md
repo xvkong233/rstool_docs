@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading" title="rsCityGenerator: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/435ccc02-2d6a-517c-a491-3e56c23a454f.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/435ccc02-2d6a-517c-a491-3e56c23a454f.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsCityGenerator · City Generator
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsCityGenerator: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/750e3462-87f4-51ab-9981-638787f65c11.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/750e3462-87f4-51ab-9981-638787f65c11.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsCityGenerator · City Generator
 
 > Module: Architecture / Building Elements
 

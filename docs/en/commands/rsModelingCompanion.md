@@ -1,12 +1,24 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsModelingCompanion: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/a904cf0c-89db-51a9-8ecc-8540bec11012.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsModelingCompanion · Modeling Companion
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsModelingCompanion: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/a904cf0c-89db-51a9-8ecc-8540bec11012.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsModelingCompanion · Modeling Companion (legacy entry)
 
 > Module: Productivity / Productivity
 
 [← Back to command index](/en/commands/)
 
-**Function**: Switch the display/hide of the modeling companion assistant
+::: warning Version 2.0: legacy entry
 
-**Run**: Enter `rsModelingCompanion` in the Rhino command line (command-line interaction).
+This command is not registered in the reviewed 2.0 source. Its legacy reference is retained.
+
+The old name is not a callable alias in the reviewed 2.0 source. The historical reference below is for 1.x.
+
+[View the 2.0 command changes](/en/commands/v2)
+
+:::
+
+::: details View the 1.x historical reference
+
+> Icons, screenshots, parameters, and workflows in this section describe the old version.
+
+**Function**: Switch the display/hide of the modeling companion assistant
 
 **Workflow**:
 
@@ -61,3 +73,6 @@ Built-in Pomodoro style focus session: you can start/pause/resume/cancel/check t
 - 6 optional personalities: gentle companion, professional architect, energetic partner, strict supervisor, domineering president, quiet assistant - decide the tone and feedback style.
 - You can change the pet image, adjust the size, transparency, whether to stick to the top, click through, position lock, idle chat frequency, etc.
 - If it is not saved for a long time (about 1 hour), you will be prompted to press Ctrl+S.
+
+
+:::

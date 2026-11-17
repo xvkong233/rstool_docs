@@ -1,10 +1,8 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--missing" title="当前工具栏中无对应图标" aria-hidden="true"></span> rsHotboxSettings · Hotbox 热盒设置
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsHotboxSettings：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/309b50c9-353f-5060-bbae-259a91413d1e.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/309b50c9-353f-5060-bbae-259a91413d1e.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsHotboxSettings · Hotbox 热盒设置
 
 > 模块：辅助工具 / 系统工具
 
 [← 返回命令目录](/commands/)
-
-> 当前工具栏中没有此命令的对应图标。横线仅表示暂无图标，不是实际按钮；请通过命令行调用。
 
 **功能**：打开热盒设置窗口（含通用/布局与命令两个分页）；通用页编辑方案、主环 8 方向槽位、子环命令池分配；布局与命令页编辑后台监听、触发方式、按键、阈值与外观主题
 

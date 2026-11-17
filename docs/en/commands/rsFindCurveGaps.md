@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsFindCurveGaps: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/dd7fc847-96f9-5818-80e6-5e44b05a5e23.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsFindCurveGaps · Find Curve Gaps
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsFindCurveGaps: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/b67dfb6d-4d31-5cbd-80b7-bf7194c39d62.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/b67dfb6d-4d31-5cbd-80b7-bf7194c39d62.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsFindCurveGaps · Find Curve Gaps
 
 > Module: Geometry / Curves
 

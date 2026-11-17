@@ -1,10 +1,18 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsProfileDirector：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/232863f4-be5a-4ae5-a907-62fcb4023c31.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsProfileDirector · Profile Director
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsProfileDirector：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/c11eaa75-ee8e-57f9-bdf6-8f7b23a8074e.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/c11eaa75-ee8e-57f9-bdf6-8f7b23a8074e.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsProfileDirector · Profile Director
 
 > 模块：截面管理 / Profile Director
 
 [← 返回命令目录](/commands/)
 
-**功能**：沿路径阵列生成的截面扫掠体与组件/跨件实例（可烘焙为块或独立几何体）
+::: info 2.0 说明
+
+Rhino 参数主面板保留；样式库、组件库和截面库合并到客户端的同一工具页。
+
+[查看 2.0 命令变化与对照](/commands/v2)
+
+:::
+
+**功能**：沿路径生成截面、组件与跨件；2.0 保留 Rhino 参数主面板，将样式库、组件库和截面库统一放入客户端。
 
 ![Profile Director 主界面：左侧 Rhino 视图中沿路径阵列生成的栏杆预览，右侧截面/组件参数面板](../assets/rsProfileDirector/image1.png)
 *Profile Director 主界面（沿曲线路径阵列栏杆截面与竖向组件）*
@@ -13,26 +21,32 @@
 
 **交互流程**：
 
-1. 在 Rhino 命令行输入 rsProfileDirector，打开主面板。
-2. 点击“拾取路径曲线”或“绘制路径”，确定要沿着生成的路径。
-3. 想直接使用现成组合，可打开样式库选取样式；也可以在截面、组件、跨件选项卡中分别添加自己的条目。
-4. 先在左侧列表选中要调整的条目，再在右侧修改参数；切换放置方式或跨件类型后，界面会显示对应设置。
-5. 点击“预览”检查位置、间距和转角处理，满意后点击“生成”写入模型。
+1. 在 Rhino 输入 rsProfileDirector，打开原生参数主面板。
+2. 点击“拾取路径曲线”或“绘制路径”，确定生成路径。
+3. 点击样式库、组件库或截面库按钮，打开客户端“创作工具 → rsProfileDirector工具”，选取素材后应用回当前文档的主工具。
+4. 先选中需要调整的条目，再按面板类型修改截面、组件、跨件、转角和分布等设置。
+5. 点击“预览”检查效果，满意后点击“生成”写入模型；素材库也可直接从客户端进入浏览。
 
-**备注**：素材库下载方式见下方；页面末尾按实际面板分组介绍参数。每个面板条目独立设置，载入样式后默认值会随素材变化，截图中的界面文字和控件位置也可能随版本不同。
+**输出**：沿路径阵列生成的截面扫掠体与组件/跨件实例（可烘焙为块或独立几何体）
+
+**备注**：2.0 保留 Rhino 中的参数主面板，把样式库、组件库和截面库合并到客户端的“rsProfileDirector工具”页面。三个库在同一入口切换；主面板中截面、组件和跨件等参数仍按各自类型设置，页面末尾保留分组介绍。
 
 ## 素材库下载与使用
 
-不想从头整理素材的话，可以通过 [百度网盘](https://pan.baidu.com/s/5zLhuX4hCtyEUVvoC1rHkmA) 或 [Google Drive](https://drive.google.com/file/d/14BEQIffkTACkzKiMitR35b6zeuNCczRn/view?usp=sharing) 下载现成的 rsProfileDirector 素材库，海外用户可优先选择 Google Drive。把素材库放到 `rsProfileDirector` 目录即可使用；如果下载的是压缩包，请先解压并保留素材库原有的文件夹结构。
+可通过 [百度网盘](https://pan.baidu.com/s/5zLhuX4hCtyEUVvoC1rHkmA) 或 [Google Drive](https://drive.google.com/file/d/14BEQIffkTACkzKiMitR35b6zeuNCczRn/view?usp=sharing) 下载现成的 rsProfileDirector 素材库，海外用户可优先选择 Google Drive。压缩包需先解压，保留原有文件夹结构。
 
-1. 在 `rsProfileDirector` 主面板点击「打开样式库」（Open style library）。
-2. 查看样式库窗口下方的「文件夹」（Folder）路径，把下载的素材库放到这里指向的 `rsProfileDirector` 目录。
-3. 如果素材库放在其他位置，点击「更改文件夹」（Change folder），选择实际存放素材库的 `rsProfileDirector` 目录；在库中选择需要的样式，点击「使用」（Use），即可回到主面板继续预览和生成。
+1. 在主面板点击样式库、组件库或截面库，进入客户端对应库。
+2. 在库目录设置中选择解压后的 rsProfileDirector 素材库基础目录，应用后刷新列表。若目录包含 Chinese / English，工具会按客户端界面语言选择对应内容。
+3. 选择需要的样式、组件或截面，点击使用/应用，回到 Rhino 主面板继续预览和生成。也可在客户端先浏览本地素材，连接 Rhino 并打开截面工具后再应用。
 
-![Profile Director 样式库目录设置：红框标出 Folder 路径和 Change folder 按钮](../assets/rsProfileDirector/style-library-folder.png)
-*红框处是素材库目录设置：Folder 显示当前路径，点击 Change folder 可切换到存放素材库的 rsProfileDirector 文件夹。*
+![Profile Director 旧版素材库目录设置示意](../assets/rsProfileDirector/style-library-folder.png)
+*上图为旧版目录设置示意。2.0 请在客户端库目录设置中选择素材所在文件夹，不需要照搬示例中的桌面路径。*
 
-素材库可以放在自己方便管理的位置，关键是样式库中的 Folder 路径要与实际存放目录一致，不需要照搬示例中的桌面路径。
+## 三个库怎么配合
+
+样式库保存整套组合，组件库和截面库用于挑选单项素材；跨件继续在主工具中配置。可分类、搜索、排序、预览和管理本地资源，也可导入/导出本工具的 ZIP 素材包；样式导出会带上所需截面和组件。组件、截面还支持导入单个 3dm。
+
+库地址可以放在便于管理的位置。导入时相同内容的同名素材会复用，不同内容的同名素材不会直接覆盖；需要时先整理原库或切换空目录。在线资源入口目前为待接入状态，请使用本地库。
 
 **教学视频**：
 
@@ -155,13 +169,16 @@
 | 随机偏移 | Span.RandomPlaneOffset | 长度 | 0 | ≥ 0 | 在平面偏移基础上增加正负随机侧向变化，0 关闭。 |
 | 材质 | Span.MaterialId | 操作 | 未指定 | 当前文档材质 | 给当前跨件条目指定材质。 |
 
-### 库窗口：整套样式与单个素材分开管理
+### 客户端三库：样式、组件与截面在一个页面管理
 
-样式库保存的是一整套截面、组件和跨件组合；截面库只选轮廓，组件库只选物体。想直接套用下载的方案，用“打开样式库”；想替换其中一个截面或组件，就从对应选项卡打开它自己的库。库窗口的名称、分类、目录、预览图都是素材管理信息，不是几何尺寸参数。
+主参数面板仍在 Rhino 中，点击任一库按钮会进入客户端“创作工具 → rsProfileDirector工具”。页面内切换样式库、组件库和截面库：样式保存整套组合，组件和截面保存单项素材，跨件继续在主面板设置。本地库可先独立浏览；应用、保存当前样式以及从 Rhino 添加或替换素材时，再连接正确文档并打开对应工具。
 
 | 中文名 | 英文名 | 类型 | 默认值 | 范围 | 说明 |
 | --- | --- | --- | --- | --- | --- |
-| 搜索 / 名称 / 分类 | Library.SearchCategory | 文本 | 随素材 | 文本 / 分类 | 搜索定位素材，用名称与分类整理库；使用前先选具体条目。 |
-| 目录 / 修改目录 | Library.Folder | 操作 | 当前素材库目录 | 本地文件夹 | 查看或切换库路径；下载素材的实际存放目录要与这里一致。 |
-| 保存全部修改 / 另存为新样式 | Library.SaveStyle | 操作 | — | 样式库按钮 | 保存全部修改覆盖选中样式的名称、分类与当前全部设置；另存为新样式创建一份新样式。 |
-| 自定义预览图 / 使用 | Library.PreviewUse | 操作 | 随素材 | 图片 / 已选素材 | 预览图只用于库中展示；使用将所选样式或单个素材载入主面板。 |
+| 搜索 / 分类 / 排序 | Library.SearchCategory | 客户端控件 | 当前库 | 名称或分类 / 全部分类 / 分类或名称排序 | 在客户端三库页面筛选素材；可切换网格或列表，选择条目后在右侧查看预览与编辑信息。 |
+| 本地库地址 / 浏览 / 应用地址 | Library.Folder | 客户端路径设置 | 当前素材库基础目录 | 本地文件夹 | 可直接输入或浏览文件夹，点击“应用地址”后载入。基础目录含 Chinese / English 时按客户端语言选取对应目录；普通自定义目录直接使用。 |
+| 另存当前样式 / 用当前设置替换样式 | Library.SaveStyle | 客户端操作 | — | 样式库 | 连接 Rhino 并打开截面工具后，可把当前整套设置保存为新样式，或替换选中样式。“保存名称与分类”只修改素材管理信息，不替换几何设置。 |
+| 自定义预览图 / 使用样式、截面或组件 | Library.PreviewUse | 客户端操作 | 随素材 | 图片 / 已选素材 | 自定义预览图用于客户端库列表展示；使用按钮或双击把所选素材应用到来源 Rhino 文档的截面工具。失败时先检查当前文档与主工具状态。 |
+| 资源来源 | Library.Source | 客户端选项 | 本地 | 本地 / 在线 | 当前使用本地素材库。在线仅为预留入口，尚未接入服务器资源；切回本地可继续使用已有目录。 |
+| 从 Rhino 添加 / 替换几何 | Library.AddReplace | 客户端操作 | — | 组件库 / 截面库 | 从连接的 Rhino 文档拾取组件或封闭平面截面，添加为新素材；也可在“预览与编辑”中替换选中素材的几何。 |
+| 导入 / 导出此库 | Library.ImportExport | 客户端操作 | — | ZIP；组件、截面另支持 3dm 导入 | 在更多操作中导入素材包或导出当前库；样式包包含依赖的组件与截面。相同内容的同名资源会复用，不同内容不会直接覆盖。 |

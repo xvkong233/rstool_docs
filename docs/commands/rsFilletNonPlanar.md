@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsFilletNonPlanar：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/335b1cd7-0fed-48b1-8400-e871d8b26f5c.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsFilletNonPlanar · 非共面倒角
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsFilletNonPlanar：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/c7a39330-49d7-59a1-94b9-b80b722d2dfa.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/c7a39330-49d7-59a1-94b9-b80b722d2dfa.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsFilletNonPlanar · 非共面倒角
 
 > 模块：几何 / 曲线
 

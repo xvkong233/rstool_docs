@@ -1,14 +1,26 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsAIModeler：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/23d497e1-df78-5dfa-95d3-cf3c56f968a4.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsAIModeler · AI 建模
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsAIModeler：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/23d497e1-df78-5dfa-95d3-cf3c56f968a4.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsAIModeler · AI 建模（旧版入口）
 
 > 模块：AI / 渲染与建模
 
 [← 返回命令目录](/commands/)
 
+::: warning 2.0：旧版入口已调整
+
+当前 2.0 未注册这个命令，旧版 AI 建模流程不能按本页直接调用。
+
+这个旧名称在本次核对的 2.0 中不是可直接输入的兼容别名；下方保留的是 1.x 历史说明。
+
+[查看 2.0 命令变化与对照](/commands/v2)
+
+:::
+
+::: details 查看 1.x 历史说明
+
+> 本节的图标、截图、参数与操作流程均为旧版资料。
+
 **功能**：本命令可以调用 AI 大模型快速生成脚本，用来对 Rhino 进行编辑操作；也可以选择 Agent 模式，使用大模型直接修改和编辑 Rhino。生成脚本模式下，AI 输出 Python/RhinoScript 代码，需手动在 Rhino 中执行；Agent 模式下，AI 通过工具调用直接操控 Rhino 几何体（删/替换/布尔等会弹 Approve/Deny 确认）
 
 ![RSTool AI Modeler 窗口：左侧为脚本展示区（默认空「暂无脚本」），右侧「AI 建模助手」从上到下依次为状态、设置入口、工作模式下拉（生成脚本 / Agent 建模）、需求描述、参考图片（上传图片 / 截取 Rhino 视口 / 粘贴剪切板图片）、连续对话开关、模型下拉与底部绿色「生成脚本」按钮](../assets/rsAIModeler/image1.png)
-
-**调用**：在 Rhino 命令行输入 `rsAIModeler`（打开设置窗口）
 
 **交互流程**：
 
@@ -36,3 +48,6 @@
 | 模型 | modelSelect | select | Gemini 预设（Nano Banana 2） | 预设模型 / 自定义模型名 | 出图与理解所用的多模态模型；可在下拉选择或输入自定义模型名 |
 
 **备注**：需要联网；所有参数在窗口内设置。Generate Script 模式先出脚本供审阅再运行，相对安全；Agent Modeling 具备创建/修改/删除权限，删除与布尔替换会触发确认弹窗
+
+
+:::

@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsShadow：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/cc656ae5-9aba-4b17-9c4f-8f46fa4645e9.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsShadow · 阴影分析
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsShadow：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/b75cb2ad-bac8-5839-8dad-0506e91b6621.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/b75cb2ad-bac8-5839-8dad-0506e91b6621.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsShadow · 阴影分析
 
 > 模块：分析 / 建筑物理分析
 

@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsDisplacementToMesh：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/1228c420-2747-5c48-99cc-bd77ca861667.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsDisplacementToMesh · 置换贴图转真实网格
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsDisplacementToMesh：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/82db1732-2b62-5c3b-b478-7080b4bd6ede.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/82db1732-2b62-5c3b-b478-7080b4bd6ede.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsDisplacementToMesh · 置换贴图转真实网格
 
 > 模块：几何 / 网格
 

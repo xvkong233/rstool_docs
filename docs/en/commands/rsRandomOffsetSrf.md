@@ -1,10 +1,8 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--missing" title="No icon in the current toolbar" aria-hidden="true"></span> rsRandomOffsetSrf · Random Offset Surfaces
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsRandomOffsetSrf: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/49664d77-bc95-57a2-a800-21d845e4d018.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/49664d77-bc95-57a2-a800-21d845e4d018.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsRandomOffsetSrf · Random Offset Surfaces
 
 > Module: Geometry / Surfaces
 
 [← Back to command index](/en/commands/)
-
-> The current toolbar has no icon for this command. The dash is a placeholder, not a toolbar icon; run the command by name.
 
 **Function**: New offset surfaces or solids (Brep). The source objects remain; results are grouped and selected.
 

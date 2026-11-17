@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsDynamicComponentGuide：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/82baf996-0a08-5a88-8b84-636f330bfbb6.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsDynamicComponentGuide · 动态组件入门指南
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsDynamicComponentGuide：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/f387aab1-c4b3-5e8e-a0a4-fa32d1ba682b.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/f387aab1-c4b3-5e8e-a0a4-fa32d1ba682b.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsDynamicComponentGuide · 动态组件入门指南
 
 > 模块：动态组件 / 入门
 

@@ -1,12 +1,26 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsPolylineStair2D: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/0be5eb04-840c-557a-8921-9dc350c217bd.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsPolylineStair2D · Polyline 2D Staircase
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsPolylineStair2D: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/0be5eb04-840c-557a-8921-9dc350c217bd.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsPolylineStair2D · Polyline 2D Staircase (legacy entry)
 
-> Module: 2D Architecture / Other 2D Tools
+> Module: Architecture / Stairs & Ramps
 
 [← Back to command index](/en/commands/)
 
-**Function**: The 2D stair plane generated along the polyline (including step lines and upper and lower row annotations), distinguishes the stair sections/platforms according to the segment type
+::: warning Version 2.0: legacy entry
 
-**Run**: Enter `rsPolylineStair2D` in the Rhino command line (command-line interaction).
+Free-form 2D stairs now use the multi-flight stair window, sharing its path and dimensions.
+
+Use [`rsMultiFlightStairs`](/en/commands/rsMultiFlightStairs).
+
+The old name is not a callable alias in the reviewed 2.0 source. The historical reference below is for 1.x.
+
+[View the 2.0 command changes](/en/commands/v2)
+
+:::
+
+::: details View the 1.x historical reference
+
+> Icons, screenshots, parameters, and workflows in this section describe the old version.
+
+**Function**: The 2D stair plane generated along the polyline (including step lines and upper and lower row annotations), distinguishes the stair sections/platforms according to the segment type
 
 **Workflow**:
 
@@ -24,3 +38,6 @@
 | Upward direction | UpDirection | list | reverse | Along draw order/reverse | Determined by _upFollowsDrawOrder, default false → second item in the list "reverse" |
 
 **Notes**: Click the vertices of the polyline to generate it segment by segment; the type of each segment can be switched during drawing
+
+
+:::

@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsViewshedAnalysis：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/314a3091-71ec-5e22-be6d-0c6f34a7bab2.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsViewshedAnalysis · 视野分析
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsViewshedAnalysis：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/7b81fc3b-90f2-5d59-a96f-a186de59a0d1.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/7b81fc3b-90f2-5d59-a96f-a186de59a0d1.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsViewshedAnalysis · 视野分析
 
 > 模块：分析 / 建筑物理分析
 

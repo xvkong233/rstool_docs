@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsUnrollCrv：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/dd75cf96-c27b-428e-9c68-77f29ba0fc8e.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsUnrollCrv · 曲线展直
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsUnrollCrv：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/549f7ff1-3a2e-5359-99ec-74aa25c5dac8.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/549f7ff1-3a2e-5359-99ec-74aa25c5dac8.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsUnrollCrv · 曲线展直
 
 > 模块：几何 / 曲线
 

@@ -1,10 +1,18 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsEarth：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/0804d532-d707-42f0-a2e8-a876c653d12f.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsEarth · 下载地形
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsEarth：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/f4eab1f0-073b-5baf-9472-90c7e8549097.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/f4eab1f0-073b-5baf-9472-90c7e8549097.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsEarth · 下载地形
 
 > 模块：地形 / 获取与编辑
 
 [← 返回命令目录](/commands/)
 
-**功能**：将下载得到的地形网格（含贴图的 Rhino 网格）写入当前文档
+::: info 2.0 说明
+
+2.0 使用 RSTool 客户端承载面板，请先保持客户端运行并登录。
+
+[查看 2.0 命令变化与对照](/commands/v2)
+
+:::
+
+**功能**：打开客户端地形下载工具，选择地图范围，下载带卫星贴图的地形，并按需生成 OSM 建筑。
 
 ![RSTool 地形下载窗口（卫星底图 + 右侧控制面板）](../assets/rsEarth/image1.png)
 
@@ -12,10 +20,11 @@
 
 **交互流程**：
 
-1. 首次使用前，前往 [Mapbox 官网](https://www.mapbox.com/) 注册并登录账号，在账户的 Access tokens 页面创建或复制一个以 `pk.` 开头的公开访问令牌
-2. 命令行输入 rsEarth，打开地形下载窗口，将令牌粘贴到右侧控制面板的 Mapbox Token 输入框
-3. 在窗体中搜索区域、选择地图源并设置下载精度后下载地形
-4. 若新版窗口不可用，自动回退到旧版地图窗体 rsEarthOld
+1. 首次使用前，前往 [Mapbox 官网](https://www.mapbox.com/) 注册并登录，在 Access tokens 页面创建或复制以 pk. 开头的公开访问令牌。
+2. 在 Rhino 输入 rsEarth，打开客户端“创作工具 → 地形下载”，确认目标文档并填写 Mapbox Token。
+3. 搜索地点，在地图上绘制矩形范围；查看预计瓦片、顶点和内存开销，设置质量、初始瓦片预算及是否生成建筑。
+4. 点击“开始生成”，等待下载、地形构建和写入 Rhino；需要中止时点击“取消任务”。
+5. 需要扩展到周边时，使用选区四周的箭头，每次移动一个选区的宽度或高度，再生成相邻地形。
 
 **参数**：
 
@@ -23,36 +32,23 @@
 | --- | --- | --- | --- | --- | --- |
 | Mapbox Token | Token | password | 无 | pk.xxxxx | 首次使用必填：前往 mapbox.com 注册账号并获取以 pk. 开头的公开访问令牌，粘贴后在本机加密保存；请勿公开分享或填写以 sk. 开头的 Secret Token |
 | 精度 | Precision | radio | 中 | 高 / 中 / 低（采样步长 1 / 2 / 4） | 面板设置：控制网格采样密度 |
-| 瓦片上限 | MaxTiles | radio | 60 | 20 / 60 / 100 | 面板设置：单个任务允许拉取的瓦片数，超出被服务端丢弃 |
-| 缩放级别 | Zoom | int | 自动 | 依据范围自动计算最优值 | 面板设置：生成时自动计算的地图缩放级别 |
-| 生成建筑 | GenerateBuildings | bool | 关 | 开 / 关 | 面板设置：勾选后通过 Overpass 拉取 OSM 3D 建筑 |
-| 主题 | Theme | radio | 跟随系统 | 跟随系统 / 浅色 / 深色 | 面板设置：界面主题，即时生效并写入全局配置 |
+| 初始瓦片预算 | MaxTiles | radio | 当前设置 | 20 / 60 / 100 | 20 / 60 / 100 用于首次确定合适的缩放级别；项目锁定后，后续相邻下载沿用相同缩放与坐标基准。不是简单的最终总量上限。 |
+| 缩放级别 | Zoom | int | 自动 | 依据范围自动计算最优值 | 首次根据范围与初始瓦片预算自动确定；项目锁定后保持一致，便于相邻地形衔接。 |
+| 生成建筑 | GenerateBuildings | bool | 当前设置 | 开 / 关 | 可通过 OSM / Overpass 获取建筑。建筑数据暂不可用时，会提示并继续生成地形。 |
 | 代理 | Proxy | bool | 关 | 开 / 关（支持 http:// 或 socks5://） | 面板设置：仅 Debug 构建可见，可点测试验证连通 |
 
-**备注**：RSTool Terrain Download 是 Rhino 内的在线地形高程获取工具；启动后打开一个窗口，左侧为 Leaflet 地图，右侧为控制面板，所有交互在网页端完成。
+**输出**：将下载得到的地形网格（含贴图的 Rhino 网格）写入当前文档
 
-界面分两栏。**左侧为地图预览区**（对应窗体 `#map`），整块是 Leaflet 地图：搜索框（geosearch，支持 Esri + OSM，地址输入即定位）、Zoom 缩放、底图切换按钮；地图四个方向额外放置了 4 颗移动按钮（▲▼◀▶），专门用来在没有滚动条精确定位或鼠标不便时，按「一格 tile」的步进平移当前选中范围。地图上方会显示一个 LOADING 遮罩直到瓦片加载完成。
+**备注**：2.0 的 rsEarth 直接打开客户端页面，原来的 rsEarthOld 窗口不再作为回退入口。地形生成会写入客户端当前选中的 Rhino 文档，开始前先确认实例、文档和模型单位。
 
-**右侧控制面板自上而下分区**（按窗体 `#panel-inner` 顺序）：
+## 地图与范围
 
-| 顺序 | 分区 | 控件 | 说明 |
-| --- | --- | --- | --- |
-| 1 | 标题栏 | `Terrain Download` + `重置` | 标题与一键重置当前范围/参数 |
-| 2 | 主题 | radio 三选一 | 跟随系统 / 浅色 / 深色；切换即时生效并写入全局配置 |
-| 3 | Mapbox Token | 密码框 + 显示/隐藏 | 用于下载地形与卫星瓦片（pk.xxxxx 开头），本地加密存档 |
-| 4 | 代理 (Debug) | 开关 + 地址 + 测试 | 仅 Debug 构建可见；支持 `http://` 或 `socks5://`，可点测试验证连通 |
-| 5 | 范围绘制 | 绘制范围按钮 + 方向键 | 在地图上拖矩形选区，4 颗方向键做 tile 粒度的选区平移 |
-| 6 | 质量与瓦片 | 精度 select + 瓦片上限 select + 建筑 checkbox | 精度：高/中/低 → 网格采样 step 1/2/4；瓦片上限：20/60/100；建筑：勾选启用 OSM 3D 建筑 |
-| 7 | 操作 | 开始生成 + 取消任务 | 主/辅按钮：绿色生成、白底取消 |
-| 8 | 状态 | 状态框 + 进度行 | 实时显示当前阶段文本与 `已耗时 Nx` 进度说明 |
-| 9 | 任务日志 | 日志列表 + 导出按钮 | 滚动日志区，可导出为 `TerrainLog.txt` |
+左侧地图可搜索地点、缩放、切换街道/卫星底图，并绘制矩形选区。选区周围的箭头按当前选区的宽度或高度移动，适合连续下载相邻区域。右侧会显示范围坐标及预计瓦片、顶点数量和内存开销。
 
-**操作流程**——打开命令后，先在搜索框定位目的区域，将地图放大到目标地块；在地图上按住鼠标拖出矩形选区，4 颗方向按钮可对选区做 tile 粒度的细微调整；按「开始生成」后流程是：Token 校验 → bounds 校验（南北纬不超过 ±85.05112878、东西经不超过 ±180）→ 计算最优 zoom → 检查瓦片预算 → 下载高程瓦片并拼接为 Rhino 网格 → 若开启 3D 建筑则调用 Overpass 拉取 OSM `building` 关系并拟合高度。
+## 质量与项目基准
 
-**精度与瓦片上限**决定了网格密度与下载瓦片配额：精度下拉映射 sample step（高=1、中=2、低=4），瓦片上限三档 20/60/100 决定单个任务允许拉取的瓦片数，超过会被服务端丢弃并弹错；调整这两个值会影响最终几何的细节与生成时间。生成 3D 建筑通过 Overpass API 拉取 OSM 内的 `building` 几何，再用高度策略生成 Rhino 网格。
+高/中/低质量控制采样密度；初始瓦片预算用于第一次确定下载缩放级别。项目锁定后，后续下载使用同一缩放级别、采样设置和坐标基准，让相邻地形能够衔接。范围越大、精度越高，下载与生成开销也越大，可以先用小范围检查效果。
 
-**取消与日志**——生成途中点「取消任务」会立刻停止下载并丢弃已拉取的瓦片；任务日志按行滚动，错误项以红色显示，可一键导出为本地 txt 用于排障。状态区除当前阶段文本外，还会在右下显示阶段耗时汇总（`已耗时 Nx、阶段耗时汇总…`）。
+## Token、建筑与日志
 
-**配置记忆**——Token、主题、最近一次地图位置 (lat/lon/zoom)、精度、瓦片上限、建筑开关、代理地址与开关都会通过 `TerrainDownloadWebForm.Config` 持久化到本地 JSON（Windows `%LocalAppData%` 目录下加密存档），下次打开命令自动恢复。首次打开会尝试从旧版 `rsEarth_Data/token.txt`、`location.txt` 迁移数据。
-
-**网络与性能**——所有下载走自有 `TerrainNetwork` 槽（瓦片 15s 超时 / Overpass 30s 超时 / 地理搜索 15s 超时）；代理若开启则注入相应启动参数。需要联网与 Mapbox 凭据；运行旧版依赖不存在时自动回退 `rsEarthOld` 窗体。
+Mapbox Token 用于地形与卫星瓦片，请填写公开访问令牌，不要公开分享令牌或填写 sk. 开头的 Secret Token。OSM 建筑取决于当地数据覆盖；暂时取不到建筑时，仍可继续生成地形。状态区显示下载、构网和写入进度，任务日志可导出用于排查。主题和语言跟随客户端，代理测试仅在相应开发构建中提供。

@@ -1,14 +1,24 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsAiRenderOld: right-click the rsAiRender button" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/8fa021d9-e321-4ae1-b218-205fa2451c7d.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsAiRenderOld · Legacy AI rendering
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsAiRenderOld: right-click the rsAiRender button" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/8fa021d9-e321-4ae1-b218-205fa2451c7d.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsAiRenderOld · Legacy AI rendering (legacy entry)
 
 > Module: AI / Rendering & Modeling
 
 [← Back to command index](/en/commands/)
 
-> Right-click the [rsAiRender](./rsAiRender) toolbar button to run this command. The two commands share the visible button icon.
+::: warning Version 2.0: legacy entry
+
+The legacy AI-rendering entry is no longer exposed. Open AI rendering in the client; rsAiRender is not an available replacement command.
+
+The old name is not a callable alias in the reviewed 2.0 source. The historical reference below is for 1.x.
+
+[View the 2.0 command changes](/en/commands/v2)
+
+:::
+
+::: details View the 1.x historical reference
+
+> Icons, screenshots, parameters, and workflows in this section describe the old version.
 
 **Function**: Old version: Generate AI renderings based on viewport/reference images (WinForms implementation), which can be saved locally
-
-**Run**: Enter `rsAiRenderOld` in the Rhino command line (opens a settings window).
 
 **Workflow**:
 
@@ -32,3 +42,6 @@
 | Reference picture | ReferenceImage | file | — | png/jpg/jpeg/bmp/webp | Optional; after uploading, it will only be used for overall style/lighting/material tone reference, and does not copy objects or compositions. |
 
 **Notes**: The old version of the command, implemented in WinForms, is reserved for compatibility; you need to configure the API Key yourself. Compared with the new version rsAiRender, there is no distinction between rendering/inspiration workspaces and the functions are simpler.
+
+
+:::

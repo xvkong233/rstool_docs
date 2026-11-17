@@ -1,10 +1,18 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsProfileDirector: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/232863f4-be5a-4ae5-a907-62fcb4023c31.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsProfileDirector · Profile Director
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsProfileDirector: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/c11eaa75-ee8e-57f9-bdf6-8f7b23a8074e.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/c11eaa75-ee8e-57f9-bdf6-8f7b23a8074e.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsProfileDirector · Profile Director
 
 > Module: Section Management / Profile Director
 
 [← Back to command index](/en/commands/)
 
-**Function**: Generated section sweeps and component/span instances along path array (can be baked as blocks or independent geometries)
+::: info Version 2.0
+
+The Rhino parameter panel is retained. Style, component, and profile libraries share one client tool page.
+
+[View the 2.0 command changes](/en/commands/v2)
+
+:::
+
+**Function**: Generate profiles, components, and spans along paths. Version 2.0 retains the Rhino parameter panel and unifies the style, component, and profile libraries in the client.
 
 ![Profile Director main interface: railing preview generated along the path array in the Rhino view on the left, section/component parameter panel on the right](../../assets/rsProfileDirector/image1.png)
 *Profile Director main interface (array railing sections and vertical components along a curved path)*
@@ -15,26 +23,32 @@
 
 **Workflow**:
 
-1. Enter rsProfileDirector in Rhino to open the main panel.
-2. Use Pick curve path or Draw path to define where geometry is generated.
-3. Open Style Library for a ready-made combination, or add items under Profile, Component, and Span.
-4. Select an item in the left list before editing on the right. Placement mode and span type determine which controls appear.
-5. Click Preview to check placement, spacing, and corners, then Generate to add the result to the model.
+1. Run rsProfileDirector in Rhino to open the native parameter panel.
+2. Pick or draw the path curves.
+3. Open the style, component, or profile library to enter Creative Tools → rsProfileDirector Tools in the client. Apply an asset back to the main tool in the source document.
+4. Select an item first, then edit its profile, component, span, corner, and distribution settings in the corresponding panel.
+5. Preview the result and Generate when ready. Libraries can also be browsed directly from the client.
 
-**Notes**: See the asset download instructions below. The end of this page explains controls by panel. Each item has independent settings; loaded styles use values stored in the asset. Labels and control positions may vary by version.
+**Output**: Generated section sweeps and component/span instances along path array (can be baked as blocks or independent geometries)
 
-## Download and use the asset library
+**Notes**: Version 2.0 keeps the Rhino parameter panel and unifies the style, component, and profile libraries under rsProfileDirector Tools in the client. Switch between the three libraries in that page. Parameters for profiles, components, and spans remain grouped by panel at the end of this page.
 
-To get started without building your own collection, download the ready-made rsProfileDirector asset library from [Baidu Netdisk](https://pan.baidu.com/s/5zLhuX4hCtyEUVvoC1rHkmA) or [Google Drive](https://drive.google.com/file/d/14BEQIffkTACkzKiMitR35b6zeuNCczRn/view?usp=sharing). Google Drive is recommended for users outside mainland China. Place the library in the `rsProfileDirector` folder to use it. If the download is an archive, extract it first and keep the library's existing folder structure.
+## Downloading and using the asset library
 
-1. Click **Open style library** in the `rsProfileDirector` main panel.
-2. Check the **Folder** path near the bottom of the Style Library window, and place the downloaded library in the `rsProfileDirector` folder shown there.
-3. If you store the library elsewhere, click **Change folder** and select the `rsProfileDirector` folder containing it. Select a style and click **Use** to return to the main panel for previewing and generation.
+Download the library from [Baidu Netdisk](https://pan.baidu.com/s/5zLhuX4hCtyEUVvoC1rHkmA) or [Google Drive](https://drive.google.com/file/d/14BEQIffkTACkzKiMitR35b6zeuNCczRn/view?usp=sharing). Google Drive is convenient for users outside China. Extract the archive and retain its folder structure.
 
-![Profile Director Style Library folder settings: the red box highlights the Folder path and Change folder button](../../assets/rsProfileDirector/style-library-folder.png)
-*The red box highlights the library folder settings: Folder shows the current path; click Change folder to select the rsProfileDirector folder containing your library.*
+1. Open the style, component, or profile library from the main tool.
+2. In the client library settings, choose the extracted rsProfileDirector base folder and apply it. If it contains Chinese / English subfolders, the tool selects the matching client language.
+3. Select an asset and apply it, then return to Rhino to preview and generate. You can browse local assets directly in the client, then connect Rhino and open the profile tool before applying them.
 
-You can store the library wherever it is convenient. The important part is that the Folder path matches its actual location; you do not need to copy the example's desktop path.
+![Earlier Profile Director library-folder settings](../../assets/rsProfileDirector/style-library-folder.png)
+*This image illustrates the earlier folder settings. In 2.0, select the actual asset folder in the client library settings; the example desktop path is not required.*
+
+## How the libraries work together
+
+Styles store complete combinations, while components and profiles provide individual assets. Configure spans in the main tool. Local libraries support categories, search, sorting, preview, and management, plus ZIP import/export. Style packages include their profile and component dependencies; components and profiles also accept individual 3dm files.
+
+Store libraries wherever convenient. Same-name assets with identical content are reused; different content is not overwritten. Organize the existing library or choose an empty folder when needed. The online resource entry is currently pending integration, so use local libraries.
 
 **Tutorial videos**:
 
@@ -157,13 +171,16 @@ These controls remain in Span and are mostly shared, but dimensions differ by ty
 | Random offset | Span.RandomPlaneOffset | Length | 0 | ≥ 0 | Add signed random lateral variation to Plane offset; 0 disables it. |
 | Material | Span.MaterialId | Action | Not assigned | Document materials | Assign a material to this span item. |
 
-### Library windows: complete styles versus individual assets
+### Client libraries: styles, components, and profiles in one page
 
-Style Library stores a complete combination of profiles, components, and spans. Profile Library stores outlines; Component Library stores objects. Open Style Library applies a complete setup; a tab's own library replaces one asset. Names, categories, folders, and preview images manage assets rather than geometry dimensions.
+The main parameter panel remains in Rhino. Any library button opens Creative Tools → rsProfileDirector Tools in the client, where you switch between styles, components, and profiles. Styles store a complete setup; components and profiles store individual assets, while spans remain configured in the main panel. Browse local assets independently, then connect the correct Rhino document and open the appropriate tool before applying, saving the current style, or adding/replacing Rhino geometry.
 
 | Display name | Parameter | Type | Default | Range | Description |
 | --- | --- | --- | --- | --- | --- |
-| Search / Name / Category | Library.SearchCategory | Text | From the asset | Text / category | Find assets and organize by name/category; select an actual item before using it. |
-| Folder / Change folder | Library.Folder | Action | Current library folder | Local folder | View or change the library path; it must match the actual asset folder. |
-| Save all changes / Save as new | Library.SaveStyle | Action | — | Style Library buttons | Save all changes updates the selected style's name, category, and current settings; Save as new creates a new style. |
-| Custom preview / Use | Library.PreviewUse | Action | From the asset | Image / selected asset | Preview images are for library display; Use loads the chosen style or individual asset. |
+| Search / Category / Sort | Library.SearchCategory | Client controls | Current library | Names or categories / all categories / by category or name | Filter the current library in the client, switch grid/list views, and select an asset to inspect its preview and editable information. |
+| Local library folder / Browse / Apply folder | Library.Folder | Client path settings | Current library root | Local folder | Type a path or browse to a folder, then Apply folder. A root containing Chinese / English uses the matching client language; other custom folders are used directly. |
+| Save current style / Replace with current settings | Library.SaveStyle | Client actions | — | Style library | Connect Rhino and open the profile tool to save its complete current setup as a new style or replace the selected style. Save name and category changes metadata without replacing geometry settings. |
+| Custom preview / Use style, profile, or component | Library.PreviewUse | Client actions | From the asset | Image / selected asset | Custom previews appear in the client library. Use or double-click applies the selected asset to the profile tool in the source Rhino document. Check the current document and tool state if applying fails. |
+| Resource source | Library.Source | Client option | Local | Local / Online | Use local assets in the current version. Online is a reserved entry with no connected server resources yet; switch back to Local to use existing folders. |
+| Add from Rhino / Replace geometry | Library.AddReplace | Client actions | — | Component / profile libraries | Pick components or closed planar profiles from the connected Rhino document to create assets, or replace selected asset geometry in Preview and edit. |
+| Import / Export library | Library.ImportExport | Client actions | — | ZIP; component/profile libraries also import 3dm | Use More actions to import packages or export the library. Style packages include component and profile dependencies. Identical same-name content is reused; different content is not overwritten. |

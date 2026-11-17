@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsRoofTile: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/673e42a0-aa57-4aa1-98c3-04ddc27f6251.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsRoofTile · Roof tile generation
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsRoofTile: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/3a486f1f-d237-5d34-a5c5-8f0b18189a97.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/3a486f1f-d237-5d34-a5c5-8f0b18189a97.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsRoofTile · Roof tile generation
 
 > Module: Architecture / Building Elements
 

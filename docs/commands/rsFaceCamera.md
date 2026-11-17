@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsFaceCamera：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/a1631159-e9ea-4c32-a6f3-a9d8e03b3045.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsFaceCamera · 面向相机
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsFaceCamera：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/5d0fdd71-0009-5de1-a608-13e7ec289344.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/5d0fdd71-0009-5de1-a608-13e7ec289344.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsFaceCamera · 面向相机
 
 > 模块：视图出图 / 视图相机
 

@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsExportLayoutToDwg：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/f8316960-e173-50cc-a26d-0be2fd8341f5.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsExportLayoutToDwg · 布局导出 DWG
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsExportLayoutToDwg：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/838eee3e-bbd4-5b4e-b244-85792de76f93.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/838eee3e-bbd4-5b4e-b244-85792de76f93.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsExportLayoutToDwg · 布局导出 DWG
 
 > 模块：视图出图 / 标注出图
 

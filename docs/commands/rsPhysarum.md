@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsPhysarum：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/6f902462-2409-5be7-abc1-0c82efb01330.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsPhysarum · 黏菌模拟
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsPhysarum：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/b4bd2ebc-f8e4-5352-9f89-71d57de04e29.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/b4bd2ebc-f8e4-5352-9f89-71d57de04e29.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsPhysarum · 黏菌模拟
 
 > 模块：物理模拟 / 动力学
 

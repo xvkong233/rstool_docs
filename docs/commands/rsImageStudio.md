@@ -1,10 +1,18 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsImageStudio：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/0a634da4-1b7d-5b20-a5d5-a163eacfe9a5.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsImageStudio · 图像工作室
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsImageStudio：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/a6c34171-ffc5-58d0-ab15-027123d88510.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/a6c34171-ffc5-58d0-ab15-027123d88510.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsImageStudio · 图像工作室
 
 > 模块：效率工具 / 生产力
 
 [← 返回命令目录](/commands/)
 
-**功能**：打开 RSTool 图像工作室窗口进行位图绘制/标注/导出与保存
+::: info 2.0 说明
+
+2.0 使用 RSTool 客户端承载面板，请先保持客户端运行并登录。
+
+[查看 2.0 命令变化与对照](/commands/v2)
+
+:::
+
+**功能**：打开客户端的图像工作室，对位图分层编辑、标注和调色，也可截取 Rhino 视窗继续绘制。
 
 ![RSTool Image Studio 主界面](../assets/rsImageStudio/image1.png)
 *RSTool 图像工作室主界面（顶部工具栏 14 项，左侧绘图工具栏，右侧属性面板含 图层编辑 / 镜像测量 / 椭圆合模式 / 图层管理 / 编辑图层 / 预览 / 颜色 / 信息 8 块，底部含缩放 50% 与画布适配按钮）*
@@ -13,9 +21,10 @@
 
 **交互流程**：
 
-1. 命令行输入 rsImageStudio，打开图像工作室窗口（标题「RSTool 图像工作室」）
-2. 在窗口中对位图进行绘制、标注、裁剪与调色，或截图 Rhino 视窗后加标注
-3. 处理完成后导出为 PNG / JPEG / WebP，或保存为 .rstool-photo 工程文件
+1. 在 Rhino 输入 rsImageStudio，打开客户端“创作工具 → 图像工作室”；也可以直接从客户端进入。
+2. 新建工程，打开图片，或把图片导入为新图层；需要 Rhino 截图时，先确认客户端选择的文档。
+3. 用画笔、选区、文字、图层、组、蒙版和调整工具编辑；多份文档可在标签间切换，各自保留撤销记录。
+4. 导出 PNG / JPEG / WebP，或保存为 .rsimage 工程以保留图层和可编辑内容。
 
 **参数**：
 
@@ -26,38 +35,17 @@
 | 高度 | Height | int | 源尺寸 | 1 – 最大画布边长 | 导出 / 截图时设置 |
 | 缩放 | Scale | double | 1.0 | > 0 | 导出 / 截图时设置 |
 
-**备注**：基于 miniPaint 引擎，并加了若干自定义 JS 扩展用于画板布局、笔刷、选区、标尺等功能。
+**输出**：导出合成图像，或保存保留图层、组和蒙版的 .rsimage 工程。
 
-**顶部工具栏**（14 项，简化常用 PhotoShop 工作流）：
+**备注**：2.0 把图像工作室并入客户端，不再启动旧版独立窗口。编辑器基于 miniPaint，打开后可独立处理本地图片；只有截取 Rhino 视窗等交互需要连接正确的 Rhino 实例与文档。
 
-| 按钮 | 功能 |
+## 界面怎么用
+
+| 区域 | 常用功能 |
 | --- | --- |
-| 打开图像 | 从本地文件载入位图到画布 |
-| 导入图像 | 导入新图层（不替换当前画布）|
-| 保存图像 v | 把当前画布导出为带版本号的本地图像 |
-| 模板 | 选择内置模板套用画板布局 |
-| 截取 Rhino | 抓取 Rhino 视窗截图导入（与 Rhino 双向） |
-| 画板尺寸 | 调画板/纸张大小 |
-| 打开工程 | 打开 .rstool-photo 工程文件 |
-| 保存 / 另存为 | 把当前整套图像工程写入磁盘 |
-| PNG / JPEG / WebP | 一键导出当前画布为对应格式 |
+| 文件与导出 | 新建、打开/导入图片、打开/保存 .rsimage 工程、最近文件，以及 PNG/JPEG/WebP 导出 |
+| 绘图与编辑 | 选择、画笔、形状、文字、裁剪和图像调整 |
+| 图层与属性 | 图层、组、蒙版、剪贴、锁定、不透明度与混合模式 |
+| Rhino 截图 | 把当前所选 Rhino 文档的视窗截图作为图层加入工程，继续标注和绘制 |
 
-**左侧绘图工具栏**：miniPaint 自带的铅笔 / 画笔 / 钢笔 / 形状 / 选取 / 文字 / 图章等工具。
-
-**右侧属性面板**（多块可折叠/独立面板）：
-
-| 面板 | 用途 |
-| --- | --- |
-| 图层编辑 | 路径 / 填充颜色 / 默认黑色 / 描边 W（容量 32 px）/ 虚线 复选 / 节点 |
-| 镜像测量 | 当前锁定的可视化图层（含新建组、不属于组下拉）|
-| 椭圆合模式 | 椭圆笔触的合成模式（正常 / 正片叠底 / 滤色 等）|
-| 笔不透明度 | 笔触透明度滑杆 |
-| 图层管理 | 图层列表 + 添加 按钮 |
-| 编辑图层 | 当前选中图层的编辑操作（添加图层、合并、删除等）|
-| 预览 | 当前画布小窗缩略图；底部 50% 缩放 + 适应 按钮 |
-| 颜色 | 调色板 |
-| 信息 | 鼠标坐标 / 选区尺寸等 |
-
-**底部状态栏**：画布距离（例 距离 -4096px / 8192px max）+ 缩放控制 + 适应按钮。
-
-**与 Rhino 双向**：通过「截取 Rhino」一键把 Rhino 视窗截图导入到画布，适合在 AiRender / 渲染后再到 ImageStudio 加标注 / 比例尺 / 文字标注导出。
+每个工作室最多同时打开 16 页。切换客户端功能会保留工程，切换标签也保留各自的撤销记录；关闭未保存工程时可选择保存、不保存或取消。主题和中英文随客户端切换。

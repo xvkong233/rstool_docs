@@ -1,8 +1,22 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsAiRender: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/8fa021d9-e321-4ae1-b218-205fa2451c7d.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsAiRender · AI rendering
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsAiRender: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/8fa021d9-e321-4ae1-b218-205fa2451c7d.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsAiRender · AI rendering (legacy entry)
 
 > Module: AI / Rendering & Modeling
 
 [← Back to command index](/en/commands/)
+
+::: warning Version 2.0: legacy entry
+
+This Rhino command is not registered in the reviewed 2.0 source. The client AI rendering page does not preserve the old command entry.
+
+The old name is not a callable alias in the reviewed 2.0 source. The historical reference below is for 1.x.
+
+[View the 2.0 command changes](/en/commands/v2)
+
+:::
+
+::: details View the 1.x historical reference
+
+> Icons, screenshots, parameters, and workflows in this section describe the old version.
 
 **Function**: You can take a screenshot of the model in Rhino, or upload a specific image and send it to Gemini or ChatGPT for AI rendering. After rendering is completed, partial redrawing or partial replacement can be performed. It is recommended to directly intercept the model in Rhino for AI rendering - this command will automatically intercept the depth map, AO map and other information to supplement it, ensuring a more realistic rendering effect. This command can either directly use the personal registration API or the transfer station service API provided by Yoluoren.
 
@@ -25,8 +39,6 @@
 *Figure 6: Partial redraw successful. Status bar "Complete·Rendering Successful" + top Rendering Success prompts that the third entry in the history displays the current result (Nano Banana 2) with a green "Complete" badge. Other areas (sky, towers, streets) remain unchanged from the previous version, and only the podium in the selected range is redrawn - this is the core advantage of "partial redrawing" over "whole image re-rendering": the iteration only affects the area you want to change.*
 
 > Screenshots and videos may show a Chinese-language interface. Labels and control positions can vary by Rhino or RSTool version.
-
-**Run**: Enter `rsAiRender` in the Rhino command line (opens a settings window).
 
 **Workflow**:
 
@@ -57,3 +69,6 @@
 | theme | theme | radio | System | System / Light / Dark | UI theme, follow system/light/dark; switching takes effect immediately |
 
 **Notes**: Internet connection is required; all parameters are set in the window and encrypted and saved to the local configuration. Prompt word templates, inspiration tool presets, reference pictures and historical records are all saved to the local machine.
+
+
+:::

@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsAutoParking: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/9205bdf5-a187-47cc-8b65-b3e702b0160f.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsAutoParking · Automatic Parking Layout
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsAutoParking: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/e2eb2826-28c3-562f-b506-4ab8b1136de8.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/e2eb2826-28c3-562f-b506-4ab8b1136de8.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsAutoParking · Automatic Parking Layout
 
 > Module: Architecture / Roads
 

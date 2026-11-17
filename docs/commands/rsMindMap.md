@@ -1,10 +1,18 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsMindMap：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/4071a7e1-79df-5a73-ada5-ee98faca18f3.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsMindMap · 思维导图
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsMindMap：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/3b53b782-4f70-5537-8685-5d60bd7cab7e.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/3b53b782-4f70-5537-8685-5d60bd7cab7e.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsMindMap · 思维导图
 
 > 模块：效率工具 / 生产力
 
 [← 返回命令目录](/commands/)
 
-**功能**：打开思维导图窗口，支持编辑/保存/导出思维导图，文件为 .json（rstool-mindmap v1：title/updatedAt/root 树/view{theme,style,direction,layout}）；PNG/SVG 导出由后端弹保存对话框落盘
+::: info 2.0 说明
+
+2.0 使用 RSTool 客户端承载面板，请先保持客户端运行并登录。
+
+[查看 2.0 命令变化与对照](/commands/v2)
+
+:::
+
+**功能**：打开客户端的思维导图，整理节点、布局和配色，也可把 Rhino 截图或曲线线稿插入节点。
 
 ![rsMindMap 主界面（顶部工具栏 + 中央画布的蓝色「中心主题」根节点 + 底部状态栏）](../assets/rsMindMap/image1.png)
 
@@ -12,13 +20,11 @@
 
 **交互流程**：
 
-1. 命令行输入 rsMindMap，打开思维导图窗口
-2. 在「中心主题」根节点上双击重命名；选中节点后按 Enter 加同级、Tab 加子节点、F2 重命名、Delete 删除
-3. 用顶部工具栏切换结构（思维导图 / 逻辑结构 / 组织结构 / 时间轴 / 鱼骨图等）与配色（清爽蓝 / 深夜蓝等）
-4. 用搜索框（Ctrl+F）定位节点；滚轮缩放、点「适应画布」查看全图；可展开 / 折叠分支
-5. Ctrl+S 保存、Ctrl+Shift+S 另存为 .json 文件；或点「最近」打开历史文件
-6. 点 PNG / SVG 导出当前思维导图
-7. 状态栏显示保存状态、文档名与缩放比例；最近 / 结构 / 配色 / 搜索面板按 Esc 或点空白处关闭
+1. 输入 rsMindMap，打开客户端“创作工具 → 思维导图”。
+2. 新建或打开文档，双击节点改名，用 Enter 新增同级、Tab 新增子节点，并按需要调整结构和配色。
+3. 使用搜索、缩放、适应画布和分支折叠整理内容。
+4. 需要 Rhino 内容时，先确认客户端目标，再把视窗截图或所选曲线的 SVG 插入当前节点。
+5. 保存为 .rsmind / JSON 文档，或导出 PNG / SVG；多份文件可分别在标签中编辑。
 
 **参数**：
 
@@ -27,7 +33,13 @@
 | 结构 | Structure | list | 思维导图（双向） | 思维导图 / 逻辑结构 / 向左逻辑结构 / 组织结构 / 目录结构 / 时间轴 / 鱼骨图 | 工具栏「结构」下拉：切换整体布局走向 |
 | 配色 | ColorTheme | list | 清爽蓝 | 清爽蓝 / 深夜蓝 / 黑底白节点 / 暖沙棕 / 森林绿 / 紫罗兰 | 工具栏「配色」下拉：切换节点配色方案 |
 
-**备注**：基于 simple-mind-map 引擎（状态栏右下角显示版本）。
+**输出**：保存可继续编辑的 .rsmind / JSON 思维导图，或导出 PNG / SVG；支持节点中的 Rhino 截图和曲线 SVG。
+
+**备注**：2.0 的思维导图在客户端中打开，保留节点编辑、搜索、布局、配色和本机恢复。每份文档各自保留撤销记录，关闭未保存内容时可选择保存、不保存或取消；切换客户端功能会保留工作区。
+
+节点内的 Rhino 截图和曲线 SVG 来自客户端当前选中的 Rhino 实例和文档。曲线线稿是所选 Curve 的工作平面或视窗投影，并不对整个模型进行隐藏线计算。
+
+基于 simple-mind-map 引擎（状态栏右下角显示版本）。
 
 **操作**：左键选节点，右键拖动画布；滚轮反向缩放，范围 20%–400%。
 

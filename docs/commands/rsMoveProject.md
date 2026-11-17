@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsMoveProject：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/f5515c62-04b9-4281-b28e-b278ac475fab.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsMoveProject · 工程移动
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsMoveProject：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/9c8d504c-6225-50d8-a17e-51e1e49a6635.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/9c8d504c-6225-50d8-a17e-51e1e49a6635.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsMoveProject · 工程移动
 
 > 模块：几何 / 对象变换
 

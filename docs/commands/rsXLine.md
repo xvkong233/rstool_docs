@@ -1,14 +1,24 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--missing" title="当前工具栏中无对应图标" aria-hidden="true"></span> rsXLine · 两点辅助长线
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--missing" title="当前工具栏中无对应图标" aria-hidden="true"></span> rsXLine · 两点辅助长线（旧版入口）
 
 > 模块：视图出图 / 标注出图
 
 [← 返回命令目录](/commands/)
 
-> 当前工具栏中没有此命令的对应图标。横线仅表示暂无图标，不是实际按钮；请通过命令行调用。
+::: warning 2.0：旧版入口已调整
+
+当前 2.0 未注册这个辅助长线命令，暂保留旧版参考。
+
+这个旧名称在本次核对的 2.0 中不是可直接输入的兼容别名；下方保留的是 1.x 历史说明。
+
+[查看 2.0 命令变化与对照](/commands/v2)
+
+:::
+
+::: details 查看 1.x 历史说明
+
+> 本节的图标、截图、参数与操作流程均为旧版资料。
 
 **功能**：用两点确定方向，自动向场景两侧延长并放到锁定的辅助线图层。
-
-**调用**：在 Rhino 命令行输入 `rsXLine`（命令行交互）
 
 **交互流程**：
 
@@ -20,3 +30,6 @@
 > 此命令无需设置数值参数，按上方流程操作即可；没有独立设置窗口。
 
 **备注**：它看起来像无限辅助线，实际创建的是有限长直线：按场景在该方向上的范围，两端各留约 20% 余量；没有合适场景时按视口范围回退。使用 RS_XLine_Dashed 线型。若要编辑或删除辅助线，请先解锁 RS_XLine 图层。无需设置窗口。
+
+
+:::

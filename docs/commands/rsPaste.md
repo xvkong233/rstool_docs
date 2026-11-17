@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsPaste：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/4f1b4688-9af4-415b-90d8-00d3aa40b118.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsPaste · 带原点Paste
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsPaste：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/ba63b5e7-477c-5ab6-83e7-91be4572ee1a.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/ba63b5e7-477c-5ab6-83e7-91be4572ee1a.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsPaste · 带原点Paste
 
 > 模块：辅助工具 / 剪贴板
 

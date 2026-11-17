@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsIndoorIlluminance：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/a7e59d9a-a71a-5d61-b276-8c6a6b05871e.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsIndoorIlluminance · 室内照度与采光分析
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsIndoorIlluminance：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/a7419455-f1e3-5e39-b520-65c0e514ca54.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/a7419455-f1e3-5e39-b520-65c0e514ca54.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsIndoorIlluminance · 室内照度与采光分析
 
 > 模块：分析 / 建筑物理分析
 

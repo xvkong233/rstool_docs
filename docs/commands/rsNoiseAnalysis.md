@@ -1,10 +1,8 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsNoiseAnalysis：源码专属图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/rsNoiseAnalysis.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsNoiseAnalysis · 场地噪声分析
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsNoiseAnalysis：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/e601c36e-aeae-5894-a601-280ea1f88e70.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/e601c36e-aeae-5894-a601-280ea1f88e70.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsNoiseAnalysis · 场地噪声分析
 
 > 模块：分析 / 建筑物理分析
 
 [← 返回命令目录](/commands/)
-
-> 此处使用插件源码中的专属图标，当前 RUI 尚未绑定此命令的工具栏按钮；可通过命令行或菜单调用。
 
 **功能**：预览建筑表面 LAeq,T 声级云图和“基准－方案”降噪图；生成带图例的结果网格，统计各建筑的面积加权能量平均值、最大声级和可选的超目标面积比例。CSV 包含全部方案、接收点坐标、声源贡献及计算诊断。
 

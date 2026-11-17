@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsSubdivideMesh: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/0a904bd8-c8ad-41e6-9392-4bdfb3935bb9.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSubdivideMesh · Subdivide Mesh
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsSubdivideMesh: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/e8d79d3b-b944-56f1-be02-664d9a8c6a1f.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/e8d79d3b-b944-56f1-be02-664d9a8c6a1f.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSubdivideMesh · Subdivide Mesh
 
 > Module: Geometry / Meshes
 

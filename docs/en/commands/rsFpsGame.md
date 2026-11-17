@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsFpsGame: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/d6bc0f66-7f32-515c-a9fb-6ff6928d8092.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsFpsGame · FPS reaction test
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsFpsGame: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/09c53ef8-2002-5b74-8a73-14c70941702c.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/09c53ef8-2002-5b74-8a73-14c70941702c.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsFpsGame · FPS reaction test
 
 > Module: Fun / Interactive Entertainment
 

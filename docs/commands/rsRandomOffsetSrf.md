@@ -1,10 +1,8 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--missing" title="当前工具栏中无对应图标" aria-hidden="true"></span> rsRandomOffsetSrf · 随机偏移曲面
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsRandomOffsetSrf：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/49664d77-bc95-57a2-a800-21d845e4d018.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/49664d77-bc95-57a2-a800-21d845e4d018.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsRandomOffsetSrf · 随机偏移曲面
 
 > 模块：几何 / 曲面
 
 [← 返回命令目录](/commands/)
-
-> 当前工具栏中没有此命令的对应图标。横线仅表示暂无图标，不是实际按钮；请通过命令行调用。
 
 **功能**：新增偏移后的曲面或实体（Brep），原对象保留；生成结果会成组并选中。
 

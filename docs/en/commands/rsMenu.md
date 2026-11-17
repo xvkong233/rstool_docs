@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsMenu: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/0ff47894-365a-4807-98ce-0ae5b2e3a322.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsMenu · RsTool Menu
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsMenu: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/714a47c9-021f-5946-baaa-f92633f574f7.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/714a47c9-021f-5946-baaa-f92633f574f7.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsMenu · RsTool Menu
 
 > Module: Utilities / System Tools
 

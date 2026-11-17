@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsRepairOpenCurves: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/7bf011ab-786a-4a39-9d5d-1abeedce69f7.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsRepairOpenCurves · Repair open curves
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsRepairOpenCurves: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/123b2116-1005-5452-8420-e4aed93d53fe.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/123b2116-1005-5452-8420-e4aed93d53fe.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsRepairOpenCurves · Repair open curves
 
 > Module: Geometry / Curves
 

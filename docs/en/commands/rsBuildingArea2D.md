@@ -1,6 +1,6 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsBuildingArea2D: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/8df5803a-0ca4-5601-82ab-decd6579cd36.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsBuildingArea2D · Building area
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsBuildingArea2D: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/f416aa75-c218-5728-8db0-0abdaa1f1522.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/f416aa75-c218-5728-8db0-0abdaa1f1522.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsBuildingArea2D · Building area
 
-> Module: 2D Architecture / Other 2D Tools
+> Module: Architecture / Elevations & Areas
 
 [← Back to command index](/en/commands/)
 

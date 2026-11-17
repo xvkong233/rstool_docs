@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsSelectSimilar: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/975c7bef-6e8b-55d9-bee0-90a4d8c6dbc4.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSelectSimilar · Similar object selection
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsSelectSimilar: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/9975cbcd-a5f5-5906-b310-195398687375.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/9975cbcd-a5f5-5906-b310-195398687375.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSelectSimilar · Similar object selection
 
 > Module: Organization & Selection / Selection
 

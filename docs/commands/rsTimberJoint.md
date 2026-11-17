@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsTimberJoint：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/da536ef8-27d7-5aae-a0bf-b3ce03904dc4.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsTimberJoint · 钢木节点
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsTimberJoint：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/415cc716-465c-5334-8caa-f85a2b9c262f.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/415cc716-465c-5334-8caa-f85a2b9c262f.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsTimberJoint · 钢木节点
 
 > 模块：建筑 / 建筑构件
 

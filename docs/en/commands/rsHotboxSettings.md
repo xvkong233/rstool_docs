@@ -1,10 +1,8 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--missing" title="No icon in the current toolbar" aria-hidden="true"></span> rsHotboxSettings · Hotbox Settings
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsHotboxSettings: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/309b50c9-353f-5060-bbae-259a91413d1e.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/309b50c9-353f-5060-bbae-259a91413d1e.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsHotboxSettings · Hotbox Settings
 
 > Module: Utilities / System Tools
 
 [← Back to command index](/en/commands/)
-
-> The current toolbar has no icon for this command. The dash is a placeholder, not a toolbar icon; run the command by name.
 
 **Function**: Open the hot box settings window (including general/layout and command pages); edit the general page scheme, main ring 8-direction slots, and sub-ring command pool allocation; edit background monitoring, triggering methods, keys, thresholds, and appearance themes on the layout and command pages
 

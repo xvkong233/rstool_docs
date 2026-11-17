@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsTxtReader: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/02255b59-8bd2-5c4c-bb96-3209b77c5040.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsTxtReader · Command-Line Text Reader
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsTxtReader: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/e35441c8-405d-5aea-bb1c-c15cdad82083.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/e35441c8-405d-5aea-bb1c-c15cdad82083.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsTxtReader · Command-Line Text Reader
 
 > Module: Fun / Interactive Entertainment
 

@@ -1,10 +1,22 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--missing" title="No icon in the current toolbar" aria-hidden="true"></span> rsModelingCompanionSettings · Modeling companion settings
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--missing" title="No icon in the current toolbar" aria-hidden="true"></span> rsModelingCompanionSettings · Modeling companion settings (legacy entry)
 
 > Module: Productivity / Productivity
 
 [← Back to command index](/en/commands/)
 
-> The current toolbar has no icon for this command. The dash is a placeholder, not a toolbar icon; run the command by name.
+::: warning Version 2.0: legacy entry
+
+This settings command is not registered in the reviewed 2.0 source. Its legacy reference is retained.
+
+The old name is not a callable alias in the reviewed 2.0 source. The historical reference below is for 1.x.
+
+[View the 2.0 command changes](/en/commands/v2)
+
+:::
+
+::: details View the 1.x historical reference
+
+> Icons, screenshots, parameters, and workflows in this section describe the old version.
 
 **Function**: Open the modeling companion settings window
 
@@ -12,8 +24,6 @@
 *Figure 1: Modeling companion settings panel. Top "Appearance" grouping: pet type (default cabin)/custom material/character (default professional architect)/pet size 96-280 px (default 168)/transparency 45%-100% (default 98)/always on top/remain displayed when switching to other windows/show companion bubbles/idle chat frequency (default rarely - recommended)/reminder when the model is not saved for 1 hour after modification/lock pet position/mouse penetration (available command to restore); middle "AI" "Conversation Memory" grouping: Service provider (default DeepSeek)/API address (default https://api.deepseek.com/chat/completions)/Model (default deepseek-v4-flash)/API Key (encrypted and saved locally)/Test connection; bottom switch: Send read-only Rhino context summary/Also use the current project memory (long-term memory is used with the terminal file)/Allow generation and confirmation of simple modeling operations/Agent Automatically take screenshots and visually verify after completion/Allow pets to apply for online search (confirmation is still required for each search)/Number of historical messages (default 30)*
 
 > Screenshots and videos may show a Chinese-language interface. Labels and control positions can vary by Rhino or RSTool version.
-
-**Run**: Enter `rsModelingCompanionSettings` in the Rhino command line (opens a settings window).
 
 **Workflow**:
 
@@ -28,3 +38,6 @@
 **Notes**: The specific items in the setting window are subject to the actual interface.
 
 The bottom switch "Allow the Agent to control the Grasshopper canvas": when on, the companion/Agent can use the Grasshopper canvas tool family (search components, author graphs, tweak parameters, solve, capture for visual verification); when off, those tools are hidden from the Agent.
+
+
+:::

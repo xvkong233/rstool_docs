@@ -41,12 +41,13 @@
     },
     "rsModel": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "e1ce8160-0b74-4d42-8615-4c67815dfbf3",
-      "macroGuid": "14c8d686-6409-4198-8bf1-1d2408cb4e3c",
-      "buttonGuid": "392ff254-67a9-45f6-be35-6f050c678653",
+      "source": "RSTool.rui",
+      "iconGuid": "4bd7565d-5878-5cb1-9bd3-a34a644adc49",
+      "macroGuid": "6e7932f4-ef4b-5582-87c9-98fc4829f34f",
+      "buttonGuid": "39ca7cc9-8d0e-5bcc-b965-a27b2aa5b4a4",
       "buttonCommand": "rsModel",
-      "light": "/command-icons/light/e1ce8160-0b74-4d42-8615-4c67815dfbf3.png"
+      "light": "/command-icons/light/4bd7565d-5878-5cb1-9bd3-a34a644adc49.png",
+      "dark": "/command-icons/dark/4bd7565d-5878-5cb1-9bd3-a34a644adc49.png"
     },
     "rsModelOld": {
       "kind": "toolbar-right",
@@ -65,12 +66,13 @@
     },
     "rsMaterial": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "1d9adb07-8e80-483d-b6eb-9b288bf76f5a",
-      "macroGuid": "9645e745-ff22-42a6-b409-0b5806d90c44",
-      "buttonGuid": "dd03e213-5a5e-4f7d-9c6d-a8e4b4e88950",
+      "source": "RSTool.rui",
+      "iconGuid": "367e4a28-64c1-5030-9957-3dc5414cb1d6",
+      "macroGuid": "a009870a-1cd3-575d-8676-69b9f11ff4ee",
+      "buttonGuid": "2d86564c-dbed-5ca1-ab08-f657d024ef4f",
       "buttonCommand": "rsmaterial",
-      "light": "/command-icons/light/1d9adb07-8e80-483d-b6eb-9b288bf76f5a.png"
+      "light": "/command-icons/light/367e4a28-64c1-5030-9957-3dc5414cb1d6.png",
+      "dark": "/command-icons/dark/367e4a28-64c1-5030-9957-3dc5414cb1d6.png"
     },
     "rsMaterialLibraryOld": {
       "kind": "toolbar-right",
@@ -83,48 +85,53 @@
     },
     "rsMindMap": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "4071a7e1-79df-5a73-ada5-ee98faca18f3",
-      "macroGuid": "879f770a-5d10-547c-a1f2-2196ffb6339a",
-      "buttonGuid": "8fe7b235-980b-5cc6-85b2-f846835058ae",
+      "source": "RSTool.rui",
+      "iconGuid": "3b53b782-4f70-5537-8685-5d60bd7cab7e",
+      "macroGuid": "8ac4a1b0-ca79-5f80-afa2-ec0c50dd4aff",
+      "buttonGuid": "2a62b6d2-677c-5cde-83bb-94cb0b69f8e1",
       "buttonCommand": "rsMindMap",
-      "light": "/command-icons/light/4071a7e1-79df-5a73-ada5-ee98faca18f3.png"
+      "light": "/command-icons/light/3b53b782-4f70-5537-8685-5d60bd7cab7e.png",
+      "dark": "/command-icons/dark/3b53b782-4f70-5537-8685-5d60bd7cab7e.png"
     },
     "rsVectorStudio": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "55cf292a-7bc5-570f-9381-cb7b5eed873b",
-      "macroGuid": "cb86c151-ce48-5111-a0be-2d5e51c588b4",
-      "buttonGuid": "6fab1e0d-10e5-580e-aa4c-8024eca3b381",
+      "source": "RSTool.rui",
+      "iconGuid": "01acdb9c-f67e-560e-86a0-cc5e3c717c6c",
+      "macroGuid": "3480936f-65cb-5a00-8763-92992788dd27",
+      "buttonGuid": "9f263aac-6cb5-5d9f-8f44-165457ebbae7",
       "buttonCommand": "rsVectorStudio",
-      "light": "/command-icons/light/55cf292a-7bc5-570f-9381-cb7b5eed873b.png"
+      "light": "/command-icons/light/01acdb9c-f67e-560e-86a0-cc5e3c717c6c.png",
+      "dark": "/command-icons/dark/01acdb9c-f67e-560e-86a0-cc5e3c717c6c.png"
     },
     "rsImageStudio": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "0a634da4-1b7d-5b20-a5d5-a163eacfe9a5",
-      "macroGuid": "a43fd6c9-06f4-5ee7-8730-2f54e0caf94c",
-      "buttonGuid": "37e807ab-c245-508b-ace3-e0105151aea5",
+      "source": "RSTool.rui",
+      "iconGuid": "a6c34171-ffc5-58d0-ab15-027123d88510",
+      "macroGuid": "ff3f196e-4615-5af0-a61f-9a351dc9bf32",
+      "buttonGuid": "e0f6e30b-a87c-559e-9d89-9285c753b6dd",
       "buttonCommand": "rsImageStudio",
-      "light": "/command-icons/light/0a634da4-1b7d-5b20-a5d5-a163eacfe9a5.png"
+      "light": "/command-icons/light/a6c34171-ffc5-58d0-ab15-027123d88510.png",
+      "dark": "/command-icons/dark/a6c34171-ffc5-58d0-ab15-027123d88510.png"
     },
     "rsPdfTools": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "c93a0331-2dd5-54df-8c4b-6df858a173d7",
-      "macroGuid": "495162a0-7336-5de2-af3a-7944e56395bc",
-      "buttonGuid": "3af2dfb2-810e-5939-8e8e-0ff66a845ed2",
+      "source": "RSTool.rui",
+      "iconGuid": "b11a7702-9cb2-5dc0-8ca1-36235a13b556",
+      "macroGuid": "2e9dcf7b-1f7f-58a0-af56-e0ec5d49c3ce",
+      "buttonGuid": "3f9e4cb4-1663-5e98-b15b-b8c1582a9391",
       "buttonCommand": "rsPdfTools",
-      "light": "/command-icons/light/c93a0331-2dd5-54df-8c4b-6df858a173d7.png"
+      "light": "/command-icons/light/b11a7702-9cb2-5dc0-8ca1-36235a13b556.png",
+      "dark": "/command-icons/dark/b11a7702-9cb2-5dc0-8ca1-36235a13b556.png"
     },
     "rsWhiteboard": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "e9ced1e3-617c-5365-b83c-5dcd7bc4eb2c",
-      "macroGuid": "5dc08747-0b0a-5847-8f2b-d82fc9140b3e",
-      "buttonGuid": "d1ab7df9-6aad-5df7-b9eb-ca130492b9da",
+      "source": "RSTool.rui",
+      "iconGuid": "59728ab6-858e-5c1a-a201-05a78e73ac5e",
+      "macroGuid": "06f3758a-c3c3-5380-9ef8-51f5457160db",
+      "buttonGuid": "78d8c309-c144-523f-9fea-59592ce5bd4d",
       "buttonCommand": "rsWhiteboard",
-      "light": "/command-icons/light/e9ced1e3-617c-5365-b83c-5dcd7bc4eb2c.png"
+      "light": "/command-icons/light/59728ab6-858e-5c1a-a201-05a78e73ac5e.png",
+      "dark": "/command-icons/dark/59728ab6-858e-5c1a-a201-05a78e73ac5e.png"
     },
     "rsModelingCompanion": {
       "kind": "toolbar",
@@ -140,316 +147,363 @@
     },
     "rsScreenPin": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "fffe7a99-e923-5024-ac3e-b48f3edd7225",
-      "macroGuid": "2e573447-ee0b-54df-a683-5e8b01b57001",
-      "buttonGuid": "6663958b-af4e-537b-8483-87ef6a5e12e4",
+      "source": "RSTool.rui",
+      "iconGuid": "7da7e174-817f-5316-a770-013fe66adbfe",
+      "macroGuid": "41c021d3-d501-59df-8a1f-3e61d0d96fd9",
+      "buttonGuid": "ea1e66ac-987a-52a3-b806-56c284313549",
       "buttonCommand": "rsScreenPin",
-      "light": "/command-icons/light/fffe7a99-e923-5024-ac3e-b48f3edd7225.png"
+      "light": "/command-icons/light/7da7e174-817f-5316-a770-013fe66adbfe.png",
+      "dark": "/command-icons/dark/7da7e174-817f-5316-a770-013fe66adbfe.png"
     },
     "rsSettingsTransfer": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "b030732e-555f-54a9-9eea-d5aeb2802a9f",
-      "macroGuid": "6db16b82-f8f9-5425-a4e9-6badeeeab9b9",
-      "buttonGuid": "7db3de17-85c5-5914-9b02-8a9029986b2c",
+      "source": "RSTool.rui",
+      "iconGuid": "3d883cfd-2acd-54f7-af22-d5d514a777f5",
+      "macroGuid": "d15dbc22-c022-5b1e-a1d7-c3a7cf746bb6",
+      "buttonGuid": "4fc4d2fe-c97c-5979-b99c-59672edbfdcf",
       "buttonCommand": "rsSettingsTransfer",
-      "light": "/command-icons/light/b030732e-555f-54a9-9eea-d5aeb2802a9f.png"
+      "light": "/command-icons/light/3d883cfd-2acd-54f7-af22-d5d514a777f5.png",
+      "dark": "/command-icons/dark/3d883cfd-2acd-54f7-af22-d5d514a777f5.png"
     },
     "rsAxisLock": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "ff0aa945-6c5b-58b3-ada3-7e51f989da82",
-      "macroGuid": "c70b3e5f-64fd-5102-99bb-2af87f7de812",
-      "buttonGuid": "2780738e-637d-5b0e-854a-94236be750f9",
+      "source": "RSTool.rui",
+      "iconGuid": "c42bee2f-ff92-5aed-8601-f3e9b800cfd2",
+      "macroGuid": "16938f56-304e-5d0c-a53d-95e824c02adc",
+      "buttonGuid": "0d1ceb0c-0c3c-5dc1-aebf-f9c5da4ae376",
       "buttonCommand": "rsAxisLock",
-      "light": "/command-icons/light/ff0aa945-6c5b-58b3-ada3-7e51f989da82.png"
+      "light": "/command-icons/light/c42bee2f-ff92-5aed-8601-f3e9b800cfd2.png",
+      "dark": "/command-icons/dark/c42bee2f-ff92-5aed-8601-f3e9b800cfd2.png"
     },
     "rsAxisLockBasis": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "affa3c57-d0be-541c-b77f-ed4266b0407f",
-      "macroGuid": "a56089da-2fb5-5f70-b6b1-dcd471ad658c",
-      "buttonGuid": "2c7cf8d4-9f3b-5ee9-8a69-c8ae828299fe",
+      "source": "RSTool.rui",
+      "iconGuid": "9721000c-ce91-53f9-8d65-bba35be86c5f",
+      "macroGuid": "561732c2-fda0-5fd6-a363-8bf7a78759ab",
+      "buttonGuid": "f951e5a1-fae2-5707-ad0f-a0549763de69",
       "buttonCommand": "rsAxisLockBasis",
-      "light": "/command-icons/light/affa3c57-d0be-541c-b77f-ed4266b0407f.png"
+      "light": "/command-icons/light/9721000c-ce91-53f9-8d65-bba35be86c5f.png",
+      "dark": "/command-icons/dark/9721000c-ce91-53f9-8d65-bba35be86c5f.png"
     },
     "rsAxisLockStatus": {
-      "kind": "unavailable"
+      "kind": "toolbar",
+      "source": "RSTool.rui",
+      "iconGuid": "0990a32c-00d2-528d-9505-31928da21d44",
+      "macroGuid": "82e7e64b-56c3-55f7-9735-e433689ee290",
+      "buttonGuid": "3d814b12-a776-5d68-b97a-2412db087eb0",
+      "buttonCommand": "rsAxisLockStatus",
+      "light": "/command-icons/light/0990a32c-00d2-528d-9505-31928da21d44.png",
+      "dark": "/command-icons/dark/0990a32c-00d2-528d-9505-31928da21d44.png"
     },
     "rsKeyCast": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "5116ce49-1a8f-564e-9f29-0b636a9dd0fc",
-      "macroGuid": "34b4d4b2-918d-58ca-a468-cff29167ef93",
-      "buttonGuid": "afd2dd29-db2e-5bfc-87f6-e4c708e39180",
+      "source": "RSTool.rui",
+      "iconGuid": "bd9d6b06-0a7b-5b13-a455-d58a767ddae6",
+      "macroGuid": "ea2a46df-4fd5-54d6-b452-f6144060fbbb",
+      "buttonGuid": "8f4185fc-d2a2-59a6-8550-62d2efc79a98",
       "buttonCommand": "rsKeyCast",
-      "light": "/command-icons/light/5116ce49-1a8f-564e-9f29-0b636a9dd0fc.png"
+      "light": "/command-icons/light/bd9d6b06-0a7b-5b13-a455-d58a767ddae6.png",
+      "dark": "/command-icons/dark/bd9d6b06-0a7b-5b13-a455-d58a767ddae6.png"
     },
     "rsKeyCastSettings": {
-      "kind": "unavailable"
+      "kind": "toolbar",
+      "source": "RSTool.rui",
+      "iconGuid": "bd9d6b06-0a7b-5b13-a455-d58a767ddae6",
+      "macroGuid": "9364c435-ed09-54eb-9d6c-ef65115c2c1d",
+      "buttonGuid": "7d19eec4-71c0-50dc-bd0f-9dc468b62dd4",
+      "buttonCommand": "rsKeyCastSettings",
+      "light": "/command-icons/light/bd9d6b06-0a7b-5b13-a455-d58a767ddae6.png",
+      "dark": "/command-icons/dark/bd9d6b06-0a7b-5b13-a455-d58a767ddae6.png"
     },
     "rsScreenGif": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "7ac0bbfb-4844-5e5a-8f3a-fff0d3e78cb3",
-      "macroGuid": "69664fbd-6ef3-5e76-8912-2d173ec9d5b2",
-      "buttonGuid": "50d16e8b-5aec-5a54-b936-0d8377f2478a",
+      "source": "RSTool.rui",
+      "iconGuid": "b5e8fc86-41a7-5c46-88b0-733fb017441a",
+      "macroGuid": "11f260e4-cea1-54d4-9365-be071fed6e04",
+      "buttonGuid": "bc39f878-7bda-5c0b-adf7-4d0e6e1ad635",
       "buttonCommand": "rsScreenGif",
-      "light": "/command-icons/light/7ac0bbfb-4844-5e5a-8f3a-fff0d3e78cb3.png"
+      "light": "/command-icons/light/b5e8fc86-41a7-5c46-88b0-733fb017441a.png",
+      "dark": "/command-icons/dark/b5e8fc86-41a7-5c46-88b0-733fb017441a.png"
     },
     "rsBrowser": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "b591df04-9e5d-44b3-9840-4000b8da4fc0",
-      "macroGuid": "8748c869-fcad-483d-9e36-46c904492ae4",
-      "buttonGuid": "36d50602-a566-4187-9460-b07255bc93cd",
+      "source": "RSTool.rui",
+      "iconGuid": "afeb8a72-649e-5899-8d48-cbdd42019a34",
+      "macroGuid": "951f68a7-f67c-5a80-874e-f7f26f41938a",
+      "buttonGuid": "65f375d1-c38b-550c-afb3-faf97ad34532",
       "buttonCommand": "rsBrowser",
-      "light": "/command-icons/light/b591df04-9e5d-44b3-9840-4000b8da4fc0.png"
+      "light": "/command-icons/light/afeb8a72-649e-5899-8d48-cbdd42019a34.png",
+      "dark": "/command-icons/dark/afeb8a72-649e-5899-8d48-cbdd42019a34.png"
     },
     "rsLSystemTree": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "d6efca4b-5c89-5edc-ae65-d2e7336d3750",
-      "macroGuid": "36992955-5a74-5935-9527-f02b0ac6e5cf",
-      "buttonGuid": "988178d2-1fee-50cb-94ac-1020060733a9",
+      "source": "RSTool.rui",
+      "iconGuid": "1190a0d8-1e10-59fd-b2de-abc3a29c979a",
+      "macroGuid": "3a10d6e6-c719-5587-ad4c-0444423e4cfc",
+      "buttonGuid": "6e14739a-1fb9-5d93-b6a5-9359c50caf7e",
       "buttonCommand": "rsLSystemTree",
-      "light": "/command-icons/light/d6efca4b-5c89-5edc-ae65-d2e7336d3750.png"
+      "light": "/command-icons/light/1190a0d8-1e10-59fd-b2de-abc3a29c979a.png",
+      "dark": "/command-icons/dark/1190a0d8-1e10-59fd-b2de-abc3a29c979a.png"
     },
     "rsIvy": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "cb4b4085-dec7-59ca-8d97-8d8665d7f88e",
-      "macroGuid": "47d5af1d-82a9-5585-8c8c-ea2f6290074d",
-      "buttonGuid": "b3e6be0a-9e4f-56c8-9695-86d91bf9d654",
+      "source": "RSTool.rui",
+      "iconGuid": "d9f762a6-226a-5961-a78b-59795a6f6a1f",
+      "macroGuid": "c7eb62e6-23d7-53be-a625-52c9b2f5c63c",
+      "buttonGuid": "8ed7a790-8cf0-5897-93df-7079944dbf15",
       "buttonCommand": "rsIvy",
-      "light": "/command-icons/light/cb4b4085-dec7-59ca-8d97-8d8665d7f88e.png"
+      "light": "/command-icons/light/d9f762a6-226a-5961-a78b-59795a6f6a1f.png",
+      "dark": "/command-icons/dark/d9f762a6-226a-5961-a78b-59795a6f6a1f.png"
     },
     "rsRoadLine": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "70f6963c-e0cb-432a-bcfa-99bd37c2d5b7",
-      "macroGuid": "4bce233a-4a72-44d1-b6fc-b2e670c135a8",
-      "buttonGuid": "f636733c-be8d-42f9-94f9-1a8b556b73ad",
+      "source": "RSTool.rui",
+      "iconGuid": "8729982c-0d86-54ef-90ff-f629d3a9c477",
+      "macroGuid": "9aec6d0b-154b-571a-821f-9dcd9c0b19b9",
+      "buttonGuid": "1fcaf74a-5695-540c-a61c-3446bdbba883",
       "buttonCommand": "rsRoadLine",
-      "light": "/command-icons/light/70f6963c-e0cb-432a-bcfa-99bd37c2d5b7.png"
+      "light": "/command-icons/light/8729982c-0d86-54ef-90ff-f629d3a9c477.png",
+      "dark": "/command-icons/dark/8729982c-0d86-54ef-90ff-f629d3a9c477.png"
     },
     "rsRoadGenerator": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "f8819c90-e6a3-4894-86dd-f2ab3b828dbb",
-      "macroGuid": "33b5c859-dcd3-4ea9-b6f6-7a5704d531b9",
-      "buttonGuid": "a1eefb96-0f7d-402b-8c1c-4ead13c86390",
+      "source": "RSTool.rui",
+      "iconGuid": "9e6948cf-842c-5c6f-86d9-1fadd899a93b",
+      "macroGuid": "11c80bdb-ae12-5819-8a49-a9135a99ce52",
+      "buttonGuid": "d1fe3268-3b74-5d88-b1f9-91ba62225029",
       "buttonCommand": "rsRoadGenerator",
-      "light": "/command-icons/light/f8819c90-e6a3-4894-86dd-f2ab3b828dbb.png"
+      "light": "/command-icons/light/9e6948cf-842c-5c6f-86d9-1fadd899a93b.png",
+      "dark": "/command-icons/dark/9e6948cf-842c-5c6f-86d9-1fadd899a93b.png"
     },
     "rsAutoParking": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "9205bdf5-a187-47cc-8b65-b3e702b0160f",
-      "macroGuid": "506a543e-007c-4ba7-99ee-9773a2e5dd99",
-      "buttonGuid": "8d2a932a-6426-4b82-9d71-bcaebd2c56bc",
+      "source": "RSTool.rui",
+      "iconGuid": "e2eb2826-28c3-562f-b506-4ab8b1136de8",
+      "macroGuid": "f4d8a8dc-d92d-5c77-b711-2c491dc595b2",
+      "buttonGuid": "0ccc768b-a15d-5290-bc9d-80f35c42c836",
       "buttonCommand": "rsAutoParking",
-      "light": "/command-icons/light/9205bdf5-a187-47cc-8b65-b3e702b0160f.png"
+      "light": "/command-icons/light/e2eb2826-28c3-562f-b506-4ab8b1136de8.png",
+      "dark": "/command-icons/dark/e2eb2826-28c3-562f-b506-4ab8b1136de8.png"
     },
     "rsStairBySteps": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "02ea1fbc-42e5-4170-8db5-b1c696ebf3dd",
-      "macroGuid": "41da02bb-d244-4f43-a2b4-09420f742173",
-      "buttonGuid": "54448ed6-2826-4baa-8b0a-1242834c404b",
+      "source": "RSTool.rui",
+      "iconGuid": "4e7e5cd7-0486-5b50-ba2c-79bfb9335edf",
+      "macroGuid": "4c479d42-ecdb-5073-b8f3-94fda65e85a5",
+      "buttonGuid": "ae92218f-6b27-50d2-b5db-1d0d41e3a351",
       "buttonCommand": "rsStairBySteps",
-      "light": "/command-icons/light/02ea1fbc-42e5-4170-8db5-b1c696ebf3dd.png"
+      "light": "/command-icons/light/4e7e5cd7-0486-5b50-ba2c-79bfb9335edf.png",
+      "dark": "/command-icons/dark/4e7e5cd7-0486-5b50-ba2c-79bfb9335edf.png"
     },
     "rsDoubleFlightStairs": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "693db912-4a2b-4e95-b462-8ca2e3a6139d",
-      "macroGuid": "ea4709ad-0284-4d56-93a2-4e5f31115849",
-      "buttonGuid": "a1fe40fb-cfc9-4cbc-ba3c-6310a419b87f",
+      "source": "RSTool.rui",
+      "iconGuid": "63bb5137-e912-541e-a874-2ad435f4f59b",
+      "macroGuid": "6151da05-1614-59ed-bc08-9a66a4922db9",
+      "buttonGuid": "c67c92e7-e09b-5a5c-88e2-eec378676166",
       "buttonCommand": "rsDoubleFlightStairs",
-      "light": "/command-icons/light/693db912-4a2b-4e95-b462-8ca2e3a6139d.png"
+      "light": "/command-icons/light/63bb5137-e912-541e-a874-2ad435f4f59b.png",
+      "dark": "/command-icons/dark/63bb5137-e912-541e-a874-2ad435f4f59b.png"
     },
     "rsMultiFlightStairs": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "7d2d8f5c-70bc-5755-96d0-36499124f174",
-      "macroGuid": "0c850d6f-878d-51a1-89da-6c7989b16334",
-      "buttonGuid": "4f454b93-2580-5e91-819f-4587c14f8624",
+      "source": "RSTool.rui",
+      "iconGuid": "b264f22e-d4e0-5ceb-a932-6b7c156012bf",
+      "macroGuid": "0d73ba62-19e7-538d-9128-afacfe5ccbd6",
+      "buttonGuid": "3b3a7188-ee1a-5b2b-ba55-e511b50eec28",
       "buttonCommand": "rsMultiFlightStairs",
-      "light": "/command-icons/light/7d2d8f5c-70bc-5755-96d0-36499124f174.png"
+      "light": "/command-icons/light/b264f22e-d4e0-5ceb-a932-6b7c156012bf.png",
+      "dark": "/command-icons/dark/b264f22e-d4e0-5ceb-a932-6b7c156012bf.png"
     },
     "rsSpiralStair": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "3287afbe-aa1c-48ab-bd33-70fc7b6664ce",
-      "macroGuid": "51899606-9ce6-448b-8c0e-ac773504548c",
-      "buttonGuid": "0528f5e5-7322-4bbe-b466-b412efd72f46",
+      "source": "RSTool.rui",
+      "iconGuid": "ffc81f50-6de4-5034-9ea8-aaf47eee6d65",
+      "macroGuid": "71b60c3d-9e4a-5292-8db7-37c127210b24",
+      "buttonGuid": "72472623-c8da-5a66-b7f5-fcfcf64e4093",
       "buttonCommand": "rsSpiralStair",
-      "light": "/command-icons/light/3287afbe-aa1c-48ab-bd33-70fc7b6664ce.png"
+      "light": "/command-icons/light/ffc81f50-6de4-5034-9ea8-aaf47eee6d65.png",
+      "dark": "/command-icons/dark/ffc81f50-6de4-5034-9ea8-aaf47eee6d65.png"
     },
     "rsEscalator": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "6e0cf860-11c3-4a0d-ba89-610d10484941",
-      "macroGuid": "890bc829-296e-4dc0-8b58-6f664702db74",
-      "buttonGuid": "c1076348-014c-4b04-90f6-d42fa872190e",
+      "source": "RSTool.rui",
+      "iconGuid": "61110f96-bba2-593b-a676-74f10b97a70f",
+      "macroGuid": "6f20bc62-e87e-5fff-a757-b3e4ed8e3da2",
+      "buttonGuid": "b0509fa1-9bcd-5711-9497-5e35eec6fee6",
       "buttonCommand": "rsEscalator",
-      "light": "/command-icons/light/6e0cf860-11c3-4a0d-ba89-610d10484941.png"
+      "light": "/command-icons/light/61110f96-bba2-593b-a676-74f10b97a70f.png",
+      "dark": "/command-icons/dark/61110f96-bba2-593b-a676-74f10b97a70f.png"
     },
     "rsZigZagRamp": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "50c520bd-1aa2-437b-9cca-bbb04f0107b9",
-      "macroGuid": "6543c221-1253-4920-be15-43d1c6c86bca",
-      "buttonGuid": "4c1ce923-173c-4445-afb3-cf3abb31f1e9",
+      "source": "RSTool.rui",
+      "iconGuid": "b3b0ecc8-1e70-5b13-8b1c-06c350eb8632",
+      "macroGuid": "f0766644-7570-54e9-97fd-65c310a50a28",
+      "buttonGuid": "fd94c3ab-4c9e-55fa-82c8-fb0b857bac4a",
       "buttonCommand": "rsZigZagRamp",
-      "light": "/command-icons/light/50c520bd-1aa2-437b-9cca-bbb04f0107b9.png"
+      "light": "/command-icons/light/b3b0ecc8-1e70-5b13-8b1c-06c350eb8632.png",
+      "dark": "/command-icons/dark/b3b0ecc8-1e70-5b13-8b1c-06c350eb8632.png"
     },
     "rsFadingStair": {
       "kind": "toolbar-right",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "a6ce9911-4b49-4eb2-bc72-97a2652181ca",
-      "macroGuid": "9d947aae-6c2a-46cc-aa7a-25f81fd17297",
-      "buttonGuid": "49f1d62e-9e73-4aef-abd9-9efe3de4915e",
+      "source": "RSTool.rui",
+      "iconGuid": "a1cce2f9-310f-53b8-9a13-4a5b823f4b36",
+      "macroGuid": "d1198bb6-38c0-5255-a5f0-19820f0a337a",
+      "buttonGuid": "bc8abd77-49aa-5df3-bb13-ab9254a61b7c",
       "buttonCommand": "rsFadingStairVertical",
-      "light": "/command-icons/light/a6ce9911-4b49-4eb2-bc72-97a2652181ca.png"
+      "light": "/command-icons/light/a1cce2f9-310f-53b8-9a13-4a5b823f4b36.png",
+      "dark": "/command-icons/dark/a1cce2f9-310f-53b8-9a13-4a5b823f4b36.png"
     },
     "rsFadingStairVertical": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "a6ce9911-4b49-4eb2-bc72-97a2652181ca",
-      "macroGuid": "92d59e6d-4aa3-4fc5-8c84-5dcf8a8bcf5f",
-      "buttonGuid": "49f1d62e-9e73-4aef-abd9-9efe3de4915e",
+      "source": "RSTool.rui",
+      "iconGuid": "a1cce2f9-310f-53b8-9a13-4a5b823f4b36",
+      "macroGuid": "a01903e9-eab8-56cd-8d01-ed8675ea1ddf",
+      "buttonGuid": "bc8abd77-49aa-5df3-bb13-ab9254a61b7c",
       "buttonCommand": "rsFadingStairVertical",
-      "light": "/command-icons/light/a6ce9911-4b49-4eb2-bc72-97a2652181ca.png"
+      "light": "/command-icons/light/a1cce2f9-310f-53b8-9a13-4a5b823f4b36.png",
+      "dark": "/command-icons/dark/a1cce2f9-310f-53b8-9a13-4a5b823f4b36.png"
     },
     "rsDoor": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "79bb62c2-0b09-4cac-bd18-52152652f169",
-      "macroGuid": "6d1444a5-817d-4cc3-a861-ab425c2299a3",
-      "buttonGuid": "87d4b9ef-38d3-4b9a-987b-5a796ccec512",
+      "source": "RSTool.rui",
+      "iconGuid": "f3c2c7de-4af3-5caf-966a-20ea0656ec1d",
+      "macroGuid": "748a7583-7873-59c6-a99e-cbbae2608b13",
+      "buttonGuid": "08816288-ac60-51cb-bea0-0a327e69a907",
       "buttonCommand": "rsDoor",
-      "light": "/command-icons/light/79bb62c2-0b09-4cac-bd18-52152652f169.png"
+      "light": "/command-icons/light/f3c2c7de-4af3-5caf-966a-20ea0656ec1d.png",
+      "dark": "/command-icons/dark/f3c2c7de-4af3-5caf-966a-20ea0656ec1d.png"
     },
     "rsWindow": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "46697e9c-1125-42c5-8b9d-2a6ce28964a5",
-      "macroGuid": "df808aea-7caf-427c-8d69-5b3eb98d0458",
-      "buttonGuid": "a03edce4-6d6e-4c66-a72d-ea02badcf0dc",
+      "source": "RSTool.rui",
+      "iconGuid": "8448251c-5c80-5064-b38a-9c6f7afbd64e",
+      "macroGuid": "ba418ed0-5af4-5dc1-a120-5e43ac5ecd64",
+      "buttonGuid": "ae23178e-b9d5-5732-94d2-518108ae9b27",
       "buttonCommand": "rsWindow",
-      "light": "/command-icons/light/46697e9c-1125-42c5-8b9d-2a6ce28964a5.png"
+      "light": "/command-icons/light/8448251c-5c80-5064-b38a-9c6f7afbd64e.png",
+      "dark": "/command-icons/dark/8448251c-5c80-5064-b38a-9c6f7afbd64e.png"
     },
     "rsRailing": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "174af50d-b91f-4808-9f67-c92a004928b4",
-      "macroGuid": "2e962910-9d9a-4b45-b311-2eae1bda9b09",
-      "buttonGuid": "b02d30af-88ff-407b-ad63-ffd198ebcea2",
+      "source": "RSTool.rui",
+      "iconGuid": "0d41c225-36fe-5268-8d87-3e72afc8bebe",
+      "macroGuid": "b16089c9-7c20-501e-b095-a8638a3e07f2",
+      "buttonGuid": "38a021c7-6667-5b7d-8e6b-7fa993d587b2",
       "buttonCommand": "rsRailing",
-      "light": "/command-icons/light/174af50d-b91f-4808-9f67-c92a004928b4.png"
+      "light": "/command-icons/light/0d41c225-36fe-5268-8d87-3e72afc8bebe.png",
+      "dark": "/command-icons/dark/0d41c225-36fe-5268-8d87-3e72afc8bebe.png"
     },
     "rsSpaceTruss": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "69c37c77-fed1-411a-a3b6-5db338c9918a",
-      "macroGuid": "f56381b9-7dfd-416f-a3b8-e14bf0ee33a1",
-      "buttonGuid": "fe5f32bb-9d5d-486e-b901-a52789fffdb7",
+      "source": "RSTool.rui",
+      "iconGuid": "56c85556-c5ac-5f07-9ee7-85f3c15904be",
+      "macroGuid": "e27ace3e-7935-5e08-8716-a46e1cfb658e",
+      "buttonGuid": "1497e012-6ce0-5147-998d-c61656173ea1",
       "buttonCommand": "rsSpaceTruss",
-      "light": "/command-icons/light/69c37c77-fed1-411a-a3b6-5db338c9918a.png",
-      "dark": "/command-icons/dark/69c37c77-fed1-411a-a3b6-5db338c9918a.png"
+      "light": "/command-icons/light/56c85556-c5ac-5f07-9ee7-85f3c15904be.png",
+      "dark": "/command-icons/dark/56c85556-c5ac-5f07-9ee7-85f3c15904be.png"
     },
     "rsCurtain": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "a50ee3ce-db38-441f-b765-32522de8778f",
-      "macroGuid": "b09b3679-377d-4cb0-8313-996bea7897e9",
-      "buttonGuid": "589c6674-7594-41bc-9a0d-9383debf1a5f",
+      "source": "RSTool.rui",
+      "iconGuid": "9e93cb0b-0233-5f2c-a082-f16654cc9fb9",
+      "macroGuid": "3c330f63-2c67-5938-9c77-137bdec843df",
+      "buttonGuid": "bde09d0d-be8d-597e-9fca-d3ff54b6528a",
       "buttonCommand": "rsCurtain",
-      "light": "/command-icons/light/a50ee3ce-db38-441f-b765-32522de8778f.png"
+      "light": "/command-icons/light/9e93cb0b-0233-5f2c-a082-f16654cc9fb9.png",
+      "dark": "/command-icons/dark/9e93cb0b-0233-5f2c-a082-f16654cc9fb9.png"
     },
     "rsCurtainPlus": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "fd5ab500-217d-5e5b-a0ee-60047a65cbf9",
-      "macroGuid": "119676f0-86d9-51e0-b183-4eccae07a757",
-      "buttonGuid": "d7cd1f84-1631-56a1-b60d-335f2902c7fa",
+      "source": "RSTool.rui",
+      "iconGuid": "d22d423c-fd3b-52db-afde-8d523b8c674d",
+      "macroGuid": "654d68d0-77b5-5a1e-87cb-3b518c26563c",
+      "buttonGuid": "27ea4f03-90d3-5c55-9c57-3e4b862ed73d",
       "buttonCommand": "rsCurtainPlus",
-      "light": "/command-icons/light/fd5ab500-217d-5e5b-a0ee-60047a65cbf9.png"
+      "light": "/command-icons/light/d22d423c-fd3b-52db-afde-8d523b8c674d.png",
+      "dark": "/command-icons/dark/d22d423c-fd3b-52db-afde-8d523b8c674d.png"
     },
     "rsOldTownRoof": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "541e1634-cdd2-4866-be66-965e61123e7d",
-      "macroGuid": "a01a54bc-19e9-4c70-a76c-4e70b833f840",
-      "buttonGuid": "34daaf79-bff8-4442-9cac-09282807dfee",
+      "source": "RSTool.rui",
+      "iconGuid": "d4393881-7043-534e-99d5-9cc65a6159b0",
+      "macroGuid": "37673f5c-2b8f-5463-adc2-888a10af965b",
+      "buttonGuid": "b6b89029-9264-5b50-b3fe-6581c2e526f6",
       "buttonCommand": "rsOldTownRoof",
-      "light": "/command-icons/light/541e1634-cdd2-4866-be66-965e61123e7d.png"
+      "light": "/command-icons/light/d4393881-7043-534e-99d5-9cc65a6159b0.png",
+      "dark": "/command-icons/dark/d4393881-7043-534e-99d5-9cc65a6159b0.png"
     },
     "rsRoofTile": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "673e42a0-aa57-4aa1-98c3-04ddc27f6251",
-      "macroGuid": "f6208f9f-d407-4815-af25-f9b620f97a52",
-      "buttonGuid": "6a4148f1-bc9a-4584-9c96-9c8ff326a0e9",
+      "source": "RSTool.rui",
+      "iconGuid": "3a486f1f-d237-5d34-a5c5-8f0b18189a97",
+      "macroGuid": "6a775d1a-efcb-5fd6-ace4-f211914d741b",
+      "buttonGuid": "c2804adb-637a-5695-bda9-ef48e67a67d4",
       "buttonCommand": "rsRoofTile",
-      "light": "/command-icons/light/673e42a0-aa57-4aa1-98c3-04ddc27f6251.png"
+      "light": "/command-icons/light/3a486f1f-d237-5d34-a5c5-8f0b18189a97.png",
+      "dark": "/command-icons/dark/3a486f1f-d237-5d34-a5c5-8f0b18189a97.png"
     },
     "rsSlab": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "8ac423d0-d56d-5409-ad5b-e4a7bc0148c4",
-      "macroGuid": "1087060f-0e3a-5880-b214-70d79e735a71",
-      "buttonGuid": "ac973e48-3916-5be3-bb63-2040c1e207f8",
+      "source": "RSTool.rui",
+      "iconGuid": "749dba04-a410-5386-a6cc-bf3365c403cf",
+      "macroGuid": "0d6df3ff-5ce6-53b5-a17f-ebd3dbcb7f7d",
+      "buttonGuid": "0c3a4bac-7c61-5416-a492-8dd3b226fcdc",
       "buttonCommand": "rsSlab",
-      "light": "/command-icons/light/8ac423d0-d56d-5409-ad5b-e4a7bc0148c4.png"
+      "light": "/command-icons/light/749dba04-a410-5386-a6cc-bf3365c403cf.png",
+      "dark": "/command-icons/dark/749dba04-a410-5386-a6cc-bf3365c403cf.png"
     },
     "rsSmartPipe": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "5a1f4e13-77f8-5a5a-8728-08ff359e34a6",
-      "macroGuid": "9b21cc57-6afe-5030-8f49-d62b581d3401",
-      "buttonGuid": "b84c074c-6075-52b5-a19b-0e4ae467bbbd",
+      "source": "RSTool.rui",
+      "iconGuid": "c4e5d093-724b-5963-be79-6c2c83ba6cf0",
+      "macroGuid": "72d9ebc9-61ac-59ee-88bc-91bec5500ce7",
+      "buttonGuid": "76d05cde-97ef-5a7c-84da-edd9cdcb5ffe",
       "buttonCommand": "rsSmartPipe",
-      "light": "/command-icons/light/5a1f4e13-77f8-5a5a-8728-08ff359e34a6.png"
+      "light": "/command-icons/light/c4e5d093-724b-5963-be79-6c2c83ba6cf0.png",
+      "dark": "/command-icons/dark/c4e5d093-724b-5963-be79-6c2c83ba6cf0.png"
     },
     "rsPipeSchedule": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "7ed5b0ff-64d9-50f7-bab0-26a0a11c909c",
-      "macroGuid": "ff86e424-4730-591c-8cd0-f18f1ccda725",
-      "buttonGuid": "c7555b09-27b6-5ab9-a934-6f95b3967654",
+      "source": "RSTool.rui",
+      "iconGuid": "de90d24e-20af-5f65-b095-3675bd9c1444",
+      "macroGuid": "210ea981-f948-5f00-8366-55fc532537c0",
+      "buttonGuid": "96f65c46-cc1a-5163-8df0-b94d39357e09",
       "buttonCommand": "rsPipeSchedule",
-      "light": "/command-icons/light/7ed5b0ff-64d9-50f7-bab0-26a0a11c909c.png"
+      "light": "/command-icons/light/de90d24e-20af-5f65-b095-3675bd9c1444.png",
+      "dark": "/command-icons/dark/de90d24e-20af-5f65-b095-3675bd9c1444.png"
     },
     "rsDiscreteCity": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "4ad82529-de9f-584b-a57a-6707c96e66c2",
-      "macroGuid": "4d7ecbde-3ebe-5b0d-846e-55bb286bf53d",
-      "buttonGuid": "7581766d-e247-5696-9cd0-0b2199796805",
+      "source": "RSTool.rui",
+      "iconGuid": "2b5d29f1-7332-5e49-880c-91b6ecd270ce",
+      "macroGuid": "b78cbaa1-b783-5da6-963f-a58addbe849a",
+      "buttonGuid": "85831619-2573-5fa9-b9f1-23f185c801bc",
       "buttonCommand": "rsDiscreteCity",
-      "light": "/command-icons/light/4ad82529-de9f-584b-a57a-6707c96e66c2.png"
+      "light": "/command-icons/light/2b5d29f1-7332-5e49-880c-91b6ecd270ce.png",
+      "dark": "/command-icons/dark/2b5d29f1-7332-5e49-880c-91b6ecd270ce.png"
     },
     "rsWall": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "69a10f7f-e037-437d-889f-55a053c0c4f7",
-      "macroGuid": "55f423cd-f986-40e5-b1c8-f915920d7fcf",
-      "buttonGuid": "a23fb95b-daf3-4d8a-b93c-64ab6fdabade",
+      "source": "RSTool.rui",
+      "iconGuid": "5bdc5dd8-c655-5558-81ce-4212e1c6f673",
+      "macroGuid": "ffdbf0db-da68-5a60-87c6-aefbfdbc9877",
+      "buttonGuid": "fc5aadcb-cb69-5e9e-8fe1-3495ab1952dc",
       "buttonCommand": "rsWall",
-      "light": "/command-icons/light/69a10f7f-e037-437d-889f-55a053c0c4f7.png"
+      "light": "/command-icons/light/5bdc5dd8-c655-5558-81ce-4212e1c6f673.png",
+      "dark": "/command-icons/dark/5bdc5dd8-c655-5558-81ce-4212e1c6f673.png"
     },
     "rsWallRemoveHole": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "f24464db-3b24-46cd-930a-cc2bee90dc68",
-      "macroGuid": "c5bac4b4-a53d-4ae6-9a22-a2eed75e9882",
-      "buttonGuid": "606c5508-56a3-44f6-9750-36836ac4826a",
+      "source": "RSTool.rui",
+      "iconGuid": "2872ff54-efe1-54ca-a913-24676dd290c9",
+      "macroGuid": "c8274d89-2c18-5029-a0e7-2508f97eaaeb",
+      "buttonGuid": "bcd7e8dc-3dbc-5e8d-9f7a-02a60179b6c4",
       "buttonCommand": "rsWallRemoveHole",
-      "light": "/command-icons/light/f24464db-3b24-46cd-930a-cc2bee90dc68.png"
+      "light": "/command-icons/light/2872ff54-efe1-54ca-a913-24676dd290c9.png",
+      "dark": "/command-icons/dark/2872ff54-efe1-54ca-a913-24676dd290c9.png"
     },
     "rsWallJoin": {
       "kind": "toolbar",
@@ -462,21 +516,23 @@
     },
     "rsFilletWall": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "05ced16b-d2f6-4569-a356-53ecfe1161eb",
-      "macroGuid": "b53a9e9c-6ee0-4bf7-ab05-e4ece56e0572",
-      "buttonGuid": "df1807f3-cc18-4724-930a-96933026cdb4",
+      "source": "RSTool.rui",
+      "iconGuid": "235b87f0-d3c0-5824-b8e6-cfdfa13cf26d",
+      "macroGuid": "660e373d-0438-54e7-89d1-b63551356f6f",
+      "buttonGuid": "4f30911a-5899-5cab-9acc-91dae808829e",
       "buttonCommand": "rsFilletWall",
-      "light": "/command-icons/light/05ced16b-d2f6-4569-a356-53ecfe1161eb.png"
+      "light": "/command-icons/light/235b87f0-d3c0-5824-b8e6-cfdfa13cf26d.png",
+      "dark": "/command-icons/dark/235b87f0-d3c0-5824-b8e6-cfdfa13cf26d.png"
     },
     "rsWallExtend": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "dad8bbd4-aef0-4c7d-bb49-7c648275e2d5",
-      "macroGuid": "7130cf6d-c630-4912-b0fa-b7f4a81890ef",
-      "buttonGuid": "79cfbdd7-081e-4cd6-b1ae-b4b403bb717d",
+      "source": "RSTool.rui",
+      "iconGuid": "f932fdaf-631b-543f-a6df-30a5680999b6",
+      "macroGuid": "835f7b60-ef14-5aca-b34b-93d6bfbb39e1",
+      "buttonGuid": "5e6283a9-47b7-569d-97aa-f86d952afe2e",
       "buttonCommand": "rsWallExtend",
-      "light": "/command-icons/light/dad8bbd4-aef0-4c7d-bb49-7c648275e2d5.png"
+      "light": "/command-icons/light/f932fdaf-631b-543f-a6df-30a5680999b6.png",
+      "dark": "/command-icons/dark/f932fdaf-631b-543f-a6df-30a5680999b6.png"
     },
     "rsConvertWallToNormalBrep": {
       "kind": "toolbar",
@@ -489,22 +545,16 @@
     },
     "rsArchiGrid": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "115ccf87-dff8-4a36-bbc8-4a06df8dca60",
-      "macroGuid": "c82fa38b-c6bd-4af2-8da7-79a8aba55a3e",
-      "buttonGuid": "6c038d6c-2c88-421d-8350-7a586be38239",
+      "source": "RSTool.rui",
+      "iconGuid": "64d3e883-2e8d-5ccf-b971-50d16d557954",
+      "macroGuid": "ebe7b1a9-0887-5505-8a6a-bfbf70e92c1e",
+      "buttonGuid": "ef1e9111-2225-51d9-b699-8f3925589f64",
       "buttonCommand": "rsArchiGrid",
-      "light": "/command-icons/light/115ccf87-dff8-4a36-bbc8-4a06df8dca60.png",
-      "dark": "/command-icons/dark/115ccf87-dff8-4a36-bbc8-4a06df8dca60.png"
+      "light": "/command-icons/light/64d3e883-2e8d-5ccf-b971-50d16d557954.png",
+      "dark": "/command-icons/dark/64d3e883-2e8d-5ccf-b971-50d16d557954.png"
     },
     "rsWall2D": {
-      "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "c9c049b6-e51b-430c-ae72-d3ff435f3c14",
-      "macroGuid": "38d28109-5905-490e-a30b-e6f818e5ee22",
-      "buttonGuid": "31bb4c3e-9ad3-4cce-afac-c51d2dc551db",
-      "buttonCommand": "rsWall2D",
-      "light": "/command-icons/light/c9c049b6-e51b-430c-ae72-d3ff435f3c14.png"
+      "kind": "unavailable"
     },
     "rsDeleteWall2D": {
       "kind": "toolbar",
@@ -633,31 +683,27 @@
       "light": "/command-icons/light/0be5eb04-840c-557a-8921-9dc350c217bd.png"
     },
     "rsCurtainWall2D": {
-      "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "b57a57b5-ac33-48a7-ae67-78666a0cfbcf",
-      "macroGuid": "185a02e3-90d4-46b6-a169-34e870fc3a63",
-      "buttonGuid": "bb3ff232-1833-407a-a5aa-295d7709c7a9",
-      "buttonCommand": "rsCurtainWall2D",
-      "light": "/command-icons/light/b57a57b5-ac33-48a7-ae67-78666a0cfbcf.png"
+      "kind": "unavailable"
     },
     "rsElevation2D": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "5ecabb50-05aa-5e54-a75f-b484d79f6e4f",
-      "macroGuid": "2622ff33-c672-5887-9cc4-711c0ad50152",
-      "buttonGuid": "b9c1f85a-8a3f-5295-8c2e-db0fe82f4574",
+      "source": "RSTool.rui",
+      "iconGuid": "3f7505de-4da8-57e4-9f85-26b863fac3dc",
+      "macroGuid": "7178ac17-15c7-5412-bac5-1073d66ef483",
+      "buttonGuid": "15892fe1-f578-537e-8362-27be4974354e",
       "buttonCommand": "rsElevation2D",
-      "light": "/command-icons/light/5ecabb50-05aa-5e54-a75f-b484d79f6e4f.png"
+      "light": "/command-icons/light/3f7505de-4da8-57e4-9f85-26b863fac3dc.png",
+      "dark": "/command-icons/dark/3f7505de-4da8-57e4-9f85-26b863fac3dc.png"
     },
     "rsBuildingArea2D": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "8df5803a-0ca4-5601-82ab-decd6579cd36",
-      "macroGuid": "d34aa49c-3003-5f85-9e6e-d3adc156271d",
-      "buttonGuid": "00ea8655-efa1-5852-b1a8-2a3a8904246d",
+      "source": "RSTool.rui",
+      "iconGuid": "f416aa75-c218-5728-8db0-0abdaa1f1522",
+      "macroGuid": "d5a27964-fb80-5c0e-9f72-3b873f0872a0",
+      "buttonGuid": "f534c8d9-705b-56c7-b291-2db6f755e6d7",
       "buttonCommand": "rsBuildingArea2D",
-      "light": "/command-icons/light/8df5803a-0ca4-5601-82ab-decd6579cd36.png"
+      "light": "/command-icons/light/f416aa75-c218-5728-8db0-0abdaa1f1522.png",
+      "dark": "/command-icons/dark/f416aa75-c218-5728-8db0-0abdaa1f1522.png"
     },
     "rsConvertA2DToNormalCurves": {
       "kind": "toolbar",
@@ -670,1400 +716,1571 @@
     },
     "rsElevationPanel": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "0f18c29a-be47-501c-9c11-0519b286d1b7",
-      "macroGuid": "7ceb59c7-63d0-50c4-8e97-f7379e0e38a9",
-      "buttonGuid": "da6180aa-b381-5a63-ada0-93e6d6adb783",
+      "source": "RSTool.rui",
+      "iconGuid": "1f62fe36-5c5e-51eb-bb22-1ef48e8a09cc",
+      "macroGuid": "9a7800ac-f290-56ad-b18a-b75f29adf23d",
+      "buttonGuid": "a67395dc-71dc-5757-be3b-4e8964a072b3",
       "buttonCommand": "rsElevationPanel",
-      "light": "/command-icons/light/0f18c29a-be47-501c-9c11-0519b286d1b7.png"
+      "light": "/command-icons/light/1f62fe36-5c5e-51eb-bb22-1ef48e8a09cc.png",
+      "dark": "/command-icons/dark/1f62fe36-5c5e-51eb-bb22-1ef48e8a09cc.png"
     },
     "rsEarth": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "0804d532-d707-42f0-a2e8-a876c653d12f",
-      "macroGuid": "4c74c357-1b9e-46df-9868-0b70ebbee4a6",
-      "buttonGuid": "9b27cf3e-9e61-4a19-b80b-562e062acf42",
+      "source": "RSTool.rui",
+      "iconGuid": "f4eab1f0-073b-5baf-9472-90c7e8549097",
+      "macroGuid": "d4d19faf-aef1-591c-95ca-a9e879b48966",
+      "buttonGuid": "f26bb140-b167-5531-87aa-647ac3555e16",
       "buttonCommand": "rsEarth",
-      "light": "/command-icons/light/0804d532-d707-42f0-a2e8-a876c653d12f.png"
+      "light": "/command-icons/light/f4eab1f0-073b-5baf-9472-90c7e8549097.png",
+      "dark": "/command-icons/dark/f4eab1f0-073b-5baf-9472-90c7e8549097.png"
     },
     "rsEarthOld": {
       "kind": "unavailable"
     },
     "rsTerrainEdit": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "1a7fb3df-09c7-4bf4-9c4e-fbfc8887f09e",
-      "macroGuid": "ead618aa-34a2-4115-bdde-b3d6b8e78f44",
-      "buttonGuid": "1c03175f-68a4-4bb1-903d-3de81da86996",
+      "source": "RSTool.rui",
+      "iconGuid": "c79850b4-c259-530a-8bf1-57d099ebaf4c",
+      "macroGuid": "86e6a883-58a0-5954-9404-30d0879438c1",
+      "buttonGuid": "548dab34-31da-55e8-911b-0af4a66b08fd",
       "buttonCommand": "rsTerrainEdit",
-      "light": "/command-icons/light/1a7fb3df-09c7-4bf4-9c4e-fbfc8887f09e.png"
+      "light": "/command-icons/light/c79850b4-c259-530a-8bf1-57d099ebaf4c.png",
+      "dark": "/command-icons/dark/c79850b4-c259-530a-8bf1-57d099ebaf4c.png"
     },
     "rsTerrain": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "b9e61b41-7866-4395-8c29-a2b7a6a60685",
-      "macroGuid": "bd87b420-f952-41d4-add4-cacf4a082f8e",
-      "buttonGuid": "776a76b7-975a-4091-b33e-d53d3eeec970",
+      "source": "RSTool.rui",
+      "iconGuid": "53f25ae8-256b-51a6-bc43-2b716802e7d5",
+      "macroGuid": "32b2eaf9-c008-552c-b2f1-95ebb1b98677",
+      "buttonGuid": "651cf98c-848e-52bd-9c6c-c722f4090cd2",
       "buttonCommand": "rsTerrain",
-      "light": "/command-icons/light/b9e61b41-7866-4395-8c29-a2b7a6a60685.png",
-      "dark": "/command-icons/dark/b9e61b41-7866-4395-8c29-a2b7a6a60685.png"
+      "light": "/command-icons/light/53f25ae8-256b-51a6-bc43-2b716802e7d5.png",
+      "dark": "/command-icons/dark/53f25ae8-256b-51a6-bc43-2b716802e7d5.png"
     },
     "rsTerrainAnalysis": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "8213dcda-296a-4dc4-b30f-e255495f9acc",
-      "macroGuid": "44a26379-ea52-4613-8d03-edb0a480fddd",
-      "buttonGuid": "25fd3c69-bfc1-4237-9dd1-763791ce7a80",
+      "source": "RSTool.rui",
+      "iconGuid": "311c0425-1455-5f95-aaa9-8685c9ff199c",
+      "macroGuid": "84b9e3fb-bc2d-5c12-a99a-aaf5686d2aa3",
+      "buttonGuid": "1cde0bf9-7bf7-5f67-bb18-a1f29a949029",
       "buttonCommand": "rsTerrainAnalysis",
-      "light": "/command-icons/light/8213dcda-296a-4dc4-b30f-e255495f9acc.png"
+      "light": "/command-icons/light/311c0425-1455-5f95-aaa9-8685c9ff199c.png",
+      "dark": "/command-icons/dark/311c0425-1455-5f95-aaa9-8685c9ff199c.png"
     },
     "rsRainFlowSimulation": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "0b84b716-7daf-4297-8084-955709a2db39",
-      "macroGuid": "d80eabc1-72a4-4d22-b23b-9d27e3ca490d",
-      "buttonGuid": "feaec5b2-6092-43b5-aefc-f0a1d27596d6",
+      "source": "RSTool.rui",
+      "iconGuid": "f882ee83-483b-55bf-b0cf-d2a4d904138d",
+      "macroGuid": "b2d423c4-27eb-591b-b4a0-c0bfcdf7ca58",
+      "buttonGuid": "b4326da3-3f49-50d0-9986-1a4eba24394f",
       "buttonCommand": "rsRainFlowSimulation",
-      "light": "/command-icons/light/0b84b716-7daf-4297-8084-955709a2db39.png"
+      "light": "/command-icons/light/f882ee83-483b-55bf-b0cf-d2a4d904138d.png",
+      "dark": "/command-icons/dark/f882ee83-483b-55bf-b0cf-d2a4d904138d.png"
     },
     "rsImageToCurve": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "617dd873-1250-43a8-9721-cf9fe4d3660b",
-      "macroGuid": "9ae512df-1db3-47c3-8591-0ade707ca022",
-      "buttonGuid": "d950d4fa-0103-46e4-9e34-1bbddeb088ae",
+      "source": "RSTool.rui",
+      "iconGuid": "0b6eff7c-3113-5a27-bcd1-50d4c039566c",
+      "macroGuid": "ece677c5-1119-5f02-aa60-9b20d19f670b",
+      "buttonGuid": "19b7775a-173a-5b75-b24d-012b0b36ee5c",
       "buttonCommand": "rsImageToCurve",
-      "light": "/command-icons/light/617dd873-1250-43a8-9721-cf9fe4d3660b.png"
+      "light": "/command-icons/light/0b6eff7c-3113-5a27-bcd1-50d4c039566c.png",
+      "dark": "/command-icons/dark/0b6eff7c-3113-5a27-bcd1-50d4c039566c.png"
     },
     "rsFilletNonPlanar": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "335b1cd7-0fed-48b1-8400-e871d8b26f5c",
-      "macroGuid": "d266df0c-4d0f-4bb9-8500-e12f185e2b94",
-      "buttonGuid": "396c7d37-4047-46be-aed2-05b7b8c30005",
+      "source": "RSTool.rui",
+      "iconGuid": "c7a39330-49d7-59a1-94b9-b80b722d2dfa",
+      "macroGuid": "3767979a-8302-55e7-a271-901d214202ec",
+      "buttonGuid": "d7c54adf-6d5c-59fa-b3a3-40d8692c6d4a",
       "buttonCommand": "rsFilletNonPlanar",
-      "light": "/command-icons/light/335b1cd7-0fed-48b1-8400-e871d8b26f5c.png"
+      "light": "/command-icons/light/c7a39330-49d7-59a1-94b9-b80b722d2dfa.png",
+      "dark": "/command-icons/dark/c7a39330-49d7-59a1-94b9-b80b722d2dfa.png"
     },
     "rsFitArcChain": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "d8e34691-f15d-57da-9694-1822ad50ed87",
-      "macroGuid": "e8afdd23-ed4f-5773-b734-df7dbefd2082",
-      "buttonGuid": "29e4dc54-1f56-5a4a-a9d1-504c0a6fbb93",
+      "source": "RSTool.rui",
+      "iconGuid": "593bb4c2-4e92-500d-9443-ed2230b625b8",
+      "macroGuid": "7ed31a71-2d16-593e-9e56-8a38e27eb34b",
+      "buttonGuid": "eed7b6cb-e655-5307-b08a-0852c3291566",
       "buttonCommand": "rsFitArcChain",
-      "light": "/command-icons/light/d8e34691-f15d-57da-9694-1822ad50ed87.png"
+      "light": "/command-icons/light/593bb4c2-4e92-500d-9443-ed2230b625b8.png",
+      "dark": "/command-icons/dark/593bb4c2-4e92-500d-9443-ed2230b625b8.png"
     },
     "rsExtractIsoCrvByNum": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "dfd45615-0f44-4720-b672-b5fc02b8a5fc",
-      "macroGuid": "36b08101-a2ea-4cc8-847d-3a232c1ee62f",
-      "buttonGuid": "876aefdc-b08e-4b12-9d19-7d61861dbb68",
+      "source": "RSTool.rui",
+      "iconGuid": "4e95e04c-184d-5c51-862f-e43adc691f21",
+      "macroGuid": "67ad383c-d991-5c6d-af8e-40990b09d474",
+      "buttonGuid": "c3881acf-bafe-5577-a3f0-3e2aeb92268f",
       "buttonCommand": "rsExtractIsoCrvByNum",
-      "light": "/command-icons/light/dfd45615-0f44-4720-b672-b5fc02b8a5fc.png"
+      "light": "/command-icons/light/4e95e04c-184d-5c51-862f-e43adc691f21.png",
+      "dark": "/command-icons/dark/4e95e04c-184d-5c51-862f-e43adc691f21.png"
     },
     "rsRandomTrimCurve": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "24b05cfe-cfa7-4c8e-a4cc-6a5f129d3078",
-      "macroGuid": "d05dd254-b021-425c-87a1-905b3439bfac",
-      "buttonGuid": "c74afc34-1272-4e0a-8cbe-7a2e9530d1cb",
+      "source": "RSTool.rui",
+      "iconGuid": "66c69789-a95f-5b0a-bc0b-869fff4e02f0",
+      "macroGuid": "c78a9f2b-9470-581c-ad07-8f3ada0990d5",
+      "buttonGuid": "214fc9f4-2eee-5263-821d-93bac88f05d1",
       "buttonCommand": "rsRandomTrimCurve",
-      "light": "/command-icons/light/24b05cfe-cfa7-4c8e-a4cc-6a5f129d3078.png"
+      "light": "/command-icons/light/66c69789-a95f-5b0a-bc0b-869fff4e02f0.png",
+      "dark": "/command-icons/dark/66c69789-a95f-5b0a-bc0b-869fff4e02f0.png"
     },
     "rsSplitCrvAtIntersection": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "156b68a6-a6ec-4bde-9db4-90303b19a8f4",
-      "macroGuid": "3a7a7001-721b-46ec-8721-4af1e53269b5",
-      "buttonGuid": "3c3e9bf4-238c-4b90-84b1-15e7764603a4",
+      "source": "RSTool.rui",
+      "iconGuid": "73675e04-1f36-52bb-afcc-07284518b1c5",
+      "macroGuid": "4a193a91-69c0-5e37-8afb-884451a3bdb8",
+      "buttonGuid": "b3482ea1-1f58-51fd-9e6b-6d3de2c48858",
       "buttonCommand": "rsSplitCrvAtIntersection",
-      "light": "/command-icons/light/156b68a6-a6ec-4bde-9db4-90303b19a8f4.png"
+      "light": "/command-icons/light/73675e04-1f36-52bb-afcc-07284518b1c5.png",
+      "dark": "/command-icons/dark/73675e04-1f36-52bb-afcc-07284518b1c5.png"
     },
     "rsRepairOpenCurves": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "7bf011ab-786a-4a39-9d5d-1abeedce69f7",
-      "macroGuid": "8e1d9f6b-32c6-49db-9805-8e924b1f289f",
-      "buttonGuid": "b4eebd72-95b7-41ae-bbc4-915eaad79f84",
+      "source": "RSTool.rui",
+      "iconGuid": "123b2116-1005-5452-8420-e4aed93d53fe",
+      "macroGuid": "643527bd-b43d-5f26-ab36-a408df5af46a",
+      "buttonGuid": "db64f929-360b-5fa5-a0bc-4c88f00c93e8",
       "buttonCommand": "rsRepairOpenCurves",
-      "light": "/command-icons/light/7bf011ab-786a-4a39-9d5d-1abeedce69f7.png"
+      "light": "/command-icons/light/123b2116-1005-5452-8420-e4aed93d53fe.png",
+      "dark": "/command-icons/dark/123b2116-1005-5452-8420-e4aed93d53fe.png"
     },
     "rsFindCurveGaps": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "dd7fc847-96f9-5818-80e6-5e44b05a5e23",
-      "macroGuid": "9148f63b-6b5a-5dc9-a7e0-20dbfba575ab",
-      "buttonGuid": "e20e6e59-69d7-5bd7-87e9-cd060d8461b5",
+      "source": "RSTool.rui",
+      "iconGuid": "b67dfb6d-4d31-5cbd-80b7-bf7194c39d62",
+      "macroGuid": "10f05e4f-0128-57d1-9889-81e95e428726",
+      "buttonGuid": "29fa224e-36ed-5275-bfb4-f107f23c6f70",
       "buttonCommand": "rsFindCurveGaps",
-      "light": "/command-icons/light/dd7fc847-96f9-5818-80e6-5e44b05a5e23.png"
+      "light": "/command-icons/light/b67dfb6d-4d31-5cbd-80b7-bf7194c39d62.png",
+      "dark": "/command-icons/dark/b67dfb6d-4d31-5cbd-80b7-bf7194c39d62.png"
     },
     "rsCleanUpOverlappingCurves": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "d939a2e5-abc9-4f7f-be25-0e47cbcf7d88",
-      "macroGuid": "f4b76ff1-fbdf-4e47-9d6c-b565a3e4c491",
-      "buttonGuid": "04c4f1d3-dba5-4764-871d-344e70fb541f",
+      "source": "RSTool.rui",
+      "iconGuid": "37cf7b52-52f5-5158-b0c6-39d2369295ce",
+      "macroGuid": "99a8017b-ad2e-5dde-a512-4a59cd4fdb8d",
+      "buttonGuid": "26b96544-5152-5bf8-b069-788d74280f67",
       "buttonCommand": "rsCleanUpOverlappingCurves",
-      "light": "/command-icons/light/d939a2e5-abc9-4f7f-be25-0e47cbcf7d88.png"
+      "light": "/command-icons/light/37cf7b52-52f5-5158-b0c6-39d2369295ce.png",
+      "dark": "/command-icons/dark/37cf7b52-52f5-5158-b0c6-39d2369295ce.png"
     },
     "rsUnrollCrv": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "dd75cf96-c27b-428e-9c68-77f29ba0fc8e",
-      "macroGuid": "366b0203-3f4b-434a-ba28-2e747986b8c7",
-      "buttonGuid": "3f5c40ca-9efa-464b-b582-246068d25235",
+      "source": "RSTool.rui",
+      "iconGuid": "549f7ff1-3a2e-5359-99ec-74aa25c5dac8",
+      "macroGuid": "533b34a3-2c36-521b-a78c-e36437bf8ea9",
+      "buttonGuid": "2b95e257-ff40-51af-820c-e3d5dff2972d",
       "buttonCommand": "rsUnrollCrv",
-      "light": "/command-icons/light/dd75cf96-c27b-428e-9c68-77f29ba0fc8e.png"
+      "light": "/command-icons/light/549f7ff1-3a2e-5359-99ec-74aa25c5dac8.png",
+      "dark": "/command-icons/dark/549f7ff1-3a2e-5359-99ec-74aa25c5dac8.png"
     },
     "rsLoftCurvesPairs": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "e95cff3d-44a7-4f7e-838b-b061e74b2b82",
-      "macroGuid": "971dd55b-e4aa-405d-8b07-a4b1e71e35f8",
-      "buttonGuid": "26673e9b-8f6b-43ea-91c8-0aa11fbf2707",
+      "source": "RSTool.rui",
+      "iconGuid": "67341c0c-abc6-5485-9d83-56f6bdab301e",
+      "macroGuid": "a6ad197e-5400-5216-baab-e2d75fede052",
+      "buttonGuid": "a24430f0-fab6-5856-8cac-e06026cd4c0b",
       "buttonCommand": "rsLoftCurvesPairs",
-      "light": "/command-icons/light/e95cff3d-44a7-4f7e-838b-b061e74b2b82.png"
+      "light": "/command-icons/light/67341c0c-abc6-5485-9d83-56f6bdab301e.png",
+      "dark": "/command-icons/dark/67341c0c-abc6-5485-9d83-56f6bdab301e.png"
     },
     "rsSectionSweep": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "53407132-d3b3-4559-9422-d8038ba1222c",
-      "macroGuid": "5339f470-10f4-46dc-bab2-a98f65f3cf3d",
-      "buttonGuid": "8c131026-9e53-463e-b506-9000cb1cb0e4",
+      "source": "RSTool.rui",
+      "iconGuid": "49664d77-bc95-57a2-a800-21d845e4d018",
+      "macroGuid": "5ef445c4-7a8d-5271-b4b5-b26abf64c913",
+      "buttonGuid": "ce52933b-5e08-587c-89c6-b8aa5672f763",
       "buttonCommand": "rsSectionSweep",
-      "light": "/command-icons/light/53407132-d3b3-4559-9422-d8038ba1222c.png"
+      "light": "/command-icons/light/49664d77-bc95-57a2-a800-21d845e4d018.png",
+      "dark": "/command-icons/dark/49664d77-bc95-57a2-a800-21d845e4d018.png"
     },
     "rsRandomOffsetSrf": {
-      "kind": "unavailable"
+      "kind": "toolbar",
+      "source": "RSTool.rui",
+      "iconGuid": "49664d77-bc95-57a2-a800-21d845e4d018",
+      "macroGuid": "7c888d67-9371-570d-981d-22ca367f53f0",
+      "buttonGuid": "152a3689-63c2-5e68-ac8f-7ecca03f49fb",
+      "buttonCommand": "rsRandomOffsetSrf",
+      "light": "/command-icons/light/49664d77-bc95-57a2-a800-21d845e4d018.png",
+      "dark": "/command-icons/dark/49664d77-bc95-57a2-a800-21d845e4d018.png"
     },
     "rsMeshWindow": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "0796b1e1-c08b-4451-a20a-60e93aceb619",
-      "macroGuid": "969bf178-efdc-4013-a11f-0950327e7540",
-      "buttonGuid": "fc14fb25-d3b4-445b-a18f-52c018589cfa",
+      "source": "RSTool.rui",
+      "iconGuid": "d718e267-21be-5e20-8298-915c58bd3551",
+      "macroGuid": "d7280fd0-9f19-5c74-baea-33cddf3e4add",
+      "buttonGuid": "251c4bd1-e217-52bc-93d6-69da02e1bfd3",
       "buttonCommand": "rsMeshWindow",
-      "light": "/command-icons/light/0796b1e1-c08b-4451-a20a-60e93aceb619.png"
+      "light": "/command-icons/light/d718e267-21be-5e20-8298-915c58bd3551.png",
+      "dark": "/command-icons/dark/d718e267-21be-5e20-8298-915c58bd3551.png"
     },
     "rsRandomOffsetMesh": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "1100063f-0e8b-502f-87c6-c5d9bdd161d6",
-      "macroGuid": "e743a6c8-a769-53c1-8d45-978e7e2a7536",
-      "buttonGuid": "ebabb7e9-2c61-572b-a111-93411e9aaac5",
+      "source": "RSTool.rui",
+      "iconGuid": "91967b83-0b41-501d-b343-47fa884b966c",
+      "macroGuid": "a5e68dcb-9f6e-58b0-af81-6fc18be43d1d",
+      "buttonGuid": "a1e9d05c-812d-573f-a575-a32bc633bebf",
       "buttonCommand": "rsRandomOffsetMesh",
-      "light": "/command-icons/light/1100063f-0e8b-502f-87c6-c5d9bdd161d6.png"
+      "light": "/command-icons/light/91967b83-0b41-501d-b343-47fa884b966c.png",
+      "dark": "/command-icons/dark/91967b83-0b41-501d-b343-47fa884b966c.png"
     },
     "rsTriRemesh": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "2992b45a-9bcf-4e78-906e-80e24646a06e",
-      "macroGuid": "b2f9df81-bb8a-40fa-8014-230e0d725c54",
-      "buttonGuid": "fa645503-ce94-418b-9ca4-171002d243b2",
+      "source": "RSTool.rui",
+      "iconGuid": "6f055810-df45-5255-b918-365a8a6b3136",
+      "macroGuid": "24d4aad1-873b-53c3-a9b3-655aca9eadef",
+      "buttonGuid": "7e566b41-ffb7-5e2d-8c05-0de0cad41e5d",
       "buttonCommand": "rsTriRemesh",
-      "light": "/command-icons/light/2992b45a-9bcf-4e78-906e-80e24646a06e.png"
+      "light": "/command-icons/light/6f055810-df45-5255-b918-365a8a6b3136.png",
+      "dark": "/command-icons/dark/6f055810-df45-5255-b918-365a8a6b3136.png"
     },
     "rsDualMesh": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "1cc07541-26b1-4b6d-a705-14d7f0caf5e4",
-      "macroGuid": "ad1397a7-8bb5-491b-a0f8-784ced3c3547",
-      "buttonGuid": "9163e3da-453c-4cce-bce2-875b38e870f7",
+      "source": "RSTool.rui",
+      "iconGuid": "ff71dd5b-d76d-54e3-aa06-173201f13f54",
+      "macroGuid": "0612e96e-6bf3-54ec-8af6-3c02bd7cabc0",
+      "buttonGuid": "fe4965bf-c45b-5298-bf38-cd44f1531584",
       "buttonCommand": "rsDualMesh",
-      "light": "/command-icons/light/1cc07541-26b1-4b6d-a705-14d7f0caf5e4.png"
+      "light": "/command-icons/light/ff71dd5b-d76d-54e3-aa06-173201f13f54.png",
+      "dark": "/command-icons/dark/ff71dd5b-d76d-54e3-aa06-173201f13f54.png"
     },
     "rsDiamondMesh": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "4fd3faf4-54df-40b9-a9ca-bea9413768eb",
-      "macroGuid": "0e11c1ee-a32a-45a8-b4d7-ae90fa2114b2",
-      "buttonGuid": "d818148a-d760-4800-93b0-723c5e5e7b1f",
+      "source": "RSTool.rui",
+      "iconGuid": "69eceea0-1e41-58b0-8765-200665454d0f",
+      "macroGuid": "ca3f6f01-2816-59a9-aae4-41d47da74595",
+      "buttonGuid": "486c5d71-26c5-5fdc-ad59-8b061af1d472",
       "buttonCommand": "rsDiamondMesh",
-      "light": "/command-icons/light/4fd3faf4-54df-40b9-a9ca-bea9413768eb.png"
+      "light": "/command-icons/light/69eceea0-1e41-58b0-8765-200665454d0f.png",
+      "dark": "/command-icons/dark/69eceea0-1e41-58b0-8765-200665454d0f.png"
     },
     "rsSubdivideMesh": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "0a904bd8-c8ad-41e6-9392-4bdfb3935bb9",
-      "macroGuid": "69d896f4-c6fd-4714-b8c4-736e13887b07",
-      "buttonGuid": "f9f214e3-02dc-40d7-bf1c-b74b43144c52",
+      "source": "RSTool.rui",
+      "iconGuid": "e8d79d3b-b944-56f1-be02-664d9a8c6a1f",
+      "macroGuid": "9a117f44-69ab-50e4-82c4-eb99d9f9f672",
+      "buttonGuid": "b44e92e0-e436-512b-8595-46a4deb3afac",
       "buttonCommand": "rsSubdivideMesh",
-      "light": "/command-icons/light/0a904bd8-c8ad-41e6-9392-4bdfb3935bb9.png"
+      "light": "/command-icons/light/e8d79d3b-b944-56f1-be02-664d9a8c6a1f.png",
+      "dark": "/command-icons/dark/e8d79d3b-b944-56f1-be02-664d9a8c6a1f.png"
     },
     "rsUnifyQuadMesh": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "36d0af7c-3912-47bd-a3ea-f37292b0fcf9",
-      "macroGuid": "d941a4fc-6247-4e2c-9375-90eb69425f9f",
-      "buttonGuid": "fe52d9e0-4dbf-45f9-849c-405ebd48912f",
+      "source": "RSTool.rui",
+      "iconGuid": "5e493588-309a-51c2-983e-8c1518b4ec86",
+      "macroGuid": "ef0f89e9-7707-53a5-a4be-61febc0cdb01",
+      "buttonGuid": "7feb0637-2341-5d42-9635-7f481f0e08f3",
       "buttonCommand": "rsUnifyQuadMesh",
-      "light": "/command-icons/light/36d0af7c-3912-47bd-a3ea-f37292b0fcf9.png"
+      "light": "/command-icons/light/5e493588-309a-51c2-983e-8c1518b4ec86.png",
+      "dark": "/command-icons/dark/5e493588-309a-51c2-983e-8c1518b4ec86.png"
     },
     "rsFlipClosedMeshOutward": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "7624060b-b033-4a46-a2ab-8b83f7d49f33",
-      "macroGuid": "30ba4c26-0a65-4d93-8c1a-f480f7c28987",
-      "buttonGuid": "9685beb8-c6e8-4903-89fa-6873445ab33d",
+      "source": "RSTool.rui",
+      "iconGuid": "7e7795ad-11a5-530b-92f8-11c573999e68",
+      "macroGuid": "5743da95-e47a-52be-899d-0a77e6237625",
+      "buttonGuid": "b31aedb3-b6d1-57ed-9b0a-5fea5ab7458a",
       "buttonCommand": "rsFlipClosedMeshOutward",
-      "light": "/command-icons/light/7624060b-b033-4a46-a2ab-8b83f7d49f33.png"
+      "light": "/command-icons/light/7e7795ad-11a5-530b-92f8-11c573999e68.png",
+      "dark": "/command-icons/dark/7e7795ad-11a5-530b-92f8-11c573999e68.png"
     },
     "rsJoinMeshesByMaterials": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "1025b121-1213-40f2-beb0-013e3ddf9134",
-      "macroGuid": "1204c4ca-9e03-411e-ae5d-b25b39a4eb93",
-      "buttonGuid": "63a0f3d5-ef4d-44d4-8170-fbbbf17ed0ce",
+      "source": "RSTool.rui",
+      "iconGuid": "aec84ebe-7904-58ad-be75-3893aa4dabfc",
+      "macroGuid": "92186c4d-d2bd-5bc1-817c-70e50fa9962f",
+      "buttonGuid": "1c05c619-0b69-546f-8d67-7268c0dded4d",
       "buttonCommand": "rsJoinMeshesByMaterials",
-      "light": "/command-icons/light/1025b121-1213-40f2-beb0-013e3ddf9134.png"
+      "light": "/command-icons/light/aec84ebe-7904-58ad-be75-3893aa4dabfc.png",
+      "dark": "/command-icons/dark/aec84ebe-7904-58ad-be75-3893aa4dabfc.png"
     },
     "rsReduceMeshByCurvature": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "9e7243ca-cc4b-4273-b950-9ae07ec5fef3",
-      "macroGuid": "dbeec518-ce11-4e31-8327-0bdd385d6f1a",
-      "buttonGuid": "efa06955-1108-4d26-9e3a-8720f4218fec",
+      "source": "RSTool.rui",
+      "iconGuid": "dfa12005-83bd-506a-a23f-754683441517",
+      "macroGuid": "ded99321-1f57-5e2d-b653-2c22a0b71fdf",
+      "buttonGuid": "0a8c146c-c468-5084-8e63-9d2b0f232f57",
       "buttonCommand": "rsReduceMeshByCurvature",
-      "light": "/command-icons/light/9e7243ca-cc4b-4273-b950-9ae07ec5fef3.png"
+      "light": "/command-icons/light/dfa12005-83bd-506a-a23f-754683441517.png",
+      "dark": "/command-icons/dark/dfa12005-83bd-506a-a23f-754683441517.png"
     },
     "rsDisplacementToMesh": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "1228c420-2747-5c48-99cc-bd77ca861667",
-      "macroGuid": "fffe76bf-0a41-5749-a77b-da6f86c07e73",
-      "buttonGuid": "eb2a6629-536b-5957-9d9d-3f6e3d98839c",
+      "source": "RSTool.rui",
+      "iconGuid": "82db1732-2b62-5c3b-b478-7080b4bd6ede",
+      "macroGuid": "dc66716c-df66-565b-ba58-e094108b3e8b",
+      "buttonGuid": "13ac916e-e2b5-5e14-9640-48f660e28f63",
       "buttonCommand": "rsDisplacementToMesh",
-      "light": "/command-icons/light/1228c420-2747-5c48-99cc-bd77ca861667.png"
+      "light": "/command-icons/light/82db1732-2b62-5c3b-b478-7080b4bd6ede.png",
+      "dark": "/command-icons/dark/82db1732-2b62-5c3b-b478-7080b4bd6ede.png"
     },
     "rsMeshFrame": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "771dfd3a-2d24-4b15-921a-117c32568627",
-      "macroGuid": "8fea1906-3165-4065-8169-1554c0fd6bd0",
-      "buttonGuid": "8c08d821-0a78-49ba-a4dd-2b708e2f5114",
+      "source": "RSTool.rui",
+      "iconGuid": "c29fe541-5687-5561-857c-6bd14033a4f3",
+      "macroGuid": "30b324a1-4ce6-56e6-9b61-41d3f08ee0ee",
+      "buttonGuid": "eee312c0-dbbf-507f-af83-69a4a7e06702",
       "buttonCommand": "rsMeshFrame",
-      "light": "/command-icons/light/771dfd3a-2d24-4b15-921a-117c32568627.png"
+      "light": "/command-icons/light/c29fe541-5687-5561-857c-6bd14033a4f3.png",
+      "dark": "/command-icons/dark/c29fe541-5687-5561-857c-6bd14033a4f3.png"
     },
     "rsHairSystem": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "561b0aad-97a6-562f-97e2-406ad5653eeb",
-      "macroGuid": "36c99db0-776f-5538-9515-9b0173088ba2",
-      "buttonGuid": "2c734025-5045-50e9-b221-70e592af3d42",
+      "source": "RSTool.rui",
+      "iconGuid": "ad492b7f-c60e-549f-ba3d-99e064df8adb",
+      "macroGuid": "a5c4ad9b-1af4-54c4-a5f6-d7f626cbdc7b",
+      "buttonGuid": "1f7ed51f-6697-53a3-b86f-066a585592d7",
       "buttonCommand": "rsHairSystem",
-      "light": "/command-icons/light/561b0aad-97a6-562f-97e2-406ad5653eeb.png"
+      "light": "/command-icons/light/ad492b7f-c60e-549f-ba3d-99e064df8adb.png",
+      "dark": "/command-icons/dark/ad492b7f-c60e-549f-ba3d-99e064df8adb.png"
     },
     "rsConvertToMeshPanel": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "cbf652dd-6337-437c-99c7-70f5819fc630",
-      "macroGuid": "46d96d10-df5c-4a40-81e8-00ed51c06240",
-      "buttonGuid": "94a71760-fdd6-4c17-9c6e-5c689acd96a6",
+      "source": "RSTool.rui",
+      "iconGuid": "28ca6377-7182-5400-9695-449b2ce6df68",
+      "macroGuid": "c9343990-54fb-5eea-9414-f9981a5d668b",
+      "buttonGuid": "dbdeef53-05ec-54b1-bdd9-5d82831294a2",
       "buttonCommand": "rsConvertToMeshPanel",
-      "light": "/command-icons/light/cbf652dd-6337-437c-99c7-70f5819fc630.png"
+      "light": "/command-icons/light/28ca6377-7182-5400-9695-449b2ce6df68.png",
+      "dark": "/command-icons/dark/28ca6377-7182-5400-9695-449b2ce6df68.png"
     },
     "rsSimpleSculptor": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "d6e65cbf-0884-4f66-9b0d-0d80544a310b",
-      "macroGuid": "2fa522c3-2163-4359-8b29-b85275f41748",
-      "buttonGuid": "40b0dca7-60a7-4ecb-b004-48a783b164b8",
+      "source": "RSTool.rui",
+      "iconGuid": "57e3d22e-6358-5779-8395-1bedac49cca4",
+      "macroGuid": "7ec7ae2f-9799-5865-98d5-7f2c09231649",
+      "buttonGuid": "454bb7e2-afe9-55e3-bd08-ae294e7523df",
       "buttonCommand": "rsSimpleSculptor",
-      "light": "/command-icons/light/d6e65cbf-0884-4f66-9b0d-0d80544a310b.png"
+      "light": "/command-icons/light/57e3d22e-6358-5779-8395-1bedac49cca4.png",
+      "dark": "/command-icons/dark/57e3d22e-6358-5779-8395-1bedac49cca4.png"
     },
     "rsPerforation": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "49300bf6-ec6e-5b99-9aa5-46042ae8cf1e",
-      "macroGuid": "1cab5efd-44e8-5a06-a642-1f55ed0b733a",
-      "buttonGuid": "731c5789-22c3-51c3-9bf8-ca3afc2bceb4",
+      "source": "RSTool.rui",
+      "iconGuid": "bf0911ba-7098-5b5c-ab5f-3d085e6556ea",
+      "macroGuid": "14e7bbfa-4c78-5f87-9277-aa2e907cca31",
+      "buttonGuid": "103b91f7-3213-5421-a58c-4aec2c98ff34",
       "buttonCommand": "rsPerforation",
-      "light": "/command-icons/light/49300bf6-ec6e-5b99-9aa5-46042ae8cf1e.png"
+      "light": "/command-icons/light/bf0911ba-7098-5b5c-ab5f-3d085e6556ea.png",
+      "dark": "/command-icons/dark/bf0911ba-7098-5b5c-ab5f-3d085e6556ea.png"
     },
     "rsTesselateNurbs": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "b83700e3-5cd7-428d-8328-8107cdb4a5ef",
-      "macroGuid": "961848d5-ad11-468e-a055-eb585ca54c08",
-      "buttonGuid": "160ef51e-a8d5-42a5-8cd1-93e7bfcbd8a4",
+      "source": "RSTool.rui",
+      "iconGuid": "a28e9b5a-5752-5480-898a-f87aa49515cc",
+      "macroGuid": "24b42b56-e5bc-5609-a703-0cbfc967804d",
+      "buttonGuid": "edda14fd-8a74-53c9-b52f-06ed8f6d08de",
       "buttonCommand": "rsTesselateNurbs",
-      "light": "/command-icons/light/b83700e3-5cd7-428d-8328-8107cdb4a5ef.png"
+      "light": "/command-icons/light/a28e9b5a-5752-5480-898a-f87aa49515cc.png",
+      "dark": "/command-icons/dark/a28e9b5a-5752-5480-898a-f87aa49515cc.png"
     },
     "rsTileQuadNurbsBlend": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "8762b5f2-2668-447c-9198-296d9e4e14e0",
-      "macroGuid": "9fe904e0-2ce5-4f78-a22a-a9b4b40632a5",
-      "buttonGuid": "3529c86e-861a-44a7-ad70-e9661cb7ad9f",
+      "source": "RSTool.rui",
+      "iconGuid": "6eb9fb02-4dd4-5f7c-a0e4-a52310b67e97",
+      "macroGuid": "3852d13e-cc36-52f0-94f2-6ebf8cf850a7",
+      "buttonGuid": "f168a577-fd04-5cc4-a26a-63b6dfe46067",
       "buttonCommand": "rsTileQuadNurbsBlend",
-      "light": "/command-icons/light/8762b5f2-2668-447c-9198-296d9e4e14e0.png"
+      "light": "/command-icons/light/6eb9fb02-4dd4-5f7c-a0e4-a52310b67e97.png",
+      "dark": "/command-icons/dark/6eb9fb02-4dd4-5f7c-a0e4-a52310b67e97.png"
     },
     "rsTileMeshBlend": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "0e9f226f-4cd6-4f23-ad81-33dc7697b492",
-      "macroGuid": "6768b3e5-1809-49c7-be29-8696b67cd25d",
-      "buttonGuid": "adf2b659-8a7c-45f1-bc7d-d584eeb44a5f",
+      "source": "RSTool.rui",
+      "iconGuid": "462c3c2a-68f2-5b33-9dac-ecc23935be39",
+      "macroGuid": "d89f8efd-dc4c-5d98-a0d7-ca47527826ad",
+      "buttonGuid": "c76f7f7b-a465-54c8-8e0b-35c3c34675f0",
       "buttonCommand": "rsTileMeshBlend",
-      "light": "/command-icons/light/0e9f226f-4cd6-4f23-ad81-33dc7697b492.png"
+      "light": "/command-icons/light/462c3c2a-68f2-5b33-9dac-ecc23935be39.png",
+      "dark": "/command-icons/dark/462c3c2a-68f2-5b33-9dac-ecc23935be39.png"
     },
     "rsTileMeshBlendByColor": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "f23dd86a-f5c6-4161-92da-91208cbec877",
-      "macroGuid": "bd94afd2-0ab1-4bcd-b1e9-33081586a8d7",
-      "buttonGuid": "57256871-fcfa-46ca-b3ce-13b1b6627b6f",
+      "source": "RSTool.rui",
+      "iconGuid": "ff29ba89-dac7-5544-9c86-28be8aadc14f",
+      "macroGuid": "4ac4b443-db48-5382-adc5-21fc7e6a5469",
+      "buttonGuid": "f5645166-8bbd-570c-a97a-9b99985ce2b6",
       "buttonCommand": "rsTileMeshBlendByColor",
-      "light": "/command-icons/light/f23dd86a-f5c6-4161-92da-91208cbec877.png"
+      "light": "/command-icons/light/ff29ba89-dac7-5544-9c86-28be8aadc14f.png",
+      "dark": "/command-icons/dark/ff29ba89-dac7-5544-9c86-28be8aadc14f.png"
     },
     "rsTileMeshBlendByBitmap": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "0a2f78ca-a146-4ed1-89c4-acf5a5e2c437",
-      "macroGuid": "34fb224f-ae58-4dd7-ba4c-b824780dc0c0",
-      "buttonGuid": "d1578eef-3f35-4327-bc03-0ebc537fb602",
+      "source": "RSTool.rui",
+      "iconGuid": "c0934825-8918-573f-a4f8-d9ef71c3dd77",
+      "macroGuid": "9fecd61c-f498-5e3a-9694-ee555321f4f6",
+      "buttonGuid": "757cb2d5-4310-5995-9f7f-2fb6ec9bfc8e",
       "buttonCommand": "rsTileMeshBlendByBitmap",
-      "light": "/command-icons/light/0a2f78ca-a146-4ed1-89c4-acf5a5e2c437.png"
+      "light": "/command-icons/light/c0934825-8918-573f-a4f8-d9ef71c3dd77.png",
+      "dark": "/command-icons/dark/c0934825-8918-573f-a4f8-d9ef71c3dd77.png"
     },
     "rsMeshColorPaint": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "84d75b11-4441-4ca5-8b32-43e4cf565936",
-      "macroGuid": "436a0b01-3b9f-4809-beb8-2d8e6fbc1ea8",
-      "buttonGuid": "abf25455-2e0b-48da-abb2-5e74d9e69f00",
+      "source": "RSTool.rui",
+      "iconGuid": "b75ce78f-6052-57fe-ab68-0257e1227f90",
+      "macroGuid": "26d0d8d5-6415-55eb-b0b7-fd0103e4d660",
+      "buttonGuid": "277bab38-668a-5a27-a360-81ae4eba6144",
       "buttonCommand": "rsMeshColorPaint",
-      "light": "/command-icons/light/84d75b11-4441-4ca5-8b32-43e4cf565936.png"
+      "light": "/command-icons/light/b75ce78f-6052-57fe-ab68-0257e1227f90.png",
+      "dark": "/command-icons/dark/b75ce78f-6052-57fe-ab68-0257e1227f90.png"
     },
     "rsArrayBetween": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "11c65a37-5b7b-4a3e-8645-7932579b9973",
-      "macroGuid": "46f3fb28-ad8d-4ff7-b78a-3ad9eb955d00",
-      "buttonGuid": "eea3d1c5-3546-4a2b-a740-e992b6c10d5c",
+      "source": "RSTool.rui",
+      "iconGuid": "4b1c0c69-ec16-57cf-957a-b072758a4030",
+      "macroGuid": "77ee3fde-369d-5f9f-9013-1f4bd3d9d42c",
+      "buttonGuid": "70e42997-5d72-598d-9af9-10c3ad68307d",
       "buttonCommand": "rsArrayBetween",
-      "light": "/command-icons/light/11c65a37-5b7b-4a3e-8645-7932579b9973.png"
+      "light": "/command-icons/light/4b1c0c69-ec16-57cf-957a-b072758a4030.png",
+      "dark": "/command-icons/dark/4b1c0c69-ec16-57cf-957a-b072758a4030.png"
     },
     "rsSprinkerOne": {
       "kind": "toolbar-right",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "8043f71b-48e8-494a-8a8f-0b7f89e54c74",
-      "macroGuid": "61a8a0f5-62bd-41e5-bd50-de08dfb44053",
-      "buttonGuid": "f24de150-959e-476f-81d2-6e6523d96c35",
+      "source": "RSTool.rui",
+      "iconGuid": "94556e62-82ae-50be-9503-d32f6818add8",
+      "macroGuid": "bbf2f54c-0051-5e9d-a860-2a6f4bfd7733",
+      "buttonGuid": "66a025e3-1bd6-57ef-866d-69a7c694733d",
       "buttonCommand": "rsSprinkerMutiple",
-      "light": "/command-icons/light/8043f71b-48e8-494a-8a8f-0b7f89e54c74.png"
+      "light": "/command-icons/light/94556e62-82ae-50be-9503-d32f6818add8.png",
+      "dark": "/command-icons/dark/94556e62-82ae-50be-9503-d32f6818add8.png"
     },
     "rsSprinkerMutiple": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "8043f71b-48e8-494a-8a8f-0b7f89e54c74",
-      "macroGuid": "73fdbf4f-a9fa-4085-b53c-951f287d3def",
-      "buttonGuid": "f24de150-959e-476f-81d2-6e6523d96c35",
+      "source": "RSTool.rui",
+      "iconGuid": "94556e62-82ae-50be-9503-d32f6818add8",
+      "macroGuid": "41557c8d-2647-5b5c-9d53-14b908cd47ef",
+      "buttonGuid": "66a025e3-1bd6-57ef-866d-69a7c694733d",
       "buttonCommand": "rsSprinkerMutiple",
-      "light": "/command-icons/light/8043f71b-48e8-494a-8a8f-0b7f89e54c74.png"
+      "light": "/command-icons/light/94556e62-82ae-50be-9503-d32f6818add8.png",
+      "dark": "/command-icons/dark/94556e62-82ae-50be-9503-d32f6818add8.png"
     },
     "rsPlaceObjsOnCrv": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "467448fe-5b1d-4e91-a635-23229c9b464c",
-      "macroGuid": "d7bfaec3-5231-44aa-859b-decb1ab3084a",
-      "buttonGuid": "2ae1c510-c54b-4e52-b03c-81d1d8569147",
+      "source": "RSTool.rui",
+      "iconGuid": "4b0dcc96-9f97-5760-8a18-d936b47e6106",
+      "macroGuid": "c63581bf-236e-582e-a17e-051741ce304d",
+      "buttonGuid": "406ac981-85c3-5a7a-a13b-c4c0a81243a7",
       "buttonCommand": "rsPlaceObjsOnCrv",
-      "light": "/command-icons/light/467448fe-5b1d-4e91-a635-23229c9b464c.png"
+      "light": "/command-icons/light/4b0dcc96-9f97-5760-8a18-d936b47e6106.png",
+      "dark": "/command-icons/dark/4b0dcc96-9f97-5760-8a18-d936b47e6106.png"
     },
     "rsGradientChangeByCrv": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "586910d9-c069-4843-973f-065176591770",
-      "macroGuid": "3d4793c4-af22-42e3-9105-a40b0efe8ffe",
-      "buttonGuid": "d5d4cb48-8404-4548-b8fb-fc602a33b672",
+      "source": "RSTool.rui",
+      "iconGuid": "d210a791-fb38-5e23-b5a0-0a504fcb36d2",
+      "macroGuid": "c4697a4d-3f64-53ae-9a1a-877060d6dad4",
+      "buttonGuid": "0aaa6160-2ded-5eb5-9591-52401eb992a8",
       "buttonCommand": "rsGradientChangeByCrv",
-      "light": "/command-icons/light/586910d9-c069-4843-973f-065176591770.png"
+      "light": "/command-icons/light/d210a791-fb38-5e23-b5a0-0a504fcb36d2.png",
+      "dark": "/command-icons/dark/d210a791-fb38-5e23-b5a0-0a504fcb36d2.png"
     },
     "rsRandomChange": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "21970dd9-64fd-465c-9310-566eb96a9843",
-      "macroGuid": "e78b2e24-af61-4b62-80ee-b17995695801",
-      "buttonGuid": "a7d19d50-802d-449e-9ba3-7e2ba34d150c",
+      "source": "RSTool.rui",
+      "iconGuid": "67585763-8501-5acc-87a7-d81f550baafc",
+      "macroGuid": "b0dfa7e2-b7de-5aee-ada8-5f59a7008565",
+      "buttonGuid": "8dc46be9-4813-5f26-b1d3-1b65334c0a48",
       "buttonCommand": "rsRandomChange",
-      "light": "/command-icons/light/21970dd9-64fd-465c-9310-566eb96a9843.png"
+      "light": "/command-icons/light/67585763-8501-5acc-87a7-d81f550baafc.png",
+      "dark": "/command-icons/dark/67585763-8501-5acc-87a7-d81f550baafc.png"
     },
     "rsMoveToOrigin": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "cba45b6a-ac50-492f-a442-fe26ae0cd4bb",
-      "macroGuid": "bc7e4c35-9360-44a3-ab23-ef96de434a9f",
-      "buttonGuid": "451fa8a9-5b21-478e-8c68-fdefe5110271",
+      "source": "RSTool.rui",
+      "iconGuid": "f24663d4-964a-52fc-b423-2c0fd7516e8d",
+      "macroGuid": "bf8c924c-7524-5a84-8577-eaac4e4fb513",
+      "buttonGuid": "44a0f4e3-3bca-53b5-9518-271d9a177f86",
       "buttonCommand": "rsMoveToOrigin",
-      "light": "/command-icons/light/cba45b6a-ac50-492f-a442-fe26ae0cd4bb.png"
+      "light": "/command-icons/light/f24663d4-964a-52fc-b423-2c0fd7516e8d.png",
+      "dark": "/command-icons/dark/f24663d4-964a-52fc-b423-2c0fd7516e8d.png"
     },
     "rsMoveProject": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "f5515c62-04b9-4281-b28e-b278ac475fab",
-      "macroGuid": "50672f60-b936-4ca3-b408-07f468772265",
-      "buttonGuid": "160a5cb0-2f34-40fd-b543-913536a70ba5",
+      "source": "RSTool.rui",
+      "iconGuid": "9c8d504c-6225-50d8-a17e-51e1e49a6635",
+      "macroGuid": "c91b57a7-9d51-5ad2-b4b3-e2f92b0e8694",
+      "buttonGuid": "b7b22b33-743e-54fc-83ab-5255fce65ca9",
       "buttonCommand": "rsMoveProject",
-      "light": "/command-icons/light/f5515c62-04b9-4281-b28e-b278ac475fab.png"
+      "light": "/command-icons/light/9c8d504c-6225-50d8-a17e-51e1e49a6635.png",
+      "dark": "/command-icons/dark/9c8d504c-6225-50d8-a17e-51e1e49a6635.png"
     },
     "rsLayFlat": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "3898b155-215c-58cf-b266-c218c55ecb04",
-      "macroGuid": "d3a8ce24-7fda-5159-a627-d6b0cc79f67b",
-      "buttonGuid": "4a5e26cc-b756-5e81-b5e0-a11a79b4bdcb",
+      "source": "RSTool.rui",
+      "iconGuid": "7937c930-6974-54de-a8f6-ad6aefe49344",
+      "macroGuid": "6b5df744-b248-519d-8a2d-bb65f0942787",
+      "buttonGuid": "12069528-8990-5b20-abcb-5e090d8a06fa",
       "buttonCommand": "rsLayFlat",
-      "light": "/command-icons/light/3898b155-215c-58cf-b266-c218c55ecb04.png"
+      "light": "/command-icons/light/7937c930-6974-54de-a8f6-ad6aefe49344.png",
+      "dark": "/command-icons/dark/7937c930-6974-54de-a8f6-ad6aefe49344.png"
     },
     "rsSprinkerBrush": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "5ac0bfa4-9b36-5a87-b496-d9074502053f",
-      "macroGuid": "149127d2-41f1-517f-97d8-f38e51c9ce04",
-      "buttonGuid": "ccbd4f52-fde1-5294-9df4-ebcfc1db8a4d",
+      "source": "RSTool.rui",
+      "iconGuid": "0b62d64c-63cf-5807-abdd-9b212cfd7f92",
+      "macroGuid": "dacba98a-95d2-5fc0-913b-9fbc722c1f10",
+      "buttonGuid": "22323cbc-8c3e-5682-a7c3-7b73b6d9d187",
       "buttonCommand": "rsSprinkerBrush",
-      "light": "/command-icons/light/5ac0bfa4-9b36-5a87-b496-d9074502053f.png"
+      "light": "/command-icons/light/0b62d64c-63cf-5807-abdd-9b212cfd7f92.png",
+      "dark": "/command-icons/dark/0b62d64c-63cf-5807-abdd-9b212cfd7f92.png"
     },
     "rsRandomPtsOnCrv": {
       "kind": "toolbar-right",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "288a83f1-eaf9-4dc2-973e-d4ff16e768ef",
-      "macroGuid": "c8a0a50c-b324-47ce-806f-261f525dfe81",
-      "buttonGuid": "9c0b692c-9416-4ca4-b135-600b0fc74a8e",
+      "source": "RSTool.rui",
+      "iconGuid": "b35d546d-dd66-5374-afaa-162392f61154",
+      "macroGuid": "4eda5df5-8e3d-573e-b3e3-f304f1438915",
+      "buttonGuid": "87afe8a8-b4b9-52c8-bf20-9156bcf3580e",
       "buttonCommand": "rsDivideCrvByRoundedCount",
-      "light": "/command-icons/light/288a83f1-eaf9-4dc2-973e-d4ff16e768ef.png"
+      "light": "/command-icons/light/b35d546d-dd66-5374-afaa-162392f61154.png",
+      "dark": "/command-icons/dark/b35d546d-dd66-5374-afaa-162392f61154.png"
     },
     "rsRandomPtsOnObj": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "ec405540-f960-4d32-a393-a4c98e16d276",
-      "macroGuid": "76393cb9-b43d-4bb7-bea7-d94ed09f345f",
-      "buttonGuid": "432ee489-8c5d-4527-9f03-c59848d2de0d",
+      "source": "RSTool.rui",
+      "iconGuid": "288f086f-d8f9-5542-a17e-225040498085",
+      "macroGuid": "740edd96-51b7-5225-996d-a2ef4b794d9c",
+      "buttonGuid": "347859f3-669e-5c73-93bf-3d2fa89da716",
       "buttonCommand": "rsRandomPtsOnObj",
-      "light": "/command-icons/light/ec405540-f960-4d32-a393-a4c98e16d276.png"
+      "light": "/command-icons/light/288f086f-d8f9-5542-a17e-225040498085.png",
+      "dark": "/command-icons/dark/288f086f-d8f9-5542-a17e-225040498085.png"
     },
     "rsDivideCrvByRoundedCount": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "288a83f1-eaf9-4dc2-973e-d4ff16e768ef",
-      "macroGuid": "c32a3f5e-760f-4cd0-a72c-b23ba73decd8",
-      "buttonGuid": "9c0b692c-9416-4ca4-b135-600b0fc74a8e",
+      "source": "RSTool.rui",
+      "iconGuid": "b35d546d-dd66-5374-afaa-162392f61154",
+      "macroGuid": "a24d3adf-f52b-5357-b359-eda117d22178",
+      "buttonGuid": "87afe8a8-b4b9-52c8-bf20-9156bcf3580e",
       "buttonCommand": "rsDivideCrvByRoundedCount",
-      "light": "/command-icons/light/288a83f1-eaf9-4dc2-973e-d4ff16e768ef.png"
+      "light": "/command-icons/light/b35d546d-dd66-5374-afaa-162392f61154.png",
+      "dark": "/command-icons/dark/b35d546d-dd66-5374-afaa-162392f61154.png"
     },
     "rsSelectSimilar": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "975c7bef-6e8b-55d9-bee0-90a4d8c6dbc4",
-      "macroGuid": "4b292b83-5881-59aa-8c81-c7ca502d229d",
-      "buttonGuid": "f2838fac-65d0-534a-8608-9a5c7be90f4f",
+      "source": "RSTool.rui",
+      "iconGuid": "9975cbcd-a5f5-5906-b310-195398687375",
+      "macroGuid": "c32fe27a-0618-589b-95c5-e3ccddc4454a",
+      "buttonGuid": "0b969698-1c42-585e-8683-7345d293b28c",
       "buttonCommand": "rsSelectSimilar",
-      "light": "/command-icons/light/975c7bef-6e8b-55d9-bee0-90a4d8c6dbc4.png"
+      "light": "/command-icons/light/9975cbcd-a5f5-5906-b310-195398687375.png",
+      "dark": "/command-icons/dark/9975cbcd-a5f5-5906-b310-195398687375.png"
     },
     "rsGradientSelcectByCrv": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "130222e6-20fa-4d4c-bb62-c7ae4e7d2fc3",
-      "macroGuid": "3c673271-7afb-4e5c-b79e-e787ea5be8b1",
-      "buttonGuid": "7154c288-8571-46bf-a7b2-4aacd99a8f52",
+      "source": "RSTool.rui",
+      "iconGuid": "e8c466b6-9044-5af3-a5ca-a53a0367ba9c",
+      "macroGuid": "116c0a13-16ab-5e01-9926-aec0d3c54f3a",
+      "buttonGuid": "12236c28-95de-55d9-bc45-05324793af48",
       "buttonCommand": "rsGradientSelcectByCrv",
-      "light": "/command-icons/light/130222e6-20fa-4d4c-bb62-c7ae4e7d2fc3.png"
+      "light": "/command-icons/light/e8c466b6-9044-5af3-a5ca-a53a0367ba9c.png",
+      "dark": "/command-icons/dark/e8c466b6-9044-5af3-a5ca-a53a0367ba9c.png"
     },
     "rsSelectByPrintWidth": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "9241c742-02ef-4a12-b43d-7fcfb7611212",
-      "macroGuid": "b9cc03e5-ce8a-4530-8e01-b91f2b4bc2ec",
-      "buttonGuid": "8da107fb-c1f6-43eb-bd14-4df6784f4b3b",
+      "source": "RSTool.rui",
+      "iconGuid": "29ae1332-901e-55ee-8f8f-cf49ca312b2b",
+      "macroGuid": "f5aadb76-af66-51c5-9484-dc456b377d2d",
+      "buttonGuid": "aa23c003-1eed-52d9-aa1c-e1f8d0fc5d4a",
       "buttonCommand": "rsSelectByPrintWidth",
-      "light": "/command-icons/light/9241c742-02ef-4a12-b43d-7fcfb7611212.png"
+      "light": "/command-icons/light/29ae1332-901e-55ee-8f8f-cf49ca312b2b.png",
+      "dark": "/command-icons/dark/29ae1332-901e-55ee-8f8f-cf49ca312b2b.png"
     },
     "rsSelectBySrfEdgeCount": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "7470097d-5d9e-4602-b033-aec551a48a90",
-      "macroGuid": "154486e1-4a86-44fa-822e-518a33d6d42b",
-      "buttonGuid": "18916185-a941-4819-b2de-5eaa961e6b70",
+      "source": "RSTool.rui",
+      "iconGuid": "e0c68135-5032-5a0d-aefe-759c435815ca",
+      "macroGuid": "17e81155-52d6-56e9-b137-5cd3d2884289",
+      "buttonGuid": "e6a32c5e-2261-54ad-84fb-7ed69080792f",
       "buttonCommand": "rsSelectBySrfEdgeCount",
-      "light": "/command-icons/light/7470097d-5d9e-4602-b033-aec551a48a90.png"
+      "light": "/command-icons/light/e0c68135-5032-5a0d-aefe-759c435815ca.png",
+      "dark": "/command-icons/dark/e0c68135-5032-5a0d-aefe-759c435815ca.png"
     },
     "rsSelectHathByName": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "515e0231-8892-4927-8bd4-cb0ec265ac2b",
-      "macroGuid": "a6fa16e2-105f-405c-a64a-0c8d372781b6",
-      "buttonGuid": "68a4114a-9069-4010-a73d-9d645f9ea670",
+      "source": "RSTool.rui",
+      "iconGuid": "00dff0ce-63b4-5b9f-b950-1b5256bd019e",
+      "macroGuid": "144a08a6-269f-5eae-a4fb-e06f90e9a600",
+      "buttonGuid": "f2371e92-813b-51c8-ae71-af5dccd2b026",
       "buttonCommand": "rsSelectHathByName",
-      "light": "/command-icons/light/515e0231-8892-4927-8bd4-cb0ec265ac2b.png"
+      "light": "/command-icons/light/00dff0ce-63b4-5b9f-b950-1b5256bd019e.png",
+      "dark": "/command-icons/dark/00dff0ce-63b4-5b9f-b950-1b5256bd019e.png"
     },
     "rsRandomSelection": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "aa47178a-240c-45b0-b36d-aaec80323b6a",
-      "macroGuid": "a4dc0630-06f8-4714-9b0d-90112bc87b19",
-      "buttonGuid": "90b8a8b0-ace5-4b57-a6f9-770dccab665f",
+      "source": "RSTool.rui",
+      "iconGuid": "006465b0-9925-5871-8ffe-32f5bd11260c",
+      "macroGuid": "efee8005-868e-5d68-9d51-058f180d8c17",
+      "buttonGuid": "de2dd554-09b1-574f-ab8a-65d37f58ce6a",
       "buttonCommand": "rsRandomSelection",
-      "light": "/command-icons/light/aa47178a-240c-45b0-b36d-aaec80323b6a.png"
+      "light": "/command-icons/light/006465b0-9925-5871-8ffe-32f5bd11260c.png",
+      "dark": "/command-icons/dark/006465b0-9925-5871-8ffe-32f5bd11260c.png"
     },
     "rsNewLayer": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "ca1502b2-08dc-4640-95ec-03b4a4df0462",
-      "macroGuid": "56b05c54-26e5-4ca6-bd8f-ec8a6b73f292",
-      "buttonGuid": "c7fdf3b2-8048-46bb-b614-e82aa3c71c1b",
+      "source": "RSTool.rui",
+      "iconGuid": "d0354ebf-596f-5c33-8fa6-aced691ad74a",
+      "macroGuid": "d32e9ff5-4de9-5aa5-b2ef-4ab43c21450b",
+      "buttonGuid": "ec24147b-8f43-5e19-ab22-6fbb3d869038",
       "buttonCommand": "rsNewLayer",
-      "light": "/command-icons/light/ca1502b2-08dc-4640-95ec-03b4a4df0462.png"
+      "light": "/command-icons/light/d0354ebf-596f-5c33-8fa6-aced691ad74a.png",
+      "dark": "/command-icons/dark/d0354ebf-596f-5c33-8fa6-aced691ad74a.png"
     },
     "rsCloseObjLayer": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "3b1d6117-d379-4146-bd7b-30bf154eb6a0",
-      "macroGuid": "06a3ff0c-f47b-434c-a47f-fed24f6752ee",
-      "buttonGuid": "a86f5746-200b-4c84-8245-6c17679e64cf",
+      "source": "RSTool.rui",
+      "iconGuid": "0f898e7d-68fa-53ad-a4d6-912893293425",
+      "macroGuid": "9ea372a0-27a7-5128-9421-2004640e9d8a",
+      "buttonGuid": "23f77094-b1bc-5fd6-9c14-2ae170c9af43",
       "buttonCommand": "rsCloseObjLayer",
-      "light": "/command-icons/light/3b1d6117-d379-4146-bd7b-30bf154eb6a0.png"
+      "light": "/command-icons/light/0f898e7d-68fa-53ad-a4d6-912893293425.png",
+      "dark": "/command-icons/dark/0f898e7d-68fa-53ad-a4d6-912893293425.png"
     },
     "rsMoveLayerObjs": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "2376805a-6443-4dae-b94b-c35d11cf1d76",
-      "macroGuid": "e6c70148-e15d-44b5-bd1c-78aa1940eac8",
-      "buttonGuid": "8c90d282-4bde-4a88-81cd-ba120793b33d",
+      "source": "RSTool.rui",
+      "iconGuid": "56949ccf-e721-546f-a0a2-462365762cab",
+      "macroGuid": "81e34d06-b5e2-513c-bd7f-b310e840111d",
+      "buttonGuid": "4acb3772-3935-504e-9436-05c5b2aedcbe",
       "buttonCommand": "rsMoveLayerObjs",
-      "light": "/command-icons/light/2376805a-6443-4dae-b94b-c35d11cf1d76.png"
+      "light": "/command-icons/light/56949ccf-e721-546f-a0a2-462365762cab.png",
+      "dark": "/command-icons/dark/56949ccf-e721-546f-a0a2-462365762cab.png"
     },
     "rsMergeLayers": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "5a3b6351-3822-4d66-87b4-81ea8528582b",
-      "macroGuid": "fae8bef7-b09a-4e79-aa87-033422b58bff",
-      "buttonGuid": "f046a80b-9e92-46d5-94eb-4c277cb9c938",
+      "source": "RSTool.rui",
+      "iconGuid": "e78af8f2-8ab6-5e97-bd64-b4bde30301bf",
+      "macroGuid": "bf630ede-f1fc-52b1-aa54-017dcdd5b423",
+      "buttonGuid": "64aa547c-de41-5205-8b3f-ed8794d57f0d",
       "buttonCommand": "rsMergeLayers",
-      "light": "/command-icons/light/5a3b6351-3822-4d66-87b4-81ea8528582b.png"
+      "light": "/command-icons/light/e78af8f2-8ab6-5e97-bd64-b4bde30301bf.png",
+      "dark": "/command-icons/dark/e78af8f2-8ab6-5e97-bd64-b4bde30301bf.png"
     },
     "rsAssignLayerMaterialToObj": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "b8ffb8ad-cdca-486c-9ed7-bb9cd1cf825e",
-      "macroGuid": "e82f5955-f754-44cf-bf56-cb457402d61d",
-      "buttonGuid": "29dbb4c8-fb70-41d1-b16a-5a8bc08f0e55",
+      "source": "RSTool.rui",
+      "iconGuid": "156d11bf-f2ff-517c-907e-11cc75903b06",
+      "macroGuid": "145cc777-a205-5a13-9f7d-1d26c14f0fe9",
+      "buttonGuid": "5b6b7cde-8a64-5413-8550-78e3fee5978a",
       "buttonCommand": "rsAssignLayerMaterialToObj",
-      "light": "/command-icons/light/b8ffb8ad-cdca-486c-9ed7-bb9cd1cf825e.png"
+      "light": "/command-icons/light/156d11bf-f2ff-517c-907e-11cc75903b06.png",
+      "dark": "/command-icons/dark/156d11bf-f2ff-517c-907e-11cc75903b06.png"
     },
     "rsAssignRandomMaterialToLayers": {
       "kind": "toolbar-right",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "5f16386b-3bf2-40d4-ab3d-cc93e4e4eda7",
-      "macroGuid": "38bb896b-a969-49de-8e8b-258cf2367b58",
-      "buttonGuid": "577d1a85-26d4-4c59-b9e4-e75bd869ac5b",
+      "source": "RSTool.rui",
+      "iconGuid": "45264b3e-3ce6-501d-825b-b1e13e190fce",
+      "macroGuid": "200255ec-144c-5534-bb36-d1a4d5a010d1",
+      "buttonGuid": "196b98a8-d278-5584-80d2-fb384449c094",
       "buttonCommand": "rsAssignRandomColorToLayer",
-      "light": "/command-icons/light/5f16386b-3bf2-40d4-ab3d-cc93e4e4eda7.png"
+      "light": "/command-icons/light/45264b3e-3ce6-501d-825b-b1e13e190fce.png",
+      "dark": "/command-icons/dark/45264b3e-3ce6-501d-825b-b1e13e190fce.png"
     },
     "rsAssignRandomColorToLayer": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "5f16386b-3bf2-40d4-ab3d-cc93e4e4eda7",
-      "macroGuid": "3bf95803-4070-4a63-a572-597625971a59",
-      "buttonGuid": "577d1a85-26d4-4c59-b9e4-e75bd869ac5b",
+      "source": "RSTool.rui",
+      "iconGuid": "45264b3e-3ce6-501d-825b-b1e13e190fce",
+      "macroGuid": "5b78da3d-3114-5484-94d4-38dd07f821d0",
+      "buttonGuid": "196b98a8-d278-5584-80d2-fb384449c094",
       "buttonCommand": "rsAssignRandomColorToLayer",
-      "light": "/command-icons/light/5f16386b-3bf2-40d4-ab3d-cc93e4e4eda7.png"
+      "light": "/command-icons/light/45264b3e-3ce6-501d-825b-b1e13e190fce.png",
+      "dark": "/command-icons/dark/45264b3e-3ce6-501d-825b-b1e13e190fce.png"
     },
     "rsAutoSegColorToLayer": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "24cf9fed-933b-4721-b6e2-40185ee4fb19",
-      "macroGuid": "7854a163-17f8-4886-8f0e-0be20fc39009",
-      "buttonGuid": "245f6d8d-421e-4631-823c-e08b58649430",
+      "source": "RSTool.rui",
+      "iconGuid": "508e0fdc-3203-5bda-9bc3-2059e742325e",
+      "macroGuid": "c1bde69c-1033-57a2-ba18-34b5b8b5bf29",
+      "buttonGuid": "48088e88-6567-5709-a951-5766268c9280",
       "buttonCommand": "rsAutoSegColorToLayer",
-      "light": "/command-icons/light/24cf9fed-933b-4721-b6e2-40185ee4fb19.png"
+      "light": "/command-icons/light/508e0fdc-3203-5bda-9bc3-2059e742325e.png",
+      "dark": "/command-icons/dark/508e0fdc-3203-5bda-9bc3-2059e742325e.png"
     },
     "rsBlockObjectsToLayer": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "979580b2-335e-4a8c-ba93-2131052e3b1b",
-      "macroGuid": "ee0a2805-bbe7-4490-89f4-54f53464a76e",
-      "buttonGuid": "ca0f6bbd-4791-4504-87a9-d8b3ed192184",
+      "source": "RSTool.rui",
+      "iconGuid": "0381a0ad-b875-53f4-b53a-a3f2a4624ba8",
+      "macroGuid": "7901f3db-9330-5d47-bfad-bd184b7557ff",
+      "buttonGuid": "45aac3c4-400c-5e7f-af12-53b55fb09128",
       "buttonCommand": "rsBlockObjectsToLayer",
-      "light": "/command-icons/light/979580b2-335e-4a8c-ba93-2131052e3b1b.png"
+      "light": "/command-icons/light/0381a0ad-b875-53f4-b53a-a3f2a4624ba8.png",
+      "dark": "/command-icons/dark/0381a0ad-b875-53f4-b53a-a3f2a4624ba8.png"
     },
     "rsDeleteLayer": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "f39a492a-c491-5b08-a48e-5b4a4f5cc5fd",
-      "macroGuid": "20348534-5be2-56f3-83d0-0d3a0f1dbfda",
-      "buttonGuid": "650122b8-bb8c-5801-aec3-250e5508a958",
+      "source": "RSTool.rui",
+      "iconGuid": "d414aa18-52b9-5abc-9e85-5282e23b1312",
+      "macroGuid": "07e9611d-80ae-5b35-a7bc-c76ccf99b174",
+      "buttonGuid": "6095d7b3-96c1-5432-9202-f01ea4bdb8e4",
       "buttonCommand": "rsDeleteLayer",
-      "light": "/command-icons/light/f39a492a-c491-5b08-a48e-5b4a4f5cc5fd.png"
+      "light": "/command-icons/light/d414aa18-52b9-5abc-9e85-5282e23b1312.png",
+      "dark": "/command-icons/dark/d414aa18-52b9-5abc-9e85-5282e23b1312.png"
     },
     "rsUnlockAllLayers": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "dcfdf417-d8a1-5284-a440-7b5c8280ee25",
-      "macroGuid": "1eadc762-dce2-5046-b052-7352516d9f7f",
-      "buttonGuid": "40f7e365-7b3c-5213-8c52-99e40666a392",
+      "source": "RSTool.rui",
+      "iconGuid": "ed432ffc-5915-588d-ad80-ed9dea3a4c37",
+      "macroGuid": "7ea4f11c-0dd2-58bf-bd36-b2ad42ba367e",
+      "buttonGuid": "a5951358-2d4b-5931-862b-d9e9ebb46baa",
       "buttonCommand": "rsUnlockAllLayers",
-      "light": "/command-icons/light/dcfdf417-d8a1-5284-a440-7b5c8280ee25.png"
+      "light": "/command-icons/light/ed432ffc-5915-588d-ad80-ed9dea3a4c37.png",
+      "dark": "/command-icons/dark/ed432ffc-5915-588d-ad80-ed9dea3a4c37.png"
     },
     "rsLockObjLayer": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "e3c9c5bd-3c11-5477-ac9d-83252f192ca6",
-      "macroGuid": "c4629166-08c0-5345-a4e2-e32c1fb52a3e",
-      "buttonGuid": "86fc822e-75ab-58e9-9a31-998056e5b86a",
+      "source": "RSTool.rui",
+      "iconGuid": "73221404-8e39-5ae2-98b3-008984b26196",
+      "macroGuid": "8094a05d-547e-5245-8acc-45726827b98d",
+      "buttonGuid": "32a95f96-934d-5eb2-9df5-e18747d41720",
       "buttonCommand": "rsLockObjLayer",
-      "light": "/command-icons/light/e3c9c5bd-3c11-5477-ac9d-83252f192ca6.png"
+      "light": "/command-icons/light/73221404-8e39-5ae2-98b3-008984b26196.png",
+      "dark": "/command-icons/dark/73221404-8e39-5ae2-98b3-008984b26196.png"
     },
     "rsPickMaterial": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "20196af7-70f7-4f8e-98af-fd3816a9c209",
-      "macroGuid": "d481c826-dd59-4058-a5d1-6536392b620e",
-      "buttonGuid": "4d1bc945-6805-4e3f-8ea5-3609de942196",
+      "source": "RSTool.rui",
+      "iconGuid": "eb4114bd-e408-5843-a06f-8e9f8fd1212b",
+      "macroGuid": "471f5145-d0fa-5179-9a6d-1deaa7d32432",
+      "buttonGuid": "cee58bc0-5f33-5444-8208-ca2ccccd7728",
       "buttonCommand": "rsPickMaterial",
-      "light": "/command-icons/light/20196af7-70f7-4f8e-98af-fd3816a9c209.png"
+      "light": "/command-icons/light/eb4114bd-e408-5843-a06f-8e9f8fd1212b.png",
+      "dark": "/command-icons/dark/eb4114bd-e408-5843-a06f-8e9f8fd1212b.png"
     },
     "rsPaintBucket": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "976e0305-0134-5f44-b1f3-395aabdf2476",
-      "macroGuid": "1538c808-7946-5705-8a65-0ac741849593",
-      "buttonGuid": "013b8ea8-1ee5-5fe9-bad4-c473385e73a9",
+      "source": "RSTool.rui",
+      "iconGuid": "e58e31b3-fb14-56da-9e8b-ebe8af789907",
+      "macroGuid": "c9c050f2-a399-5539-a220-d8ba2a615d41",
+      "buttonGuid": "6d81c022-8404-51b2-b5b6-f717ffe3c22e",
       "buttonCommand": "rsPaintBucket",
-      "light": "/command-icons/light/976e0305-0134-5f44-b1f3-395aabdf2476.png"
+      "light": "/command-icons/light/e58e31b3-fb14-56da-9e8b-ebe8af789907.png",
+      "dark": "/command-icons/dark/e58e31b3-fb14-56da-9e8b-ebe8af789907.png"
     },
     "rsQuickColor": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "30bddf50-55a8-4434-af3c-b76aab9ef1c5",
-      "macroGuid": "520451bc-4fdd-4105-9127-30978298274a",
-      "buttonGuid": "ff91616d-54c6-4e8b-a77b-02441a42432e",
+      "source": "RSTool.rui",
+      "iconGuid": "e7a2a448-616d-5139-a1e8-90bd4a7b515d",
+      "macroGuid": "2f117fa3-60b3-5b70-8f20-18cacba68662",
+      "buttonGuid": "3a5b9953-210a-5134-8f88-34d9424fc865",
       "buttonCommand": "rsQuickColor",
-      "light": "/command-icons/light/30bddf50-55a8-4434-af3c-b76aab9ef1c5.png"
+      "light": "/command-icons/light/e7a2a448-616d-5139-a1e8-90bd4a7b515d.png",
+      "dark": "/command-icons/dark/e7a2a448-616d-5139-a1e8-90bd4a7b515d.png"
     },
     "rsAutoBoxMapping": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "19ff926a-9d32-43f4-bf99-a508767e7f4d",
-      "macroGuid": "474a15f8-026e-4d98-839c-3752933636f0",
-      "buttonGuid": "449f8998-fc2c-45d2-bf7f-9e64b48fdec0",
+      "source": "RSTool.rui",
+      "iconGuid": "54bda5ce-c4c9-5793-85b3-8f1a2799a45d",
+      "macroGuid": "091b8136-2e47-5cde-9837-2bfc002cb719",
+      "buttonGuid": "e1208d50-348c-54da-a47b-b2e477e2284a",
       "buttonCommand": "rsAutoBoxMapping",
-      "light": "/command-icons/light/19ff926a-9d32-43f4-bf99-a508767e7f4d.png"
+      "light": "/command-icons/light/54bda5ce-c4c9-5793-85b3-8f1a2799a45d.png",
+      "dark": "/command-icons/dark/54bda5ce-c4c9-5793-85b3-8f1a2799a45d.png"
     },
     "rsPBRToCustomMaterial": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "635b13f7-1bcf-5e90-aaef-daaabcc79a36",
-      "macroGuid": "a582da52-fdfc-5653-834b-bc4d12cd4c13",
-      "buttonGuid": "8439a78f-3c51-5de7-959a-c73a7fcd92c0",
+      "source": "RSTool.rui",
+      "iconGuid": "d766a062-a795-593c-8877-a47fadd6fd74",
+      "macroGuid": "5afe2fe8-d18b-5eb5-814d-bc60ec3c9eca",
+      "buttonGuid": "6d5518b6-1595-5dd8-913e-0c8bebda5d99",
       "buttonCommand": "rsPBRToCustomMaterial",
-      "light": "/command-icons/light/635b13f7-1bcf-5e90-aaef-daaabcc79a36.png"
+      "light": "/command-icons/light/d766a062-a795-593c-8877-a47fadd6fd74.png",
+      "dark": "/command-icons/dark/d766a062-a795-593c-8877-a47fadd6fd74.png"
     },
     "rsHatchPlanarSurfaces": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "02495ef7-dcec-44c5-859a-01cf611b5a82",
-      "macroGuid": "c1e78901-2775-442e-b1c7-0694077affab",
-      "buttonGuid": "d002d201-c327-453a-aa79-2a450a5406d7",
+      "source": "RSTool.rui",
+      "iconGuid": "c78eca67-6b48-51fe-992a-f0154e9d56a8",
+      "macroGuid": "dd7c4330-94c3-5d71-9a88-f5ac3db9a96f",
+      "buttonGuid": "ebca29fc-4eae-56c4-aab0-672390a1c8b4",
       "buttonCommand": "rsHatchPlanarSurfaces",
-      "light": "/command-icons/light/02495ef7-dcec-44c5-859a-01cf611b5a82.png"
+      "light": "/command-icons/light/c78eca67-6b48-51fe-992a-f0154e9d56a8.png",
+      "dark": "/command-icons/dark/c78eca67-6b48-51fe-992a-f0154e9d56a8.png"
     },
     "rsSectionBox": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "db146960-c9fd-41f4-8fd0-7acc140f1ca3",
-      "macroGuid": "4e1be28a-8453-4e69-b905-311cd0643725",
-      "buttonGuid": "a63265ae-91c2-430c-988f-b335901ad56d",
+      "source": "RSTool.rui",
+      "iconGuid": "0672251e-b70d-524a-a184-1bf5a26464a2",
+      "macroGuid": "28e3f6a6-9369-5e90-85ab-6714e7385a47",
+      "buttonGuid": "89cbbbbf-48a6-5d61-8345-4e3cef6820da",
       "buttonCommand": "rsSectionBox",
-      "light": "/command-icons/light/db146960-c9fd-41f4-8fd0-7acc140f1ca3.png"
+      "light": "/command-icons/light/0672251e-b70d-524a-a184-1bf5a26464a2.png",
+      "dark": "/command-icons/dark/0672251e-b70d-524a-a184-1bf5a26464a2.png"
     },
     "rsSectionBoxToggle": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "017dfd7f-2fda-550d-b2cf-b65dccb4f973",
-      "macroGuid": "53c664ce-8a8d-5055-80f3-7a0d1d83852f",
-      "buttonGuid": "135d1883-756f-5309-9b29-aa55df96ae79",
+      "source": "RSTool.rui",
+      "iconGuid": "46422bca-0f24-5f9c-9053-1c538e711fbc",
+      "macroGuid": "a97fb6a9-f212-5479-913f-35f819c17385",
+      "buttonGuid": "378133f6-1def-52e9-8ac5-2ce749b2983f",
       "buttonCommand": "rsSectionBoxToggle",
-      "light": "/command-icons/light/017dfd7f-2fda-550d-b2cf-b65dccb4f973.png"
+      "light": "/command-icons/light/46422bca-0f24-5f9c-9053-1c538e711fbc.png",
+      "dark": "/command-icons/dark/46422bca-0f24-5f9c-9053-1c538e711fbc.png"
     },
     "rsDiagramArrow": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "08b7810e-16d2-4012-bf4a-0119c2924c5b",
-      "macroGuid": "ae3c5ee4-7ffb-4d24-a2c9-fb6e536a6f56",
-      "buttonGuid": "05e73b42-74f8-4e9e-b169-7d03dff47f91",
+      "source": "RSTool.rui",
+      "iconGuid": "3407a98e-495b-5060-bc88-2d02ebc3020c",
+      "macroGuid": "61a2f7d1-abe0-5b7f-8083-6ef573ca16a9",
+      "buttonGuid": "eb12c933-6e13-5f02-a6a3-c2a35882ffc9",
       "buttonCommand": "rsDiagramArrow",
-      "light": "/command-icons/light/08b7810e-16d2-4012-bf4a-0119c2924c5b.png"
+      "light": "/command-icons/light/3407a98e-495b-5060-bc88-2d02ebc3020c.png",
+      "dark": "/command-icons/dark/3407a98e-495b-5060-bc88-2d02ebc3020c.png"
     },
     "rsDiagramArrowEdit": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "761e3f20-7ce1-53d2-abe0-208977afd9dc",
-      "macroGuid": "c5c7c97c-a4a7-5df0-9b72-69389b159062",
-      "buttonGuid": "866e2e7b-4af4-555d-ac37-2cc4f54d1697",
+      "source": "RSTool.rui",
+      "iconGuid": "7fd110c3-9ad9-585c-8b92-b1a38e812f01",
+      "macroGuid": "d251d7ee-40bd-5f8e-beb6-abaa22a07b17",
+      "buttonGuid": "46ab8ed5-df09-57c4-b1c1-5b55d2130ca2",
       "buttonCommand": "rsDiagramArrowEdit",
-      "light": "/command-icons/light/761e3f20-7ce1-53d2-abe0-208977afd9dc.png"
+      "light": "/command-icons/light/7fd110c3-9ad9-585c-8b92-b1a38e812f01.png",
+      "dark": "/command-icons/dark/7fd110c3-9ad9-585c-8b92-b1a38e812f01.png"
     },
     "rsHeightDot": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "4aec62bb-26b5-4079-bdae-f32cb06de2f8",
-      "macroGuid": "f3585048-8154-4e78-abf4-328a62de4bd6",
-      "buttonGuid": "727a4b58-b9ac-460d-8ee2-4b42d56344be",
+      "source": "RSTool.rui",
+      "iconGuid": "7393f54a-7635-5a9b-916f-9c5312992d74",
+      "macroGuid": "980f0127-6d52-5016-9927-e24d84bfdfce",
+      "buttonGuid": "235d667f-f364-58c5-b1d1-fd989924b08b",
       "buttonCommand": "rsHeightDot",
-      "light": "/command-icons/light/4aec62bb-26b5-4079-bdae-f32cb06de2f8.png"
+      "light": "/command-icons/light/7393f54a-7635-5a9b-916f-9c5312992d74.png",
+      "dark": "/command-icons/dark/7393f54a-7635-5a9b-916f-9c5312992d74.png"
     },
     "rsPointDim": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "a7d518ac-db32-5867-ae69-b77f75530fbf",
-      "macroGuid": "f64a22a3-7d2b-51ac-afec-5b2e866d165f",
-      "buttonGuid": "5ce27eac-98d3-5879-9ed7-7f082712e237",
+      "source": "RSTool.rui",
+      "iconGuid": "44a457f4-2ca0-5691-82ed-a0f48c043ea6",
+      "macroGuid": "bce6ec1d-0686-57f1-a238-0c42278a8f88",
+      "buttonGuid": "45cb35a3-b9ca-5330-9212-3d8393e4a637",
       "buttonCommand": "rsPointDim",
-      "light": "/command-icons/light/a7d518ac-db32-5867-ae69-b77f75530fbf.png"
+      "light": "/command-icons/light/44a457f4-2ca0-5691-82ed-a0f48c043ea6.png",
+      "dark": "/command-icons/dark/44a457f4-2ca0-5691-82ed-a0f48c043ea6.png"
     },
     "rsQuickNest": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "4f62f5a9-20fc-4e0e-b63c-c8c553b51902",
-      "macroGuid": "81ef3a09-c427-4124-a7c3-c912144f9dad",
-      "buttonGuid": "78166cbb-4b28-4f9f-acd3-c0be758d1c7a",
+      "source": "RSTool.rui",
+      "iconGuid": "7f63dca7-e630-5034-a0ee-c6922a8d4346",
+      "macroGuid": "d6eac261-c2d3-557f-bbc9-5dcc7e0b4d56",
+      "buttonGuid": "cee63914-a290-5afa-ad1b-3feeaa83a997",
       "buttonCommand": "rsquicknest",
-      "light": "/command-icons/light/4f62f5a9-20fc-4e0e-b63c-c8c553b51902.png"
+      "light": "/command-icons/light/7f63dca7-e630-5034-a0ee-c6922a8d4346.png",
+      "dark": "/command-icons/dark/7f63dca7-e630-5034-a0ee-c6922a8d4346.png"
     },
     "rsShadowRender": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "cd1023c0-af6d-448f-b5ee-29ea3ff56bd4",
-      "macroGuid": "19cb586d-3daf-44ea-a473-44b5632cee52",
-      "buttonGuid": "af878e9b-65a2-4cd8-bb8e-5d694583b1d4",
+      "source": "RSTool.rui",
+      "iconGuid": "bb6649d7-2f7b-55c0-af84-b8970dd5693f",
+      "macroGuid": "f54f3b0c-6f0c-5dc4-953b-666f2da46239",
+      "buttonGuid": "a86cde78-721d-536f-ac15-c3a8ed3fea0b",
       "buttonCommand": "rsShadowRender",
-      "light": "/command-icons/light/cd1023c0-af6d-448f-b5ee-29ea3ff56bd4.png"
+      "light": "/command-icons/light/bb6649d7-2f7b-55c0-af84-b8970dd5693f.png",
+      "dark": "/command-icons/dark/bb6649d7-2f7b-55c0-af84-b8970dd5693f.png"
     },
     "rsPolylineSection": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "74620dcc-4d04-56cb-a8cf-242af0bf5850",
-      "macroGuid": "8f4ef5e2-df00-5379-8e10-fa506d969d1c",
-      "buttonGuid": "f5489f81-81ec-5482-b3a6-e88fbd05d828",
+      "source": "RSTool.rui",
+      "iconGuid": "792079b5-ce85-5645-a776-da2a23504100",
+      "macroGuid": "e6c008fa-8f9d-5597-bdcf-c692e8c0840c",
+      "buttonGuid": "b272e744-7a9e-5f29-9093-14f7740803c2",
       "buttonCommand": "rsPolylineSection",
-      "light": "/command-icons/light/74620dcc-4d04-56cb-a8cf-242af0bf5850.png"
+      "light": "/command-icons/light/792079b5-ce85-5645-a776-da2a23504100.png",
+      "dark": "/command-icons/dark/792079b5-ce85-5645-a776-da2a23504100.png"
     },
     "rsSectionPositionPanel": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "ddd4aed4-e745-5d39-993a-b0f9e047f125",
-      "macroGuid": "d4a9c96a-83ce-5102-900c-b4f9fef20e09",
-      "buttonGuid": "b669e759-568f-5d44-8bc1-7c7c125013b7",
+      "source": "RSTool.rui",
+      "iconGuid": "5cd74cf9-a004-5d7f-b0d8-367ef828ab7b",
+      "macroGuid": "b40df99f-7647-54f0-b141-86b6f51df31c",
+      "buttonGuid": "55a676fa-b5db-53b7-8550-3ea1fda3331b",
       "buttonCommand": "rsSectionPositionPanel",
-      "light": "/command-icons/light/ddd4aed4-e745-5d39-993a-b0f9e047f125.png"
+      "light": "/command-icons/light/5cd74cf9-a004-5d7f-b0d8-367ef828ab7b.png",
+      "dark": "/command-icons/dark/5cd74cf9-a004-5d7f-b0d8-367ef828ab7b.png"
     },
     "rsXLine": {
       "kind": "unavailable"
     },
     "rsDiagramArrowMatch": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "ea066256-b179-51fa-aba7-fe1b6a073877",
-      "macroGuid": "e1d26371-e7c0-5753-b972-b46b2c46e781",
-      "buttonGuid": "ce52b1f3-56a9-56fa-9979-bde478d89a5c",
+      "source": "RSTool.rui",
+      "iconGuid": "0b2650ad-71e2-5b26-a61b-dd766dc20f23",
+      "macroGuid": "772386ec-dff5-5d68-8e5b-61c49837642e",
+      "buttonGuid": "be46cea0-5806-5e53-84bb-1f66698eea1d",
       "buttonCommand": "rsDiagramArrowMatch",
-      "light": "/command-icons/light/ea066256-b179-51fa-aba7-fe1b6a073877.png"
+      "light": "/command-icons/light/0b2650ad-71e2-5b26-a61b-dd766dc20f23.png",
+      "dark": "/command-icons/dark/0b2650ad-71e2-5b26-a61b-dd766dc20f23.png"
     },
     "rsVectorStudioSyncCanvas": {
       "kind": "unavailable"
     },
     "rsQuickMeasure": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "4f1c8824-e8dd-5742-8f76-fc5277d93608",
-      "macroGuid": "e08b0939-22fe-56ed-9d6b-9fb6b5c52b51",
-      "buttonGuid": "52a726c1-78fc-52cb-9174-e4deafe99104",
+      "source": "RSTool.rui",
+      "iconGuid": "62dfcaf0-98a3-543f-9286-2427df054f86",
+      "macroGuid": "d596721c-45e6-59eb-a2ee-d092eafe9881",
+      "buttonGuid": "54565dc3-d636-56c0-8ffd-737a29c82601",
       "buttonCommand": "rsQuickMeasure",
-      "light": "/command-icons/light/4f1c8824-e8dd-5742-8f76-fc5277d93608.png"
+      "light": "/command-icons/light/62dfcaf0-98a3-543f-9286-2427df054f86.png",
+      "dark": "/command-icons/dark/62dfcaf0-98a3-543f-9286-2427df054f86.png"
     },
     "rsSetCamera": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "70838512-348d-4db6-be5b-67ef0cf70b9d",
-      "macroGuid": "d53736a3-464e-4c89-96c5-9dd92578cf95",
-      "buttonGuid": "57cb2834-9da7-44f0-864b-d2388b9ad08f",
+      "source": "RSTool.rui",
+      "iconGuid": "88ffefbc-f685-5f5e-87b8-680d0ab2d03d",
+      "macroGuid": "5107e7b2-0ec9-581e-8a86-f10ae5523f5f",
+      "buttonGuid": "4690627e-a286-52a0-85a7-5d813ec80f9a",
       "buttonCommand": "rsSetCamera",
-      "light": "/command-icons/light/70838512-348d-4db6-be5b-67ef0cf70b9d.png"
+      "light": "/command-icons/light/88ffefbc-f685-5f5e-87b8-680d0ab2d03d.png",
+      "dark": "/command-icons/dark/88ffefbc-f685-5f5e-87b8-680d0ab2d03d.png"
     },
     "rsFaceCamera": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "a1631159-e9ea-4c32-a6f3-a9d8e03b3045",
-      "macroGuid": "4bbd5d80-d3a4-4e14-a205-3d3a78c6f329",
-      "buttonGuid": "f8ab8ee6-90a1-4f28-8a8e-0530ec84a4a3",
+      "source": "RSTool.rui",
+      "iconGuid": "5d0fdd71-0009-5de1-a608-13e7ec289344",
+      "macroGuid": "1af0ec6e-1b74-5fe2-94ba-7d4935347411",
+      "buttonGuid": "43fdb581-f199-59a6-9d79-d666b719958a",
       "buttonCommand": "rsFaceCamera",
-      "light": "/command-icons/light/a1631159-e9ea-4c32-a6f3-a9d8e03b3045.png"
+      "light": "/command-icons/light/5d0fdd71-0009-5de1-a608-13e7ec289344.png",
+      "dark": "/command-icons/dark/5d0fdd71-0009-5de1-a608-13e7ec289344.png"
     },
     "rsBatchSnapshotCapture": {
       "kind": "toolbar-right",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "3755e636-1bec-4b0a-9ed8-16e18d13b985",
-      "macroGuid": "12bf2e5a-146d-4491-a540-68ab6a9d9458",
-      "buttonGuid": "18ebfbf9-4a90-48a2-b7f4-ddc318ba4fb9",
+      "source": "RSTool.rui",
+      "iconGuid": "674b0502-6065-5b17-bc7b-a2e050dc5770",
+      "macroGuid": "739d69a5-1bc7-5316-b90c-af59dc758b04",
+      "buttonGuid": "6c53d09a-a7b3-510a-9ea7-820e5c9e944c",
       "buttonCommand": "rsBatchViewCapture",
-      "light": "/command-icons/light/3755e636-1bec-4b0a-9ed8-16e18d13b985.png"
+      "light": "/command-icons/light/674b0502-6065-5b17-bc7b-a2e050dc5770.png",
+      "dark": "/command-icons/dark/674b0502-6065-5b17-bc7b-a2e050dc5770.png"
     },
     "rsBatchViewCapture": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "3755e636-1bec-4b0a-9ed8-16e18d13b985",
-      "macroGuid": "f0131559-a587-47d1-87e4-0e11720dbc01",
-      "buttonGuid": "18ebfbf9-4a90-48a2-b7f4-ddc318ba4fb9",
+      "source": "RSTool.rui",
+      "iconGuid": "674b0502-6065-5b17-bc7b-a2e050dc5770",
+      "macroGuid": "c6b1b847-44bc-5868-966c-a219145af6fe",
+      "buttonGuid": "6c53d09a-a7b3-510a-9ea7-820e5c9e944c",
       "buttonCommand": "rsBatchViewCapture",
-      "light": "/command-icons/light/3755e636-1bec-4b0a-9ed8-16e18d13b985.png"
+      "light": "/command-icons/light/674b0502-6065-5b17-bc7b-a2e050dc5770.png",
+      "dark": "/command-icons/dark/674b0502-6065-5b17-bc7b-a2e050dc5770.png"
     },
     "rsImportCamFromSU": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "e98fe49c-34c1-43b2-87f5-bbf99c6b96e3",
-      "macroGuid": "bb38c573-85e0-4bc7-b5f4-5bedb8121dd8",
-      "buttonGuid": "9278bab0-2ebd-4e2d-9ab1-6345db3a9edb",
+      "source": "RSTool.rui",
+      "iconGuid": "b9293776-c4dc-563e-b51d-a3c03115e25a",
+      "macroGuid": "2d3cf749-8810-57af-8d68-95b520fb9822",
+      "buttonGuid": "eec104b3-418a-5a44-abb1-f1d1b3f8f148",
       "buttonCommand": "rsImportCamFromSU",
-      "light": "/command-icons/light/e98fe49c-34c1-43b2-87f5-bbf99c6b96e3.png"
+      "light": "/command-icons/light/b9293776-c4dc-563e-b51d-a3c03115e25a.png",
+      "dark": "/command-icons/dark/b9293776-c4dc-563e-b51d-a3c03115e25a.png"
     },
     "rsExportCamToSU": {
       "kind": "toolbar-right",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "e98fe49c-34c1-43b2-87f5-bbf99c6b96e3",
-      "macroGuid": "82430fb9-037e-44f3-8ee3-79154bcbc86c",
-      "buttonGuid": "9278bab0-2ebd-4e2d-9ab1-6345db3a9edb",
+      "source": "RSTool.rui",
+      "iconGuid": "b9293776-c4dc-563e-b51d-a3c03115e25a",
+      "macroGuid": "1c0882d3-d84c-5788-9dff-242cd01478f5",
+      "buttonGuid": "eec104b3-418a-5a44-abb1-f1d1b3f8f148",
       "buttonCommand": "rsImportCamFromSU",
-      "light": "/command-icons/light/e98fe49c-34c1-43b2-87f5-bbf99c6b96e3.png"
+      "light": "/command-icons/light/b9293776-c4dc-563e-b51d-a3c03115e25a.png",
+      "dark": "/command-icons/dark/b9293776-c4dc-563e-b51d-a3c03115e25a.png"
     },
     "rsCameraPath": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "1bbbb943-f354-4682-a0db-85e6956ab023",
-      "macroGuid": "ff0c5d32-a023-4c76-a603-008597e91e94",
-      "buttonGuid": "f6a48e52-8c78-44c6-a5cd-2cf684d4f569",
+      "source": "RSTool.rui",
+      "iconGuid": "e8178925-a13a-5f2d-9bd2-845f810a94cb",
+      "macroGuid": "32cb0017-6812-54f7-a21a-ed4431467ae2",
+      "buttonGuid": "8055bf7c-bc31-5d99-823f-9ec072e06d51",
       "buttonCommand": "rsCameraPath",
-      "light": "/command-icons/light/1bbbb943-f354-4682-a0db-85e6956ab023.png"
+      "light": "/command-icons/light/e8178925-a13a-5f2d-9bd2-845f810a94cb.png",
+      "dark": "/command-icons/dark/e8178925-a13a-5f2d-9bd2-845f810a94cb.png"
     },
     "rsShadow": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "cc656ae5-9aba-4b17-9c4f-8f46fa4645e9",
-      "macroGuid": "46f48c12-2051-4b28-827c-77e23f5ae746",
-      "buttonGuid": "c51fd7b7-d3ab-493a-a1e2-bd0b8612e7b2",
+      "source": "RSTool.rui",
+      "iconGuid": "b75cb2ad-bac8-5839-8dad-0506e91b6621",
+      "macroGuid": "3c139c43-92c5-545b-9e93-b755825a0100",
+      "buttonGuid": "d3284495-c555-51a5-970c-99955fbd7ab7",
       "buttonCommand": "rsShadow",
-      "light": "/command-icons/light/cc656ae5-9aba-4b17-9c4f-8f46fa4645e9.png"
+      "light": "/command-icons/light/b75cb2ad-bac8-5839-8dad-0506e91b6621.png",
+      "dark": "/command-icons/dark/b75cb2ad-bac8-5839-8dad-0506e91b6621.png"
     },
     "rsSunlightAnalysisByGrid": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "ed908633-37eb-46ca-949b-5b6d89bac256",
-      "macroGuid": "1bf2918a-5686-418e-bee1-142e3e5b6e5d",
-      "buttonGuid": "9015f3aa-f265-4657-8957-e1b4b4037059",
+      "source": "RSTool.rui",
+      "iconGuid": "b378f772-f294-583e-b2b1-37af72470454",
+      "macroGuid": "29bcfc75-eff9-5b80-9393-f9dcf0759365",
+      "buttonGuid": "eb4f5219-2c72-54be-a9cd-550caeb3197c",
       "buttonCommand": "rsSunlightAnalysisByGrid",
-      "light": "/command-icons/light/ed908633-37eb-46ca-949b-5b6d89bac256.png"
+      "light": "/command-icons/light/b378f772-f294-583e-b2b1-37af72470454.png",
+      "dark": "/command-icons/dark/b378f772-f294-583e-b2b1-37af72470454.png"
     },
     "rsSunlightAnalysisByMesh": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "5d38c9c8-012f-4e27-9df2-a92eba305f1c",
-      "macroGuid": "310fb898-faf2-40db-9b2c-d6be7ba8fe7a",
-      "buttonGuid": "38cbe1d6-4875-4c02-b9a7-265b320e5809",
+      "source": "RSTool.rui",
+      "iconGuid": "6f50ed7e-dd21-5b5c-952a-7883648aaa60",
+      "macroGuid": "fa11fe47-b983-5fcb-9456-48f95ae14425",
+      "buttonGuid": "40838e7d-b41e-598e-94a6-a410723da6a6",
       "buttonCommand": "rsSunlightAnalysisByMesh",
-      "light": "/command-icons/light/5d38c9c8-012f-4e27-9df2-a92eba305f1c.png"
+      "light": "/command-icons/light/6f50ed7e-dd21-5b5c-952a-7883648aaa60.png",
+      "dark": "/command-icons/dark/6f50ed7e-dd21-5b5c-952a-7883648aaa60.png"
     },
     "rsSolarFocusRiskSimulation": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "f07c2447-f23e-4415-92a3-076dc3254d69",
-      "macroGuid": "01c92cb7-16e9-4f5b-8e43-66d32fb7869c",
-      "buttonGuid": "67ea75a5-af46-4ab1-9096-4334df506e94",
+      "source": "RSTool.rui",
+      "iconGuid": "8c7d956d-6c68-5937-8ab8-0733bed674d3",
+      "macroGuid": "e94ae9d1-618c-51d6-b13d-c13a7d2a4ed3",
+      "buttonGuid": "d16310fb-2aed-5c7d-a378-ad609ba16164",
       "buttonCommand": "rsSolarFocusRiskSimulation",
-      "light": "/command-icons/light/f07c2447-f23e-4415-92a3-076dc3254d69.png"
+      "light": "/command-icons/light/8c7d956d-6c68-5937-8ab8-0733bed674d3.png",
+      "dark": "/command-icons/dark/8c7d956d-6c68-5937-8ab8-0733bed674d3.png"
     },
     "rsVisibilityAnalysis": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "9fd9085a-9c7d-514f-9b86-12249b8a6f1b",
-      "macroGuid": "b76de8d9-5cc3-5e7f-95f9-8454c3936ddf",
-      "buttonGuid": "f3cf433d-8d9f-59a5-8a4c-78ea70546c91",
+      "source": "RSTool.rui",
+      "iconGuid": "74061106-f292-5d86-b46c-fc3850605064",
+      "macroGuid": "07f101f8-beca-55b9-985b-7667a88a5ec1",
+      "buttonGuid": "e1a17a14-2658-58bd-9f55-fcd94cf6d2c0",
       "buttonCommand": "rsVisibilityAnalysis",
-      "light": "/command-icons/light/9fd9085a-9c7d-514f-9b86-12249b8a6f1b.png"
+      "light": "/command-icons/light/74061106-f292-5d86-b46c-fc3850605064.png",
+      "dark": "/command-icons/dark/74061106-f292-5d86-b46c-fc3850605064.png"
     },
     "rsViewshedAnalysis": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "314a3091-71ec-5e22-be6d-0c6f34a7bab2",
-      "macroGuid": "fe1dccf2-8d18-5dc6-803a-9c7dfeddf0b3",
-      "buttonGuid": "cc6975e7-fc12-5d6e-847a-333089b66a40",
+      "source": "RSTool.rui",
+      "iconGuid": "7b81fc3b-90f2-5d59-a96f-a186de59a0d1",
+      "macroGuid": "d62567ea-e802-5d52-84c8-19bcc5811f11",
+      "buttonGuid": "0c377208-a798-5b33-91f6-0573793820b8",
       "buttonCommand": "rsViewshedAnalysis",
-      "light": "/command-icons/light/314a3091-71ec-5e22-be6d-0c6f34a7bab2.png"
+      "light": "/command-icons/light/7b81fc3b-90f2-5d59-a96f-a186de59a0d1.png",
+      "dark": "/command-icons/dark/7b81fc3b-90f2-5d59-a96f-a186de59a0d1.png"
     },
     "rsWindAnalysis": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "bab8cfab-9f8d-4f1e-9ec8-87086d663716",
-      "macroGuid": "25712d78-d882-4a1f-9991-9dbc932bce18",
-      "buttonGuid": "9c7024be-72e2-40af-b20a-aaf0af928d4f",
+      "source": "RSTool.rui",
+      "iconGuid": "48103e7c-9edd-5319-a4fc-80cf6b0eae3e",
+      "macroGuid": "fe70252b-8fc9-51bb-84a1-873746160935",
+      "buttonGuid": "05f97d03-9694-50d0-85c2-a1c79036fb95",
       "buttonCommand": "rsWindAnalysis",
-      "light": "/command-icons/light/bab8cfab-9f8d-4f1e-9ec8-87086d663716.png"
+      "light": "/command-icons/light/48103e7c-9edd-5319-a4fc-80cf6b0eae3e.png",
+      "dark": "/command-icons/dark/48103e7c-9edd-5319-a4fc-80cf6b0eae3e.png"
     },
     "rsStructuralAnalysis": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "ff60fa7f-d857-5064-9783-b9137b23fd32",
-      "macroGuid": "9bb8be62-bb2d-5d92-8a45-900cc228f06a",
-      "buttonGuid": "81fa2529-e8a1-5b24-93d3-880f4693e11f",
+      "source": "RSTool.rui",
+      "iconGuid": "0e7bdf3c-576c-58dc-bd2c-ab16050966c6",
+      "macroGuid": "6d678231-3f35-5619-a4c1-90e69d5cbe01",
+      "buttonGuid": "e8c0aa02-749b-516c-90bc-8265a2f6dbd4",
       "buttonCommand": "rsStructuralAnalysis",
-      "light": "/command-icons/light/ff60fa7f-d857-5064-9783-b9137b23fd32.png"
+      "light": "/command-icons/light/0e7bdf3c-576c-58dc-bd2c-ab16050966c6.png",
+      "dark": "/command-icons/dark/0e7bdf3c-576c-58dc-bd2c-ab16050966c6.png"
     },
     "rsIndoorIlluminance": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "a7e59d9a-a71a-5d61-b276-8c6a6b05871e",
-      "macroGuid": "b046e8fc-6fdf-5017-ae2d-464c582ba22e",
-      "buttonGuid": "899bb139-d9a2-5c64-8130-cdd5eebf592d",
+      "source": "RSTool.rui",
+      "iconGuid": "a7419455-f1e3-5e39-b520-65c0e514ca54",
+      "macroGuid": "5cb5f01c-60fa-5718-bbfc-cbebb18f8333",
+      "buttonGuid": "02de77ad-6de4-5b24-a70d-58c9f6f0accb",
       "buttonCommand": "rsIndoorIlluminance",
-      "light": "/command-icons/light/a7e59d9a-a71a-5d61-b276-8c6a6b05871e.png"
+      "light": "/command-icons/light/a7419455-f1e3-5e39-b520-65c0e514ca54.png",
+      "dark": "/command-icons/dark/a7419455-f1e3-5e39-b520-65c0e514ca54.png"
     },
     "rsAcousticAnalysis": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "a5ae95aa-0383-53e6-bc96-f7f4e999d1b8",
-      "macroGuid": "b132c245-49f4-50e3-9fa0-74daf03a6b93",
-      "buttonGuid": "41ac0754-cf56-5bef-b6c4-b83164761efd",
+      "source": "RSTool.rui",
+      "iconGuid": "3e89a428-8a57-597a-8cd7-34bf705c28c8",
+      "macroGuid": "95598f60-5367-5e3f-8d74-169ed53cd6b8",
+      "buttonGuid": "41d94559-cba2-549f-9231-6ccbc94eadb2",
       "buttonCommand": "rsAcousticAnalysis",
-      "light": "/command-icons/light/a5ae95aa-0383-53e6-bc96-f7f4e999d1b8.png"
+      "light": "/command-icons/light/3e89a428-8a57-597a-8cd7-34bf705c28c8.png",
+      "dark": "/command-icons/dark/3e89a428-8a57-597a-8cd7-34bf705c28c8.png"
     },
     "rsBubble": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "ff1aca75-ba04-4b49-914c-7ac1ac695bf1",
-      "macroGuid": "65de39b1-d563-4fe2-84c4-3fd53717af4e",
-      "buttonGuid": "46111556-216e-4963-9e70-cf462ba9da10",
+      "source": "RSTool.rui",
+      "iconGuid": "61e7a341-cca2-5d90-a8e5-de571f99b18c",
+      "macroGuid": "4789b186-4a91-5ca1-b6a3-424850ae0246",
+      "buttonGuid": "c3907ff8-00c4-5a36-a28e-33c9677a5ec4",
       "buttonCommand": "rsBubble",
-      "light": "/command-icons/light/ff1aca75-ba04-4b49-914c-7ac1ac695bf1.png"
+      "light": "/command-icons/light/61e7a341-cca2-5d90-a8e5-de571f99b18c.png",
+      "dark": "/command-icons/dark/61e7a341-cca2-5d90-a8e5-de571f99b18c.png"
     },
     "rsMembrane": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "9687d4c6-7d93-441c-99ca-e8c1ab8bd965",
-      "macroGuid": "783ceac3-906f-42c7-91cc-891d98715da7",
-      "buttonGuid": "7b896c12-fb9a-46e5-98da-aaa03e2f1789",
+      "source": "RSTool.rui",
+      "iconGuid": "7bfbaa6e-c495-5beb-b52f-136ad6722454",
+      "macroGuid": "0e5994fe-8c92-5401-8bd2-4198f6fe8007",
+      "buttonGuid": "4516d95a-1fd2-54da-b064-8f78dd3a4bd5",
       "buttonCommand": "rsMembrane",
-      "light": "/command-icons/light/9687d4c6-7d93-441c-99ca-e8c1ab8bd965.png"
+      "light": "/command-icons/light/7bfbaa6e-c495-5beb-b52f-136ad6722454.png",
+      "dark": "/command-icons/dark/7bfbaa6e-c495-5beb-b52f-136ad6722454.png"
     },
     "rsMeshRelax": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "9cc2c6ce-db50-459b-8672-9422d77177ef",
-      "macroGuid": "d073de1e-aa51-41ed-b1cd-eb3fc0d12a0e",
-      "buttonGuid": "998b0f18-ba5f-4a1c-8e96-e85317f0e660",
+      "source": "RSTool.rui",
+      "iconGuid": "fdafa3b9-9467-5185-9d09-908df7059437",
+      "macroGuid": "6353ac61-d41e-5ffb-b20e-7e997afd8e6f",
+      "buttonGuid": "29a1cca0-2631-5152-bffc-ceeb7c891215",
       "buttonCommand": "rsMeshRelax",
-      "light": "/command-icons/light/9cc2c6ce-db50-459b-8672-9422d77177ef.png"
+      "light": "/command-icons/light/fdafa3b9-9467-5185-9d09-908df7059437.png",
+      "dark": "/command-icons/dark/fdafa3b9-9467-5185-9d09-908df7059437.png"
     },
     "rsCirclePacking": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "7f4264d5-a6d6-4ae9-8ea6-751be5131c02",
-      "macroGuid": "611d1605-2722-43ba-a92f-1323d4105b2f",
-      "buttonGuid": "eccdd384-4830-45f0-8138-30821a35c714",
+      "source": "RSTool.rui",
+      "iconGuid": "431e5c6f-ae50-5bcf-a76a-6e85241edade",
+      "macroGuid": "52b0c14f-c234-5fab-9df0-eca28b2c724e",
+      "buttonGuid": "fe251111-1fb3-5d94-bec1-9b6d25148f87",
       "buttonCommand": "rsCirclePacking",
-      "light": "/command-icons/light/7f4264d5-a6d6-4ae9-8ea6-751be5131c02.png"
+      "light": "/command-icons/light/431e5c6f-ae50-5bcf-a76a-6e85241edade.png",
+      "dark": "/command-icons/dark/431e5c6f-ae50-5bcf-a76a-6e85241edade.png"
     },
     "rsDifferentialGrowth": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "5a759382-750c-5b3d-8e1a-3263ee1d13eb",
-      "macroGuid": "ba2d614c-99be-5746-bb51-91516eb70c24",
-      "buttonGuid": "6be7b3e0-0219-59a8-af6f-18f4c8e2592f",
+      "source": "RSTool.rui",
+      "iconGuid": "29a3ea8d-bbb8-5b85-a4d4-762ed05b74e7",
+      "macroGuid": "c07617d8-7d6c-5cf2-b2b7-5612bd36a206",
+      "buttonGuid": "19f1cc0b-0f57-591d-97d2-e6c3f7a2f16b",
       "buttonCommand": "rsDifferentialGrowth",
-      "light": "/command-icons/light/5a759382-750c-5b3d-8e1a-3263ee1d13eb.png"
+      "light": "/command-icons/light/29a3ea8d-bbb8-5b85-a4d4-762ed05b74e7.png",
+      "dark": "/command-icons/dark/29a3ea8d-bbb8-5b85-a4d4-762ed05b74e7.png"
     },
     "rsClothFluttering": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "5deaf6a1-e601-47de-8aef-9795dc9c8e4f",
-      "macroGuid": "55eb7b35-ae77-45b9-9f86-69ea17d2045f",
-      "buttonGuid": "78b88532-889e-4c16-b137-a719ac67279b",
+      "source": "RSTool.rui",
+      "iconGuid": "7a3a22da-2d90-5d9c-912e-b0875d1f43d3",
+      "macroGuid": "4aa8837d-5416-595f-899f-839c79b78790",
+      "buttonGuid": "6cc09ddd-6da8-5eef-9487-cc90403295a3",
       "buttonCommand": "rsClothFluttering",
-      "light": "/command-icons/light/5deaf6a1-e601-47de-8aef-9795dc9c8e4f.png"
+      "light": "/command-icons/light/7a3a22da-2d90-5d9c-912e-b0875d1f43d3.png",
+      "dark": "/command-icons/dark/7a3a22da-2d90-5d9c-912e-b0875d1f43d3.png"
     },
     "rsBoids": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "04840a1b-9518-4905-9727-7dfd622972b4",
-      "macroGuid": "59653243-3afd-4992-9c9d-be8d986852b0",
-      "buttonGuid": "ebf587eb-dbff-4686-877c-00f1f5c2c40a",
+      "source": "RSTool.rui",
+      "iconGuid": "0ba85604-d89c-5a66-94f5-1f3fba3c3de2",
+      "macroGuid": "5122ed94-0142-5f5c-b0ab-ee2950dfc028",
+      "buttonGuid": "f0ddaaf2-b30b-5d0f-8acc-d20d69d80ad1",
       "buttonCommand": "rsBoids",
-      "light": "/command-icons/light/04840a1b-9518-4905-9727-7dfd622972b4.png"
+      "light": "/command-icons/light/0ba85604-d89c-5a66-94f5-1f3fba3c3de2.png",
+      "dark": "/command-icons/dark/0ba85604-d89c-5a66-94f5-1f3fba3c3de2.png"
     },
     "rsPhysarum": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "6f902462-2409-5be7-abc1-0c82efb01330",
-      "macroGuid": "960c67d5-a84b-5da2-9ee3-58346ada1de2",
-      "buttonGuid": "abd3a467-0395-5b47-9ab6-8233b9f97170",
+      "source": "RSTool.rui",
+      "iconGuid": "b4bd2ebc-f8e4-5352-9f89-71d57de04e29",
+      "macroGuid": "ae72eb89-a54f-5a29-8318-a96d8cec478b",
+      "buttonGuid": "f5b5a240-7d54-5d19-a0b0-97c4bb56827d",
       "buttonCommand": "rsPhysarum",
-      "light": "/command-icons/light/6f902462-2409-5be7-abc1-0c82efb01330.png"
+      "light": "/command-icons/light/b4bd2ebc-f8e4-5352-9f89-71d57de04e29.png",
+      "dark": "/command-icons/dark/b4bd2ebc-f8e4-5352-9f89-71d57de04e29.png"
     },
     "rsFluidSimulation": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "370adb95-f670-5fc0-8a2c-db68368431f2",
-      "macroGuid": "6ac75214-9f56-53f6-b2a4-a9abc1433f93",
-      "buttonGuid": "231c865e-198c-595a-8cce-ced5a7889426",
+      "source": "RSTool.rui",
+      "iconGuid": "72347c39-63f2-509e-9d1f-fabaaeda87dc",
+      "macroGuid": "cb3296f2-9129-5976-82c1-3f30b600d642",
+      "buttonGuid": "0114728b-90c2-5b51-bc1d-1d187ab343af",
       "buttonCommand": "rsFluidSimulation",
-      "light": "/command-icons/light/370adb95-f670-5fc0-8a2c-db68368431f2.png"
+      "light": "/command-icons/light/72347c39-63f2-509e-9d1f-fabaaeda87dc.png",
+      "dark": "/command-icons/dark/72347c39-63f2-509e-9d1f-fabaaeda87dc.png"
     },
     "rsWaveSimulation": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "33e38c7b-40f6-5eec-a753-de0393493802",
-      "macroGuid": "92802c91-000e-52f5-921c-6716b8687a9e",
-      "buttonGuid": "ed0877d3-89e6-5bdc-bb95-19c5e246a8fb",
+      "source": "RSTool.rui",
+      "iconGuid": "f8ca622a-d8ba-52e4-85c2-7e259452dd5d",
+      "macroGuid": "4290e12d-1d45-5de3-8c96-e27eafc02f53",
+      "buttonGuid": "45ba4e99-1cd3-57d5-9a45-e7464e53ab22",
       "buttonCommand": "rsWaveSimulation",
-      "light": "/command-icons/light/33e38c7b-40f6-5eec-a753-de0393493802.png"
+      "light": "/command-icons/light/f8ca622a-d8ba-52e4-85c2-7e259452dd5d.png",
+      "dark": "/command-icons/dark/f8ca622a-d8ba-52e4-85c2-7e259452dd5d.png"
     },
     "rsMoveAlongNormal": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "3a849ec0-ff05-4fd0-b292-b796f75db64f",
-      "macroGuid": "9aefde07-f155-44f9-8eac-b9ed20df92d6",
-      "buttonGuid": "806c821e-d6c7-445f-ab2f-61f48b8e4249",
+      "source": "RSTool.rui",
+      "iconGuid": "7764be2b-9223-523a-a496-7814e0139810",
+      "macroGuid": "38cef23a-b80a-5059-b979-a8a60aa946c7",
+      "buttonGuid": "1cf9a60b-4b65-5056-ad75-2d1bbf9a4eb7",
       "buttonCommand": "rsMoveAlongNormal",
-      "light": "/command-icons/light/3a849ec0-ff05-4fd0-b292-b796f75db64f.png",
-      "dark": "/command-icons/dark/3a849ec0-ff05-4fd0-b292-b796f75db64f.png"
+      "light": "/command-icons/light/7764be2b-9223-523a-a496-7814e0139810.png",
+      "dark": "/command-icons/dark/7764be2b-9223-523a-a496-7814e0139810.png"
     },
     "rsCopyMayaToRhino": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "d954b102-388a-548c-a116-b1f10ed9086c",
-      "macroGuid": "e5eada15-2626-5e82-90eb-1e46ba4ab9e2",
-      "buttonGuid": "712a26a4-f8ed-5ed7-9d03-4f96bdb70e9f",
+      "source": "RSTool.rui",
+      "iconGuid": "926c878b-4ffa-592a-812f-452c0824c52a",
+      "macroGuid": "918ce7c5-abbb-5dab-9b09-6e5f4a361c41",
+      "buttonGuid": "86ec9061-c48e-5f79-b2b4-737ebdcf324c",
       "buttonCommand": "rsCopyMayaToRhino",
-      "light": "/command-icons/light/d954b102-388a-548c-a116-b1f10ed9086c.png"
+      "light": "/command-icons/light/926c878b-4ffa-592a-812f-452c0824c52a.png",
+      "dark": "/command-icons/dark/926c878b-4ffa-592a-812f-452c0824c52a.png"
     },
     "rsSelectSubDEdgeDirection": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "549c1c6b-507c-5601-ba16-a2b205480476",
-      "macroGuid": "516c5637-149d-53c7-a4d1-0b1e9f9b0897",
-      "buttonGuid": "971e513e-4705-5942-b71b-a27172a69892",
+      "source": "RSTool.rui",
+      "iconGuid": "9bd0119e-e2ab-5aa4-9eba-9461a5589bd6",
+      "macroGuid": "74d729bf-10cd-5594-b326-28f9566d8154",
+      "buttonGuid": "48167d6f-b7c3-5162-ba96-246d7d5d22e1",
       "buttonCommand": "rsSelectSubDEdgeDirection",
-      "light": "/command-icons/light/549c1c6b-507c-5601-ba16-a2b205480476.png"
+      "light": "/command-icons/light/9bd0119e-e2ab-5aa4-9eba-9461a5589bd6.png",
+      "dark": "/command-icons/dark/9bd0119e-e2ab-5aa4-9eba-9461a5589bd6.png"
     },
     "rsCircularizeSubD": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "59181ced-45a6-5d88-a0bd-e77f58fe49c9",
-      "macroGuid": "6d52bffc-b4f7-5ddf-a57f-10aca38e5933",
-      "buttonGuid": "c86569f0-0664-5fa6-b432-edb34ba692d9",
+      "source": "RSTool.rui",
+      "iconGuid": "45f4b7b0-ada6-533b-94c4-914c8db8b138",
+      "macroGuid": "091a7fc4-07c0-53b2-a48f-2a89cd649a00",
+      "buttonGuid": "6460a79d-e797-5b1d-9354-11318984b4fe",
       "buttonCommand": "rsCircularizeSubD",
-      "light": "/command-icons/light/59181ced-45a6-5d88-a0bd-e77f58fe49c9.png"
+      "light": "/command-icons/light/45f4b7b0-ada6-533b-94c4-914c8db8b138.png",
+      "dark": "/command-icons/dark/45f4b7b0-ada6-533b-94c4-914c8db8b138.png"
     },
     "rsProfileDirector": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "232863f4-be5a-4ae5-a907-62fcb4023c31",
-      "macroGuid": "7e7e3643-ab99-4a73-8101-5bfe29ea6998",
-      "buttonGuid": "f939b065-734f-4f80-a42f-d31cca9936c2",
+      "source": "RSTool.rui",
+      "iconGuid": "c11eaa75-ee8e-57f9-bdf6-8f7b23a8074e",
+      "macroGuid": "8d9b15ee-f441-5cab-b757-36072040a86b",
+      "buttonGuid": "9a04b10b-6d63-5943-b035-05d456669bc6",
       "buttonCommand": "rsProfileDirector",
-      "light": "/command-icons/light/232863f4-be5a-4ae5-a907-62fcb4023c31.png"
+      "light": "/command-icons/light/c11eaa75-ee8e-57f9-bdf6-8f7b23a8074e.png",
+      "dark": "/command-icons/dark/c11eaa75-ee8e-57f9-bdf6-8f7b23a8074e.png"
     },
     "rsProfileDirectorAddProfile": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "f02eb619-1e34-5be5-9a43-a4de0ea4732a",
-      "macroGuid": "b0a5f506-b178-56da-9e4e-e50ff8f33994",
-      "buttonGuid": "545ca66e-d68d-588a-bfe7-0eaeeff702d1",
+      "source": "RSTool.rui",
+      "iconGuid": "1d4f3e3c-0e6d-5151-ad9a-dad4070cbc1f",
+      "macroGuid": "710ae6ff-7fd2-528a-8295-333f3a264f2d",
+      "buttonGuid": "a50ed79d-87dd-5dd5-a9b7-71dac48f9c70",
       "buttonCommand": "rsProfileDirectorAddProfile",
-      "light": "/command-icons/light/f02eb619-1e34-5be5-9a43-a4de0ea4732a.png"
+      "light": "/command-icons/light/1d4f3e3c-0e6d-5151-ad9a-dad4070cbc1f.png",
+      "dark": "/command-icons/dark/1d4f3e3c-0e6d-5151-ad9a-dad4070cbc1f.png"
     },
     "rsCopy": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "cb2e69e6-8ce2-4c35-accb-982a027b5eba",
-      "macroGuid": "cbb24124-713c-4cb3-802f-a8b57fbd4628",
-      "buttonGuid": "a231c852-1aac-4ba1-a47e-e8fc76db7a3c",
+      "source": "RSTool.rui",
+      "iconGuid": "bd2e6661-e556-5292-958e-0da90ad05adf",
+      "macroGuid": "4e2162a5-78a7-5157-9c1f-0c92f9677d0c",
+      "buttonGuid": "59a21d83-6cea-54a4-9ac2-f29c2e6cbb80",
       "buttonCommand": "rsCopy",
-      "light": "/command-icons/light/cb2e69e6-8ce2-4c35-accb-982a027b5eba.png"
+      "light": "/command-icons/light/bd2e6661-e556-5292-958e-0da90ad05adf.png",
+      "dark": "/command-icons/dark/bd2e6661-e556-5292-958e-0da90ad05adf.png"
     },
     "rsPaste": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "4f1b4688-9af4-415b-90d8-00d3aa40b118",
-      "macroGuid": "919b744a-6e80-445f-9345-3a5e31ed166c",
-      "buttonGuid": "097b0862-8428-449f-bc5f-18e0708a2d6e",
+      "source": "RSTool.rui",
+      "iconGuid": "ba63b5e7-477c-5ab6-83e7-91be4572ee1a",
+      "macroGuid": "45ce4f8e-99de-583c-81c8-384dab6f230d",
+      "buttonGuid": "fa95b7f2-49c1-51c5-8d39-bc1920994adb",
       "buttonCommand": "rsPaste",
-      "light": "/command-icons/light/4f1b4688-9af4-415b-90d8-00d3aa40b118.png"
+      "light": "/command-icons/light/ba63b5e7-477c-5ab6-83e7-91be4572ee1a.png",
+      "dark": "/command-icons/dark/ba63b5e7-477c-5ab6-83e7-91be4572ee1a.png"
     },
     "rsPasteExcel": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "d26faab7-4f94-4a47-a3a8-7dfb06113841",
-      "macroGuid": "f91d5e26-cc2b-45d4-9227-d000b132ab28",
-      "buttonGuid": "3199dc53-abd3-4fd0-8459-a8768c8a7549",
+      "source": "RSTool.rui",
+      "iconGuid": "371553e1-9ac8-5407-9bd7-25650011cfda",
+      "macroGuid": "2a5ceb35-0f88-53fb-95b7-679308188036",
+      "buttonGuid": "c953b1c9-d6dd-5b7f-a859-3059142d5d68",
       "buttonCommand": "rsPasteExcel",
-      "light": "/command-icons/light/d26faab7-4f94-4a47-a3a8-7dfb06113841.png"
+      "light": "/command-icons/light/371553e1-9ac8-5407-9bd7-25650011cfda.png",
+      "dark": "/command-icons/dark/371553e1-9ac8-5407-9bd7-25650011cfda.png"
     },
     "rsGroupToBlock": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "1a4e9caa-e784-56cd-a384-c24f8a7b302e",
-      "macroGuid": "f056187b-46b5-5881-852b-7ccc6ecfc3d9",
-      "buttonGuid": "aa3ba7e0-9a8e-5cbc-a475-5bd93b4c1c7f",
+      "source": "RSTool.rui",
+      "iconGuid": "4cd43346-0c7e-5fc2-8947-8fc359ab6542",
+      "macroGuid": "5cd28d1d-b1de-5d32-be6c-5ccd251134f8",
+      "buttonGuid": "e75eac66-ad30-5a9f-a015-bb94a65a36ba",
       "buttonCommand": "rsGroupToBlock",
-      "light": "/command-icons/light/1a4e9caa-e784-56cd-a384-c24f8a7b302e.png"
+      "light": "/command-icons/light/4cd43346-0c7e-5fc2-8947-8fc359ab6542.png",
+      "dark": "/command-icons/dark/4cd43346-0c7e-5fc2-8947-8fc359ab6542.png"
     },
     "rsExplodeNestedBlocks": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "0f1a1755-2b37-412a-8dc8-7b7e75aa24a4",
-      "macroGuid": "04c00aba-9f78-4d60-96cb-08a7c844589f",
-      "buttonGuid": "35925b83-111d-4c9f-acce-60a79bb52188",
+      "source": "RSTool.rui",
+      "iconGuid": "dd89ce33-660e-5e57-9cf4-a6d0ba4186b8",
+      "macroGuid": "46c261cc-acfd-559c-9bac-6524372ac799",
+      "buttonGuid": "3ef44b15-0656-5b5d-842b-d5d7ad909b0c",
       "buttonCommand": "rsExplodeNestedBlocks",
-      "light": "/command-icons/light/0f1a1755-2b37-412a-8dc8-7b7e75aa24a4.png"
+      "light": "/command-icons/light/dd89ce33-660e-5e57-9cf4-a6d0ba4186b8.png",
+      "dark": "/command-icons/dark/dd89ce33-660e-5e57-9cf4-a6d0ba4186b8.png"
     },
     "rsFlattenBlockElevation": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "caf50557-dd2f-581e-87cf-2b1da2ac7363",
-      "macroGuid": "53fa02fc-7435-5ede-ab41-05f76cd9e078",
-      "buttonGuid": "4df3db0c-11eb-5391-9602-b9af33391b4d",
+      "source": "RSTool.rui",
+      "iconGuid": "0e441c46-1bb1-53b6-887e-dc681ae594b5",
+      "macroGuid": "07228979-2e6c-5b3e-a3f7-dec5809f6f52",
+      "buttonGuid": "9095dcb5-0ca0-5120-a4d5-7bcfd8d2db2a",
       "buttonCommand": "rsFlattenBlockElevation",
-      "light": "/command-icons/light/caf50557-dd2f-581e-87cf-2b1da2ac7363.png"
+      "light": "/command-icons/light/0e441c46-1bb1-53b6-887e-dc681ae594b5.png",
+      "dark": "/command-icons/dark/0e441c46-1bb1-53b6-887e-dc681ae594b5.png"
     },
     "rsEmbedLinkedBlocks": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "de68caa9-95de-55db-a146-6386933a941b",
-      "macroGuid": "baac9265-b8bb-5aa5-ba1c-89b73ddc02f0",
-      "buttonGuid": "45b2eb41-4103-515f-9d03-26824cb41256",
+      "source": "RSTool.rui",
+      "iconGuid": "42258e90-2314-5626-8c25-580a4f1dfcab",
+      "macroGuid": "ccac3f8a-d418-5123-b7f4-31683cc94b76",
+      "buttonGuid": "f969cc8c-e413-5965-95df-4916e4a77dd7",
       "buttonCommand": "rsEmbedLinkedBlocks",
-      "light": "/command-icons/light/de68caa9-95de-55db-a146-6386933a941b.png"
+      "light": "/command-icons/light/42258e90-2314-5626-8c25-580a4f1dfcab.png",
+      "dark": "/command-icons/dark/42258e90-2314-5626-8c25-580a4f1dfcab.png"
     },
     "rsMenu": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "0ff47894-365a-4807-98ce-0ae5b2e3a322",
-      "macroGuid": "857c0c7e-9604-4788-858a-b2c540098d31",
-      "buttonGuid": "2a836c37-12c8-479c-85dd-5c722a389089",
+      "source": "RSTool.rui",
+      "iconGuid": "714a47c9-021f-5946-baaa-f92633f574f7",
+      "macroGuid": "0fe83f23-4b9c-5c8f-bbeb-5bae0860456e",
+      "buttonGuid": "086b1e10-41e0-5b51-be2a-3724b170f8f5",
       "buttonCommand": "rsMenu",
-      "light": "/command-icons/light/0ff47894-365a-4807-98ce-0ae5b2e3a322.png"
+      "light": "/command-icons/light/714a47c9-021f-5946-baaa-f92633f574f7.png",
+      "dark": "/command-icons/dark/714a47c9-021f-5946-baaa-f92633f574f7.png"
     },
     "rsHotbox": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "4ebb1608-a541-538a-ac84-52fcdc735b3b",
-      "macroGuid": "3db725e0-5863-5b46-b993-b4b5c08cfe1a",
-      "buttonGuid": "9356e9d2-aa1e-5e12-bf89-7a423dc0f7c7",
+      "source": "RSTool.rui",
+      "iconGuid": "309b50c9-353f-5060-bbae-259a91413d1e",
+      "macroGuid": "29f6d2a8-66ae-5010-a3ee-c269fafc960f",
+      "buttonGuid": "afa8f016-f8e8-59e8-b2fd-c16109f1fd6c",
       "buttonCommand": "rsHotbox",
-      "light": "/command-icons/light/4ebb1608-a541-538a-ac84-52fcdc735b3b.png"
+      "light": "/command-icons/light/309b50c9-353f-5060-bbae-259a91413d1e.png",
+      "dark": "/command-icons/dark/309b50c9-353f-5060-bbae-259a91413d1e.png"
     },
     "rsHotboxSettings": {
-      "kind": "unavailable"
+      "kind": "toolbar",
+      "source": "RSTool.rui",
+      "iconGuid": "309b50c9-353f-5060-bbae-259a91413d1e",
+      "macroGuid": "9c56bf77-61db-54c6-b92a-248bed6ccd3d",
+      "buttonGuid": "4ddc676f-8054-5126-937f-187f83d01a7c",
+      "buttonCommand": "rsHotboxSettings",
+      "light": "/command-icons/light/309b50c9-353f-5060-bbae-259a91413d1e.png",
+      "dark": "/command-icons/dark/309b50c9-353f-5060-bbae-259a91413d1e.png"
     },
     "RsAutoEnglish": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "7dfeedc4-3563-497f-8009-c53a69c84f37",
-      "macroGuid": "66ccb9f2-af3e-4821-9688-728f752409c9",
-      "buttonGuid": "29552b9b-056b-4b7b-b205-cd771789d7c5",
+      "source": "RSTool.rui",
+      "iconGuid": "41711bb6-0d15-5111-b563-34cb64f1124c",
+      "macroGuid": "aab51f04-b241-5c02-aedb-9432f9905140",
+      "buttonGuid": "1a09c689-0d78-59ed-ae01-e7886e10b00c",
       "buttonCommand": "rsAutoEnglish",
-      "light": "/command-icons/light/7dfeedc4-3563-497f-8009-c53a69c84f37.png"
+      "light": "/command-icons/light/41711bb6-0d15-5111-b563-34cb64f1124c.png",
+      "dark": "/command-icons/dark/41711bb6-0d15-5111-b563-34cb64f1124c.png"
     },
     "rsEngCommandSearch": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "af9345e8-be49-5287-9642-9e5c1b3e1849",
-      "macroGuid": "1926f9ce-5501-50eb-8502-7ba14af246b7",
-      "buttonGuid": "507d131b-e968-563f-b311-5713c155818f",
+      "source": "RSTool.rui",
+      "iconGuid": "94337e39-e62c-58c6-8ac4-81fe5579984d",
+      "macroGuid": "0ce7f4dc-eae0-5692-9116-2e28ae60f7fc",
+      "buttonGuid": "63aa8c57-265d-55f9-a58e-5a2d069acb09",
       "buttonCommand": "rsEngCommandSearch",
-      "light": "/command-icons/light/af9345e8-be49-5287-9642-9e5c1b3e1849.png"
+      "light": "/command-icons/light/94337e39-e62c-58c6-8ac4-81fe5579984d.png",
+      "dark": "/command-icons/dark/94337e39-e62c-58c6-8ac4-81fe5579984d.png"
     },
     "rsToolStart": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "182bf349-c9eb-5acb-b92e-efce7385862d",
-      "macroGuid": "2e112ab2-eace-5215-a5e8-73d8943ae75c",
-      "buttonGuid": "2de0bfaf-fb04-5062-8212-44c24d39a99d",
+      "source": "RSTool.rui",
+      "iconGuid": "2831bea5-0f16-5a82-a57d-276aa8945f27",
+      "macroGuid": "69ea19d7-977f-5540-a48a-ea704ce83649",
+      "buttonGuid": "6626e9af-0d46-5e54-94b5-4ebb727bcdf9",
       "buttonCommand": "rsToolStart",
-      "light": "/command-icons/light/182bf349-c9eb-5acb-b92e-efce7385862d.png"
+      "light": "/command-icons/light/2831bea5-0f16-5a82-a57d-276aa8945f27.png",
+      "dark": "/command-icons/dark/2831bea5-0f16-5a82-a57d-276aa8945f27.png"
     },
     "rsToolLocation": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "ef46df2d-03ba-5cca-b554-ed82a6cd9caa",
-      "macroGuid": "dfcef620-dae9-59b1-8c4b-198dce53ad8f",
-      "buttonGuid": "4b45b895-7135-59d8-ad6b-af0d8107a9ee",
+      "source": "RSTool.rui",
+      "iconGuid": "b71298a1-6e5f-57d1-a9a0-c7d8dce4e187",
+      "macroGuid": "79042f54-d423-54a8-b6f2-30e50f29a74e",
+      "buttonGuid": "982a27dd-2cbf-5657-9f82-9c7b37c00032",
       "buttonCommand": "rsToolLocation",
-      "light": "/command-icons/light/ef46df2d-03ba-5cca-b554-ed82a6cd9caa.png"
+      "light": "/command-icons/light/b71298a1-6e5f-57d1-a9a0-c7d8dce4e187.png",
+      "dark": "/command-icons/dark/b71298a1-6e5f-57d1-a9a0-c7d8dce4e187.png"
     },
     "rsClean": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "d4df9a93-2c68-4ad6-9250-8154a3004941",
-      "macroGuid": "2b5e45c3-94a0-4508-9775-65fdf739ee9c",
-      "buttonGuid": "500a34c5-8240-428a-a3ba-d30530080350",
+      "source": "RSTool.rui",
+      "iconGuid": "72bfdaee-bc7d-53ee-9f3f-6c626696ca64",
+      "macroGuid": "75188afc-ac48-5af1-8982-c681d3220c56",
+      "buttonGuid": "2e0b0144-d40c-573e-8e81-a017a8647a6d",
       "buttonCommand": "rsclean",
-      "light": "/command-icons/light/d4df9a93-2c68-4ad6-9250-8154a3004941.png"
+      "light": "/command-icons/light/72bfdaee-bc7d-53ee-9f3f-6c626696ca64.png",
+      "dark": "/command-icons/dark/72bfdaee-bc7d-53ee-9f3f-6c626696ca64.png"
     },
     "rsFilterHeavyObjects": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "62a618d5-effc-5962-86cf-b45089870b88",
-      "macroGuid": "5f015641-efb1-5854-a80b-f67203f7ee0f",
-      "buttonGuid": "fc2ea43b-cb44-53f2-b88b-1993637e3043",
+      "source": "RSTool.rui",
+      "iconGuid": "477fdf09-1b3a-5d5d-8822-0fe041d3ca4a",
+      "macroGuid": "254b537a-9345-54c6-bd3b-477d5c8d906c",
+      "buttonGuid": "317920f4-eb47-5831-87e6-8b27478b8068",
       "buttonCommand": "rsFilterHeavyObjects",
-      "light": "/command-icons/light/62a618d5-effc-5962-86cf-b45089870b88.png"
+      "light": "/command-icons/light/477fdf09-1b3a-5d5d-8822-0fe041d3ca4a.png",
+      "dark": "/command-icons/dark/477fdf09-1b3a-5d5d-8822-0fe041d3ca4a.png"
     },
     "rsWeChatSend": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "19d1d6ae-329a-4beb-bfca-5b8b6c2d5bb5",
-      "macroGuid": "8680379a-e099-4703-a0cb-ed25c24385ea",
-      "buttonGuid": "23fbf879-0fa6-40eb-a352-3496a9fe8293",
+      "source": "RSTool.rui",
+      "iconGuid": "b527c43f-589c-526e-953e-6962b4538a62",
+      "macroGuid": "d31cedcb-c739-5f72-a993-a5c02675bb71",
+      "buttonGuid": "6483844e-af77-5bc2-bb1d-d1b03be41ee0",
       "buttonCommand": "rsWechatSend",
-      "light": "/command-icons/light/19d1d6ae-329a-4beb-bfca-5b8b6c2d5bb5.png"
+      "light": "/command-icons/light/b527c43f-589c-526e-953e-6962b4538a62.png",
+      "dark": "/command-icons/dark/b527c43f-589c-526e-953e-6962b4538a62.png"
     },
     "RSToolActivateLicense": {
       "kind": "unavailable"
     },
     "rsHelp": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "31427eb6-9442-50d9-92f1-8557fbfdc920",
-      "macroGuid": "7b4e7868-9383-5720-a7b4-753ca66e69a1",
-      "buttonGuid": "3a16512e-7520-53dd-8d53-e0a88287a39c",
+      "source": "RSTool.rui",
+      "iconGuid": "0990a32c-00d2-528d-9505-31928da21d44",
+      "macroGuid": "b93168fa-2982-5d6a-9fff-2f49fd5bd218",
+      "buttonGuid": "079281f9-0ffe-56e3-9b23-8a67781b7b43",
       "buttonCommand": "rsHelp",
-      "light": "/command-icons/light/31427eb6-9442-50d9-92f1-8557fbfdc920.png"
+      "light": "/command-icons/light/0990a32c-00d2-528d-9505-31928da21d44.png",
+      "dark": "/command-icons/dark/0990a32c-00d2-528d-9505-31928da21d44.png"
     },
     "rsSuExport": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "e9d08d2d-f3e7-4304-8d04-b397dd09e4fe",
-      "macroGuid": "f6ae8911-3c7b-4cf1-9995-0f9d9cd12a2e",
-      "buttonGuid": "cc02db3b-419e-44c6-a34b-524a6583c94c",
+      "source": "RSTool.rui",
+      "iconGuid": "ee7c7846-2b92-5c26-a6a5-73e21d446008",
+      "macroGuid": "eb5f7bfc-3b9c-5f5d-8edb-256b4727cd15",
+      "buttonGuid": "df79007b-a0b2-5ea7-aba8-cba6994bb745",
       "buttonCommand": "rsSuExport",
-      "light": "/command-icons/light/e9d08d2d-f3e7-4304-8d04-b397dd09e4fe.png"
+      "light": "/command-icons/light/ee7c7846-2b92-5c26-a6a5-73e21d446008.png",
+      "dark": "/command-icons/dark/ee7c7846-2b92-5c26-a6a5-73e21d446008.png"
     },
     "rsSendToSU": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "5bb1d2fe-db19-5ebf-8a7b-61e233138a61",
-      "macroGuid": "2af24761-2ed3-57c4-bcb8-abca9d93c7bc",
-      "buttonGuid": "ea057871-db73-5d33-bbd4-419cf9111510",
+      "source": "RSTool.rui",
+      "iconGuid": "e313c33d-c519-597d-a167-cea2c7c8ab5e",
+      "macroGuid": "8e3e58c6-8ffa-55b5-b4e6-1e8c4fb73eeb",
+      "buttonGuid": "32d49142-6edc-5c6b-a5d3-8eec3f7276e5",
       "buttonCommand": "rsSendToSU",
-      "light": "/command-icons/light/5bb1d2fe-db19-5ebf-8a7b-61e233138a61.png"
+      "light": "/command-icons/light/e313c33d-c519-597d-a167-cea2c7c8ab5e.png",
+      "dark": "/command-icons/dark/e313c33d-c519-597d-a167-cea2c7c8ab5e.png"
     },
     "rsSendToCAD": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "85237897-e500-54bb-85ae-7c4b3a80d8ff",
-      "macroGuid": "5d756899-e005-5343-a600-70919a823e87",
-      "buttonGuid": "420132a7-90e4-51a0-9ba0-47b301dbbab6",
+      "source": "RSTool.rui",
+      "iconGuid": "634c5ade-9652-5c0d-8177-25afa3877d87",
+      "macroGuid": "ad8f12d2-8862-5277-ad6b-fdf25a91f2a2",
+      "buttonGuid": "f375e0f4-8417-51b4-91f1-8572241c4e47",
       "buttonCommand": "rsSendToCAD",
-      "light": "/command-icons/light/85237897-e500-54bb-85ae-7c4b3a80d8ff.png"
+      "light": "/command-icons/light/634c5ade-9652-5c0d-8177-25afa3877d87.png",
+      "dark": "/command-icons/dark/634c5ade-9652-5c0d-8177-25afa3877d87.png"
     },
     "rsMayaTransferSettings": {
-      "kind": "unavailable"
+      "kind": "toolbar",
+      "source": "RSTool.rui",
+      "iconGuid": "34f12816-446c-5d54-af70-b9efdb19b2b2",
+      "macroGuid": "fc0444e4-78c1-537e-bb69-9ab51b1610c0",
+      "buttonGuid": "50587aff-b092-539f-a50a-a2a226415158",
+      "buttonCommand": "rsMayaTransferSettings",
+      "light": "/command-icons/light/34f12816-446c-5d54-af70-b9efdb19b2b2.png",
+      "dark": "/command-icons/dark/34f12816-446c-5d54-af70-b9efdb19b2b2.png"
     },
     "rsSendToMaya": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "a79144d4-390a-553e-b8d8-b99e2b290ad1",
-      "macroGuid": "06433e5e-f769-5d7a-88b7-197894609c4c",
-      "buttonGuid": "3dfa75f2-e889-5d46-aadd-005dfb516442",
+      "source": "RSTool.rui",
+      "iconGuid": "34f12816-446c-5d54-af70-b9efdb19b2b2",
+      "macroGuid": "f9732d51-61c1-5ccf-90b4-63d8839b3552",
+      "buttonGuid": "5ce56c59-2f06-5f38-beeb-fdee16b3c5d3",
       "buttonCommand": "rsSendToMaya",
-      "light": "/command-icons/light/a79144d4-390a-553e-b8d8-b99e2b290ad1.png"
+      "light": "/command-icons/light/34f12816-446c-5d54-af70-b9efdb19b2b2.png",
+      "dark": "/command-icons/dark/34f12816-446c-5d54-af70-b9efdb19b2b2.png"
     },
     "rsCadReceivePending": {
       "kind": "unavailable"
     },
     "rsThreeBody": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "15f41dd7-45c3-4763-8b89-c8776e7becb0",
-      "macroGuid": "b620948e-a162-4d42-b0b3-9ee554f957cb",
-      "buttonGuid": "43a37f84-1e5b-45fb-8f35-0f330a4c3dfb",
+      "source": "RSTool.rui",
+      "iconGuid": "1afd4c79-b6c6-51ab-bc09-8e9c6d12f0cb",
+      "macroGuid": "39da343b-afe0-5577-999b-3c0d7bdecff6",
+      "buttonGuid": "37e533c4-83d2-50b4-aee5-fb016b0e4953",
       "buttonCommand": "rsThreeBody",
-      "light": "/command-icons/light/15f41dd7-45c3-4763-8b89-c8776e7becb0.png"
+      "light": "/command-icons/light/1afd4c79-b6c6-51ab-bc09-8e9c6d12f0cb.png",
+      "dark": "/command-icons/dark/1afd4c79-b6c6-51ab-bc09-8e9c6d12f0cb.png"
     },
     "rsWalker": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "a070a6e4-9a54-4126-967b-96bbb6633527",
-      "macroGuid": "fb37b06c-4699-4df6-85df-870e029f8f2d",
-      "buttonGuid": "6d26aafa-4994-4d93-8c76-c8115538050b",
+      "source": "RSTool.rui",
+      "iconGuid": "2bb1c859-1f2c-5518-9ef9-b216ae5a5656",
+      "macroGuid": "0fb2a626-5c08-5661-91d0-8fe8669233b5",
+      "buttonGuid": "8b620c41-7739-5980-9069-9f3a385f33af",
       "buttonCommand": "rsWalker",
-      "light": "/command-icons/light/a070a6e4-9a54-4126-967b-96bbb6633527.png"
+      "light": "/command-icons/light/2bb1c859-1f2c-5518-9ef9-b216ae5a5656.png",
+      "dark": "/command-icons/dark/2bb1c859-1f2c-5518-9ef9-b216ae5a5656.png"
     },
     "rsFpsGame": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "d6bc0f66-7f32-515c-a9fb-6ff6928d8092",
-      "macroGuid": "051a255c-66cd-5485-9189-694c22a1908e",
-      "buttonGuid": "6891544a-6b19-5bb4-af62-b0aee8a5cfb7",
+      "source": "RSTool.rui",
+      "iconGuid": "09c53ef8-2002-5b74-8a73-14c70941702c",
+      "macroGuid": "0c70c4e0-daae-5fdf-83c8-d0c88114abe3",
+      "buttonGuid": "fc424370-acc7-50cb-bc74-819af31cbbaf",
       "buttonCommand": "rsFpsGame",
-      "light": "/command-icons/light/d6bc0f66-7f32-515c-a9fb-6ff6928d8092.png"
+      "light": "/command-icons/light/09c53ef8-2002-5b74-8a73-14c70941702c.png",
+      "dark": "/command-icons/dark/09c53ef8-2002-5b74-8a73-14c70941702c.png"
     },
     "rsCreateDynamicComponent": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "64477f1e-54cf-56ab-b637-e38df8fb4074",
-      "macroGuid": "cb5c0dcd-85e3-58e8-8433-14582001711b",
-      "buttonGuid": "65fa6633-8314-5da1-9b4a-7e203451228c",
+      "source": "RSTool.rui",
+      "iconGuid": "634b8d4b-4d24-553a-a675-68a6018890d0",
+      "macroGuid": "b9780915-9369-5e16-8607-d3fcb81f344f",
+      "buttonGuid": "3aab5dc1-78b0-5976-b7b3-c821ee420ce4",
       "buttonCommand": "rsCreateDynamicComponent",
-      "light": "/command-icons/light/64477f1e-54cf-56ab-b637-e38df8fb4074.png"
+      "light": "/command-icons/light/634b8d4b-4d24-553a-a675-68a6018890d0.png",
+      "dark": "/command-icons/dark/634b8d4b-4d24-553a-a675-68a6018890d0.png"
     },
     "rsDynamicComponent": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "4a86de53-8eea-5fa5-a1d4-54a0786de31c",
-      "macroGuid": "98f8c555-ff42-50d2-a61b-14658cffc628",
-      "buttonGuid": "40138ed7-32ac-520f-ab24-5ab37251c818",
+      "source": "RSTool.rui",
+      "iconGuid": "abde5546-eeca-5c8e-b95f-68a25ea6b9af",
+      "macroGuid": "5427c571-1abc-5299-a3a2-7c60062784e9",
+      "buttonGuid": "55bb392a-c4f6-55c2-bc15-86bc5be9c717",
       "buttonCommand": "rsDynamicComponent",
-      "light": "/command-icons/light/4a86de53-8eea-5fa5-a1d4-54a0786de31c.png"
+      "light": "/command-icons/light/abde5546-eeca-5c8e-b95f-68a25ea6b9af.png",
+      "dark": "/command-icons/dark/abde5546-eeca-5c8e-b95f-68a25ea6b9af.png"
     },
     "rsDynamicComponentGuide": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "82baf996-0a08-5a88-8b84-636f330bfbb6",
-      "macroGuid": "16871adf-38a4-5cc8-a842-d838393598fe",
-      "buttonGuid": "5f9f3a3b-e79b-5827-a38d-817507ed4eed",
+      "source": "RSTool.rui",
+      "iconGuid": "f387aab1-c4b3-5e8e-a0a4-fa32d1ba682b",
+      "macroGuid": "913d6e08-79c7-5b0c-bc8d-89df47333194",
+      "buttonGuid": "c1743e31-eafa-591d-97b7-b4f05708f7ee",
       "buttonCommand": "rsDynamicComponentGuide",
-      "light": "/command-icons/light/82baf996-0a08-5a88-8b84-636f330bfbb6.png"
+      "light": "/command-icons/light/f387aab1-c4b3-5e8e-a0a4-fa32d1ba682b.png",
+      "dark": "/command-icons/dark/f387aab1-c4b3-5e8e-a0a4-fa32d1ba682b.png"
     },
     "rsDynamicComponentInteract": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "f697c704-4b3f-5fe4-a384-103da6b5bd50",
-      "macroGuid": "2bdfe283-bb30-5bea-be78-364a7ece40bf",
-      "buttonGuid": "b9fa6e40-38a6-5c5b-8f32-d6ec3a34e58d",
+      "source": "RSTool.rui",
+      "iconGuid": "f0c2f593-67ca-5335-9876-f6c1576fdf6d",
+      "macroGuid": "261f9e6e-8be4-501a-823d-d629282ddc1c",
+      "buttonGuid": "587c9a37-a892-5e81-a8b7-f55762df5c4f",
       "buttonCommand": "rsDynamicComponentInteract",
-      "light": "/command-icons/light/f697c704-4b3f-5fe4-a384-103da6b5bd50.png"
+      "light": "/command-icons/light/f0c2f593-67ca-5335-9876-f6c1576fdf6d.png",
+      "dark": "/command-icons/dark/f0c2f593-67ca-5335-9876-f6c1576fdf6d.png"
     },
     "rsDynamicComponentSelfTest": {
       "kind": "unavailable"
     },
     "rsDetachDynamicComponent": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "9a77948f-ddf1-5f09-a4d2-932043d82c0f",
-      "macroGuid": "ed422696-dfdc-5dd9-801f-2af980b9a870",
-      "buttonGuid": "0409d8ef-f8e3-5bcb-adb5-1c4d9ea2e992",
+      "source": "RSTool.rui",
+      "iconGuid": "82eca76b-37d9-5284-bf57-49bcd1155acb",
+      "macroGuid": "7bd99a59-e7b3-5f9e-8849-8e4546521ef9",
+      "buttonGuid": "94a68c35-8b70-514e-a6c2-672e90581b59",
       "buttonCommand": "rsDetachDynamicComponent",
-      "light": "/command-icons/light/9a77948f-ddf1-5f09-a4d2-932043d82c0f.png"
+      "light": "/command-icons/light/82eca76b-37d9-5284-bf57-49bcd1155acb.png",
+      "dark": "/command-icons/dark/82eca76b-37d9-5284-bf57-49bcd1155acb.png"
     },
     "rsPurgeDynamicComponentCache": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "cf88996d-7a25-573c-a362-67601f00a6e2",
-      "macroGuid": "6e1429d1-0885-510c-af77-cd189824b641",
-      "buttonGuid": "21ec54b9-be2d-5e76-94d7-13cec93ba15d",
+      "source": "RSTool.rui",
+      "iconGuid": "c3d699de-a6c5-511b-a83e-12b3cd3fb454",
+      "macroGuid": "ca36819e-2319-5544-acfa-59cdf6fb3fb2",
+      "buttonGuid": "849cc640-21d7-57ea-8157-300c39e49844",
       "buttonCommand": "rsPurgeDynamicComponentCache",
-      "light": "/command-icons/light/cf88996d-7a25-573c-a362-67601f00a6e2.png"
+      "light": "/command-icons/light/c3d699de-a6c5-511b-a83e-12b3cd3fb454.png",
+      "dark": "/command-icons/dark/c3d699de-a6c5-511b-a83e-12b3cd3fb454.png"
     },
     "Counter": {
       "kind": "grasshopper",
@@ -2359,49 +2576,226 @@
     },
     "rsTxtReader": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "02255b59-8bd2-5c4c-bb96-3209b77c5040",
-      "macroGuid": "7b51080c-0bf0-5d00-926d-88d3c4ee0021",
-      "buttonGuid": "5f429efc-8a0f-5a0e-be49-645d5fa9c3f2",
+      "source": "RSTool.rui",
+      "iconGuid": "e35441c8-405d-5aea-bb1c-c15cdad82083",
+      "macroGuid": "934136ec-b294-5b1c-9e3a-9b17df528567",
+      "buttonGuid": "51365e82-207f-5a9f-afbd-36aae3df545e",
       "buttonCommand": "rsTxtReader",
-      "light": "/command-icons/light/02255b59-8bd2-5c4c-bb96-3209b77c5040.png"
+      "light": "/command-icons/light/e35441c8-405d-5aea-bb1c-c15cdad82083.png",
+      "dark": "/command-icons/dark/e35441c8-405d-5aea-bb1c-c15cdad82083.png"
     },
     "rsTimberJoint": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "da536ef8-27d7-5aae-a0bf-b3ce03904dc4",
-      "macroGuid": "8663f3d6-0b29-52d1-a639-20c932da6301",
-      "buttonGuid": "45d2d719-0b39-5e2f-9475-05d20fc87181",
+      "source": "RSTool.rui",
+      "iconGuid": "415cc716-465c-5334-8caa-f85a2b9c262f",
+      "macroGuid": "a654834e-02ca-5db3-8c6d-8d02cd13f071",
+      "buttonGuid": "a48d57ef-5ef7-54de-9a9e-72460ce89486",
       "buttonCommand": "rsTimberJoint",
-      "light": "/command-icons/light/da536ef8-27d7-5aae-a0bf-b3ce03904dc4.png"
+      "light": "/command-icons/light/415cc716-465c-5334-8caa-f85a2b9c262f.png",
+      "dark": "/command-icons/dark/415cc716-465c-5334-8caa-f85a2b9c262f.png"
     },
     "rsExportLayoutToDwg": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "f8316960-e173-50cc-a26d-0be2fd8341f5",
-      "macroGuid": "6f610158-a6cf-57b6-a00d-f683fef7970b",
-      "buttonGuid": "6b25f710-c462-5d8a-bc72-d6e6e2d62761",
+      "source": "RSTool.rui",
+      "iconGuid": "838eee3e-bbd4-5b4e-b244-85792de76f93",
+      "macroGuid": "4a93b91f-d447-58b7-afbe-d93777e1198c",
+      "buttonGuid": "32fdc587-91d8-5c4b-8a1e-f0e0349207c9",
       "buttonCommand": "rsExportLayoutToDwg",
-      "light": "/command-icons/light/f8316960-e173-50cc-a26d-0be2fd8341f5.png"
+      "light": "/command-icons/light/838eee3e-bbd4-5b4e-b244-85792de76f93.png",
+      "dark": "/command-icons/dark/838eee3e-bbd4-5b4e-b244-85792de76f93.png"
     },
     "Bake Vertex Color Texture": {
       "kind": "grasshopper",
       "light": "/command-icons/gh/BakeVertexColorTexture_24.png"
     },
     "rsNoiseAnalysis": {
-      "kind": "source",
-      "source": "icons/rsNoiseAnalysis.png",
-      "light": "/command-icons/light/rsNoiseAnalysis.png"
+      "kind": "toolbar",
+      "source": "RSTool.rui",
+      "iconGuid": "e601c36e-aeae-5894-a601-280ea1f88e70",
+      "macroGuid": "4de26b10-127a-5d63-a39b-44c6b418ec69",
+      "buttonGuid": "52957bc8-1799-537e-9fd0-40f11b26eda8",
+      "buttonCommand": "rsNoiseAnalysis",
+      "light": "/command-icons/light/e601c36e-aeae-5894-a601-280ea1f88e70.png",
+      "dark": "/command-icons/dark/e601c36e-aeae-5894-a601-280ea1f88e70.png"
     },
     "rsCityGenerator": {
       "kind": "toolbar",
-      "source": "RUI/RSTool_CN.rui",
-      "iconGuid": "435ccc02-2d6a-517c-a491-3e56c23a454f",
-      "macroGuid": "3ea0a2f5-396f-501c-b219-c1a0eb0c0a29",
-      "buttonGuid": "65f24bec-bd67-5692-870c-93fefe243dda",
+      "source": "RSTool.rui",
+      "iconGuid": "750e3462-87f4-51ab-9981-638787f65c11",
+      "macroGuid": "e88fae53-d607-5251-bb71-1341ff318a28",
+      "buttonGuid": "4ba9dc99-190e-52ab-a49a-192569282979",
       "buttonCommand": "rsCityGenerator",
-      "light": "/command-icons/light/435ccc02-2d6a-517c-a491-3e56c23a454f.png",
-      "dark": "/command-icons/dark/435ccc02-2d6a-517c-a491-3e56c23a454f.png"
+      "light": "/command-icons/light/750e3462-87f4-51ab-9981-638787f65c11.png",
+      "dark": "/command-icons/dark/750e3462-87f4-51ab-9981-638787f65c11.png"
+    },
+    "rsElevator": {
+      "kind": "toolbar",
+      "source": "RSTool.rui",
+      "iconGuid": "4dec889c-c7c5-57e6-bb0c-bff0dc6044c3",
+      "macroGuid": "d8fb818c-8f1b-5249-9da2-b20845d9bf7d",
+      "buttonGuid": "ded8541d-2869-5ece-9117-4035d55705df",
+      "buttonCommand": "rsElevator",
+      "light": "/command-icons/light/4dec889c-c7c5-57e6-bb0c-bff0dc6044c3.png",
+      "dark": "/command-icons/dark/4dec889c-c7c5-57e6-bb0c-bff0dc6044c3.png"
+    },
+    "rsWallConnect": {
+      "kind": "toolbar",
+      "source": "RSTool.rui",
+      "iconGuid": "30a507e6-1a76-5519-bcf5-ba291eb8c4d9",
+      "macroGuid": "03c323ce-ab9a-5130-aea2-5ffe084c147e",
+      "buttonGuid": "920ccc45-f479-5c17-942a-1f79cc62e63e",
+      "buttonCommand": "rsWallConnect",
+      "light": "/command-icons/light/30a507e6-1a76-5519-bcf5-ba291eb8c4d9.png",
+      "dark": "/command-icons/dark/30a507e6-1a76-5519-bcf5-ba291eb8c4d9.png"
+    },
+    "rsWallTrim": {
+      "kind": "toolbar-right",
+      "source": "RSTool.rui",
+      "iconGuid": "f932fdaf-631b-543f-a6df-30a5680999b6",
+      "macroGuid": "3fa84088-98d9-51df-b41a-fee701abacc7",
+      "buttonGuid": "5e6283a9-47b7-569d-97aa-f86d952afe2e",
+      "buttonCommand": "rsWallExtend",
+      "light": "/command-icons/light/f932fdaf-631b-543f-a6df-30a5680999b6.png",
+      "dark": "/command-icons/dark/f932fdaf-631b-543f-a6df-30a5680999b6.png"
+    },
+    "rsWallReconnect": {
+      "kind": "toolbar",
+      "source": "RSTool.rui",
+      "iconGuid": "0c941e31-6c47-56e0-8918-6da111c14cb3",
+      "macroGuid": "63895760-15fa-5bb2-b081-df508ab8de78",
+      "buttonGuid": "80214712-a100-5c5e-a6a0-33043df86991",
+      "buttonCommand": "rsWallReconnect",
+      "light": "/command-icons/light/0c941e31-6c47-56e0-8918-6da111c14cb3.png",
+      "dark": "/command-icons/dark/0c941e31-6c47-56e0-8918-6da111c14cb3.png"
+    },
+    "rsWallAutoJoin": {
+      "kind": "toolbar",
+      "source": "RSTool.rui",
+      "iconGuid": "c724088b-7f74-5c21-bfdd-4fea7857c5d0",
+      "macroGuid": "560db9e9-ca80-5c63-aa57-5f5541c92cd8",
+      "buttonGuid": "8e57bb64-5d10-5f44-83d5-927d67f594df",
+      "buttonCommand": "rsWallAutoJoin",
+      "light": "/command-icons/light/c724088b-7f74-5c21-bfdd-4fea7857c5d0.png",
+      "dark": "/command-icons/dark/c724088b-7f74-5c21-bfdd-4fea7857c5d0.png"
+    },
+    "rsBreakWall": {
+      "kind": "toolbar",
+      "source": "RSTool.rui",
+      "iconGuid": "ef98a9e2-5588-5b18-99a8-4914e65532c5",
+      "macroGuid": "002a6d4b-8538-5abf-8b20-1ce70a4db234",
+      "buttonGuid": "717f4073-7f27-5f19-93bf-957fcb73581a",
+      "buttonCommand": "rsBreakWall",
+      "light": "/command-icons/light/ef98a9e2-5588-5b18-99a8-4914e65532c5.png",
+      "dark": "/command-icons/dark/ef98a9e2-5588-5b18-99a8-4914e65532c5.png"
+    },
+    "rsChamferWall": {
+      "kind": "toolbar",
+      "source": "RSTool.rui",
+      "iconGuid": "736c0996-df5f-510a-a1d2-11c540df02ff",
+      "macroGuid": "1c18227c-b328-578c-8525-878765cc430f",
+      "buttonGuid": "611c840b-0d2b-58ba-8c9d-409b52c06335",
+      "buttonCommand": "rsChamferWall",
+      "light": "/command-icons/light/736c0996-df5f-510a-a1d2-11c540df02ff.png",
+      "dark": "/command-icons/dark/736c0996-df5f-510a-a1d2-11c540df02ff.png"
+    },
+    "rsWallToCurtain": {
+      "kind": "toolbar",
+      "source": "RSTool.rui",
+      "iconGuid": "dc86e86b-995d-5486-ad5d-25089e7afabe",
+      "macroGuid": "beaf6859-b072-554a-bb8d-14bef5958d2e",
+      "buttonGuid": "4c9c9c1d-f247-50c1-a42f-fec2fd876b50",
+      "buttonCommand": "rsWallToCurtain",
+      "light": "/command-icons/light/dc86e86b-995d-5486-ad5d-25089e7afabe.png",
+      "dark": "/command-icons/dark/dc86e86b-995d-5486-ad5d-25089e7afabe.png"
+    },
+    "rsWallJoint": {
+      "kind": "toolbar-right",
+      "source": "RSTool.rui",
+      "iconGuid": "30a507e6-1a76-5519-bcf5-ba291eb8c4d9",
+      "macroGuid": "d568a74e-3f4d-5986-bf0a-4993e8191547",
+      "buttonGuid": "920ccc45-f479-5c17-942a-1f79cc62e63e",
+      "buttonCommand": "rsWallConnect",
+      "light": "/command-icons/light/30a507e6-1a76-5519-bcf5-ba291eb8c4d9.png",
+      "dark": "/command-icons/dark/30a507e6-1a76-5519-bcf5-ba291eb8c4d9.png"
+    },
+    "rsWallBoolean": {
+      "kind": "toolbar-right",
+      "source": "RSTool.rui",
+      "iconGuid": "2872ff54-efe1-54ca-a913-24676dd290c9",
+      "macroGuid": "9bf39493-0d6a-53e3-bde2-ccca404405fd",
+      "buttonGuid": "bcd7e8dc-3dbc-5e8d-9f7a-02a60179b6c4",
+      "buttonCommand": "rsWallRemoveHole",
+      "light": "/command-icons/light/2872ff54-efe1-54ca-a913-24676dd290c9.png",
+      "dark": "/command-icons/dark/2872ff54-efe1-54ca-a913-24676dd290c9.png"
+    },
+    "rsStairToGeometry": {
+      "kind": "unavailable"
+    },
+    "rsNurbsFacade": {
+      "kind": "toolbar",
+      "source": "RSTool.rui",
+      "iconGuid": "6eb9fb02-4dd4-5f7c-a0e4-a52310b67e97",
+      "macroGuid": "4e990730-4e63-56bc-adeb-ea11c6d3b936",
+      "buttonGuid": "b012435c-ee0e-5603-bc46-ddf9017384a1",
+      "buttonCommand": "rsNurbsFacade",
+      "light": "/command-icons/light/6eb9fb02-4dd4-5f7c-a0e4-a52310b67e97.png",
+      "dark": "/command-icons/dark/6eb9fb02-4dd4-5f7c-a0e4-a52310b67e97.png"
+    },
+    "rsMeshFacade": {
+      "kind": "toolbar",
+      "source": "RSTool.rui",
+      "iconGuid": "0990a32c-00d2-528d-9505-31928da21d44",
+      "macroGuid": "c7fcfc6f-5715-5f67-a016-4231b443bf5a",
+      "buttonGuid": "fe85bd6f-7bb6-540d-9a8b-ab84cc213fb5",
+      "buttonCommand": "rsMeshFacade",
+      "light": "/command-icons/light/0990a32c-00d2-528d-9505-31928da21d44.png",
+      "dark": "/command-icons/dark/0990a32c-00d2-528d-9505-31928da21d44.png"
+    },
+    "rsNurbsFacadeExplode": {
+      "kind": "toolbar",
+      "source": "RSTool.rui",
+      "iconGuid": "6eb9fb02-4dd4-5f7c-a0e4-a52310b67e97",
+      "macroGuid": "01ad80d1-6960-50c3-a518-a2cc31fee648",
+      "buttonGuid": "963decfe-c34a-553e-818c-b398aa40a255",
+      "buttonCommand": "rsNurbsFacadeExplode",
+      "light": "/command-icons/light/6eb9fb02-4dd4-5f7c-a0e4-a52310b67e97.png",
+      "dark": "/command-icons/dark/6eb9fb02-4dd4-5f7c-a0e4-a52310b67e97.png"
+    },
+    "rsMeshFacadeExplode": {
+      "kind": "toolbar",
+      "source": "RSTool.rui",
+      "iconGuid": "0990a32c-00d2-528d-9505-31928da21d44",
+      "macroGuid": "45442cf9-e4ae-5848-aaf1-98af458563c9",
+      "buttonGuid": "d60fc264-702f-5f7e-a109-1f67787e9f6b",
+      "buttonCommand": "rsMeshFacadeExplode",
+      "light": "/command-icons/light/0990a32c-00d2-528d-9505-31928da21d44.png",
+      "dark": "/command-icons/dark/0990a32c-00d2-528d-9505-31928da21d44.png"
+    },
+    "rsRailingToGeometry": {
+      "kind": "unavailable"
+    },
+    "rsToolCN": {
+      "kind": "toolbar",
+      "source": "RSTool.rui",
+      "iconGuid": "0990a32c-00d2-528d-9505-31928da21d44",
+      "macroGuid": "31a902a2-69cd-55af-a8d2-b10c06649c4e",
+      "buttonGuid": "81454763-e8c1-5bff-9574-6812579130c8",
+      "buttonCommand": "rsToolCN",
+      "light": "/command-icons/light/0990a32c-00d2-528d-9505-31928da21d44.png",
+      "dark": "/command-icons/dark/0990a32c-00d2-528d-9505-31928da21d44.png"
+    },
+    "rsToolEN": {
+      "kind": "toolbar",
+      "source": "RSTool.rui",
+      "iconGuid": "0990a32c-00d2-528d-9505-31928da21d44",
+      "macroGuid": "5a870d28-c176-5af4-a456-3cf8960ceac8",
+      "buttonGuid": "0d20f8f9-7eb2-5976-9e44-8727511d9327",
+      "buttonCommand": "rsToolEN",
+      "light": "/command-icons/light/0990a32c-00d2-528d-9505-31928da21d44.png",
+      "dark": "/command-icons/dark/0990a32c-00d2-528d-9505-31928da21d44.png"
+    },
+    "rsPdfTool": {
+      "kind": "unavailable"
     }
   }
 }

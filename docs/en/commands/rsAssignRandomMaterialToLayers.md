@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsAssignRandomMaterialToLayers: right-click the rsAssignRandomColorToLayer button" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/5f16386b-3bf2-40d4-ab3d-cc93e4e4eda7.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsAssignRandomMaterialToLayers · Randomly assign materials by layer
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsAssignRandomMaterialToLayers: right-click the rsAssignRandomColorToLayer button" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/45264b3e-3ce6-501d-825b-b1e13e190fce.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/45264b3e-3ce6-501d-825b-b1e13e190fce.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsAssignRandomMaterialToLayers · Randomly assign materials by layer
 
 > Module: Organization & Selection / Layers
 

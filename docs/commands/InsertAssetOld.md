@@ -1,14 +1,26 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--missing" title="当前工具栏中无对应图标" aria-hidden="true"></span> InsertAssetOld · 旧版插入模型
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--missing" title="当前工具栏中无对应图标" aria-hidden="true"></span> InsertAssetOld · 旧版插入模型（旧版入口）
 
 > 模块：资源库 / 模型库
 
 [← 返回命令目录](/commands/)
 
-> 当前工具栏中没有此命令的对应图标。横线仅表示暂无图标，不是实际按钮；请通过命令行调用。
+::: warning 2.0：旧版入口已调整
+
+旧插入模型入口不再保留，在客户端模型库中选择素材并导入。
+
+现在使用 [`rsModel`](/commands/rsModel)。
+
+这个旧名称在本次核对的 2.0 中不是可直接输入的兼容别名；下方保留的是 1.x 历史说明。
+
+[查看 2.0 命令变化与对照](/commands/v2)
+
+:::
+
+::: details 查看 1.x 历史说明
+
+> 本节的图标、截图、参数与操作流程均为旧版资料。
 
 **功能**：插入旧版模型库中的模型到当前文档
-
-**调用**：在 Rhino 命令行输入 `InsertAssetOld`（命令行交互）
 
 **交互流程**：
 
@@ -25,3 +37,6 @@
 | 角度 | Angle | double | 0.0 | 任意角度（度） | 放置过程中的命令行选项 |
 
 **备注**：旧版命令，建议优先使用 InsertAsset。
+
+
+:::

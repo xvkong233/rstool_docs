@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsTileMeshBlendByBitmap: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/0a2f78ca-a146-4ed1-89c4-acf5a5e2c437.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsTileMeshBlendByBitmap · Blend Mesh Panels by Bitmap
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsTileMeshBlendByBitmap: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/c0934825-8918-573f-a4f8-d9ef71c3dd77.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/c0934825-8918-573f-a4f8-d9ef71c3dd77.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsTileMeshBlendByBitmap · Blend Mesh Panels by Bitmap
 
 > Module: Paneling & Facades
 

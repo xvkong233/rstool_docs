@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsBatchViewCapture: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/3755e636-1bec-4b0a-9ed8-16e18d13b985.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsBatchViewCapture · Batch view capture
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsBatchViewCapture: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/674b0502-6065-5b17-bc7b-a2e050dc5770.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/674b0502-6065-5b17-bc7b-a2e050dc5770.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsBatchViewCapture · Batch view capture
 
 > Module: Views & Documentation / Views & Cameras
 

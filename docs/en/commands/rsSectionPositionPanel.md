@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsSectionPositionPanel: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/ddd4aed4-e745-5d39-993a-b0f9e047f125.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSectionPositionPanel · Architectural Section Panel
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsSectionPositionPanel: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/5cd74cf9-a004-5d7f-b0d8-367ef828ab7b.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/5cd74cf9-a004-5d7f-b0d8-367ef828ab7b.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSectionPositionPanel · Architectural Section Panel
 
 > Module: Views & Documentation / Annotation & Documentation
 

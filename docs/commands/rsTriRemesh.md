@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsTriRemesh：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/2992b45a-9bcf-4e78-906e-80e24646a06e.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsTriRemesh · 三角重构
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsTriRemesh：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/6f055810-df45-5255-b918-365a8a6b3136.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/6f055810-df45-5255-b918-365a8a6b3136.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsTriRemesh · 三角重构
 
 > 模块：几何 / 网格
 

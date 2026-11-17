@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsFluidSimulation: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/370adb95-f670-5fc0-8a2c-db68368431f2.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsFluidSimulation · Fluid Simulation
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsFluidSimulation: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/72347c39-63f2-509e-9d1f-fabaaeda87dc.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/72347c39-63f2-509e-9d1f-fabaaeda87dc.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsFluidSimulation · Fluid Simulation
 
 > Module: Physics Simulation / Dynamics
 

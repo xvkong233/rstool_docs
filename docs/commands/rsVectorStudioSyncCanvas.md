@@ -1,14 +1,26 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--missing" title="当前工具栏中无对应图标" aria-hidden="true"></span> rsVectorStudioSyncCanvas · 同步矢量画板范围
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--missing" title="当前工具栏中无对应图标" aria-hidden="true"></span> rsVectorStudioSyncCanvas · 同步矢量画板范围（旧版入口）
 
 > 模块：视图出图 / 标注出图
 
 [← 返回命令目录](/commands/)
 
-> 当前工具栏中没有此命令的对应图标。横线仅表示暂无图标，不是实际按钮；请通过命令行调用。
+::: warning 2.0：旧版入口已调整
+
+改在客户端矢量工作室中使用同步到 Rhino 的操作，不再单独运行旧命令。
+
+现在使用 [`rsVectorStudio`](/commands/rsVectorStudio)。
+
+这个旧名称在本次核对的 2.0 中不是可直接输入的兼容别名；下方保留的是 1.x 历史说明。
+
+[查看 2.0 命令变化与对照](/commands/v2)
+
+:::
+
+::: details 查看 1.x 历史说明
+
+> 本节的图标、截图、参数与操作流程均为旧版资料。
 
 **功能**：把矢量工作室当前画板的范围和比例定位到 Rhino，方便两边按同一个画幅继续作图。
-
-**调用**：在 Rhino 命令行输入 `rsVectorStudioSyncCanvas`（命令行交互）
 
 **交互流程**：
 
@@ -23,3 +35,6 @@
 | 实际宽度 | modelWidth | double | 沿用映射；无映射时按画板宽度 | 不小于模型公差的 10 倍 | 高度随画板宽高比自动计算，不单独输入。 |
 
 **备注**：同步的是画板边界和坐标映射，不是把画板全部图形导出，也不是自动双向同步。已有映射时沿用其方向，否则采用当前工作平面方向；每次确认会新增一个名为 Vector Studio Canvas 的边界。画板尚未加载时，请先打开工作室。该命令通过工作室页面发起 Rhino 命令行取值，不另开参数窗口。
+
+
+:::

@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsFluidSimulation：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/370adb95-f670-5fc0-8a2c-db68368431f2.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsFluidSimulation · 流体模拟
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsFluidSimulation：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/72347c39-63f2-509e-9d1f-fabaaeda87dc.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/72347c39-63f2-509e-9d1f-fabaaeda87dc.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsFluidSimulation · 流体模拟
 
 > 模块：物理模拟 / 动力学
 

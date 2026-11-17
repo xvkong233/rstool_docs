@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsIvy: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/cb4b4085-dec7-59ca-8d97-8d8665d7f88e.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsIvy · Ivy Growth
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsIvy: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/d9f762a6-226a-5961-a78b-59795a6f6a1f.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/d9f762a6-226a-5961-a78b-59795a6f6a1f.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsIvy · Ivy Growth
 
 > Module: Fun / Plant Generation
 

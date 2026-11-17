@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading" title="rsTerrain：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/b9e61b41-7866-4395-8c29-a2b7a6a60685.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/b9e61b41-7866-4395-8c29-a2b7a6a60685.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsTerrain · 地形网格
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsTerrain：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/53f25ae8-256b-51a6-bc43-2b716802e7d5.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/53f25ae8-256b-51a6-bc43-2b716802e7d5.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsTerrain · 地形网格
 
 > 模块：地形 / 分析与模拟
 

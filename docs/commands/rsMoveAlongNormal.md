@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading" title="rsMoveAlongNormal：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/3a849ec0-ff05-4fd0-b292-b796f75db64f.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/3a849ec0-ff05-4fd0-b292-b796f75db64f.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsMoveAlongNormal · 沿法线移动
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsMoveAlongNormal：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/7764be2b-9223-523a-a496-7814e0139810.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/7764be2b-9223-523a-a496-7814e0139810.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsMoveAlongNormal · 沿法线移动
 
 > 模块：SubD辅助 / 编辑工具
 

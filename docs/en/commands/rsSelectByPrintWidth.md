@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsSelectByPrintWidth: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/9241c742-02ef-4a12-b43d-7fcfb7611212.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSelectByPrintWidth · Select by print width
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsSelectByPrintWidth: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/29ae1332-901e-55ee-8f8f-cf49ca312b2b.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/29ae1332-901e-55ee-8f8f-cf49ca312b2b.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSelectByPrintWidth · Select by print width
 
 > Module: Organization & Selection / Selection
 

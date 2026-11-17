@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsSunlightAnalysisByGrid: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/ed908633-37eb-46ca-949b-5b6d89bac256.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSunlightAnalysisByGrid · Planar Sunlight Analysis
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsSunlightAnalysisByGrid: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/b378f772-f294-583e-b2b1-37af72470454.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/b378f772-f294-583e-b2b1-37af72470454.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSunlightAnalysisByGrid · Planar Sunlight Analysis
 
 > Module: Analysis / Building Performance Analysis
 

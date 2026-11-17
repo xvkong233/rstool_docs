@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsAxisLockBasis: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/affa3c57-d0be-541c-b77f-ed4266b0407f.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsAxisLockBasis · Confirm World Axis-Lock Basis
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsAxisLockBasis: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/9721000c-ce91-53f9-8d65-bba35be86c5f.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/9721000c-ce91-53f9-8d65-bba35be86c5f.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsAxisLockBasis · Confirm World Axis-Lock Basis
 
 > Module: Productivity / Productivity
 

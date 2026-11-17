@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsLockObjLayer：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/e3c9c5bd-3c11-5477-ac9d-83252f192ca6.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsLockObjLayer · 锁定所选对象图层
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsLockObjLayer：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/73221404-8e39-5ae2-98b3-008984b26196.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/73221404-8e39-5ae2-98b3-008984b26196.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsLockObjLayer · 锁定所选对象图层
 
 > 模块：组织与选择 / 图层
 

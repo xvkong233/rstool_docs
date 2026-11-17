@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsDynamicComponent：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/4a86de53-8eea-5fa5-a1d4-54a0786de31c.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsDynamicComponent · 动态组件面板
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsDynamicComponent：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/abde5546-eeca-5c8e-b95f-68a25ea6b9af.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/abde5546-eeca-5c8e-b95f-68a25ea6b9af.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsDynamicComponent · 动态组件面板
 
 > 模块：动态组件 / 面板
 

@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsCleanUpOverlappingCurves：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/d939a2e5-abc9-4f7f-be25-0e47cbcf7d88.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsCleanUpOverlappingCurves · 清理重叠曲线
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsCleanUpOverlappingCurves：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/37cf7b52-52f5-5158-b0c6-39d2369295ce.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/37cf7b52-52f5-5158-b0c6-39d2369295ce.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsCleanUpOverlappingCurves · 清理重叠曲线
 
 > 模块：几何 / 曲线
 

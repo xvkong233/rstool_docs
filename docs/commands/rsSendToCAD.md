@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsSendToCAD：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/85237897-e500-54bb-85ae-7c4b3a80d8ff.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSendToCAD · 发送模型到AutoCAD
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsSendToCAD：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/634c5ade-9652-5c0d-8177-25afa3877d87.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/634c5ade-9652-5c0d-8177-25afa3877d87.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSendToCAD · 发送模型到AutoCAD
 
 > 模块：辅助工具 / 导入导出
 

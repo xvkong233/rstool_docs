@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsReduceMeshByCurvature: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/9e7243ca-cc4b-4273-b950-9ae07ec5fef3.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsReduceMeshByCurvature · Reduce Mesh by Curvature
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsReduceMeshByCurvature: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/dfa12005-83bd-506a-a23f-754683441517.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/dfa12005-83bd-506a-a23f-754683441517.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsReduceMeshByCurvature · Reduce Mesh by Curvature
 
 > Module: Geometry / Meshes
 

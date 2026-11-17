@@ -1,10 +1,18 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsPdfTools：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/c93a0331-2dd5-54df-8c4b-6df858a173d7.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsPdfTools · PDF 工具
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsPdfTools：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/b11a7702-9cb2-5dc0-8ca1-36235a13b556.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/b11a7702-9cb2-5dc0-8ca1-36235a13b556.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsPdfTools · PDF 工具
 
 > 模块：效率工具 / 生产力
 
 [← 返回命令目录](/commands/)
 
-**功能**：对 PDF 执行拆分/旋转/压缩/提取/删除/合并/加密/解密/水印等操作并把结果 PDF 落到输出目录
+::: info 2.0 说明
+
+2.0 使用 RSTool 客户端承载面板，请先保持客户端运行并登录。
+
+[查看 2.0 命令变化与对照](/commands/v2)
+
+:::
+
+**功能**：打开客户端的 PDF 工具，合并、拆分、压缩和整理页面，也可转换图片、添加水印或设置密码。2.0 同时支持 rsPdfTool。
 
 ![PDF 工具主界面（合并 - 左侧 11 个功能模块）](../assets/rsPdfTools/image1.png)
 *PDF 工具主界面：标题「PDF 工具 / 文档处理工作台」；左侧 11 个功能模块（合并 / 拆分 / 压缩 / 加密 / 解密 / 提取页面 / 删除页面 / 旋转页面 / 加水印 / PDF 转图片 / 图片转 PDF），当前选中「合并」；主区顶栏工具按钮（添加文件、删除选中、清空列表、上下移、设置输入密码）+ 文件列表 + 页面缩略图预览 + 操作设置（输出名称、输出目录）+ 底部（打开输出目录 / 取消任务 / 开始合并）*
@@ -13,13 +21,11 @@
 
 **交互流程**：
 
-1. 命令行输入 rsPdfTools
-2. 创建 PdfToolsDialog (Eto) 窗口；窗口标题「PDF 工具」
-3. 左侧 11 个功能模块选择处理方式；中间文件列表拖入或「添加文件」
-4. 在「当前操作设置」面板按模块调整参数（拆分模式/旋转角度/水印样式等）
-5. 下方输出目录选择或留空走源文件目录
-6. 点击「开始 XXX」执行；进度条 + 状态文字实时更新；可点「取消任务」中断
-7. 完成后「开始」按钮恢复，「打开输出目录」激活，按钮文案根据当前模块自适应
+1. 在 Rhino 输入 rsPdfTool 或 rsPdfTools，打开客户端的 PDF 工具；也可从“创作工具”直接进入。
+2. 选择合并、拆分、压缩、加密、解密、提取、删除、旋转、水印、PDF 转图片或图片转 PDF。
+3. 添加文件，通过缩略图和页面预览检查内容，按需要调整顺序、页码范围和操作参数。
+4. 选择输出目录；留空时使用源文件目录。加密文件可分别设置输入密码。
+5. 开始任务，查看进度或取消；完成后打开输出目录查看结果。
 
 **参数**：
 
@@ -35,7 +41,9 @@
 | 水印水平间距 | WatermarkHorizontalSpacing | integer | 70 | 20-500 | 水印水平重复间距（mm），默认 70 |
 | 水印垂直间距 | WatermarkVerticalSpacing | integer | 50 | 20-500 | 水印垂直重复间距（mm），默认 50 |
 
-**备注**：Eto 对话框；PDF 处理在独立后台管线中完成。
+**输出**：对 PDF 执行拆分/旋转/压缩/提取/删除/合并/加密/解密/水印等操作并把结果 PDF 落到输出目录
+
+**备注**：2.0 的 PDF 工具统一放在客户端“创作工具 → PDF工具”，可输入 rsPdfTool，也兼容 rsPdfTools。处理在本机完成，不上传 PDF；进入页面后可独立使用，不要求 Rhino 一直连接。
 
 **左侧 11 个功能模块**（点中即切换设置面板；底部「开始 XXX」按钮按当前模块动态命名）：合并（默认）/ 拆分 / 压缩 / 加密 / 解密 / 提取页面 / 删除页面 / 旋转页面 / 加水印 / PDF 转图片 / 图片转 PDF。
 
@@ -65,4 +73,4 @@
 
 **输出目录行**：输出目录输入框（默认「留空则保存到源文件夹」提示） + 选择目录 + 使用源目录两个按钮。
 
-**底部栏**：状态文字（默认「请添加 PDF 文件。」）/ 进度条 / 三个按钮：开始 XXX（按当前模块动态命名） / 取消任务（执行中才激活） / 打开输出目录（完成后激活）。窗口关闭会自动取消正在运行的任务。窗口最小尺寸 780×520，启动尺寸 920×620。
+**底部栏**：状态文字（默认「请添加 PDF 文件。」）/ 进度条 / 三个按钮：开始 XXX（按当前模块动态命名） / 取消任务（执行中才激活） / 打开输出目录（完成后激活）。离开页面会请求取消未完成任务。输出名称冲突时会生成新名称，保留源文件。

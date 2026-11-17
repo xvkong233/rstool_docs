@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="RsAutoEnglish: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/7dfeedc4-3563-497f-8009-c53a69c84f37.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> RsAutoEnglish · Automatic English Commands
+# <span class="rstool-command-icon rstool-command-icon--heading" title="RsAutoEnglish: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/41711bb6-0d15-5111-b563-34cb64f1124c.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/41711bb6-0d15-5111-b563-34cb64f1124c.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> RsAutoEnglish · Automatic English Commands
 
 > Module: Utilities / System Tools
 

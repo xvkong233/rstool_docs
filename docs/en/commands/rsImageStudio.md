@@ -1,10 +1,18 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsImageStudio: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/0a634da4-1b7d-5b20-a5d5-a163eacfe9a5.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsImageStudio · Image Studio
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsImageStudio: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/a6c34171-ffc5-58d0-ab15-027123d88510.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/a6c34171-ffc5-58d0-ab15-027123d88510.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsImageStudio · Image Studio
 
 > Module: Productivity / Productivity
 
 [← Back to command index](/en/commands/)
 
-**Function**: Open the RsTool image studio window for bitmap drawing/annotation/export and save
+::: info Version 2.0
+
+Version 2.0 hosts this panel in the RSTool client. Keep the client running and signed in.
+
+[View the 2.0 command changes](/en/commands/v2)
+
+:::
+
+**Function**: Open Image Studio in the client for layered bitmap editing, annotation, and adjustments, including Rhino viewport captures.
 
 ![RsTool Image Studio main interface](../../assets/rsImageStudio/image1.png)
 *RsTool image studio main interface (top toolbar 14 items, left drawing toolbar, right property panel including layer editing/mirror measurement/ellipse mode/layer management/edit layer/preview/color/information 8 items, bottom including zoom 50% and canvas adaptation buttons)*
@@ -15,9 +23,10 @@
 
 **Workflow**:
 
-1. Enter rsImageStudio on the command line to open the image studio window (title "RsTool Image Studio")
-2. Draw, annotate, crop, and color bitmaps in the window, or take a screenshot of the Rhino window and add annotations.
-3. After processing, export to PNG/JPEG/WebP, or save as .RsTool-photo project file
+1. Run rsImageStudio in Rhino to open Creative Tools → Image Studio, or open it directly from the client.
+2. Create a project, open an image, or import an image as a new layer. Confirm the target document before capturing Rhino.
+3. Edit with brushes, selections, text, layers, groups, masks, and adjustments. Use separate tabs for documents with independent Undo histories.
+4. Export PNG / JPEG / WebP, or save an .rsimage project to retain layers and editable content.
 
 **Parameters**:
 
@@ -28,38 +37,17 @@
 | height | Height | int | source size | 1 – Maximum canvas side length | Set when exporting/taking screenshots |
 | Zoom | Scale | double | 1.0 | > 0 | Set when exporting/taking screenshots |
 
-**Notes**: Based on the miniPaint engine, several custom JS extensions are added for functions such as artboard layout, brushes, selections, and rulers.
+**Output**: Export a flattened image or save an .rsimage project retaining layers, groups, and masks.
 
-**Top Toolbar** (14 items, simplify common PhotoShop workflows):
+**Notes**: In 2.0, Image Studio is part of the client and no longer opens an earlier standalone window. It uses miniPaint and can edit local images independently; Rhino interaction requires the correct connected instance and document.
 
-| Button | Function |
+## Using the interface
+
+| Area | Main tools |
 | --- | --- |
-| Open image | Load bitmap from local file to canvas |
-| Import image | Import new layer (does not replace current canvas) |
-| Save image v | Export the current canvas as a local image with version number |
-| Template | Select the built-in template to apply the artboard layout |
-| Capture Rhino | Capture Rhino window screenshot and import (bidirectional with Rhino) |
-| Artboard size | Adjustment board/paper size |
-| Open project | Open .RsTool-photo project file |
-| Save/Save As | Write the current entire image project to disk |
-| PNG / JPEG / WebP | Export the current canvas to the corresponding format with one click |
+| Files and export | Create projects, open/import images, open/save .rsimage projects, recent files, and PNG/JPEG/WebP export |
+| Drawing and editing | Selections, brushes, shapes, text, cropping, and image adjustments |
+| Layers and properties | Layers, groups, masks, clipping, locks, opacity, and blend modes |
+| Rhino capture | Add a viewport capture from the selected Rhino document as a layer for further editing |
 
-**Drawing toolbar on the left**: MiniPaint’s own pencil/brush/pen/shape/selection/text/stamp and other tools.
-
-**Properties panel on the right** (multiple foldable/independent panels):
-
-| Panel | Purpose |
-| --- | --- |
-| Layer Editing | Path / Fill Color / Default Black / Stroke W (Capacity 32 px) / Dashed Line Check / Node |
-| Mirror measurement | Currently locked visualization layer (including new group, drop-down that does not belong to group) |
-| Ellipse blending mode | Composite mode of elliptical strokes (normal/multiply/screen, etc.)|
-| Pen Opacity | Stroke Opacity Slider |
-| Layer management | Layer list + Add button |
-| Edit layer | Editing operations for the currently selected layer (add layer, merge, delete, etc.) |
-| Preview | Current canvas window thumbnail; bottom 50% zoom + fit button |
-| Color | Palette |
-| Information | Mouse coordinates/selection size, etc. |
-
-**Bottom status bar**: Canvas distance (e.g. distance -4096px / 8192px max) + zoom control + adapt button.
-
-**Bi-directional with Rhino**: Use "Capture Rhino" to import Rhino window screenshots to the canvas with one click. It is suitable for exporting after AiRender/rendering with annotations/scale bars/text annotations in ImageStudio.
+Each studio supports up to 16 open documents. Switching client features retains projects, and each tab retains its Undo history. Closing an unsaved project offers Save, Discard, and Cancel. Theme and language follow the client.

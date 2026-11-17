@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsAutoSegColorToLayer：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/24cf9fed-933b-4721-b6e2-40185ee4fb19.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsAutoSegColorToLayer · 自动分段着色到图层
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsAutoSegColorToLayer：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/508e0fdc-3203-5bda-9bc3-2059e742325e.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/508e0fdc-3203-5bda-9bc3-2059e742325e.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsAutoSegColorToLayer · 自动分段着色到图层
 
 > 模块：组织与选择 / 图层
 

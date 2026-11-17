@@ -1,17 +1,27 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--missing" title="当前工具栏中无对应图标" aria-hidden="true"></span> rsModelingCompanionSettings · 建模陪伴设置
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--missing" title="当前工具栏中无对应图标" aria-hidden="true"></span> rsModelingCompanionSettings · 建模陪伴设置（旧版入口）
 
 > 模块：效率工具 / 生产力
 
 [← 返回命令目录](/commands/)
 
-> 当前工具栏中没有此命令的对应图标。横线仅表示暂无图标，不是实际按钮；请通过命令行调用。
+::: warning 2.0：旧版入口已调整
+
+当前 2.0 未注册这个设置入口，暂保留旧版参考。
+
+这个旧名称在本次核对的 2.0 中不是可直接输入的兼容别名；下方保留的是 1.x 历史说明。
+
+[查看 2.0 命令变化与对照](/commands/v2)
+
+:::
+
+::: details 查看 1.x 历史说明
+
+> 本节的图标、截图、参数与操作流程均为旧版资料。
 
 **功能**：打开建模陪伴设置窗口
 
 ![建模陪伴设置窗口：外观（宠物类型/自定义素材/性格/宠物大小/透明度/置顶/切换到其他窗口时仍保持显示/显示陪伴气泡/空闲闲聊/1小时未保存提醒/锁定位置/鼠标穿透）与 AI 对话记忆（服务商/API地址/模型/API Key/在本机加密保存/测试连接/发送Rhino上下文摘要/使用项目记忆/允许生成简单建模/Agent视觉校验/允许联网搜索/历史消息条数）](../assets/rsModelingCompanionSettings/image1.png)
 *图 1：建模陪伴设置面板。顶部「外观」分组：宠物类型(默认小屋)/自定义素材/性格(默认专业建筑师)/宠物大小 96-280 px(默认 168)/透明度 45%-100%(默认 98)/始终置顶/切换到其他窗口时仍保持显示/显示陪伴气泡/空闲闲聊频率(默认很少-推荐)/模型修改后 1 小时未保存时提醒/锁定宠物位置/鼠标穿透(可用命令恢复)；中部「AI 对话记忆」分组：服务商(默认 DeepSeek)/API 地址(默认 https://api.deepseek.com/chat/completions)/模型(默认 deepseek-v4-flash)/API Key(在本机加密保存)/测试连接；底部开关：发送只读 Rhino 上下文摘要/同时使用当前项目记忆(长期记忆随终端文件使用)/允许生成并确认简单建模操作/Agent 完成后自动截图并视觉校验/允许宠物申请联网搜索(每次搜索仍需确认)/历史消息条数(默认 30)*
-
-**调用**：在 Rhino 命令行输入 `rsModelingCompanionSettings`（打开设置窗口）
 
 **交互流程**：
 
@@ -26,3 +36,6 @@
 **备注**：设置窗口内的具体项以实际界面为准。
 
 底部开关「允许 Agent 控制 Grasshopper 画布」：打开后宠物 / Agent 才能使用 Grasshopper 电池图工具族（查组件、搭图、改参数、求解、截图校验）；关闭后相关工具对 Agent 不可见。
+
+
+:::

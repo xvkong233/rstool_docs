@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsShadowRender：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/cd1023c0-af6d-448f-b5ee-29ea3ff56bd4.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsShadowRender · 建筑渲染窗口
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsShadowRender：工具栏图标" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/bb6649d7-2f7b-55c0-af84-b8970dd5693f.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/bb6649d7-2f7b-55c0-af84-b8970dd5693f.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsShadowRender · 建筑渲染窗口
 
 > 模块：视图出图 / 标注出图
 

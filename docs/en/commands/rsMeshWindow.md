@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsMeshWindow: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/0796b1e1-c08b-4451-a20a-60e93aceb619.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsMeshWindow · Mesh Toolkit
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsMeshWindow: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/d718e267-21be-5e20-8298-915c58bd3551.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/d718e267-21be-5e20-8298-915c58bd3551.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsMeshWindow · Mesh Toolkit
 
 > Module: Geometry / Meshes
 

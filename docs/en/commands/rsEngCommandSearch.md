@@ -1,21 +1,22 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsEngCommandSearch: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/af9345e8-be49-5287-9642-9e5c1b3e1849.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsEngCommandSearch · English command search
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsEngCommandSearch: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/94337e39-e62c-58c6-8ac4-81fe5579984d.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/94337e39-e62c-58c6-8ac4-81fe5579984d.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsEngCommandSearch · Bilingual Command Search
 
 > Module: Utilities / System Tools
 
 [← Back to command index](/en/commands/)
 
-**Function**: Search plug-in RUI macros by Chinese keywords and execute selected commands
+**Function**: Search adapted 2.0 toolbar commands by Chinese label or English command name, then choose an index to run one.
 
 **Run**: Enter `rsEngCommandSearch` in the Rhino command line (command-line interaction).
 
 **Workflow**:
 
-1. Command line input rsEngCommandSearch
-2. Enter Chinese command keywords
-3. Search for matches in plugin .rui macro and list
-4. Enter the sequence number to be executed
-5. Run the corresponding Rhino command script
+1. Run `rsEngCommandSearch`.
+2. Enter a Chinese label or an English command keyword.
+3. Review the labels and command names, then enter the result index, starting from 0.
+4. Rhino runs the selected tool after the search finishes. Follow that tool's prompts.
 
 **Parameters**:
 
-> This command has no numeric command-line parameters. Adjust its options in the settings window.
+> No numeric settings or separate settings window are required. Follow the workflow above.
+
+**Notes**: Results are checked against the commands registered by the loaded plugin. Retired toolbar entries are excluded. Searching does not replace the selected tool's authorization checks.

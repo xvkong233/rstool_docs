@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsSimpleSculptor: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/d6e65cbf-0884-4f66-9b0d-0d80544a310b.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSimpleSculptor · Quick Mesh Sculptor
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsSimpleSculptor: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/57e3d22e-6358-5779-8395-1bedac49cca4.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/57e3d22e-6358-5779-8395-1bedac49cca4.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSimpleSculptor · Quick Mesh Sculptor
 
 > Module: Geometry / Meshes
 

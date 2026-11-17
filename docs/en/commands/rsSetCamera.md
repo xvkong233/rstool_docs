@@ -1,4 +1,4 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsSetCamera: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/70838512-348d-4db6-be5b-67ef0cf70b9d.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSetCamera · Set Camera
+# <span class="rstool-command-icon rstool-command-icon--heading" title="rsSetCamera: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/88ffefbc-f685-5f5e-87b8-680d0ab2d03d.png" alt="" width="48" height="48" loading="eager" decoding="async"><img class="rstool-command-icon__dark" src="/command-icons/dark/88ffefbc-f685-5f5e-87b8-680d0ab2d03d.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsSetCamera · Set Camera
 
 > Module: Views & Documentation / Views & Cameras
 

@@ -1,12 +1,26 @@
-# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsElevator2D: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/390742bf-dcad-51a1-9473-0b74e2edb9dd.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsElevator2D · 2D Elevator
+# <span class="rstool-command-icon rstool-command-icon--heading rstool-command-icon--single" title="rsElevator2D: toolbar icon" aria-hidden="true"><img class="rstool-command-icon__light" src="/command-icons/light/390742bf-dcad-51a1-9473-0b74e2edb9dd.png" alt="" width="48" height="48" loading="eager" decoding="async"></span> rsElevator2D · 2D Elevator (legacy entry)
 
-> Module: 2D Architecture / Doors, Windows & Elevators
+> Module: Architecture / Building Elements
 
 [← Back to command index](/en/commands/)
 
-**Function**: Insert an elevator symbol (car + door) and make a hole in the selected 2D wall
+::: warning Version 2.0: legacy entry
 
-**Run**: Enter `rsElevator2D` in the Rhino command line (command-line interaction).
+Use the unified elevator command and choose 2D or 3D in its panel.
+
+Use [`rsElevator`](/en/commands/rsElevator).
+
+The old name is not a callable alias in the reviewed 2.0 source. The historical reference below is for 1.x.
+
+[View the 2.0 command changes](/en/commands/v2)
+
+:::
+
+::: details View the 1.x historical reference
+
+> Icons, screenshots, parameters, and workflows in this section describe the old version.
+
+**Function**: Insert an elevator symbol (car + door) and make a hole in the selected 2D wall
 
 **Workflow**:
 
@@ -25,3 +39,6 @@
 | Flip car direction | FlipSide | toggle | false |  |  |
 
 **Notes**: The door width will be clamped to not exceed the elevator width; the default adaptation unit is 1600/1600/900mm
+
+
+:::
